@@ -19,7 +19,7 @@
 
 ## Autopilot
 
-_7 queued · 0 questions_
+_7 queued · 1 question_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -35,9 +35,9 @@ _(no goals yet — edit in chat)_
 6. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
 7. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
 
-**Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
+**Questions** (1 open, 0 deferred — [`questions.md`](questions.md))
 
-_(no open questions)_
+- Q1 — The `features/extended_source/` example and the `autolens_workspace_test` script are parked with a question on the issue (`awaiting-input`): which data, how the mass model is handed off, and whether… (https://github.com/PyAutoLabs/autolens_workspace/issues/670, 2 days)
 
 **Shift**
 

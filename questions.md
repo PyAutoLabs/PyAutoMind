@@ -1,0 +1,48 @@
+# Questions
+
+Parked questions from shift workers, waiting for the human (M3.5,
+PyAutoBrain#645). The shift watcher adds entries through its one Mind writer;
+a `/questions` chat (PyAutoBrain `skills/questions`) answers, defers or drops
+them with `scripts/questions_edit.py`. Never edit by hand: the section an
+entry sits under is its state, and `lifecycle.py check` validates the file.
+An answer releases the parked task: the next shift resumes it with the answer
+in its prompt.
+
+```markdown
+### Q<n>. <task> — <short ask>
+- task: draft/<work-type>/<target>/<name>.md
+- issue: https://github.com/<owner>/<repo>/issues/<n>
+- kind: question
+- ask: <one line>
+- options: (a) <first> · (b) <second>
+- shift: <slot>
+- asked: <YYYY-MM-DDTHH:MMZ>
+- worker: <session key>
+```
+
+## Open
+
+### Q1. cluster_regime_narrative — The `features/extended_source/` example and the `autolens_workspace_t…
+- task: active/cluster_regime_narrative.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
+- kind: question
+- ask: The `features/extended_source/` example and the `autolens_workspace_test` script are parked with a question on the issue (`awaiting-input`): which data, how the mass model is handed off, and whether…
+- shift: 2026-11-14-pm2
+- asked: 2026-11-14T17:56Z
+- worker: a033837e
+
+## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
+
+## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
+
+## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
+
+### Q2. markdown_regeneration_sigma_min — The human answered "do 1" (real regeneration off the laptop) at 18:32…
+- task: draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/669
+- kind: question
+- ask: The human answered "do 1" (real regeneration off the laptop) at 18:32Z, but neither machine for option 1 can be used unattended, so the human has to choose (a) laptop GPU with them there or (b) RAL w…
+- shift: 2026-11-14-pm3
+- asked: 2026-11-14T20:23Z
+- worker: a8222e1a
+- dropped: 2026-11-16 by Jammy2211 — Lets retire this markdown feature (the human on autolens_workspace#669, 2026-11-16 09:13) (task shelved)

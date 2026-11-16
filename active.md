@@ -61,28 +61,14 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
-## m35-inbox
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/645
+## dashboard-goals-queue
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/650
 - issued: 2026-11-16
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
 - status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/m35-inbox
-- coordination: m34-engine, m35-inbox and m34-cockpit run in parallel on PyAutoBrain/PyAutoMind per the design's build plan (human: all recommended, 2026-11-16)
-- epic: autonomous-orchestrators (M3.4/M3.5)
+- worktree: ~/Code/PyAutoLabs-wt/dashboard-goals-queue
+- coordination: alongside m34-cockpit on PyAutoBrain (#648, skills only; this edits the intake dashboard renderer)
 - tier: glance — merge mode: auto-merge on green
 - repos:
-  - PyAutoMind: feature/m35-inbox
-  - PyAutoBrain: feature/m35-inbox
-
-## m34-cockpit
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/646
-- issued: 2026-11-16
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/m34-cockpit
-- coordination: m34-engine, m35-inbox and m34-cockpit run in parallel on PyAutoBrain/PyAutoMind per the design's build plan (human: all recommended, 2026-11-16)
-- epic: autonomous-orchestrators (M3.4/M3.5)
-- tier: glance — merge mode: auto-merge on green
-- repos:
-  - PyAutoMind: feature/m34-cockpit
-  - PyAutoBrain: feature/m34-cockpit
+  - PyAutoBrain: feature/dashboard-goals-queue
+  - PyAutoMind: feature/dashboard-goals-queue
