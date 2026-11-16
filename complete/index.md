@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2283 records across 11 buckets.
+2284 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -183,6 +183,7 @@ markers; everything below GENERATED is rebuilt.
 - [gallery-runner-missing-tiers](2026/11/gallery-runner-missing-tiers.md) — RETIRED as obsolete, no change made. The gallery runner it targeted (`gallery/gallery_run.sh`, `gallery_build.…
 - [general-docs-refresh](2026/11/general-docs-refresh.md)
 - [generate-converter-preflight](2026/11/generate-converter-preflight.md)
+- [glance-public-name-check](2026/11/glance-public-name-check.md)
 - [glance-shadow-window-reached](2026/11/glance-shadow-window-reached.md) — already shipped — closed as stale draft. Item 1 (code): commit 679b1319f (2026-10-16) made `shadow_count_line(…
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
