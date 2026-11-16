@@ -19,6 +19,7 @@ Consequence: judge
 Witness: phase 0 — a 7x7 fixture fit directory ingests as an `al.twins.ReferenceModel`, its baseline `Twin` simulates bit-identically for the same seed across two runs and differently for another seed, and `SimulatedTwin.from_directory` of the written output re-simulates to the same image; phase 3 — on a fixture SIE reference, `ReplaceTotalMassWithStellarPlusDark` with a 50/50 `MassBudget` yields f_dark(θ_E) = 0.5 ± 1e-3 and a `TransformationRecord` that JSON round-trips; phase 4 — on the first real lens, the no-misspecification fit recovers the injected M/L and κ_s inside 3σ for every seed
 Review-minutes: 30
 Unattended: never
+Lane: ral
 Epic: lenstwin
 Filed: 2026-10-28
 

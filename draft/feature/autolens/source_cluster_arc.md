@@ -21,6 +21,7 @@ Status: draft
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Epic: cluster-strong-lensing
 Filed: 2026-08-19 (backfilled from git)
 

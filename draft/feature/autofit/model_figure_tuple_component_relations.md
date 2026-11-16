@@ -13,6 +13,7 @@ Status: draft
 Consequence: glance
 Witness: `presentation.py` expands a tuple whose components differ in `provenance.kind` into per-component pills — `centre_0 = bulge.centre.centre_0 + 0.1` as a relation pill and `centre_1` free, `2D` context kept — pinned by a test in `test_autofit/model_figure/test_presentation.py` on the catalogue's tuple construct; the lens-side caveat removal follows once released.
 Review-minutes: 3
+Lane: any
 Epic: model-figures
 Filed: 2026-09-11
 

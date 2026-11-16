@@ -1,5 +1,7 @@
 # Energy and CO2e for PyAuto HPC campaigns: methods, inputs, worked estimate
 
+Lane: ral
+
 *Research note, 2026-09-27. No repository files edited. Items marked **[UNVERIFIED]** still need a primary source or a site confirmation.*
 
 ## 1. Tools: which measure and which estimate

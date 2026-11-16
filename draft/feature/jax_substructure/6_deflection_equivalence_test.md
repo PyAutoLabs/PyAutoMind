@@ -12,6 +12,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-06-09 (backfilled from git)
 
 Context: PyAutoLens issue #542 follow-up (Gap 2, deferred during the original

@@ -3,6 +3,7 @@
 Type: bug
 Consequence: judge
 Autonomy: human-required
+Lane: any
 
 @autolens_workspace @PyAutoLens
 

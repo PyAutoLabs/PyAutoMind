@@ -14,6 +14,7 @@ Consequence: glance
 Witness: A unit test on a synthetic delta-spike weight map asserts no two `source_plane_mesh_grid` points lie closer than 5% of the local mesh spacing, and re-fitting `Tile102008532RA0683486015030DECNEG0642073552911` `initial_lens_model/vis_pix` no longer has a mesh pair under 5% of local spacing nor a reconstructed pixel above 10x the reconstruction's 99th percentile — or, if the decision is that adapt-image saturation must be clipped, the PR records the nearest-neighbour distribution across the dr1_sep1 tiles and the clipping is documented where the adapt image is built.
 Review-minutes: 3
 Unattended: ready
+Lane: wsl-data
 Filed: 2026-09-16
 Updated: 2026-09-16
 

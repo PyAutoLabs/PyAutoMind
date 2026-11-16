@@ -15,6 +15,7 @@ Consequence: glance
 Witness: running `dataset_1d/advanced/temporal/plot.py` twice in a row under `config/build/profile_smoke.yaml` succeeds both times, and the same holds for every script that builds a database with `af.Aggregator.from_database(filename=...)` + `add_directory`.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Epic: cti-upkeep
 Phase: 3
 Filed: 2026-11-06

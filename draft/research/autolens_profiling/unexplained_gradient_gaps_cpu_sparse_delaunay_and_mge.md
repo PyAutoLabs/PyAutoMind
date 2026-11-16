@@ -14,6 +14,7 @@ Consequence: judge
 Witness: for each family below, a measured explanation (or a library bug filed with a repro) that accounts for the stored autodiff-vs-FD gap at the smallest sweep steps, posted on the issue with the cell evidence
 Review-minutes: 10
 Unattended: never
+Lane: any
 Filed: 2026-11-02
 
 Found in autolens_profiling#515 (research note `wiki/research/gradient_campaign_impact_border_tie.md`, table "What the remaining disagreements are"). None of these is caused by PyAutoArray#671. Method used there: compare each `gradient.json` `fd_sweep` direction's `analytic` against the stored central difference at h = 1e-8 / 1e-7 / 1e-6 (script `Science/scratch/gradient_campaign_impact_2026-11-02/small_step_check.py`).

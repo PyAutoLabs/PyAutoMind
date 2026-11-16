@@ -263,10 +263,57 @@ def test_tier_glance_with_a_gate_and_an_action_appends_one_row(tmp_path,
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
         root, apply=True, tier="glance", gate="tests 3 pass",
-        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03")) == 0
+        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03",
+        actor="in-turn-autonomous")) == 0
     log = (root / "autonomy_log.md").read_text()
     assert "sprocket-calibration (Flywheel#8) | glance |" in log
+    assert "| in-turn-autonomous |  |" in log
     assert "Count toward 20: 2" in log
+
+
+@pytest.mark.parametrize("apply", [False, True])
+def test_a_glance_close_without_an_actor_refuses_and_writes_nothing(
+        apply, tmp_path, monkeypatch, capsys):
+    """A human `/prm` close-out that forgets --actor must not land as a counted
+    `unknown` row (FLOW-2): the whole close refuses before writing anything."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    before = _snapshot(root)
+    assert lifecycle.cmd_close(_args(
+        root, apply=apply, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03")) == 1
+    assert _snapshot(root) == before
+    err = capsys.readouterr().err
+    assert "--actor is required" in err and "human-/prm" in err
+
+
+def test_the_close_row_carries_the_actor_and_the_mergedby_evidence(
+        tmp_path, monkeypatch, capsys):
+    """Witness (a), offline: `--actor` is the class, the `gh` seam supplies
+    `mergedBy` — the dry run prints the row the apply then writes verbatim."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    monkeypatch.delenv(lifecycle.NO_GH_ENV, raising=False)
+    calls = []
+
+    def fake_gh(argv):
+        calls.append(argv)
+        return 0, '{"mergedBy": {"login": "a-human"}, "mergedAt": "2026-10-03T09:00:00Z"}', ""
+
+    monkeypatch.setattr(lifecycle, "_gh", fake_gh)
+    kw = dict(tier="glance", gate="tests 3 pass", action="merged-unchanged",
+              pr=["Flywheel#8"], date="2026-10-03", actor="human-/prm")
+    assert lifecycle.cmd_close(_args(root, **kw)) == 0
+    row = ("| 2026-10-03 | sprocket-calibration (Flywheel#8) | glance | tests 3 pass "
+           "| merged-unchanged | 1 | human-/prm (mergedBy a-human) |  |")
+    assert row in capsys.readouterr().out
+    assert calls and calls[0][:2] == ["pr", "view"] and "mergedBy,mergedAt" in calls[0]
+    assert lifecycle.cmd_close(_args(root, apply=True, **kw)) == 0
+    log = (root / "autonomy_log.md").read_text()
+    assert row in log
+    # a human-typed /prm is left out of the count: still 1, the fixture row
+    assert "Count toward 20: 1 (stage 1: 1, stage 2: 0)" in log
+    assert "left out by merge actor" in log
 
 
 @pytest.mark.parametrize("tier", ["notify", "judge"])
@@ -364,3 +411,160 @@ def test_an_explicit_prompt_takes_a_path_or_a_bare_filename(tmp_path,
     assert lifecycle.close_prompt(
         root, "x", "sprocket_calibration.md")[0] == root / rel
     assert lifecycle.close_prompt(root, "x", "nothing_here.md")[0] is None
+
+
+# --------------------------------------------------------------------------- #
+# the commit line — exactly the paths close touched
+# --------------------------------------------------------------------------- #
+def _commit_line(out: str) -> str:
+    lines = [ln.strip() for ln in out.splitlines()
+             if ln.strip().startswith("prompt_sync_push ")]
+    assert len(lines) == 1, out
+    return lines[0]
+
+
+def test_the_commit_line_names_every_path_close_touches(tmp_path, monkeypatch,
+                                                        capsys):
+    """`prompt_sync_push` commits only the paths it is given, so the tail hands
+    over the exact list: record, prompt, index, every registry pruned, the
+    shadow row's log, and the three files the dashboard render writes."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(
+        root, apply=True, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", date="2026-10-03", actor="unknown")) == 0
+    line = _commit_line(capsys.readouterr().out)
+    assert "git add -A" not in line
+    assert line.split()[3:] == [
+        "complete/2026/10/sprocket-calibration.md",
+        "active/sprocket_calibration.md", "complete/index.md",
+        "active.md", "parked.md", "autonomy_log.md",
+        "dashboard.md", "dashboard.html", "state.json"]
+
+
+def test_the_commit_line_names_a_draft_prompt_and_skips_an_absent_row(
+        tmp_path, monkeypatch, capsys):
+    root = _mind(tmp_path, draft=True)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    line = _commit_line(capsys.readouterr().out)
+    assert "draft/feature/flywheel/sprocket_calibration.md" in line.split()
+    assert "autonomy_log.md" not in line.split()
+
+
+def test_the_glance_close_out_commits_cleanly_through_prompt_sync_push(
+        tmp_path, monkeypatch, capsys):
+    """End to end in a real git repo with a bare remote: `close --apply` (tier
+    glance), the dashboard render's three files, then the printed
+    `prompt_sync_push` line commits everything and leaves the tree clean."""
+    import subprocess
+
+    def git(*a):
+        return subprocess.run(["git", "-C", str(root), *a], capture_output=True,
+                              text=True, check=True).stdout.strip()
+
+    remote = tmp_path / "remote.git"
+    subprocess.run(["git", "init", "--bare", "-b", "main", str(remote)],
+                   capture_output=True, check=True)
+    (tmp_path / "mind").mkdir()
+    root = _mind(tmp_path / "mind")
+    for page in ("dashboard.md", "dashboard.html"):
+        (root / page).write_text("old render\n")
+    (root / "state.json").write_text('{"cards": []}\n')
+    subprocess.run(["git", "init", "-b", "main", str(root)],
+                   capture_output=True, check=True)
+    git("config", "user.email", "test@example.invalid")
+    git("config", "user.name", "Test")
+    git("add", "-A")
+    git("commit", "-m", "seed")
+    git("remote", "add", "origin", str(remote))
+    git("push", "-u", "origin", "main")
+
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(
+        root, apply=True, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", date="2026-10-03", actor="unknown")) == 0
+    line = _commit_line(capsys.readouterr().out)
+    # stand-in for `pyauto-brain intake --apply dashboard`
+    for page in ("dashboard.md", "dashboard.html"):
+        (root / page).write_text("new render\n")
+    (root / "state.json").write_text('{"cards": [1]}\n')
+
+    sync = Path(lifecycle.__file__).resolve().parent / "prompt_sync.sh"
+    res = subprocess.run(
+        ["bash", "-c", f'export PROMPT_REPO="{root}"; source "{sync}"; {line}'],
+        capture_output=True, text=True)
+
+    assert res.returncode == 0, res.stderr
+    assert git("status", "--porcelain") == ""
+    assert git("rev-parse", "HEAD") == subprocess.run(
+        ["git", "-C", str(remote), "rev-parse", "main"],
+        capture_output=True, text=True, check=True).stdout.strip()
+
+
+# --------------------------------------------------------------------------- #
+# queue.md (M2.3, 2026-11-12): an entry leaves the queue when its work reaches
+# complete/, so close retires it — else its ref dangles and `check` fails
+# every later push.
+# --------------------------------------------------------------------------- #
+QUEUE = """\
+# Queue
+
+```markdown
+## <n>. <label>
+- kind: prompt
+- ref: draft/<work-type>/<target>/<name>.md
+```
+
+## 1. Sprocket calibration
+- kind: prompt
+- ref: draft/feature/flywheel/sprocket_calibration.md
+- note: torque first
+
+## 2. Widget alignment
+- kind: prompt
+- ref: draft/feature/flywheel/widget_alignment.md
+
+## Retired
+
+Entries that have left the queue.
+
+### Older gearbox work
+- shipped-as: Gadgets#1
+"""
+
+
+def test_close_retires_the_tasks_queue_entry(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    (root / "queue.md").write_text(QUEUE)
+    _at(monkeypatch, root)
+    # Dry run: says so, writes nothing.
+    assert lifecycle.cmd_close(_args(root)) == 0
+    assert (root / "queue.md").read_text() == QUEUE
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    text = (root / "queue.md").read_text()
+    live, retired = text.split("## Retired")
+    assert "Sprocket calibration" not in live and "Widget alignment" in live
+    assert "### Sprocket calibration\n- shipped-as: complete/2026/09/" \
+           "sprocket-calibration.md (2026-09-17)\n- note: torque first" in retired
+    assert retired.index("Sprocket calibration") < retired.index("Older gearbox")
+    # The bystander's entry still resolves; nothing dangles.
+    assert [e[0] for e in lifecycle.queue_entries(root)] == ["Widget alignment"]
+    assert lifecycle.queue_findings(root) == []
+
+
+def test_close_without_a_queue_entry_leaves_queue_md_alone(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    other = QUEUE.replace("sprocket_calibration.md", "flange_polish.md")
+    (root / "queue.md").write_text(other)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    assert (root / "queue.md").read_text() == other
+
+
+def test_queue_retire_text_creates_the_footer_when_missing():
+    text = "# Queue\n\n## 1. A\n- kind: prompt\n- ref: draft/x/y/a.md\n"
+    out, moved = lifecycle.queue_retire_text(text, "a.md", "complete/2026/01/a.md")
+    assert moved == ["A"]
+    assert out.endswith("## Retired\n\n### A\n- shipped-as: complete/2026/01/a.md\n"
+                        "- note: retired by `lifecycle.py close`\n")

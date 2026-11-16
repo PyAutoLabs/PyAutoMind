@@ -16,6 +16,7 @@ Consequence: glance
 Witness: `scripts/initial_lens_model.py` builds `vis_lp` with `n_batch=<the intended value>` and no `batch_size` kwarg, a grep for `batch_size=` inside `af.Nautilus(` calls across `scripts/` returns nothing, and where the stray kwarg went is recorded in the PR (a PyAutoFit prompt is filed if `af.Nautilus` swallows unknown kwargs).
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-08-31
 
 Found during the euclid-dr1-prep phase-3a prose restoration (issue

@@ -14,6 +14,7 @@ Consequence: glance
 Witness: The alias-aware symbol scan and the `inspect.signature` bind pass over the post-fix tree report 0 stale references outside the `legacy/`/experiment folders the human chose to condemn (that list recorded in the PR), and the four files repaired under HowToGalaxy#56 run end-to-end where their data is reachable.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-08-04 (backfilled from git)
 
 Found 2026-08-04 while fixing the `aplt.Output` drift in this repo under

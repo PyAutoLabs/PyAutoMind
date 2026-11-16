@@ -1,5 +1,7 @@
 # Codex gpt-6-astra adversary review — A4 stack (PyAutoFit#1685 → #1686 → #1687), pre-merge, 2026-10-14
 
+Lane: any
+
 Read-only review from the task worktree root over `8437a3b76 → d37280e2b → 27e77474c → 946835f2a`; inputs: A4 prompt, the three PR bodies, epic report §3.2/§3.3/§3.5/§8.3/§8.5/§8.6, review 05. Human rulings supplied: MultiStart explicit-seed re-key accepted; #1500 out of scope; SneakyPool and pool shims stay until A5. Verdict FINDINGS (4). Enacted on the stacked branches before /prm; see the A4 completion record.
 
 ## §1 Verdict — FINDINGS

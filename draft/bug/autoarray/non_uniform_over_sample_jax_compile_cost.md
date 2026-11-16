@@ -15,6 +15,7 @@ Consequence: glance
 Witness: A minimal reproducer (one jitted `AnalysisImaging` likelihood on the 80-pixel release mask) records compile time for uniform vs non-uniform `over_sample_size_pixelization` before and after; after the fix the non-uniform compile is within 1.5x of the uniform one (was ~3x), `binned_array_2d_from` agrees with the old segment_sum path to 1e-12 on a {2, 4} map, and `mapping_matrix_over_sampled` no longer reads `sub_size[0]` as the uniform size.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-09-04
 
 Found while fixing autolens_workspace#533 (`scripts/multi_dataset/features/slam/simultaneous.py`

@@ -15,6 +15,7 @@ Consequence: glance
 Witness: A unit test shows a dPIE built with `sigma_0 = sqrt(3/2) * sigma_LT` (via the sibling class or the convention switch) produces deflections identical to the `sigma_LT` build to 1e-12, the Lenstool parity tests pass untouched, and `cluster/mass_parameterizations.py` carries the one physical-convention example line.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Parent: draft/docs/autolens/split_lensing_regimes.md
 Filed: 2026-07-25 (backfilled from git)
 

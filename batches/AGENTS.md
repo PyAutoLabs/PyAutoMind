@@ -174,6 +174,7 @@ only while a brief is open (`policy/shift_watcher.md`).
 - review-at: 2026-11-04T11:30Z      # stated by the human; the grant expires here
 - shift: morning
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/<n>   # the digest is posted here once
+- live: LIVE · 1 running … — status: <comment url>   # written by the watcher only (PyAutoBrain#622)
 - packet: yes                       # optional; the HTML packet is opt-in under a brief
 - heart-ack:
   - <reason line>
@@ -209,6 +210,36 @@ only while a brief is open (`policy/shift_watcher.md`).
     - cpu-hours: 64
 ```
 
+**Goals come from [`goals.md`](../goals.md)** (PyAutoMind#565). `pyauto-brain
+batch brief --new <slot> --review-at <ISO>` writes a skeleton brief whose
+`goals:` are that file's goals in order, with `backlog: scoped` to the union of
+their `epics:`/`tags:` (or `fill-idle` when no goal names any) and safe
+defaults (`merge-cap: 0`) for the rest; it prints to stdout unless `--out`
+names a file, so writing the record — the dispatch — stays the human's act.
+A goal whose line was last written by a `Via: mind-dashboard` commit is free
+text from a web page, so it is emitted **commented out** with "from dashboard,
+last edited <date>": a worker never sees it until the human uncomments it.
+When provenance cannot be read (no git, or the blame does not line up), every
+goal is emitted that way, marked "provenance unknown".
+`--new` also prints, on stderr, how the goals changed since the newest brief.
+`brief --check` warns when goal 1 of `goals.md` is missing from a brief,
+unless goal 1 came from the dashboard.
+
+**The keep-Heart-green lane** (PyAutoBrain#625). `brief --new` first reads
+Heart's release verdict and sorts every reason into `fixable-dev`,
+`local-checkout`, `release-scope` or `human-only`, and appends a `## Heart`
+section after the brief's bullets: the reasons by class, what it filed or
+picked, and what needs the human. For `fixable-dev` reasons it files at most
+3 new bug drafts (deduplicated against `draft/`, `active/`, `queue.md` and its
+own state, by a `<!-- heart-key: … -->` mark), with no `Unattended:` header,
+so sizing decides. **It writes only with `--out` and an explicit `--mind`
+that is not the shared canonical checkout**: use a temp worktree on
+`origin/main`, then commit and push the drafts with the record from there. A
+stdout preview, or the shared checkout, writes nothing and says so. With
+`--green pick` (the human's opt-in) it names the drafts whose `Lane:` the
+brief allows under `tasks:`, with a last `heart-green` goal. It never
+releases, dispatches a workflow, forces or quarantines. Details: `PyAutoBrain/agents/conductors/batch/AGENTS.md`.
+
 `backlog:` decides what happens once the named tasks are done or blocked:
 `none` — nothing more; `fill-idle` — the planner's own ranking, under every
 batch constraint; `scoped` — only prompts matching the `scoped:` epics, tags or
@@ -220,10 +251,15 @@ inside the brief exactly as a live shift would and records each proposal —
 prompt, tier, pick reason — but takes no lease and starts no worker, up to
 `max-sessions:` proposals. Its digest lists them as `proposed (shadow)`. The
 pilot opens with two shadow shifts as its baseline. At `review-at:` every shift,
-shadow or live, appends one row to `batches/pilot/pilot.md` (the pilot ledger;
-its own header says which cells are the human's to fill at check-in; in a
-shadow row they measure the human's own review time and merges in the window,
-the baseline).
+shadow or live, writes one machine-readable line to `batches/pilot/pilot.jsonl`
+(one line per slot: mode, tokens by component, merged PR URLs with `mergedBy`
+and merge actor, per-worker exits, stall minutes, `amended`), and
+`batches/pilot/pilot.md` is rendered from it (the pilot ledger; its own header
+says which cells are the human's to fill at check-in; in a shadow row they
+measure the human's own review time and merges in the window, the baseline).
+Both go through the one Mind writer as upsert ops, so a late arrival amends the
+slot's line (`amended`) and never adds a second (PyAutoBrain#610). Tokens a shift
+could not measure are written `null` (`unmeasured` in the render), never 0.
 
 **`merge-cap:` in practice (phase 4b).** A `glance` worker ends at PR-open; once
 its CI is green the watcher starts one independent close-out session (same
@@ -282,8 +318,15 @@ the review surface; the HTML packet is written only when `packet: yes`.
 - drafts-filed: 1
 - packets-sent: 0
 - workers-crashed: 0
-- tokens: <n> of <token-budget>
+- tokens: <measured> of <token-budget> (cache-read <n>; <k> session(s) unmeasured)
 - review-minutes-planned: 45
+
+### Workers
+- <label> (<worker key>): spawned/finished
+- <label> (<worker key>): spawned/parked — blocked 40 min — mentioned (parked)
+
+### Refusals
+- <task> — token-budget 100: 55 committed + 60 reserved per worker — 2× from <at>
 ```
 
 Brief work and backlog picks stay separate, and **every backlog pick carries a
@@ -301,10 +344,37 @@ worker's `<task>.done` (one URL per line, `merged <url>` for a PR it merged
 in-turn under its tier); each worker's `<task>.proof.md`, quoted verbatim — a
 task that wrote none gets a stub saying so, never an invented packet; one
 read-only `gh pr checks` per PR for its health; and its own counters.
-`glance-auto-merges`, `reverts`, `pushes`, `drafts-filed` and `packets-sent`
-stay 0 until phases 4–5 count them (human, 2026-11-04). The comment is posted
+`glance-auto-merges`, `reverts`, `drafts-filed` and `packets-sent` stay 0
+until phases 4–5 count them (human, 2026-11-04); `pushes` counts the
+@mentions below (PyAutoBrain#611). The comment is posted
 **once**: a local marker is created before the post, so a crash leaves no
-comment rather than two, and a failed post is not retried.
+comment rather than two; a post that fails outright is retried on later ticks,
+at most 3 attempts in all, and never after a timeout (a timeout may have
+posted). Counters come from one exit record per worker and from GitHub's merged
+state for each PR in the window, read at review-at after a final reap
+(PyAutoBrain#610). A late arrival amends the record and the pilot line and posts
+**one** correction comment. A worker that parks, or parks on its issue with a
+question (awaiting input), gets **one** comment on the digest issue
+@-mentioning the human (`mention_login`), derived from durable
+state and retried like the digest; the watcher posts with
+`PYAUTO_SHIFT_GH_TOKEN` (a bot account, PyAutoMind `issues: write` only) so the
+mention notifies, and the digest warns when the poster is the mentioned account
+(PyAutoBrain#611; AUTONOMY.md watcher network surface, amended 2026-11-12).
+**While the shift runs (PyAutoBrain#622)** the watcher keeps **one status
+comment** on the same issue: created once, then only edited (on a change of
+state, or every 10 minutes), never @-mentioning anyone. It shows each task's
+state, tokens against the budget, blocks, parks, refusals, time to `review-at:`
+and the steering commands. The human steers by commenting, the comment's first
+line one of `/pause`, `/resume`, `/drop <task>` or `/stop`; only their
+`mention_login` counts. Each command is acknowledged once, in that status
+comment. `/pause` holds spawns, re-dispatches and new close-outs until
+`/resume`; reaps and mentions continue. `/stop` writes the watcher's `STOP`
+file. `/drop` takes only a task of this shift; a dropped worker already
+running is not killed, and a merge that lands after a drop is never counted
+as unattended. The record's `- live:` line is the dashboard's
+one-line copy, rewritten through the one Mind writer when the state changes;
+nobody else writes it. Doctrine: AUTONOMY.md watcher network surface,
+amendment 2026-11-13.
 `batch digest --record <file>` prints it early; `batch brief --check` refuses a
 digest missing a section, a counter, a pick's `why:` or a started task's
 packet.

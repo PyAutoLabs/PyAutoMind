@@ -1,5 +1,7 @@
 # CTI upkeep parity — survey report (2026-11-04)
 
+Lane: wsl-data
+
 Companion to `cti_upkeep_epic.md`. Read-only survey of the live checkouts
 under `~/Code/PyAutoLabs`, GitHub (`gh api`), PyPI and Read the Docs, taken
 2026-11-04 by the Fable architect session. Nothing was edited. Each row is a

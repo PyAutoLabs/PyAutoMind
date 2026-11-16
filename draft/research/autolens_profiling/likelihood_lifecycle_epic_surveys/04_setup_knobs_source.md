@@ -1,5 +1,7 @@
 # Survey 04 — Compute-setup knobs in PyAutoLens: what an "auto / optimal setup" factory must replace (2026-10-21, Explore worker, read-only)
 
+Lane: ral
+
 Nothing in the stack picks the compute setup from the hardware today. JAX on/off, sparse operator on/off and its type, core count, and fp32/fp64 are each set by hand, and science projects reach for argparse `--use_cpu` switches. A few narrow automatic choices do exist; they are listed in §1 and §3.
 
 **Stale fact.** The note that "`apply_over_sampling` drops the sparse operator" is out of date. PyAutoArray `db94e80a` (2026-09-27, in tags 2026.10.11.1 and later) made it carry the operator over: `array/PyAutoArray/autoarray/dataset/imaging/dataset.py:594-596,620`. Several workspace and science scripts still describe the old behaviour (§4, §5).

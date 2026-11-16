@@ -1,5 +1,7 @@
 # 04 — Inference and profiling infrastructure survey for `autofit_inference` and `autofit_profiling`
 
+Lane: ral
+
 Read-only survey, 2026-10-07. Every repo was read on `main`. Citations are workspace-relative paths.
 Nothing was edited.
 

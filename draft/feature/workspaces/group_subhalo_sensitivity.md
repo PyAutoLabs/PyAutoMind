@@ -13,6 +13,7 @@ Consequence: glance
 Witness: `scripts/group/features/advanced/subhalo/sensitivity/` runs to completion under the smoke profile and produces a sensitivity map whose detectability threshold varies across the group field rather than being spatially constant, i.e. the multi-deflector field measurably changes where subhalos are detectable.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-04-27 (backfilled from git)
 
 The imaging `features/advanced/subhalo/sensitivity` example needs improving and padding out before adapting to group.

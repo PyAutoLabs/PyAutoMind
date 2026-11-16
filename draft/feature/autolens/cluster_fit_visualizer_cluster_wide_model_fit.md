@@ -17,6 +17,7 @@ Consequence: glance
 Witness: autolens_workspace_test cluster fixture fit writes image/cluster_fit_overlay.png and one zoom per system (pytest asserts the files exist and are non-empty)
 Review-minutes: 3
 Unattended: needs-slicing
+Lane: any
 
 # Cluster fit visualizer: cluster-wide model-fit figures at cluster scale
 

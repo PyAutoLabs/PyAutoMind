@@ -17,6 +17,7 @@ Consequence: glance
 Witness: an `AnalysisInterferometer` (and imaging analogue, if affected) run under `af.DatabasePaths` reloads its dataset through `Fit.value("dataset")` — the aggregator's `_interferometer_from` and `agg_util.mask_header_from` succeed on a database `Fit` — with the same dataset the directory-paths run reloads.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 Found 2026-09-30 by the Codex review of streaming phase 2 (PyAutoGalaxy#638). `AnalysisInterferometer.save_attributes`
 (`autogalaxy/interferometer/model/analysis.py`, and the autolens mirror) writes `dataset.fits` straight to

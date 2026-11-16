@@ -11,6 +11,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-06-24 (backfilled from git)
 
 Restore absolute NumPy likelihood regression baselines in the `_workspace_test`

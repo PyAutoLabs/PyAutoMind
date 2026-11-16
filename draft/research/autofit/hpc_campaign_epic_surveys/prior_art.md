@@ -1,5 +1,7 @@
 # Prior art: status, right-sizing and failure triage for large HPC fit campaigns
 
+Lane: ral
+
 Survey date 2026-09-27. Checked against the linked pages unless marked **[unverified]** (recalled, not re-checked this session).
 
 ## 1. Per-system summary

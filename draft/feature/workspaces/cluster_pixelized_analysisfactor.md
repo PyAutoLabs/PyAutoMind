@@ -15,6 +15,7 @@ Consequence: glance
 Witness: `scripts/cluster/features/extended_source/` runs to completion under the smoke profile with one AnalysisImaging per source, each bound to its own mask; a source with no mask entry raises rather than falling back to a shared or whole-cluster mask; and one factor's log-likelihood is unchanged when another source's light profile is perturbed, proving per-factor evaluation does not cross sources.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Epic: cluster-strong-lensing
 Phase: 10
 Parent: draft/feature/autolens/source_cluster_arc.md

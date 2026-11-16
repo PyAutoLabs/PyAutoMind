@@ -6,6 +6,7 @@ Difficulty: large
 Autonomy: human-required
 Priority: low
 Status: deferred; not authorized for execution in the recovery session
+Lane: any
 
 ## Original request
 

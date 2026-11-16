@@ -12,6 +12,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-05-08 (backfilled from git)
 
 autolens_workspace:

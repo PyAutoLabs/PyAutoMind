@@ -22,7 +22,6 @@ Design change mid-task (human, 2026-11-05): no nested numba parallelism inside m
 - The profiling numba CPU cells pin `OMP_NUM_THREADS=1` but not `NUMBA_NUM_THREADS`, so the day-zero DelaunayNN numba rows ran Sibson multi-threaded in 8-CPU jobs. The laptop Sibson kernel at the profiled size takes 14 ms with 8 threads and 56 ms with 1, about 3–10% of the 1.38 s profiled call. Pin `NUMBA_NUM_THREADS=1` and re-measure the DelaunayNN numba cells after release. Offered to the human.
 - 414189's rows are on pin plus this fix, not the bare pin. The phase-4 ingest must note this.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/677
 
 ## Original prompt
 

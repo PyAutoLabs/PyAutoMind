@@ -12,6 +12,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-06-05 (backfilled from git)
 
 Follow-up from the dark-matter potential work (PyAutoGalaxy

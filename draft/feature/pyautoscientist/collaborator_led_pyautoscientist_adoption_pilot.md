@@ -17,6 +17,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: local-dev
 
 James has an interested collaborator who can use an initial version while we design and develop it. Make PyAutoScientist usable by other researchers through a small starter, explicit connections to their own projects, and organs added as their needs grow. This is the intake plan for later work, not authorization to begin implementation now or contact the collaborator. The collaborator's identity, project, access requirements and working environment have not yet been supplied.
 

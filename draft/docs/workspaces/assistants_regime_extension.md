@@ -15,6 +15,7 @@ Consequence: notify
 Witness: `wiki/core/external/skill_citation_map.md` carries a multi_galaxy row, so a two-deflector request routes to the multi_galaxy workflow instead of `group/start_here.py`; and each flagship system named in the parent plan's literature section has a `wiki/literature/` page following that schema. The autogalaxy-assistant leg stays out of scope until those packages exist.
 Review-minutes: 0
 Unattended: ready
+Lane: any
 Parent: draft/docs/autolens/split_lensing_regimes.md
 Filed: 2026-07-25 (backfilled from git)
 

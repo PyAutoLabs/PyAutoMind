@@ -2,17 +2,30 @@
 
 **Contents**
 
+- [hpc-keep-off-home-phase-b](#hpc-keep-off-home-phase-b)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
-- [knn-partial-point-block](#knn-partial-point-block)
-- [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
+- [delaunay-nn-numba-remeasure](#delaunay-nn-numba-remeasure)
 
 <!-- toc:end -->
+
+## hpc-keep-off-home-phase-b
+- status: blocked — repos claimed by other tasks
+- filed: 2026-11-12
+- prompt: draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
+- follows: complete/2026/11/hpc-keep-off-home.md (phase A, PyAutoFit#1767 closed)
+- summary: add the fill-if-unset TMPDIR line (same text as phase A) beside the PYAUTO_HPC_CACHE block in each repo's activate.sh
+- blocked-by: autofit_profiling (nautilus-spawn-training-pool), autolens_profiling (gradient-correctness-sweep), euclid_strong_lens_modeling_pipeline (sky-orientation-p2)
+- affected-repos:
+  - autofit_profiling
+  - autolens_assistant
+  - autolens_profiling
+  - euclid_strong_lens_modeling_pipeline
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
@@ -84,31 +97,6 @@
 - affected-repos:
   - autolens_workspace_test
 
-## knn-partial-point-block
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/609
-- filed: 2026-10-02
-- prompt: draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-- classification: both
-- suggested-branch: feature/knn-partial-point-block
-- prior-blocker-cleared: Audit PRs Array611/workspace342 merged 2026-10-02; see complete/2026/10/mesh-interpolator-numerics-audit.md. Survey current claims at start-dev.
-- affected-repos:
-  - PyAutoArray
-  - autolens_workspace_test
-- finding-2026-10-29: fix breaks KNN+AdaptSplit gradient check (jax_grad/knn.py); split out of arc 4b (#665) by human; patch on #609; investigate mechanism first (see prompt).
-- resume: Audit#603 discovered deterministic partial-final-block neighbor corruption; filed separately per explicit user request. No implementation begun or worktree created. Audit retains strict expected-failure witness citing609. Schedule repair independently and promote regression after fix.
-
-## sibson-internal-edge-continuity
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
-- filed: 2026-10-02
-- prompt: draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-- classification: both
-- suggested-branch: feature/sibson-internal-edge-continuity
-- prior-blocker-cleared: Audit PRs Array611/workspace342 merged 2026-10-02; see complete/2026/10/mesh-interpolator-numerics-audit.md. Survey current claims at start-dev.
-- affected-repos:
-  - PyAutoArray
-  - autolens_workspace_test
-- resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
-
 ## interferometer-primary-beam-persistence-mirror
 - filed: 2026-10-21
 - prompt: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
@@ -126,3 +114,20 @@
 - release-gate: verify the PyAutoLens#794 release before shipping, as required by the original prompt
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
+
+## delaunay-nn-numba-remeasure
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/528
+- issued: 2026-11-12
+- repos (UNCLAIMED while paused): autolens_profiling
+- prompt: draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
+- claim-override: HUMAN 2026-11-12 ("override the claim and open the ingest PR") over gradient-correctness-sweep (#517, paused) on autolens_profiling
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/529 (rows under experiments/worker_route_remeasure_p677; day-zero row stays current)
+- compute: RAL 415130 COMPLETED 2026-11-12 (415128 failed at guard, not a measurement); warm median x0.94 runtime / x0.88 breakdown
+- open: Pulse step 3 designation decision (human); optional release-tag rerun for a current row; Pulse task/campaign update
+- tier: judge — merge mode: human /prm
+- status: PAUSED 2026-11-12 (HUMAN: release every autolens_profiling claim for the autonomy focus; worktree removed, branch commits already on main). Re-run start_dev to resume.
+- resume (HUMAN 2026-11-12: new row REPLACES day-zero via a RELEASE re-run; parity rulings DONE in autolens_inference#68):
+  1. RAL private install /mnt/ral/jnightin/profiling/PyAuto_2026.11.12.1 (worktrees off PyAuto_2026.10.25.1 clones; log p1112_setup.log, ends INSTALL_READY). Tag SHAs Nerves b987c8d6 Fit 570abac2 Array 51da424e (contains #677 merge e2b05f00) Galaxy cb91fbe6 Lens ca63ddd9. If stale, use the newest release instead.
+  2. Submit autolens_profiling_p677/hpc/batch_cpu/submit_p1112_dnn_numba_remeasure_ral_cpu_hst_fp64 via `hpc/sync submit --cpu` from a copy of hpc/ whose sync.conf sets PROJECT_NAME=autolens_profiling_p677 (raw sbatch is hook-blocked). Risk: RAL venv jax 0.11.2 vs the release's jax floor.
+  3. Ingest: old rows → results/imaging/delaunay_nn/hst/numba_cpu_sparse_fp64/hpc_ral_cpu/history/2026.10.23.1_2026-10-25/, new rows current; re-key catalogue/peak_rss_backfill.json to the history path; add the tag to catalogue/release_revisions.json; build_catalogue → build_dashboard (PYAUTO_BRAIN set) → coverage_matrix; commit all of dashboard/; PR closes #528.
+  4. Pulse: update tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md (no longer blocked; day-zero rows were 2026.10.23.1 carried to .25.1). Frozen day_zero snapshot is never rewritten.

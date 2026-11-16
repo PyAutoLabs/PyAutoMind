@@ -15,6 +15,7 @@ Consequence: judge
 Witness: the 8 cells each have 10 valid attempts per backend accounted for; `results/calibration/correlated_nd_wave1.json` carries their timeouts from real walls; the probe-first set shrinks accordingly; no scored run exists; B5c-2b (`draft/research/autofit_inference/search_ext_b5c2b_scored_wave_submit.md`) is updated to depend on this task.
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: ral
 
 Why: in the `correlated_nd` pilot (RAL 410866) all 80 Emcee and Zeus rows on `corr_gaussian_d20` and `rosenbrock_d20` (2 searches × 2 datasets × 2 backends × 10 seeds) failed because of a harness bug in this repo — chain diagnostics were relabelled by `g0.centre` after the search finished. The bug is fixed in autofit_inference#18 (merged 2026-10-16, record complete/2026/10/search-ext-b5c2a-freeze.md), but those 8 cells have no valid pilot evidence: A2 marks them provisionally probe-first and their timeouts/bands rest on no rows. Human ruling 2026-10-16: rerun them cleanly before the scored wave rather than carry the gap.
 

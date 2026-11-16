@@ -467,3 +467,10 @@ def test_the_close_out_guard_files_ride_the_ledger():
                                   "looks_shipped_dismissed.md"])[1] == []
     assert "looks_shipped.json" in ledger_merge.GENERATED_FILES
     assert "looks_shipped_dismissed.md" not in ledger_merge.GENERATED_FILES
+
+
+def test_the_queue_and_goals_ride_the_ledger():
+    # goals.md is queue.md's sibling (PyAutoMind#565): the human's own text,
+    # written by hand or by the dashboard door, and never generated.
+    assert ledger_merge.classify(["queue.md", "goals.md"])[1] == []
+    assert "goals.md" not in ledger_merge.GENERATED_FILES

@@ -16,6 +16,7 @@ Consequence: glance
 Witness: a PyAutoFit unit test builds an `EPOptimiser` with `default_optimiser=af.Nautilus(number_of_cores=1)` over a `FactorGraphModel` with one AnalysisFactor plus its PriorFactors and runs one step without AttributeError (fast settings / a stubbed sampler run are fine).
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 The bug (Nautilus `_fit` reading `analysis._use_jax` unguarded on a PriorFactor) is gone since
 PyAutoFit 196abf39a (`Analysis.is_jax` = `bool(getattr(self, "_use_jax", False))`, inherited by

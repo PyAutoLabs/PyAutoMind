@@ -15,6 +15,7 @@ Consequence: glance
 Witness: `aplt.plot_array(array=fit.data, regions=[mapping.image_contours])` draws the overlay with no TypeError, and `Mapper.mappings_from(pix_indexes=[[0]])` on a `RectangularBilinearAdaptDensity` mapper returns a mapping with at least one image region or raises.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 Mapping overlay follow-ups surfaced by image-source-mappings Phase 3 (issue #525 on the lens workspace). None were patched around in the workspace beyond an `import autoarray.plot as aaplt`.
 

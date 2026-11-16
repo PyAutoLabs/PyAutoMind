@@ -90,6 +90,9 @@ LEDGER_FILES = (
     "dashboard.html",
     "state.json",
     "queue.md",
+    # The human's ordered goals, which briefs copy (PyAutoMind#565) — the
+    # queue's sibling, written by the same dashboard door.
+    "goals.md",
     # The close-out guard's generated flags and the human's dismissals of
     # them (PyAutoBrain `intake looks-shipped`) — ledger, like queue.md.
     "looks_shipped.json",

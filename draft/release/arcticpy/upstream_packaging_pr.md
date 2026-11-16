@@ -15,6 +15,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: any
 Epic: cti-upkeep
 Phase: 2a
 

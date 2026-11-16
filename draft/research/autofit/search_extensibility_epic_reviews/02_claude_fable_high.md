@@ -2,6 +2,7 @@
 
 Reviewed 2026-10-07 against PyAutoFit `main` @ e807cc531 (the commit the surveys cite), read-only.
 Report: `organs/PyAutoMind/draft/research/autofit/search_extensibility_epic_report.md`.
+Lane: any
 Paths below are relative to `fit/PyAutoFit/autofit/non_linear/` unless prefixed.
 
 ## §1 Verdict

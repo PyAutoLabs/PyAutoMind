@@ -17,6 +17,7 @@ Consequence: judge
 Witness: a results note under autolens_profiling/results/notes/ with a dense-vs-matrix-free table (time, peak memory, evidence difference) at 50², 64², 128², 192² on one synthetic and one real interferometer dataset, ingested by PyAutoPulse, plus a workspace example running under the smoke harness
 Review-minutes: 20
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-10-21
 Blocked-by: none for the profiling leg (runs against checkouts; phases 1-4 on main) — only the workspace example waits for the release. Part of the human's PyAutoPulse profiling programme (anchor Pulse#62); not to be started before that programme.
 

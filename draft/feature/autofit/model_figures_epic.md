@@ -20,6 +20,7 @@ Status: campaign map — phases route through /start_dev one at a time; this fil
 Consequence: judge
 Review-minutes: 30
 Unattended: needs-slicing
+Lane: any
 Epic: model-figures
 Filed: 2026-09-10
 

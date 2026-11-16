@@ -335,6 +335,7 @@ def fake_workspace(tmp_path):
             "active.md": ledger, "planned.md": ledger, "parked.md": ledger,
             "condemned.md": ledger, "ideas.md": f"- {LIVE_MARKER} idea line.\n",
             "queue.md": ledger,
+            "goals.md": f"# Goals\n\n## 1. {LIVE_MARKER} goal\n",
             # Hostile on BOTH known axes (issue #123): a live row ABOVE the
             # separator, and the separator itself cosmetically reformatted to
             # `| --- |`. The old parse copied lines until one started with

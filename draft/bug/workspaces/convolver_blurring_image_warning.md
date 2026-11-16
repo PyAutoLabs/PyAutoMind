@@ -17,6 +17,7 @@ Consequence: glance
 Witness: One canonical script run without `PYAUTO_WORKSPACE_SMALL_DATASETS=1` records whether the `No blurring_image provided` warning persists; if it does not, the small-dataset profile silences it and the audited scripts run warning-free under smoke; if it does, a bug prompt against the workspace scripts is filed and this one closes.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-08-06 (backfilled from git)
 
 Filed 2026-08-06 from the `/cli_noise_clean` audit. Every audited workspace

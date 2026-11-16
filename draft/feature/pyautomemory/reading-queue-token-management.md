@@ -2,6 +2,7 @@
 
 Target: @PyAutoMemory
 Status: deferred by the human; layout-only portion shipped in PyAutoMemory#131.
+Lane: any
 Related completion: complete/2026/10/compact-memory-board.md
 
 Original remaining request:

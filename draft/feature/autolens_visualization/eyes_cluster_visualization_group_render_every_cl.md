@@ -16,6 +16,7 @@ Consequence: judge
 Witness: gallery_run.sh renders the cluster group and gallery_build.py validates viz_manifest.yaml with at least one cluster/ row (CI green)
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 
 ## Original user request (verbatim, Pulse cluster-pointsolver chat, 2026-10-18)
 

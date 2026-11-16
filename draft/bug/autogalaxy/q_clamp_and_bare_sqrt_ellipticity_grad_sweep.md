@@ -3,6 +3,7 @@
 Type: bug
 Target: @PyAutoGalaxy
 Filed: 2026-09-27
+Lane: any
 
 #631 (PR #634) fixed jax.grad NaN at zero components in convert.py and removed the Isothermal q<=0.99999
 clamp (series near q->1). The same classes remain elsewhere:

@@ -12,6 +12,7 @@ Consequence: judge
 Witness: The script's own parity assertion passes on main (ACTUAL == DESIRED at rtol 1e-4) and the cause is named — a stale DESIRED constant, a changed dataset/simulator, or a library regression — with the fixing commit or the corrected constant justified from an independent NumPy evaluation.
 Review-minutes: 10
 Unattended: safe
+Lane: any
 Filed: 2026-09-23
 
 ## Observed

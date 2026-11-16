@@ -1,0 +1,36 @@
+# M2 builds: follow-ups found in review (2026-11-12)
+
+Type: maintenance
+Target: PyAutoBrain
+Repos:
+- PyAutoBrain
+- PyAutoHeart
+- PyAutoHands
+Difficulty: small
+Autonomy: supervised
+Priority: medium
+Status: draft
+Filed: 2026-11-12
+Epic: autonomous-orchestrators
+Consequence: glance
+Witness: one test or recorded check per item; after the M2 merge, one `heart-refresh` dispatch run id recorded from a library merge
+Review-minutes: 10
+Unattended: never
+Lane: any
+
+Source: the independent reviews of Heart#340, Brain#614 and Hands#337 (programme M2). None blocks the M2 merge.
+
+1. **Witness after merge:** record one `heart-refresh` `repository_dispatch` run on PyAutoHeart triggered by a library merge (confirms the App token can dispatch), and pull the canonical Heart checkout so `readiness --dev` exists locally.
+2. **Repos Heart does not know** (e.g. `Jammy2211.github.io`) are a usage error → the dev gate parks forever. Decide: add to `excluded:` (STALE) or to a "not Heart-gated" list.
+3. **Hands `release.yml` workspaces still check out and tag `ref: main`** (lines ~480, ~1054, ~1065); the Colab links point at those tags.
+4. `skills/intake/intake.md` step 1 does not mention `--lane` (intake now refuses a Lane-less draft).
+5. `queue_retire_text` collapses 3+ blank lines across all of queue.md (cosmetic).
+6. Heart `ci_status.py:492` `write_and_summarise` looks unused.
+7. Hands `release.yml` does not yet send `heart-refresh`.
+8. A machine-readable override column in `autonomy_log.md` (so the M2.1 replay need not parse prose).
+
+<!-- filed 2026-11-12 by the programme lead session -->
+9. `/prm`'s "at least one completed check, all green" guard is prose only; only the watcher's `pr_health` enforces it in code (belongs to M4.6, one CI-verdict script).
+10. Stage 3 retry clean: an owned earlier zip deleted by `restore()` and extracted by a failed attempt counts as new and is cleaned → possible false red (cannot turn RED into GREEN).
+11. Quarantine rules not yet in AUTONOMY prose beyond the M2 rulings section; add a one-line pointer to `config/stage3_quarantine.yaml`.
+12. **M2.2 rulesets on PyAutoHeart and PyAutoHands are not applied** (2026-11-13): GitHub rejects a GitHub Actions bypass actor on a repo ruleset, and their daily board commits push with `GITHUB_TOKEN`. Move those board commits to the bot App token (already a bypass actor), then run `m2_rulesets/apply.sh --apply --with-bot-bypass PyAutoHeart PyAutoHands`. The other 12 stage-1 repos are protected (rulesets 27207361…27207455, active, allow_auto_merge on).

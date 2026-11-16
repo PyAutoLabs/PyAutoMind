@@ -17,6 +17,7 @@ Filed: 2026-11-02
 Consequence: judge
 Review-minutes: 25
 Unattended: never
+Lane: ral
 
 Every Delaunay, delaunay_nn and rectangular (Bilinear) gradient cell is no_plateau in the v2 sweep: the central difference agrees with autodiff only at h ~1e-8, i.e. the gradient is that of the local smooth piece. Delaunay cause accepted by the human 2026-11-02 as intrinsic (triangle flips as mass parameters move the traced vertices; no Hilbert setting — 500/2500 px, weight_power 1/6, floor 0/1e-3, no edge pixels — gives a plateau; side project RAL 413876, write-up ~/Science/Science/scratch/delaunay_hilbert_2026-11-01/README.md). Research question for phase 7 gradient samplers: can a gradient sampler or optimizer follow the global trend on these likelihoods, and is a smoothed variant (soft/fixed-mesh assignment, kernel-CDF rectangular once the RTU gradient investigation complete/2026/11/rectangular-gradient-rtu-sparse.md — no RTU kernel-CDF bug; jit tie fix PyAutoArray#672 — is accounted for) worth building? Not a bug.
 

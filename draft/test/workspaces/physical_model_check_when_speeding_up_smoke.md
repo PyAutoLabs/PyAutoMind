@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-08-26
+Lane: any
 
 Whenever a smoke or validation script is sped up, the same task must **also**
 check that the lens model it evaluates is **physical** and **actually fits the

@@ -1,3 +1,5 @@
+Lane: any
+
 **§1 Verdict**
 
 **Amend before implementation:** the direction is sound, but the current phase contracts do not reliably preserve compatibility or produce defensible benchmark rankings.  

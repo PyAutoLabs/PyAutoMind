@@ -1,5 +1,7 @@
 # Survey 05 — Mind epic format, Brain intake/conductors, overlapping epics and tasks (2026-10-21, Explore worker, read-only)
 
+Lane: ral
+
 ## 1. Epic format (PyAutoMind)
 
 Two filing shapes exist.

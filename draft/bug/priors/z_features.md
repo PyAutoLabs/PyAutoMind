@@ -11,6 +11,7 @@ Status: phases 1-3 SHIPPED; phase 4 = design (#1500) + parked 14 + findings 15-1
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-05-18 (backfilled from git)
 
 > **2026-08-18 wrap-up sweep.** All nine confirmed bugs (01-08, 10) are fixed

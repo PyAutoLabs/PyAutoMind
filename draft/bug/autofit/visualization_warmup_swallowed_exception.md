@@ -16,6 +16,7 @@ Consequence: glance
 Witness: running the ellipse and point_source modeling_visualization_jit.py scripts from a cleared output/ under profile_release logs 'Visualization warm-up complete.' and never 'Visualization warm-up failed'
 Review-minutes: 3
 Unattended: needs-slicing
+Lane: any
 
 # Visualization warm-up swallowed for ellipse and point-source analyses
 

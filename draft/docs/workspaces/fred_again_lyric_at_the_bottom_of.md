@@ -14,6 +14,7 @@ Consequence: glance
 Witness: a script over all PyAutoLabs repos finds the track URL on every README's last non-empty line.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 Every PyAutoLabs GitHub repo README should end with the same Fred Again lyric
 line that PyAutoLens's README already ends with (@PyAutoLens `README.md`, last

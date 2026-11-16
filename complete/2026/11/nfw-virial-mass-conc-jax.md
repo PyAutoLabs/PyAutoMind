@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/695
 - completed: 2026-11-06
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/696
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/696
 - summary:
   - `NFWVirialMassConcSph` (m200c + free concentration) is now JAX-traceable: `kappa_s_and_scale_radius` picks `jax.numpy` when `virial_mass` or `concentration` is a JAX array/tracer (reusing `is_jax` from `gnfw_virial_mass_conc`), NumPy otherwise; NumPy values unchanged.
   - First unit tests for the profile: `test_autogalaxy/profiles/mass/dark/test_nfw_virial_mass_conc.py` (NumPy regression; jit of deflections over (m, c) vs NumPy to 1e-10). Full test_autogalaxy 1477 passed; CI green (3.12, 3.13, no-JAX, docs).

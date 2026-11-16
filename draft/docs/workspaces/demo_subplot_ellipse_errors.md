@@ -14,6 +14,7 @@ Consequence: notify
 Witness: A committed autogalaxy_workspace script calls `ag.plot.subplot_ellipse_errors` with a `fit_pdf_list` built from a real ellipse fit's posterior samples taken off a `Result` — a grep shows no parameter perturbation constructing them — and the rendered figure's error region differs between ellipses.
 Review-minutes: 0
 Unattended: ready
+Lane: any
 Filed: 2026-09-09
 
 Split from `plot_coverage_followups.md` on 2026-09-09 (item 2 of 4). That file

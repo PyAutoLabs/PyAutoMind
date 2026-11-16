@@ -1,5 +1,7 @@
 # LensTwin survey 01 — PyAutoLens and PyAutoGalaxy (read-only, 2026-10-28)
 
+Lane: any
+
 Clones surveyed: PyAutoLens `a8eb094` and PyAutoGalaxy `a108092` (both `main`, 2026-10-26, release 2026.10.26.1). Survey only; nothing was edited. PyAutoFit, PyAutoArray and PyAutoNerves were **not** on disk, so their APIs (`af.Model`, `af.Aggregator`, `af.Result`, `as_model`, the `SimulatorImaging` constructor, `Imaging.from_fits`, `apply_mask`, `apply_over_sampling`) are inferred from call sites only. Cited from the `lenstwin` epic ledger and report as `surveys/01 §n`.
 
 ## §0 Agent rules (AGENTS.md; no CLAUDE.md in either clone)

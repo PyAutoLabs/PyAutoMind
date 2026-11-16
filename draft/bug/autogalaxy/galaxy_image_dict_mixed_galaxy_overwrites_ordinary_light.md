@@ -17,6 +17,7 @@ Consequence: judge
 Witness: for one galaxy with `bulge=ag.lp.Sersic(intensity=0.1)` and `disk=ag.lp_linear.Gaussian(sigma=1.0)` fitted to `interferometer_7` (in-memory and array-free), `fit.galaxy_image_dict[galaxy]` equals the bulge image plus the linear reconstruction (rel 1e-8 to `fit.model_image_natural` for a single-galaxy fit), `fits_galaxy_images` writes that sum, and `ResultInterferometer.adapt_images_from()` receives it; the `FitImaging` mirror is checked and either confirmed correct or fixed the same way.
 Review-minutes: 4
 Unattended: ready
+Lane: any
 Source: Codex gpt-6-astra review of the streaming P4 branch (PyAutoLabs/PyAutoArray#598), 2026-10-01 — three independent runs, same finding; pre-existing on main, newly reachable for array-free ordinary-light fits.
 
 ## What

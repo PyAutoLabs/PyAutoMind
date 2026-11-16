@@ -12,6 +12,7 @@ Consequence: judge
 Witness: A results note with DelaunayNN's per-pixel and total identity-lens magnification errors before and after candidate natural-neighbour areas, direct checks of the Sibson weights, and a recommendation the human decides.
 Review-minutes: 20
 Unattended: ready
+Lane: any
 Epic: cluster-strong-lensing
 Filed: 2026-11-02
 

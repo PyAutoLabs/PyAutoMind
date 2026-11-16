@@ -16,6 +16,7 @@ Consequence: judge
 Witness: (1) on an all-false (11, 11) mask with pixel_scales 0.5 and origin (0.5, -0.5), the dirty image of a point source at (1.0, -1.5) via `TransformerNUFFT` peaks at the same native pixel as via `TransformerDFT` (today DFT → (6, 6) whose coordinate is (0, 0) after a `phase_centre=(1.0, -1.5)` re-centring, NUFFT → (5, 5) labelled (0.5, -0.5)); `transformer.visibilities_from` NUFFT vs DFT agree at 1e-10 on that offset-origin mask. (2) `SparseTerms.__add__` (or `Interferometer.from_sparse_terms`) refuses two terms built on masks with identical `shape_native` / `pixel_scales` / `origin` but different masked pixels (e.g. the centre pixel masked in one), or the provenance records a mask hash / masked-pixel count that catches it.
 Review-minutes: 6
 Unattended: ready
+Lane: any
 Source: Codex gpt-6-astra review of the streaming P5 branch (PyAutoLabs/PyAutoArray#600), 2026-10-01 — findings 3 and 5, both PRE-EXISTING on main; exposed because phase-centre shifts make the origin matter.
 
 ## What

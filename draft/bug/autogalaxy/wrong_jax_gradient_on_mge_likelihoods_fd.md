@@ -19,6 +19,7 @@ Filed: 2026-11-02
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: ral
 
 
 ## Narrowed (2026-11-02, autolens_profiling#517 item 1)

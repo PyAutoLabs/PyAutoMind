@@ -11,6 +11,7 @@ Status: STALE PREMISE — needs re-basing before it can be issued (2026-08-09)
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-05-17 (backfilled from git)
 
 ## 2026-08-09 — the implementation base named below no longer exists

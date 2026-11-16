@@ -3,6 +3,15 @@
 The one file the human maintains by hand, and the only thing they have to think
 about between slots: **what I want done next, roughly in order**.
 
+**Two writers.** By hand, or from the published dashboard: a ★ on a task row
+appends a `kind: prompt` entry at the bottom of the list, and un-★ moves it to
+the `## Retired` footer with `shelved-as:`, keeping its note. A tap opens a
+`dashboard-input` issue; `.github/workflows/dashboard_input.yml` validates it,
+runs `lifecycle.py check`, commits as the bot (`Via: mind-dashboard`) and
+closes the issue. To move an
+entry up, edit this file. The goals behind the list live in
+[`goals.md`](goals.md).
+
 **Order is priority.** There is no `priority:` field here — moving an entry up
 *is* the act of prioritising it. Nothing else about an entry needs to be true for
 it to sit in this file; the planner decides what is actually startable.
@@ -24,9 +33,15 @@ hand-pick members.
 
 The order in this file is what the planner does with it: a queued prompt
 outranks an unqueued one, and among queued prompts the file's order wins.
-Below the queue it sorts cheapest-first, because that part of the list is read
-when there is a slot to fill and the question is what fits in it. An entry
+Below the queue it sorts by `Priority:`, then cheapest review first. An entry
 written against `draft/…` keeps its place after the prompt moves to `active/`.
+
+**An empty list stops a shift** (M2.3, PyAutoBrain `AUTONOMY.md` "M2 rulings —
+2026-11-12"): with no live entry here an unattended shift takes its brief's
+named tasks and dips into no backlog. **Every ref is checked**:
+`scripts/lifecycle.py check` fails on a `kind: prompt` ref that resolves to no
+`draft/` or `active/` prompt, so `lifecycle.py close` moves an entry whose
+work has shipped to the footer below.
 
 An entry leaves the queue when its work reaches `complete/`, **not** when it is
 dispatched. A task in flight is still the thing the human wants.
@@ -55,15 +70,71 @@ which now live in the Cortex, and no code ever read them (`_batch.py` globs
 is a Cortex phase-header key now (`PyAutoCortex/REFERENCE.md`), and every Cortex
 phase is `local-dev` by construction.
 
-## 1. numba solve vs JAX sparse operator
+<!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
+
+## 1. Premise check and lane inference follow-ups (M1.3)
 - kind: prompt
-- ref: draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md
-- note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound?
+- ref: draft/feature/pyautobrain/premise_check_followups.md
+- note: programme — the premise gate decides what an unattended shift may dispatch; fix the false-lane and stale-GONE cases first
+
+## 2. Brain board hygiene ledger (SIG-3)
+- kind: prompt
+- ref: draft/feature/pyautobrain/brain_board_hygiene_ledger.md
+- note: programme side lane (state-table row); gives the shift digest a hygiene trend to point at
+
+## 3. prompt_sync_push explicit-paths follow-ups (M1.2)
+- kind: prompt
+- ref: draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md
+- note: programme — touches autolens_profiling, so it parks STALE under the scoped gate until the unpolled-repos ruling
+
+## 5. Duplicate Galaxy pytree registration after a JAX Fitness
+- kind: prompt
+- ref: draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md
+- note: small library bug with a reproduce-first witness
+
+## 8. Regenerate autolens_workspace markdown for sigma_min
+- kind: prompt
+- ref: draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+- note: notify; seven curated pages show the pre-sweep MGE idiom
+
+## 9. PyAutoLens primary-beam persistence mirror
+- kind: prompt
+- ref: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
+- note: notify; docstring line plus one round-trip test
+
+## 12. Release board run_logs enrichment
+- kind: prompt
+- ref: draft/feature/pyautohands/release_board_run_logs_enrichment.md
+- note: notify, low priority filler for a quiet shift
 
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### autolens_workspace __Model__ bullet parameter counts
+- shipped-as: complete/2026/11/model-bullet-parameter-count-drift.md (2026-11-16)
+- note: notify; four named docstring sites, witness is a parse-and-compare script — retired by `lifecycle.py close`
+
+### plot.rst missing exports
+- shipped-as: complete/2026/11/plot-rst-missing-exports.md (2026-11-16)
+- note: docs-only autosummary fix in PyAutoLens and PyAutoGalaxy — retired by `lifecycle.py close`
+
+### positions_threshold test fixture off the symmetry axis
+- shipped-as: https://github.com/PyAutoLabs/PyAutoLens/pull/861 → complete/2026/11/positions-threshold-fixture-off-axis.md (2026-11-14)
+- note: test-only; removes a solver tie-break flake — retired by the shift close-out (queue-retire)
+
+### Heart unit-test trend follow-ups (SIG-2)
+- shipped-as: complete/2026/11/unit-trend-followups.md (2026-11-14)
+- note: programme side lane; small chart fixes plus a golden-HTML pin — retired by `lifecycle.py close`
+
+### Stale enable_pytrees advice in the autofit_workspace MCMC script
+- shipped-as: autofit_workspace#185 → complete/2026/11/stale-enable-pytrees-register-model-advice-in.md (2026-11-14; merged unattended by the warm-up shift, retired by the lead — the watcher close-out does not retire queue entries)
+- note: library half done; workspace leg only — retired by `lifecycle.py close`
+
+### numba solve vs JAX sparse operator
+- shipped-as: PyAutoArray#513 → complete/2026/09/numba-vs-jax-sparse.md (2026-09-01)
+- note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound? The research verdict closed the issue on 2026-09-01 and the prompt was absorbed into its record; the live entry kept a dangling `draft/` ref until the M2.3 check found it and it was retired 2026-11-12
 
 ### Witness campaign
 - shipped-as: PyAutoMind#398 → complete/2026/09/witness-campaign.md (2026-09-17)

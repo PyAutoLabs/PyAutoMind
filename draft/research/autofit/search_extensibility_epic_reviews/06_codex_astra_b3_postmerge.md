@@ -1,5 +1,7 @@
 # Codex gpt-6-astra adversary review — B3 (autofit_inference#5, PyAutoInsight#23, PyAutoCortex#61), post-merge, 2026-10-08
 
+Lane: any
+
 Independent read-only audit of autofit_inference `ec35be4..900648b5c665`, PyAutoInsight `c6285fd82449^1..c6285fd82449`, and PyAutoCortex `d3ab73a6c826^1..d3ab73a6c826`, using the supplied completion record, epic, PR bodies and B2 review; no files changed or compute submitted.
 
 ## §1 Verdict — FINDINGS

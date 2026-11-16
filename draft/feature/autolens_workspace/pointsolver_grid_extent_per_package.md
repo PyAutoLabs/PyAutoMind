@@ -17,6 +17,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-decision
+Lane: any
 Epic: point-source-cpu-speed
 Filed: 2026-09-26
 Parent: complete/2026/09/point-source-cpu-p4.md (issue autolens_profiling#314)

@@ -1,5 +1,7 @@
 # Search extensibility epic: research report and phased plan
 
+Lane: any
+
 Written 2026-10-07 by the architect session; no code edited. Companion to the prompt in `search_extensibility_epic.md`. Four read-only Opus surveys fed this report. Their full text is in `search_extensibility_epic_surveys/` and is cited as `surveys/01 §n` … `surveys/04 §n`:
 
 - `01_search_architecture.md`: the `autofit/non_linear/` package, contracts, duplication, persistence, a target design.

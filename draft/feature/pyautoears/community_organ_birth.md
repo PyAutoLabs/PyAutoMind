@@ -8,6 +8,7 @@ Priority: high
 Consequence: judge
 Filed: 2026-10-03
 Epic: community-organ-birth
+Lane: any
 
 ## Accepted intent
 

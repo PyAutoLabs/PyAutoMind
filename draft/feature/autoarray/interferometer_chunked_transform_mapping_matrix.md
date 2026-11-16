@@ -17,6 +17,7 @@ Status: draft
 Consequence: glance
 Witness: `jax.jit(FitInterferometer)` of the dense MGE-20 cell on the RAL A100 completes at alma (1M vis) instead of RESOURCE_EXHAUSTED (library_path.status == "ok" in `results/breakdown/interferometer/mge_hpc_a100_fp64.json`), with log_likelihood within 1e-6 nats of the laptop CPU value.
 Review-minutes: 8
+Lane: ral
 Epic: interferometer-likelihood-campaign
 
 Source: `autolens_profiling/results/notes/interferometer_mge_breakdown_2026_09.md`, lever 2

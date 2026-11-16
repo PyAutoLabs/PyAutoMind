@@ -12,6 +12,7 @@ Consequence: notify
 Witness: the script fits a `simulator/group.py` dataset with N>=2 simulated satellites of theta_E >= 0.1", its extra-galaxy `einstein_radius` priors are centred on those truths (not on 0), the source basis is non-zero at prior medians, and `|delta_ll| > 9.0` holds for the +5% mass perturbation.
 Review-minutes: 0
 Unattended: ready
+Lane: any
 Filed: 2026-09-07
 
 autolens_workspace_test#299 (2026-09-07) fixed the zeroed-source failure of

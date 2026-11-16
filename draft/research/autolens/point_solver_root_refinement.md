@@ -16,6 +16,7 @@ Consequence: judge
 Epic: cluster-pointsolver-speed
 Related: PyAutoLens#799/#800 (record `complete/2026/10/point-solver-spurious-core.md`); doc guide shipped as `complete/2026/10/point-solver-guide.md` (autolens_workspace `guides/point_solver/limitations.py`)
 Filed: 2026-10-23 (as a Newton-distance filter feature); re-scoped to research 2026-10-24
+Lane: any
 
 ## Why
 

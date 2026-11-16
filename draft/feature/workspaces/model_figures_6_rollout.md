@@ -25,6 +25,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 30
 Unattended: needs-slicing
+Lane: any
 Epic: model-figures
 Phase: 6
 Filed: 2026-09-10

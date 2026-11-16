@@ -17,6 +17,7 @@ Consequence: glance
 Witness: All 10 prelim lenses carry a per-lens COOLEST `.csv` in their catalogue tile directory; the magnification plane joins `model.fits` or its exclusion is justified by the size numbers; the size assessment has measured per-lens bytes and a 15,000-lens extrapolation; the retroactive-update verdict is written with an explicit recommendation.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Epic: euclid-dr1-prep
 Phase: 9
 Parent: draft/feature/euclid/euclid_dr1_prep_epic.md

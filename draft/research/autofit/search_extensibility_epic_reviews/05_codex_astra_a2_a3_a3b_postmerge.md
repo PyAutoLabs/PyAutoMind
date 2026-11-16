@@ -1,5 +1,7 @@
 # Codex gpt-6-astra adversary review — A2/A3/A3b (PyAutoFit#1679/#1680/#1681), post-merge, 2026-10-08
 
+Lane: any
+
 Independent read-only audit of `0dbf258c4..7d056728c`, with HEAD verified as `7d056728c4427cb8c831dc5c56d05309022d5755`; reviewed the supplied decisions, completion records, frozen design and A1 review; no files changed.
 
 ## §1 Verdict — FINDINGS

@@ -16,6 +16,7 @@ Consequence: glance
 Witness: The compile-census probe (`autolens_profiling/scripts/misc/jax_compile`) run in two fresh processes shows `delaunay_matern`'s warm compile dropping from ~cold (26-28 s) into the knn/rect band (0.2-4 s) — or, if no fix lands, the HLO diff of the two processes' `custom_call` attributes is recorded in the census README as the confirmed mechanism, with the jax knob and callback-registration variants tried and their timings.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-07-28 (backfilled from git)
 
 Found during the MultiStartProdigy compile census (autolens_profiling#93):

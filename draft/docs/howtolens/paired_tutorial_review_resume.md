@@ -1,6 +1,7 @@
 # Resume: paired HowToLens / HowToGalaxy tutorial review
 
 Saved: 2026-10-31. The approved introductory phase is merged and closed. The broader course review is not complete.
+Lane: wsl-data
 
 ## Next action
 The human plans larger changes to HowToLens Tutorials 3, 4 and 5 before continuing this editorial review. Do not apply the old Tutorial 3 proposal: it was shown in chat but never approved or edited. Once the human's rewrite is ready, read the current source and resume at Tutorial 3 with five coherent blocks at a time.

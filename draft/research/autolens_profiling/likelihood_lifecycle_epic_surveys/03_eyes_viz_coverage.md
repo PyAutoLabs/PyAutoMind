@@ -1,5 +1,7 @@
 # Survey 03 — PyAutoEyes and autolens_visualization coverage per dataset type (2026-10-21, Explore worker, read-only)
 
+Lane: any
+
 ## Headline
 
 The work the "Eyes on all dataset types" phase describes has already shipped. Issue PyAutoLabs/autolens_visualization#4 ("feat: visualize every PyAutoLens dataset type (dataset + fit) and group on Eyes") is CLOSED, and PR #5 `feature/viz-all-dataset-types` was merged on 2026-10-21 (merge 1f65e89). The Mind completion record is `organs/PyAutoMind/complete/2026/10/viz-all-dataset-types.md`. It says: "autolens_visualization and PyAutoEyes now cover every PyAutoLens dataset type… each writing only `dataset.png` + `fit.png`". Its stated follow-up is "Bespoke point-source, cluster and weak visualizations, driven by the human through the Eyes dashboard."

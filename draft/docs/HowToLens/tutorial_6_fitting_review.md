@@ -4,6 +4,7 @@ Type: docs
 Target: @HowToLens
 Consequence: judge
 Status: checkpoint — future work, not started
+Lane: any
 Checkpoint date: 2026-10-31
 
 ## Original request

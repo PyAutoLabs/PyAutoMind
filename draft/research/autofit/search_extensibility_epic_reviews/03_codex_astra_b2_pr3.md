@@ -1,5 +1,7 @@
 # Codex gpt-6-astra adversary review — B2 (autofit_inference#3), 2026-10-08
 
+Lane: any
+
 Independent-adversary leg over branch `feature/search-ext-b2-harness` at f58a087 (`codex exec --sandbox read-only -c model_reasoning_effort=high`, run from the task worktree root). Enacted the same day; see the PR and `complete/2026/10/search-ext-b2-harness.md` once closed.
 
 ## §1 Verdict — FINDINGS

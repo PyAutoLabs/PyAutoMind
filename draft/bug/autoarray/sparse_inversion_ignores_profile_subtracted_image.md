@@ -15,6 +15,7 @@ Status: formalised
 Consequence: glance
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Witness: a regression test with a regular light profile + pixelized source where the sparse-operator and dense inversions agree on D, chi-squared and log_evidence to 1e-10
 Filed: 2026-09-12
 

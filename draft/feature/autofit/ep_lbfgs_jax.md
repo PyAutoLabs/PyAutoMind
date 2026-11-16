@@ -13,6 +13,7 @@ Consequence: judge
 Witness: none — placeholder prompt ("IC50 fits use DynestyStatic, which is slow"); no target search, tolerance or runtime is stated, so no claim settles it.
 Review-minutes: 20
 Unattended: ready
+Lane: any
 Epic: graphical-ep
 Phase: 4
 Filed: 2026-05-18 (backfilled from git)

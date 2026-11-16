@@ -15,6 +15,7 @@ Status: draft
 Consequence: glance
 Witness: `jax.grad` and `jax.jacfwd` of a gNFW (MGE-routed) deflection field w.r.t. `centre` agree and are finite at a pixel-aligned centre on the hst grid (`autolens_profiling/scripts/lens/deflections/` build), recorded in the JAX-audit section of `results/notes/numpy_deflections_cpu.md`.
 Review-minutes: 3
+Lane: any
 Filed: 2026-09-03
 
 > Found during the JAX Faddeeva / clamp audit (PyAutoGalaxy#600, phase A probe

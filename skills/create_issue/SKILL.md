@@ -182,10 +182,13 @@ python3 "$PYAUTO_MIND/scripts/lifecycle.py" dates    # OK when nothing is undate
 
 ```bash
 source "$PYAUTO_MIND/scripts/prompt_sync.sh"
-prompt_sync_push "prompt: file issue for <task-name> (#<issue>)"
+prompt_sync_push "prompt: file issue for <task-name> (#<issue>)" \
+  active.md <draft-path> active/<filename>
 ```
 
-If step 0 already pushed, this carries only the active.md + `active/` changes.
+Name both sides of the step-5 `git mv`; drop `active.md` if step 4 was skipped.
+Only these paths are committed: other changes in the tree, conflict markers or
+an unparseable `state.json` make the helper refuse and commit nothing.
 
 ## Notes
 

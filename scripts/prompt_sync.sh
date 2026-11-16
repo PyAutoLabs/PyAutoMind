@@ -6,8 +6,19 @@
 # changes that drift from origin.
 #
 #   source PyAutoMind/scripts/prompt_sync.sh
-#   prompt_sync_new_prompts                    # scan + commit + push new prompts
-#   prompt_sync_push "prompt: <subject>"       # commit + push current state
+#   prompt_sync_new_prompts                       # commit + push new prompt files
+#   prompt_sync_push "prompt: <subject>" <path>...  # commit + push ONLY these paths
+#
+# Paths are relative to the Mind repo root (absolute paths inside it also work);
+# a directory covers everything under it. A rename (`git mv`) needs BOTH sides.
+# prompt_sync_push refuses, committing nothing, when no paths are given, when
+# the tree has changes outside them (staged, unstaged or untracked), when a
+# changed file holds conflict markers, or when a changed state.json does not
+# parse. In a shared checkout another session's edits are never swept up.
+#
+# Both push the current branch. From a detached HEAD (a temporary worktree
+# detached on origin/main) they refuse unless the call names the target:
+#   PROMPT_SYNC_PUSH_TO=main prompt_sync_push "prompt: <subject>" <path>...
 #
 # Both functions are no-ops when there is nothing to do, and safe to call
 # multiple times in the same session.
@@ -56,15 +67,108 @@ _prompt_sync_require_repo() {
 # Pushing HEAD leaves the single-branch laptop flow byte-identical — there the
 # current branch IS `main` — while making a branch-scoped checkout do the right
 # thing instead of the dangerous thing.
-_prompt_sync_push_current() {
-  local branch
-  branch=$(git -C "$PROMPT_REPO" rev-parse --abbrev-ref HEAD 2>/dev/null)
-  if [ -z "$branch" ] || [ "$branch" = "HEAD" ]; then
-    echo "prompt_sync: refusing to push from a detached HEAD in $PROMPT_REPO" >&2
-    echo "  check out a branch first." >&2
+#
+# A detached HEAD (the doctrine route for Mind writes: a temporary worktree
+# detached on origin/main) has no branch to push, so it refuses by default: a
+# branch-scoped session must never reach `main` by accident. The caller names
+# the target explicitly, per call, with PROMPT_SYNC_PUSH_TO:
+#
+#   PROMPT_SYNC_PUSH_TO=main prompt_sync_push "prompt: <subject>" <path>...
+#
+# which pushes `HEAD:refs/heads/main` (no -u, never a force; a non-fast-forward
+# is rejected and reported). On a named branch the variable is not needed; when
+# set it must name that same branch, so each call follows one rule.
+#
+# A leftover or exported PROMPT_SYNC_PUSH_TO must not publish unreviewed work:
+# on a detached HEAD the helper first fetches origin/<target> and refuses unless
+# HEAD holds nothing that origin/<target> lacks, so the only commit that can
+# reach the target is the one this call is about to make.
+#
+# _prompt_sync_push_target prints the branch to push, or refuses (one line on
+# stderr, returns 1). _prompt_sync_push_preflight adds the detached-HEAD
+# ancestry check; both helpers call it BEFORE staging or committing, so a
+# refusal leaves the index and HEAD as they were. _prompt_sync_push_current
+# calls _prompt_sync_push_target again to push.
+_prompt_sync_push_target() {
+  local branch target checked
+  branch=$(git -C "$PROMPT_REPO" symbolic-ref --quiet --short HEAD 2>/dev/null)
+  if [ -n "${PROMPT_SYNC_PUSH_TO+set}" ]; then
+    target="$PROMPT_SYNC_PUSH_TO"
+    case "$target" in
+      ""|-*|*[[:space:]]*)
+        echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name" >&2
+        return 1 ;;
+    esac
+    checked=$(git -C "$PROMPT_REPO" check-ref-format --branch "$target" 2>/dev/null)
+    if [ "$?" -ne 0 ] || [ "$checked" != "$target" ]; then
+      echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name" >&2
+      return 1
+    fi
+    # Valid ref names that would push to a stray branch (refs/heads/refs/...,
+    # refs/heads/origin/main) or read as a force refspec.
+    local remote
+    case "$target" in
+      refs/*|+*)
+        echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name (give a bare branch name, e.g. main)" >&2
+        return 1 ;;
+    esac
+    while IFS= read -r remote; do
+      [ -n "$remote" ] || continue
+      case "$target" in
+        "$remote"/*)
+          echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name (it starts with remote '$remote/'; give a bare branch name, e.g. main)" >&2
+          return 1 ;;
+      esac
+    done < <(git -C "$PROMPT_REPO" remote 2>/dev/null)
+    if [ -n "$branch" ] && [ "$branch" != "$target" ]; then
+      echo "prompt_sync: refusing, nothing committed: on branch '$branch' but PROMPT_SYNC_PUSH_TO='$target'; unset it to push '$branch'" >&2
+      return 1
+    fi
+    printf '%s\n' "$target"
+    return 0
+  fi
+  if [ -z "$branch" ]; then
+    echo "prompt_sync: refusing, nothing committed: detached HEAD in $PROMPT_REPO; name the target with PROMPT_SYNC_PUSH_TO=<branch> (e.g. PROMPT_SYNC_PUSH_TO=main) or check out a branch" >&2
     return 1
   fi
-  git -C "$PROMPT_REPO" push -u origin "$branch"
+  printf '%s\n' "$branch"
+}
+
+_prompt_sync_push_preflight() {
+  local target ahead
+  target=$(_prompt_sync_push_target) || return 1
+  git -C "$PROMPT_REPO" symbolic-ref --quiet HEAD >/dev/null 2>&1 && return 0
+  if ! git -C "$PROMPT_REPO" fetch --quiet origin \
+      "refs/heads/$target:refs/remotes/origin/$target" >/dev/null 2>&1; then
+    echo "prompt_sync: refusing, nothing committed: could not fetch origin/$target to check what a push from this detached HEAD would publish" >&2
+    return 1
+  fi
+  ahead=$(git -C "$PROMPT_REPO" rev-list --count "refs/remotes/origin/$target..HEAD") || return 1
+  if [ "$ahead" -ne 0 ]; then
+    echo "prompt_sync: refusing, nothing committed: this detached HEAD already holds $ahead commit(s) not on origin/$target, and PROMPT_SYNC_PUSH_TO=$target would publish them unreviewed; start from a worktree detached on origin/$target" >&2
+    return 1
+  fi
+}
+
+_prompt_sync_push_current() {
+  local target err
+  target=$(_prompt_sync_push_target) || return 1
+  if git -C "$PROMPT_REPO" symbolic-ref --quiet HEAD >/dev/null 2>&1; then
+    git -C "$PROMPT_REPO" push -u origin "$target"
+    return
+  fi
+  # Detached HEAD with an explicit target: a plain push of HEAD, never forced.
+  if ! err=$(git -C "$PROMPT_REPO" push origin "HEAD:refs/heads/$target" 2>&1); then
+    printf '%s\n' "$err" >&2
+    if printf '%s' "$err" | grep -qE 'non-fast-forward|fetch first|\[rejected\]'; then
+      echo "prompt_sync: push rejected, origin/$target has moved on (not a fast-forward); the commit is kept locally: fetch, rebase onto origin/$target and retry" >&2
+    else
+      echo "prompt_sync: push of HEAD to origin/$target failed; the commit is kept locally" >&2
+    fi
+    return 1
+  fi
+  [ -n "$err" ] && printf '%s\n' "$err" >&2
+  return 0
 }
 
 # Commit and push any new untracked .md files at the repo root or under
@@ -73,40 +177,187 @@ _prompt_sync_push_current() {
 # Excludes active/ and complete/ (lifecycle dirs the skills move files into via
 # prompt_sync_push, issue #71) and tmp/ (scratch). New draft prompts under
 # draft/ are swept normally.
+#
+# Contract: new untracked prompt files ONLY. The commit names exactly those
+# files (`git commit -- <files>`), so anything else already staged in a shared
+# checkout stays staged and uncommitted.
 prompt_sync_new_prompts() {
   _prompt_sync_require_repo || return 1
-  local untracked
-  untracked=$(git -C "$PROMPT_REPO" ls-files --others --exclude-standard \
-    -- '*.md' '*/*.md' \
-    | grep -v '^active/' \
-    | grep -v '^complete/' \
-    | grep -v '^tmp/' \
-    || true)
-  [ -z "$untracked" ] && return 0
+  local -a files=()
+  local f
+  while IFS= read -r -d '' f; do
+    case "$f" in
+      active/*|complete/*|tmp/*) continue ;;
+    esac
+    files+=("$f")
+  done < <(git -C "$PROMPT_REPO" ls-files -z --others --exclude-standard \
+             -- '*.md' '*/*.md')
+  [ "${#files[@]}" -eq 0 ] && return 0
 
   echo "Found new prompt files to sync:"
-  echo "$untracked" | sed 's/^/  - /'
+  printf '  - %s\n' "${files[@]}"
 
   local body
-  body=$(echo "$untracked" | sed 's/^/- /')
+  body=$(printf -- '- %s\n' "${files[@]}")
 
-  ( cd "$PROMPT_REPO" && git add -- $untracked && \
-    git commit -m "$(printf 'prompt: sync new task ideas\n\n%s\n' "$body")" ) && \
+  _prompt_sync_push_preflight || return 1
+  git -C "$PROMPT_REPO" add -- "${files[@]}" || return 1
+  git -C "$PROMPT_REPO" commit \
+    -m "$(printf 'prompt: sync new task ideas\n\n%s\n' "$body")" \
+    -- "${files[@]}" || return 1
   _prompt_sync_push_current
 }
 
-# Stage any modifications under the repo, commit with the given subject,
-# and push. Used by skills at task milestones (issue filed, repos
-# registered, task shipped, etc.). No-op if nothing is staged.
+# Print the one-line refusal reason; each caller then returns 1 itself.
+_prompt_sync_refuse() {
+  echo "prompt_sync_push: refusing, nothing committed: $*" >&2
+}
+
+# True when repo-relative path $1 is one of, or under one of, the given paths.
+_prompt_sync_in_scope() {
+  local path="$1" given
+  shift
+  for given in "$@"; do
+    if [ "$path" = "$given" ] || [ "${path#"$given"/}" != "$path" ]; then
+      return 0
+    fi
+  done
+  return 1
+}
+
+# Commit ONLY the given paths, then push the current branch. Used by skills at
+# task milestones (issue filed, repos registered, task shipped, etc.):
+#
+#   prompt_sync_push "prompt: <subject>" active.md active/<file>.md
+#
+# Refuses (returns 1, commits nothing, one-line reason on stderr) when:
+#   - no paths are given;
+#   - `git status --porcelain` shows any change outside the paths: staged,
+#     unstaged or untracked-not-ignored, including the source side of a staged
+#     rename (or an unmerged path anywhere);
+#   - a changed file in the paths holds conflict markers: a line starting
+#     `<<<<<<< ` AND a line starting `>>>>>>> `. A lone `=======` never counts,
+#     because Markdown setext headings underline with it;
+#   - a changed `state.json` does not parse as JSON.
+# Still a no-op (returns 0, no commit, no push) when nothing in the paths changed.
 prompt_sync_push() {
   _prompt_sync_require_repo || return 1
-  local subject="${1:-prompt: sync PyAutoMind}"
-  git -C "$PROMPT_REPO" add -A || return 1
+  if [ "$#" -lt 2 ]; then
+    _prompt_sync_refuse "no paths given (usage: prompt_sync_push <message> <path> [path...])"
+    return 1
+  fi
+  local subject="$1"
+  shift
+
+  local repo_root
+  repo_root=$(git -C "$PROMPT_REPO" rev-parse --show-toplevel) || return 1
+
+  # Normalise each path to repo-relative form.
+  local -a paths=()
+  local p
+  for p in "$@"; do
+    case "$p" in
+      "$repo_root"/*) p="${p#"$repo_root"/}" ;;
+      "$PROMPT_REPO"/*) p="${p#"$PROMPT_REPO"/}" ;;
+    esac
+    while [ "${p#./}" != "$p" ]; do p="${p#./}"; done
+    while [ "${p%/}" != "$p" ]; do p="${p%/}"; done
+    case "$p" in
+      ""|.|/*|..|../*|*/..|*/../*)
+        _prompt_sync_refuse "path '$1' is not a file or directory inside the Mind repo"
+        return 1 ;;
+    esac
+    paths+=("$p")
+    shift
+  done
+
+  # Every change in the tree must sit inside the given paths. Porcelain v1 -z:
+  # "XY path\0", and a rename/copy is followed by "origpath\0".
+  local entry xy path orig
+  local -a changed=() outside=()
+  while IFS= read -r -d '' entry; do
+    xy="${entry:0:2}"
+    path="${entry:3}"
+    orig=""
+    case "$xy" in
+      R*|C*) IFS= read -r -d '' orig ;;
+    esac
+    case "$xy" in
+      DD|AU|UD|UA|DU|AA|UU)
+        _prompt_sync_refuse "unmerged path '$path'; finish the merge or rebase first"
+        return 1 ;;
+    esac
+    if _prompt_sync_in_scope "$path" "${paths[@]}"; then
+      changed+=("$path")
+    else
+      outside+=("$path")
+    fi
+    if [ -n "$orig" ] && [ "${xy:0:1}" = "R" ] \
+        && ! _prompt_sync_in_scope "$orig" "${paths[@]}"; then
+      outside+=("$orig (rename source of $path)")
+    fi
+  done < <(git -C "$PROMPT_REPO" status --porcelain -z --untracked-files=all)
+
+  if [ "${#outside[@]}" -gt 0 ]; then
+    _prompt_sync_refuse "${#outside[@]} change(s) outside the given paths, e.g. '${outside[0]}'; pass them or leave them to their owner"
+    return 1
+  fi
+  [ "${#changed[@]}" -eq 0 ] && return 0
+
+  # Content checks on what is about to be staged (the worktree copy: `git add`
+  # makes the index match it for every changed path).
+  local f
+  for f in "${changed[@]}"; do
+    [ -f "$repo_root/$f" ] || continue
+    if grep -q '^<<<<<<< ' "$repo_root/$f" && grep -q '^>>>>>>> ' "$repo_root/$f"; then
+      _prompt_sync_refuse "conflict markers in '$f'"
+      return 1
+    fi
+    if [ "${f##*/}" = "state.json" ] \
+        && ! python3 -c 'import json, sys; json.load(open(sys.argv[1]))' \
+             "$repo_root/$f" >/dev/null 2>&1; then
+      _prompt_sync_refuse "'$f' does not parse as JSON"
+      return 1
+    fi
+  done
+
+  # Refuse an unpushable target (detached HEAD with no PROMPT_SYNC_PUSH_TO, a
+  # bad or mismatched one, or unreviewed commits already on a detached HEAD)
+  # before staging, so a refusal leaves the index and HEAD as they were.
+  _prompt_sync_push_preflight || return 1
+
+  # Stage only the given paths. A path already gone from both worktree and
+  # index (the source of a `git mv`) is staged already; `git add` would reject it.
+  local -a to_add=()
+  for p in "${paths[@]}"; do
+    if [ -e "$repo_root/$p" ] \
+        || [ -n "$(git -C "$PROMPT_REPO" ls-files -- "$p")" ]; then
+      to_add+=("$p")
+    fi
+  done
+  if [ "${#to_add[@]}" -gt 0 ]; then
+    git -C "$PROMPT_REPO" add -- "${to_add[@]}" || return 1
+  fi
+
   # Still a no-op when nothing is staged — the early return must come BEFORE the
   # push, or a caller with no changes would push anyway.
   if git -C "$PROMPT_REPO" diff --cached --quiet; then
     return 0
   fi
-  git -C "$PROMPT_REPO" commit -m "$subject" || return 1
+
+  # Belt and braces against a concurrent writer between the check and the
+  # commit: the index must hold nothing outside the paths (both rename sides).
+  local -a staged=()
+  while IFS= read -r -d '' f; do
+    if ! _prompt_sync_in_scope "$f" "${paths[@]}"; then
+      _prompt_sync_refuse "'$f' was staged outside the given paths"
+      return 1
+    fi
+    staged+=("$f")
+  done < <(git -C "$PROMPT_REPO" diff --cached --name-only --no-renames -z)
+
+  # Commit with an explicit pathspec (`--only`), so anything staged after the
+  # check above stays staged and never rides along in this commit.
+  git -C "$PROMPT_REPO" commit -m "$subject" -- "${staged[@]}" || return 1
   _prompt_sync_push_current
 }

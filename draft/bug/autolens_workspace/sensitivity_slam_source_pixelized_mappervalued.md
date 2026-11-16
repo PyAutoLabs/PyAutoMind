@@ -14,6 +14,7 @@ Consequence: glance
 Witness: `scripts/imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py` runs to completion under the smoke profile on a clean `main` checkout, and the symbol it uses for the source-plane mapper values is one the installed PyAutoLens exports.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 Pre-existing failure observed twice while validating sibling work, both times reproduced on an
 unmodified `main` checkout (control run), so neither task fixed it:

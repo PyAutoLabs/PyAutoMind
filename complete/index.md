@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2200 records across 11 buckets.
+2280 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,9 +122,12 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/11
 
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
+- [api-reference-polish](2026/11/api-reference-polish.md)
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
+- [arcticpy-wheel-cache-libgsl](2026/11/arcticpy-wheel-cache-libgsl.md)
 - [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
 - [arxiv-refs-api-errors](2026/11/arxiv-refs-api-errors.md) — already shipped — closed as stale draft. PyAutoMemory#143 (merged 2026-11-03, merge 1f22de7; commits 0c3e2dc, …
+- [assistant-activate-cpu-tmpdir](2026/11/assistant-activate-cpu-tmpdir.md)
 - [autocti-render-yml-blocked-dup](2026/11/autocti-render-yml-blocked-dup.md) — superseded/shipped — autocti_visualization#8 (2026-10-23), record `complete/2026/10/autocti-viz-render-from-ma…
 - [autonomous-orchestrators-p1](2026/11/autonomous-orchestrators-p1.md) — phase 1 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p2](2026/11/autonomous-orchestrators-p2.md) — phase 2 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
@@ -136,15 +139,25 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [batch-slice](2026/11/batch-slice.md)
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
+- [board-bot-push](2026/11/board-bot-push.md)
 - [board-without-gh-phase2-legs](2026/11/board-without-gh-phase2-legs.md) — already shipped, closed as a stale draft. PyAutoBrain 15317af (merged via #564, 2026-11-03) "phase 2 — the rem…
 - [bootstrap-test-root-skip](2026/11/bootstrap-test-root-skip.md) — fixed in commit 748f8c0bb (this PR). `test_the_hook_survives_an_unwritable_tools_dir` probes `os.access(bin, W…
 - [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
+- [canonical-key-todo-sweep](2026/11/canonical-key-todo-sweep.md)
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
+- [ci-verdict](2026/11/ci-verdict.md)
 - [close-out-guard](2026/11/close-out-guard.md)
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [colab-restart-fix](2026/11/colab-restart-fix.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
+- [config-yaml-parse-cache](2026/11/config-yaml-parse-cache.md)
+- [corner-anesthetic-speed](2026/11/corner-anesthetic-speed.md)
 - [cortex-agents-slim](2026/11/cortex-agents-slim.md) — PR is the tracking surface
+- [cortex-dashboard-status-split](2026/11/cortex-dashboard-status-split.md)
+- [cortex-ledger-merge-pages](2026/11/cortex-ledger-merge-pages.md)
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
+- [cortex-state-md-tables](2026/11/cortex-state-md-tables.md)
+- [critical-curves-jax-viz-feasibility](2026/11/critical-curves-jax-viz-feasibility.md)
 - [cti-api-rst-rewrite](2026/11/cti-api-rst-rewrite.md)
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
 - [cti-docs-yml-caller](2026/11/cti-docs-yml-caller.md)
@@ -154,93 +167,160 @@ markers; everything below GENERATED is rebuilt.
 - [cti-release-train-wiring](2026/11/cti-release-train-wiring.md)
 - [cti-smoke-breadth](2026/11/cti-smoke-breadth.md)
 - [cti-workspace-test-rebuild](2026/11/cti-workspace-test-rebuild.md)
+- [dashboard-input](2026/11/dashboard-input.md)
+- [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
+- [dev-metrics-boards](2026/11/dev-metrics-boards.md)
+- [dna-policies-section](2026/11/dna-policies-section.md)
 - [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
+- [eigen-flag-removal](2026/11/eigen-flag-removal.md) — phase 1 shipped; phase 2 re-filed
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
+- [ellipse-fit-filenames](2026/11/ellipse-fit-filenames.md)
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
 - [eyes-survey-next-action-stale](2026/11/eyes-survey-next-action-stale.md) — RETIRED as stale, no change made. The prompt's premise was false: only the `autolens_workspace_test/gallery/` …
 - [gallery-runner-missing-tiers](2026/11/gallery-runner-missing-tiers.md) — RETIRED as obsolete, no change made. The gallery runner it targeted (`gallery/gallery_run.sh`, `gallery_build.…
+- [general-docs-refresh](2026/11/general-docs-refresh.md)
 - [generate-converter-preflight](2026/11/generate-converter-preflight.md)
 - [glance-shadow-window-reached](2026/11/glance-shadow-window-reached.md) — already shipped — closed as stale draft. Item 1 (code): commit 679b1319f (2026-10-16) made `shadow_count_line(…
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [gradient-json-point-label](2026/11/gradient-json-point-label.md) — already shipped — autolens_profiling#518 (9d2ee2d3d, merged 2026-11-02 22:38, filed 16:18 the same day) record…
+- [health-review-cloud-observation](2026/11/health-review-cloud-observation.md) — - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every clo…
+- [heart-dev-scope](2026/11/heart-dev-scope.md)
+- [heart-green-lane](2026/11/heart-green-lane.md)
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)
 - [howtogalaxy-ch3-parity](2026/11/howtogalaxy-ch3-parity.md) — Ported the approved HowToLens Chapter 3 teaching improvements to directly observed galaxies: Goldilocks/log-ev…
 - [howtolens-ch2-explanations](2026/11/howtolens-ch2-explanations.md) — Completed the approved Chapter 2 rewrite, including explicit parameter-space explanations, delayed linear-prof…
 - [howtolens-ch3-approved](2026/11/howtolens-ch3-approved.md) — Implemented all 66 approved Chapter 3 prose blocks, restored Fit Problems and introductory positivity/mapping-…
 - [howtolens-chapter2](2026/11/howtolens-chapter2.md) — Applied approved tutorials 1–4, optional Prodigy introduction, notebook generation and navigation. Later Chapt…
+- [howtolens-stored-results](2026/11/howtolens-stored-results.md)
 - [hpc-cache-off-home-euclid](2026/11/hpc-cache-off-home-euclid.md) — already shipped — euclid_strong_lens_modeling_pipeline 37034f22 (2026-09-25, default branch) "activate.sh: kee…
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
+- [hpc-keep-off-home](2026/11/hpc-keep-off-home.md)
+- [hpc-tmpdir-slurm-default](2026/11/hpc-tmpdir-slurm-default.md)
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
+- [insight-lint-point-source-family](2026/11/insight-lint-point-source-family.md)
+- [installation-docs-polish](2026/11/installation-docs-polish.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
+- [jax-floor-0-12](2026/11/jax-floor-0-12.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
+- [jax-version-policy](2026/11/jax-version-policy.md)
+- [knn-partial-point-block](2026/11/knn-partial-point-block.md) — - `get_interpolation_weights` sliced each point block with `lax.dynamic_slice`, which clamps the last partial …
+- [lane-fail-closed](2026/11/lane-fail-closed.md)
+- [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…
 - [lifecycle-p3-designation-proposals](2026/11/lifecycle-p3-designation-proposals.md) — decided and shipped — the human approved all 39 designations (datacube/delaunay gpu_a100 held provisional); Py…
+- [likelihood-breakdown-cells-pdet](2026/11/likelihood-breakdown-cells-pdet.md)
+- [likelihood-breakdown-pdet-drift](2026/11/likelihood-breakdown-pdet-drift.md)
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
 - [likelihood-lifecycle-p3-setup-baseline-close](2026/11/likelihood-lifecycle-p3-setup-baseline-close.md)
 - [likelihood-lifecycle-p4a-validation-tooling](2026/11/likelihood-lifecycle-p4a-validation-tooling.md)
 - [likelihood-lifecycle-p4c-runners](2026/11/likelihood-lifecycle-p4c-runners.md)
+- [likelihood-lifecycle-p4e-ingest](2026/11/likelihood-lifecycle-p4e-ingest.md)
+- [likelihood-lifecycle-p4e-rerun-ingest](2026/11/likelihood-lifecycle-p4e-rerun-ingest.md)
 - [likelihood-lifecycle-p6-delaunay-hilbert-roughness](2026/11/likelihood-lifecycle-p6-delaunay-hilbert-roughness.md)
 - [likelihood-lifecycle-p6a-gradient-harness](2026/11/likelihood-lifecycle-p6a-gradient-harness.md)
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
 - [likelihood-lifecycle-p6c-gradient-walls](2026/11/likelihood-lifecycle-p6c-gradient-walls.md)
 - [likelihood-lifecycle-p6d-gradient-ingest](2026/11/likelihood-lifecycle-p6d-gradient-ingest.md)
+- [live-shift-view](2026/11/live-shift-view.md)
 - [live-shift-worker-gaps](2026/11/live-shift-worker-gaps.md) — pilot 4c follow-up; issue PyAutoBrain#594
 - [looks-shipped-guard-false-positives](2026/11/looks-shipped-guard-false-positives.md) — 33 → 1
+- [m2-finish](2026/11/m2-finish.md)
+- [m31-blockers](2026/11/m31-blockers.md)
+- [m31-live-shift-findings](2026/11/m31-live-shift-findings.md)
 - [magnification-errors-posterior-draws](2026/11/magnification-errors-posterior-draws.md)
 - [magnification-errors-source-science](2026/11/magnification-errors-source-science.md)
 - [magnification-maps-image-plane](2026/11/magnification-maps-image-plane.md)
 - [magnification-maps-source-plane](2026/11/magnification-maps-source-plane.md)
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
+- [matern-vendor-bessel-kve](2026/11/matern-vendor-bessel-kve.md) — - Vendored tfp's `bessel_kve` K-branch (Temme series z<=2, Steed continued fraction z>2, forward recurrence, O…
 - [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
+- [merge-actor-audit](2026/11/merge-actor-audit.md)
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
+- [model-bullet-parameter-count-drift](2026/11/model-bullet-parameter-count-drift.md)
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
+- [nautilus-30d-diagnostics](2026/11/nautilus-30d-diagnostics.md) — Full-30D Nautilus plotting cost attribution and evidence-discrepancy investigation merged unchanged during the…
+- [nautilus-compact-plot-adapter](2026/11/nautilus-compact-plot-adapter.md) — - Validation: full suite 4298 passes / 2 skips / 1 expected failure at e57611dc6; exact-head Python 3.12/3.13/…
+- [nautilus-cpu-campaign-setup](2026/11/nautilus-cpu-campaign-setup.md) — Experimental phase 0b.1 implementation and bounded local pilot merged unchanged. Full phase 0b remains incompl…
+- [nautilus-cpu-profiling-baseline](2026/11/nautilus-cpu-profiling-baseline.md) — Phase 0a controlled CPU harness and exploratory local pilot merged unchanged. Phase 0b canonical representativ…
 - [nautilus-ep-use-jax-guard](2026/11/nautilus-ep-use-jax-guard.md) — superseded — PyAutoFit 196abf39a (2026-10-08) "Analysis.is_jax as the single JAX probe": Nautilus reads `analy…
 - [nautilus-pin-tracks-autofit](2026/11/nautilus-pin-tracks-autofit.md) — already shipped — PyAutoNerves#169 (merge 8eca4b3, 2026-09-15), record `complete/2026/09/colab-bootstrap-lazy-…
 - [nerves-false-workspace-stale](2026/11/nerves-false-workspace-stale.md) — already shipped — PyAutoNerves#203 (issue #202, merged 2026-10-17), record `complete/2026/10/workspace-freshne…
+- [new-user-guide-visuals](2026/11/new-user-guide-visuals.md)
 - [nfw-virial-mass-conc-jax](2026/11/nfw-virial-mass-conc-jax.md) — - `NFWVirialMassConcSph` (m200c + free concentration) is now JAX-traceable: `kappa_s_and_scale_radius` picks `…
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
+- [no-untimed-network-downloads-check](2026/11/no-untimed-network-downloads-check.md)
 - [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)
 - [numba-gate-retune-superseded](2026/11/numba-gate-retune-superseded.md) — superseded — PyAutoArray#632 (17caf228), records `complete/2026/10/interferometer-numba-route-gate.md` and `de…
 - [numba-num-threads-pin-delaunay-nn](2026/11/numba-num-threads-pin-delaunay-nn.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
+- [plot-rst-missing-exports](2026/11/plot-rst-missing-exports.md)
 - [point-magnification-api](2026/11/point-magnification-api.md) — already shipped — PyAutoLens#798 (f791ac77) + autolens_workspace#598 (0f8b4db5), records `complete/2026/10/poi…
+- [positions-threshold-fixture-off-axis](2026/11/positions-threshold-fixture-off-axis.md)
+- [pr504-guard-log-det-terms](2026/11/pr504-guard-log-det-terms.md)
+- [premise-lane-checks](2026/11/premise-lane-checks.md)
 - [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
+- [prompt-sync-detached-push](2026/11/prompt-sync-detached-push.md)
+- [prompt-sync-explicit-paths](2026/11/prompt-sync-explicit-paths.md)
+- [pseudo-det-rebaseline](2026/11/pseudo-det-rebaseline.md)
+- [pulse-xla-pointers-to-dna](2026/11/pulse-xla-pointers-to-dna.md)
+- [r2-pages-function-access](2026/11/r2-pages-function-access.md)
+- [readme-frontdoors](2026/11/readme-frontdoors.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
 - [rectangular-parity-absolute-bound](2026/11/rectangular-parity-absolute-bound.md) — autogalaxy_workspace_test#134 (merged 0b5ff519, human /prm). `imaging/jax_likelihood/rectangular.py` parity is…
 - [reduce-session-token-load](2026/11/reduce-session-token-load.md) — PR is the tracking surface
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
+- [release-rehearsed-shas](2026/11/release-rehearsed-shas.md)
 - [repos-sync-optin-block](2026/11/repos-sync-optin-block.md) — shipped in PyAutoMind#539 (commit dc471e1d6), narrowed scope: option (a) of the 2026-11-05 re-size, chosen by …
 - [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already shipped — closed as stale draft. Commit 679b1319f (2026-10-16, "test: Mind suite green on main — shado…
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — phase 3; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — phase 4; ledger draft/feature/autofit/results_library_epic.md
+- [results-library-p5a-assistant](2026/11/results-library-p5a-assistant.md) — shipped al_build_results_library skill, operations wiki, hpc/sync results index/check and index-only pulls, Wi…
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
 - [root-default-test-env-leak](2026/11/root-default-test-env-leak.md) — fixed in commit 748f8c0bb (this PR). The module's autouse `forget_the_resolver` fixture now deletes `PYAUTO_RO…
 - [rtd-organism-currency](2026/11/rtd-organism-currency.md) — already shipped, closed as a stale draft. PyAutoBrain 1aa2ed4 (#563) renamed `docs/organs/build` to `organs/ha…
+- [rtd-tutorials-consolidated](2026/11/rtd-tutorials-consolidated.md)
 - [scientist-minimal-starter](2026/11/scientist-minimal-starter.md) — already shipped — Mind#502 / PR #503, record `complete/2026/10/scientist-starter-acceptance.md`; slices PyAuto…
 - [search-seed-reproducibility](2026/11/search-seed-reproducibility.md) — already shipped — PyAutoFit#1686 (5bf057f2, 2026-10-14; search-ext A4b), record `complete/2026/10/search-ext-a…
 - [sersic-products-read-sed-output-dir](2026/11/sersic-products-read-sed-output-dir.md) — already shipped — euclid_strong_lens_modeling_pipeline 126167b00 (2026-10-05) "catalogue: read Sersic fits fro…
 - [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
+- [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)
+- [sibson-internal-edge-continuity](2026/11/sibson-internal-edge-continuity.md) — - The Watson per-triangle decomposition formed a circle through the query and every cavity-triangle edge, incl…
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
+- [simulator-poisson-flag-guard](2026/11/simulator-poisson-flag-guard.md) — - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_pois…
+- [simulator-roundoff-control](2026/11/simulator-roundoff-control.md)
 - [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
+- [smoke-install-tfp-comment-sweep](2026/11/smoke-install-tfp-comment-sweep.md) — - Comment-only sweep after PyAutoArray#694 (record complete/2026/11/matern-vendor-bessel-kve.md): replaced the…
+- [stale-enable-pytrees-register-model-advice-in](2026/11/stale-enable-pytrees-register-model-advice-in.md)
+- [start-here-intro-polish](2026/11/start-here-intro-polish.md)
+- [start-here-plot-ai](2026/11/start-here-plot-ai.md) — Introductory grid uses 30x30 points without x/y labels; subsequent light-profile and lensing calculations reta…
+- [three-autos-public-framing](2026/11/three-autos-public-framing.md)
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
+- [unit-timing-monitoring-min-delta](2026/11/unit-timing-monitoring-min-delta.md) — - `legacy_summaries()` now tiers only rows whose own both-gates `state` is `warn` (`slow_factor` 2.0 AND `min_…
+- [unit-trend-followups](2026/11/unit-trend-followups.md)
+- [warmup-shift-findings](2026/11/warmup-shift-findings.md)
+- [watcher-app-identity](2026/11/watcher-app-identity.md)
+- [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
+- [website-lensing-intro](2026/11/website-lensing-intro.md) — - Added the approved three-sentence strong-lensing introduction with the autolens_assistant 2D schematic befor…
+- [workspace-dataset-gallery](2026/11/workspace-dataset-gallery.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
+- [workspace-readme-images](2026/11/workspace-readme-images.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys
 
