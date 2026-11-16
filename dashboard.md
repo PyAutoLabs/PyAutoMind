@@ -37,6 +37,10 @@ _(no goals — write them in [`goals.md`](goals.md))_
 6. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
 7. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
 
+## Questions (0 open, 0 deferred)
+
+_(no open questions — [`questions.md`](questions.md))_
+
 ## Start here
 
 **Highest priority** (filed as `high`) — showing 12 of 17
