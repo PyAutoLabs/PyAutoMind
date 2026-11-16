@@ -109,3 +109,15 @@
 - tier: notify — merge mode: auto-merge on green
 - repos:
   - autolens_workspace: feature/model-bullet-parameter-count-drift
+
+## board-bot-push
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/341
+- issued: 2026-11-16
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/board-bot-push
+- epic: autonomous-orchestrators (M2.2 follow-up item 12; human ask 2026-11-16)
+- tier: glance — merge mode: auto-merge on green
+- repos:
+  - PyAutoHeart: feature/board-bot-push
+  - PyAutoHands: feature/board-bot-push
