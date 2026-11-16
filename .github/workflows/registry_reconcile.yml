@@ -26,6 +26,9 @@ permissions:
 jobs:
   reconcile:
     runs-on: ubuntu-latest
+    # Secrets live in the `mind-main` environment, deployable from main only, so a
+    # workflow dispatched at an old ref cannot read them (old_branch_workflow_secret_exposure).
+    environment: mind-main
     steps:
       - uses: actions/checkout@v4
       # Registry rows point at issues and PRs across the org, private repos
