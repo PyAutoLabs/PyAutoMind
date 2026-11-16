@@ -77,16 +77,30 @@ jobs:
           fetch-depth: 1
 
       - name: Sweep
+        # Dispatch inputs are untrusted (policy/github_tokens.md): read from
+        # env and validated, never interpolated into the shell.
         env:
           GH_TOKEN: ${{ github.token }}
+          MODE_INPUT: ${{ inputs.mode }}
+          LIMIT_INPUT: ${{ inputs.limit }}
         run: |
           set -o pipefail
           # A scheduled run never deletes, whatever anyone edits into the cron.
-          mode='${{ inputs.mode }}'
-          if [ '${{ github.event_name }}' != 'workflow_dispatch' ]; then
+          mode="${MODE_INPUT:-}"
+          if [ "$GITHUB_EVENT_NAME" != 'workflow_dispatch' ]; then
             mode=audit
           fi
           mode="${mode:-audit}"
+          case "$mode" in
+            audit|delete) ;;
+            *) echo "::error title=Invalid input::mode must be audit or delete"; exit 1 ;;
+          esac
+          limit="${LIMIT_INPUT:-0}"
+          if ! [[ "$limit" =~ ^[0-9]{1,4}$ ]] || [ "$((10#$limit))" -gt 1000 ]; then
+            echo "::error title=Invalid input::limit must be a whole number, 0-1000 (0 = no cap)"
+            exit 1
+          fi
+          limit="$((10#$limit))"
 
           .brain/bin/branch_sweep.sh \
             --repo "$GITHUB_WORKSPACE" \
@@ -94,7 +108,7 @@ jobs:
             --name '${{ github.event.repository.name }}' \
             --mode "$mode" \
             --records "$GITHUB_WORKSPACE/batches" \
-            --limit '${{ inputs.limit || 0 }}' 2>&1 | tee sweep.log
+            --limit "$limit" 2>&1 | tee sweep.log
 
           # The run summary is the readable surface on a phone.
           {
