@@ -60,3 +60,15 @@
   - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
+
+## queue-by-chat
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/640
+- issued: 2026-11-16
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/queue-by-chat
+- epic: autonomous-orchestrators (human ruling 2026-11-16: queue maintained by chat; dashboard input path removed)
+- tier: glance — merge mode: auto-merge on green
+- repos:
+  - PyAutoBrain: feature/queue-by-chat
+  - PyAutoMind: feature/queue-by-chat
