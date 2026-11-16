@@ -1,3 +1,8 @@
+## seed-samplers-byte-stable
+- issue: https://github.com/PyAutoLabs/autofit_visualization/issues/7
+- completed: 2026-11-16
+- workspace-pr: https://github.com/PyAutoLabs/autofit_visualization/pull/8
+- summary: Seeded every search in the autofit_visualization gallery producers (seed=1 on DynestyStatic, Emcee, Zeus, LBFGS, EP and visualizer dynesty; Nautilus/MultiStartAdam already seeded) and seeded Python's and NumPy's global RNGs (Zeus picks walker pairs with random.sample). Witness held: consecutive gallery_run.sh --all renders leave git status clean (three runs, one by an independent adversary). Merged on green (bff056b) under tier notify by shift worker 2026-11-16-pm. Not checked: laptop-vs-CI byte equality — the first render.yml run after this may rewrite PNGs once from platform/version differences.
 
 ## Original prompt
 
