@@ -1,3 +1,11 @@
+The three autos public framing across the three libraries. Shipped as PyAutoLens#833 (fdf569cd7) and PyAutoGalaxy#703 (8e68a6a7e), merged 2026-11-12 by the Codex session on the human's merge command, and PyAutoFit#1776 (c5d5f289a), merged 2026-11-16 by the programme lead on the human's word ("release it, try merge stuff"), on `ci-verdict` GREEN. Issue PyAutoLens#832.
+
+**Built:** each library's README and docs index now say, in one short paragraph: build **auto**mated workflows, use **auto**differentiable models with JAX and GPUs, and an assistant that supports increasingly **auto**nomous workflows while the scientist guides the choices.
+
+**Close-out:** the PyAutoFit copy had been left uncommitted in the Codex worktree (`.worktrees/three-autos-public-framing`) pending discussion. The lead applied that exact diff on a fresh branch and did not touch the Codex worktree. The worktree is left in place; its PyAutoFit edit is now identical to main. Releasing the claim lets unattended shifts take PyAutoFit tasks again: the PyAutoBrain#637 repo-claim rule had blocked them.
+
+## Original prompt
+
 # Coordinated public framing: the three autos
 
 Targets: @PyAutoLens @PyAutoGalaxy @PyAutoFit

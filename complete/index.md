@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2277 records across 11 buckets.
+2278 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -306,6 +306,7 @@ markers; everything below GENERATED is rebuilt.
 - [stale-enable-pytrees-register-model-advice-in](2026/11/stale-enable-pytrees-register-model-advice-in.md)
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)
 - [start-here-plot-ai](2026/11/start-here-plot-ai.md) — Introductory grid uses 30x30 points without x/y labels; subsequent light-profile and lensing calculations reta…
+- [three-autos-public-framing](2026/11/three-autos-public-framing.md)
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [unit-timing-monitoring-min-delta](2026/11/unit-timing-monitoring-min-delta.md) — - `legacy_summaries()` now tiers only rows whose own both-gates `state` is `warn` (`slow_factor` 2.0 AND `min_…
