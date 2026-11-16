@@ -228,8 +228,16 @@ secrets are **environment-only**:
 - PyAutoMind is removed from the org secret `APP_PRIVATE_KEY`'s repository list,
   and the key is set in `mind-main`.
 
-Until then, old refs stay exposed. Old heads need no pruning for this once the
-move is done. `tests/test_workflow_environment.py` fails on a job that reads
+Until then, old refs stay exposed. **The move alone is not enough while Mind
+`main` is unprotected.** A pre-hardening `mind_ledger_merge.yml` on an old head
+has `contents: write` and an injectable `inputs.branch`, so a dispatch at that
+ref can push to `main`, for example a changed `scripts/lifecycle.py` that a
+`mind-main` job then runs with the secrets. Close that as well: prune the old
+heads that predate the hardening (`5a5d9dd80`), or protect `main`. Protecting
+`main` would mean moving `mind_ledger_merge` and the sessions' direct ledger
+pushes to a bypass actor first. The webhook secrets (`PYAUTO_*_WEBHOOK_URL`,
+org `SLACK_WEBHOOK_URL`) can only post to Slack and stay outside the
+environment for now. `tests/test_workflow_environment.py` fails on a job that reads
 either secret without the environment.
 
 **Rotation:** make a new token, paste it on each device (🔑 on the page),
