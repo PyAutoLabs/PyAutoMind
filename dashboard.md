@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
@@ -35,9 +35,8 @@ _(no goals — write them in [`goals.md`](goals.md))_
 4. [Duplicate Galaxy pytree registration after a JAX Fitness](draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md)
 5. [Regenerate autolens_workspace markdown for sigma_min](draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md)
 6. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
-7. [plot.rst missing exports](draft/docs/autolens/plot_rst_missing_exports.md)
-8. [autolens_workspace __Model__ bullet parameter counts](draft/docs/workspaces/model_bullet_parameter_count_drift.md)
-9. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
+7. [autolens_workspace __Model__ bullet parameter counts](draft/docs/workspaces/model_bullet_parameter_count_drift.md)
+8. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
 
 ## Start here
 
@@ -1314,14 +1313,6 @@ Use the start-dev skill. active/galaxy_duplicate_pytree_registration_after_jax_f
 
 ```
 Use the start-dev skill. active/homepage_flow_polish.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — issued 2026-09-09</summary>
-
-```
-Use the start-dev skill. active/plot_rst_missing_exports.md
 ```
 
 </details>
