@@ -28,6 +28,10 @@ What keeps the exemption narrow:
   (PyAutoBrain#622; `PyAutoBrain/AUTONOMY.md` watcher network surface,
   amendment 2026-11-13).
 
+The watcher's per-shift event file may be watched by one cockpit session the human starts
+(`shift_cockpit_watch.md`, "The one watch a session may hold"). That watch reads a local file,
+ends with the shift, and is not in the control loop: closing the chat changes nothing.
+
 Why it is this narrow: the timer rule was written after five batch members armed
 hourly check-ins on 2026-08-31, and a mobile `/prm` re-armed a 60-minute
 `send_later` hourly all night on 2026-09-03 with no task active, draining usage.

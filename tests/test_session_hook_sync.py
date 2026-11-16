@@ -631,11 +631,13 @@ def gate_steps():
 SKIP_IF = ("steps.hookpr.outputs.hook_pr == 'true' || "
            "steps.hookpr.outputs.filing_pr == 'true' || "
            "steps.hookpr.outputs.map_pr == 'true' || "
-           "steps.codexpr.outputs.codex_pr == 'true'")
+           "steps.codexpr.outputs.codex_pr == 'true' || "
+           "steps.hookpr.outputs.deliverable_pr == 'true'")
 FULL_IF = ("steps.hookpr.outputs.hook_pr != 'true' && "
            "steps.hookpr.outputs.filing_pr != 'true' && "
            "steps.hookpr.outputs.map_pr != 'true' && "
-           "steps.codexpr.outputs.codex_pr != 'true'")
+           "steps.codexpr.outputs.codex_pr != 'true' && "
+           "steps.hookpr.outputs.deliverable_pr != 'true'")
 
 
 def test_the_skip_is_reachable_only_from_a_pull_request():
@@ -703,27 +705,31 @@ def test_mind_checkout_is_deep_enough_to_diff_against_the_base():
 
 
 @pytest.mark.parametrize(
-    "changed, expected, filing, mapped",
+    "changed, expected, filing, mapped, deliverable",
     [
-        ([repos_sync.SESSION_HOOK_FILE], "true", "false", "false"),
-        ([repos_sync.DELIVERABLE_HOOK_FILE], "true", "false", "false"),
+        ([repos_sync.SESSION_HOOK_FILE], "true", "false", "false", "false"),
+        ([repos_sync.DELIVERABLE_HOOK_FILE], "true", "false", "false", "false"),
         # The organism-map decision (PyAutoMind#486) reads repos.yaml alone.
-        (["repos.yaml"], "false", "false", "true"),
+        (["repos.yaml"], "false", "false", "true", "false"),
         (["scripts/repos_sync.py", ".github/workflows/firewall_gate.yml"],
-         "false", "false", "false"),
-        ([repos_sync.SESSION_HOOK_FILE, "repos.yaml"], "true", "false", "true"),
+         "false", "false", "false", "false"),
+        ([repos_sync.SESSION_HOOK_FILE, "repos.yaml"], "true", "false", "true", "false"),
         # A path the hook's name is only a SUBSTRING of is a different file.
-        (["docs/policy/session_start_hook.sh.md"], "false", "false", "false"),
+        (["docs/policy/session_start_hook.sh.md"], "false", "false", "false", "false"),
         # The where-to-file decision is independent of the hook one.
-        ([repos_sync.FILING_POLICY_FILE], "false", "true", "false"),
+        ([repos_sync.FILING_POLICY_FILE], "false", "true", "false", "false"),
         ([repos_sync.FILING_POLICY_FILE, repos_sync.SESSION_HOOK_FILE],
-         "true", "true", "false"),
-        (["docs/policy/where_to_file.md.bak"], "false", "false", "false"),
-        (["docs/repos.yaml.md"], "false", "false", "false"),
+         "true", "true", "false", "false"),
+        (["docs/policy/where_to_file.md.bak"], "false", "false", "false", "false"),
+        (["docs/repos.yaml.md"], "false", "false", "false", "false"),
+        # The end-at-deliverable block decision reads the policy alone.
+        ([repos_sync.DELIVERABLE_POLICY_FILE], "false", "false", "false", "true"),
+        ([repos_sync.DELIVERABLE_POLICY_FILE, repos_sync.DELIVERABLE_HOOK_FILE],
+         "true", "false", "false", "true"),
     ],
 )
 def test_the_gate_decides_from_the_changed_files(tmp_path, changed, expected,
-                                                 filing, mapped):
+                                                 filing, mapped, deliverable):
     """Execute the CI decision against a real two-branch repo.
 
     The `paths:` filter cannot answer this — it has already matched, and it
@@ -740,7 +746,8 @@ def test_the_gate_decides_from_the_changed_files(tmp_path, changed, expected,
                 ".github/workflows/firewall_gate.yml",
                 "docs/policy/session_start_hook.sh.md",
                 repos_sync.FILING_POLICY_FILE,
-                "docs/policy/where_to_file.md.bak", "docs/repos.yaml.md"):
+                "docs/policy/where_to_file.md.bak", "docs/repos.yaml.md",
+                repos_sync.DELIVERABLE_POLICY_FILE):
         path = base / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("base\n")
@@ -764,7 +771,8 @@ def test_the_gate_decides_from_the_changed_files(tmp_path, changed, expected,
     )
 
     assert output.read_text().splitlines() == [
-        f"hook_pr={expected}", f"filing_pr={filing}", f"map_pr={mapped}"], proc.stdout
+        f"hook_pr={expected}", f"filing_pr={filing}", f"map_pr={mapped}",
+        f"deliverable_pr={deliverable}"], proc.stdout
 
 
 # --------------------------------------------------------------------------
@@ -807,7 +815,7 @@ def test_the_gate_skips_the_map_leg_by_its_printed_label():
     run = _skip_step()["run"]
     assert f'--skip "{repos_sync.MAP_BLOCKS}"' in run, run
     assert "repos.yaml" in run
-    assert run.count("ON push TO main this leg is never skipped") == 4
+    assert run.count("ON push TO main this leg is never skipped") == 5
 
 
 # --------------------------------------------------------------------------
@@ -859,6 +867,38 @@ def test_the_gate_still_asserts_the_manifest_renders_the_map():
         "the compensating control must run before the skipping drift check"
 
 
+def test_the_gate_skips_the_deliverable_leg_by_its_printed_label():
+    """A renamed leg must break here rather than silently stop being skipped."""
+    run = _skip_step()["run"]
+    assert f'--skip "{repos_sync.DELIVERABLE_BLOCKS}"' in run, run
+    assert f"SKIPPED LEG: '{repos_sync.DELIVERABLE_BLOCKS}'" in run
+    assert repos_sync.DELIVERABLE_POLICY_FILE in run
+
+
+def test_the_gate_still_asserts_this_repos_own_deliverable_block():
+    """The compensating control: the `-k` must select a test that exists, and
+    it must run before the skipping drift check."""
+    import test_repos_sync_deliverable_block as deliverable
+    step = next(step for step in gate_steps()
+                if step.get("if") == "steps.hookpr.outputs.deliverable_pr == 'true'"
+                and "pytest" in (step.get("run") or ""))
+    assert "tests/test_repos_sync_deliverable_block.py" in step["run"]
+    selector = step["run"].split('-k "')[1].split('"')[0]
+    assert selector in deliverable.test_pyautomind_carries_its_own_block.__name__
+    steps = gate_steps()
+    assert steps.index(step) < steps.index(_skip_step())
+
+
+def test_the_gate_triggers_on_the_deliverable_policy():
+    gate = (
+        Path(__file__).resolve().parents[1]
+        / ".github/workflows/firewall_gate.yml"
+    )
+    triggers = yaml.safe_load(gate.read_text())[True]
+    for event in ("push", "pull_request"):
+        assert repos_sync.DELIVERABLE_POLICY_FILE in triggers[event]["paths"], event
+
+
 def test_the_filing_decision_ignores_the_pr_body():
     """A PR with no `Brain-ref:` line must get the skip exactly as one with it:
     the decision reads the diff, never the body the Brain-ref resolver reads."""
@@ -878,18 +918,22 @@ def test_the_gate_triggers_on_the_filing_policy():
 
 
 @pytest.mark.parametrize(
-    "hook_pr, filing_pr, map_pr, skipped",
+    "hook_pr, filing_pr, map_pr, skipped, deliverable_pr",
     [
-        ("true", "false", "false", [repos_sync.SESSION_HOOKS]),
-        ("false", "true", "false", [repos_sync.FILING_BLOCKS]),
-        ("false", "false", "true", [repos_sync.MAP_BLOCKS]),
-        ("true", "true", "false", [repos_sync.SESSION_HOOKS, repos_sync.FILING_BLOCKS]),
+        ("true", "false", "false", [repos_sync.SESSION_HOOKS], "false"),
+        ("false", "true", "false", [repos_sync.FILING_BLOCKS], "false"),
+        ("false", "false", "true", [repos_sync.MAP_BLOCKS], "false"),
+        ("true", "true", "false", [repos_sync.SESSION_HOOKS, repos_sync.FILING_BLOCKS], "false"),
         ("true", "true", "true", [repos_sync.SESSION_HOOKS, repos_sync.FILING_BLOCKS,
-                                  repos_sync.MAP_BLOCKS]),
+                                  repos_sync.MAP_BLOCKS], "false"),
+        ("false", "false", "false", [repos_sync.DELIVERABLE_BLOCKS], "true"),
+        ("true", "false", "false", [repos_sync.SESSION_HOOKS,
+                                    repos_sync.DELIVERABLE_BLOCKS], "true"),
     ],
 )
 def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
-                                                   filing_pr, map_pr, skipped):
+                                                   filing_pr, map_pr, skipped,
+                                                   deliverable_pr):
     """Execute the step with a stand-in python3 that records its argv: each
     decision adds exactly its own --skip (and banner), and both compose."""
     bindir = tmp_path / "bin"
@@ -903,6 +947,7 @@ def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
         cwd=tmp_path,
         env={**os.environ, "PATH": f"{bindir}:{os.environ['PATH']}",
              "HOOK_PR": hook_pr, "FILING_PR": filing_pr, "MAP_PR": map_pr,
+             "DELIVERABLE_PR": deliverable_pr,
              "GITHUB_WORKSPACE": str(tmp_path)},
         check=True, capture_output=True, text=True,
     )
@@ -912,3 +957,53 @@ def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
     assert proc.stdout.count("SKIPPED LEG") == len(skipped), proc.stdout
     for label in skipped:
         assert f"SKIPPED LEG: '{label}'" in proc.stdout
+
+
+# --------------------------------------------------------------------------
+# A stale matcher is drift too (the 2026-11-16 widening to Monitor and Bash)
+# --------------------------------------------------------------------------
+
+OLD_MATCHER = (
+    "^(send_later|subscribe_pr_activity|ScheduleWakeup|CronCreate|"
+    "RemoteTrigger|mcp__.*(send_later|subscribe_pr_activity).*)$"
+)
+
+
+def _stale_settings():
+    settings = repos_sync.register_deliverable_hook(
+        repos_sync.register_session_hook({})
+    )
+    settings["hooks"]["PreToolUse"][0]["matcher"] = OLD_MATCHER
+    settings["hooks"]["PreToolUse"].insert(
+        0, {"matcher": "Bash", "hooks": [{"type": "command", "command": "guard.sh"}]}
+    )
+    return json.dumps(settings, indent=2) + "\n"
+
+
+def test_a_registration_under_a_stale_matcher_is_reported(tmp_path):
+    """Registered but under the old matcher, the hook is never called for a
+    Monitor on CI, so a command-only check would read it as installed."""
+    make_repo(tmp_path, "OrganOne", settings=_stale_settings())
+    make_repo(tmp_path, "LibTwo")
+    problems = repos_sync.check_session_hooks(
+        tmp_path, REPOS, HOOK_TEXT, DELIVERABLE_TEXT
+    )
+    assert len(problems) == 1, problems
+    assert "OrganOne" in problems[0] and "stale matcher" in problems[0]
+
+
+def test_write_refreshes_a_stale_matcher_and_keeps_other_hooks(tmp_path):
+    make_repo(tmp_path, "OrganOne", settings=_stale_settings())
+    make_repo(tmp_path, "LibTwo")
+    repos_sync.write_session_hooks(tmp_path, REPOS, HOOK_TEXT, DELIVERABLE_TEXT)
+    assert repos_sync.check_session_hooks(
+        tmp_path, REPOS, HOOK_TEXT, DELIVERABLE_TEXT
+    ) == []
+    settings = json.loads(
+        (tmp_path / "OrganOne" / repos_sync.SESSION_SETTINGS_REL).read_text()
+    )
+    groups = settings["hooks"]["PreToolUse"]
+    assert [g["matcher"] for g in groups] == [
+        "Bash", repos_sync.DELIVERABLE_HOOK_MATCHER
+    ]
+    assert len(groups) == 2  # refreshed in place, not registered twice

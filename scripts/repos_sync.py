@@ -54,10 +54,12 @@ both registered in `<repo>/.claude/settings.json`:
     (SessionStart) — what makes a Claude Code web/mobile session run Python
     3.12 instead of the container's 3.11 default;
   * `policy/end_at_deliverable_hook.sh` -> `.claude/hooks/end-at-deliverable.sh`
-    (PreToolUse, matching the timer-shaped tools) — the guard that enforces
-    `policy/end_at_deliverable.md`: a session ends at its deliverable and never
-    arms `send_later` / `subscribe_pr_activity` / `CronCreate` / `ScheduleWakeup`
-    / `RemoteTrigger` create-update-run to wait for CI, a review or a merge.
+    (PreToolUse, matching the timer-shaped tools plus Monitor and Bash) — the
+    guard that enforces `policy/end_at_deliverable.md`: a session ends at its
+    deliverable and never arms `send_later` / `subscribe_pr_activity` /
+    `CronCreate` / `ScheduleWakeup` / `RemoteTrigger` create-update-run, a
+    Monitor on GitHub or a background Bash loop on GitHub to wait for CI, a
+    review or a merge; the one watch allowed is the shift cockpit's stream.
 
 The copies must be byte-identical to the canonical files, so `--check` fails on
 any edit made to a copy.
@@ -277,6 +279,7 @@ CHECKOUTS = "workspace checkouts (manifest ↔ disk)"
 CODEX_HOOKS_REL = ".codex/hooks.json"
 CODEX_HOOKS = "generated Codex hooks"
 FILING_BLOCKS = "where-to-file blocks (generated)"
+DELIVERABLE_BLOCKS = "end-at-deliverable blocks (generated)"
 MAP_BLOCKS = "organism-map blocks (generated)"
 STANDARDS_BLOCKS = "shared-standards blocks (generated)"
 STANDARDS_BEGIN = "<!-- repos_sync:standards:begin -->"
@@ -336,9 +339,15 @@ FILING_POLICY_FILE = "policy/where_to_file.md"
 DELIVERABLE_HOOK_FILE = "policy/end_at_deliverable_hook.sh"
 DELIVERABLE_HOOK_REL = ".claude/hooks/end-at-deliverable.sh"
 DELIVERABLE_HOOK_COMMAND = "$CLAUDE_PROJECT_DIR/.claude/hooks/end-at-deliverable.sh"
+#
+# `Monitor` and `Bash` joined the matcher with the shift-cockpit carve-out
+# (2026-11-16, PyAutoBrain#646): a Monitor may run only the cockpit's stream
+# inside its shift window or a local watch, never one on GitHub, and a
+# background Bash loop on GitHub is refused. Foreground Bash passes straight
+# through the hook.
 DELIVERABLE_HOOK_MATCHER = (
     "^(send_later|subscribe_pr_activity|ScheduleWakeup|CronCreate|"
-    "RemoteTrigger|mcp__.*(send_later|subscribe_pr_activity).*)$"
+    "RemoteTrigger|Monitor|Bash|mcp__.*(send_later|subscribe_pr_activity).*)$"
 )
 
 # Codex reads project hooks from `.codex/hooks.json`, after the user has
@@ -2603,6 +2612,44 @@ def settings_registers_deliverable_hook(text):
     return DELIVERABLE_HOOK_COMMAND in pre_tool_use_entries(settings)
 
 
+def _deliverable_groups(settings):
+    """The PreToolUse groups that run the end-at-deliverable hook."""
+    return [
+        group
+        for group in settings.get("hooks", {}).get("PreToolUse", []) or []
+        if isinstance(group, dict)
+        and any(
+            isinstance(hook, dict) and hook.get("command") == DELIVERABLE_HOOK_COMMAND
+            for hook in group.get("hooks", []) or []
+        )
+    ]
+
+
+def settings_deliverable_matcher_current(text):
+    """True when every group running the hook carries today's matcher.
+
+    The command alone is not enough: when the matcher widened to Monitor and
+    Bash (2026-11-16) a repo still registering the old one would let a Monitor
+    on CI through without ever calling the hook."""
+    try:
+        settings = json.loads(text)
+    except (ValueError, TypeError):
+        return False
+    if not isinstance(settings, dict):
+        return False
+    groups = _deliverable_groups(settings)
+    return bool(groups) and all(
+        group.get("matcher") == DELIVERABLE_HOOK_MATCHER for group in groups
+    )
+
+
+def refresh_deliverable_matcher(settings):
+    """Set today's matcher on every group that runs the hook, in place."""
+    for group in _deliverable_groups(settings):
+        group["matcher"] = DELIVERABLE_HOOK_MATCHER
+    return settings
+
+
 def register_deliverable_hook(settings):
     """Add the PreToolUse registration, preserving every other hook the repo
     already runs on PreToolUse (the workspace root, for one, guards Bash)."""
@@ -2709,6 +2756,11 @@ def check_session_hooks(root, repos, hook_text, deliverable_text):
                 f"'{name}': {SESSION_SETTINGS_REL} does not register the "
                 "PreToolUse end-at-deliverable hook"
             )
+        elif not settings_deliverable_matcher_current(settings_text):
+            problems.append(
+                f"'{name}': {SESSION_SETTINGS_REL} registers the "
+                "end-at-deliverable hook under a stale matcher"
+            )
     return problems
 
 
@@ -2760,6 +2812,11 @@ def write_session_hooks(root, repos, hook_text, deliverable_text):
                 )
                 if not registered
             ]
+            if (
+                settings_registers_deliverable_hook(text)
+                and not settings_deliverable_matcher_current(text)
+            ):
+                missing.append(refresh_deliverable_matcher)
             if not missing:
                 print(f"unchanged: {settings}")
                 continue
@@ -2968,7 +3025,7 @@ def main():
         "remote-session blocks (generated)": lambda: check_remote_blocks(
             root, repos, remote
         ),
-        "end-at-deliverable blocks (generated)": lambda: check_deliverable_blocks(
+        DELIVERABLE_BLOCKS: lambda: check_deliverable_blocks(
             root, repos, deliverable
         ),
         STANDARDS_BLOCKS: lambda: check_standards_blocks(
