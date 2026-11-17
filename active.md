@@ -127,10 +127,13 @@
 - issued: 2026-11-17
 - session: Claude Code remote (mobile), Opus 5.5, session_016nhQ8QyUpAfUVYByA1UgVc
 - location: cloud container, GitHub-control surface with clones
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - repos:
   - PyAutoBrain: feature/shift-named-tasks-planner-skips
 - prompt: active/shift_named_tasks_and_planner_skips.md
 - epic: autonomous-orchestrators (M3.6b)
 - decisions: human approved 2026-11-17 as written — coordinated claims free a repo only for the slug they name; brief --new defaults to backlog scoped tiers notify, glance; organ rule at --check refuses shift-own paths, passes others with a line, warns on none
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/668
+- gates: 7 witness tests fail on main 8f36ae6, pass; 46 in the file; Brain 2309 passed; skill line counts OK; Fable 5.2 review x4 (FINDINGS, fixed each round; last fix the reviewer's own, not re-reviewed)
+- follow-ups: Blocked-by never clears; queued judge tasks outside the brief --new default scope; spawn-gate reasons not in the digest
 - tier: glance — merge mode: human /prm (human's rule this sitting)
