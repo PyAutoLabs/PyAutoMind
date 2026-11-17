@@ -1,3 +1,12 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/658
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/662, https://github.com/PyAutoLabs/PyAutoEars/pull/32, https://github.com/PyAutoLabs/PyAutoMind/pull/580 (merged 2026-11-17)
+- user-facing: true — motivated by hub #37 (closed under the policy by hand, 2026-11-17)
+- heart-red-override: shipped under the live human's development override 2026-11-17 ("yes, override for PyAutoLabs/PyAutoBrain#658"); RED reason "PyAutoMind: Tenant Firewall Gate failure on main" (generated-hook drift in Brain/Heart/Hands, unrelated, still open); merge on the human's separate /prm with all checks green.
+- what shipped: Mind policy/community_close_due.md (21 days, we spoke last and asked for something, never threads awaiting us, approve the batch once per session, no automation); Ears optional snapshot fields awaiting_contributor_since / close_due with tests and REFERENCE.md contract; Brain scan "Close due (21d)" section with the prefilled message, settled/historical follow-ups collapse to one count line even when the snapshot is stale, no "Delivery: unknown" rows for Announcements / Show and tell.
+- follow-up: the Ears close-due label renders after the next Ears collection; issue-templates-route-bugs-to-hub (item 5) remains in planned.md, blocked on claims.
+
+## Original prompt
+
 # Community: 21-day close policy, close-due scan section, and quiet historical follow-ups
 
 Type: feature
