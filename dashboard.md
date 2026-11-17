@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 284 |
+| [Backlog](#backlog) | 285 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -1533,7 +1533,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 227 · ral 34 · local-dev 12 · wsl-data 9
+Lanes: any 227 · ral 34 · local-dev 13 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1584,7 +1584,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 38</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1598,6 +1598,14 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 ```
 Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md">Interferometer fit.png: show zoomed, no-zoom and interpolated source panels</a> — autolens · small · human-required · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md
 ```
 
 </details>
