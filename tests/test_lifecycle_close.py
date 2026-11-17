@@ -568,3 +568,127 @@ def test_queue_retire_text_creates_the_footer_when_missing():
     assert moved == ["A"]
     assert out.endswith("## Retired\n\n### A\n- shipped-as: complete/2026/01/a.md\n"
                         "- note: retired by `lifecycle.py close`\n")
+
+
+# --------------------------------------------------------------------------- #
+# the active.md row when its heading is not the slug (PyAutoBrain#661)
+#
+# After shift 2026-11-16-pm, `/prm` found no row to drop for two tasks whose
+# `active.md` heading was not their slug; the rows were removed by hand. The
+# row is matched by slug, then by its `prompt:` resolving to the task's prompt,
+# then by its `issue:` — each only when exactly one row matches.
+# --------------------------------------------------------------------------- #
+ISSUE_URL = "https://github.com/ExampleOrg/Flywheel/issues/7"
+
+
+def _retitled(root: Path, *, prompt_line: bool, issue_line: bool) -> None:
+    """active.md's sprocket row, under a heading that is not its slug."""
+    (root / "active.md").write_text(
+        "# Active\n\n"
+        "## torque-rebaseline-epic-row (M3 phase 2)\n"
+        "- status: library-dev\n"
+        + ("- prompt: active/sprocket_calibration.md\n" if prompt_line else "")
+        + (f"- issue: {ISSUE_URL}\n" if issue_line else "")
+        + "\n"
+        "## widget-alignment\n"
+        "- status: library-dev\n"
+        "- prompt: active/widget_alignment.md\n"
+        "- issue: https://github.com/ExampleOrg/Flywheel/issues/8\n"
+    )
+
+
+def test_close_drops_active_row_by_prompt_path(tmp_path, monkeypatch, capsys):
+    root = _mind(tmp_path)
+    _retitled(root, prompt_line=True, issue_line=False)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root)) == 0
+    out = capsys.readouterr().out
+    assert "active.md — drop the `## torque-rebaseline-epic-row` entry" in out
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    active = (root / "active.md").read_text()
+    assert "torque-rebaseline-epic-row" not in active
+    assert "## widget-alignment" in active                  # the bystander stays
+
+
+def _no_parked_row(root: Path) -> None:
+    """parked.md without the task's slug row: a slug match in any registry
+    means the issue fallback is never needed (#661 review)."""
+    (root / "parked.md").write_text("# Parked\n")
+
+
+def test_close_drops_active_row_by_issue_url(tmp_path, monkeypatch, capsys):
+    root = _mind(tmp_path)
+    _retitled(root, prompt_line=False, issue_line=True)
+    _no_parked_row(root)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, issue=ISSUE_URL, apply=True)) == 0
+    out = capsys.readouterr().out
+    assert "torque-rebaseline-epic-row" in out
+    active = (root / "active.md").read_text()
+    assert "torque-rebaseline-epic-row" not in active
+    assert "## widget-alignment" in active
+
+
+def test_close_reads_the_issue_from_the_prompts_header(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    _retitled(root, prompt_line=False, issue_line=True)
+    _no_parked_row(root)
+    prompt = root / "active" / "sprocket_calibration.md"
+    prompt.write_text(prompt.read_text().replace(
+        "\n\nRe-measure", f"\n\nIssue: {ISSUE_URL}\n\nRe-measure"))
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    assert "torque-rebaseline-epic-row" not in (root / "active.md").read_text()
+
+
+def test_close_drops_nothing_when_two_rows_match_the_issue(tmp_path, monkeypatch,
+                                                           capsys):
+    root = _mind(tmp_path)
+    _retitled(root, prompt_line=False, issue_line=True)
+    # Two rows on the issue, neither naming another prompt: never guess.
+    (root / "active.md").write_text((root / "active.md").read_text().replace(
+        "issues/8", "issues/7").replace("- prompt: active/widget_alignment.md\n", ""))
+    _no_parked_row(root)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, issue=ISSUE_URL, apply=True)) == 0
+    active = (root / "active.md").read_text()
+    assert "torque-rebaseline-epic-row" in active and "widget-alignment" in active
+
+
+def test_close_never_drops_a_sibling_row_that_shares_the_issue(tmp_path, monkeypatch):
+    """The next phase of an epic shares the task's issue but has its own
+    prompt: the issue fallback must not take it for the closed task's row,
+    and is not used at all once the task's own row matched elsewhere."""
+    root = _mind(tmp_path)                       # own row matches by slug in active.md
+    (root / "active" / "phase3.md").write_text(f"# phase 3\n\nIssue: {ISSUE_URL}\n\nbody\n")
+    (root / "planned.md").write_text(
+        "# Planned\n\n## phase3-followup\n- prompt: active/phase3.md\n"
+        f"- issue: {ISSUE_URL}\n")
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, issue=ISSUE_URL, apply=True)) == 0
+    assert "## phase3-followup" in (root / "planned.md").read_text()
+
+
+def test_the_issue_fallback_skips_a_row_with_another_prompt(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    _retitled(root, prompt_line=False, issue_line=True)
+    _no_parked_row(root)
+    (root / "active" / "phase3.md").write_text("# phase 3\n")
+    (root / "active.md").write_text((root / "active.md").read_text().replace(
+        "- status: library-dev\n- issue:",
+        "- status: library-dev\n- prompt: active/phase3.md\n- issue:"))
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, issue=ISSUE_URL, apply=True)) == 0
+    assert "torque-rebaseline-epic-row" in (root / "active.md").read_text()
+
+
+def test_the_issue_fallback_skips_a_row_naming_a_missing_other_prompt(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    _retitled(root, prompt_line=False, issue_line=True)
+    _no_parked_row(root)
+    (root / "active.md").write_text((root / "active.md").read_text().replace(
+        "- status: library-dev\n- issue:",
+        "- status: library-dev\n- prompt: active/phase3_gone.md\n- issue:"))
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, issue=ISSUE_URL, apply=True)) == 0
+    assert "torque-rebaseline-epic-row" in (root / "active.md").read_text()
