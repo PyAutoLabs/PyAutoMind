@@ -127,10 +127,12 @@
 - issued: 2026-11-17
 - session: Claude Code remote (mobile), Opus 5.5, session_016nhQ8QyUpAfUVYByA1UgVc
 - location: cloud container, GitHub-control surface with clones
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - repos:
   - PyAutoBrain: feature/shift-throughput-carryover
 - prompt: active/shift_throughput_carryover_and_order.md
 - epic: autonomous-orchestrators (M3.6c)
 - decisions: human approved 2026-11-17 as written — bounded in-shift fetch (network-surface amendment); carry over only glance/notify PRs never closed out or refused by the cutoff, newest earlier slot; first: glance reorders; session-cap floor 150k tokens
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/670
+- gates: witness clauses 1-4 fail on main 2ca1bd3, pass (23 tests); Brain 2332 passed; skill line counts OK; tenant firewall OK; Fable 5.2 review x2 (FINDINGS, fixed; last fix the reviewer's own, not re-reviewed)
 - tier: judge — merge mode: human /prm
