@@ -95,11 +95,16 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/700
 - issued: 2026-11-17
 - session: Claude Code cloud session (claude.ai/code, session_016nhQ8MtKvVD9fBkNBqcMb4)
-- status: library-shipped, workspace-pending
+- status: awaiting-merge (library + workspace PRs open; human /prm)
 - location: cloud container clones (no worktrees on this surface); resume from the pushed branches
 - repos:
   - PyAutoArray: feature/delaunay-interpolated-plot
   - PyAutoLens: feature/delaunay-interpolated-plot
+  - autolens_workspace: feature/delaunay-interpolated-plot
+  - autolens_workspace_test: feature/delaunay-interpolated-plot
+  - HowToLens: feature/delaunay-interpolated-plot
+  - autolens_assistant: feature/delaunay-interpolated-plot
+  - autolens_visualization: feature/delaunay-interpolated-plot
 - prompt: active/delaunay_plot_shows_likelihood_interpolant.md
 - community: https://github.com/PyAutoLabs/.github/discussions/46 (draft the update for the human; do not post)
 - coordination: human approved 2026-11-17 sharing PyAutoArray with galaxy-duplicate-pytree-registration (abstract_ndarray.py only) and autolens_workspace with cluster-regime-narrative (scripts/cluster/ only); no file overlap
@@ -108,9 +113,14 @@
 - tier: judge — merge mode: human /prm
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/701
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/864
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/678
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/367
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/137
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/187
+- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/19
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/701
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/864
-- next: workspace config mirrors (PRs merge after the library PRs); human /prm; laptop follow-ups; draft the #46 update for the human
+- next: human /prm in library-first order (PyAutoArray#701 → PyAutoLens#864 → the 5 workspace PRs); laptop follow-ups before close-out; #46 update drafted for the human (not posted)
 
 ## shift-named-tasks-and-planner-skips
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/667
