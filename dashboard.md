@@ -1361,7 +1361,7 @@ Use the start-dev skill. active/cluster_regime_narrative.md
 
 </details>
 
-<details><summary>📋 <a href="active/community_close_due_21d.md">Community: 21-day close policy, close-due scan section, and quiet historical follow-ups</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/658">issue #658</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/community_close_due_21d.md">Community: 21-day close policy, close-due scan section, and quiet historical follow-ups</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/658">issue #658</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/662">PyAutoBrain#662</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/32">PyAutoEars#32</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/580">PyAutoMind#580</a></summary>
 
 ```
 Use the start-dev skill. active/community_close_due_21d.md

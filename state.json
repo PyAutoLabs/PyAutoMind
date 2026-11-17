@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-11-17T13:41:35Z",
+  "updated": "2026-11-17T13:46:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,6 +24,12 @@
       "text": "Speed up blurring_mask_2d_from for large PSF kernels (separable box dilation) \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/697",
       "prompt": "Use the start-dev skill. active/blurring_mask_separable_dilation.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Community: 21-day close policy, close-due scan section, and quiet historical follow-ups \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/662",
+      "prompt": "Use the start-dev skill. active/community_close_due_21d.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Use readthedocs or migrate to GitHub docs",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
-      "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
     }
   ]
 }
