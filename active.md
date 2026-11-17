@@ -145,3 +145,14 @@
 - prompt: active/redshifts_and_angles_guide.md
 - tier: judge — merge mode: human /prm
 - coordination: human approved running in parallel with cluster-regime-narrative (#671 touches only scripts/cluster/README.md + start_here.py; no file overlap)
+
+## ears-private-repo-excluded
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/33
+- issued: 2026-11-17
+- session: Claude Code desktop (WSL), Opus worker
+- status: library-dev
+- prompt: active/ears_private_repo_excluded_not_unavailable.md
+- worktree: /home/jammy/Code/PyAutoLabs-wt/ears-private-repo-excluded
+- tier: notify — merge mode: auto-merge on green
+- repos:
+  - PyAutoEars: feature/ears-private-repo-excluded
