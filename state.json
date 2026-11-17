@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-17T13:19:08Z",
+  "updated": "2026-11-17T13:20:10Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -63,6 +63,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
@@ -102,12 +108,6 @@
       "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
       "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: CTI upkeep parity \u2014 bring PyAutoCTI and its satellites to the same\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md"
     },
     {
       "severity": "info",
