@@ -21,6 +21,7 @@
 - prompt: draft/maintenance/workspaces/issue_templates_route_bugs_to_hub.md
 - summary: drop the bug_report issue template (7 repos + .github org default), add the Bugs & Errors contact link everywhere, blank_issues_enabled false; update policy/community_surface.md §2 (reverses the 2026-09 choice)
 - blocked-by: PyAutoGalaxy (galaxy-duplicate-pytree-registration), PyAutoFit (ep-projected-model-shared-prior), autolens_workspace (cluster-regime-narrative)
+- decision: human confirmed 2026-11-17 that blank_issues_enabled: false is acceptable (maintainer hand-filing via the web chooser is given up; API filing unaffected)
 - affected-repos:
   - PyAutoArray
   - PyAutoFit
