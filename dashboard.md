@@ -1353,7 +1353,7 @@ Use the start-dev skill. active/cluster_regime_narrative.md
 
 </details>
 
-<details><summary>📋 <a href="active/convolver_fft_frame_from_mask.md">ConvolverState: size the FFT frame from the mask, not the native array…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/698">issue #698</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/convolver_fft_frame_from_mask.md">ConvolverState: size the FFT frame from the mask, not the native array…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/698">issue #698</a> — issued 2026-11-17 — library-shipped, awaiting-merge (human /prm; tier judge) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/699">PyAutoArray#699</a></summary>
 
 ```
 Use the start-dev skill. active/convolver_fft_frame_from_mask.md

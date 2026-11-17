@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-11-17T14:39:13Z",
+  "updated": "2026-11-17T14:57:12Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "ConvolverState: size the FFT frame from the mask, not the native array\u2026 \u2014 library-shipped, awaiting-merge (human /prm; tier judge)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/699",
+      "prompt": "Use the start-dev skill. active/convolver_fft_frame_from_mask.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
-      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     }
   ]
 }
