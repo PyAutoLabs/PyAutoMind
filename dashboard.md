@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 286 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -1516,7 +1516,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 34 · local-dev 11 · wsl-data 9
+Lanes: any 231 · ral 34 · local-dev 11 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -2462,7 +2462,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 26</summary>
+<summary><b>docs</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2636,6 +2636,14 @@ Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_wa
 
 ```
 Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/redshifts_and_angles_guide.md">Guide: why changing redshift does not change a lensed image…</a> — autolens_workspace</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/redshifts_and_angles_guide.md
 ```
 
 </details>
@@ -3119,7 +3127,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-113 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3164,7 +3172,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
-- _… and 73 more_
+- _… and 74 more_
 
 </details>
 
