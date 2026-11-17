@@ -95,7 +95,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/700
 - issued: 2026-11-17
 - session: Claude Code cloud session (claude.ai/code, session_016nhQ8MtKvVD9fBkNBqcMb4)
-- status: library-dev
+- status: library-shipped, workspace-pending
 - location: cloud container clones (no worktrees on this surface); resume from the pushed branches
 - repos:
   - PyAutoArray: feature/delaunay-interpolated-plot
@@ -106,7 +106,11 @@
 - decisions: fit.png switch `fit: subplot_fit_source_interpolated: false`, redraws panel 7 (imaging mid zoom / interferometer zoomed), PyAutoLens only (autogalaxy fit.png has no source panel); workspace mirrors: autolens_workspace, autolens_workspace_test, HowToLens, autolens_assistant, autolens_visualization
 - laptop-follow-ups: workspace smoke for the affected workspaces; re-render Delaunay figures in autolens_visualization / autogalaxy_visualization (cloud session has no LFS datasets / gallery harness)
 - tier: judge — merge mode: human /prm
-- next: implement PyAutoArray interpolated view + panel 11, then PyAutoLens switch
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/701
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/864
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/701
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/864
+- next: workspace config mirrors (PRs merge after the library PRs); human /prm; laptop follow-ups; draft the #46 update for the human
 
 ## shift-named-tasks-and-planner-skips
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/667
