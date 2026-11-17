@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2299 records across 11 buckets.
+2300 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -182,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
 - [dr1-sed-after-vis-lp](2026/11/dr1-sed-after-vis-lp.md)
+- [ears-private-repo-excluded](2026/11/ears-private-repo-excluded.md)
 - [eigen-flag-removal](2026/11/eigen-flag-removal.md) — phase 1 shipped; phase 2 re-filed
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
 - [ellipse-fit-filenames](2026/11/ellipse-fit-filenames.md)

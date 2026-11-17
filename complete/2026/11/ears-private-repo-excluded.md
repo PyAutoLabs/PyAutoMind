@@ -1,3 +1,16 @@
+## ears-private-repo-excluded
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/33
+- completed: 2026-11-17
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/34
+
+- Cause: the Ears Pages workflow collects with `github.token` (scoped to PyAutoEars), so the metadata read for a private repo answered 404 and `GitHub.get` raised a generic `ReadError`, reported as `unavailable`.
+- Fix: `ears.collect.NotFound(ReadError)` raised on gh's `HTTP 404`; `collect()` reports that metadata read as `excluded` with gap "source is not visible publicly (private or missing)". Rate limits, 5xx and timeouts stay `unavailable`. REFERENCE.md notes it.
+- Tests 148 -> 153; state.json with an excluded receipt validates against Brain `board/_state.py` and stays green. Brain's Community adapter already degrades only partial/unavailable, so no Brain change.
+- Trade-off accepted: a deleted or mistyped repo also shows as `excluded`, still listed with its gap.
+- Tier notify: auto-merged on green CI (3/3) by the shipping session.
+
+## Original prompt
+
 # Ears: report private or unreadable repos as excluded, not unavailable
 
 Type: bug
