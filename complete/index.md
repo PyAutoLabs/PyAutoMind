@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2307 records across 11 buckets.
+2308 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -324,6 +324,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-named-tasks-and-planner-skips](2026/11/shift-named-tasks-and-planner-skips.md)
 - [shift-notify-merge-cap](2026/11/shift-notify-merge-cap.md)
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
+- [shift-throughput-carryover](2026/11/shift-throughput-carryover.md)
 - [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)
 - [sibson-internal-edge-continuity](2026/11/sibson-internal-edge-continuity.md) — - The Watson per-triangle decomposition formed a circle through the query and every cavity-triangle edge, incl…
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
