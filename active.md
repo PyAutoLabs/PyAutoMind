@@ -1,18 +1,4 @@
 
-## blurring-mask-separable
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/696
-- issued: 2026-11-17
-- session: Claude Code desktop (WSL), /community chat
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/697 (full suite 2418 passed; no workspace impact: identical output)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/blurring-mask-separable
-- repos:
-  - PyAutoArray: feature/blurring-mask-separable
-- prompt: active/blurring_mask_separable_dilation.md
-- user-facing: true — hub #45 (@GeorgeVassilakis, co-author)
-- coordination: human authorized 2026-11-17 to share PyAutoArray with galaxy-duplicate-pytree-registration (stalled since 2026-11-14; no file overlap: mask_2d_util.py only)
-- tier: judge — merge mode: human /prm
-
 ## community-close-due
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/658
 - issued: 2026-11-17
@@ -76,7 +62,6 @@
 - prompt: active/galaxy_duplicate_pytree_registration_after_jax_fitness.md
 - heart-ack:
   - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
-- coordination: PyAutoArray shared with blurring-mask-separable by human OK 2026-11-17 (no file overlap)
 - repos:
   - PyAutoArray: feature/galaxy-duplicate-pytree-registration
 
