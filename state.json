@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-17T19:13:41Z",
+  "updated": "2026-11-17T19:16:13Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "severity": "yellow",
-      "text": "Delaunay source plots: show the piecewise-linear interpolant the likelihood uses \u2014 library-shipped, workspace-pending",
+      "text": "Delaunay source plots: show the piecewise-linear interpolant the likelihood uses \u2014 awaiting-merge (library + workspace PRs open; human /prm)",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
       "prompt": "Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md"
     },
