@@ -1450,7 +1450,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_named_tasks_and_planner_skips.md">M3.6b Named tasks and the planner: per-epic limit on phases only…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/667">issue #667</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_named_tasks_and_planner_skips.md">M3.6b Named tasks and the planner: per-epic limit on phases only…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/667">issue #667</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/668">PyAutoBrain#668</a></summary>
 
 ```
 Use the start-dev skill. active/shift_named_tasks_and_planner_skips.md
