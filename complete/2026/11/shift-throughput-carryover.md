@@ -1,3 +1,12 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/669
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/670 (merged 2026-11-17)
+- epic: autonomous-orchestrators, M3.6c
+- what shipped: carry-over at a shift's first tick (`carry_in`: the newest earlier dated slot's late `glance`/`notify` PRs never closed out or refused only by the close-out cutoff, closed out under the new grant; never one refused for tier/CI/`/drop`, a `/drop`ped task or a question-parked task; only a PR GitHub reads OPEN); a task an answer released passes the brief scope and the dip gates as a named task does; in-shift restart (an answer with > 30 min left; the release waits in `inshift_pending` until the task spawns, once per answer, the digest names it); bounded in-shift fetch (only while such a park is open, > 30 min left, at most every 10 min: AUTONOMY.md network-surface amendment, human-approved); `first: glance` (spawn order only); session cap `max(2 × max-workers, ceil(token-budget / 150k))` with no `max-sessions:`, shown in the snapshot.
+- evidence: Witness clauses 1-4 fail on main 2ca1bd3, pass (23 tests in tests/test_orchestrator_throughput.py); Brain 2332 passed; skill line counts and tenant firewall OK; Fable 5.2 review x2 (round 1: release used up on a refused spawn, carry-over open-PR check, question-parked carry, first: glance selection, carried task own; round 2: a /drop'ped late PR carried — all fixed); CI green. Tier judge: no shadow row.
+- follow-up: a carried PR a human merged before the shift still counts in the digest `merges` line (actor unknown); a PR landing in shift A after shift B's first tick is never carried; a restarted task re-parked on the same answered question keeps the bounded fetch going; with an expired login and only a pending release waiting, the login is not re-probed (the park stays).
+
+## Original prompt
+
 # M3.6c Shift throughput: carry-over, in-shift restart, `first: glance`, a session cap from the budget
 
 Type: feature
