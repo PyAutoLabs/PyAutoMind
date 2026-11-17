@@ -96,7 +96,7 @@
 - issued: 2026-11-17
 - session: Claude Code remote (mobile), Opus 5.5, session_016nhQ8QyUpAfUVYByA1UgVc
 - location: cloud container, GitHub-control surface with clones
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - repos:
   - PyAutoBrain: feature/deliverable-block-wave-575
   - PyAutoHeart: feature/deliverable-block-wave-575
@@ -105,4 +105,9 @@
 - prompt: active/deliverable_block_wave_575.md
 - epic: autonomous-orchestrators (task 0 before M3.6b)
 - tier: glance — merge mode: human /prm (human's rule this sitting)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/666
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/351
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/343
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/94
+- gates: witness fails on main (4 stale blocks) and passes on the branches; full suites green (Brain 2263, Heart 1468, Hands 624, Cortex 104); skill line counts OK; independent Fable 5.2 review CLEAN
 - after-merge: re-run the Tenant Firewall Gate on PyAutoMind main (dispatch firewall_gate.yml on main, or re-run run 43881901227)

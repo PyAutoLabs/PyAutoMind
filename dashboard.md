@@ -1418,7 +1418,7 @@ Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.
 
 </details>
 
-<details><summary>📋 <a href="active/deliverable_block_wave_575.md">Clear the Tenant Firewall Gate RED: regenerate the end-at-deliverable AGENTS.md block after…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/584">issue #584</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/deliverable_block_wave_575.md">Clear the Tenant Firewall Gate RED: regenerate the end-at-deliverable AGENTS.md block after…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/584">issue #584</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/666">PyAutoBrain#666</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/351">PyAutoHeart#351</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/343">PyAutoHands#343</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/94">PyAutoCortex#94</a></summary>
 
 ```
 Use the start-dev skill. active/deliverable_block_wave_575.md
