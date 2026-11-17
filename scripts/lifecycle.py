@@ -3975,14 +3975,70 @@ def close_prompt(
     return None, ""
 
 
-def close_registries(root: Path, slug: str) -> "list[str]":
-    """The registry files still carrying a `## <slug>` section for this task."""
+_ISSUE_HEADER_RE = re.compile(r"^Issue:\s*(\S+)", re.M)
+
+
+def _issue_key(value: "str | None") -> str:
+    """An issue URL as the registries compare it: first token, no trailing `/`."""
+    words = (value or "").split()
+    return words[0].rstrip("/") if words else ""
+
+
+def prompt_issue(prompt: "Path | None") -> str:
+    """The prompt's `Issue:` header, else ""."""
+    if prompt is None:
+        return ""
+    try:
+        m = _ISSUE_HEADER_RE.search(prompt.read_text(errors="replace"))
+    except OSError:
+        return ""
+    return _issue_key(m.group(1)) if m else ""
+
+
+def close_registries(
+    root: Path,
+    slug: str,
+    prompt: "Path | None" = None,
+    issue: "str | None" = None,
+) -> "list[tuple[str, str]]":
+    """(registry file, `## heading` slug) for each registry still carrying this
+    task's section.
+
+    Matched in order, per file: the heading by slug; else the one row whose
+    `prompt:` resolves to the task's prompt file; else the one row whose
+    `issue:` is the task's issue (`issue`, else the prompt's `Issue:` header).
+    A `prompt:` or `issue:` match counts only when exactly one row matches —
+    two candidates are a human's to tell apart (PyAutoBrain#661: after shift
+    2026-11-16-pm, rows whose heading was not the slug were left behind)."""
     want = safe_name(slug)
-    return [
-        reg
-        for reg in REGISTRY_FILES
-        if want in {safe_name(s) for s in ledger_slugs(root / reg)}
-    ]
+    target = prompt.resolve() if prompt is not None else None
+    issue_key = _issue_key(issue) or prompt_issue(prompt)
+    out: "list[tuple[str, str]]" = []
+    for reg in REGISTRY_FILES:
+        entries = registry_entries(root / reg)
+        by_slug = [h for h, _ in entries if safe_name(h) == want]
+        if by_slug:
+            out.append((reg, by_slug[0]))
+            continue
+        if target is not None:
+            by_prompt = []
+            for heading, fields in entries:
+                raw = (fields.get("prompt") or "").split()
+                if not raw:
+                    continue
+                resolved, _ = resolve_prompt(root, raw[0])
+                if resolved is not None and resolved.resolve() == target:
+                    by_prompt.append(heading)
+            if len(by_prompt) == 1:
+                out.append((reg, by_prompt[0]))
+                continue
+            if by_prompt:
+                continue   # ambiguous: never guess
+        if issue_key:
+            by_issue = [h for h, f in entries if _issue_key(f.get("issue")) == issue_key]
+            if len(by_issue) == 1:
+                out.append((reg, by_issue[0]))
+    return out
 
 
 def close_references(root: Path, slug: str, rel: str) -> "list[str]":
@@ -4092,7 +4148,7 @@ def cmd_close(args) -> int:
         return 1
 
     rel = _rel(root, prompt)
-    registries = close_registries(root, args.slug)
+    registries = close_registries(root, args.slug, prompt, getattr(args, "issue", None))
     task_cell, why = close_shadow_task(args)
     row = None
     actor_cell = None
@@ -4132,8 +4188,9 @@ def cmd_close(args) -> int:
     print(f"close: {args.slug}")
     print(f"  record:   {dest.relative_to(root)}  (folds {rel}, found via {how})")
     print(f"  remove:   {rel}")
-    for reg in registries:
-        print(f"  registry: {reg} — drop the `## {slug}` entry")
+    for reg, heading in registries:
+        found = "" if safe_name(heading) == slug else " (matched by prompt path or issue)"
+        print(f"  registry: {reg} — drop the `## {heading}` entry{found}")
     if not registries:
         print(
             "  registry: no entry in " + "/".join(REGISTRY_FILES) + " — nothing to drop"
@@ -4167,7 +4224,7 @@ def cmd_close(args) -> int:
         dest.relative_to(root).as_posix(),
         rel,
         INDEX_MD.relative_to(root).as_posix(),
-        *registries,
+        *(reg for reg, _ in registries),
         *([_rel(root, log)] if row is not None else []),
         *(["queue.md"] if queue_moved else []),
         *(["questions.md"] if questions_moved else []),
@@ -4190,13 +4247,14 @@ def cmd_close(args) -> int:
     rc = cmd_record(rec)
     if rc != 0:
         return rc
-    # `record` prunes active.md; the pointers a task may also hold elsewhere
-    # are this verb's to drop.
-    for reg in registries:
-        if reg == "active.md":
+    # `record` prunes active.md by slug; a row matched by prompt path or
+    # issue (#661), and the pointers a task may also hold elsewhere, are this
+    # verb's to drop — each by the heading it matched.
+    for reg, heading in registries:
+        if reg == "active.md" and safe_name(heading) == slug:
             continue
-        if _prune_ledger_section(root / reg, args.slug):
-            print(f"{reg}: removed section {slug!r}")
+        if _prune_ledger_section(root / reg, heading):
+            print(f"{reg}: removed section {safe_name(heading)!r}")
 
     if queue_moved:
         queue_md.write_text(queue_new, encoding="utf-8")
@@ -4310,6 +4368,12 @@ def main() -> int:
         help="the prompt file, when the slug does not name it: a "
         "repo-relative path OR a bare filename (unlike "
         "`record --prompt`, draft/ prompts resolve too)",
+    )
+    cl.add_argument(
+        "--issue",
+        help="the task's issue URL: finds its registry row when the row's "
+        "heading is not the slug and its `prompt:` does not name the prompt "
+        "(default: the prompt's `Issue:` header)",
     )
     cl.add_argument(
         "--pr",
