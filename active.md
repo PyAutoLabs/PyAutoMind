@@ -90,3 +90,20 @@
     PR #720 open (glance, PR-open; close-out session runs witness + adversary and merges or refuses).
     Adds `m: Constant 4` prior config to EllipseMultipole/EllipseMultipoleScaled so latent_parameters_from works without an explicit m; regression test (fails on main, passes on branch).
     Workspace impact: (iii) none — every workspace script sets m explicitly. Follow-up (not filed): EllipseMultipoleScaled has no prior config for major_axis.
+
+## delaunay-interpolated-plot
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/700
+- issued: 2026-11-17
+- session: Claude Code cloud session (claude.ai/code, session_016nhQ8MtKvVD9fBkNBqcMb4)
+- status: library-dev
+- location: cloud container clones (no worktrees on this surface); resume from the pushed branches
+- repos:
+  - PyAutoArray: feature/delaunay-interpolated-plot
+  - PyAutoLens: feature/delaunay-interpolated-plot
+- prompt: active/delaunay_plot_shows_likelihood_interpolant.md
+- community: https://github.com/PyAutoLabs/.github/discussions/46 (draft the update for the human; do not post)
+- coordination: human approved 2026-11-17 sharing PyAutoArray with galaxy-duplicate-pytree-registration (abstract_ndarray.py only) and autolens_workspace with cluster-regime-narrative (scripts/cluster/ only); no file overlap
+- decisions: fit.png switch `fit: subplot_fit_source_interpolated: false`, redraws panel 7 (imaging mid zoom / interferometer zoomed), PyAutoLens only (autogalaxy fit.png has no source panel); workspace mirrors: autolens_workspace, autolens_workspace_test, HowToLens, autolens_assistant, autolens_visualization
+- laptop-follow-ups: workspace smoke for the affected workspaces; re-render Delaunay figures in autolens_visualization / autogalaxy_visualization (cloud session has no LFS datasets / gallery harness)
+- tier: judge — merge mode: human /prm
+- next: implement PyAutoArray interpolated view + panel 11, then PyAutoLens switch

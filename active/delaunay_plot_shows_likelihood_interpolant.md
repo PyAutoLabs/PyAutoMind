@@ -10,6 +10,7 @@ Priority: medium
 Consequence: judge
 Community: https://github.com/PyAutoLabs/.github/discussions/46
 Filed: 2026-11-17
+Issued: 2026-11-17
 
 From @Lasloruhberg on hub #46 (Bugs & Errors, 2026-11-13, with a minimal script and figure).
 
