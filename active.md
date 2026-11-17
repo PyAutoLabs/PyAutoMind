@@ -121,3 +121,16 @@
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/701
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/864
 - next: human /prm in library-first order (PyAutoArray#701 → PyAutoLens#864 → the 5 workspace PRs); laptop follow-ups before close-out; #46 update drafted for the human (not posted)
+
+## shift-throughput-carryover
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/669
+- issued: 2026-11-17
+- session: Claude Code remote (mobile), Opus 5.5, session_016nhQ8QyUpAfUVYByA1UgVc
+- location: cloud container, GitHub-control surface with clones
+- status: library-dev
+- repos:
+  - PyAutoBrain: feature/shift-throughput-carryover
+- prompt: active/shift_throughput_carryover_and_order.md
+- epic: autonomous-orchestrators (M3.6c)
+- decisions: human approved 2026-11-17 as written — bounded in-shift fetch (network-surface amendment); carry over only glance/notify PRs never closed out or refused by the cutoff, newest earlier slot; first: glance reorders; session-cap floor 150k tokens
+- tier: judge — merge mode: human /prm
