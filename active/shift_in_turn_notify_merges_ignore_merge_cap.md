@@ -4,15 +4,18 @@ Type: bug
 Target: PyAutoBrain
 Repos:
 - PyAutoBrain
+- PyAutoMind
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-17
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/661
 Filed: 2026-11-16
 Epic: autonomous-orchestrators
 Phase: 10
 Consequence: judge
-Witness: `python -m pytest tests/test_orchestrator_*.py tests/test_closeout*.py -q` passes with new tests that fail on today's main: (1) in a shift with `merge-cap: 1`, a second in-turn `notify` merge is refused and left for /prm (the fake `gh` logs one merge call); (2) under `--auto` a bug prompt with `Autonomy: safe`, `Consequence: notify` and a held witness merges in-turn and the snapshot shows "1 merged of merge-cap 1"; (3) `start_dev` prints one line "effective level: <level>; merge mode: <mode>" for that prompt; (4) `lifecycle.py close` finds the `active.md` row by prompt path or issue URL when the heading does not match the slug; and `grep -n "2026-11-17" AUTONOMY.md` shows the R3 ruling
+Witness: `python -m pytest tests/test_orchestrator_*.py tests/test_closeout_merge_slots.py -q` (PyAutoBrain) and `python -m pytest tests/test_lifecycle_close.py -q` (PyAutoMind, item 4) pass (amended 2026-11-17: the original `tests/test_closeout*.py` glob matched no file) with new tests that fail on today's main: (1) in a shift with `merge-cap: 1`, a second in-turn `notify` merge is refused and left for /prm (the fake `gh` logs one merge call); (2) under `--auto` a bug prompt with `Autonomy: safe`, `Consequence: notify` and a held witness merges in-turn and the snapshot shows "1 merged of merge-cap 1"; (3) `start_dev` prints one line "effective level: <level>; merge mode: <mode>" for that prompt; (4) `lifecycle.py close` finds the `active.md` row by prompt path or issue URL when the heading does not match the slug; and `grep -n "2026-11-17" AUTONOMY.md` shows the R3 ruling
 Lane: any
 Unattended: never
 

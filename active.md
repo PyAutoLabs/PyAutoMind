@@ -104,3 +104,45 @@
     PR #720 open (glance, PR-open; close-out session runs witness + adversary and merges or refuses).
     Adds `m: Constant 4` prior config to EllipseMultipole/EllipseMultipoleScaled so latent_parameters_from works without an explicit m; regression test (fails on main, passes on branch).
     Workspace impact: (iii) none — every workspace script sets m explicitly. Follow-up (not filed): EllipseMultipoleScaled has no prior config for major_axis.
+
+## shift-launch-preflight
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/659
+- issued: 2026-11-17
+- session: Claude Code desktop (WSL), Opus 5.5, ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/shift-launch-preflight
+- repos:
+  - PyAutoBrain: feature/shift-launch-preflight
+  - PyAutoMind: feature/shift-launch-preflight
+- prompt: active/shift_launch_preflight.md
+- epic: autonomous-orchestrators (M3.6a)
+- coordination: human approved 2026-11-17 running M3.6a/d/e in parallel and alongside community-close-due on PyAutoBrain/PyAutoMind (file-disjoint); no shift runs until all three merge
+- tier: judge — merge mode: human /prm
+
+## shift-ledger-edit-op
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/660
+- issued: 2026-11-17
+- session: Claude Code desktop (WSL), Opus 5.5, ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/shift-ledger-edit-op
+- repos:
+  - PyAutoBrain: feature/shift-ledger-edit-op
+  - PyAutoMind: feature/shift-ledger-edit-op
+- prompt: active/shift_ledger_write_refuses_existing_draft_completion_still_commits.md
+- epic: autonomous-orchestrators (M3.6d)
+- coordination: human approved 2026-11-17 running M3.6a/d/e in parallel and alongside community-close-due on PyAutoBrain/PyAutoMind (file-disjoint); no shift runs until all three merge
+- tier: glance — merge mode: human /prm (human's instruction 2026-11-17; no auto-merge)
+
+## shift-notify-merge-cap
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/661
+- issued: 2026-11-17
+- session: Claude Code desktop (WSL), Opus 5.5, ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/shift-notify-merge-cap
+- repos:
+  - PyAutoBrain: feature/shift-notify-merge-cap
+  - PyAutoMind: feature/shift-notify-merge-cap
+- prompt: active/shift_in_turn_notify_merges_ignore_merge_cap.md
+- epic: autonomous-orchestrators (M3.6e)
+- coordination: human approved 2026-11-17 running M3.6a/d/e in parallel and alongside community-close-due on PyAutoBrain/PyAutoMind (file-disjoint); no shift runs until all three merge
+- tier: judge — merge mode: human /prm

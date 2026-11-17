@@ -8,7 +8,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-17
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/660
 Filed: 2026-11-16
 Epic: autonomous-orchestrators
 Phase: 10
