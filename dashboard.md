@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 285 |
+| [Backlog](#backlog) | 286 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -139,7 +139,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 74
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -1516,7 +1516,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 230 · ral 34 · local-dev 11 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1876,7 +1876,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 51</summary>
+<summary><b>bug</b> — 52</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2026,6 +2026,14 @@ Use the start-dev skill. draft/bug/autolens_workspace/start_here_multistart_comp
 
 ```
 Use the start-dev skill. draft/bug/autofit/visualization_warmup_swallowed_exception.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/plot_grid_indexerror_under_small_datasets.md">plot_grid IndexError under small datasets</a> — autoarray · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/plot_grid_indexerror_under_small_datasets.md
 ```
 
 </details>
