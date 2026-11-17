@@ -3265,6 +3265,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoArray**
 
 - [PyAutoArray#697](https://github.com/PyAutoLabs/PyAutoArray/pull/697) — `complete/2026/11/blurring-mask-separable.md`
+- [PyAutoArray#699](https://github.com/PyAutoLabs/PyAutoArray/pull/699) — `complete/2026/11/convolver-fft-frame-from-mask.md`
 - [PyAutoArray#695](https://github.com/PyAutoLabs/PyAutoArray/pull/695) — `complete/2026/11/matern-vendor-bessel-kve.md`
 
 

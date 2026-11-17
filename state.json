@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-11-17T15:21:35Z",
+  "updated": "2026-11-17T15:23:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -53,6 +53,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#697 \u2014 blurring-mask-separable",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/697",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#699 \u2014 convolver-fft-frame-from-mask",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/699",
       "prompt": null
     },
     {
@@ -120,12 +126,6 @@
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
-      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     }
   ]
 }

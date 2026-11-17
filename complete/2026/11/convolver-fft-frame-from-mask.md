@@ -1,6 +1,7 @@
 ## convolver-fft-frame-from-mask
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/698 (closed 2026-11-17)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/699 (MERGED 2026-11-17T15:18:52Z, merge e81c6e16; CI verdict GREEN, Heart freeze not active)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/699
 - completed: 2026-11-17
 - merged-by: human-typed /prm
 - tier: judge (declared Consequence) — no shadow row
@@ -17,7 +18,7 @@
 - follow-ups:
   - Supersedes PyAutoArray#675 (closed by the parent /community session, not this close-out).
   - @samlange04 asked on hub #43 (https://github.com/PyAutoLabs/.github/discussions/43) to re-run his GPU benchmark; a contributor "it's released" update is owed on #43 after the next release.
-  - Release: the PR carries the `pending-release` label; the `active.md` row held no `pending-release:` line, so none is carried here (GitHub's label stays the source of truth).
+  - Release: the `active.md` row held no `pending-release:` line; the `pending-release:` key above was added by hand after close-out so the dashboard tracks the release (the PR carries the label).
 
 ## Original prompt
 
