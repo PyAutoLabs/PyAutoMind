@@ -1442,7 +1442,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_throughput_carryover_and_order.md">M3.6c Shift throughput: carry-over, in-shift restart, <code>first: glance</code>, a session cap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/669">issue #669</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_throughput_carryover_and_order.md">M3.6c Shift throughput: carry-over, in-shift restart, <code>first: glance</code>, a session cap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/669">issue #669</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/670">PyAutoBrain#670</a></summary>
 
 ```
 Use the start-dev skill. active/shift_throughput_carryover_and_order.md
