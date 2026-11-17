@@ -4014,6 +4014,17 @@ def close_registries(
     target = prompt.resolve() if prompt is not None else None
     issue_key = _issue_key(issue) or prompt_issue(prompt)
 
+    def _other_prompt(fields: dict) -> bool:
+        """The row's `prompt:` names a file other than this task's, whether
+        that file still exists or not."""
+        raw = (fields.get("prompt") or "").split()
+        if not raw:
+            return False
+        resolved = _prompt_of(fields)
+        if resolved is not None:
+            return resolved != target
+        return target is None or Path(raw[0]).name != target.name
+
     def _prompt_of(fields: dict) -> "Path | None":
         raw = (fields.get("prompt") or "").split()
         if not raw:
@@ -4046,7 +4057,7 @@ def close_registries(
             by_issue = [
                 h for h, f in entries
                 if _issue_key(f.get("issue")) == issue_key
-                and _prompt_of(f) in (None, target)
+                and not _other_prompt(f)
             ]
             if len(by_issue) == 1:
                 out.append((reg, by_issue[0]))

@@ -680,3 +680,15 @@ def test_the_issue_fallback_skips_a_row_with_another_prompt(tmp_path, monkeypatc
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(root, issue=ISSUE_URL, apply=True)) == 0
     assert "torque-rebaseline-epic-row" in (root / "active.md").read_text()
+
+
+def test_the_issue_fallback_skips_a_row_naming_a_missing_other_prompt(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    _retitled(root, prompt_line=False, issue_line=True)
+    _no_parked_row(root)
+    (root / "active.md").write_text((root / "active.md").read_text().replace(
+        "- status: library-dev\n- issue:",
+        "- status: library-dev\n- prompt: active/phase3_gone.md\n- issue:"))
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, issue=ISSUE_URL, apply=True)) == 0
+    assert "torque-rebaseline-epic-row" in (root / "active.md").read_text()
