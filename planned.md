@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [issue-templates-route-bugs-to-hub](#issue-templates-route-bugs-to-hub)
 - [hpc-keep-off-home-phase-b](#hpc-keep-off-home-phase-b)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
@@ -13,6 +14,22 @@
 - [delaunay-nn-numba-remeasure](#delaunay-nn-numba-remeasure)
 
 <!-- toc:end -->
+
+## issue-templates-route-bugs-to-hub
+- status: blocked — repos claimed by other tasks
+- filed: 2026-11-17
+- prompt: draft/maintenance/workspaces/issue_templates_route_bugs_to_hub.md
+- summary: drop the bug_report issue template (7 repos + .github org default), add the Bugs & Errors contact link everywhere, blank_issues_enabled false; update policy/community_surface.md §2 (reverses the 2026-09 choice)
+- blocked-by: PyAutoGalaxy (galaxy-duplicate-pytree-registration), PyAutoFit (ep-projected-model-shared-prior), autolens_workspace (cluster-regime-narrative)
+- affected-repos:
+  - PyAutoArray
+  - PyAutoFit
+  - PyAutoGalaxy
+  - PyAutoLens
+  - autofit_workspace
+  - autogalaxy_workspace
+  - autolens_workspace
+  - .github
 
 ## hpc-keep-off-home-phase-b
 - status: blocked — repos claimed by other tasks

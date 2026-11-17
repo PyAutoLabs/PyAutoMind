@@ -1,4 +1,18 @@
 
+## community-close-due
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/658
+- issued: 2026-11-17
+- session: Claude Code desktop (WSL), /community chat
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/community-close-due
+- repos:
+  - PyAutoBrain: feature/community-close-due
+  - PyAutoEars: feature/community-close-due
+  - PyAutoMind: feature/community-close-due
+- prompt: active/community_close_due_21d.md
+- user-facing: true — motivated by hub discussion #37 (closed under the policy 2026-11-17)
+- tier: judge — merge mode: human /prm
+
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04
