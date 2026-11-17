@@ -90,3 +90,19 @@
     PR #720 open (glance, PR-open; close-out session runs witness + adversary and merges or refuses).
     Adds `m: Constant 4` prior config to EllipseMultipole/EllipseMultipoleScaled so latent_parameters_from works without an explicit m; regression test (fails on main, passes on branch).
     Workspace impact: (iii) none — every workspace script sets m explicitly. Follow-up (not filed): EllipseMultipoleScaled has no prior config for major_axis.
+
+## deliverable-block-wave-575
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/584
+- issued: 2026-11-17
+- session: Claude Code remote (mobile), Opus 5.5, session_016nhQ8QyUpAfUVYByA1UgVc
+- location: cloud container, GitHub-control surface with clones
+- status: library-dev
+- repos:
+  - PyAutoBrain: feature/deliverable-block-wave-575
+  - PyAutoHeart: feature/deliverable-block-wave-575
+  - PyAutoHands: feature/deliverable-block-wave-575
+  - PyAutoCortex: feature/deliverable-block-wave-575
+- prompt: active/deliverable_block_wave_575.md
+- epic: autonomous-orchestrators (task 0 before M3.6b)
+- tier: glance — merge mode: human /prm (human's rule this sitting)
+- after-merge: re-run the Tenant Firewall Gate on PyAutoMind main (dispatch firewall_gate.yml on main, or re-run run 43881901227)
