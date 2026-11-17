@@ -3,7 +3,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/696
 - issued: 2026-11-17
 - session: Claude Code desktop (WSL), /community chat
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/697 (full suite 2418 passed; no workspace impact: identical output)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/blurring-mask-separable
 - repos:
   - PyAutoArray: feature/blurring-mask-separable
