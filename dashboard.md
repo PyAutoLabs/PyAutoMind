@@ -1401,7 +1401,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_in_turn_notify_merges_ignore_merge_cap.md">M3.6e Shift workers merge notify-tier PRs in-turn past the shift's merge-cap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/661">issue #661</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_in_turn_notify_merges_ignore_merge_cap.md">M3.6e Shift workers merge notify-tier PRs in-turn past the shift's merge-cap…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/661">issue #661</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/665">PyAutoBrain#665</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/583">PyAutoMind#583</a></summary>
 
 ```
 Use the start-dev skill. active/shift_in_turn_notify_merges_ignore_merge_cap.md
@@ -1409,7 +1409,7 @@ Use the start-dev skill. active/shift_in_turn_notify_merges_ignore_merge_cap.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_launch_preflight.md">M3.6a Shift launch preflight: shift issue, login probe, the watcher finds…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/659">issue #659</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_launch_preflight.md">M3.6a Shift launch preflight: shift issue, login probe, the watcher finds…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/659">issue #659</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/664">PyAutoBrain#664</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/582">PyAutoMind#582</a></summary>
 
 ```
 Use the start-dev skill. active/shift_launch_preflight.md
@@ -1417,7 +1417,7 @@ Use the start-dev skill. active/shift_launch_preflight.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_ledger_write_refuses_existing_draft_completion_still_commits.md">M3.6d A shift worker's edit to an existing Mind file is set…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/660">issue #660</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_ledger_write_refuses_existing_draft_completion_still_commits.md">M3.6d A shift worker's edit to an existing Mind file is set…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/660">issue #660</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/663">PyAutoBrain#663</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/581">PyAutoMind#581</a></summary>
 
 ```
 Use the start-dev skill. active/shift_ledger_write_refuses_existing_draft_completion_still_commits.md

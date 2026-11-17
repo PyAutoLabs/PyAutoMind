@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-11-17T14:28:19Z",
+  "updated": "2026-11-17T14:39:13Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,24 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "M3.6e Shift workers merge notify-tier PRs in-turn past the shift's merge-cap\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/665",
+      "prompt": "Use the start-dev skill. active/shift_in_turn_notify_merges_ignore_merge_cap.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "M3.6a Shift launch preflight: shift issue, login probe, the watcher finds\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/664",
+      "prompt": "Use the start-dev skill. active/shift_launch_preflight.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "M3.6d A shift worker's edit to an existing Mind file is set\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/663",
+      "prompt": "Use the start-dev skill. active/shift_ledger_write_refuses_existing_draft_completion_still_commits.md"
     },
     {
       "severity": "yellow",
@@ -108,24 +126,6 @@
       "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
       "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
-      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Use readthedocs or migrate to GitHub docs",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
-      "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
     }
   ]
 }
