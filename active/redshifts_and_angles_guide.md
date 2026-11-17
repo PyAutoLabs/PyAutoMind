@@ -1,6 +1,8 @@
 # Guide: why changing redshift does not change a lensed image (angular vs physical units)
 
 Consequence: judge
+Issued: 2026-11-17
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/676
 
 ## Request (verbatim)
 
