@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-11-16",
-  "scanned": 264,
+  "generated": "2026-11-17",
+  "scanned": 277,
   "repos": [
     "ECLIPSE_lens_catalogue",
     "HowToFit",
@@ -55,5 +55,36 @@
     "pyautolabs.github.io"
   ],
   "dismissed": 32,
-  "flags": []
+  "flags": [
+    {
+      "path": "draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md",
+      "title": "M3.6h A Heart RED made only of report-only reasons needs no shift acknowledgement",
+      "grade": "looks-shipped",
+      "filed": "2026-11-17",
+      "signals": [
+        {
+          "kind": "witness-exists",
+          "repo": "PyAutoBrain",
+          "evidence": "Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 55b7d30 2026-11-17 Merge pull request #664 from PyAutoLabs/feature/shift-launch-preflight (Filed 2026-11-17)"
+        }
+      ],
+      "close": "python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-17 --from-file <record-body.md> --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply",
+      "dismiss": "echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md \u2014 2026-11-17 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md"
+    },
+    {
+      "path": "draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md",
+      "title": "M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no `pgrep` waits, `ruff format`, worker PATH",
+      "grade": "looks-shipped",
+      "filed": "2026-11-17",
+      "signals": [
+        {
+          "kind": "witness-exists",
+          "repo": "PyAutoBrain",
+          "evidence": "Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 55b7d30 2026-11-17 Merge pull request #664 from PyAutoLabs/feature/shift-launch-preflight (Filed 2026-11-17) (+1 more)"
+        }
+      ],
+      "close": "python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-17 --from-file <record-body.md> --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply",
+      "dismiss": "echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md \u2014 2026-11-17 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md"
+    }
+  ]
 }

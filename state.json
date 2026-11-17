@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-11-17T16:17:19Z",
+  "updated": "2026-11-17T16:32:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,18 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md",
+      "prompt": "`draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` looks already shipped \u2014 confirm or dismiss it. Work in the PyAutoMind checkout.\n\nEvidence (from `intake looks-shipped`):\n- witness-exists: Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 55b7d30 2026-11-17 Merge pull request #664 from PyAutoLabs/feature/shift-launch-preflight (Filed 2026-11-17)\n\n1. Check each cited line: open the commit / definition / record and confirm it\n   really is THIS draft's work, not a neighbour's.\n2. If it shipped, close it (write the record body first; the command is a dry\n   run without --apply):\n   python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-17 --from-file <record-body.md> --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply\n3. If it did not, dismiss the flag so the batch planner may pick it again:\n   echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md \u2014 2026-11-17 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md\n4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.\n\nReport which you did and why."
+    },
+    {
+      "severity": "yellow",
+      "text": "looks shipped \u2014 confirm: M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no `pgrep` waits\u2026 (witness-exists)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md",
+      "prompt": "`draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md` looks already shipped \u2014 confirm or dismiss it. Work in the PyAutoMind checkout.\n\nEvidence (from `intake looks-shipped`):\n- witness-exists: Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 55b7d30 2026-11-17 Merge pull request #664 from PyAutoLabs/feature/shift-launch-preflight (Filed 2026-11-17) (+1 more)\n\n1. Check each cited line: open the commit / definition / record and confirm it\n   really is THIS draft's work, not a neighbour's.\n2. If it shipped, close it (write the record body first; the command is a dry\n   run without --apply):\n   python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-17 --from-file <record-body.md> --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply\n3. If it did not, dismiss the flag so the batch planner may pick it again:\n   echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md \u2014 2026-11-17 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md\n4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.\n\nReport which you did and why."
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
       "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
-      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
     }
   ]
 }
