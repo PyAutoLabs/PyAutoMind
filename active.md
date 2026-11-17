@@ -169,6 +169,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/redshift-angles-guide
 - repos:
   - autolens_workspace: feature/redshift-angles-guide
+  - HowToLens: feature/redshift-angles-guide
 - prompt: active/redshifts_and_angles_guide.md
 - tier: judge — merge mode: human /prm
 - coordination: human approved running in parallel with cluster-regime-narrative (#671 touches only scripts/cluster/README.md + start_here.py; no file overlap)
