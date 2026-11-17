@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-17T19:12:41Z",
+  "updated": "2026-11-17T19:13:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Delaunay source plots: show the piecewise-linear interpolant the likelihood uses \u2014 library-shipped, workspace-pending",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
+      "prompt": "Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md"
     },
     {
       "severity": "yellow",
@@ -45,6 +51,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#701 \u2014 Delaunay source plots: show the piecewise-linear interpolant the likelihood uses",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#697 \u2014 blurring-mask-separable",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/697",
       "prompt": null
@@ -59,6 +71,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#695 \u2014 matern-vendor-bessel-kve",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/695",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 Delaunay source plots: show the piecewise-linear interpolant the likelihood uses",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
       "prompt": null
     },
     {
@@ -108,24 +126,6 @@
       "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
       "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Physical model check when speeding up smoke tests",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
-      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
-      "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
-      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     }
   ]
 }

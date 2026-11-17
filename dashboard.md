@@ -15,7 +15,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 285 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 1 |
+| [Pending release](#pending-release) | 2 |
 
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
@@ -1410,7 +1410,7 @@ Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.
 
 </details>
 
-<details><summary>📋 <a href="active/delaunay_plot_shows_likelihood_interpolant.md">Delaunay source plots: show the piecewise-linear interpolant the likelihood uses</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/700">issue #700</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/delaunay_plot_shows_likelihood_interpolant.md">Delaunay source plots: show the piecewise-linear interpolant the likelihood uses</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/700">issue #700</a> — issued 2026-11-17 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/701">PyAutoArray#701</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/864">PyAutoLens#864</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md
@@ -3297,9 +3297,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#701](https://github.com/PyAutoLabs/PyAutoArray/pull/701) — `active/delaunay_plot_shows_likelihood_interpolant.md`
 - [PyAutoArray#697](https://github.com/PyAutoLabs/PyAutoArray/pull/697) — `complete/2026/11/blurring-mask-separable.md`
 - [PyAutoArray#699](https://github.com/PyAutoLabs/PyAutoArray/pull/699) — `complete/2026/11/convolver-fft-frame-from-mask.md`
 - [PyAutoArray#695](https://github.com/PyAutoLabs/PyAutoArray/pull/695) — `complete/2026/11/matern-vendor-bessel-kve.md`
+
+**PyAutoLens**
+
+- [PyAutoLens#864](https://github.com/PyAutoLabs/PyAutoLens/pull/864) — `active/delaunay_plot_shows_likelihood_interpolant.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
