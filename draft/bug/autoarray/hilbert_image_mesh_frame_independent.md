@@ -14,8 +14,9 @@ Community: https://github.com/PyAutoLabs/.github/discussions/43
 Filed: 2026-11-17
 
 Agreed by the human in the /community chat on 2026-11-17. Separate from PyAutoArray#675
-(Sam's FFT-frame trim), which is being reworked to live inside `ConvolverState` so the
-dataset's native frame never changes. This task fixes the Hilbert side regardless.
+(Sam's FFT-frame trim), which was reworked to live inside `ConvolverState` so the
+dataset's native frame never changes — shipped in PyAutoArray#699
+(`complete/2026/11/convolver-fft-frame-from-mask.md`). This task fixes the Hilbert side regardless.
 
 ## Problem
 
