@@ -9,6 +9,8 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Filed: 2026-11-17
+Issued: 2026-11-17
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/667
 Epic: autonomous-orchestrators
 Phase: 10
 Consequence: glance

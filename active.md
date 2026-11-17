@@ -107,3 +107,16 @@
 - laptop-follow-ups: workspace smoke for the affected workspaces; re-render Delaunay figures in autolens_visualization / autogalaxy_visualization (cloud session has no LFS datasets / gallery harness)
 - tier: judge — merge mode: human /prm
 - next: implement PyAutoArray interpolated view + panel 11, then PyAutoLens switch
+
+## shift-named-tasks-and-planner-skips
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/667
+- issued: 2026-11-17
+- session: Claude Code remote (mobile), Opus 5.5, session_016nhQ8QyUpAfUVYByA1UgVc
+- location: cloud container, GitHub-control surface with clones
+- status: library-dev
+- repos:
+  - PyAutoBrain: feature/shift-named-tasks-planner-skips
+- prompt: active/shift_named_tasks_and_planner_skips.md
+- epic: autonomous-orchestrators (M3.6b)
+- decisions: human approved 2026-11-17 as written — coordinated claims free a repo only for the slug they name; brief --new defaults to backlog scoped tiers notify, glance; organ rule at --check refuses shift-own paths, passes others with a line, warns on none
+- tier: glance — merge mode: human /prm (human's rule this sitting)
