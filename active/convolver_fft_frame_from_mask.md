@@ -10,6 +10,7 @@ Priority: high
 Consequence: judge
 Community: https://github.com/PyAutoLabs/.github/discussions/43
 Filed: 2026-11-17
+Issued: 2026-11-17
 
 Agreed by the human in the /community chat on 2026-11-17, and promised to @samlange04 on
 #43 (https://github.com/PyAutoLabs/.github/discussions/43#discussioncomment-19680883):

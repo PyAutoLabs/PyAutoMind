@@ -156,3 +156,16 @@
 - tier: notify — merge mode: auto-merge on green
 - repos:
   - PyAutoEars: feature/ears-private-repo-excluded
+
+## convolver-fft-frame-from-mask
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/698
+- issued: 2026-11-17
+- session: Claude Code (Opus 5.5 bounded worker for the /community session; session ID unavailable)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/convolver-fft-frame-from-mask
+- prompt: active/convolver_fft_frame_from_mask.md
+- tier: judge — merge mode: human /prm
+- user-facing: true — hub #43 (@samlange04, co-author)
+- coordination: PyAutoArray shared with galaxy-duplicate-pytree-registration by human OK 2026-11-17 (no file overlap: that branch touches only autoarray/abstract_ndarray.py)
+- repos:
+  - PyAutoArray: feature/convolver-fft-frame-from-mask
