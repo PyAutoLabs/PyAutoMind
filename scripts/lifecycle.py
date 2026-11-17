@@ -4013,7 +4013,16 @@ def close_registries(
     want = safe_name(slug)
     target = prompt.resolve() if prompt is not None else None
     issue_key = _issue_key(issue) or prompt_issue(prompt)
+
+    def _prompt_of(fields: dict) -> "Path | None":
+        raw = (fields.get("prompt") or "").split()
+        if not raw:
+            return None
+        resolved, _ = resolve_prompt(root, raw[0])
+        return resolved.resolve() if resolved is not None else None
+
     out: "list[tuple[str, str]]" = []
+    unmatched: "list[tuple[str, list]]" = []
     for reg in REGISTRY_FILES:
         entries = registry_entries(root / reg)
         by_slug = [h for h, _ in entries if safe_name(h) == want]
@@ -4021,21 +4030,24 @@ def close_registries(
             out.append((reg, by_slug[0]))
             continue
         if target is not None:
-            by_prompt = []
-            for heading, fields in entries:
-                raw = (fields.get("prompt") or "").split()
-                if not raw:
-                    continue
-                resolved, _ = resolve_prompt(root, raw[0])
-                if resolved is not None and resolved.resolve() == target:
-                    by_prompt.append(heading)
+            by_prompt = [h for h, f in entries if _prompt_of(f) == target]
             if len(by_prompt) == 1:
                 out.append((reg, by_prompt[0]))
                 continue
             if by_prompt:
                 continue   # ambiguous: never guess
-        if issue_key:
-            by_issue = [h for h, f in entries if _issue_key(f.get("issue")) == issue_key]
+        unmatched.append((reg, entries))
+    # The issue is the last resort (#661 review): issues are shared (an epic's
+    # phases, a follow-up), so it is used only when the task's own row matched
+    # by slug or prompt in no registry, and never takes a row whose `prompt:`
+    # resolves to another prompt file.
+    if issue_key and not out:
+        for reg, entries in unmatched:
+            by_issue = [
+                h for h, f in entries
+                if _issue_key(f.get("issue")) == issue_key
+                and _prompt_of(f) in (None, target)
+            ]
             if len(by_issue) == 1:
                 out.append((reg, by_issue[0]))
     return out
