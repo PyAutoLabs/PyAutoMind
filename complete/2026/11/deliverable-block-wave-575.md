@@ -1,3 +1,12 @@
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/584
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/666, https://github.com/PyAutoLabs/PyAutoHeart/pull/351, https://github.com/PyAutoLabs/PyAutoHands/pull/343, https://github.com/PyAutoLabs/PyAutoCortex/pull/94 (merged 2026-11-17)
+- epic: autonomous-orchestrators (task 0 before M3.6b: clears the Heart monitoring RED)
+- what shipped: the generated `repos_sync:deliverable` AGENTS.md block, regenerated from `policy/end_at_deliverable.md` (the #575 wording: `Monitor` / background GitHub loops, the shift-cockpit exception) in PyAutoBrain, PyAutoHeart, PyAutoHands and PyAutoCortex; one hunk each. The hook half of the firewall failure (run 43881901227) had already been fixed by `session_hook_propagate.yml` (run 43881901164, bot-pushed 14:05 on 2026-11-16, one minute after the gate ran); the propagator never writes this block, so dispatching it was not the fix. Tenant Firewall Gate re-dispatched on PyAutoMind `main` after the merges.
+- evidence: witness `repos_sync.py --check` 4 stale blocks on main → none on the branches; suites Brain 2263, Heart 1468, Hands 624, Cortex 104; skill line counts OK; independent Fable 5.2 review CLEAN (also simulated the gate's checkout: every leg OK); CI green on Brain/Heart/Hands; Cortex ran no CI (its workflows are path-filtered to `projects/**`), human waived; shadow row merged-unchanged (stage 2, human-/prm).
+- follow-up: ~45 other repos still carry the old block (PyAutoFit confirmed): a reviewed `--write` wave, or let the propagator carry the deliverable block as it carries the filing block (needs the human's bot-push approval). The firewall gate and the propagator start on the same push, so every canonical hook change leaves one red gate run on main until re-run (run the gate after the propagator via `workflow_run`, or have the propagator dispatch it).
+
+## Original prompt
+
 # Clear the Tenant Firewall Gate RED: regenerate the end-at-deliverable AGENTS.md block after PyAutoMind#575
 
 Type: maintenance
