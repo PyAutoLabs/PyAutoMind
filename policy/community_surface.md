@@ -133,6 +133,10 @@ bug, **open the issue** with a link back and route it through
 `/start_dev_for_user`, then mark the thread answered with the issue link. The
 hub is `COMMUNITY_HUB` in the conductor (default `PyAutoLabs/.github`).
 
+A thread where we spoke last and have waited 21 days for the contributor is
+closed with a standard message after the human approves the batch:
+[`community_close_due.md`](community_close_due.md).
+
 ### 4. What the READMEs and the front door say
 
 Every user-facing README's **Community & Support** section, and the
