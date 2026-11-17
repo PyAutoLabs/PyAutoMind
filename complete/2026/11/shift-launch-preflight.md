@@ -1,3 +1,13 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/659
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/664, https://github.com/PyAutoLabs/PyAutoMind/pull/582 (merged 2026-11-17)
+- epic: autonomous-orchestrators, M3.6a
+- heart-red-override: shipped under the live human's development override 2026-11-17 ("Override all three", for M3.6a #659, M3.6d #660, M3.6e #661); RED reason "PyAutoMind: Tenant Firewall Gate failure on main" (generated-hook drift from PyAutoMind#575, unrelated); merged by the human's separate /prm ("looks good prm") with every check green.
+- what shipped: `batch brief --new --out` creates the shift issue on PyAutoMind and writes `issue:` (`--issue` reuses one; nothing written on gh failure; the URL printed if the write fails after creation); `brief --check` refuses a live brief without `issue:`, an expired login, or a login expiring before `review-at`; login probe `claude auth status --json` (no model call) in `--check` and the watcher's first tick, an expired login is a `login-expired` event that holds spawning; the watcher finds the one open brief on Mind origin/main (no fetch; two open → idle; checkout behind → idle; `--brief`/`PYAUTO_SHIFT_BRIEF` an in-window override only); after `review-at` + 45 min it stops once nothing is owed, catches up a missed digest for 24 h, then names an abandoned slot once. AUTONOMY: launch preflight, login-probe amendment, fourth Brain-network exception (`brief --new`).
+- evidence: 7 witness + 5 review-round tests fail on base, pass; Brain 2263 passed on the merged head (1 env failure, `test_grouped_organ_consumers`, also on main); Mind 1040; Fable 5.2 review FINDINGS (stale override hid the open brief; digest lost after downtime; orphan issue) → fixed → CLEAN; CI green.
+- follow-up: cockpit `batch watch --stream` still reads `PYAUTO_SHIFT_BRIEF`; the abandoned-slot line reaches only the journal and `find_briefs` writes its marker; a queued Mind op that keeps failing keeps late leases alive up to the 24 h cap; "fetch first" missing from the batch skill pointer.
+
+## Original prompt
+
 # M3.6a Shift launch preflight: shift issue, login probe, the watcher finds the open brief
 
 Type: feature

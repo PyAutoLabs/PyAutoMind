@@ -1,3 +1,13 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/661
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/665, https://github.com/PyAutoLabs/PyAutoMind/pull/583 (merged 2026-11-17)
+- epic: autonomous-orchestrators, M3.6e
+- heart-red-override: shipped under the live human's development override 2026-11-17 ("Override all three", for M3.6a #659, M3.6d #660, M3.6e #661); RED reason "PyAutoMind: Tenant Firewall Gate failure on main" (generated-hook drift from PyAutoMind#575, unrelated); merged by the human's separate /prm ("looks good prm") with every check green.
+- what shipped: one merge-slot count per shift (`pyauto-brain merge-slot take|release|status <pr-url> --task <task>`: file-locked, fails closed, canonical PR URL only, a slot answers only to its own task); workers take a slot before a bare `gh pr merge` and release it if the merge fails; watcher close-outs take from the same count and now admit `notify` on R3 terms (refused without a `Witness:`); the digest labels merges from slot evidence and flags a merge with no slot (counted by `/cap`); `pyauto-brain merge-mode` prints the effective level and merge mode for `start_dev`; R3 written into AUTONOMY.md "Merge authority follows Consequence". Mind: `lifecycle.py close` matches rows by slug, prompt path, then issue (`--issue`), never a row naming another prompt.
+- evidence: 7 Brain + 3 Mind witness tests and the review-round tests fail on base, pass; Brain 2218 (1 env failure also on main); Mind 1046; Fable 5.2 review FINDINGS (PR-key collision let two merges share a slot; wrong-row delete; release ignored the task) → fixed → CLEAN; CI green.
+- follow-up: the `notify`-without-Witness close-out refusal is template text only (the watcher does not check it); a merge made outside the close-out still frees the watcher's slot (pre-existing).
+
+## Original prompt
+
 # M3.6e Shift workers merge notify-tier PRs in-turn past the shift's merge-cap, and inconsistently
 
 Type: bug

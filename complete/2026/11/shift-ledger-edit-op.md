@@ -1,3 +1,13 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/660
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/663, https://github.com/PyAutoLabs/PyAutoMind/pull/581 (merged 2026-11-17)
+- epic: autonomous-orchestrators, M3.6d
+- heart-red-override: shipped under the live human's development override 2026-11-17 ("Override all three", for M3.6a #659, M3.6d #660, M3.6e #661); RED reason "PyAutoMind: Tenant Firewall Gate failure on main" (generated-hook drift from PyAutoMind#575, unrelated); merged by the human's separate /prm ("looks good prm") with every check green.
+- what shipped: Mind writer `write` create-only plus an `edit` op (expected old text exactly once; a moved base is a human set-aside); worker ops carry `--task`; a task's closing ops (`complete/` record, `drop-section`, retire) land as one group — withheld and rolled back if a sibling is set aside for a human, pending beside a held sibling; `shift_ledger` refuses at queue time (reads origin/main, replays pending ops only) and `table-append` works from the CLI; mechanical set-asides are digest notes, one NEEDS YOU per task ("held" only when withheld, "already on main" when the record landed earlier). Mind: `## Calibration runs` heading above the first autonomy_log table (+ spawn template).
+- evidence: 7 witness + 9 review-round tests fail on base, pass; Brain 2217 (1 env failure also on main); Mind 1040; Fable 5.2 review FINDINGS (empty-`new` edit read as mechanical; closing ops order-dependent; replay of committed ops) → fixed → CLEAN; CI green; shadow row merged-unchanged (stage 2, human-/prm).
+- follow-up: a pending closing group can wait forever on a held sibling that never becomes valid (not reachable from the CLI); PyAutoMind#579 (the incident's drafts) can now be checked against the fix.
+
+## Original prompt
+
 # M3.6d A shift worker's edit to an existing Mind file is set aside, but its completion record still commits
 
 Type: bug
