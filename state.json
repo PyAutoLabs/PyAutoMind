@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-17T19:51:04Z",
+  "headline": "RED \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-17T20:33:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,12 +24,6 @@
       "text": "Delaunay source plots: show the piecewise-linear interpolant the likelihood uses \u2014 awaiting-merge (library + workspace PRs open; human /prm)",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
       "prompt": "Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "M3.6b Named tasks and the planner: per-epic limit on phases only\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/668",
-      "prompt": "Use the start-dev skill. active/shift_named_tasks_and_planner_skips.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
+      "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
     }
   ]
 }
