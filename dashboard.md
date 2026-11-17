@@ -1345,7 +1345,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/blurring_mask_separable_dilation.md">Speed up blurring_mask_2d_from for large PSF kernels (separable box dilation)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/696">issue #696</a> — issued 2026-11-17 — library-dev</summary>
+<details><summary>📋 <a href="active/blurring_mask_separable_dilation.md">Speed up blurring_mask_2d_from for large PSF kernels (separable box dilation)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/696">issue #696</a> — issued 2026-11-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/697">PyAutoArray#697</a></summary>
 
 ```
 Use the start-dev skill. active/blurring_mask_separable_dilation.md
