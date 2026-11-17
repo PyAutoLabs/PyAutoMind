@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-17T13:20:10Z",
+  "updated": "2026-11-17T13:23:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -75,6 +75,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: ConvolverState: size the FFT frame from the mask, not the native array\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/convolver_fft_frame_from_mask.md",
+      "prompt": "Use the start-dev skill. draft/feature/autoarray/convolver_fft_frame_from_mask.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
@@ -102,12 +108,6 @@
       "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
       "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
-      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
     },
     {
       "severity": "info",
