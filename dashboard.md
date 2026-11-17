@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 276 |
+| [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -952,12 +952,84 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 24 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 31 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
 ```
 Continue the 'Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended `glance` merges under guards; drafts-only goal decomposition' epic. Its canonical state lives in draft/feature/pyautobrain/autonomous_orchestrators_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/shift_in_turn_notify_merges_ignore_merge_cap.md">M3.6e Shift workers merge notify-tier PRs in-turn past the shift's merge-cap…</a> — pyautobrain · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/shift_in_turn_notify_merges_ignore_merge_cap.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/shift_ledger_write_refuses_existing_draft_completion_still_commits.md">M3.6d A shift worker's edit to an existing Mind file is set…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/shift_ledger_write_refuses_existing_draft_completion_still_commits.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_cockpit_same_chat_and_late_window.md">M3.6g Cockpit: hand over in the kick-off chat, watch to the end…</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_cockpit_same_chat_and_late_window.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_launch_preflight.md">M3.6a Shift launch preflight: shift issue, login probe, the watcher finds…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_launch_preflight.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_named_tasks_and_planner_skips.md">M3.6b Named tasks and the planner: per-epic limit on phases only…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_named_tasks_and_planner_skips.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_readiness_pass_and_decisions_sheet.md">M3.3 Readiness pass and decisions sheet: one sheet before a shift…</a> — pyautobrain · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_readiness_pass_and_decisions_sheet.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_throughput_carryover_and_order.md">M3.6c Shift throughput: carry-over, in-shift restart, <code>first: glance</code>, a session cap…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_throughput_carryover_and_order.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md">M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no <code>pgrep</code> waits…</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md
 ```
 
 </details>
@@ -974,22 +1046,6 @@ Use the start-dev skill. draft/bug/pyautobrain/closeout_cleanup_followups.md
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/shadow_shift_m1_exit_findings.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/shift_in_turn_notify_merges_ignore_merge_cap.md">Shift workers merge notify-tier PRs in-turn past the shift's merge-cap, and inconsistently</a> — pyautobrain · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/shift_in_turn_notify_merges_ignore_merge_cap.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/shift_ledger_write_refuses_existing_draft_completion_still_commits.md">A shift worker's edit to an existing Mind file is set aside…</a> — pyautobrain · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/shift_ledger_write_refuses_existing_draft_completion_still_commits.md
 ```
 
 </details>
@@ -1428,7 +1484,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 222 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 228 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -3023,7 +3079,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3068,7 +3124,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
-- _… and 74 more_
+- _… and 72 more_
 
 </details>
 
