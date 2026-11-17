@@ -173,7 +173,7 @@ only while a brief is open (`policy/shift_watcher.md`).
 - dispatched: 2026-11-04T08:30Z
 - review-at: 2026-11-04T11:30Z      # stated by the human; the grant expires here
 - shift: morning
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/<n>   # the digest is posted here once
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/<n>   # required for a live brief; `brief --new` creates it
 - live: LIVE · 1 running … — status: <comment url>   # written by the watcher only (PyAutoBrain#622)
 - packet: yes                       # optional; the HTML packet is opt-in under a brief
 - heart-ack:
@@ -219,6 +219,24 @@ names a file, so writing the record — the dispatch — stays the human's act.
 `goals.md` is written by the human alone, so every goal is copied as written.
 `--new` also prints, on stderr, how the goals changed since the newest brief.
 `brief --check` warns when goal 1 of `goals.md` is missing from a brief.
+
+**The launch (2026-11-17, PyAutoBrain#659).**
+
+- **`issue:` is required for a live brief** (not `shadow: yes`): the status
+  comment, the steering commands and the digest all go there. With `--out`,
+  `brief --new` creates it on PyAutoMind (one `gh issue create`) and writes
+  it; a file that already names one keeps it, and `--issue <url>` names one by
+  hand. `brief --check` refuses a live brief without it, and refuses the
+  launch while the CLI login has expired or expires before `review-at:` (run
+  `claude /login`).
+- **Only a pushed brief opens.** The watcher finds the brief itself on Mind
+  `origin/main`: the one whose `dispatched:` has passed and whose
+  `review-at:` has not. A brief written but not pushed grants nothing.
+- **Never two open briefs.** If two pushed briefs overlap, the watcher ticks
+  neither and says `two open briefs on origin/main`.
+- **The watcher stops at `review-at:` + 45 min.** It posts the digest at
+  `review-at:`, sweeps late arrivals for 45 minutes, then stops ticking the
+  slot and renews no lease. A worker still out by then is in the digest.
 
 **The keep-Heart-green lane** (PyAutoBrain#625). `brief --new` first reads
 Heart's release verdict and sorts every reason into `fixable-dev`,
