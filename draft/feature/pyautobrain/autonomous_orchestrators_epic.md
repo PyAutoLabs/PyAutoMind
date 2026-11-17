@@ -227,6 +227,49 @@ split into 1 and 2 on size, so later phases moved up by one.
    campaign lands as a CI leg or a `pyauto-brain` check with a stop condition in its prompt,
    and the sizing faculty regrades the affected backlog prompts to a cheaper tier.
    *Consequence:* glance per campaign. *Lane:* any.
+   **Split 2026-11-17 into two parts** (the number stays 7; the parts are labels, not phase
+   numbers): **7a** golden-number invariance and numpy/JAX/numba parity gates, run inside the
+   Maintenance orchestrator (phase 14), because they are bounded changes with mechanical
+   witnesses and they turn refactors into `notify` work; **7b** finite-difference vs autodiff
+   gradient checks, simulate → fit → recover and metamorphic tests, run with phases 15 and 6,
+   because they are experiments with verdicts.
+
+Phases 8 to 13 are the programme milestones M1 to M6 (see "Programme" below).
+
+14. **Maintenance orchestrator** (added 2026-11-17). Shifts that do the organism's important
+    maintenance work from what the boards already report. Keep Heart green: the `_green.py`
+    lane grows from filing drafts to owning the work. Work Brain's hygiene findings (slow
+    tests, scripts and imports, CLI noise, dependency-cap drift, stale API docs, workspace doc
+    blocks, git and packaging debris). Speed up unit, integration and smoke tests and CI legs
+    (`/ci_speedup`). Do other code speed and quality upkeep whose fix is a bounded change with
+    a mechanical witness. *Reuses:* the Dev orchestrator's watcher, briefs, digest and gates,
+    with a maintenance-scoped backlog and its own goals line. *Plans:* where the work comes
+    from (Heart reasons, the `/hygiene` ledger, CI timing records, the no-run census), how a
+    finding becomes a sized prompt with no human writing it, which tiers it may merge
+    unattended, and what its digest reports (board deltas: minutes saved, reasons cleared,
+    debris removed). *Out of scope:* experiment and new-capability work (phase 15). Hosts
+    phase 7a. Prompt: `draft/feature/pyautobrain/maintenance_orchestrator.md`.
+    *Consequence:* judge. *Lane:* local-dev.
+15. **Experiment and capability-speedup orchestrator, planning only** (added 2026-11-17). Covers
+    PyAutoPulse and PyAutoInsight work and anything shaped like it: profiling campaigns,
+    sampler trials (`/sampler_pipeline`), "make this likelihood faster" experiments, and new
+    functionality whose purpose is speed (a new operator, route or search). These run
+    experiments with verdicts or build new capability, so they are not maintenance and will
+    likely need their own orchestrator or way of running. *Settles:* how a campaign is
+    briefed, who judges a verdict, how RAL and GPU compute is allowed for, and how results
+    reach Pulse, Insight and the Cortex. *Relates to:* phase 5 (RAL packets), phase 6 (Science
+    orchestrator) and the likelihood-lifecycle epic's later phases, which already run this way
+    by hand. No build. Prompt:
+    `draft/research/pyautobrain/experiment_capability_speedup_orchestrator_plan.md`.
+    *Consequence:* judge. *Lane:* any.
+
+**Execution order (2026-11-17).** Phase numbers stay integers and the order is not the
+number. After the M3 gate (phase 10): **14** Maintenance orchestrator, with **7a** inside it;
+then **15** (planning, any time after the gate); then **5** RAL hand-off packets (after 15,
+which settles how compute is allowed for); then **6** Science orchestrator, with **7b**
+alongside 15 and 6. M4 to M6 (phases 11 to 13) run in parallel from phase 14 onwards. Phases
+5, 6 and 7 had no prompt files on 2026-11-17 (nothing in `draft/`, `active/` or
+`planned.md` names them outside this epic).
 
 ## Cross-cutting requirements (owned by the phases named)
 
@@ -296,7 +339,8 @@ first line.
    confirmed state-machine gaps. 4c's existing rows (2 shadow, 2 live) stay as the baseline; its
    remaining live shifts are M3.1/M3.2; 4c closes at the M3 exit with its write-up.
 2. **Phases 5–7 are parked behind M3**, unchanged. Phase 7 campaigns (glance per campaign) are
-   candidate M3.2 shift workload.
+   candidate M3.2 shift workload. *(Order after the gate superseded 2026-11-17: see "Order after
+   the M3 gate" below.)*
 3. **M1.3's draft is `Consequence: judge`.** Slices 1–2 are re-graded when sliced; if they stay
    judge, the merge is the human's.
 4. **M1.4 runs before M1.3**, so every later merge records its actor.
@@ -327,6 +371,70 @@ kill switch, quarantine doctrine, judge-tier merges, the timing of any live shif
 "Re-check first" = the review did not verify the finding: the task starts by re-checking it at
 source and is dropped or reshaped if it does not hold. Side-lane rows are off the critical path.
 
+### M3.6 and the route to the M3 gate (2026-11-17)
+
+Added after the review of shift 2026-11-16-pm (rulings R1 to R5 given by the human on
+2026-11-17, recorded in the M3.3 and M3.6 prompts that build them). The shift was unattended,
+but the sittings at each end were not designed: the human spent longer launching and closing
+it than the 45 review-minutes it was planned around (about 26 min at kick-off, 85 min after;
+`review-minutes-actual: 20` as the human counts it). M3.6 is the friction fixes; M3.3 is the
+two sheets that design those sittings.
+
+**Build order.** A shift never changes its own watcher, writer or release path, so these are
+built and merged first, in chat, with the human's `/prm`:
+
+1. M3.6a (launch), M3.6d (writer) and M3.6e (merge counting), in parallel: different files.
+2. M3.6b then M3.6c (planner and tick). They touch the same file, so one after the other.
+3. M3.3 slice 1 (the readiness pass). Slice 2 (the decisions block) may follow the shift.
+
+These may ride in the next shift's own brief: M3.6f (tests, skill text, worker PATH), M3.6g,
+M3.6h (ruled), and the `autonomy_log.md` heading if M3.6d has not already landed it.
+
+**Supply, the human's two acts.** Before a shift can reach ten rows it needs ready `glance`
+work:
+
+- the witness sitting (`draft/maintenance/pyautomind/witness_backfill_scan.md`): 115 drafts
+  have no `Witness:`, and a draft without one is never `glance`;
+- release the PyAutoArray and PyAutoFit claims (merge or park those two tasks), which frees
+  152 drafts.
+
+**The M3.2 shift.** Three hours, `first: glance`, at least twelve ready `glance` tasks for the
+eight rows still needed, `merge-cap: 4` and a token budget at about 70% of the plan's
+estimate, so both refusals happen live. If it lands fewer than eight, the carry-over step
+(M3.6c) makes the next shift finish them. Then the gate: the human's ruling on the unattended
+`glance` grant, and 4c closes with its write-up.
+
+### Order after the M3 gate (2026-11-17)
+
+This replaces the 2026-11-12 "phases 5–7 parked behind M3" for the order only; that text stays
+above as history. Phase numbers stay integers; order is not number.
+
+| order | phase | what | against M4 to M6 |
+|---|---|---|---|
+| 1 | M3 gate (10) | unattended `glance` grant | |
+| 2 | 14 Maintenance orchestrator (new) | shifts fed by Heart reasons, the hygiene ledger, CI timings and the no-run census | runs on the laptop watcher alongside M4; the natural workload for M5's cloud shadow shifts |
+| 2a | 7a (split from 7) | golden-number invariance and numpy/JAX/numba parity gates | inside phase 14: bounded changes with mechanical witnesses that turn refactors into `notify` work |
+| 3 | 15 experiment and capability-speedup orchestrator (new), planning only | research prompt | any time after the gate; no build |
+| 4 | 5 RAL hand-off packets | | after 15, which settles how compute is allowed for |
+| 5 | 6 Science orchestrator | | after 5 |
+| 5a | 7b (rest of 7) | gradient checks, simulate-fit-recover, metamorphic tests | with 15 and 6: experiments with verdicts |
+| | M4, M5, M6 (11 to 13) | cloud worker, cloud watcher, scheduled shifts | unchanged, in parallel from step 2 |
+
+### For the infrastructure review, not M3.6 (2026-11-17)
+
+Findings from shift 2026-11-16-pm that belong to the infrastructure review the human plans
+after M3:
+
+- workers have no SSH keys, so no `sacct` and no GitHub over SSH;
+- the auto-mode classifier denying Mind lifecycle commands inside workers;
+- the worker environment as a whole (venv, PATH, `pyauto-heart`);
+- sessions idling for an hour after their deliverable;
+- the watcher reading the shared Mind checkout (M4.3 already plans one write path);
+- how long-lived `active.md` claims shut out the backlog;
+- Heart counting behind or dirty local checkouts as RED;
+- the scheduler guard blocking a test job the human had asked for;
+- `autofit.__version__` printing 2026.8.17.1 at the 2026.11.12.1 tag.
+
 ### Programme state table
 
 | milestone | task | state | evidence |
@@ -349,10 +457,18 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
 | M2 (ph 9) | side: script-level retry + expiring quarantine in Stage 3; shift-owned nightly lane (REL-2 plausible, REL-3 re-check first) | **merged 2026-11-13** (Heart#345 + Hands#340; record `complete/2026/11/m2-finish.md`); ruled at gate: quarantine-only YELLOW may let the nightly ship (to build, judge) and no retry for timeouts | |
 | M2 (ph 9) | gate: five rulings + exit test | rulings recorded (AUTONOMY, dated); M2.1/M2.3/M2.4 + unpolled guard + quarantine **merged**; M2.1 replay done. **Remaining for M2 exit: human acts M2.2 (rulesets) + M2.5 (home rules)**; build nightly-on-quarantine-YELLOW (judge) | |
 | M3 (ph 10) | M3.1 One designed live shift ≥ 3 h exercising every unexercised path (absorbs 4c live shifts) | **done 2026-11-16** | warm-up #569 + shifts A/B #570/#571; human accepted the merge-cap and token-cap refusals on offline tests + dry run (not seen live); findings `draft/bug/pyautobrain/m31_live_shift_findings.md` |
-| M3 (ph 10) | M3.2 Further shifts to ten stage-2 rows (stage-2 table: 0 rows on 2026-11-12) | not started | |
-| M3 (ph 10) | M3.3 A fixed sheet per shift | not started | |
-| M3 (ph 10) | M3.4 Chat cockpit: live event stream + watch/steer a shift from a Claude chat (human ask 2026-11-14; doctrine carve-out needs the human's word) | not started | `draft/feature/pyautobrain/shift_chat_cockpit.md` |
-| M3 (ph 10) | M3.5 Questions inbox: parked worker questions collect in one list the human clears in bulk after a run; calm FYI pushes; an answer makes the task startable again (human ask 2026-11-14, shift A) | not started | `draft/feature/pyautobrain/questions_inbox_bulk_answering.md` |
+| M3 (ph 10) | M3.2 Further shifts to ten stage-2 rows (stage-2 table: 0 rows on 2026-11-12) | **2 of 10 rows; shift 2026-11-16-pm added none (0 unattended glance merges)** | rows #185, #861 (M3.1 shift A); 2026-11-16-pm record `glance-auto-merges: 0`. Route: "M3.6 and the route to the M3 gate" above |
+| M3 (ph 10) | M3.3 A fixed sheet per shift — defined 2026-11-17 (ruling R4) as the two sheets: a readiness pass that files rulings in the questions inbox before a shift, and one numbered decisions block at the end of the digest; two slices | not started | `draft/feature/pyautobrain/shift_readiness_pass_and_decisions_sheet.md` |
+| M3 (ph 10) | M3.4 Chat cockpit: live event stream + watch/steer a shift from a Claude chat (human ask 2026-11-14; doctrine carve-out needs the human's word) | **built 2026-11-16**: engine PyAutoBrain#647 (record `complete/2026/11/m34-engine.md`); carve-out, hook and `/cockpit` PyAutoMind#575 + PyAutoBrain#648 + PyAutoMind#577 (record `complete/2026/11/m34-cockpit.md`). Ran in shift 2026-11-16-pm. Remainder folded into M3.6g | `draft/feature/pyautobrain/shift_chat_cockpit.md` |
+| M3 (ph 10) | M3.5 Questions inbox: parked worker questions collect in one list the human clears in bulk after a run; calm FYI pushes; an answer makes the task startable again (human ask 2026-11-14, shift A) | **built 2026-11-16**: PyAutoMind#576 + PyAutoBrain#649 (record `complete/2026/11/m35-inbox.md`). Ran in shift 2026-11-16-pm (Q3). Remainder (an answer restarts its task in the same shift) folded into M3.6c | `draft/feature/pyautobrain/questions_inbox_bulk_answering.md` |
+| M3 (ph 10) | M3.6a Launch preflight: `brief --new` makes the shift issue, `--check` refuses a live brief without `issue:`, login probe, the watcher finds the one open brief on Mind origin/main and stops after the late window | not started (build first, in chat) | `draft/feature/pyautobrain/shift_launch_preflight.md` |
+| M3 (ph 10) | M3.6b Named tasks and the planner: per-epic limit on `Phase:` tasks only (R5), a reason for every task not started, skip claimed-repo (R2) and no-`Witness:` drafts, backlog scope default, organ rule for renderer tasks | not started (build first, after M3.6a/d/e) | `draft/feature/pyautobrain/shift_named_tasks_and_planner_skips.md` |
+| M3 (ph 10) | M3.6c Throughput: carry-over at the first tick, in-shift restart with > 30 min left, `first: glance`, session cap from the token budget | not started (build first, after M3.6b) | `draft/feature/pyautobrain/shift_throughput_carryover_and_order.md` |
+| M3 (ph 10) | M3.6d Ledger: refuse at queue time, an edit op, hold the completion when a sibling write is set aside, heading for the `autonomy_log.md` table, mechanical set-asides are not "needs you" | not started (build first, in chat) | `draft/bug/pyautobrain/shift_ledger_write_refuses_existing_draft_completion_still_commits.md` |
+| M3 (ph 10) | M3.6e Tier consistency: in-shift merges count against `merge-cap`, R3 in AUTONOMY, `start_dev` prints the effective level and merge mode | not started (build first, in chat) | `draft/bug/pyautobrain/shift_in_turn_notify_merges_ignore_merge_cap.md` |
+| M3 (ph 10) | M3.6f Worker cost: impact-scoped smoke and PR before long smoke, hermetic Brain tests, no `pgrep -f` waits, `ruff format`, worker PATH | not started (may ride in the shift's brief) | `draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md` |
+| M3 (ph 10) | M3.6g Cockpit: same-chat hand-over from the batch skill, watch to the end of the late window, `collect` on a brief shift | not started (may ride in the shift's brief) | `draft/feature/pyautobrain/shift_cockpit_same_chat_and_late_window.md` |
+| M3 (ph 10) | M3.6h Heart report-only RED needs no acknowledgement (R1) | not started (may ride in the shift's brief) | `draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` |
 | M3 (ph 10) | gate: unattended `glance` grant; close 4c (PyAutoBrain#574) with write-up | not started | |
 | M4 (ph 11) | M4.1 Cloud rehearsal (library, workspace, organ task + two `mobile_shift_operation.md` prompts) — BRAIN-4, ORCH-4; re-check first | not started | |
 | M4 (ph 11) | M4.2 Cloud worker bundle, `doctor`, slim profile, travelling rules — `draft/feature/pyautobrain/cloud_worker_bundle_and_profile.md` (BRAIN-1, TOK-2, TOK-3) | not started | |
@@ -366,6 +482,10 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
 | M5 (ph 12) | M5.2 Build behind the tick's existing interfaces, state-store seam (CODE-3, CODE-6, ORCH-6; re-check first) | not started | |
 | M5 (ph 12) | M5.3 Cloud shadow shifts → live 2–3 workers, merge cap 1 → 5 → 10 → 20 | not started | |
 | M6 (ph 13) | Scheduled cloud shifts; laptop watcher retired | not started | |
+| after M3 (ph 14) | Maintenance orchestrator, with 7a (invariance and parity gates) inside it — order 2 after the gate | not started | `draft/feature/pyautobrain/maintenance_orchestrator.md` |
+| after M3 (ph 15) | Experiment and capability-speedup orchestrator, planning only — order 3 | not started | `draft/research/pyautobrain/experiment_capability_speedup_orchestrator_plan.md` |
+| after M3 (ph 5) | RAL hand-off packets — order 4, after 15 | not started; no prompt yet | |
+| after M3 (ph 6) | Science orchestrator, with 7b (gradients, simulate-fit-recover, metamorphic) alongside 15 and 6 — order 5 | not started; no prompt yet | |
 
 ## Progress
 
@@ -460,3 +580,4 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
 - 2026-11-16 — **Seeded audit done (human, seed 20261114, 14 rows):** 13 merged-unchanged, row 08 `latent-profile-declarations` (PyAutoGalaxy#656) → merged-after-substantive-change. **RULED (human, option b): `glance` kept, narrowed:** adding or renaming a public library name is a human `/prm` (AUTONOMY.md "Public-name narrowing of `glance` — 2026-11-16", PyAutoBrain#639 merged). Enforcement build: `draft/feature/pyautobrain/glance_public_name_check.md` (next, before M3.2 shifts). Rename follow-up (judge): `draft/refactor/autogalaxy/convert_latent_prefix_naming.md`. Old-branch secrets task COMPLETE (env-only secrets, new App key, old key deleted, Mind heads 32 with 0 unsafe).
 - 2026-11-16 — **Human ruling: the queue is maintained by chat only.** The design C dashboard input path (issue per tap, machine-account PAT) is overkill and is being removed. The dashboard becomes read-only, with ★ and rank on queued tasks and a copy-prompt button per task, and a `/queue` chat skill takes a pasted prompt as "add to queue", never start dev (PyAutoBrain#640, in build). The `dashboard-input` label and the `HUMAN_LOGIN` variable are deleted. Queue edits fold into the M3.4 cockpit.
 - 2026-11-16 — **Human: M3.4/M3.5 decisions H1–H11 "all recommended"** (`Science/scratch/m3_4_m3_5_design/HUMAN.md`), including the H1 doctrine carve-out for a bounded cockpit watch, H3 Monitor/Bash GitHub-poll guard, H5 `/kill` as a watcher verb, and the watcher-network amendment (DESIGN §3.3). Builds A (engine), B (inbox) and C (doctrine, hook, `/cockpit`) start now. Also merged today: queue-by-chat (PyAutoBrain#643, PyAutoMind#574; `/queue` installed by the human), the public-name check (PyAutoBrain#642, watcher-deterministic, network amendment human-approved), and the `_dict_from` rename (PyAutoGalaxy#718, human /prm).
+- 2026-11-17 — **RESUME POINT. Shift 2026-11-16-pm reviewed** (record `batches/2026-11-16-pm.md`: `reviewed-at` 19:54Z, `review-minutes-actual: 20`; 8 workers, 2 merged in-shift, 0 unattended `glance` merges, so M3.2 is still 2 of 10 rows). **Human rulings R1–R5:** R1 a Heart RED of report-only reasons on no touched repo needs no ack (M3.6h); R2 no dispatch onto a repo another active task claims, counted in the digest (M3.6b); R3 the bug cap does not stop a `notify` self-merge under `--auto`, and it counts against `merge-cap` (M3.6e); R4 M3.3 is the two sheets; R5 option (a), the per-epic limit is for `Phase:` tasks only, order by `Blocked-by:`, every named task not started listed with its reason (M3.6b). **M3.6a–h and M3.3 filed** (state table rows); phases 14 and 15 added, phase 7 split 7a/7b, order after the gate set (Programme, "Order after the M3 gate"). **Next:** build M3.6a, M3.6d, M3.6e first (in parallel), then M3.6b then M3.6c, then M3.3 slice 1; then the M3.2 shift. **Human supply acts pending:** the witness sitting (`witness_backfill_scan.md`, 115 drafts); release the PyAutoArray and PyAutoFit claims (152 drafts). **Open loose ends:** PyAutoGalaxy#720 green and unreviewed; PyAutoMind#579 open; Q3 (PyAutoFit#1777) answered, waiting for a shift.
