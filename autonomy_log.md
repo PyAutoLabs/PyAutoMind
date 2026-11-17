@@ -7,6 +7,8 @@ autonomy contract). One row per run, appended at PR-open or on parking.
 Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 `corrective` / `red-override`.
 
+## Calibration runs
+
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
 | 2026-11-17 | shift-launch-preflight (M3.6a, PyAutoBrain#659; PyAutoLabs/PyAutoBrain#664, PyAutoLabs/PyAutoMind#582) | supervised (interactive, plan approved); live human, 2026-11-17, this session: asked "Do you authorize the AUTONOMY 'Human override for Heart RED (development only)' to push and open their PRs [M3.6a #659, M3.6d #660, M3.6e #661]? Merging stays with your /prm." and answered "Override all three" | Brain 2217 passed (1 env failure also on origin/main), Mind 1040; witness fails on base, passes; smoke n/a (organ); independent Fable 5.2 review FINDINGS→fixed→CLEAN; Heart RED reason "PyAutoMind: Tenant Firewall Gate failure on main" (pre-existing hook drift, PyAutoMind#575) | red-override |
@@ -536,10 +538,10 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 | 2026-11-15 | matern-vendor-bessel-kve phase 2 (PyAutoArray#694 → autogalaxy_workspace_test#137, autolens_workspace_test#366) | supervised (header supervised, refactor; glance; explicit --auto); human asked for phase 2 alongside /prm of PR#695 | tests n/a (workspace) · smoke bessel_kve_parity.py + matern_regularization.py PASS locally (smoke profile), autolens edits docstring-only (py_compile) · review independent agent CLEAN (7/7 mutations caught) · Heart YELLOW (published board; human-only row), main smoke CI green on both repos | merged-unchanged (human /prm 2026-11-15) |
 
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
-the table **above**, at the end of its last segment, in date order — never in
-the Shadow window below, which is the close-out's alone, tier-`glance` only
-(tier-`notify` until 2026-10-02), with a fixed and tested `human action`
-vocabulary.
+the `## Calibration runs` table **above**, at the end of its last segment, in
+date order — never in the Shadow window below, which is the close-out's alone,
+tier-`glance` only (tier-`notify` until 2026-10-02), with a fixed and tested
+`human action` vocabulary.
 
 ## Shadow window — the tier-`glance` merge decision
 
