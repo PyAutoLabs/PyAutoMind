@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 3 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 286 |
+| [Backlog](#backlog) | 285 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -41,7 +41,7 @@ _(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -91,14 +91,6 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autoarray/convolver_fft_frame_from_mask.md">ConvolverState: size the FFT frame from the mask, not the native array…</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/convolver_fft_frame_from_mask.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
@@ -135,6 +127,14 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 ```
 Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 ```
 
 </details>
@@ -1353,6 +1353,14 @@ Use the start-dev skill. active/cluster_regime_narrative.md
 
 </details>
 
+<details><summary>📋 <a href="active/convolver_fft_frame_from_mask.md">ConvolverState: size the FFT frame from the mask, not the native array…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/698">issue #698</a> — issued 2026-11-17 — library-dev</summary>
+
+```
+Use the start-dev skill. active/convolver_fft_frame_from_mask.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1777">issue #1777</a> — issued 2026-11-16 — awaiting-input</summary>
 
 ```
@@ -1524,7 +1532,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 231 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 230 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1575,15 +1583,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
-
-<details><summary>📋 <a href="draft/feature/autoarray/convolver_fft_frame_from_mask.md">ConvolverState: size the FFT frame from the mask, not the native array…</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/convolver_fft_frame_from_mask.md
-```
-
-</details>
+<summary><b>feature</b> — 38</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -3063,7 +3063,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-17 | issued | <a href="active/redshifts_and_angles_guide.md">Guide: why changing redshift does not change a lensed image…</a> |
 | 2026-11-17 | issued | <a href="active/ears_private_repo_excluded_not_unavailable.md">Ears: report private or unreadable repos as excluded, not unavailable</a> |
 | 2026-11-17 | filed | <a href="draft/feature/autoarray/delaunay_plot_shows_likelihood_interpolant.md">Delaunay source plots: show the piecewise-linear interpolant the…</a> |
-| 2026-11-17 | filed | <a href="draft/feature/autoarray/convolver_fft_frame_from_mask.md">ConvolverState: size the FFT frame from the mask, not the native…</a> |
+| 2026-11-17 | issued | <a href="active/convolver_fft_frame_from_mask.md">ConvolverState: size the FFT frame from the mask, not the native…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
@@ -3151,13 +3151,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+115 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
-- `draft/feature/autoarray/convolver_fft_frame_from_mask.md`
 - `draft/feature/autoarray/delaunay_plot_shows_likelihood_interpolant.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/campaign_per_stage_status_root.md`
@@ -3196,7 +3195,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- _… and 76 more_
+- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
+- _… and 75 more_
 
 </details>
 
