@@ -17,7 +17,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/658
 - issued: 2026-11-17
 - session: Claude Code desktop (WSL), /community chat
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/662, https://github.com/PyAutoLabs/PyAutoEars/pull/32, https://github.com/PyAutoLabs/PyAutoMind/pull/580
+- heart-red-override:
+  - authorized: live human, 2026-11-17, /community chat, verbatim "yes, override for PyAutoLabs/PyAutoBrain#658" (ship only; merge via separate /prm)
+  - red reasons: "PyAutoMind: Tenant Firewall Gate failure on main" (generated-hook drift Brain/Heart/Hands, unrelated)
+  - gates: Ears pytest 148 passed; Brain community/adapter/board 96 passed; Ears state.json validated; live scan checked; smoke n/a; in-session review
 - worktree: /home/jammy/Code/PyAutoLabs-wt/community-close-due
 - repos:
   - PyAutoBrain: feature/community-close-due
