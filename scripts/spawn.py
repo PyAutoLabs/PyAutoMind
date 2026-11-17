@@ -402,6 +402,8 @@ autonomy contract). One row per run, appended at PR-open or on parking.
 Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 `corrective` / `red-override`.
 
+## Calibration runs
+
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
 """

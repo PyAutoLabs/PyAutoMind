@@ -7,6 +7,8 @@ autonomy contract). One row per run, appended at PR-open or on parking.
 Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 `corrective` / `red-override`.
 
+## Calibration runs
+
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
 | 2026-11-13 | assistant-activate-cpu-tmpdir (autolens_assistant#185; PyAutoLabs/autolens_assistant#186; PyAutoLabs/autogalaxy_assistant#48) | supervised; live human, 2026-11-13, choosing "Override, open PRs (Recommended)" for this task (autolens_assistant#185): "Push both branches and open PRs in autolens_assistant and autogalaxy_assistant, recorded in the four override sinks. CI must pass; merging stays with your /prm." | bash -n on both activate.sh; behaviour test against a stub venv for both templates (no-GPU job -> JAX_PLATFORMS=cpu and TMPDIR off /tmp; --gres=gpu job with the Slurm variables measured by RAL gpu probe 415323 -> untouched; explicit JAX_PLATFORMS kept; laptop .venv branch untouched); the two templates now agree apart from library names; RAL CPU-node verification that JAX_PLATFORMS=cpu silences the plugin error (probe 415321); smoke n/a (activate.sh only); review: in-session. None of the RED reasons are in autolens_assistant or autogalaxy_assistant. Heart RED: PyAutoLens: 1 uncommitted source change(s); manifest drift: tenant firewall (organ code) — 40 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoArray: open PR 9d old; release validation incomplete: no rehearsal for current source | red-override |
@@ -532,10 +534,10 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 | 2026-11-15 | matern-vendor-bessel-kve phase 2 (PyAutoArray#694 → autogalaxy_workspace_test#137, autolens_workspace_test#366) | supervised (header supervised, refactor; glance; explicit --auto); human asked for phase 2 alongside /prm of PR#695 | tests n/a (workspace) · smoke bessel_kve_parity.py + matern_regularization.py PASS locally (smoke profile), autolens edits docstring-only (py_compile) · review independent agent CLEAN (7/7 mutations caught) · Heart YELLOW (published board; human-only row), main smoke CI green on both repos | merged-unchanged (human /prm 2026-11-15) |
 
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
-the table **above**, at the end of its last segment, in date order — never in
-the Shadow window below, which is the close-out's alone, tier-`glance` only
-(tier-`notify` until 2026-10-02), with a fixed and tested `human action`
-vocabulary.
+the `## Calibration runs` table **above**, at the end of its last segment, in
+date order — never in the Shadow window below, which is the close-out's alone,
+tier-`glance` only (tier-`notify` until 2026-10-02), with a fixed and tested
+`human action` vocabulary.
 
 ## Shadow window — the tier-`glance` merge decision
 
