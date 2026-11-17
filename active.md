@@ -108,7 +108,7 @@
 - prompt: active/delaunay_plot_shows_likelihood_interpolant.md
 - community: https://github.com/PyAutoLabs/.github/discussions/46 (draft the update for the human; do not post)
 - coordination: human approved 2026-11-17 sharing PyAutoArray with galaxy-duplicate-pytree-registration (abstract_ndarray.py only) and autolens_workspace with cluster-regime-narrative (scripts/cluster/ only); no file overlap
-- decisions: fit.png switch `fit: subplot_fit_source_interpolated: false`; when on (irregular mesh) imaging source panels become Zoom (mid-zoom triangles, panel 3) / Interpolated (same zoom, panel 7) / No Zoom (panel 11) — human 2026-11-17; interferometer zoomed panel 7 → interpolated; PyAutoLens only (autogalaxy fit.png has no source panel); workspace mirrors: autolens_workspace, autolens_workspace_test, HowToLens, autolens_assistant, autolens_visualization
+- decisions: fit.png key `fit: subplot_fit_source_interpolated: true` (default ON, human 2026-11-17). Irregular-mesh source → imaging right column = Max Zoom / No Zoom (triangles) / Interpolated bottom right (max-zoom extent); false or rectangular/parametric → max/mid/no zoom. Interferometer: Zoomed (7) + Interpolated (11) by default, zoomed + no zoom when off; array-free 2x3 adds Interpolated in its free panel. PyAutoLens only; key mirrored with default true into autoarray plots.yaml and the 5 autolens workspaces
 - laptop-follow-ups: workspace smoke for the affected workspaces; re-render Delaunay figures in autolens_visualization / autogalaxy_visualization (cloud session has no LFS datasets / gallery harness)
 - tier: judge — merge mode: human /prm
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/701
