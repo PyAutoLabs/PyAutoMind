@@ -133,19 +133,6 @@
 - coordination: human approved 2026-11-17 running M3.6a/d/e in parallel and alongside community-close-due on PyAutoBrain/PyAutoMind (file-disjoint); no shift runs until all three merge
 - tier: judge — merge mode: human /prm
 
-## redshift-angles-guide
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/676
-- issued: 2026-11-17
-- session: claude-code desktop (Opus 5.5)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/redshift-angles-guide
-- repos:
-  - autolens_workspace: feature/redshift-angles-guide
-  - HowToLens: feature/redshift-angles-guide
-- prompt: active/redshifts_and_angles_guide.md
-- tier: judge — merge mode: human /prm
-- coordination: human approved running in parallel with cluster-regime-narrative (#671 touches only scripts/cluster/README.md + start_here.py; no file overlap)
-
 ## convolver-fft-frame-from-mask
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/698
 - issued: 2026-11-17

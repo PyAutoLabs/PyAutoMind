@@ -1,3 +1,9 @@
+Standalone guide `autolens_workspace/scripts/guides/units/redshifts_and_angles.py` (with figures in `images/guides/`) explaining why changing lens/source redshift does not change a PyAutoLens image in angular units, and how cluster modellers work physical-first. Distils the Slack thread previously condensed in `guides/advanced/multi_plane.py`. Pointers added from `cosmology.py`, `multi_plane.py`, the units README, and HowToLens chapter 1 tutorials 2–3 and chapter 4 tutorial 5. Adversarially reviewed before shipping.
+
+Follow-up noticed (not filed): HowToLens `chapter_1_introduction/tutorial_2_ray_tracing.py` fails under `PYAUTO_SMALL_DATASETS=1` — `IndexError` in PyAutoArray `autoarray/plot/grid.py` `plot_grid`; pre-existing on main.
+
+## Original prompt
+
 # Guide: why changing redshift does not change a lensed image (angular vs physical units)
 
 Consequence: judge

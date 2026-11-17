@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2300 records across 11 buckets.
+2301 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -296,6 +296,7 @@ markers; everything below GENERATED is rebuilt.
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
 - [rectangular-parity-absolute-bound](2026/11/rectangular-parity-absolute-bound.md) — autogalaxy_workspace_test#134 (merged 0b5ff519, human /prm). `imaging/jax_likelihood/rectangular.py` parity is…
+- [redshift-angles-guide](2026/11/redshift-angles-guide.md)
 - [reduce-session-token-load](2026/11/reduce-session-token-load.md) — PR is the tracking surface
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
 - [release-rehearsed-shas](2026/11/release-rehearsed-shas.md)
