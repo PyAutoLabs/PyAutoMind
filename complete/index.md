@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2306 records across 11 buckets.
+2307 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -321,6 +321,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [shift-launch-preflight](2026/11/shift-launch-preflight.md)
 - [shift-ledger-edit-op](2026/11/shift-ledger-edit-op.md)
+- [shift-named-tasks-and-planner-skips](2026/11/shift-named-tasks-and-planner-skips.md)
 - [shift-notify-merge-cap](2026/11/shift-notify-merge-cap.md)
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
 - [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)

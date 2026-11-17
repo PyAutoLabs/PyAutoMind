@@ -1,3 +1,12 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/667
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/668 (merged 2026-11-17)
+- epic: autonomous-orchestrators, M3.6b
+- what shipped: R5 (option a) — one-slice-per-epic and phase order bind only `Phase:` tasks (a `Phase:` counts by its leading number; an unnumbered label is still a phase), a side task orders itself by `Blocked-by:` and its rejection names the blocker. `batch brief --check` runs the watcher's gates (claims on Mind's local origin/main, then `plan`) and prints "will not start — <reason>" per named task; the watcher records the same in `backlog_gates.named` for the digest's Not started line (a named task with no draft says so). R2 — a `coordination:`/`conflict-override:` line frees a repo only for the task it names. A shift's dip skips drafts with no `Witness:` (counted; named and resumed exempt). `brief --new` with no goal epic/tag writes `backlog: scoped`, `tiers: notify, glance`. `brief --check` applies the organ rule to named tasks (`_brief.organ_findings`: refuse on the shift's own code, pass with a line, warn on no telling path). Docs: AUTONOMY.md "Human rulings R5 and R2", batch AGENTS.md, skills/batch/batch.md.
+- evidence: 7 witness tests fail on main 8f36ae6, pass (46 in tests/test_batch_named_tasks.py); Brain 2309 passed; skill line counts OK; Fable 5.2 review x4, FINDINGS fixed each round (organ-rule path reading); first CI run red on the tenant firewall (instance names in organ code and tests), fixed in c07b315, then green; shadow row merged-unchanged (stage 2, human-/prm). Real Mind: organ survey 14 refused / 17 warned / 18 passed of 317 drafts.
+- follow-up: `Blocked-by:` never clears after its blocker ships; a queued `judge` task is outside the `brief --new` default scope (name it in the brief); spawn-gate reasons (max-workers, tokens, pause) still read plain "not started"; the organ rule passes a prompt that names only other paths even if its fix lands in watcher code; run the firewall check locally before Brain pushes (the suite does not).
+
+## Original prompt
+
 # M3.6b Named tasks and the planner: per-epic limit on phases only, a reason for every task not started
 
 Type: feature
