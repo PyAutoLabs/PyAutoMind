@@ -12,14 +12,29 @@ do. No tokens are spent watching.
 
 What keeps the exemption narrow:
 
-- It **calls no Claude tool** and **arms nothing inside a session**. A session
+- It **calls no Claude tool** and **arms nothing inside a session**. Its
+  only `claude` calls are local CLI reads: `claude agents --json` for its
+  workers, and `claude auth status --json` (the login probe, no model call)
+  on a shift's first tick and when a worker shows as blocked. A session
   it starts is an ordinary session: it ends at its deliverable, and
   `send_later`, `ScheduleWakeup`, `CronCreate`, `RemoteTrigger` and `/loop`
   stay blocked for it.
 - It **dispatches nothing without an open shift brief** — a
   `PyAutoMind/batches/<slot>.md` record carrying a `brief:` block whose
-  `review-at:` has not passed (`PyAutoBrain/AUTONOMY.md`, "Shift briefs and
-  unattended `glance`"). A tick with no open brief does nothing.
+  `dispatched:` has passed and whose `review-at:` has not
+  (`PyAutoBrain/AUTONOMY.md`, "Shift briefs and unattended `glance`"). A
+  tick with no open brief does nothing. **It finds the brief itself** on
+  Mind `origin/main`, read locally and never fetched for this, so only a
+  pushed brief opens; two open briefs grant nothing, and it idles saying so.
+  `PYAUTO_SHIFT_BRIEF` in its env file is only an override, honoured inside
+  that brief's own window (2026-11-17, PyAutoBrain#659).
+- **An expired CLI login holds it.** When the login probe finds `loggedIn:
+  false` or a `loginExpiresAt` already passed, the watcher records a
+  `login-expired` event ("CLI login expired: run `claude /login`"), never a
+  worker "blocked on a person", and starts no worker until the probe passes.
+- **It ends with the shift.** After `review-at:` it posts the digest and
+  sweeps late arrivals; once `review-at:` + 45 min has passed and the digest
+  is posted, it stops ticking that slot and renews no lease.
 - **Kill switch:** it checks for a `STOP` file in its slot directory **first**,
   before reading anything else, and does nothing while that file exists. The
   human can also write it from their phone by commenting `/stop` on the
