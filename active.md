@@ -38,10 +38,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/725
 - issued: 2026-11-18
 - session: shift worker 2026-11-18-pm2 (b53f7ee2-2b5d-47c1-9042-4f2098218a54)
-- status: library-dev
+- status: library-shipped, awaiting-merge (decision-taken; ends at PR-open for /prm)
 - worktree: ~/Code/PyAutoLabs-wt/stellar-ml-gradient-conventions
 - repos:
   - PyAutoGalaxy: feature/stellar-ml-gradient-conventions
+  - autolens_workspace_test: feature/stellar-ml-gradient-conventions
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/368
 - prompt: active/stellar_m_l_gradient_profiles_sersicgradient_piv.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
 - heart-ack:
