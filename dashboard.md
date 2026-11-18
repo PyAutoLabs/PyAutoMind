@@ -15,7 +15,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 296 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 3 |
+| [Pending release](#pending-release) | 4 |
 
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
@@ -1402,7 +1402,7 @@ Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.
 
 </details>
 
-<details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-dev</summary>
+<details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1778">PyAutoFit#1778</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/ep_projected_model_shared_prior_keyerror.md
@@ -3350,6 +3350,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoArray#701](https://github.com/PyAutoLabs/PyAutoArray/pull/701) — `complete/2026/11/delaunay-interpolated-plot.md`
 - [PyAutoArray#702](https://github.com/PyAutoLabs/PyAutoArray/pull/702) — `complete/2026/11/galaxy-duplicate-pytree-registration.md`
 - [PyAutoArray#695](https://github.com/PyAutoLabs/PyAutoArray/pull/695) — `complete/2026/11/matern-vendor-bessel-kve.md`
+
+**PyAutoFit**
+
+- [PyAutoFit#1778](https://github.com/PyAutoLabs/PyAutoFit/pull/1778) — `active/ep_projected_model_shared_prior_keyerror.md`
 
 **PyAutoGalaxy**
 
