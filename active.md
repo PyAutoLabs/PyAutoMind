@@ -38,8 +38,10 @@
 
 ## galaxy-duplicate-pytree-registration
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/693
-- session: Claude Code background job (shift 2026-11-14-pm2 worker)
-- status: library-dev
+- session: Claude Code live session 2026-11-18 (resumed the crashed shift 2026-11-14-pm2 worker's unpushed commit)
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/702
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/702
 - worktree: ~/Code/PyAutoLabs-wt/galaxy-duplicate-pytree-registration
 - prompt: active/galaxy_duplicate_pytree_registration_after_jax_fitness.md
 - heart-ack:
