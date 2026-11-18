@@ -42,9 +42,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/723
 - issued: 2026-11-18
 - session: shift worker 2026-11-18-pm (1913ad55)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - prompt: active/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md
 - worktree: ~/Code/PyAutoLabs-wt/gnfw-mcr-ludlow-normalisation
 - tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot (effective level: supervised)
+- decision-taken: Ludlow c kept as r200/r_s (not r200/r_-2), which r_s -> inf at inner_slope 2 rules out; human /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724
 - repos:
   - PyAutoGalaxy: feature/gnfw-mcr-ludlow-normalisation
