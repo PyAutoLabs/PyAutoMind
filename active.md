@@ -74,23 +74,6 @@
 - heart-ack:
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
 
-## ellipse-multipole-latent-missing-m
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/719
-- issued: 2026-11-16
-- session: shift worker 2026-11-16-pm (af778bf0-0b22-4196-ad6e-ff5182aa5f0f)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720
-- heart-ack:
-  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
-- worktree: ~/Code/PyAutoLabs-wt/ellipse-multipole-latent-missing-m
-- repos:
-  - PyAutoGalaxy: feature/ellipse-multipole-latent-missing-m
-- summary: |
-    PR #720 open (glance, PR-open; close-out session runs witness + adversary and merges or refuses).
-    Adds `m: Constant 4` prior config to EllipseMultipole/EllipseMultipoleScaled so latent_parameters_from works without an explicit m; regression test (fails on main, passes on branch).
-    Workspace impact: (iii) none — every workspace script sets m explicitly. Follow-up (not filed): EllipseMultipoleScaled has no prior config for major_axis.
-
 ## delaunay-interpolated-plot
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/700
 - issued: 2026-11-17

@@ -588,7 +588,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 48; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 49; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -750,6 +750,7 @@ week, never a hand-picked one.
 | 2026-11-17 | shift-ledger-edit-op (PyAutoBrain#663 / PyAutoMind#581) | glance | Brain 2217 passed (1 env failure also on origin/main), Mind 1040; witness fails on base, passes; smoke n/a (organ); independent Fable 5.2 review FINDINGS→fixed→CLEAN; Heart RED reason "PyAutoMind: Tenant Firewall Gate failure on main" (pre-existing hook drift, PyAutoMind#575) | merged-unchanged | 2 | human-/prm (mergedBy Jammy2211) |  |
 | 2026-11-17 | deliverable-block-wave-575 (PyAutoBrain#666 / PyAutoHeart#351 / PyAutoHands#343 / PyAutoCortex#94) | glance | tests ✓ (Brain 2263, Heart 1468, Hands 624, Cortex 104) / smoke n/a (organ docs) / review ✓ Fable 5.2 CLEAN / heart ✓ GREEN / witness ✓ (fails on main, passes) / adversary ✓ | merged-unchanged | 2 | human-/prm |  |
 | 2026-11-17 | shift-named-tasks-and-planner-skips (PyAutoBrain#668) | glance | tests ✓ (Brain 2309) / smoke n/a (organ) / review ✓ Fable 5.2 x4 FINDINGS→fixed / heart ✓ GREEN / witness ✓ (fails on main, passes) / adversary ✓ / CI ✓ after firewall fix | merged-unchanged | 2 | human-/prm |  |
+| 2026-11-18 | ellipse-multipole-latent-missing-m (PyAutoGalaxy#720) | glance | tests CI GREEN (ci-verdict: 4 success, 1 skipped non-test leg 'Refresh the Heart feed') / smoke n/a (workspace impact none) / review not run at close-out / heart local rows only, none on PyAutoGalaxy / witness regression test in PR (not re-run at close-out) | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
-  "updated": "2026-11-18T08:56:31Z",
+  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
+  "updated": "2026-11-18T08:58:18Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -87,6 +87,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#720 \u2014 ellipse-multipole-latent-missing-m",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 Delaunay source plots: show the piecewise-linear interpolant the likelihood uses",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
       "prompt": null
@@ -120,12 +126,6 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }
