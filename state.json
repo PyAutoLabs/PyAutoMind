@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-18T14:18:48Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 2 in flight",
+  "updated": "2026-11-18T14:43:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "M3.6i A shift's library slot frees once its task's PR has merged \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/680",
-      "prompt": "Use the start-dev skill. active/shift_library_slot_frees_after_merge.md"
-    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -126,6 +120,12 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }

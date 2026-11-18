@@ -1,3 +1,13 @@
+A shift's library slot now frees once the task holding it has merged. The batch planner admitted one task per library repo per plan, and the shift watcher kept every task it had picked in each later plan, so a shift's first PyAutoGalaxy pick held PyAutoGalaxy until `review-at:` even after its glance close-out had merged it.
+
+Shipped in PyAutoBrain#680 (merged 2026-11-18): `released_picks(counters)` in `_orchestrator.py` names this shift's own picks that are done or abandoned with every PR merged (or no PR and no open question); `_batch.plan(..., released=)` keeps them as members but lets them hold no library; `on_origin` ignores a released pick's leftover `active.md` claim when its session is this slot's own shift worker. Rejections now name the holder ("<repo> held by <task> — will start after <task>'s PR merges"). Docs in `agents/conductors/batch/AGENTS.md` and `skills/batch/batch.md`.
+
+Tests: full suite 2380 passed, 1 skipped; new `test_679_*` drive real watcher ticks. CI needed two follow-ups (skill line budget; tenant firewall on a repo name in tests).
+
+Motivating shift: PyAutoMind `batches/2026-11-18-pm.md` (7 named glance bugs, 5 on PyAutoGalaxy, 2 on PyAutoFit), held unpushed until this merged.
+
+## Original prompt
+
 # M3.6i A shift's library slot frees once its task's PR has merged
 
 Type: feature
