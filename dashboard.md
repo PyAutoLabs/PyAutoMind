@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 3 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 2 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_3 queued · 0 questions_
+_LIVE · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -84,9 +84,11 @@ _3 queued · 0 questions_
 
 - Q5 — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it. (ruling claimed, today)
 
-**Shift**
+**Shift** (2026-11-18-pm — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-18-pm — closed, nothing to review · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587))_
+Live: LIVE · 2 running, 1 finished · tokens 0 of 1300000 (2 session(s) unmeasured) · review-at 2026-11-18T17:30Z (as of 2026-11-18T14:53:20Z) · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587#issuecomment-6982138507)
+
+_(nothing to review yet)_
 
 ## Start here
 
