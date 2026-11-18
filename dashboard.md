@@ -86,7 +86,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-18-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 2 running, 2 finished · tokens 746205 of 1300000 (close-outs 92985; cache-read 28201082; 1 session(s) unmeasured) · review-at 2026-11-18T17:30Z (as of 2026-11-18T15:37:33Z) · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587#issuecomment-6982138507)
+Live: LIVE · 1 running, 3 finished · tokens 1024532 of 5000000 (close-outs 92985; cache-read 35213126) · review-at 2026-11-18T17:30Z (as of 2026-11-18T16:20:53Z) · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587#issuecomment-6982138507)
 
 _(nothing to review yet)_
 
@@ -1388,7 +1388,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/a_model_with_compound_priors_cannot_be.md">A model with compound priors cannot be written to model.json, so search.fit…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1782">issue #1782</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/a_model_with_compound_priors_cannot_be.md">A model with compound priors cannot be written to model.json, so search.fit…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1782">issue #1782</a> — issued 2026-11-18 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1783">PyAutoFit#1783</a></summary>
 
 ```
 Use the start-dev skill. active/a_model_with_compound_priors_cannot_be.md
