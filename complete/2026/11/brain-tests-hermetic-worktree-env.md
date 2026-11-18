@@ -1,3 +1,13 @@
+## Summary
+
+The PyAutoBrain test suite now behaves the same in a task worktree as in CI. A new autouse fixture, `_no_task_worktree_paths` in `tests/conftest.py`, clears the variables a worktree's `activate.sh` exports: PYAUTO_TASK, PYAUTO_ROOT, PYAUTO_BRAIN, PYAUTO_MIND, PYAUTO_HEART and PYAUTO_HANDS. Before this, `test_grouped_organ_consumers` failed locally because `_hygiene_repos` honours `PYAUTO_MIND` as an override, and the PyAutoBrain#676 ship needed `env -u PYAUTO_MIND` to get past it.
+
+- PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/678 (merged 2026-11-18, tier notify, auto-merge on green)
+- Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/677
+- Witness: held. The full suite gave 2370 passed, 1 skipped with `activate.sh` sourced and again without it, with nothing deselected. CI is green.
+
+## Original prompt
+
 # Brain test suite is not hermetic against a task worktree's activate.sh organ paths
 
 Type: bug
