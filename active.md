@@ -26,7 +26,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1782
 - issued: 2026-11-18
 - session: shift worker 2026-11-18-pm (1100d086)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1783
+- heart-ack:
+  - manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+  - release validation incomplete: no rehearsal for current source
 - prompt: active/a_model_with_compound_priors_cannot_be.md
 - worktree: ~/Code/PyAutoLabs-wt/compound-prior-model-json
 - tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot (effective level: supervised)
