@@ -1404,7 +1404,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/mind_writer_own_claim_update.md">A shift worker's update of its own claim is not a Mind-writer…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/681">issue #681</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/mind_writer_own_claim_update.md">A shift worker's update of its own claim is not a Mind-writer…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/681">issue #681</a> — issued 2026-11-18 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/682">PyAutoBrain#682</a></summary>
 
 ```
 Use the start-dev skill. active/mind_writer_own_claim_update.md

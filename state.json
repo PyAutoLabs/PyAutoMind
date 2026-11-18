@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 5 in flight",
-  "updated": "2026-11-18T20:38:28Z",
+  "updated": "2026-11-18T20:47:37Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "A shift worker's update of its own claim is not a Mind-writer\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/682",
+      "prompt": "Use the start-dev skill. active/mind_writer_own_claim_update.md"
+    },
     {
       "severity": "yellow",
       "text": "Model identifier raises \"TypeError: iteration over a 0-d array\" when a Galaxy\u2026 \u2014 library-shipped, awaiting-merge",
@@ -120,12 +126,6 @@
       "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
-      "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
     }
   ]
 }
