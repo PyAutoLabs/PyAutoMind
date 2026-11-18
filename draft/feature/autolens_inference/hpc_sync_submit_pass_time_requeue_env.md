@@ -14,7 +14,7 @@ Status: formalised
 Consequence: judge
 Witness: `hpc/sync submit` accepts sbatch overrides (at least `--time`, `--no-requeue`) and forwards named environment variables (e.g. `XLA_FLAGS`) to the remote sbatch. Each submit is logged the way the scheduler-actions policy expects. A phase-4-style resubmit (24 h limit, no requeue, XLA eigen flag) then goes through hpc/sync with no `PYAUTO_SKIP_SCHEDULER_GUARD` exception.
 Review-minutes: 10
-Unattended: never
+Unattended: ready
 Lane: ral
 Epic: likelihood-lifecycle
 Phase: 4

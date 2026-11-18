@@ -10,6 +10,7 @@ Priority: medium
 Status: draft
 Filed: 2026-11-16
 Epic: hpc-campaign
+Phase: 5e
 Consequence: judge
 Lane: any
 

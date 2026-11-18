@@ -9,13 +9,13 @@ Themes:
 - euclid
 - hpc
 Difficulty: medium
-Autonomy: human-required
+Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
 Witness: on the 500-lens sample (`complete/euclid_dr1/inspect/dr1_catalogue_v5_sample500/sample500.csv`), `census/` lists every expected (object, search) with a state class and every gap with a reason; every one of the catalogue's 62 exclusions (`inspect/dr1_catalogue_v5/excluded_tiles.csv`) is reproduced with a reason and zero gaps are unexplained; `af.export.verify` passes on the 500-lens sample package; the Cortex `euclid_dr1` ledger carries one `library` line whose index hash equals `autofit.export.index_hash` of the pulled `index/`
 Review-minutes: 30
-Unattended: never
+Unattended: ready
 Lane: ral
 Epic: results-library
 Phase: 5c
