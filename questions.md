@@ -26,6 +26,76 @@ the ruling on the prompt.
 
 ## Open
 
+### Q4. hpc_sync_submit_pass_time_requeue_env — `hpc_sync_submit_pass_time_requeue_env` is Unattended: never, so no s…
+- task: draft/feature/autolens_inference/hpc_sync_submit_pass_time_requeue_env.md
+- kind: ruling
+- gate: unattended
+- ask: `hpc_sync_submit_pass_time_requeue_env` is Unattended: never, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+
+### Q5. numba_wtilde_validation_legs_stall_nautilus — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAu…
+- task: draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md
+- kind: ruling
+- gate: claimed
+- ask: `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it.
+- options: (a) wait for galaxy-duplicate-pytree-registration to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+
+### Q6. numba_wtilde_validation_legs_stall_nautilus — `numba_wtilde_validation_legs_stall_nautilus` is Unattended: never, s…
+- task: draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md
+- kind: ruling
+- gate: unattended
+- ask: `numba_wtilde_validation_legs_stall_nautilus` is Unattended: never, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+
+### Q7. hpc_campaign_epic — Epic hpc-campaign is queued but no next-phase prompt is filed (no ope…
+- task: draft/research/autofit/hpc_campaign_epic.md
+- kind: ruling
+- gate: no-next-phase
+- ask: Epic hpc-campaign is queued but no next-phase prompt is filed (no open Phase: member in draft/ or active/).
+- options: (a) file the next phase's prompt · (b) close the epic · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+
+### Q8. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is clai…
+- task: draft/feature/autofit/results_library_p5c_dr1_census.md
+- kind: ruling
+- gate: claimed
+- ask: `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is claimed by `ep-projected-model-shared-prior` in active.md with no coordination line naming it.
+- options: (a) wait for ep-projected-model-shared-prior to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+
+### Q9. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` is Unattended: never, so no shift st…
+- task: draft/feature/autofit/results_library_p5c_dr1_census.md
+- kind: ruling
+- gate: unattended
+- ask: `results_library_p5c_dr1_census` is Unattended: never, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+
+### Q10. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` is Autonomy: human-required, so a sh…
+- task: draft/feature/autofit/results_library_p5c_dr1_census.md
+- kind: ruling
+- gate: human-required
+- ask: `results_library_p5c_dr1_census` is Autonomy: human-required, so a shift worker would park at ship.
+- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
