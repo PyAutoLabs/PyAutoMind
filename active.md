@@ -32,3 +32,14 @@
   - PyAutoGalaxy: feature/gnfw-virial-jax-hyp2f1
 - heart-ack:
   - acknowledged by the human 2026-11-18 ("YELLOW acknowledged"): YELLOW score 85 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source
+
+## compound-prior-model-json
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1782
+- issued: 2026-11-18
+- session: shift worker 2026-11-18-pm (1100d086)
+- status: library-dev
+- prompt: active/a_model_with_compound_priors_cannot_be.md
+- worktree: ~/Code/PyAutoLabs-wt/compound-prior-model-json
+- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot (effective level: supervised)
+- repos:
+  - PyAutoFit: feature/compound-prior-model-json
