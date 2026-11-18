@@ -12,6 +12,7 @@ Consequence: glance
 Witness: for axis ratio 0.6 the `SersicGradient` M/L equals `mass_to_light_ratio` on the ellipse of effective radius, `SersicGradient` and `GaussianGradient` with the same positive gradient both have M/L falling outward, and a jitted likelihood with a free gradient runs
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-18 055509e3 (PyAutoGalaxy)
 Lane: any
 
 Found 2026-11-16 in the science project stars_dm_slope by reading the code (written up in `/home/jammy/Science/Science/development/stars_dm_slope/wiki/project/2026-11-16-parameterisation-and-systematics.md`, section 3). Three related problems in the mass-to-light gradient profiles:

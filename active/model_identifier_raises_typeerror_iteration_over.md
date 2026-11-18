@@ -12,6 +12,7 @@ Consequence: glance
 Witness: the identifier of a model holding an instance with a 0-d array attribute is computed without error and is identical across two runs
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-18 45e8cd3a (PyAutoFit)
 Lane: any
 
 Found 2026-11-14 in the science project ep_gnfw_slope and never reported. Fixing a lens to its truth by inserting the true `al.Galaxy` instance (stellar `Basis` of `lmp.Gaussian` + `gNFWSph`, from an `al.twins` truth tracer) into an `af.Collection` model made PyAutoFit's model identifier raise `TypeError: iteration over a 0-d array` at `autofit/mapper/identifier.py:185` when the search computed its unique tag. Worked around by fixing the parameters as floats with `model.replacing` (`/home/jammy/Science/Science/development/ep_gnfw_slope/scripts/common.py::reference_model_from`, note in `wiki/project/2026-11-14-single-lens-recovery.md`). Probable cause: an instance attribute that is a 0-d NumPy (or JAX) array is treated as an iterable by the identifier's hashing.
