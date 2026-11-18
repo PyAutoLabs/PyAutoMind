@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: formalised
+Issued: 2026-11-18
 Consequence: glance
 Witness: after `autofit.jax.register_model`, a `Model` of a `DatasetModel`-shaped class with `grid_offset` free and a FIXED scalar attribute (e.g. a fixed sky level) round-trips through `jax.tree_util.tree_flatten` / `tree_unflatten` with the fixed value preserved, and `instance_from_prior_medians()` (or `instance_from_vector`) on the rebuilt model succeeds without looking up prior config for the fixed attribute and returns the same instance as the original model
 Review-minutes: 5
