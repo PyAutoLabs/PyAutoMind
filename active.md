@@ -127,12 +127,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/671
 - issued: 2026-11-18
 - session: claude-code desktop (WSL), Opus 5.5, ~/Code/PyAutoLabs session
-- status: library-dev
+- status: awaiting-merge (slice 1; Mind#585 merges first; slice 2 stays on this prompt)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/shift-readiness-pass
 - repos:
   - PyAutoBrain: feature/shift-readiness-pass
   - PyAutoMind: feature/shift-readiness-pass
 - prompt: active/shift_readiness_pass_and_decisions_sheet.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/674
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/585
 - epic: autonomous-orchestrators (phase 10, M3.3 slice 1; slice 2 follows the M3.2 shift)
 - tier: judge — merge mode: human /prm
 
@@ -140,11 +142,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/672
 - issued: 2026-11-18
 - session: claude-code desktop (WSL), Opus 5.5, ~/Code/PyAutoLabs session
-- status: library-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/worker-model-effort
 - repos:
   - PyAutoBrain: feature/worker-model-effort
 - prompt: active/worker_model_effort_medium.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/673
 - coordination: human approved sharing PyAutoBrain with shift-readiness-pass (same session, 2026-11-18); different functions in _orchestrator.py
 - epic: autonomous-orchestrators
 - tier: judge — merge mode: human /prm

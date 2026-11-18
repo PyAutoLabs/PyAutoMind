@@ -1434,7 +1434,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_readiness_pass_and_decisions_sheet.md">M3.3 Readiness pass and decisions sheet: one sheet before a shift…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/671">issue #671</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_readiness_pass_and_decisions_sheet.md">M3.3 Readiness pass and decisions sheet: one sheet before a shift…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/671">issue #671</a> — issued 2026-11-18 — awaiting-merge (slice 1; Mind#585 merges first; slice 2 stays on this prompt) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/674">PyAutoBrain#674</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/585">PyAutoMind#585</a></summary>
 
 ```
 Use the start-dev skill. active/shift_readiness_pass_and_decisions_sheet.md
@@ -1442,7 +1442,7 @@ Use the start-dev skill. active/shift_readiness_pass_and_decisions_sheet.md
 
 </details>
 
-<details><summary>📋 <a href="active/worker_model_effort_medium.md">Spawned workers run Opus 5.5 at medium effort</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/672">issue #672</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/worker_model_effort_medium.md">Spawned workers run Opus 5.5 at medium effort</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/672">issue #672</a> — issued 2026-11-18 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/673">PyAutoBrain#673</a></summary>
 
 ```
 Use the start-dev skill. active/worker_model_effort_medium.md
