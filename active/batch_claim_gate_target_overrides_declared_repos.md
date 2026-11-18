@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: high
 Status: formalised
+Issued: 2026-11-18
 Consequence: notify
 Witness: a new test in PyAutoBrain tests/ passes where `declared_repos` on a prompt with `Target: autofit` and a `Repos:` block naming only PyAutoCortex returns `["PyAutoCortex"]` and `_held_for` against an active.md claiming PyAutoFit returns None; a prompt with no `Repos:` still returns its Target; the full batch test suite passes
 Review-minutes: 0
