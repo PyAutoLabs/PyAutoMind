@@ -66,16 +66,6 @@ the ruling on the prompt.
 - asked: 2026-11-18T09:23Z
 - worker: readiness pass
 
-### Q8. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is clai…
-- task: draft/feature/autofit/results_library_p5c_dr1_census.md
-- kind: ruling
-- gate: claimed
-- ask: `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is claimed by `ep-projected-model-shared-prior` in active.md with no coordination line naming it.
-- options: (a) wait for ep-projected-model-shared-prior to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: ready-2026-11-18
-- asked: 2026-11-18T09:23Z
-- worker: readiness pass
-
 ### Q9. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` is Unattended: never, so no shift st…
 - task: draft/feature/autofit/results_library_p5c_dr1_census.md
 - kind: ruling
@@ -124,6 +114,18 @@ the ruling on the prompt.
 - answered: 2026-11-18 by Jammy2211 (chat)
 - answer: Not now — cluster extended sources will not be developed for a while. The questions moved unanswered to draft/feature/workspaces/cluster_pixelized_analysisfactor.md ("Deferred"); prose half merged as autolens_workspace#671.
 - answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/670#issuecomment-6974154944
+
+### Q8. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is clai…
+- task: draft/feature/autofit/results_library_p5c_dr1_census.md
+- kind: ruling
+- gate: claimed
+- ask: `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is claimed by `ep-projected-model-shared-prior` in active.md with no coordination line naming it.
+- options: (a) wait for ep-projected-model-shared-prior to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+- answered: 2026-11-18T09:35Z by Jammy2211 (chat)
+- answer: (b) record a coordination line: the census touches only PyAutoCortex and reads released PyAutoFit on RAL, so it shares PyAutoFit with ep-projected-model-shared-prior with no file overlap. Coordination line added to that claim in active.md.
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

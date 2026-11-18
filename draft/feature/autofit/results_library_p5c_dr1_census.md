@@ -68,3 +68,6 @@ results), `--partition=ral`, 2 CPU, node-local disk (NFS login-node runs indexed
 
 Done = witness above. Any unexplained gap is a finding for the human, not a fix
 in this task.
+
+## Answers from the human
+- Q8 (2026-11-18, ruling claimed, shift ready-2026-11-18): (b) record a coordination line: the census touches only PyAutoCortex and reads released PyAutoFit on RAL, so it shares PyAutoFit with ep-projected-model-shared-prior with no file overlap. Coordination line added to that claim in active.md.

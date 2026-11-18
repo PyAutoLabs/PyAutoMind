@@ -34,6 +34,7 @@
   - PyAutoFit: feature/ep-projected-model-shared-prior
 - conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs, human-review); human approved 2026-11-13 a separate worktree off main (non-overlapping files: samples.py + tests)
 - unblocks: Science/development/ep_gnfw_slope N=3 EP smoke
+- coordination: human approved 2026-11-18 (Q8) sharing PyAutoFit with results_library_p5c_dr1_census — the census is read-only on RAL against released 2026.11.12.1 and writes only a PyAutoCortex ledger line; no PyAutoFit edits, no file overlap
 
 ## galaxy-duplicate-pytree-registration
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/693
