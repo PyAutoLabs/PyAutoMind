@@ -26,13 +26,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
 - issued: 2026-11-16
 - session: shift worker 2026-11-16-pm (b778571d); Claude Code worker 2026-11-18 (session ID unavailable)
-- status: library-dev (started 2026-11-18; override answered "Use 1" on the issue 2026-11-16)
+- status: library-shipped, awaiting-merge (PR #1779 opened 2026-11-18; tests 4295 passed, smoke autofit+autogalaxy 26/26; human runs /prm)
 - prompt: active/dataset_model_free_grid_offset_pytree_roundtrip.md
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1777#issuecomment-6925508074
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - worktree: ~/Code/PyAutoLabs-wt/dataset-model-free-grid-offset-pytree-roundtrip
 - repos:
   - PyAutoFit: feature/model-pytree-tuple-prior
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1779
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1779
 - coordination: shares PyAutoFit with ep-projected-model-shared-prior (#1773, PR #1778 awaiting /prm); human-approved override, separate worktree off main, no file overlap (that task: samples/samples.py + test_unification.py; this one: prior_model.py, tuple_prior.py, jax/pytrees.py + new test)
 - heart-ack:
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
