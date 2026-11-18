@@ -1420,7 +1420,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/stellar_m_l_gradient_profiles_sersicgradient_piv.md">Stellar M/L-gradient profiles: SersicGradient pivots at R_e/q, GaussianGradient has the opposite sign…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/725">issue #725</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/stellar_m_l_gradient_profiles_sersicgradient_piv.md">Stellar M/L-gradient profiles: SersicGradient pivots at R_e/q, GaussianGradient has the opposite sign…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/725">issue #725</a> — issued 2026-11-18 — library-shipped, awaiting-merge (decision-taken; ends at PR-open for /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726">PyAutoGalaxy#726</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/368">autolens_workspace_test#368</a></summary>
 
 ```
 Use the start-dev skill. active/stellar_m_l_gradient_profiles_sersicgradient_piv.md
