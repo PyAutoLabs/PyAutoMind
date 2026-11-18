@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2322 records across 11 buckets.
+2323 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -155,6 +155,7 @@ markers; everything below GENERATED is rebuilt.
 - [colab-restart-fix](2026/11/colab-restart-fix.md)
 - [community-close-due](2026/11/community-close-due.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
+- [compound-prior-model-json](2026/11/compound-prior-model-json.md)
 - [config-yaml-parse-cache](2026/11/config-yaml-parse-cache.md)
 - [convert-latent-prefix-naming](2026/11/convert-latent-prefix-naming.md)
 - [convolver-fft-frame-from-mask](2026/11/convolver-fft-frame-from-mask.md) — - `ConvolverState` sizes its FFT frame from the mask instead of the native array: `fft_shape = next_fast_len(m…

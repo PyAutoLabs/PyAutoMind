@@ -22,22 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## compound-prior-model-json
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1782
-- issued: 2026-11-18
-- session: shift worker 2026-11-18-pm (1100d086)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1783
-- heart-ack:
-  - manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml
-  - manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
-  - release validation incomplete: no rehearsal for current source
-- prompt: active/a_model_with_compound_priors_cannot_be.md
-- worktree: ~/Code/PyAutoLabs-wt/compound-prior-model-json
-- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot (effective level: supervised)
-- repos:
-  - PyAutoFit: feature/compound-prior-model-json
-
 ## gnfw-mcr-ludlow-normalisation
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/723
 - issued: 2026-11-18

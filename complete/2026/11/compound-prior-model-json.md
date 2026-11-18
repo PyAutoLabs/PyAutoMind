@@ -1,3 +1,11 @@
+Compound-prior models now write `model.json` and reload with the same identifier (PR title: "fix: compound-prior models write model.json and reload with the same identifier"), so `search.fit` no longer fails writing such a model.
+
+Shipped in PyAutoFit#1783 (merged 2026-11-18 by human /prm). Done by shift worker 2026-11-18-pm (1100d086); the unattended close-out refused the merge because the PR carried the `decision-taken` label. Gate on ec11c36d6: tests 4277 pass (33 contention failures pass serially on branch and main), smoke 203/0, review CLEAN, Heart dev-ship GREEN, Sonnet adversary CLEAN after it found the unregistered 'modified' parser (fixed).
+
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1783
+
+## Original prompt
+
 # A model with compound priors cannot be written to model.json, so search.fit…
 
 Type: bug

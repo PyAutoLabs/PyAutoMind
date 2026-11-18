@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 4 in flight",
-  "updated": "2026-11-18T17:38:18Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
+  "updated": "2026-11-18T17:43:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "A model with compound priors cannot be written to model.json, so search.fit\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1783",
-      "prompt": "Use the start-dev skill. active/a_model_with_compound_priors_cannot_be.md"
-    },
     {
       "severity": "yellow",
       "text": "gNFWMCRLudlow normalises kappa_s with the NFW mass function whatever the inner slope\u2026 \u2014 library-shipped, awaiting-merge",
@@ -71,6 +65,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#695 \u2014 matern-vendor-bessel-kve",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/695",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1783 \u2014 compound-prior-model-json",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1783",
       "prompt": null
     },
     {
