@@ -588,7 +588,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 51; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 52; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -753,6 +753,7 @@ week, never a hand-picked one.
 | 2026-11-18 | ellipse-multipole-latent-missing-m (PyAutoGalaxy#720) | glance | tests CI GREEN (ci-verdict: 4 success, 1 skipped non-test leg 'Refresh the Heart feed') / smoke n/a (workspace impact none) / review not run at close-out / heart local rows only, none on PyAutoGalaxy / witness regression test in PR (not re-run at close-out) | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 | 2026-11-18 | worker-model-effort (PyAutoBrain#673) | glance | tests CI GREEN (ci-verdict: 2 success, 0 skipped) / smoke n/a (organ change) / review FINDINGS 3 low, fixed pre-PR (Fable 5.2) / heart n/a (organ, feed STALE) / witness PASS (-k session_command or closeout_command or worker_model; live --bg spawn done) / adversary: independent Fable 5.2 review | merged-unchanged | 2 | human-/prm (mergedBy Jammy2211) |  |
 | 2026-11-18 | galaxy-duplicate-pytree-registration (PyAutoArray#702) | glance | tests ✓ (autoarray 2461) / smoke ✓ (6 workspaces; autocti not run: no GSL) / review n/a (no independent review) / heart ✓ GREEN / witness ✓ (direct repro fails on main, passes) | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
+| 2026-11-18 | dataset-model-free-grid-offset-pytree-roundtrip (PyAutoFit#1779) | glance | tests 4295 pass + CI GREEN (5 success, 1 skipped non-test leg 'Refresh the Heart feed') / smoke 26/26 (autofit + autogalaxy) / witness PASS (round-trip cases a/b/c prior_count 0/2/3 in test_model_pytree_tuple_prior.py) / review n/a (no independent review leg ran) / heart green (dev-ship PyAutoFit; freeze clear) | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

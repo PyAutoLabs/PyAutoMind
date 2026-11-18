@@ -1,3 +1,24 @@
+## Outcome
+
+Shipped in PyAutoFit#1779 (merged `17b87edb`, 2026-11-18).
+
+- `Model.tree_flatten` (`autofit/mapper/prior_model/prior_model.py`) copes with zero direct
+  priors and carries direct `TuplePrior` attributes as pytree children.
+- `TuplePrior` (`autofit/mapper/prior/tuple_prior.py`) has its own `tree_flatten` /
+  `tree_unflatten` (free priors as children; names and fixed values in aux) and is registered
+  in `enable_pytrees` (`autofit/jax/pytrees.py`).
+- New `test_autofit/mapper/test_model_pytree_tuple_prior.py`: cases (a) nothing free,
+  (b) grid_offset free, (c) grid_offset + scalar keep `prior_count` 0/2/3 and `grid_offset`
+  a `TuplePrior`; plus a direct `TuplePrior` round-trip. 3 of 4 fail without the fix.
+- Tests: full `test_autofit` 4295 passed; autofit + autogalaxy smoke 26/26.
+- Known gap (out of scope on the issue): fixed non-prior attributes (e.g. a fixed sky level)
+  are not carried through the round-trip, so `instance_from_*` on the rebuilt model in case (b)
+  looks up prior config for them. Follow-up filed as its own task.
+
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1779
+
+## Original prompt
+
 # DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model
 
 Type: bug

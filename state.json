@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-18T13:17:01Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 2 in flight",
+  "updated": "2026-11-18T13:36:23Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 library-shipped, awaiting-merge (PR #1779 opened 2026-11-18; tests 4295 passed, smoke autofit+autogalaxy 26/26; human runs /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1779",
-      "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
-    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -69,7 +63,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1779 \u2014 DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model",
+      "text": "pending release: PyAutoFit PyAutoFit#1779 \u2014 Outcome",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1779",
       "prompt": null
     },
@@ -126,6 +120,12 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: A model with compound priors cannot be written to model.json, so search.fit\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_model_with_compound_priors_cannot_be.md",
+      "prompt": "Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md"
     }
   ]
 }
