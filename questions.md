@@ -6,13 +6,17 @@ a `/questions` chat (PyAutoBrain `skills/questions`) answers, defers or drops
 them with `scripts/questions_edit.py`. Never edit by hand: the section an
 entry sits under is its state, and `lifecycle.py check` validates the file.
 An answer releases the parked task: the next shift resumes it with the answer
-in its prompt.
+in its prompt. Kind `ruling` is filed by the readiness pass (PyAutoBrain
+`batch ready`, M3.3) for a gate on a queued task: it carries `gate:`, may have
+no `issue:`, never holds or releases a parked task, and answering it records
+the ruling on the prompt.
 
 ```markdown
 ### Q<n>. <task> — <short ask>
 - task: draft/<work-type>/<target>/<name>.md
 - issue: https://github.com/<owner>/<repo>/issues/<n>
 - kind: question
+- gate: <kebab-case slug>         (kind ruling only; a ruling may have no issue:)
 - ask: <one line>
 - options: (a) <first> · (b) <second>
 - shift: <slot>

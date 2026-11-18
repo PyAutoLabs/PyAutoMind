@@ -385,3 +385,133 @@ def test_close_moves_the_tasks_open_questions_to_answered(tmp_path, monkeypatch)
     [e] = qe.parse((root / "questions.md").read_text())
     assert e["state"] == "answered" and e["fields"]["answer"] == "(task completed)"
     assert lifecycle.questions_findings(root) == []
+
+
+# --- kind ruling (the readiness pass, PyAutoBrain#671, M3.3) ----------------------
+
+def _ruling(task="draft/feature/flywheel/sprocket_calibration.md", gate="claimed",
+            shift="2026-11-18-am", **kw):
+    e = {"task": task, "kind": "ruling", "gate": gate,
+         "ask": "PyAutoMind is claimed by another task. Run this one anyway?",
+         "options": ["override", "wait"], "shift": shift,
+         "asked": "2026-11-18T08:00Z", "worker": "ready"}
+    e.update(kw)
+    return e
+
+
+def test_add_a_ruling_without_an_issue(mind):
+    text, qid, added = qe.add_text(qe.TEMPLATE, _ruling(), mind)
+    assert (qid, added) == ("Q1", True)
+    assert ("### Q1. sprocket_calibration — PyAutoMind is claimed by another task. Run this "
+            "one anyway?\n- task: draft/feature/flywheel/sprocket_calibration.md\n"
+            "- kind: ruling\n- gate: claimed\n"
+            "- ask: PyAutoMind is claimed by another task. Run this one anyway?\n"
+            "- options: (a) override · (b) wait\n- shift: 2026-11-18-am\n"
+            "- asked: 2026-11-18T08:00Z\n- worker: ready\n") in text
+    assert "- issue:" not in text[text.index("## Open"):]
+    (mind / "questions.md").write_text(text)
+    assert lifecycle.questions_findings(mind) == []
+    assert qe.show(mind)[0].endswith("— ruling claimed")
+    # The CLI takes --gate and no --issue.
+    (mind / "questions.md").write_text(qe.TEMPLATE)
+    e = _ruling(gate="no-next-phase")
+    res = _run(mind, "add", "--task", e["task"], "--kind", "ruling", "--gate", e["gate"],
+               "--ask", e["ask"], "--shift", e["shift"], "--asked", e["asked"],
+               "--worker", e["worker"])
+    assert res.returncode == 0 and "added Q1" in res.stdout, res.stderr
+    res = _run(mind, "add", "--task", e["task"], "--kind", "ruling", "--gate", e["gate"],
+               "--ask", e["ask"], "--shift", "2026-11-18-pm", "--asked", e["asked"],
+               "--worker", e["worker"])
+    assert res.returncode == 0 and "Q1 already holds this ruling" in res.stdout
+    _check(mind)
+
+
+def test_a_ruling_needs_a_well_formed_gate_and_a_question_takes_none():
+    with pytest.raises(qe.Refused, match="gate is missing"):
+        qe.add_text(qe.TEMPLATE, _ruling(gate=""))
+    with pytest.raises(qe.Refused, match="not a kebab-case slug"):
+        qe.add_text(qe.TEMPLATE, _ruling(gate="Claimed_By"))
+    with pytest.raises(qe.Refused, match="gate: is for kind ruling only"):
+        qe.add_text(qe.TEMPLATE, _entry(gate="claimed"))
+    with pytest.raises(qe.Refused, match="issue is missing"):
+        qe.add_text(qe.TEMPLATE, _entry(issue=None))
+    # A ruling may still carry an issue.
+    text, _q, _a = qe.add_text(qe.TEMPLATE, _ruling(issue=ISSUE))
+    assert f"- issue: {ISSUE}\n- kind: ruling\n- gate: claimed\n" in text
+
+
+def test_a_ruling_dedupes_by_task_and_gate_across_shifts_while_open_or_deferred():
+    text, qid, _ = qe.add_text(qe.TEMPLATE, _ruling())
+    # Another shift, the same task (by prompt name: claimed since) and gate: repeat.
+    again, q, added = qe.add_text(text, _ruling(task="active/sprocket_calibration.md",
+                                                shift="2026-11-19-am"))
+    assert (again, q, added) == (text, "Q1", False)
+    # A different gate, or a different task, is a new ruling.
+    text, q, added = qe.add_text(text, _ruling(gate="no-next-phase"))
+    assert (q, added) == ("Q2", True)
+    text, q, added = qe.add_text(text, _ruling(task="draft/feature/flywheel/gearbox_rattle.md"))
+    assert (q, added) == ("Q3", True)
+    # Deferred still blocks a re-file.
+    text = lifecycle.question_move_text(text, "Q1", "deferred", {"deferred": "d by h"})
+    assert qe.add_text(text, _ruling(shift="2026-11-20-am"))[1:] == ("Q1", False)
+    # Answered (or Dropped), it may be filed again.
+    text = lifecycle.question_move_text(text, "Q1", "answered",
+                                        {"answered": "t by h (chat)", "answer": "wait"})
+    text, q, added = qe.add_text(text, _ruling(shift="2026-11-20-am"))
+    assert (q, added) == ("Q4", True)
+    text = lifecycle.question_move_text(text, "Q4", "dropped", {"dropped": "d by h — no"})
+    assert qe.add_text(text, _ruling(shift="2026-11-21-am"))[1:] == ("Q5", True)
+
+
+def test_answering_a_ruling_records_it_on_the_prompt(mind):
+    text, _q, _a = qe.add_text(qe.TEMPLATE, _ruling(), mind)
+    (mind / "questions.md").write_text(text)
+    msg, prompt = qe.answer(mind, "Q1", "override: run it in its own worktree", by="h",
+                            day="2026-11-18", at="2026-11-18T09:00Z")
+    assert prompt == "draft/feature/flywheel/sprocket_calibration.md"
+    body = (mind / prompt).read_text()
+    assert body.endswith("## Answers from the human\n- Q1 (2026-11-18, ruling claimed, shift "
+                         "2026-11-18-am): override: run it in its own worktree\n")
+    assert _states(mind) == {"Q1": "answered"}
+    assert qe.show(mind, "all")[0] == ("Q1 [answered] sprocket_calibration — PyAutoMind is "
+                                       "claimed by another task. Run this one anyway? — "
+                                       "ruling claimed")
+    _check(mind)
+
+
+def test_check_reports_a_ruling_without_gate_a_stray_gate_and_duplicate_open_rulings(mind):
+    good, _q, _a = qe.add_text(qe.TEMPLATE, _ruling())
+    assert _findings(mind, good) == []
+    assert any("Q1 has no gate:" in m
+               for m in _findings(mind, good.replace("- gate: claimed\n", "")))
+    assert any("not a kebab-case slug" in m
+               for m in _findings(mind, good.replace("gate: claimed", "gate: Claimed")))
+    question, _q, _a = qe.add_text(qe.TEMPLATE, _entry())
+    assert any("Q1 gate: is for kind ruling only" in m for m in _findings(
+        mind, question.replace("- kind: question\n", "- kind: question\n- gate: claimed\n")))
+    assert any("Q1 has no issue:" in m
+               for m in _findings(mind, question.replace(f"- issue: {ISSUE}\n", "")))
+    block = good[good.index("### Q1"):good.index("## Deferred")]
+    dup = good.replace("## Deferred", block.replace("### Q1.", "### Q2.")
+                       .replace("draft/feature/flywheel/", "active/")
+                       .replace("2026-11-18-am", "2026-11-19-am") + "## Deferred")
+    assert any("Q2 repeats Q1 (an open ruling on the same task and gate `claimed`)" in m
+               for m in _findings(mind, dup))
+    settled = lifecycle.question_move_text(dup, "Q1", "answered",
+                                           {"answered": "t by h (chat)", "answer": "x"})
+    assert not any("repeats" in m for m in _findings(mind, settled))
+
+
+def test_rulings_and_questions_sharing_an_issue_are_not_triple_repeats(mind):
+    """Two gates on one task, shift and issue, and a question plus a ruling on
+    one issue, all add and leave `lifecycle.py check` clean."""
+    text, q1, a1 = qe.add_text(qe.TEMPLATE, _ruling(issue=ISSUE, shift="2026-11-14-pm2"), mind)
+    text, q2, a2 = qe.add_text(text, _ruling(issue=ISSUE, shift="2026-11-14-pm2",
+                                             gate="unattended"), mind)
+    text, q3, a3 = qe.add_text(text, _entry(), mind)   # a question, same shift/task/issue
+    assert (q1, a1, q2, a2, q3, a3) == ("Q1", True, "Q2", True, "Q3", True)
+    assert _findings(mind, text) == []
+    # Replays stay silent repeats of their own kind.
+    assert qe.add_text(text, _entry(), mind)[1:] == ("Q3", False)
+    assert qe.add_text(text, _ruling(issue=ISSUE, gate="unattended"), mind)[1:] == ("Q2", False)
+    _check(mind)
