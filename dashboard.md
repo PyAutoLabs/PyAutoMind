@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 287 |
+| [Backlog](#backlog) | 294 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -95,7 +95,7 @@ _(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -145,10 +145,26 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/a_model_with_compound_priors_cannot_be.md">A model with compound priors cannot be written to model.json, so search.fit…</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md">gNFWVirialMassConcSph gives kappa_s ~1e-171 under JAX because jax.scipy.special.hyp2f1 is wrong for z…</a> — autogalaxy · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md
 ```
 
 </details>
@@ -177,23 +193,7 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1522,7 +1522,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 34 · local-dev 12 · wsl-data 9
+Lanes: any 237 · ral 34 · local-dev 12 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1882,7 +1882,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 54</summary>
+<summary><b>bug</b> — 61</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1912,6 +1912,22 @@ Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independen
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/a_model_with_compound_priors_cannot_be.md">A model with compound priors cannot be written to model.json, so search.fit…</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md">gNFWVirialMassConcSph gives kappa_s ~1e-171 under JAX because jax.scipy.special.hyp2f1 is wrong for z…</a> — autogalaxy · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md
 ```
 
 </details>
@@ -2060,6 +2076,14 @@ Use the start-dev skill. draft/bug/autofit/samples_with_paths_shared_prior_facto
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md">gNFWMCRLudlow normalises kappa_s with the NFW mass function whatever the inner slope…</a> — autogalaxy · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — autolens_workspace · small · safe · normal</summary>
 
 ```
@@ -2088,6 +2112,14 @@ Use the start-dev skill. draft/bug/workspaces/convolver_blurring_image_warning.m
 
 ```
 Use the start-dev skill. draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/model_identifier_raises_typeerror_iteration_over.md">Model identifier raises "TypeError: iteration over a 0-d array" when a Galaxy…</a> — autofit · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/model_identifier_raises_typeerror_iteration_over.md
 ```
 
 </details>
@@ -2168,6 +2200,30 @@ Use the start-dev skill. draft/bug/priors/15_transformed_message_logpdf_jacobian
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/cockpit_footer_broca_belongs_between_cortex_and.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfw_mge_deflections_lose_accuracy_for_inner.md">gNFW MGE deflections lose accuracy for inner_slope above 2…</a> — autogalaxy · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfw_mge_deflections_lose_accuracy_for_inner.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/jax_grad_of_sersic_stellar_mass_deflections.md">jax.grad of Sersic stellar-mass deflections is NaN with respect to mass_to_light_ratio…</a> — autogalaxy · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/jax_grad_of_sersic_stellar_mass_deflections.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/stellar_m_l_gradient_profiles_sersicgradient_piv.md">Stellar M/L-gradient profiles: SersicGradient pivots at R_e/q, GaussianGradient has the opposite sign…</a> — autogalaxy · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/stellar_m_l_gradient_profiles_sersicgradient_piv.md
 ```
 
 </details>
