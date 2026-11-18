@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 4 in flight",
-  "updated": "2026-11-18T12:47:09Z",
+  "headline": "RED \u2014 23 picks \u00b7 3 in flight",
+  "updated": "2026-11-18T12:58:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 ready (unblocked 2026-11-18; override answered \"Use 1\" on the issue 2026-11-16)",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1778",
-      "prompt": "Use the start-dev skill. active/ep_projected_model_shared_prior_keyerror.md"
     },
     {
       "severity": "yellow",
@@ -75,7 +69,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1778 \u2014 autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths",
+      "text": "pending release: PyAutoFit PyAutoFit#1778 \u2014 Outcome",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1778",
       "prompt": null
     },
@@ -126,6 +120,12 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: A model with compound priors cannot be written to model.json, so search.fit\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_model_with_compound_priors_cannot_be.md",
+      "prompt": "Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md"
     }
   ]
 }

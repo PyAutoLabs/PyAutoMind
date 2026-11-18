@@ -1,3 +1,23 @@
+## Outcome
+
+Shipped in PyAutoFit#1778 (merged `fea8c01b`, 2026-11-18). `Samples.values_for_path`
+now resolves a path to the group of all paths naming the same prior and reads the value
+under whichever alias the sample's kwargs hold, the rule `Sample.parameter_lists_for_paths`
+already used. `Result.projected_model` no longer raises `KeyError` for a prior shared
+across model paths (e.g. an MGE source whose Gaussians share one `centre` prior).
+
+- Files: `autofit/non_linear/samples/samples.py`, `test_autofit/graphical/test_unification.py`
+  (shared-prior `values_for_path` and `projected_model` tests).
+- Tests: full `test_autofit` 4291 passed; autofit_workspace smoke 8/8 scripts + 2/2 notebooks.
+- Downstream: no workspace or library calls `values_for_path`/`projected_model`; no workspace PR.
+- Not run: the Witness science leg (`Science/development/ep_gnfw_slope`
+  `python scripts/ep.py --total 3 --max_steps 2 --smoke`). Run it to confirm the
+  `ep_gnfw_slope` unblock.
+
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1778
+
+## Original prompt
+
 # autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths
 
 Type: bug

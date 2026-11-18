@@ -16,11 +16,11 @@
 <!-- toc:end -->
 
 ## issue-templates-route-bugs-to-hub
-- status: blocked — repos claimed by other tasks
+- status: ready — all blocking claims released 2026-11-18
 - filed: 2026-11-17
 - prompt: draft/maintenance/workspaces/issue_templates_route_bugs_to_hub.md
 - summary: drop the bug_report issue template (7 repos + .github org default), add the Bugs & Errors contact link everywhere, blank_issues_enabled false; update policy/community_surface.md §2 (reverses the 2026-09 choice)
-- blocked-by: PyAutoFit (ep-projected-model-shared-prior) — autolens_workspace (cluster-regime-narrative) released 2026-11-18; galaxy-duplicate-pytree-registration released 2026-11-18 (PyAutoArray#702 merged)
+- unblocked: 2026-11-18 — PyAutoFit claim (ep-projected-model-shared-prior) released (PyAutoFit#1778 merged); autolens_workspace (cluster-regime-narrative) released 2026-11-18; galaxy-duplicate-pytree-registration released 2026-11-18 (PyAutoArray#702 merged)
 - decision: human confirmed 2026-11-17 that blank_issues_enabled: false is acceptable (maintainer hand-filing via the web chooser is given up; API filing unaffected)
 - affected-repos:
   - PyAutoArray

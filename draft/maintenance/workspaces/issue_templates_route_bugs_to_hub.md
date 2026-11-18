@@ -36,4 +36,4 @@ unedited bug template from a new account (closed 2026-11-17).
 - The config.yml files are generated from the community-surface sentences; edit the generator
   source, not each file by hand, if one exists.
 - Blocked on 2026-11-17 by claims: PyAutoGalaxy (galaxy-duplicate-pytree-registration),
-  PyAutoFit (ep-projected-model-shared-prior), autolens_workspace (cluster-regime-narrative). The autolens_workspace claim was released on 2026-11-18 (autolens_workspace#671 merged). The galaxy-duplicate-pytree-registration claim was released on 2026-11-18 (PyAutoArray#702 merged).
+  PyAutoFit (ep-projected-model-shared-prior), autolens_workspace (cluster-regime-narrative). The autolens_workspace claim was released on 2026-11-18 (autolens_workspace#671 merged). The galaxy-duplicate-pytree-registration claim was released on 2026-11-18 (PyAutoArray#702 merged). The ep-projected-model-shared-prior claim was released on 2026-11-18 (PyAutoFit#1778 merged), so no blocking claim remains.

@@ -22,22 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## ep-projected-model-shared-prior
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1773
-- issued: 2026-11-13
-- session: Claude Code desktop (WSL)
-- status: library-shipped, awaiting-merge
-- prompt: active/ep_projected_model_shared_prior_keyerror.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1778
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1778
-- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-projected-model-shared-prior
-- tier: judge — merge mode: human /prm
-- repos:
-  - PyAutoFit: feature/ep-projected-model-shared-prior
-- conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs, human-review); human approved 2026-11-13 a separate worktree off main (non-overlapping files: samples.py + tests)
-- unblocks: Science/development/ep_gnfw_slope N=3 EP smoke
-- coordination: human approved 2026-11-18 (Q8) sharing PyAutoFit with results_library_p5c_dr1_census — the census is read-only on RAL against released 2026.11.12.1 and writes only a PyAutoCortex ledger line; no PyAutoFit edits, no file overlap
-
 ## dataset-model-free-grid-offset-pytree-roundtrip
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
 - issued: 2026-11-16
