@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2312 records across 11 buckets.
+2313 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -137,6 +137,7 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p3d](2026/11/autonomous-orchestrators-p3d.md) — phase 3d of 3a–3d — closes phase 3; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4a](2026/11/autonomous-orchestrators-p4a.md) — phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+- [batch-claim-gate-declared-repos](2026/11/batch-claim-gate-declared-repos.md)
 - [batch-slice](2026/11/batch-slice.md)
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
 - [blurring-mask-separable](2026/11/blurring-mask-separable.md)

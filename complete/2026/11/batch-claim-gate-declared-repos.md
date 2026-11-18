@@ -1,3 +1,15 @@
+## Summary
+
+The batch claim gate no longer counts a prompt's `Target:` as a repo when the prompt declares `Repos:`. `declared_repos()` in `agents/conductors/batch/_batch.py` now returns the known repos from `Repos:` alone. It falls back to `Target:` and then to the survey repos only when `Repos:` names no known repo. The trigger was readiness ruling Q8 (2026-11-18): `results_library_p5c_dr1_census` (Repos: PyAutoCortex, Target: autofit) was held on a PyAutoFit claim. That ruling was answered with a coordination line, which can now stay or go.
+
+- PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/676 (merged 2026-11-18, tier notify, auto-merge on green)
+- Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/675
+- Tests: `tests/test_batch_declared_repos.py` (5); full suite 2370 passed, 1 skipped.
+- Witness: held. A Cortex-only prompt is not held by a claim on its Target repo, a prompt naming the claimed repo is held, and a prompt without `Repos:` falls back to Target.
+- Lesson: organ test files must not name instance repos (PyAutoFit etc.). The tenant-firewall lint in Brain CI rejects them; use organ names (PyAutoEyes, PyAutoCortex) in fixtures.
+
+## Original prompt
+
 # Batch claim gate counts a prompt's Target: as a repo even when Repos: is declared
 
 Type: bug
