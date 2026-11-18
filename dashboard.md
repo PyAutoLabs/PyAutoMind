@@ -17,6 +17,10 @@
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
+> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
+
+> - `draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md — its own `Status:` says superseded, but the prompt never left draft/ (reconcile its lifecycle)`
+
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
 
