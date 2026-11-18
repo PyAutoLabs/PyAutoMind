@@ -42,11 +42,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
 - issued: 2026-11-16
 - session: shift worker 2026-11-16-pm (b778571d)
-- status: awaiting-input
+- status: ready (unblocked 2026-11-18; override answered "Use 1" on the issue 2026-11-16)
 - prompt: active/dataset_model_free_grid_offset_pytree_roundtrip.md
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1777#issuecomment-6925508074
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - suggested-branch: feature/model-pytree-tuple-prior
-- blocked-by: ep-projected-model-shared-prior (using PyAutoFit) — override asked on the issue
+- coordination: shares PyAutoFit with ep-projected-model-shared-prior (#1773, PR #1778 awaiting /prm); human-approved override, separate worktree off main, no file overlap (that task: samples/samples.py + test_unification.py; this one: prior_model.py, tuple_prior.py, jax/pytrees.py + new test)
 - heart-ack:
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
