@@ -13,6 +13,9 @@ with `prompt_sync_push` and runs `lifecycle.py check`.
     python3 scripts/questions_edit.py add    --task PATH --issue URL --kind question|blocked
                                              --ask TEXT [--option TEXT]... --shift S
                                              --asked T --worker K
+    python3 scripts/questions_edit.py add    --task PATH [--issue URL] --kind ruling
+                                             --gate SLUG --ask TEXT [--option TEXT]...
+                                             --shift S --asked T --worker K
     python3 scripts/questions_edit.py answer Q<n> --text TEXT [--comment URL]
                                              [--by LOGIN] [--via chat|issue]
     python3 scripts/questions_edit.py defer  Q<n> [--until YYYY-MM-DD] [--by LOGIN]
@@ -22,7 +25,10 @@ with `prompt_sync_push` and runs `lifecycle.py check`.
 The section an entry sits under is its state: Open, Deferred, Answered,
 Dropped. Ids are global and increasing (the file's highest plus 1, worked out
 in the tree being written), and `(shift, task, issue)` is unique: an add
-whose triple exists is a silent repeat. `answer` also appends the answer to
+whose triple exists is a silent repeat. A `ruling` (PyAutoBrain's readiness
+pass, `batch ready`, M3.3, filing a gate it found on a queued task) carries
+`gate:` and may have no `issue:`; while one on the same task and gate is Open
+or Deferred, another add of it is a silent repeat, whatever the shift. `answer` also appends the answer to
 the task's prompt under `## Answers from the human` (wherever the prompt is
 now, `draft/` or `active/`) — the next worker reads it there — and prints
 `prompt: <path>` so the caller commits that path too. A write that would add a
@@ -57,13 +63,17 @@ a `/questions` chat (PyAutoBrain `skills/questions`) answers, defers or drops
 them with `scripts/questions_edit.py`. Never edit by hand: the section an
 entry sits under is its state, and `lifecycle.py check` validates the file.
 An answer releases the parked task: the next shift resumes it with the answer
-in its prompt.
+in its prompt. Kind `ruling` is filed by the readiness pass (PyAutoBrain
+`batch ready`, M3.3) for a gate on a queued task: it carries `gate:`, may have
+no `issue:`, never holds or releases a parked task, and answering it records
+the ruling on the prompt.
 
 ```markdown
 ### Q<n>. <task> — <short ask>
 - task: draft/<work-type>/<target>/<name>.md
 - issue: https://github.com/<owner>/<repo>/issues/<n>
 - kind: question
+- gate: <kebab-case slug>         (kind ruling only; a ruling may have no issue:)
 - ask: <one line>
 - options: (a) <first> · (b) <second>
 - shift: <slot>
@@ -124,6 +134,17 @@ def _find(text: str, who: str) -> dict:
     return e
 
 
+def is_ruling(fields: dict) -> bool:
+    return (fields or {}).get("kind") == lifecycle.QUESTION_RULING
+
+
+def subject(fields: dict) -> str:
+    """`ruling <gate>` for a ruling; the issue's short form otherwise."""
+    if is_ruling(fields):
+        return f"ruling {fields.get('gate') or '?'}"
+    return issue_short(fields.get("issue", ""))
+
+
 def issue_short(url: str) -> str:
     """`autolens_workspace#670` for an issue URL; the URL itself otherwise."""
     m = ISSUE_RE.match(url or "")
@@ -164,10 +185,17 @@ def entry_errors(entry: dict) -> "list[str]":
     """What is wrong with an add's entry; empty when it may be added."""
     if not isinstance(entry, dict):
         return ["the entry is not an object"]
-    errs = [f"{k} is missing" for k in lifecycle.QUESTION_REQUIRED
+    kind = entry.get("kind")
+    errs = [f"{k} is missing" for k in lifecycle.question_required(kind)
             if not isinstance(entry.get(k), str) or not _one_line(entry.get(k))]
-    if entry.get("kind") and entry.get("kind") not in lifecycle.QUESTION_KINDS:
+    if kind and kind not in lifecycle.QUESTION_KINDS:
         errs.append(f"kind must be one of {' | '.join(lifecycle.QUESTION_KINDS)}")
+    for k in ("issue", "gate"):
+        if entry.get(k) is not None and not isinstance(entry.get(k), str):
+            errs.append(f"{k} must be a string")
+    gate = entry.get("gate")
+    errs += lifecycle.question_gate_errors(
+        kind, _one_line(gate) if isinstance(gate, str) else None)
     task = entry.get("task")
     if isinstance(task, str) and task and (not task.startswith(("draft/", "active/"))
                                            or ".." in Path(task).parts):
@@ -181,9 +209,13 @@ def entry_errors(entry: dict) -> "list[str]":
 def add_text(text: str, entry: dict, root: "Path | None" = None) -> "tuple[str, str, bool]":
     """(`questions.md` with `entry` added at the end of `## Open`, its id,
     whether it was added). An entry whose `(shift, task, issue)` is already
-    in the file is a silent repeat: (text unchanged, that id, False).
+    in the file is a silent repeat: (text unchanged, that id, False). A
+    ruling repeats an Open or Deferred ruling on the same task and gate,
+    whatever its shift; once that one is Answered or Dropped it may be filed
+    again.
 
-    `entry`: {task, issue, kind, ask, options: [..], shift, asked, worker}.
+    `entry`: {task, issue, kind, ask, options: [..], shift, asked, worker},
+    plus `gate` for kind ruling (whose `issue` is optional).
     With `root` (the tree being written), `task` is resolved to where the
     prompt is now and refused when it is in neither `draft/` nor `active/`."""
     errs = entry_errors(entry)
@@ -197,17 +229,27 @@ def add_text(text: str, entry: dict, root: "Path | None" = None) -> "tuple[str, 
         task = now
     text = text if text.strip() else TEMPLATE
     entries = parse(text)
-    issue, shift = _one_line(entry["issue"]), _one_line(entry["shift"])
+    issue, shift = _one_line(entry.get("issue")), _one_line(entry["shift"])
+    kind, gate = entry["kind"], _one_line(entry.get("gate"))
     for e in entries:
         f = e["fields"]
-        if (f.get("shift"), Path(f.get("task", "")).name, f.get("issue")) == \
-                (shift, Path(task).name, issue):
+        same_task = Path(f.get("task", "")).name == Path(task).name
+        if kind == lifecycle.QUESTION_RULING:
+            if is_ruling(f) and same_task and f.get("gate") == gate \
+                    and e["state"] in ("open", "deferred"):
+                return text, e["id"], False
+        elif issue and not is_ruling(f) and same_task \
+                and (f.get("shift"), f.get("issue")) == (shift, issue):
             return text, e["id"], False
     n = max([e["n"] for e in entries] or [0]) + 1
     ask = _clip(entry["ask"], ASK_MAX)
-    block = [f"### Q{n}. {Path(task).stem} — {_clip(ask, SHORT_MAX)}",
-             f"- task: {task}", f"- issue: {issue}", f"- kind: {entry['kind']}",
-             f"- ask: {ask}"]
+    block = [f"### Q{n}. {Path(task).stem} — {_clip(ask, SHORT_MAX)}", f"- task: {task}"]
+    if issue:
+        block.append(f"- issue: {issue}")
+    block.append(f"- kind: {kind}")
+    if kind == lifecycle.QUESTION_RULING:
+        block.append(f"- gate: {gate}")
+    block.append(f"- ask: {ask}")
     options = _labelled(entry.get("options"))
     if options:
         block.append(f"- options: {options}")
@@ -247,6 +289,8 @@ def add(root: Path, entry: dict) -> str:
     old = _read(root)
     new, qid, added = add_text(old, entry, root)
     if not added:
+        if entry.get("kind") == lifecycle.QUESTION_RULING:
+            return f"{qid} already holds this ruling (same task and gate, still open) — no change"
         return f"{qid} already holds this question (same shift, task and issue) — no change"
     _write(root, [(FILE, old if (root / FILE).exists() else None, new)])
     return f"added {qid}"
@@ -293,8 +337,12 @@ def answer(root: Path, who: str, text: str, comment: str = "", by: str = "",
     writes = [(FILE, old, new)]
     prompt = task_now(root, f.get("task", ""))
     if prompt is not None:
-        line = (f"- {e['id']} ({day or _today()}, shift {f.get('shift', '?')} question on "
-                f"{issue_short(f.get('issue', ''))}): {said}" + (f" {comment}" if comment else ""))
+        if is_ruling(f):
+            what = f"{subject(f)}, shift {f.get('shift', '?')}"
+        else:
+            what = f"shift {f.get('shift', '?')} question on {subject(f)}"
+        line = (f"- {e['id']} ({day or _today()}, {what}): {said}"
+                + (f" {comment}" if comment else ""))
         ptext = (root / prompt).read_text(encoding="utf-8")
         writes.append((prompt, ptext, append_answer(ptext, line)))
     _write(root, writes)
@@ -378,7 +426,7 @@ def show(root: Path, which: str = "", who: str = "", today: str = "") -> "list[s
     out = []
     for e in picked:
         f = e["fields"]
-        out.append(f"{e['id']} [{e['state']}] {e['title']} — {issue_short(f.get('issue', ''))}"
+        out.append(f"{e['id']} [{e['state']}] {e['title']} — {subject(f)}"
                    + (f" (until {f['until']})" if f.get("until") else ""))
     counts = {s.lower(): sum(e["state"] == s.lower() for e in entries)
               for s in lifecycle.QUESTION_SECTIONS}
@@ -397,8 +445,10 @@ def main(argv=None) -> int:
     s.add_argument("qid", nargs="?", default="")
     s.add_argument("--today", default="", help=argparse.SUPPRESS)
     a = sub.add_parser("add")
-    for k in ("task", "issue", "kind", "ask", "shift", "asked", "worker"):
+    for k in ("task", "kind", "ask", "shift", "asked", "worker"):
         a.add_argument(f"--{k}", required=True)
+    a.add_argument("--issue", default=None, help="required unless --kind ruling")
+    a.add_argument("--gate", default=None, help="kind ruling only: the gate's slug")
     a.add_argument("--option", action="append", default=[])
     r = sub.add_parser("answer")
     r.add_argument("qid")
@@ -429,7 +479,8 @@ def main(argv=None) -> int:
             return 0
         if args.verb == "add":
             entry = {k: getattr(args, k) for k in
-                     ("task", "issue", "kind", "ask", "shift", "asked", "worker")}
+                     ("task", "issue", "kind", "ask", "shift", "asked", "worker", "gate")
+                     if getattr(args, k) is not None}
             entry["options"] = list(args.option)
             print(f"questions.md: {add(root, entry)}")
         elif args.verb == "answer":

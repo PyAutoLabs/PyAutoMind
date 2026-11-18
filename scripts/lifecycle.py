@@ -3064,7 +3064,28 @@ QUESTION_SECTION_RE = re.compile(r"^##\s+(Open|Deferred|Answered|Dropped)\b")
 QUESTION_HEAD_RE = re.compile(r"^###\s+Q(\d+)\.\s+(.+?)\s*$")
 QUESTION_FIELD_RE = re.compile(r"^-\s+([a-z][a-z-]*):[ \t]*(.*?)\s*$")
 QUESTION_REQUIRED = ("task", "issue", "kind", "ask", "shift", "asked", "worker")
-QUESTION_KINDS = ("question", "blocked")
+QUESTION_KINDS = ("question", "blocked", "ruling")
+#: A `ruling` (filed by PyAutoBrain's readiness pass, `batch ready`, M3.3) names
+#: the gate it found on a queued task in `gate:` and may have no `issue:`.
+QUESTION_RULING = "ruling"
+QUESTION_GATE_RE = re.compile(r"^[a-z][a-z0-9-]*$")
+
+
+def question_required(kind: "str | None") -> "tuple[str, ...]":
+    """The keys an entry of `kind` must carry: a ruling needs `gate:`, not `issue:`."""
+    if kind == QUESTION_RULING:
+        return tuple(k for k in QUESTION_REQUIRED if k != "issue") + ("gate",)
+    return QUESTION_REQUIRED
+
+
+def question_gate_errors(kind: "str | None", gate) -> "list[str]":
+    """What is wrong with an entry's `gate:` given its kind (missing is left
+    to the required-key check)."""
+    if kind == QUESTION_RULING:
+        if gate and not QUESTION_GATE_RE.match(str(gate)):
+            return [f"gate `{gate}` is not a kebab-case slug ([a-z][a-z0-9-]*)"]
+        return []
+    return ["gate: is for kind ruling only"] if gate else []
 #: The keys each later state adds (and `reopen` strips).
 QUESTION_STATE_KEYS = ("until", "deferred", "answered", "answer", "answer-comment",
                        "dropped")
@@ -3145,21 +3166,34 @@ def questions_findings(root: Path) -> "list[Finding]":
     out = [Finding(f"questions.md: {e}", at) for e in errors]
     seen: "dict[str, int]" = {}
     triples: "dict[tuple, str]" = {}
+    rulings: "dict[tuple, str]" = {}
     for e in entries:
         qid, f = e["id"], e["fields"]
         seen[qid] = seen.get(qid, 0) + 1
         if seen[qid] == 2:
             out.append(Finding(f"questions.md: {qid} is used twice — ids are unique", at))
-        missing = [k for k in QUESTION_REQUIRED + QUESTION_STATE_REQUIRED.get(e["state"], ())
-                   if not f.get(k)]
+        kind = f.get("kind")
+        missing = [k for k in question_required(kind)
+                   + QUESTION_STATE_REQUIRED.get(e["state"], ()) if not f.get(k)]
         if missing:
             out.append(Finding(f"questions.md: {qid} has no {', '.join(k + ':' for k in missing)}",
                                at))
-        if f.get("kind") and f["kind"] not in QUESTION_KINDS:
-            out.append(Finding(f"questions.md: {qid} has kind `{f['kind']}` — one of "
+        if kind and kind not in QUESTION_KINDS:
+            out.append(Finding(f"questions.md: {qid} has kind `{kind}` — one of "
                                f"{' | '.join(QUESTION_KINDS)}", at))
+        for err in question_gate_errors(kind, f.get("gate")):
+            out.append(Finding(f"questions.md: {qid} {err}", at))
+        if kind == QUESTION_RULING and f.get("gate") and f.get("task") \
+                and e["state"] in ("open", "deferred"):
+            pair = (Path(f["task"]).name, f["gate"])
+            if pair in rulings:
+                out.append(Finding(f"questions.md: {qid} repeats {rulings[pair]} (an open "
+                                   f"ruling on the same task and gate `{f['gate']}`) — "
+                                   "keep one", at))
+            rulings.setdefault(pair, qid)
+        # Rulings are unique by (task, gate) below, not by this triple.
         triple = (f.get("shift"), f.get("task"), f.get("issue"))
-        if all(triple):
+        if kind != QUESTION_RULING and all(triple):
             if triple in triples:
                 out.append(Finding(f"questions.md: {qid} repeats {triples[triple]} (same "
                                    "shift, task and issue) — keep one", at))
