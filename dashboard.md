@@ -86,7 +86,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-18-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 1 running, 3 finished · tokens 1024532 of 5000000 (close-outs 92985; cache-read 35213126) · review-at 2026-11-18T17:30Z (as of 2026-11-18T16:20:53Z) · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587#issuecomment-6982138507)
+Live: LIVE · 4 finished · tokens 1097204 of 5000000 (close-outs 139849; cache-read 37422643) · review-at 2026-11-18T17:30Z (as of 2026-11-18T16:30:22Z) · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587#issuecomment-6982138507)
 
 _(nothing to review yet)_
 
@@ -1404,7 +1404,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md">gNFWMCRLudlow normalises kappa_s with the NFW mass function whatever the inner slope…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/723">issue #723</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md">gNFWMCRLudlow normalises kappa_s with the NFW mass function whatever the inner slope…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/723">issue #723</a> — issued 2026-11-18 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724">PyAutoGalaxy#724</a></summary>
 
 ```
 Use the start-dev skill. active/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md
