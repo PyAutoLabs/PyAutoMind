@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 292 |
+| [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1519,7 +1519,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 235 · ral 34 · local-dev 12 · wsl-data 9
+Lanes: any 236 · ral 34 · local-dev 12 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1879,7 +1879,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 56</summary>
+<summary><b>bug</b> — 57</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2085,6 +2085,14 @@ Use the start-dev skill. draft/bug/workspaces/convolver_blurring_image_warning.m
 
 ```
 Use the start-dev skill. draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/model_identifier_ignores_jax_array_and_numpy_scalar_values.md">Model identifier ignores the value of JAX arrays and some NumPy scalars</a> — autofit · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/model_identifier_ignores_jax_array_and_numpy_scalar_values.md
 ```
 
 </details>
@@ -3186,7 +3194,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-117 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3231,7 +3239,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- _… and 77 more_
+- _… and 78 more_
 
 </details>
 
