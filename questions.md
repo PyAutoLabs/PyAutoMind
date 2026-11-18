@@ -26,6 +26,36 @@ the ruling on the prompt.
 
 ## Open
 
+### Q11. campaign_fill_submit_without_dependency — `campaign_fill_submit_without_dependency` cannot start: repo PyAutoFi…
+- task: draft/feature/autofit/campaign_fill_submit_without_dependency.md
+- kind: ruling
+- gate: claimed
+- ask: `campaign_fill_submit_without_dependency` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
+- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-18-pm
+- asked: 2026-11-18T17:32Z
+- worker: readiness pass
+
+### Q12. campaign_per_stage_status_root — `campaign_per_stage_status_root` cannot start: repo PyAutoFit is clai…
+- task: draft/feature/autofit/campaign_per_stage_status_root.md
+- kind: ruling
+- gate: claimed
+- ask: `campaign_per_stage_status_root` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
+- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-18-pm
+- asked: 2026-11-18T17:32Z
+- worker: readiness pass
+
+### Q13. campaign_zip_complete_pattern — `campaign_zip_complete_pattern` cannot start: repo PyAutoFit is claim…
+- task: draft/feature/autofit/campaign_zip_complete_pattern.md
+- kind: ruling
+- gate: claimed
+- ask: `campaign_zip_complete_pattern` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
+- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-18-pm
+- asked: 2026-11-18T17:32Z
+- worker: readiness pass
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ### Q5. numba_wtilde_validation_legs_stall_nautilus — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAu…
