@@ -1,3 +1,13 @@
+`gNFWMCRLudlow` now normalises `kappa_s` with the gNFW mass integral instead of the NFW Ludlow helper, which ignored `inner_slope`. On main the 3D mass inside r200 divided by `mass_at_200` was 0.820, 1.000, 1.263 and 1.708 for inner_slope 0.5, 1.0, 1.5 and 2.0; after the fix it is 1.000000 for all four. Adds the public helper `mcr_util.kappa_s_and_scale_radius_for_ludlow_gnfw`.
+
+Decision taken and accepted by the human at /prm ("merge 724 as is"): the Ludlow concentration stays c = r200 / r_s (not r200 / r_-2, which sends r_s to infinity at inner_slope 2, inside the default prior). Fits with inner_slope != 1 now infer a different, true M200.
+
+Shipped in PyAutoGalaxy#724 (merged 2026-11-18 by human /prm). Done by shift worker 2026-11-18-pm (1913ad55); the unattended close-out refused the merge because it added a public name.
+
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724
+
+## Original prompt
+
 # gNFWMCRLudlow normalises kappa_s with the NFW mass function whatever the inner slope…
 
 Type: bug

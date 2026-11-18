@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-18T17:44:41Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 2 in flight",
+  "updated": "2026-11-18T17:46:50Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "gNFWMCRLudlow normalises kappa_s with the NFW mass function whatever the inner slope\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724",
-      "prompt": "Use the start-dev skill. active/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md"
-    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -95,6 +89,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#720 \u2014 ellipse-multipole-latent-missing-m",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#724 \u2014 gnfw-mcr-ludlow-normalisation",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724",
       "prompt": null
     },
     {
