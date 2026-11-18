@@ -9,11 +9,11 @@
 | Where | Count |
 |-------|------:|
 | [Autopilot](#autopilot) | 3 |
-| [Start here](#start-here) | 23 |
+| [Start here](#start-here) | 22 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 289 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -95,7 +95,7 @@ _(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -161,6 +161,14 @@ Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_1
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautobrain/batch_claim_gate_target_overrides_declared_repos.md">Batch claim gate counts a prompt's Target: as a repo even…</a> — pyautobrain · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/batch_claim_gate_target_overrides_declared_repos.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
 ```
@@ -185,15 +193,15 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 </details>
 
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/batch_claim_gate_target_overrides_declared_repos.md">Batch claim gate counts a prompt's Target: as a repo even…</a> — pyautobrain · medium · safe · high</summary>
 
 ```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+Use the start-dev skill. draft/bug/pyautobrain/batch_claim_gate_target_overrides_declared_repos.md
 ```
 
 </details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -279,14 +287,6 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 ```
 Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually contains group members</a> — autolens_workspace_test · medium · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md
 ```
 
 </details>
@@ -1522,7 +1522,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 34 · local-dev 13 · wsl-data 9
+Lanes: any 231 · ral 34 · local-dev 13 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1890,7 +1890,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 54</summary>
+<summary><b>bug</b> — 55</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1928,6 +1928,14 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/batch_claim_gate_target_overrides_declared_repos.md">Batch claim gate counts a prompt's Target: as a repo even…</a> — pyautobrain · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/batch_claim_gate_target_overrides_declared_repos.md
 ```
 
 </details>
