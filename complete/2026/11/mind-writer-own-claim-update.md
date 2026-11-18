@@ -1,3 +1,11 @@
+A shift worker's update of its own `active.md` claim (drop-section then append of the same `## slug`) is no longer set aside by the Mind writer as a conflict. The writer classed every drop-section as a closing op applied after the task's other ops, so the append ran first against the still-present section; in shift 2026-11-18-pm2 this set aside the PR-open update of `stellar_m_l_gradient_profiles_sersicgradient_piv` (PyAutoGalaxy#726) and raised NEEDS YOU (repaired by hand, Mind d5fb06628).
+
+Shipped in PyAutoBrain#682 (merged 2026-11-18 by human /prm): `_update_pairs` pairs the drop with its append as one update unit; `_own_section` allows it only for this shift's own section (committed earlier this shift, or `- session:` naming this slot's shift worker, short id or full UUID); a lone drop stays closing. Tests: 670 batch/orchestrator passed; full suite 2384 passed with one local-env failure (`test_questions_inbox`, fails identically on main locally; main CI green).
+
+Deploy: the watcher's Brain checkout is fast-forwarded only after shift 2026-11-18-pm2's late window closes (22:15Z).
+
+## Original prompt
+
 # A shift worker's update of its own claim is not a Mind-writer conflict
 
 Type: bug
