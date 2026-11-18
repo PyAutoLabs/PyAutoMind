@@ -25,7 +25,8 @@
 ## model-identifier-0d-array
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1784
 - session: shift worker 2026-11-18-pm2 (d856a027)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1785
 - worktree: ~/Code/PyAutoLabs-wt/model-identifier-0d-array
 - prompt: active/model_identifier_raises_typeerror_iteration_over.md
 - repos:
