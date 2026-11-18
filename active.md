@@ -22,18 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## gnfwvirialmassconcsph_gives_kappa_s_1e_171_under
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/721
-- issued: 2026-11-18
-- session: shift worker 2026-11-18-pm (3a65b07c-5df2-4cfb-b69a-c058f5bdb681)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722
-- worktree: ~/Code/PyAutoLabs-wt/gnfw-virial-jax-hyp2f1
-- repos:
-  - PyAutoGalaxy: feature/gnfw-virial-jax-hyp2f1
-- heart-ack:
-  - acknowledged by the human 2026-11-18 ("YELLOW acknowledged"): YELLOW score 85 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source
-
 ## compound-prior-model-json
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1782
 - issued: 2026-11-18

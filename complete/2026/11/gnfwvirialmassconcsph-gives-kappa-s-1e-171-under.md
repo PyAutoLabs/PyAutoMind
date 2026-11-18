@@ -1,3 +1,21 @@
+# gNFWVirialMassConcSph gives kappa_s ~1e-171 under JAX because jax.scipy.special.hyp2f1 is wrong for z < -1
+
+Completed 2026-11-18. Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/721
+
+`kappa_s_and_scale_radius` in `autogalaxy/profiles/mass/dark/gnfw_virial_mass_conc.py` now evaluates 2F1(a, a; a+1; -c) on the JAX path through Pfaff's transformation, (1 + c)^-a 2F1(1, a; a+1; c/(1+c)), which keeps the argument in (0, 1) where `jax.scipy.special.hyp2f1` is accurate. The NumPy path keeps the direct SciPy call, unchanged. Two tests added: NumPy kappa_s against the closed form, and jitted kappa_s against NumPy over inner_slope 0 to 1.99 and c_2 2 to 2000. No other dark profile calls `hyp2f1`. The upstream jax defect was not reported in this task.
+
+## Merge receipts
+
+- PyAutoGalaxy#722: c2050ac34dbb0f1721e6cec4298ec8489502a6ad (head 0fd5e97546a1fca489cdfb9a44ae6c9feaed9952)
+
+## Validation and authorization
+
+Consequence `glance`, merged unattended by the 2026-11-18-pm shift close-out session (independent of the author). Witness re-run by the close-out at the PR head: jitted kappa_s equals NumPy over inner_slope 0 to 1.99 and c_2 / concentration 2 to 20 (420 cases), worst relative difference 5.6e-14; control: raw `jax.scipy.special.hyp2f1(2, 2, 3, -10)` returns 2.7e242. Dark-profile tests 228/228 at the PR head. public-names CLEAN; Heart scoped dev-ship verdict green; ci-verdict GREEN (4 success, 1 skipped: Refresh the Heart feed, not a test leg); Heart freeze clear.
+
+pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722
+
+## Original prompt
+
 # gNFWVirialMassConcSph gives kappa_s ~1e-171 under JAX because jax.scipy.special.hyp2f1 is wrong for z…
 
 Type: bug
