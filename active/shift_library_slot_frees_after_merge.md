@@ -7,8 +7,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-11-18
+Issued: 2026-11-18
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: `python -m pytest tests/test_batch_plan.py tests/test_batch_named_tasks.py -q` passes with new tests that fail on today's main: (1) a brief naming two glance tasks on PyAutoGalaxy plans only the first while the first is live or its PR is open; (2) once the watcher's counters record the first as done with every PR in its `merged` list, the next tick's plan admits the second; (3) a first task done with an open (unmerged or refused) PR, or parked on a question, still holds the library; (4) a first task abandoned with no PR frees it
