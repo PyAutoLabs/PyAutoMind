@@ -1,3 +1,25 @@
+## Outcome
+
+Shipped in PyAutoFit#1781 (merged `3ba1e6c3`, 2026-11-18). Follow-up to PyAutoFit#1777/#1779.
+
+- `Model.tree_flatten` (`autofit/mapper/prior_model/prior_model.py`) carries the model's fixed
+  direct attributes (not priors, tuple priors or child models; `cls`, `id` and private names
+  skipped) in the aux data via `_direct_fixed_tuples`; `tree_unflatten` passes them back as
+  keyword arguments, so the rebuilt model never falls back to a prior-config lookup.
+- `test_autofit/mapper/test_model_pytree_tuple_prior.py`: instance round-trip
+  (`instance_from_prior_medians`, `instance_from_vector`) for cases a-c with a fixed sky level;
+  fails in a and b without the fix.
+- Tests: CI GREEN; pytree/register_model files 190 passed; autofit + autogalaxy smoke passed.
+- Identifiers: model and search identifiers for five models (incl. shared prior and a
+  `DatasetModel` with fixed sky) identical before (`ac881b5cd`) and after (`aeac68800`).
+- Known limit: a fixed attribute that is unhashable (numpy array, list) now sits in pytree aux
+  data and could break JAX treedef comparison. Nothing flattens a `Model` under jit today
+  (`Fitness` closes over the model), so left as is.
+
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1781
+
+## Original prompt
+
 # Model pytree round-trip drops fixed non-prior attributes (e.g. a fixed sky level)
 
 Type: bug
