@@ -65,9 +65,10 @@
 ## delaunay-interpolated-plot
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/700
 - issued: 2026-11-17
-- session: Claude Code cloud session (claude.ai/code, session_016nhQ8MtKvVD9fBkNBqcMb4)
+- session: Claude Code cloud session (claude.ai/code, session_016nhQ8MtKvVD9fBkNBqcMb4); laptop follow-ups 2026-11-18 in Claude Code desktop (Opus 5.5, session ID unavailable)
 - status: awaiting-merge (library + workspace PRs open; human /prm)
 - location: cloud container clones (no worktrees on this surface); resume from the pushed branches
+- worktree: ~/Code/PyAutoLabs-wt/delaunay-interpolated-plot (laptop, created 2026-11-18 for the follow-ups)
 - repos:
   - PyAutoArray: feature/delaunay-interpolated-plot
   - PyAutoLens: feature/delaunay-interpolated-plot
@@ -79,9 +80,9 @@
 - prompt: active/delaunay_plot_shows_likelihood_interpolant.md
 - community: https://github.com/PyAutoLabs/.github/discussions/46 (draft the update for the human; do not post)
 - coordination: human approved 2026-11-17 sharing PyAutoArray with galaxy-duplicate-pytree-registration (abstract_ndarray.py only) and autolens_workspace with cluster-regime-narrative (scripts/cluster/ only); no file overlap
-- decisions: fit.png key `fit: subplot_fit_source_interpolated: true` (default ON, human 2026-11-17). Irregular-mesh source → imaging right column = Max Zoom / No Zoom (triangles) / Interpolated bottom right (max-zoom extent); false or rectangular/parametric → max/mid/no zoom. Interferometer: Zoomed (7) + Interpolated (11) by default, zoomed + no zoom when off; array-free 2x3 adds Interpolated in its free panel. PyAutoLens only; key mirrored with default true into autoarray plots.yaml and the 5 autolens workspaces
-- follow-up: draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md (interferometer fit.png should show zoomed + no zoom + interpolated; #864 drops no zoom when the key is on)
-- laptop-follow-ups: workspace smoke for the affected workspaces; re-render Delaunay figures in autolens_visualization / autogalaxy_visualization (cloud session has no LFS datasets / gallery harness)
+- decisions: fit.png key `fit: subplot_fit_source_interpolated: true` (default ON, human 2026-11-17, re-approved 2026-11-18). Source column (human 2026-11-18): No Zoom always bottom right (11); middle right (7) = Source Plane (Interpolated) (Delaunay/KNN + key on, max-zoom extent) else Mid Zoom; top right (3) = Max Zoom. Same column in imaging fit.png, fit_log10.png and interferometer fit.png (interferometer drops Dirty S/N; Dirty Model Image -> panel 2; source panels share vmax). Delaunay/KNN inversion_#.png right column = Max Zoom / Interpolated / No Zoom; rectangular inversion unchanged. Interpolated panel square, full-height colorbar. Array-free interferometer 2x3 untouched. Key mirrored into autoarray plots.yaml and the 5 autolens workspaces
+- follow-up: draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md SUPERSEDED by PyAutoLens#864 commit 1e212b43b (interferometer fit.png now Max Zoom / Interpolated / No Zoom); delete at close-out
+- laptop-follow-ups: DONE 2026-11-18 - smoke 124/124 pass (autolens_workspace 42 + 2 notebooks, autolens_workspace_test 39, HowToLens 41) at the final heads; Delaunay/KNN figures re-rendered in autolens_visualization + autogalaxy_visualization and pixel-diffed vs main (6 changed as intended, 44 identical, rectangular control identical); results: https://github.com/PyAutoLabs/PyAutoArray/issues/700#issuecomment-6975110365 ; review page C:\Users\Jammy\Workspace\Science\scratch\delaunay_interpolated_plot_2026-11-18\index.html ; re-rendered gallery PNGs not committed
 - tier: judge — merge mode: human /prm
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/701
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/864
@@ -92,7 +93,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/19
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/701
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/864
-- next: human /prm in library-first order (PyAutoArray#701 → PyAutoLens#864 → the 5 workspace PRs); laptop follow-ups before close-out; #46 update drafted for the human (not posted)
+- next: human /prm in library-first order (PyAutoArray#701 -> PyAutoLens#864 -> the 5 workspace PRs; heads e8a174a6 / 1e212b43b / 627a35cb / bee5f24 / 9b3cbab / 787cc0a / e99de4c); #46 update drafted for the human (not posted)
 
 ## batch-claim-gate-declared-repos
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/675

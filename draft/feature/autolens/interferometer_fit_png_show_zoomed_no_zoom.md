@@ -8,7 +8,7 @@ Repos:
 Difficulty: small
 Autonomy: human-required
 Priority: medium
-Status: formalised
+Status: superseded (2026-11-18: done in PyAutoLens#864 commit 1e212b43b, interferometer fit.png now Max Zoom / Interpolated / No Zoom; delete at delaunay-interpolated-plot close-out)
 Consequence: judge
 Witness: interferometer fit.png with a Delaunay source and the key on has Zoomed, No Zoom and Interpolated panels (unit test); key off unchanged; autolens_visualization interferometer Delaunay fit.png re-rendered and looked at
 Review-minutes: 20
