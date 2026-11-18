@@ -1423,7 +1423,7 @@ Use the start-dev skill. active/ep_projected_model_shared_prior_keyerror.md
 
 </details>
 
-<details><summary>📋 <a href="active/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises "Duplicate custom PyTreeDef type…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/693">issue #693</a> — issued 2026-09-27 — library-dev</summary>
+<details><summary>📋 <a href="active/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises "Duplicate custom PyTreeDef type…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/693">issue #693</a> — issued 2026-09-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/702">PyAutoArray#702</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/galaxy_duplicate_pytree_registration_after_jax_fitness.md
@@ -3311,6 +3311,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoArray**
 
 - [PyAutoArray#701](https://github.com/PyAutoLabs/PyAutoArray/pull/701) — `active/delaunay_plot_shows_likelihood_interpolant.md`
+- [PyAutoArray#702](https://github.com/PyAutoLabs/PyAutoArray/pull/702) — `active/galaxy_duplicate_pytree_registration_after_jax_fitness.md`
 - [PyAutoArray#697](https://github.com/PyAutoLabs/PyAutoArray/pull/697) — `complete/2026/11/blurring-mask-separable.md`
 - [PyAutoArray#699](https://github.com/PyAutoLabs/PyAutoArray/pull/699) — `complete/2026/11/convolver-fft-frame-from-mask.md`
 - [PyAutoArray#695](https://github.com/PyAutoLabs/PyAutoArray/pull/695) — `complete/2026/11/matern-vendor-bessel-kve.md`
