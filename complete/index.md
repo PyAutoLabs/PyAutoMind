@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2309 records across 11 buckets.
+2311 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -325,6 +325,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-named-tasks-and-planner-skips](2026/11/shift-named-tasks-and-planner-skips.md)
 - [shift-notify-merge-cap](2026/11/shift-notify-merge-cap.md)
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
+- [shift-readiness-pass](2026/11/shift-readiness-pass.md)
 - [shift-throughput-carryover](2026/11/shift-throughput-carryover.md)
 - [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)
 - [sibson-internal-edge-continuity](2026/11/sibson-internal-edge-continuity.md) — - The Watson per-triangle decomposition formed a circle through the query and every cavity-triangle edge, incl…
@@ -347,6 +348,7 @@ markers; everything below GENERATED is rebuilt.
 - [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
 - [website-lensing-intro](2026/11/website-lensing-intro.md) — - Added the approved three-sentence strong-lensing introduction with the autolens_assistant 2D schematic befor…
+- [worker-model-effort](2026/11/worker-model-effort.md)
 - [workspace-dataset-gallery](2026/11/workspace-dataset-gallery.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
 - [workspace-readme-images](2026/11/workspace-readme-images.md)

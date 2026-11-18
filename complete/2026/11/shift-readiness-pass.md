@@ -1,3 +1,19 @@
+## shift-readiness-pass
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/671
+- completed: 2026-11-18
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/585
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/674
+- **Scope merged: M3.3 slice 1, the readiness pass.** Slice 2 (the decisions sheet) is re-filed as `draft/feature/pyautobrain/shift_decisions_sheet.md`.
+- `pyauto-brain batch ready` walks `queue.md`. An epic ledger (`Status: campaign map`, `Epic:`, no `Phase:`) resolves to every open member at its lowest phase, across `draft/` and `active/`, checked against Mind `origin/main` locally; a plain prompt resolves to itself. It files one `ruling` per gate (`looks-shipped` and `obsolete` first and stop the rest; then `claimed`, `unattended`, `human-required`, `blocked-by`, `no-lane`; `no-next-phase` for an epic). A `judge` unit gets a note.
+- It runs offline at every shift end from `finish_shift`, and the digest ends "The next shift needs N rulings from you." On request: dry run by default, `--queue <slot>` (an existing slot, under the tick lock), `--apply` (into a checkout not on `main`, no commit), `--fetch` opt-in.
+- Mind: a new inbox kind `ruling` with a required `gate:` and an optional `issue:`; rulings never hold or release a parked task.
+- Human rulings 2026-11-18: L1 — a task and gate already ruled on, in any state, stays quiet (`/questions` reopen asks again); L5 — shadow shifts file rulings too.
+- Evidence: the Witness was red on main (`invalid choice: 'ready'`), then 27 `test_batch_ready.py` tests green; full Brain suite 2365 passed. Fable 5.2 review round 1 FINDINGS (M1 stale tree, M2 ledger detection, M3 member not next, M4 `--queue` lock, L2–L4, L6), fixed; round 2 CLEAN.
+- Traps: Mind's working tree is often behind origin mid-shift, so resolution checks origin locally. About 40 side tasks carry `Epic:` without `Phase:`, so `Status: campaign map` is what marks a ledger. A real-Mind Brain test skips until the Mind PR lands on main (CI reads Mind main).
+- Follow-ups (not filed): a campaign map with no `Epic:` header is graded as a prompt; a working-tree-only draft gets the advice "rerun after a pull".
+
+## Original prompt
+
 # M3.3 Readiness pass and decisions sheet: one sheet before a shift, one after
 
 Type: feature

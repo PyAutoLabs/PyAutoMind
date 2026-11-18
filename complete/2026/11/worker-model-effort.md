@@ -1,3 +1,13 @@
+## worker-model-effort
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/672
+- completed: 2026-11-18
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/673
+- Shift workers and close-outs start as `claude --bg --model opus --effort medium` (`WORKER_MODEL`/`WORKER_EFFORT` in `_orchestrator.py`; `CLOSEOUT_MODEL = WORKER_MODEL`). Before this, workers passed no `--model` or `--effort` and inherited the CLI default (Opus on high).
+- Human ruling 2026-11-18: spawned execution workers (Agent-tool subagents, shift workers, close-outs) default to Opus 5.5 at medium effort, whatever the session's own effort. Close-outs follow the workers. `skills/MODEL_DELEGATION.md` "Bounded worker contract" says so; an independent reviewer on another model leaves effort unset.
+- Evidence: full Brain suite 2337 passed; a live `claude --bg --model opus --effort medium` spawn ran to `done`; the Fable 5.2 review's three lows (stale argv in the batch `AGENTS.md`, the live test's argv, a vacuous assert) were fixed before PR-open.
+
+## Original prompt
+
 # Spawned workers run Opus 5.5 at medium effort
 
 Type: feature
