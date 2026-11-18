@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-11-17",
-  "scanned": 277,
+  "generated": "2026-11-18",
+  "scanned": 284,
   "repos": [
     "ECLIPSE_lens_catalogue",
     "HowToFit",
@@ -65,11 +65,11 @@
         {
           "kind": "witness-exists",
           "repo": "PyAutoBrain",
-          "evidence": "Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 55b7d30 2026-11-17 Merge pull request #664 from PyAutoLabs/feature/shift-launch-preflight (Filed 2026-11-17)"
+          "evidence": "Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 6c804c6 2026-11-18 Merge pull request #680 from PyAutoLabs/feature/shift-library-slot-frees-after-merge (Filed 2026-11-17)"
         }
       ],
-      "close": "python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-17 --from-file <record-body.md> --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply",
-      "dismiss": "echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md \u2014 2026-11-17 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md"
+      "close": "python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-18 --from-file <record-body.md> --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply",
+      "dismiss": "echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md \u2014 2026-11-18 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md"
     },
     {
       "path": "draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md",
@@ -80,11 +80,11 @@
         {
           "kind": "witness-exists",
           "repo": "PyAutoBrain",
-          "evidence": "Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 55b7d30 2026-11-17 Merge pull request #664 from PyAutoLabs/feature/shift-launch-preflight (Filed 2026-11-17) (+1 more)"
+          "evidence": "Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 6c804c6 2026-11-18 Merge pull request #680 from PyAutoLabs/feature/shift-library-slot-frees-after-merge (Filed 2026-11-17) (+1 more)"
         }
       ],
-      "close": "python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-17 --from-file <record-body.md> --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply",
-      "dismiss": "echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md \u2014 2026-11-17 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md"
+      "close": "python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-18 --from-file <record-body.md> --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply",
+      "dismiss": "echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md \u2014 2026-11-18 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md"
     }
   ]
 }
