@@ -8,8 +8,9 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-11-17
+Issued: 2026-11-18
 Epic: autonomous-orchestrators
 Phase: 10
 Consequence: judge
