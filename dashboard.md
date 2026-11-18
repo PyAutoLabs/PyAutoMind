@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 295 |
+| [Backlog](#backlog) | 296 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -80,14 +80,9 @@ _3 queued · 0 questions_
 2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 
-**Questions** (0 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred, 1 ruling — [`questions.md`](questions.md))
 
-- Q4 — `hpc_sync_submit_pass_time_requeue_env` is Unattended: never, so no shift starts it. (ruling unattended, today)
 - Q5 — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it. (ruling claimed, today)
-- Q6 — `numba_wtilde_validation_legs_stall_nautilus` is Unattended: never, so no shift starts it. (ruling unattended, today)
-- Q7 — Epic hpc-campaign is queued but no next-phase prompt is filed (no open Phase: member in draft/ or active/). (ruling no-next-phase, today)
-- Q9 — `results_library_p5c_dr1_census` is Unattended: never, so no shift starts it. (ruling unattended, today)
-- Q10 — `results_library_p5c_dr1_census` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, today)
 
 **Shift**
 
@@ -479,12 +474,20 @@ Use the start-dev skill. draft/feature/autolens/lenstwin_epic.md
 </details>
 
 <details>
-<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 3 queued prompt(s), in order</summary>
+<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — ledger: <code>draft/research/autofit/hpc_campaign_epic.md</code> — STARTED 2026-10-28 — concurrent with results-library; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
 ```
 Continue the 'HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative `campaign.yaml` with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting' epic. Its canonical state lives in draft/research/autofit/hpc_campaign_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: amended phase map (2026-10-28): 0 → issued as results-library phase 0; 1 status record + failure record + `states.py` + Nerves `site.yaml` (merges after results-library PR 0a); 2 campaign core + Slurm/Local/Fake adapters + collector + partition lint + retrospective mode from a sacct dump; 3 evidence readers (Pulse/Insight JSON with evidence grades) + `plan` + `pilot`; 4 carbon + report (parallel with 3); 5 organism integration (assistant template v2 + sync verbs + skill, Cortex `sync-runs` under decision 62, Brain conductor + governance hook, pipeline adoption after DR1 v1.0); 6 generalisation. Hard constraint: never CPU arrays on RAL `gpu`. Report: draft/research/autofit/hpc_campaign_epic_report.md; surveys hpc_campaign_epic_surveys/; scoping review Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/campaign_fill_submit_without_dependency.md">autofit.campaign: a fill or straggler submit with no dependency on the upstream…</a> — autofit · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/campaign_fill_submit_without_dependency.md
 ```
 
 </details>
@@ -534,7 +537,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autofit/results_library_p5c_dr1_census.md">Results library 5c — read-only census of the DR1 v5 500-lens sample…</a> — autofit · medium · human-required · normal</summary>
+<details><summary>📋 <a href="draft/feature/autofit/results_library_p5c_dr1_census.md">Results library 5c — read-only census of the DR1 v5 500-lens sample…</a> — autofit · medium · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/feature/autofit/results_library_p5c_dr1_census.md
@@ -1506,7 +1509,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 238 · ral 34 · local-dev 12 · wsl-data 9
+Lanes: any 239 · ral 34 · local-dev 12 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -3213,13 +3216,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+117 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
+- `draft/feature/autofit/campaign_fill_submit_without_dependency.md`
 - `draft/feature/autofit/campaign_per_stage_status_root.md`
 - `draft/feature/autofit/campaign_zip_complete_pattern.md`
 - `draft/feature/autofit/model_figures_epic.md`
@@ -3257,8 +3261,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- _… and 76 more_
+- _… and 77 more_
 
 </details>
 

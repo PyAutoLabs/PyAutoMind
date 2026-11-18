@@ -15,7 +15,7 @@ Status: formalised
 Consequence: judge
 Witness: A mechanism is identified with a controlled reproduction: the stalled stage's likelihood is evaluated on the frozen live set / prior draws from the cancelled runs' Nautilus checkpoints and compared with the converging routes (A100 jax_gpu_sparse_wtilde; seed 0 numba). Either the cause is fixed and a fresh rerun converges, or the stall is recorded as a limitation of the numba W~ route with its trigger.
 Review-minutes: 20
-Unattended: never
+Unattended: ready
 Lane: ral
 Epic: likelihood-lifecycle
 Phase: 4
@@ -48,3 +48,6 @@ Phase 4 has no CPU validation row for datacube/delaunay, and only one seed for i
 ## Original request (verbatim, 2026-11-06)
 
 "Cancel + record + file" (human, answering whether to cancel the stalled legs 414148 and 414156_1).
+
+## Answers from the human
+- Q6 (2026-11-18, ruling unattended, shift ready-2026-11-18): (a) make it ready: slice or size it so a shift can start it

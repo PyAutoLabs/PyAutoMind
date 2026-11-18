@@ -14,7 +14,7 @@ Status: formalised
 Consequence: judge
 Witness: `hpc/sync submit` accepts sbatch overrides (at least `--time`, `--no-requeue`) and forwards named environment variables (e.g. `XLA_FLAGS`) to the remote sbatch. Each submit is logged the way the scheduler-actions policy expects. A phase-4-style resubmit (24 h limit, no requeue, XLA eigen flag) then goes through hpc/sync with no `PYAUTO_SKIP_SCHEDULER_GUARD` exception.
 Review-minutes: 10
-Unattended: never
+Unattended: ready
 Lane: ral
 Epic: likelihood-lifecycle
 Phase: 4
@@ -39,3 +39,6 @@ Three things were needed and couldn't be passed:
 ## Original request (verbatim, 2026-11-09)
 
 Filed at the end of the phase-4 chat when the human paused Pulse work ("assume we are not doing any more pulse work in this chat"), so that the gap doesn't live only in memory.
+
+## Answers from the human
+- Q4 (2026-11-18, ruling unattended, shift ready-2026-11-18): (a) make it ready: slice or size it so a shift can start it
