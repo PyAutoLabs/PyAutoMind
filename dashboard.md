@@ -1402,7 +1402,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_library_slot_frees_after_merge.md">M3.6i A shift's library slot frees once its task's PR has merged</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/679">issue #679</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_library_slot_frees_after_merge.md">M3.6i A shift's library slot frees once its task's PR has merged</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/679">issue #679</a> — issued 2026-11-18 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/680">PyAutoBrain#680</a></summary>
 
 ```
 Use the start-dev skill. active/shift_library_slot_frees_after_merge.md
