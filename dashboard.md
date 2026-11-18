@@ -80,12 +80,9 @@ _3 queued · 0 questions_
 2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 
-**Questions** (0 open, 0 deferred, 4 rulings — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
 
-- Q5 — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it. (ruling claimed, today)
-- Q11 — `campaign_fill_submit_without_dependency` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it. (ruling claimed, today)
-- Q12 — `campaign_per_stage_status_root` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it. (ruling claimed, today)
-- Q13 — `campaign_zip_complete_pattern` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it. (ruling claimed, today)
+_(no open questions)_
 
 **Shift**
 
