@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 5 in flight",
-  "updated": "2026-11-18T10:28:24Z",
+  "headline": "RED \u2014 23 picks \u00b7 4 in flight",
+  "updated": "2026-11-18T12:01:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Building a JAX Fitness then calling register_tracer_classes raises \"Duplicate custom PyTreeDef type\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/702",
-      "prompt": "Use the start-dev skill. active/galaxy_duplicate_pytree_registration_after_jax_fitness.md"
     },
     {
       "severity": "yellow",
@@ -45,12 +39,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#702 \u2014 Building a JAX Fitness then calling register_tracer_classes raises \"Duplicate custom PyTreeDef type\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/702",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#697 \u2014 blurring-mask-separable",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/697",
       "prompt": null
@@ -65,6 +53,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#701 \u2014 delaunay-interpolated-plot",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#702 \u2014 galaxy-duplicate-pytree-registration",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/702",
       "prompt": null
     },
     {
@@ -126,6 +120,12 @@
       "text": "pick: A model with compound priors cannot be written to model.json, so search.fit\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_model_with_compound_priors_cannot_be.md",
       "prompt": "Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

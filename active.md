@@ -36,19 +36,6 @@
 - unblocks: Science/development/ep_gnfw_slope N=3 EP smoke
 - coordination: human approved 2026-11-18 (Q8) sharing PyAutoFit with results_library_p5c_dr1_census — the census is read-only on RAL against released 2026.11.12.1 and writes only a PyAutoCortex ledger line; no PyAutoFit edits, no file overlap
 
-## galaxy-duplicate-pytree-registration
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/693
-- session: Claude Code live session 2026-11-18 (resumed the crashed shift 2026-11-14-pm2 worker's unpushed commit)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/702
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/702
-- worktree: ~/Code/PyAutoLabs-wt/galaxy-duplicate-pytree-registration
-- prompt: active/galaxy_duplicate_pytree_registration_after_jax_fitness.md
-- heart-ack:
-  - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
-- repos:
-  - PyAutoArray: feature/galaxy-duplicate-pytree-registration
-
 ## dataset-model-free-grid-offset-pytree-roundtrip
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
 - issued: 2026-11-16

@@ -1,3 +1,17 @@
+## galaxy-duplicate-pytree-registration
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/693
+- completed: 2026-11-18
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/702
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/702
+
+Building a JAX `Fitness` registers `Galaxy` through `autofit.jax.register_model`. A later `autolens.jax.register_tracer_classes` in the same process then hit `autoarray.abstract_ndarray.register_instance_pytree(Galaxy)`, and JAX raised `Duplicate custom PyTreeDef type registration`. Both autoarray registration helpers now go through `_register_pytree_node_once`, which keeps an existing registration (the first route wins, matching autofit's own tolerance) and still raises any other `ValueError`. The merge commit is `5815019d`.
+
+- History: a shift worker started the task on 2026-11-14 (2026-11-14-pm2) and committed the fix locally, then crashed before pushing. The stale claim on PyAutoArray blocked other tasks, which surfaced as questions.md Q5 (numba_wtilde_validation_legs_stall_nautilus). A live session on 2026-11-18 rebased the commit onto main, verified it and shipped it.
+- Evidence: autoarray 2461 passed. Direct reproduction with real JAX (`register_model`, then `register_tracer_classes`, then `tree_leaves`) raises on the old `main` and passes on the branch. PyAutoLens `test_analysis_point_gradient_mode` + `test_static_lattice_jax` + `test_solver_spurious_core` in one session: 32 passed. Those also pass on main, because the gradient-mode test never registers `Galaxy` through `register_model`, so the direct reproduction is the real control. Workspace smoke all passed (autofit 10, autogalaxy 16, autolens 44, autolens_workspace_test 39, euclid 9, HowToLens 41). autocti and autocti_test did not run because the laptop has no GSL headers (`libgsl-dev`). Heart dev gate GREEN. CI GREEN.
+- PyAutoFit (listed in the prompt) needed no change: `register_model` already tolerated the duplicate.
+
+## Original prompt
+
 # Building a JAX Fitness then calling register_tracer_classes raises "Duplicate custom PyTreeDef type registration for Galaxy"
 
 Type: bug
