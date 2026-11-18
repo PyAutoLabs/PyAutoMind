@@ -94,3 +94,14 @@
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/701
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/864
 - next: human /prm in library-first order (PyAutoArray#701 -> PyAutoLens#864 -> the 5 workspace PRs; heads e8a174a6 / 1e212b43b / 627a35cb / bee5f24 / 9b3cbab / 787cc0a / e99de4c); #46 update drafted for the human (not posted)
+
+## brain-tests-hermetic-worktree-env
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/677
+- issued: 2026-11-18
+- session: Claude Code desktop (WSL)
+- status: library-dev
+- prompt: active/brain_tests_not_hermetic_against_worktree_activate.md
+- worktree: /home/jammy/Code/PyAutoLabs-wt/brain-tests-hermetic-worktree-env
+- tier: notify — merge mode: auto-merge on green (effective level supervised)
+- repos:
+  - PyAutoBrain: feature/brain-tests-hermetic-worktree-env

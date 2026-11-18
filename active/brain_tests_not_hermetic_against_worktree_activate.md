@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
+Issued: 2026-11-18
 Consequence: notify
 Witness: with a task worktree's `activate.sh` sourced (PYAUTO_ROOT, PYAUTO_BRAIN, PYAUTO_MIND, PYAUTO_HEART, PYAUTO_HANDS, PYAUTO_TASK exported), `pytest tests/` in PyAutoBrain passes in full, including `tests/test_grouped_organ_consumers.py::test_hygiene_map_and_heart_board_find_grouped_checkouts`; CI stays green
 Review-minutes: 0
