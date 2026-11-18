@@ -9,11 +9,11 @@
 | Where | Count |
 |-------|------:|
 | [Autopilot](#autopilot) | 3 |
-| [Start here](#start-here) | 24 |
+| [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 284 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -90,7 +90,7 @@ _(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -156,6 +156,14 @@ Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_1
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
 
 ```
@@ -180,15 +188,15 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+
+<details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md
 ```
 
 </details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -262,26 +270,18 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md">repos_sync tenant-firewall leg scans nested .worktrees/ folders</a> — pyautomind · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually contains group members</a> — autolens_workspace_test · medium · supervised · low</summary>
 
 ```
 Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
-
-```
-Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.md
 ```
 
 </details>
@@ -1541,7 +1541,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 226 · ral 34 · local-dev 13 · wsl-data 9
+Lanes: any 229 · ral 34 · local-dev 13 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1592,7 +1592,15 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 39</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1901,7 +1909,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 54</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1979,6 +1987,14 @@ Use the start-dev skill. draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_ove
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/colab_links_pinned_to_blob_main_in.md">Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs</a> — autolens · small · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/colab_links_pinned_to_blob_main_in.md
 ```
 
 </details>
@@ -2267,6 +2283,14 @@ Use the start-dev skill. draft/bug/autolens_profiling/stale_auto_simulated_clust
 
 ```
 Use the start-dev skill. draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md">repos_sync tenant-firewall leg scans nested .worktrees/ folders</a> — pyautomind · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md
 ```
 
 </details>
