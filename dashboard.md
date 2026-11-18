@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 296 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1009,7 +1009,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 29 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 30 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1175,6 +1175,14 @@ Use the start-dev skill. draft/feature/pyautobrain/release_window_after_rehearse
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/shift_launch_from_phone.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_library_slot_frees_after_merge.md">M3.6i A shift's library slot frees once its task's PR has merged</a> — pyautobrain · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_library_slot_frees_after_merge.md
 ```
 
 </details>
@@ -1493,7 +1501,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 239 · ral 34 · local-dev 12 · wsl-data 9
+Lanes: any 240 · ral 34 · local-dev 12 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
