@@ -22,3 +22,6 @@ Source: risks found in the review of PyAutoLabs/euclid_strong_lens_modeling_pipe
 2. `members:` checks apply to the matched zip.
 3. Tests in the campaign test module; update the `spec.py` docstring example.
 4. Follow-up in the pipeline: add `success: {zip_complete: ..., members: [files/samples_summary.json]}` per stage as in `hpc/campaign/dr1.yaml:54-55` (the revert path #133 names).
+
+## Answers from the human
+- Q13 (2026-11-18, ruling claimed, shift 2026-11-18-pm): (a) — the gate is clear: compound-prior-model-json shipped (PyAutoFit#1783 merged 2026-11-18T17:40Z by human /prm) and its active.md claim is released; PyAutoFit is free for this task.

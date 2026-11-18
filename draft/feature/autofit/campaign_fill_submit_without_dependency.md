@@ -22,3 +22,6 @@ Every fill or straggler submit in the `SlurmScheduler` path chains on the upstre
 2. Refuse it, naming the stage, when the upstream stage's outputs are not all present (the collector's success checks), so a fill never runs on a half-finished upstream.
 3. Tests with `FakeScheduler`: the argv has no `--dependency` in the new mode and keeps it by default; a missing upstream output refuses.
 4. Document it beside `resubmit --class` (propose-only rule F5 unchanged: the human approves every resubmit).
+
+## Answers from the human
+- Q11 (2026-11-18, ruling claimed, shift 2026-11-18-pm): (a) — the gate is clear: compound-prior-model-json shipped (PyAutoFit#1783 merged 2026-11-18T17:40Z by human /prm) and its active.md claim is released; PyAutoFit is free for this task.

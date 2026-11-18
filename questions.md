@@ -26,48 +26,7 @@ the ruling on the prompt.
 
 ## Open
 
-### Q11. campaign_fill_submit_without_dependency — `campaign_fill_submit_without_dependency` cannot start: repo PyAutoFi…
-- task: draft/feature/autofit/campaign_fill_submit_without_dependency.md
-- kind: ruling
-- gate: claimed
-- ask: `campaign_fill_submit_without_dependency` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
-- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-18-pm
-- asked: 2026-11-18T17:32Z
-- worker: readiness pass
-
-### Q12. campaign_per_stage_status_root — `campaign_per_stage_status_root` cannot start: repo PyAutoFit is clai…
-- task: draft/feature/autofit/campaign_per_stage_status_root.md
-- kind: ruling
-- gate: claimed
-- ask: `campaign_per_stage_status_root` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
-- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-18-pm
-- asked: 2026-11-18T17:32Z
-- worker: readiness pass
-
-### Q13. campaign_zip_complete_pattern — `campaign_zip_complete_pattern` cannot start: repo PyAutoFit is claim…
-- task: draft/feature/autofit/campaign_zip_complete_pattern.md
-- kind: ruling
-- gate: claimed
-- ask: `campaign_zip_complete_pattern` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
-- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-18-pm
-- asked: 2026-11-18T17:32Z
-- worker: readiness pass
-
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
-
-### Q5. numba_wtilde_validation_legs_stall_nautilus — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAu…
-- task: draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md
-- kind: ruling
-- gate: claimed
-- ask: `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it.
-- options: (a) wait for galaxy-duplicate-pytree-registration to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: ready-2026-11-18
-- asked: 2026-11-18T09:23Z
-- worker: readiness pass
-- deferred: 2026-11-18 by Jammy2211
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
 
@@ -167,6 +126,54 @@ the ruling on the prompt.
 - worker: readiness pass
 - answered: 2026-11-18T12:14Z by Jammy2211 (chat)
 - answer: (a) file the next phase's prompt — the human asked for it to be done now
+
+### Q11. campaign_fill_submit_without_dependency — `campaign_fill_submit_without_dependency` cannot start: repo PyAutoFi…
+- task: draft/feature/autofit/campaign_fill_submit_without_dependency.md
+- kind: ruling
+- gate: claimed
+- ask: `campaign_fill_submit_without_dependency` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
+- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-18-pm
+- asked: 2026-11-18T17:32Z
+- worker: readiness pass
+- answered: 2026-11-18T17:44Z by Jammy2211 (chat)
+- answer: (a) — the gate is clear: compound-prior-model-json shipped (PyAutoFit#1783 merged 2026-11-18T17:40Z by human /prm) and its active.md claim is released; PyAutoFit is free for this task.
+
+### Q12. campaign_per_stage_status_root — `campaign_per_stage_status_root` cannot start: repo PyAutoFit is clai…
+- task: draft/feature/autofit/campaign_per_stage_status_root.md
+- kind: ruling
+- gate: claimed
+- ask: `campaign_per_stage_status_root` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
+- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-18-pm
+- asked: 2026-11-18T17:32Z
+- worker: readiness pass
+- answered: 2026-11-18T17:44Z by Jammy2211 (chat)
+- answer: (a) — the gate is clear: compound-prior-model-json shipped (PyAutoFit#1783 merged 2026-11-18T17:40Z by human /prm) and its active.md claim is released; PyAutoFit is free for this task.
+
+### Q13. campaign_zip_complete_pattern — `campaign_zip_complete_pattern` cannot start: repo PyAutoFit is claim…
+- task: draft/feature/autofit/campaign_zip_complete_pattern.md
+- kind: ruling
+- gate: claimed
+- ask: `campaign_zip_complete_pattern` cannot start: repo PyAutoFit is claimed by `compound-prior-model-json` in active.md with no coordination line naming it.
+- options: (a) wait for compound-prior-model-json to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-18-pm
+- asked: 2026-11-18T17:32Z
+- worker: readiness pass
+- answered: 2026-11-18T17:44Z by Jammy2211 (chat)
+- answer: (a) — the gate is clear: compound-prior-model-json shipped (PyAutoFit#1783 merged 2026-11-18T17:40Z by human /prm) and its active.md claim is released; PyAutoFit is free for this task.
+
+### Q5. numba_wtilde_validation_legs_stall_nautilus — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAu…
+- task: draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md
+- kind: ruling
+- gate: claimed
+- ask: `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it.
+- options: (a) wait for galaxy-duplicate-pytree-registration to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+- answered: 2026-11-18T17:44Z by Jammy2211 (chat)
+- answer: (a) — the gate is clear: galaxy-duplicate-pytree-registration shipped (PyAutoArray#702, completed in Mind 8918e26d2) and its active.md claim is released; PyAutoArray is free for this task.
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

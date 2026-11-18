@@ -51,3 +51,4 @@ Phase 4 has no CPU validation row for datacube/delaunay, and only one seed for i
 
 ## Answers from the human
 - Q6 (2026-11-18, ruling unattended, shift ready-2026-11-18): (a) make it ready: slice or size it so a shift can start it
+- Q5 (2026-11-18, ruling claimed, shift ready-2026-11-18): (a) — the gate is clear: galaxy-duplicate-pytree-registration shipped (PyAutoArray#702, completed in Mind 8918e26d2) and its active.md claim is released; PyAutoArray is free for this task.
