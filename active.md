@@ -26,7 +26,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/679
 - issued: 2026-11-18
 - session: Claude Code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/680
 - worktree: /home/jammy/Code/PyAutoLabs-wt/shift-library-slot-frees-after-merge
 - repos:
   - PyAutoBrain: feature/shift-library-slot-frees-after-merge
