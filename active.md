@@ -54,7 +54,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/681
 - issued: 2026-11-18
 - session: Claude Code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/682
 - worktree: /home/jammy/Code/PyAutoLabs-wt/mind-writer-own-claim-update
 - repos:
   - PyAutoBrain: feature/mind-writer-own-claim-update
