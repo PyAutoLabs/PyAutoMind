@@ -91,3 +91,14 @@
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/701
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/864
 - next: human /prm in library-first order (PyAutoArray#701 → PyAutoLens#864 → the 5 workspace PRs); laptop follow-ups before close-out; #46 update drafted for the human (not posted)
+
+## batch-claim-gate-declared-repos
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/675
+- issued: 2026-11-18
+- session: Claude Code desktop (WSL)
+- status: library-dev
+- prompt: active/batch_claim_gate_target_overrides_declared_repos.md
+- worktree: /home/jammy/Code/PyAutoLabs-wt/batch-claim-gate-declared-repos
+- tier: notify — merge mode: auto-merge on green (effective level supervised)
+- repos:
+  - PyAutoBrain: feature/batch-claim-gate-declared-repos
