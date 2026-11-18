@@ -26,8 +26,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1773
 - issued: 2026-11-13
 - session: Claude Code desktop (WSL)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - prompt: active/ep_projected_model_shared_prior_keyerror.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1778
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1778
 - worktree: /home/jammy/Code/PyAutoLabs-wt/ep-projected-model-shared-prior
 - tier: judge — merge mode: human /prm
 - repos:
