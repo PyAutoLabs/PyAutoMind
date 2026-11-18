@@ -11,15 +11,11 @@
 | [Autopilot](#autopilot) | 3 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
-
-> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
-
-> - `draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md — its own `Status:` says superseded, but the prompt never left draft/ (reconcile its lifecycle)`
 
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
@@ -1411,14 +1407,6 @@ Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.
 
 </details>
 
-<details><summary>📋 <a href="active/delaunay_plot_shows_likelihood_interpolant.md">Delaunay source plots: show the piecewise-linear interpolant the likelihood uses</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/700">issue #700</a> — issued 2026-11-17 — awaiting-merge (library + workspace PRs open; human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/701">PyAutoArray#701</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/864">PyAutoLens#864</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/678">autolens_workspace#678</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/367">autolens_workspace_test#367</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/137">HowToLens#137</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/187">autolens_assistant#187</a>, <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/19">autolens_visualization#19</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens</summary>
-
-```
-Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-dev</summary>
 
 ```
@@ -1534,7 +1522,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 34 · local-dev 13 · wsl-data 9
+Lanes: any 230 · ral 34 · local-dev 12 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1585,7 +1573,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 38</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1607,14 +1595,6 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 ```
 Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md">Interferometer fit.png: show zoomed, no-zoom and interpolated source panels</a> — autolens · small · human-required · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md
 ```
 
 </details>
@@ -3092,19 +3072,18 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-18 | issued | <a href="active/brain_tests_not_hermetic_against_worktree_activate.md">Brain test suite is not hermetic against a task worktree's…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
-| 2026-11-17 | issued | <a href="active/delaunay_plot_shows_likelihood_interpolant.md">Delaunay source plots: show the piecewise-linear interpolant the…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-16 | issued | <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | issued | <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a…</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
+| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
@@ -3114,12 +3093,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
+| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
@@ -3129,12 +3108,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
@@ -3144,12 +3123,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
@@ -3159,6 +3138,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 
 </details>
 
@@ -3314,10 +3294,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
-- [PyAutoArray#701](https://github.com/PyAutoLabs/PyAutoArray/pull/701) — `active/delaunay_plot_shows_likelihood_interpolant.md`
 - [PyAutoArray#702](https://github.com/PyAutoLabs/PyAutoArray/pull/702) — `active/galaxy_duplicate_pytree_registration_after_jax_fitness.md`
 - [PyAutoArray#697](https://github.com/PyAutoLabs/PyAutoArray/pull/697) — `complete/2026/11/blurring-mask-separable.md`
 - [PyAutoArray#699](https://github.com/PyAutoLabs/PyAutoArray/pull/699) — `complete/2026/11/convolver-fft-frame-from-mask.md`
+- [PyAutoArray#701](https://github.com/PyAutoLabs/PyAutoArray/pull/701) — `complete/2026/11/delaunay-interpolated-plot.md`
 - [PyAutoArray#695](https://github.com/PyAutoLabs/PyAutoArray/pull/695) — `complete/2026/11/matern-vendor-bessel-kve.md`
 
 **PyAutoGalaxy**
@@ -3326,7 +3306,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
-- [PyAutoLens#864](https://github.com/PyAutoLabs/PyAutoLens/pull/864) — `active/delaunay_plot_shows_likelihood_interpolant.md`
+- [PyAutoLens#864](https://github.com/PyAutoLabs/PyAutoLens/pull/864) — `complete/2026/11/delaunay-interpolated-plot.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

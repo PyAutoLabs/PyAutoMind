@@ -3,27 +3,15 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 7 in flight",
-  "updated": "2026-11-18T10:11:32Z",
+  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
+  "updated": "2026-11-18T10:13:04Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "1 prompt(s) need lifecycle reconciliation",
-      "url": null,
-      "prompt": "Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:\n\n1. `git fetch origin && git status`. If behind `origin/main`, `git pull --ff-only`\n   before touching anything.\n2. `python3 scripts/lifecycle.py check`, `orphans`, and `index --check`. Fix\n   whatever drift they report.\n3. Reconcile finished work \u2014 this is the part nothing automates. For every prompt\n   under `draft/` and `active/`, decide whether it is already done: a `Status:`\n   header saying shipped/superseded/absorbed, a merged PR named in its body, or a\n   record in `complete/` whose scope already covers it (check `complete/index.md`\n   and grep the dated buckets). Treat a same-subject record as evidence, not\n   proof \u2014 read both and confirm the scope really matches before retiring a\n   prompt.\n4. For each one that IS done, write its record and retire the prompt:\n   `python3 scripts/lifecycle.py record <slug> --date <YYYY-MM-DD> --from-file\n   <body> --apply`, where <body> ends with `## Original prompt` followed by the\n   prompt's full text. Then `git rm` the prompt file and repoint every\n   cross-reference to it (grep the slug across `draft/`, `active/`, `epics.md`\n   and the registry files).\n5. Regenerate the page: `pyauto-brain intake --apply dashboard`. Never hand-edit\n   `dashboard.md` or `dashboard.html` \u2014 they are generated.\n6. Commit and push to `main`, so `dashboard_refresh.yml` agrees with the tree.\n\nReport what you retired, what you deliberately left in the backlog and why, and\nanything you could not verify."
-    },
     {
       "severity": "red",
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Delaunay source plots: show the piecewise-linear interpolant the likelihood uses \u2014 awaiting-merge (library + workspace PRs open; human /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
-      "prompt": "Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md"
     },
     {
       "severity": "yellow",
@@ -57,12 +45,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#701 \u2014 Delaunay source plots: show the piecewise-linear interpolant the likelihood uses",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#702 \u2014 Building a JAX Fitness then calling register_tracer_classes raises \"Duplicate custom PyTreeDef type\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/702",
       "prompt": null
@@ -81,6 +63,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#701 \u2014 delaunay-interpolated-plot",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#695 \u2014 matern-vendor-bessel-kve",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/695",
       "prompt": null
@@ -93,7 +81,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 Delaunay source plots: show the piecewise-linear interpolant the likelihood uses",
+      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 delaunay-interpolated-plot",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
       "prompt": null
     },
@@ -126,6 +114,18 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

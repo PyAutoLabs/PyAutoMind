@@ -1,3 +1,12 @@
+## interferometer-fit-png-show-zoomed-no-zoom
+- completed: 2026-11-18
+- superseded-by: complete/2026/11/delaunay-interpolated-plot.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/864
+
+**Retired at the delaunay-interpolated-plot close-out:** the merged PyAutoLens#864 (commit 1e212b43b) already does what this draft asked. The interferometer 3x4 fit.png now shows Source Plane (Max Zoom), Source Plane (Interpolated) and Source Plane (No Zoom) down the right-hand column, and Mid Zoom replaces Interpolated when the key is off or the source is rectangular or parametric. To make room, Dirty Signal-To-Noise Map was removed and Dirty Model Image moved to panel 2. The array-free 2x3 layout was left as it was.
+
+## Original prompt
+
 # Interferometer fit.png: show zoomed, no-zoom and interpolated source panels
 
 Type: feature

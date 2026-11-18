@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2313 records across 11 buckets.
+2315 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -179,6 +179,7 @@ markers; everything below GENERATED is rebuilt.
 - [dashboard-recent-lists-planned-tasks-twice](2026/11/dashboard-recent-lists-planned-tasks-twice.md) — shipped
 - [dashboard-titles-filed-line](2026/11/dashboard-titles-filed-line.md) — shipped by shift worker 2026-11-16-pm as Mind ledger ops (no repo PR), tracked on PyAutoMind#579. Moved `Filed…
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
+- [delaunay-interpolated-plot](2026/11/delaunay-interpolated-plot.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
 - [deliverable-block-wave-575](2026/11/deliverable-block-wave-575.md)
 - [dev-metrics-boards](2026/11/dev-metrics-boards.md)
@@ -224,6 +225,7 @@ markers; everything below GENERATED is rebuilt.
 - [installation-docs-polish](2026/11/installation-docs-polish.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
+- [interferometer-fit-png-show-zoomed-no-zoom](2026/11/interferometer-fit-png-show-zoomed-no-zoom.md)
 - [jax-floor-0-12](2026/11/jax-floor-0-12.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)
