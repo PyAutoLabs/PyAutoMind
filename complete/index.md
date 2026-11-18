@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2321 records across 11 buckets.
+2322 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -205,6 +205,7 @@ markers; everything below GENERATED is rebuilt.
 - [glance-public-name-check](2026/11/glance-public-name-check.md)
 - [glance-shadow-window-reached](2026/11/glance-shadow-window-reached.md) — already shipped — closed as stale draft. Item 1 (code): commit 679b1319f (2026-10-16) made `shadow_count_line(…
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+- [gnfwvirialmassconcsph-gives-kappa-s-1e-171-under](2026/11/gnfwvirialmassconcsph-gives-kappa-s-1e-171-under.md)
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [gradient-json-point-label](2026/11/gradient-json-point-label.md) — already shipped — autolens_profiling#518 (9d2ee2d3d, merged 2026-11-02 22:38, filed 16:18 the same day) record…
 - [health-review-cloud-observation](2026/11/health-review-cloud-observation.md) — - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every clo…
