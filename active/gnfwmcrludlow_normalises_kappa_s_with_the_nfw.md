@@ -12,6 +12,8 @@ Consequence: glance
 Witness: the 3D mass inside r200 of a `gNFWMCRLudlow` halo equals `mass_at_200` to 1e-3 for inner_slope 0.5, 1.0 and 1.5
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-11-18
+Verified: 2026-11-18 c2050ac3 (PyAutoGalaxy)
 Lane: any
 
 Found 2026-11-16 in the science project stars_dm_slope by reading the code. `gNFWMCRLudlow` (`autogalaxy/profiles/mass/dark/gnfw_mcr.py`) gets kappa_s and scale_radius from `mcr_util.kappa_s_and_scale_radius_for_ludlow`, which uses the NFW characteristic overdensity 200/3 c^3 / (ln(1 + c) - c/(1 + c)) and never sees `inner_slope`. For inner_slope != 1 the halo built from `mass_at_200` therefore does not contain that mass inside r200 (at fixed inner mass, log M200 moves about 0.9 dex per unit of slope, so the error is large), and a prior on `mass_at_200` is not a prior on M200.

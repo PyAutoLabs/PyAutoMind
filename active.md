@@ -32,3 +32,14 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot (effective level: supervised)
 - repos:
   - PyAutoFit: feature/compound-prior-model-json
+
+## gnfw-mcr-ludlow-normalisation
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/723
+- issued: 2026-11-18
+- session: shift worker 2026-11-18-pm (1913ad55)
+- status: library-dev
+- prompt: active/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md
+- worktree: ~/Code/PyAutoLabs-wt/gnfw-mcr-ludlow-normalisation
+- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot (effective level: supervised)
+- repos:
+  - PyAutoGalaxy: feature/gnfw-mcr-ludlow-normalisation
