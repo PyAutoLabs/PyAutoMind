@@ -1394,7 +1394,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/model_pytree_fixed_attributes_roundtrip.md">Model pytree round-trip drops fixed non-prior attributes (e.g</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1780">issue #1780</a> — issued 2026-11-18 — library-dev</summary>
+<details><summary>📋 <a href="active/model_pytree_fixed_attributes_roundtrip.md">Model pytree round-trip drops fixed non-prior attributes (e.g</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1780">issue #1780</a> — issued 2026-11-18 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1781">PyAutoFit#1781</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/model_pytree_fixed_attributes_roundtrip.md
@@ -3345,6 +3345,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1781](https://github.com/PyAutoLabs/PyAutoFit/pull/1781) — `active/model_pytree_fixed_attributes_roundtrip.md`
 - [PyAutoFit#1779](https://github.com/PyAutoLabs/PyAutoFit/pull/1779) — `complete/2026/11/dataset-model-free-grid-offset-pytree-roundtrip.md`
 - [PyAutoFit#1778](https://github.com/PyAutoLabs/PyAutoFit/pull/1778) — `complete/2026/11/ep-projected-model-shared-prior.md`
 

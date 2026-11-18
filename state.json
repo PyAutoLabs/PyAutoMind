@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-18T13:37:54Z",
+  "updated": "2026-11-18T13:50:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Model pytree round-trip drops fixed non-prior attributes (e.g \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1781",
+      "prompt": "Use the start-dev skill. active/model_pytree_fixed_attributes_roundtrip.md"
+    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -63,6 +69,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1781 \u2014 Model pytree round-trip drops fixed non-prior attributes (e.g",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1781",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1779 \u2014 Outcome",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1779",
       "prompt": null
@@ -114,18 +126,6 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: A model with compound priors cannot be written to model.json, so search.fit\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_model_with_compound_priors_cannot_be.md",
-      "prompt": "Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md"
     }
   ]
 }
