@@ -1394,7 +1394,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1777">issue #1777</a> — issued 2026-11-16 — library-dev (started 2026-11-18; override answered "Use 1" on the issue 2026-11-16)</summary>
+<details><summary>📋 <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1777">issue #1777</a> — issued 2026-11-16 — library-shipped, awaiting-merge (PR #1779 opened 2026-11-18; tests 4295 passed, smoke autofit+autogalaxy 26/26; human runs /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1779">PyAutoFit#1779</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md
@@ -3345,6 +3345,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1779](https://github.com/PyAutoLabs/PyAutoFit/pull/1779) — `active/dataset_model_free_grid_offset_pytree_roundtrip.md`
 - [PyAutoFit#1778](https://github.com/PyAutoLabs/PyAutoFit/pull/1778) — `complete/2026/11/ep-projected-model-shared-prior.md`
 
 **PyAutoGalaxy**
