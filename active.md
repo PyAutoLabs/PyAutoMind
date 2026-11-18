@@ -26,10 +26,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1780
 - issued: 2026-11-18
 - session: claude-code (WSL), Opus 5.5 worker; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/model-pytree-fixed-attributes
 - repos:
   - PyAutoFit: feature/model-pytree-fixed-attributes
 - prompt: active/model_pytree_fixed_attributes_roundtrip.md
 - approval: human approved 2026-11-18 ("Do the small follow up after prm"); follow-up to PyAutoFit#1777/#1779
 - tier: glance — merge mode: human /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1781
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1781
+- next: human /prm (glance tier; worker stopped at PR-open by instruction)
