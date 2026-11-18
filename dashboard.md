@@ -1394,7 +1394,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1777">issue #1777</a> — issued 2026-11-16 — ready (unblocked 2026-11-18; override answered "Use 1" on the issue 2026-11-16)</summary>
+<details><summary>📋 <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1777">issue #1777</a> — issued 2026-11-16 — library-dev (started 2026-11-18; override answered "Use 1" on the issue 2026-11-16)</summary>
 
 ```
 Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md
