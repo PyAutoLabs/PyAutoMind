@@ -86,7 +86,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-18-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 1 running, 2 finished · tokens 653220 of 1300000 (cache-read 25670114) · review-at 2026-11-18T17:30Z (as of 2026-11-18T15:28:14Z) · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587#issuecomment-6982138507)
+Live: LIVE · 2 running, 2 finished · tokens 746205 of 1300000 (close-outs 92985; cache-read 28201082; 1 session(s) unmeasured) · review-at 2026-11-18T17:30Z (as of 2026-11-18T15:37:33Z) · [shift issue #587](https://github.com/PyAutoLabs/PyAutoMind/issues/587#issuecomment-6982138507)
 
 _(nothing to review yet)_
 
