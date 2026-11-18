@@ -42,10 +42,10 @@ Audit: the mechanism fully exists — the gap is purely the example/wiring layer
   per-dataset-mask template; multi_dataset/features/imaging_and_point_source/modeling.py
   is the nearest precedent for mixing point positions + pixelized imaging under one
   mass model (galaxy-scale today).
-- draft/docs/workspaces/cluster_regime_narrative.md already plans a
-  features/extended_source/ cluster follow-up (one A2744 arc, pixelized, cluster mass
-  model as start) — this phase implements that plan's machinery and supersedes its
-  gap-filling bullet; keep the narrative work there.
+- complete/2026/11/cluster-regime-narrative.md planned a features/extended_source/
+  cluster follow-up (one A2744 arc, pixelized, cluster mass model as start). Its
+  narrative half shipped (autolens_workspace#671); the extended-source example was
+  handed to this phase (see "Deferred" below).
 
 Work:
 1. Example: `scripts/cluster/features/extended_source/` — post-inference refinement:
@@ -62,3 +62,20 @@ Work:
    stuff) — say so in prose.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase10_cluster_pixelized_analysisfactor.md -->
+
+## Deferred — human ruling 2026-11-18
+
+Cluster extended sources will not be developed for a while (human, /health session
+2026-11-18, closing autolens_workspace#670). This prompt now owns the
+`features/extended_source/` example and its `autolens_workspace_test` integration
+script from cluster-regime-narrative. Its three open questions were never answered and
+must be settled before planning:
+
+1. **Data.** The bundled A2744 `data.fits` is a 0.3"/px hips2fits colour cutout with
+   no noise map or PSF, unsuitable for a pixelized inversion. Use (a) HFF/JWST imaging
+   of one A2744 arc (prep plus a committed dataset), (b) an extended arc simulated from
+   the `cluster/simulator.py` mass model, or (c) both?
+2. **Mass-model handoff.** Fix the cluster mass at the point-source fit and refit only
+   the arc's local perturbers plus the source, or free the full mass model with priors
+   from the point fit?
+3. **Sequencing.** Wait for phase 9 (`cluster_source_science`) to land first?

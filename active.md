@@ -46,21 +46,6 @@
 - repos:
   - PyAutoArray: feature/galaxy-duplicate-pytree-registration
 
-## cluster-regime-narrative
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
-- issued: 2026-11-14
-- session: claude-code shift worker (batch 2026-11-14-pm2, --auto, supervised)
-- status: awaiting-merge (PR open, decision-taken; extended_source parked awaiting-input)
-- worktree: ~/Code/PyAutoLabs-wt/cluster-regime-narrative
-- repos:
-  - autolens_workspace: feature/cluster-regime-narrative
-- prompt: active/cluster_regime_narrative.md
-- tier: notify — merge mode: auto-merge on green (supervised --auto: decision-taken PR ends at PR-open)
-- heart-ack:
-  - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
-- next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
-
 ## dataset-model-free-grid-offset-pytree-roundtrip
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
 - issued: 2026-11-16

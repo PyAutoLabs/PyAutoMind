@@ -1,3 +1,14 @@
+## cluster-regime-narrative
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
+- completed: 2026-11-18
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
+- scope merged: the prose half only. `scripts/cluster/README.md` gained the regime-ladder framing (same mass framework as `group/`, point-source default, lens light not modelled) and a "Literature and benchmark systems" section; `scripts/cluster/start_here.py` notes the pre-JWST gold subset and points to `mass_parameterizations.py` (dPIE→gNFW host) and AS1063.
+- merge fixes (2026-11-18, /health session): the README no longer names `features/extended_source` (it does not exist and failed the navigator path check); `main` merged into the branch and the navigator catalogue regenerated (`cluster/mass_parameterizations.py` was missing from `workspace_index.json`, stale on `main` too). CI 8/8 GREEN incl. smoke 3.12 and 3.13.
+- not shipped — deferred: the `features/extended_source/` example and its `autolens_workspace_test` integration script. Human ruling 2026-11-18: cluster extended sources will not be developed for a while. The three open questions from #670 (data, mass-model handoff, sequencing after phase 9) were moved to `draft/feature/workspaces/cluster_pixelized_analysisfactor.md` (Source & Cluster arc phase 10), which already owned this plan.
+- shipped by: shift worker batch 2026-11-14-pm2 (supervised --auto, decision-taken PR); merged from a /health session on the human's explicit command.
+
+## Original prompt
+
 # Cluster package: point-source-default narrative + extended-source follow-up feature
 
 Type: docs

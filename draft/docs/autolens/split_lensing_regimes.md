@@ -327,9 +327,10 @@ regenerate the dataset alongside the convention change.
    modeling/simulator halo-narrative threading 2026-07-26. Full scope
    landed; CSWA 19 real-data flagship recorded as a non-blocking future
    option.
-3. `draft/docs/workspaces/cluster_regime_narrative.md` — cluster narrative
-   alignment + `features/extended_source/` follow-up example + conventions
-   cross-check.
+3. `complete/2026/11/cluster-regime-narrative.md` — cluster narrative
+   alignment shipped 2026-11-18 (autolens_workspace#671); the
+   `features/extended_source/` follow-up example was deferred by the human and
+   now lives in `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`.
 4. `draft/docs/autolens/docs_three_regime_restructure.md` — PyAutoLens RTD
    docs ladder rewrite (after 1, so links resolve). SHIPPED 2026-07-26:
    New User Guide ladder + flagships, overview_1 enumerations, api

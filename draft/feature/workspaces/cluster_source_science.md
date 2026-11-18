@@ -48,7 +48,7 @@ cluster sources are phase 10):
 Mirror the group/source_science.py structure for the regime ladder; cite LEGGOS II,
 Richard+17 (HFF magnification-map deliverables) and Atek+15 (magnification as source-
 science tool) in the prose. Coordinates with
-draft/docs/workspaces/cluster_regime_narrative.md (narrative alignment) — this phase
+complete/2026/11/cluster-regime-narrative.md (narrative alignment) — this phase
 delivers the science example; that draft delivers the regime prose.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase09_cluster_source_science.md -->

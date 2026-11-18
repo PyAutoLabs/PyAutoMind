@@ -28,16 +28,6 @@ the ruling on the prompt.
 
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
-### Q1. cluster_regime_narrative — The `features/extended_source/` example and the `autolens_workspace_t…
-- task: active/cluster_regime_narrative.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
-- kind: question
-- ask: The `features/extended_source/` example and the `autolens_workspace_test` script are parked with a question on the issue (`awaiting-input`): which data, how the mass model is handed off, and whether…
-- shift: 2026-11-14-pm2
-- asked: 2026-11-14T17:56Z
-- worker: a033837e
-- deferred: 2026-11-16 by Jammy2211
-
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
 
 ### Q3. dataset_model_free_grid_offset_pytree_roundtrip — PyAutoFit is claimed by ep-projected-model-shared-prior (#1773). No f…
@@ -52,6 +42,18 @@ the ruling on the prompt.
 - answered: 2026-11-16T18:42Z by Jammy2211 (issue)
 - answer: Use 1: (a) override — separate worktree off main for this fix alongside #1773, since no files overlap.
 - answer-comment: https://github.com/PyAutoLabs/PyAutoFit/issues/1777#issuecomment-6925624924
+
+### Q1. cluster_regime_narrative — The `features/extended_source/` example and the `autolens_workspace_t…
+- task: active/cluster_regime_narrative.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
+- kind: question
+- ask: The `features/extended_source/` example and the `autolens_workspace_test` script are parked with a question on the issue (`awaiting-input`): which data, how the mass model is handed off, and whether…
+- shift: 2026-11-14-pm2
+- asked: 2026-11-14T17:56Z
+- worker: a033837e
+- answered: 2026-11-18 by Jammy2211 (chat)
+- answer: Not now — cluster extended sources will not be developed for a while. The questions moved unanswered to draft/feature/workspaces/cluster_pixelized_analysisfactor.md ("Deferred"); prose half merged as autolens_workspace#671.
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/670#issuecomment-6974154944
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

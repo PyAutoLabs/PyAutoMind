@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
-  "updated": "2026-11-18T08:58:18Z",
+  "headline": "RED \u2014 23 picks \u00b7 8 in flight",
+  "updated": "2026-11-18T09:15:12Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "Cluster package: point-source-default narrative + extended-source follow-up feature \u2014 awaiting-merge (PR open, decision-taken; extended_source parked awaiting-input)",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/pull/671",
-      "prompt": "Use the start-dev skill. active/cluster_regime_narrative.md"
-    },
     {
       "severity": "red",
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
@@ -126,6 +120,12 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }

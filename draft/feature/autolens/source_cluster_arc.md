@@ -92,7 +92,7 @@ No next-phase issue is opened by this reorganisation.
    (point-source tier). Gates: 3, 5-8; workload-specific solver checks only.
 10. `draft/feature/workspaces/cluster_pixelized_analysisfactor.md` — per-source-mask
     pixelized refinement via AnalysisFactor; implements the extended_source plan in
-    `draft/docs/workspaces/cluster_regime_narrative.md`. Gates: 4, 9.
+    `complete/2026/11/cluster-regime-narrative.md`. Gates: 4, 9.
 11. → **Cortex** `PyAutoCortex/archive/tasks/inference_programme/cluster_extended_source_inference.md`
     — JAX-gradient joint-inference feasibility verdict (go/no-go only). Moved out of the
     Mind on 2026-09-01 in the Cortex phase-4 migration (was
@@ -105,7 +105,7 @@ No next-phase issue is opened by this reorganisation.
 
     **Known drift, not fixed here:** two different prompts both declare `Phase: 10` under
     two different parents — `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
-    (this arc's phase 10) and `draft/docs/workspaces/cluster_regime_narrative.md` (a
+    (this arc's phase 10) and `complete/2026/11/cluster-regime-narrative.md` (a
     different parent). Different parents, so nothing is ambiguous inside this ledger, but a
     reader searching on `Phase: 10` will hit both. Recorded, deliberately left alone.
 12. `draft/docs/howtolens/cluster_pixelized_source.md` — HowToLens cluster tutorial
