@@ -26,7 +26,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/721
 - issued: 2026-11-18
 - session: shift worker 2026-11-18-pm (3a65b07c-5df2-4cfb-b69a-c058f5bdb681)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722
 - worktree: ~/Code/PyAutoLabs-wt/gnfw-virial-jax-hyp2f1
 - repos:
   - PyAutoGalaxy: feature/gnfw-virial-jax-hyp2f1
