@@ -68,3 +68,7 @@ results), `--partition=ral`, 2 CPU, node-local disk (NFS login-node runs indexed
 
 Done = witness above. Any unexplained gap is a finding for the human, not a fix
 in this task.
+
+## Answers from the human
+- Q9 (2026-11-18, ruling unattended, shift ready-2026-11-18): (a) make it ready: slice or size it so a shift can start it
+- Q10 (2026-11-18, ruling human-required, shift ready-2026-11-18): (a) lower it to supervised

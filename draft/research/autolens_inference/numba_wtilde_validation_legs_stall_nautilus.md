@@ -48,3 +48,6 @@ Phase 4 has no CPU validation row for datacube/delaunay, and only one seed for i
 ## Original request (verbatim, 2026-11-06)
 
 "Cancel + record + file" (human, answering whether to cancel the stalled legs 414148 and 414156_1).
+
+## Answers from the human
+- Q6 (2026-11-18, ruling unattended, shift ready-2026-11-18): (a) make it ready: slice or size it so a shift can start it

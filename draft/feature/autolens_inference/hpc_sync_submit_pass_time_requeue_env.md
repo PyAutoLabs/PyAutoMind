@@ -39,3 +39,6 @@ Three things were needed and couldn't be passed:
 ## Original request (verbatim, 2026-11-09)
 
 Filed at the end of the phase-4 chat when the human paused Pulse work ("assume we are not doing any more pulse work in this chat"), so that the gap doesn't live only in memory.
+
+## Answers from the human
+- Q4 (2026-11-18, ruling unattended, shift ready-2026-11-18): (a) make it ready: slice or size it so a shift can start it
