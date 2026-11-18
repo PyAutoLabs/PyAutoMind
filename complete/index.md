@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2312 records across 11 buckets.
+2317 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -137,6 +137,7 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p3d](2026/11/autonomous-orchestrators-p3d.md) — phase 3d of 3a–3d — closes phase 3; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4a](2026/11/autonomous-orchestrators-p4a.md) — phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+- [batch-claim-gate-declared-repos](2026/11/batch-claim-gate-declared-repos.md)
 - [batch-slice](2026/11/batch-slice.md)
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
 - [blurring-mask-separable](2026/11/blurring-mask-separable.md)
@@ -144,6 +145,7 @@ markers; everything below GENERATED is rebuilt.
 - [board-without-gh-phase2-legs](2026/11/board-without-gh-phase2-legs.md) — already shipped, closed as a stale draft. PyAutoBrain 15317af (merged via #564, 2026-11-03) "phase 2 — the rem…
 - [bootstrap-test-root-skip](2026/11/bootstrap-test-root-skip.md) — fixed in commit 748f8c0bb (this PR). `test_the_hook_survives_an_unwritable_tools_dir` probes `os.access(bin, W…
 - [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
+- [brain-tests-hermetic-worktree-env](2026/11/brain-tests-hermetic-worktree-env.md)
 - [canonical-key-todo-sweep](2026/11/canonical-key-todo-sweep.md)
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [ci-verdict](2026/11/ci-verdict.md)
@@ -178,6 +180,7 @@ markers; everything below GENERATED is rebuilt.
 - [dashboard-recent-lists-planned-tasks-twice](2026/11/dashboard-recent-lists-planned-tasks-twice.md) — shipped
 - [dashboard-titles-filed-line](2026/11/dashboard-titles-filed-line.md) — shipped by shift worker 2026-11-16-pm as Mind ledger ops (no repo PR), tracked on PyAutoMind#579. Moved `Filed…
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
+- [delaunay-interpolated-plot](2026/11/delaunay-interpolated-plot.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
 - [deliverable-block-wave-575](2026/11/deliverable-block-wave-575.md)
 - [dev-metrics-boards](2026/11/dev-metrics-boards.md)
@@ -193,6 +196,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
 - [eyes-survey-next-action-stale](2026/11/eyes-survey-next-action-stale.md) — RETIRED as stale, no change made. The prompt's premise was false: only the `autolens_workspace_test/gallery/` …
+- [galaxy-duplicate-pytree-registration](2026/11/galaxy-duplicate-pytree-registration.md)
 - [gallery-runner-missing-tiers](2026/11/gallery-runner-missing-tiers.md) — RETIRED as obsolete, no change made. The gallery runner it targeted (`gallery/gallery_run.sh`, `gallery_build.…
 - [general-docs-refresh](2026/11/general-docs-refresh.md)
 - [generate-converter-preflight](2026/11/generate-converter-preflight.md)
@@ -223,6 +227,7 @@ markers; everything below GENERATED is rebuilt.
 - [installation-docs-polish](2026/11/installation-docs-polish.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
+- [interferometer-fit-png-show-zoomed-no-zoom](2026/11/interferometer-fit-png-show-zoomed-no-zoom.md)
 - [jax-floor-0-12](2026/11/jax-floor-0-12.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)

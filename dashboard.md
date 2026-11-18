@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 3 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -80,13 +80,12 @@ _3 queued · 0 questions_
 2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 
-**Questions** (0 open, 0 deferred, 7 rulings — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
 
 - Q4 — `hpc_sync_submit_pass_time_requeue_env` is Unattended: never, so no shift starts it. (ruling unattended, today)
 - Q5 — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it. (ruling claimed, today)
 - Q6 — `numba_wtilde_validation_legs_stall_nautilus` is Unattended: never, so no shift starts it. (ruling unattended, today)
 - Q7 — Epic hpc-campaign is queued but no next-phase prompt is filed (no open Phase: member in draft/ or active/). (ruling no-next-phase, today)
-- Q8 — `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is claimed by `ep-projected-model-shared-prior` in active.md with no coordination line naming it. (ruling claimed, today)
 - Q9 — `results_library_p5c_dr1_census` is Unattended: never, so no shift starts it. (ruling unattended, today)
 - Q10 — `results_library_p5c_dr1_census` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, today)
 
@@ -96,7 +95,7 @@ _(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -146,10 +145,26 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/a_model_with_compound_priors_cannot_be.md">A model with compound priors cannot be written to model.json, so search.fit…</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md">gNFWVirialMassConcSph gives kappa_s ~1e-171 under JAX because jax.scipy.special.hyp2f1 is wrong for z…</a> — autogalaxy · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md
 ```
 
 </details>
@@ -178,23 +193,7 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1400,26 +1399,10 @@ Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.
 
 </details>
 
-<details><summary>📋 <a href="active/delaunay_plot_shows_likelihood_interpolant.md">Delaunay source plots: show the piecewise-linear interpolant the likelihood uses</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/700">issue #700</a> — issued 2026-11-17 — awaiting-merge (library + workspace PRs open; human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/701">PyAutoArray#701</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/864">PyAutoLens#864</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/678">autolens_workspace#678</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/367">autolens_workspace_test#367</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/137">HowToLens#137</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/187">autolens_assistant#187</a>, <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/19">autolens_visualization#19</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens</summary>
-
-```
-Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/ep_projected_model_shared_prior_keyerror.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises "Duplicate custom PyTreeDef type…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/693">issue #693</a> — issued 2026-09-27 — library-dev</summary>
-
-```
-Use the start-dev skill. active/galaxy_duplicate_pytree_registration_after_jax_fitness.md
 ```
 
 </details>
@@ -1523,7 +1506,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 34 · local-dev 13 · wsl-data 9
+Lanes: any 238 · ral 34 · local-dev 12 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1574,7 +1557,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 38</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1596,14 +1579,6 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 ```
 Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md">Interferometer fit.png: show zoomed, no-zoom and interpolated source panels</a> — autolens · small · human-required · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/interferometer_fit_png_show_zoomed_no_zoom.md
 ```
 
 </details>
@@ -1891,7 +1866,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 54</summary>
+<summary><b>bug</b> — 61</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1921,6 +1896,22 @@ Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independen
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/a_model_with_compound_priors_cannot_be.md">A model with compound priors cannot be written to model.json, so search.fit…</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md">gNFWVirialMassConcSph gives kappa_s ~1e-171 under JAX because jax.scipy.special.hyp2f1 is wrong for z…</a> — autogalaxy · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfwvirialmassconcsph_gives_kappa_s_1e_171_under.md
 ```
 
 </details>
@@ -2069,6 +2060,14 @@ Use the start-dev skill. draft/bug/autofit/samples_with_paths_shared_prior_facto
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md">gNFWMCRLudlow normalises kappa_s with the NFW mass function whatever the inner slope…</a> — autogalaxy · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfwmcrludlow_normalises_kappa_s_with_the_nfw.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — autolens_workspace · small · safe · normal</summary>
 
 ```
@@ -2097,6 +2096,14 @@ Use the start-dev skill. draft/bug/workspaces/convolver_blurring_image_warning.m
 
 ```
 Use the start-dev skill. draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/model_identifier_raises_typeerror_iteration_over.md">Model identifier raises "TypeError: iteration over a 0-d array" when a Galaxy…</a> — autofit · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/model_identifier_raises_typeerror_iteration_over.md
 ```
 
 </details>
@@ -2177,6 +2184,30 @@ Use the start-dev skill. draft/bug/priors/15_transformed_message_logpdf_jacobian
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/cockpit_footer_broca_belongs_between_cortex_and.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfw_mge_deflections_lose_accuracy_for_inner.md">gNFW MGE deflections lose accuracy for inner_slope above 2…</a> — autogalaxy · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfw_mge_deflections_lose_accuracy_for_inner.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/jax_grad_of_sersic_stellar_mass_deflections.md">jax.grad of Sersic stellar-mass deflections is NaN with respect to mass_to_light_ratio…</a> — autogalaxy · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/jax_grad_of_sersic_stellar_mass_deflections.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/stellar_m_l_gradient_profiles_sersicgradient_piv.md">Stellar M/L-gradient profiles: SersicGradient pivots at R_e/q, GaussianGradient has the opposite sign…</a> — autogalaxy · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/stellar_m_l_gradient_profiles_sersicgradient_piv.md
 ```
 
 </details>
@@ -2328,7 +2359,7 @@ Use the start-dev skill. draft/bug/autolens/twins_provenance_versions.md
 </details>
 
 <details>
-<summary><b>research</b> — 23</summary>
+<summary><b>research</b> — 24</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2486,6 +2517,14 @@ Use the start-dev skill. draft/research/autoarray/interferometer_sparse_jax_grad
 
 ```
 Use the start-dev skill. draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the beam…</a> — autoarray · medium · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/primary_beam_matern_coefficient_check.md
 ```
 
 </details>
@@ -3078,9 +3117,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
-| 2026-11-17 | issued | <a href="active/delaunay_plot_shows_likelihood_interpolant.md">Delaunay source plots: show the piecewise-linear interpolant the…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-16 | issued | <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
@@ -3174,7 +3213,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-115 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3219,7 +3258,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- _… and 75 more_
+- _… and 76 more_
 
 </details>
 
@@ -3303,9 +3342,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
-- [PyAutoArray#701](https://github.com/PyAutoLabs/PyAutoArray/pull/701) — `active/delaunay_plot_shows_likelihood_interpolant.md`
 - [PyAutoArray#697](https://github.com/PyAutoLabs/PyAutoArray/pull/697) — `complete/2026/11/blurring-mask-separable.md`
 - [PyAutoArray#699](https://github.com/PyAutoLabs/PyAutoArray/pull/699) — `complete/2026/11/convolver-fft-frame-from-mask.md`
+- [PyAutoArray#701](https://github.com/PyAutoLabs/PyAutoArray/pull/701) — `complete/2026/11/delaunay-interpolated-plot.md`
+- [PyAutoArray#702](https://github.com/PyAutoLabs/PyAutoArray/pull/702) — `complete/2026/11/galaxy-duplicate-pytree-registration.md`
 - [PyAutoArray#695](https://github.com/PyAutoLabs/PyAutoArray/pull/695) — `complete/2026/11/matern-vendor-bessel-kve.md`
 
 **PyAutoGalaxy**
@@ -3314,7 +3354,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
-- [PyAutoLens#864](https://github.com/PyAutoLabs/PyAutoLens/pull/864) — `active/delaunay_plot_shows_likelihood_interpolant.md`
+- [PyAutoLens#864](https://github.com/PyAutoLabs/PyAutoLens/pull/864) — `complete/2026/11/delaunay-interpolated-plot.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

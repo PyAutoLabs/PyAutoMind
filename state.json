@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-18T09:24:23Z",
+  "headline": "RED \u2014 23 picks \u00b7 4 in flight",
+  "updated": "2026-11-18T12:01:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Delaunay source plots: show the piecewise-linear interpolant the likelihood uses \u2014 awaiting-merge (library + workspace PRs open; human /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
-      "prompt": "Use the start-dev skill. active/delaunay_plot_shows_likelihood_interpolant.md"
     },
     {
       "severity": "yellow",
@@ -45,12 +39,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#701 \u2014 Delaunay source plots: show the piecewise-linear interpolant the likelihood uses",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#697 \u2014 blurring-mask-separable",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/697",
       "prompt": null
@@ -59,6 +47,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#699 \u2014 convolver-fft-frame-from-mask",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/699",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#701 \u2014 delaunay-interpolated-plot",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#702 \u2014 galaxy-duplicate-pytree-registration",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/702",
       "prompt": null
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 Delaunay source plots: show the piecewise-linear interpolant the likelihood uses",
+      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 delaunay-interpolated-plot",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
       "prompt": null
     },
@@ -117,15 +117,15 @@
     },
     {
       "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
+      "text": "pick: A model with compound priors cannot be written to model.json, so search.fit\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_model_with_compound_priors_cannot_be.md",
+      "prompt": "Use the start-dev skill. draft/bug/autofit/a_model_with_compound_priors_cannot_be.md"
     },
     {
       "severity": "info",
-      "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
-      "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

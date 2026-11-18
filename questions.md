@@ -39,17 +39,6 @@ the ruling on the prompt.
 - worker: readiness pass
 - deferred: 2026-11-18 by Jammy2211
 
-### Q8. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is clai…
-- task: draft/feature/autofit/results_library_p5c_dr1_census.md
-- kind: ruling
-- gate: claimed
-- ask: `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is claimed by `ep-projected-model-shared-prior` in active.md with no coordination line naming it.
-- options: (a) wait for ep-projected-model-shared-prior to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: ready-2026-11-18
-- asked: 2026-11-18T09:23Z
-- worker: readiness pass
-- deferred: 2026-11-18 by Jammy2211
-
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
 
 ### Q3. dataset_model_free_grid_offset_pytree_roundtrip — PyAutoFit is claimed by ep-projected-model-shared-prior (#1773). No f…
@@ -77,6 +66,18 @@ the ruling on the prompt.
 - answer: Not now — cluster extended sources will not be developed for a while. The questions moved unanswered to draft/feature/workspaces/cluster_pixelized_analysisfactor.md ("Deferred"); prose half merged as autolens_workspace#671.
 - answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/670#issuecomment-6974154944
 
+### Q8. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is clai…
+- task: draft/feature/autofit/results_library_p5c_dr1_census.md
+- kind: ruling
+- gate: claimed
+- ask: `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is claimed by `ep-projected-model-shared-prior` in active.md with no coordination line naming it.
+- options: (a) wait for ep-projected-model-shared-prior to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: ready-2026-11-18
+- asked: 2026-11-18T09:23Z
+- worker: readiness pass
+- answered: 2026-11-18T09:35Z by Jammy2211 (chat)
+- answer: (b) record a coordination line: the census touches only PyAutoCortex and reads released PyAutoFit on RAL, so it shares PyAutoFit with ep-projected-model-shared-prior with no file overlap. Coordination line added to that claim in active.md.
+
 ### Q4. hpc_sync_submit_pass_time_requeue_env — `hpc_sync_submit_pass_time_requeue_env` is Unattended: never, so no s…
 - task: draft/feature/autolens_inference/hpc_sync_submit_pass_time_requeue_env.md
 - kind: ruling
@@ -86,7 +87,7 @@ the ruling on the prompt.
 - shift: ready-2026-11-18
 - asked: 2026-11-18T09:23Z
 - worker: readiness pass
-- answered: 2026-11-18T12:03Z by Jammy2211 (chat)
+- answered: 2026-11-18T12:14Z by Jammy2211 (chat)
 - answer: (a) make it ready: slice or size it so a shift can start it
 
 ### Q6. numba_wtilde_validation_legs_stall_nautilus — `numba_wtilde_validation_legs_stall_nautilus` is Unattended: never, s…
@@ -98,7 +99,7 @@ the ruling on the prompt.
 - shift: ready-2026-11-18
 - asked: 2026-11-18T09:23Z
 - worker: readiness pass
-- answered: 2026-11-18T12:03Z by Jammy2211 (chat)
+- answered: 2026-11-18T12:14Z by Jammy2211 (chat)
 - answer: (a) make it ready: slice or size it so a shift can start it
 
 ### Q9. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` is Unattended: never, so no shift st…
@@ -110,7 +111,7 @@ the ruling on the prompt.
 - shift: ready-2026-11-18
 - asked: 2026-11-18T09:23Z
 - worker: readiness pass
-- answered: 2026-11-18T12:03Z by Jammy2211 (chat)
+- answered: 2026-11-18T12:14Z by Jammy2211 (chat)
 - answer: (a) make it ready: slice or size it so a shift can start it
 
 ### Q10. results_library_p5c_dr1_census — `results_library_p5c_dr1_census` is Autonomy: human-required, so a sh…
@@ -122,7 +123,7 @@ the ruling on the prompt.
 - shift: ready-2026-11-18
 - asked: 2026-11-18T09:23Z
 - worker: readiness pass
-- answered: 2026-11-18T12:03Z by Jammy2211 (chat)
+- answered: 2026-11-18T12:14Z by Jammy2211 (chat)
 - answer: (a) lower it to supervised
 
 ### Q7. hpc_campaign_epic — Epic hpc-campaign is queued but no next-phase prompt is filed (no ope…
@@ -134,7 +135,7 @@ the ruling on the prompt.
 - shift: ready-2026-11-18
 - asked: 2026-11-18T09:23Z
 - worker: readiness pass
-- answered: 2026-11-18T12:03Z by Jammy2211 (chat)
+- answered: 2026-11-18T12:14Z by Jammy2211 (chat)
 - answer: (a) file the next phase's prompt — the human asked for it to be done now
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
