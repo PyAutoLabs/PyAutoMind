@@ -80,9 +80,15 @@ _3 queued · 0 questions_
 2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 
-**Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred, 7 rulings — [`questions.md`](questions.md))
 
-_(no open questions)_
+- Q4 — `hpc_sync_submit_pass_time_requeue_env` is Unattended: never, so no shift starts it. (ruling unattended, today)
+- Q5 — `numba_wtilde_validation_legs_stall_nautilus` cannot start: repo PyAutoArray is claimed by `galaxy-duplicate-pytree-registration` in active.md with no coordination line naming it. (ruling claimed, today)
+- Q6 — `numba_wtilde_validation_legs_stall_nautilus` is Unattended: never, so no shift starts it. (ruling unattended, today)
+- Q7 — Epic hpc-campaign is queued but no next-phase prompt is filed (no open Phase: member in draft/ or active/). (ruling no-next-phase, today)
+- Q8 — `results_library_p5c_dr1_census` cannot start: repo PyAutoFit is claimed by `ep-projected-model-shared-prior` in active.md with no coordination line naming it. (ruling claimed, today)
+- Q9 — `results_library_p5c_dr1_census` is Unattended: never, so no shift starts it. (ruling unattended, today)
+- Q10 — `results_library_p5c_dr1_census` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, today)
 
 **Shift**
 
