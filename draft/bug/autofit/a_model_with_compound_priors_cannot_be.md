@@ -12,6 +12,7 @@ Consequence: glance
 Witness: a model with a compound prior shared by two components writes model.json, reloads to an equal model, and `search.fit` starts without a TypeError
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-18 3ba1e6c3 (PyAutoFit)
 Lane: any
 
 Found 2026-11-16 in the science project stars_dm_slope. A model in which one parameter is an arithmetic combination of priors (e.g. `stars.mass = (1 - f) * m` and `halo.mass = f * m`, giving a `DivisionPrior` / compound prior shared by two profiles) evaluates correctly, including inside the jitted and vmapped JAX likelihood and with model identifiers, but `search.fit` dies before sampling: `paths.save_all` writing `model.json` raises `TypeError: Object of type UniformPrior is not JSON serializable`. Traceback: `/home/jammy/Science/Science/development/stars_dm_slope/results/mocks_v1/phase1/pilot/logs/A_P1_n200_s1_failed_json.log`. The model that triggers it is `model_from("P1", ...)` in `/home/jammy/Science/Science/development/stars_dm_slope/scripts/parameterisations.py`; the workaround (two subclasses sharing the same prior objects) is in `/home/jammy/Science/Science/development/stars_dm_slope/scripts/pilot_fit.py`.

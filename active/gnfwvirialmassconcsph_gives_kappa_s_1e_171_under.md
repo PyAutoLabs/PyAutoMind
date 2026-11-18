@@ -12,6 +12,8 @@ Consequence: glance
 Witness: kappa_s of `gNFWVirialMassConcSph` built inside `jax.jit` equals the NumPy value to 1e-8 for inner_slope 0 to 2 and concentration 2 to 20
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-11-18
+Verified: 2026-11-18 5515c4da (PyAutoGalaxy)
 Lane: any
 
 Found 2026-11-16 in the science project stars_dm_slope. `kappa_s_and_scale_radius` in `autogalaxy/profiles/mass/dark/gnfw_virial_mass_conc.py` calls `hyp2f1(a, a, a + 1.0, -c)` on the JAX path. `jax.scipy.special.hyp2f1` (jax 0.12) returns inf or ~1e167 for z < -1, and z = -c < -1 for any concentration above 1, so inside `jax.jit` the profile gets kappa_s = 3.8e-171 where the NumPy path gives 0.048: a silent wrong answer for every JAX fit using `gNFWVirialMassConcSph`. Reproducer: `/home/jammy/Science/Science/development/stars_dm_slope/scripts/scratch/repro_jax_hyp2f1_negative_z.py`.
