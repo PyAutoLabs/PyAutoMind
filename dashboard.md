@@ -86,7 +86,7 @@ _(no open questions)_
 
 **Shift** (2026-11-18-pm2 — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 1 running, 1 finished · tokens 713244 of 5000000 (cache-read 16611862) · review-at 2026-11-18T21:30Z (as of 2026-11-18T20:27:21Z) · [shift issue #588](https://github.com/PyAutoLabs/PyAutoMind/issues/588#issuecomment-6989882156)
+Live: LIVE · 2 finished · tokens 767774 of 5000000 (close-outs 43309; cache-read 17869529) · review-at 2026-11-18T21:30Z (as of 2026-11-18T20:33:46Z) · [shift issue #588](https://github.com/PyAutoLabs/PyAutoMind/issues/588#issuecomment-6989882156)
 
 _(nothing to review yet)_
 
@@ -1404,7 +1404,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/model_identifier_raises_typeerror_iteration_over.md">Model identifier raises "TypeError: iteration over a 0-d array" when a Galaxy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1784">issue #1784</a> — library-dev</summary>
+<details><summary>📋 <a href="active/model_identifier_raises_typeerror_iteration_over.md">Model identifier raises "TypeError: iteration over a 0-d array" when a Galaxy…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1784">issue #1784</a> — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1785">PyAutoFit#1785</a></summary>
 
 ```
 Use the start-dev skill. active/model_identifier_raises_typeerror_iteration_over.md
