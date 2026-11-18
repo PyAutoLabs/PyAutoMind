@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 289 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -197,7 +197,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -211,6 +211,14 @@ Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/brain_tests_not_hermetic_against_worktree_activate.md">Brain test suite is not hermetic against a task worktree's activate.sh organ…</a> — pyautobrain · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/brain_tests_not_hermetic_against_worktree_activate.md
 ```
 
 </details>
@@ -283,14 +291,6 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 ```
 Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually contains group members</a> — autolens_workspace_test · medium · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md
 ```
 
 </details>
@@ -1526,7 +1526,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 34 · local-dev 13 · wsl-data 9
+Lanes: any 231 · ral 34 · local-dev 13 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1894,7 +1894,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 54</summary>
+<summary><b>bug</b> — 55</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2084,6 +2084,14 @@ Use the start-dev skill. draft/bug/autolens_workspace/slam_simultaneous_subhalo_
 
 ```
 Use the start-dev skill. draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/brain_tests_not_hermetic_against_worktree_activate.md">Brain test suite is not hermetic against a task worktree's activate.sh organ…</a> — pyautobrain · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/brain_tests_not_hermetic_against_worktree_activate.md
 ```
 
 </details>
