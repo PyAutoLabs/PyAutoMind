@@ -26,7 +26,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/729
 - issued: 2026-11-19
 - session: shift worker 2026-11-19-am (f6597b74-14a0-449d-bfd4-c034bd8699d5)
-- status: library-dev
+- status: library-shipped, awaiting-merge (shift 2026-11-19-am ended early by the human; PR opened from the cockpit chat after targeted smoke)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730
 - worktree: ~/Code/PyAutoLabs-wt/gnfw-mge-inner-mass
 - heart-ack:
   - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 85 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source
