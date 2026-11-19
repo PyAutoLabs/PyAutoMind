@@ -1,3 +1,11 @@
+A shift now holds a library repo for starting only while a worker on it is live, and serialises that library's merges in PR order instead of holding the library until each PR merges (M3.6j). A later PR's close-out waits behind earlier open shift PRs on the same library (no slot, no refusal); once they merge, a short update session runs `gh pr update-branch` and the normal close-out merges only on CI green at the new head; a conflict, red CI on the new head, a moved head or a third update refuses it to /prm. Later workers get a sibling note; a workspace PR waits behind its own library PR; the digest shows "waits behind" and a per-library Merge order block. Human rulings a–f (2026-11-19) are recorded in AUTONOMY.md.
+
+Motivated by shifts 2026-11-18-pm (4 of 7 tasks unstarted) and -pm2 (2 of 4), each stalled about an hour behind a decision-taken PR awaiting /prm.
+
+Shipped in PyAutoBrain#684 (merged 2026-11-19 by human /prm). Independent review (fresh Sonnet agent): FINDINGS, no blocker; F1 (notify in-turn merge jumping the order), F2 (two workers on one library after a re-rank), F5 (CI read on a moved head) fixed in b7c04fa; F3/F4/F6 known, listed on the PR. Full suite 2413 passed, 1 skipped. First live test: named tasks 6–7 (PyAutoGalaxy) from shift 2026-11-18-pm.
+
+## Original prompt
+
 # M3.6j A shift serialises library merges, not starts, so a PR awaiting /prm does not stall its library
 
 Type: feature
