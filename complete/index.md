@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2328 records across 11 buckets.
+2329 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -236,6 +236,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-floor-0-12](2026/11/jax-floor-0-12.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)
+- [jax_grad_of_sersic_stellar_mass_deflections](2026/11/jax_grad_of_sersic_stellar_mass_deflections.md)
 - [knn-partial-point-block](2026/11/knn-partial-point-block.md) — - `get_interpolation_weights` sliced each point block with `lax.dynamic_slice`, which clamps the last partial …
 - [lane-fail-closed](2026/11/lane-fail-closed.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
