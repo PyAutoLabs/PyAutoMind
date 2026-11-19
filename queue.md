@@ -85,6 +85,10 @@ phase is `local-dev` by construction.
 - kind: prompt
 - ref: draft/feature/autofit/results_library_epic.md
 
+## 4. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
+- kind: prompt
+- ref: draft/maintenance/autocti/cti_upkeep_epic.md
+
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
