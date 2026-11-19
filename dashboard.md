@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 0 |
+| [Autopilot](#autopilot) | 3 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 2 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_LIVE · 0 in progress_
+_3 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -84,11 +84,9 @@ _LIVE · 0 in progress_
 
 _(no open questions)_
 
-**Shift** (2026-11-19-am — 0 in progress · 0 awaiting review)
+**Shift**
 
-Live: LIVE · 1 running, 1 finished · tokens 226457 of 5000000 (cache-read 6718111; 1 session(s) unmeasured) · review-at 2026-11-19T11:30Z (as of 2026-11-19T10:55:57Z) · [shift issue #589](https://github.com/PyAutoLabs/PyAutoMind/issues/589#issuecomment-7006178591)
-
-_(nothing to review yet)_
+_(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](https://github.com/PyAutoLabs/PyAutoMind/issues/571))_
 
 ## Start here
 
