@@ -76,7 +76,23 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/substructure-halo-arrays-overflow
 - repos:
   - PyAutoLens: feature/substructure-halo-arrays-overflow
+  - autolens_workspace: feature/substructure-halo-arrays-overflow
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/870
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/682
 - prompt: active/substructure_util_galaxies_to_halo_arrays_drops.md
+- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- heart-ack:
+  - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+
+## nfwtruncatedsph-small-radius-deflection
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/736
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-pm (87787193)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/nfwtruncatedsph-small-radius-deflection
+- repos:
+  - PyAutoGalaxy: feature/nfwtruncatedsph-small-radius-deflection
+- prompt: active/nfwtruncatedsph_deflection_nan_at_r_0_and.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
 - heart-ack:
   - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
