@@ -1,3 +1,17 @@
+`autolens_workspace/scripts/group/slam.py` bounds each extra galaxy's dPIE `sigma` prior by a value derived from its MGE luminosity. Under the smoke profile's test mode the intensities could sum to 0, giving an upper limit of 0 and a `PriorException`; this turned Workspace Smoke run 44573385455 red on 2026-11-19 (the failed job's re-run passed). Both sites (`source_lp_1` and the mass stage) now carry the guard the sibling group SLaM scripts got in May (2b8e55bc): a non-positive luminosity falls back to the 5.0 cap. Positive luminosities are unchanged.
+
+## Merge receipts
+
+- autolens_workspace#680: 4674ae89f (merged by the human's /prm, 2026-11-19)
+
+Feature head 7f3d4a1e is an ancestor of origin/main. Workspace repo: no release obligation; `notebooks/group/slam.ipynb` refreshes at the next notebook regeneration.
+
+## Validation and review
+
+The guarded bound gives the 5.0 cap for 0, negative and NaN, unchanged for positive values; the script runs end to end under the smoke profile (47 s); targeted smoke import check passed; independent review (Opus 5.5) CLEAN, no other unguarded site in the lensing workspaces; Heart scoped verdict green; PR CI GREEN (8 checks). The prompt's "20 runs in a row" was dropped by the human. Tier: judge (no shadow row).
+
+## Original prompt
+
 # group/slam.py: the dPIE sigma prior's upper limit can be 0 under test mode (flaky smoke)
 
 Type: bug

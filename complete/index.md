@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2339 records across 11 buckets.
+2340 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -212,6 +212,7 @@ markers; everything below GENERATED is rebuilt.
 - [gnfwvirialmassconcsph-gives-kappa-s-1e-171-under](2026/11/gnfwvirialmassconcsph-gives-kappa-s-1e-171-under.md)
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [gradient-json-point-label](2026/11/gradient-json-point-label.md) — already shipped — autolens_profiling#518 (9d2ee2d3d, merged 2026-11-02 22:38, filed 16:18 the same day) record…
+- [group-slam-sigma-bound-guard](2026/11/group-slam-sigma-bound-guard.md)
 - [health-review-cloud-observation](2026/11/health-review-cloud-observation.md) — - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every clo…
 - [heart-dev-scope](2026/11/heart-dev-scope.md)
 - [heart-green-lane](2026/11/heart-green-lane.md)
