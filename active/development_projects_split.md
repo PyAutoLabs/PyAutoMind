@@ -9,6 +9,8 @@ Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Lane: any
+Issued: 2026-11-19
+Issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/95
 Witness: `pyauto-brain cortex census --json` carries a `category` for every project, equal to the category folder in its `local_path`; the generated `dashboard.md` has a "Science" section and a "Development" section, each listing exactly the projects of that category, with per-section Running / Open / Projects counts beside the unchanged overall counts table; `python3 scripts/cortex.py check` is OK; the new tests in both repos pass.
 
 ## Why
