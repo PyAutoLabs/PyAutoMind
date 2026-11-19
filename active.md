@@ -96,5 +96,6 @@
 - worktree: ~/Code/PyAutoLabs-wt/nfwtruncatedsph-near-scale-radius
 - repos:
   - PyAutoGalaxy: feature/nfwtruncatedsph-near-scale-radius
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/740
 - heart-ack:
   - acknowledged by the human 2026-11-19 ("Acknowledge, use these"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
