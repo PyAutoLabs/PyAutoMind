@@ -26,6 +26,36 @@ the ruling on the prompt.
 
 ## Open
 
+### Q14. cti_upkeep_epic — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab…
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: claimed
+- ask: `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it.
+- options: (a) wait for colab_gate_colossus_rationale_is_stale_once to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+
+### Q15. cti_upkeep_epic — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: unattended
+- ask: `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+
+### Q16. cti_upkeep_epic — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker woul…
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: human-required
+- ask: `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship.
+- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
