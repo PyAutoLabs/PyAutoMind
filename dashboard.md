@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 298 |
+| [Backlog](#backlog) | 299 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1493,7 +1493,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 240 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 241 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1544,7 +1544,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1590,6 +1590,14 @@ Use the start-dev skill. draft/feature/autofit/prior_exit_sampler_coverage.md
 
 ```
 Use the start-dev skill. draft/feature/autolens/coolest_pixel_grid_export.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/cortex/development_projects_split.md">Cortex: split development projects from paper-bound science projects on the register…</a> — cortex · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/cortex/development_projects_split.md
 ```
 
 </details>
