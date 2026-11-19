@@ -85,3 +85,14 @@
   - PyAutoLens: feature/lossampler-cosmology-mismatch
 - prompt: active/lossampler_silently_ignores_a_non_planck_cosmolo.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+
+## nfwtruncatedsph_convergence_loses_precision_near_scale_radius
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/739
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-pm2 (f77a9ef7)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/nfwtruncatedsph-near-scale-radius
+- repos:
+  - PyAutoGalaxy: feature/nfwtruncatedsph-near-scale-radius
+- heart-ack:
+  - acknowledged by the human 2026-11-19 ("Acknowledge, use these"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml

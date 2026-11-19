@@ -12,6 +12,7 @@ Consequence: glance
 Witness: A unit test evaluates `NFWTruncatedSph.convergence_2d_from` at r/r_s = 1 ± 10^-k for k = 3 … 15 (and exactly 1) and asserts every value agrees with the value at r/r_s = 1 to 1e-6 relative in float64; and the same for `deflections_yx_2d_from` / `radial_deflection_from` (float64 to 1e-10, jax float32 to 1e-4 relative against an mpmath reference), and `jax.grad` of the deflection at exactly r/r_s = 1 agrees with the mpmath derivative to 1e-6.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-11-19
 Verified: 2026-11-19 5b85fbf0 (PyAutoGalaxy)
 Lane: any
 
