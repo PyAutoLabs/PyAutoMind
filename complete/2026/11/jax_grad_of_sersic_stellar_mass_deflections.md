@@ -1,6 +1,5 @@
 `jax.grad` of `mp.Sersic` CSE deflections made finite, merged 2026-11-19 (PyAutoGalaxy#728, merge f99518af; closes PyAutoGalaxy#727).
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/728
 
 - Fix: the JAX branch of `MassProfileCSE._decompose_convergence_via_cse_from` (`autogalaxy/profiles/mass/abstract/cse.py`) solves the CSE least-squares amplitudes by `jnp.linalg.qr` + `jax.scipy.linalg.solve_triangular` instead of SVD-based `jnp.linalg.lstsq`, whose reverse-mode derivative was NaN on the ill-conditioned 80×50 matrix. NumPy path (scipy `lstsq`) unchanged. Shared mixin, so `SersicGradient` and the elliptical NFW CSE path also get finite gradients. JAX deflections move ~1e-5 relative.
 - Test: `test__jax_grad__deflections_finite_and_match_finite_differences` (`test_autogalaxy/profiles/mass/stellar/test_sersic.py`).

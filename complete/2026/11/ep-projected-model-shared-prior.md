@@ -14,7 +14,6 @@ across model paths (e.g. an MGE source whose Gaussians share one `centre` prior)
   `python scripts/ep.py --total 3 --max_steps 2 --smoke`). Run it to confirm the
   `ep_gnfw_slope` unblock.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1778
 
 ## Original prompt
 

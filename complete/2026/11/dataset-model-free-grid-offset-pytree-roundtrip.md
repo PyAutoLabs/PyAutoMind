@@ -15,7 +15,6 @@ Shipped in PyAutoFit#1779 (merged `17b87edb`, 2026-11-18).
   are not carried through the round-trip, so `instance_from_*` on the rebuilt model in case (b)
   looks up prior config for them. Follow-up filed as its own task.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1779
 
 ## Original prompt
 

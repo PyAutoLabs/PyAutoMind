@@ -4,7 +4,6 @@ Decision taken, accepted as is by the human: the GaussianGradient 0.01 arcsec so
 
 Shipped in PyAutoGalaxy#726 then autolens_workspace_test#368 (the Keeton-integral reference script's pivot), both merged 2026-11-19 by human /prm after shift 2026-11-18-pm2. Follow-ups noted on the PR, not filed: `convergence_2d_from` not jittable for any Sersic profile; a likelihood step at gradient 0.5 (CSE settings switch); ~2–3% CSE error at gradient -0.6, n = 4.5; dead `SersicGradient.decompose_convergence_via_mge`.
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726
 
 ## Original prompt
 

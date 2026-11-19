@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/693
 - completed: 2026-11-18
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/702
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/702
 
 Building a JAX `Fitness` registers `Galaxy` through `autofit.jax.register_model`. A later `autolens.jax.register_tracer_classes` in the same process then hit `autoarray.abstract_ndarray.register_instance_pytree(Galaxy)`, and JAX raised `Duplicate custom PyTreeDef type registration`. Both autoarray registration helpers now go through `_register_pytree_node_once`, which keeps an existing registration (the first route wins, matching autofit's own tolerance) and still raises any other `ValueError`. The merge commit is `5815019d`.
 

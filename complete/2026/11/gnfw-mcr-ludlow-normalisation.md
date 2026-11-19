@@ -4,7 +4,6 @@ Decision taken and accepted by the human at /prm ("merge 724 as is"): the Ludlow
 
 Shipped in PyAutoGalaxy#724 (merged 2026-11-18 by human /prm). Done by shift worker 2026-11-18-pm (1913ad55); the unattended close-out refused the merge because it added a public name.
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724
 
 ## Original prompt
 

@@ -1,7 +1,6 @@
 ## convolver-fft-frame-from-mask
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/698 (closed 2026-11-17)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/699 (MERGED 2026-11-17T15:18:52Z, merge e81c6e16; CI verdict GREEN, Heart freeze not active)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/699
 - completed: 2026-11-17
 - merged-by: human-typed /prm
 - tier: judge (declared Consequence) — no shadow row

@@ -16,7 +16,6 @@ Shipped in PyAutoFit#1781 (merged `3ba1e6c3`, 2026-11-18). Follow-up to PyAutoFi
   data and could break JAX treedef comparison. Nothing flattens a `Model` under jit today
   (`Fitness` closes over the model), so left as is.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1781
 
 ## Original prompt
 

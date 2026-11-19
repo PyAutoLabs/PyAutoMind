@@ -2,7 +2,6 @@ Putting a model instance whose attribute is a 0-d NumPy array into an `af.Collec
 
 Shipped in PyAutoFit#1785 (merged 2026-11-19 by human /prm after shift 2026-11-18-pm2; unattended merge refused for the decision-taken label). Decision taken, accepted as is: narrowed from "NumPy and JAX" to the NumPy crash; JAX arrays hash value-blind (`['ArrayImpl']`) and fixing that moves output folders, so it is the judge draft `draft/bug/autofit/model_identifier_ignores_jax_array_and_numpy_scalar_values.md` (with np.float32/np.int64 scalars).
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1785
 
 ## Original prompt
 

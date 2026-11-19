@@ -1,5 +1,4 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1774
 - pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1775 (merged 2026-11-15)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1775
 - what shipped: `af.ex.Analysis.log_likelihood_function` reduces the chi-squared map with `self._xp.sum` instead of the builtin `sum()`, which under JAX iterated the traced array element by element. Numerically identical under NumPy and JAX; no API change.
 - record: written retroactively 2026-11-19 by the release session (the PR was labelled pending-release but had no Mind record).

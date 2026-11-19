@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/719
 - completed: 2026-11-18
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720
 - summary: `af.Model(ag.EllipseMultipole)` / `af.Model(ag.EllipseMultipoleScaled)` built without an explicit `m` made `latent_parameters_from` raise `TypeError: missing 'm'`. Added `m: Constant 4` to `autogalaxy/config/priors/ellipse/ellipse_multipole.yaml` for both classes (as `PowerLawMultipole` already had), plus a regression test in `test_autogalaxy/test_convert.py` and the priors-config test.
 - shipped by: shift worker 2026-11-16-pm (glance, PR-open); merged 2026-11-18 from a /health session on the human's explicit "do all the PRs" command, CI GREEN (4 success, 1 skipped non-test leg "Refresh the Heart feed").
 - workspace impact: none — every workspace script sets `m` explicitly.

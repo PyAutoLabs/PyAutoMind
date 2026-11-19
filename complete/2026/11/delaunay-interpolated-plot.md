@@ -8,8 +8,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/137
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/187
 - workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/19
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/701
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/864
 - community: https://github.com/PyAutoLabs/.github/discussions/46. The update is drafted for the human and NOT posted; the human will ask for it.
 
 **What shipped:**

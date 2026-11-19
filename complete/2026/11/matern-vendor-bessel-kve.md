@@ -3,7 +3,6 @@
 - completed: 2026-11-15
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/695
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/137, https://github.com/PyAutoLabs/autolens_workspace_test/pull/366
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/695
 - summary:
   - Vendored tfp's `bessel_kve` K-branch (Temme series z<=2, Steed continued fraction z>2, forward recurrence, Olver asymptotics nu>=50) as pure `jax.numpy`/`lax` in `autoarray/inversion/regularization/bessel.py` (Apache-2.0 header + modification list kept); `jax.custom_jvp` with tfp's z-derivative rule. `kv_xp`'s JAX branch uses it; `tfp-nightly` dropped from `autoarray[optional]`. The I_v branch, `bessel_iv_ratio`, `_compute_general_continued_fraction` and log-space variants were not needed and not ported.
   - Parity: max rel err vs `scipy.special.kve` 9e-14 over nu in [0.5, 5.5], 2.3e-13 over nu 0-60 x z 1e-8..1e3 (independent review); z-gradient and second derivative vs closed forms 2.3e-13. Near the float64 overflow edge (nu>=50, tiny z) the port returns finite values where scipy returns inf.

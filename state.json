@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-19T16:40:08Z",
+  "updated": "2026-11-19T16:54:05Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -38,94 +38,94 @@
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#697 \u2014 blurring-mask-separable",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/697",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#699 \u2014 convolver-fft-frame-from-mask",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/699",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#701 \u2014 delaunay-interpolated-plot",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/701",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#702 \u2014 galaxy-duplicate-pytree-registration",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/702",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#704 \u2014 jax-0121-step0-structured",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/704",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#695 \u2014 matern-vendor-bessel-kve",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/695",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1783 \u2014 compound-prior-model-json",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1783",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1779 \u2014 Outcome",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1779",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
+      "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1778 \u2014 Outcome",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1778",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
+      "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1775 \u2014 example-analysis-xp-sum",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1775",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Physical model check when speeding up smoke tests",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
+      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1785 \u2014 model-identifier-0d-array",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1785",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
+      "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1781 \u2014 Outcome",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1781",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#720 \u2014 ellipse-multipole-latent-missing-m",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#724 \u2014 gnfw-mcr-ludlow-normalisation",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Use readthedocs or migrate to GitHub docs",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
+      "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#730 \u2014 gnfw-mge-deflections-lose-accuracy-for-inner",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }

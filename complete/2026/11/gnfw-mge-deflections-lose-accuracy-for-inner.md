@@ -2,7 +2,6 @@
 
 Built by shift 2026-11-19-am (worker f6597b74). The human ended the shift early to skip the worker's full serial smoke sweep ("lets just say its ok and end it early … but try make sure a few key tests ran"); the PR was opened from the cockpit chat after a targeted smoke on the branch (two gNFW integral checks, misc/mass/dark.py, autolens group_halo modeling — all passed). Shipped in PyAutoGalaxy#730, merged 2026-11-19 by human /prm.
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730
 
 ## Original prompt
 

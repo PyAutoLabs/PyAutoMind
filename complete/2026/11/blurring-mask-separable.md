@@ -1,6 +1,5 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/696
 - pr: https://github.com/PyAutoLabs/PyAutoArray/pull/697 (merged 2026-11-17)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/697
 - user-facing: true — hub #45 (@GeorgeVassilakis, co-author); PR linked on the thread; post a release note there when it is on PyPI
 - what shipped: `blurring_mask_2d_from` dilates with (ky,1) then (1,kx) instead of a dense (ky,kx) box (identical masks). Dense-reference test over (3,3), (5,3), (4,4), (6,2), (3,7), (8,5), (2,9). test_autoarray 2418 passed.
 - numbers (laptop, after): HST 21² 3 ms (was 18 ms); JWST 37–51² 24–31 ms (was 0.2–0.4 s, +14–52 MiB); 101² 76 ms (was 3.2 s, +794 MiB); 499² on 1200² 5 s (George: was 401 s, 462 GiB).
