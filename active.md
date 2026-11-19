@@ -33,3 +33,15 @@
   - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 85 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source
 - repos:
   - PyAutoGalaxy: feature/jax-grad-sersic-cse
+
+## shift-smoke-targeted
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/352
+- issued: 2026-11-19
+- session: Claude Code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/shift-smoke-targeted
+- repos:
+  - PyAutoHeart: feature/shift-smoke-targeted
+  - PyAutoBrain: feature/shift-smoke-targeted
+- prompt: active/shift_smoke_targeted_and_parallel.md
+- tier: judge — merge mode: human /prm
