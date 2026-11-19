@@ -21,3 +21,16 @@
 - coordination: human approved PyAutoLens/paper_jax/paper.md-only edits alongside magnification-maps-wiring; no library code changes
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
+
+## nfwtruncatedmcr-truncation-radius
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/732
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-pm (2bf4469f-e7e4-4011-9109-b942513ad05c)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/nfwtruncatedmcr-truncation-radius
+- repos:
+  - PyAutoGalaxy: feature/nfwtruncatedmcr-truncation-radius
+- prompt: active/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md
+- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- heart-ack:
+  - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml

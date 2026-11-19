@@ -13,6 +13,7 @@ Consequence: glance
 Witness: A unit test builds `NFWTruncatedMCRLudlowSph(mass_at_200=1e9, redshift_object=0.5, redshift_source=1.0)` and asserts `tau == 2 * concentration` (24.08, not 151.48), and the same for `NFWTruncatedMCRDuffySph` and `NFWTruncatedMCRScatterLudlowSph`.
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-19 2ec0e361 (PyAutoGalaxy)
 Lane: any
 
 ## Finding
