@@ -1,3 +1,19 @@
+M3.7c of the autonomous-orchestrators epic. Ruling S7 added to `AUTONOMY.md` under "Shift speed — 2026-11-19", with the human's plan decisions 1 to 3. The watcher timer ticks every 60 seconds and a new `pyauto-orchestrator.path` unit starts a tick when the kick file `%S/pyauto/orchestrator.kick` changes; workers, close-outs and branch-update sessions write it after their marker (decision 1). A `decision-taken` PR is refused for `/prm` at PR-open from the label alone (read in the watcher's existing `gh pr view`, once per PR per shift; an unreadable label is refused only after 3 misses over 15 minutes), with no session, slot or CI read; it stays an earlier PR in the M3.6j merge order. The shift closes early when nothing is live or startable and no input is unreadable; a paused shift never does (decision 2), and a park on a question does not hold it open (decision 3). The digest gains an early-close line and a "Waited behind your /prm" section. 32 new tests in `tests/test_watcher_latency.py`.
+
+## Merge receipts
+
+- PyAutoBrain#691: 1f51de13e (merged by the human's /prm, 2026-11-19)
+
+Feature head b76fb79 is an ancestor of origin/main. Organ repo: no release obligation. Deploy (human, no shift live): pull the canonical Brain checkout, copy the service, timer and path units to `~/.config/systemd/user/`, daemon-reload, restart the timer, enable the path unit.
+
+## Validation and review
+
+Tests first; full Brain suite 2484 passed, 1 skipped; skill line budget, tenant firewall and discovery OK; `systemd-analyze --user verify` clean apart from two `TriggerLimit*` keys systemd 249 ignores; Heart scoped verdict green; PR CI GREEN on 3.12 and 3.13. Independent review (Opus 5.5): round 1 FINDINGS (failed steering or Mind reads let the shift close early; systemd start limit; unbounded label reads; carried merged PR misreported; missing guard tests), fixed; round 2 FINDINGS (3 label misses in 2 minutes refused PRs), fixed as suggested. Tier: judge (no shadow row).
+
+Known effects: with the early close, the M3.6j in-shift path runs only while other work keeps the shift open; a `/add` after an early close is not read, as after review-at.
+
+## Original prompt
+
 # M3.7c Watcher latency: short tick, early shift close, `decision-taken` refused at PR-open
 
 Type: feature

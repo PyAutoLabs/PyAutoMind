@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2336 records across 11 buckets.
+2337 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -348,6 +348,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-readiness-pass](2026/11/shift-readiness-pass.md)
 - [shift-smoke-targeted](2026/11/shift-smoke-targeted.md)
 - [shift-speed-closeout-at-pr-open](2026/11/shift-speed-closeout-at-pr-open.md)
+- [shift-speed-watcher-latency](2026/11/shift-speed-watcher-latency.md)
 - [shift-speed-worker-chat-loop](2026/11/shift-speed-worker-chat-loop.md) — M3.7a
 - [shift-throughput-carryover](2026/11/shift-throughput-carryover.md)
 - [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)
