@@ -51,6 +51,7 @@
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Opus 5.5 (session + Opus worker)
 - status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-0121-step0-structured
 - repos:
   - PyAutoArray: feature/jax-0121-step0-structured
 - prompt: active/jax_0_12_1_step0_structured_containment_diverges.md
