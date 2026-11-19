@@ -66,3 +66,16 @@
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
 - heart-ack:
   - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+
+## substructure-halo-arrays-overflow
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/869
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-pm (4b5218b2-3aed-4d94-b56c-ce3b38698c36)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/substructure-halo-arrays-overflow
+- repos:
+  - PyAutoLens: feature/substructure-halo-arrays-overflow
+- prompt: active/substructure_util_galaxies_to_halo_arrays_drops.md
+- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- heart-ack:
+  - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
