@@ -35,8 +35,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/871
 - issued: 2026-11-19
 - session: shift worker 2026-11-19-pm2 (40917658-06b8-4211-bdfc-15f1c8b24590)
-- status: library-dev
+- status: pr-open
 - worktree: /home/jammy/Code/PyAutoLabs-wt/substructure-padded-slot-grad
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/738
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/872
+- follow-ups: review nits (exact padding-row assert in the lens test; clearer error when vmapped_padding_params length mismatches n_radial)
 - repos:
   - PyAutoGalaxy: feature/substructure-padded-slot-grad
   - PyAutoLens: feature/substructure-padded-slot-grad
