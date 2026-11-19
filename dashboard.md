@@ -3373,6 +3373,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoFit#1783](https://github.com/PyAutoLabs/PyAutoFit/pull/1783) — `complete/2026/11/compound-prior-model-json.md`
 - [PyAutoFit#1779](https://github.com/PyAutoLabs/PyAutoFit/pull/1779) — `complete/2026/11/dataset-model-free-grid-offset-pytree-roundtrip.md`
 - [PyAutoFit#1778](https://github.com/PyAutoLabs/PyAutoFit/pull/1778) — `complete/2026/11/ep-projected-model-shared-prior.md`
+- [PyAutoFit#1775](https://github.com/PyAutoLabs/PyAutoFit/pull/1775) — `complete/2026/11/example-analysis-xp-sum.md`
 - [PyAutoFit#1785](https://github.com/PyAutoLabs/PyAutoFit/pull/1785) — `complete/2026/11/model-identifier-0d-array.md`
 - [PyAutoFit#1781](https://github.com/PyAutoLabs/PyAutoFit/pull/1781) — `complete/2026/11/model-pytree-fixed-attributes.md`
 
@@ -3381,11 +3382,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoGalaxy#720](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720) — `complete/2026/11/ellipse-multipole-latent-missing-m.md`
 - [PyAutoGalaxy#724](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724) — `complete/2026/11/gnfw-mcr-ludlow-normalisation.md`
 - [PyAutoGalaxy#730](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730) — `complete/2026/11/gnfw-mge-deflections-lose-accuracy-for-inner.md`
+- [PyAutoGalaxy#722](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722) — `complete/2026/11/gnfwvirialmassconcsph-gives-kappa-s-1e-171-under.md`
+- [PyAutoGalaxy#728](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/728) — `complete/2026/11/jax_grad_of_sersic_stellar_mass_deflections.md`
 - [PyAutoGalaxy#726](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726) — `complete/2026/11/stellar-m-l-gradient-profiles-sersicgradient-piv.md`
 
 **PyAutoLens**
 
 - [PyAutoLens#864](https://github.com/PyAutoLabs/PyAutoLens/pull/864) — `complete/2026/11/delaunay-interpolated-plot.md`
+- [PyAutoLens#861](https://github.com/PyAutoLabs/PyAutoLens/pull/861) — `complete/2026/11/positions-threshold-fixture-off-axis.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

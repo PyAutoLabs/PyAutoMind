@@ -12,7 +12,7 @@ Completed 2026-11-18. Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/7
 
 Consequence `glance`, merged unattended by the 2026-11-18-pm shift close-out session (independent of the author). Witness re-run by the close-out at the PR head: jitted kappa_s equals NumPy over inner_slope 0 to 1.99 and c_2 / concentration 2 to 20 (420 cases), worst relative difference 5.6e-14; control: raw `jax.scipy.special.hyp2f1(2, 2, 3, -10)` returns 2.7e242. Dark-profile tests 228/228 at the PR head. public-names CLEAN; Heart scoped dev-ship verdict green; ci-verdict GREEN (4 success, 1 skipped: Refresh the Heart feed, not a test leg); Heart freeze clear.
 
-pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722
 
 ## Original prompt
 

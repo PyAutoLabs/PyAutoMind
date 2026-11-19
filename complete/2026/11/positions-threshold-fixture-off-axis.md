@@ -2,6 +2,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/860 (closed, completed)
 - completed: 2026-11-14
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/861 (MERGED d9a22748b)
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/861
 - shipped: a **test-only** change to `test__positions_threshold_from` in
   `test_autolens/analysis/test_result.py`. The lens centre moved from `(0.1, 0.0)` (on the x = 0 axis)
   to `(0.06, 0.08)`, off every grid symmetry line (x = 0, y = 0, y = ±x). The two thresholds were
@@ -19,7 +20,7 @@
   scoped dev-ship green for PyAutoLens; Heart freeze clear; review (independent close-out) found no
   changed default, error message, weakened test, rename or wrong docs claim.
 - session: unattended glance close-out, shift 2026-11-14-pm2 (claude-opus-5-5). The PR carries the
-  `pending-release` label; the `active.md` row held no `pending-release:` line, so none is carried.
+  `pending-release` label; the `active.md` row held no `pending-release:` line, so none was carried at close-out (added 2026-11-19 by the release session).
 - affected-repos: PyAutoLens
 
 ## Original prompt

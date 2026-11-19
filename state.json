@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-19T13:54:03Z",
+  "updated": "2026-11-19T14:31:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -87,6 +87,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1775 \u2014 example-analysis-xp-sum",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1775",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1785 \u2014 model-identifier-0d-array",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1785",
       "prompt": null
@@ -117,14 +123,8 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#726 \u2014 stellar-m-l-gradient-profiles-sersicgradient-piv",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 delaunay-interpolated-plot",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#722 \u2014 Merge receipts",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722",
       "prompt": null
     }
   ]
