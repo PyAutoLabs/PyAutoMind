@@ -45,3 +45,14 @@
   - PyAutoBrain: feature/shift-smoke-targeted
 - prompt: active/shift_smoke_targeted_and_parallel.md
 - tier: judge — merge mode: human /prm
+
+## gnfw_mge_deflections_lose_accuracy_for_inner
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/729
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-am (f6597b74-14a0-449d-bfd4-c034bd8699d5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/gnfw-mge-inner-mass
+- heart-ack:
+  - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 85 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source
+- repos:
+  - PyAutoGalaxy: feature/gnfw-mge-inner-mass
