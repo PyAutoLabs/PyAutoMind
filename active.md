@@ -88,10 +88,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/736
 - issued: 2026-11-19
 - session: shift worker 2026-11-19-pm (87787193)
-- status: library-dev
+- status: pr-open (decision-taken)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/nfwtruncatedsph-small-radius-deflection
 - repos:
   - PyAutoGalaxy: feature/nfwtruncatedsph-small-radius-deflection
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/737
 - prompt: active/nfwtruncatedsph_deflection_nan_at_r_0_and.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
 - heart-ack:
