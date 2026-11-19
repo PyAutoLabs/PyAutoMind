@@ -11,7 +11,7 @@ Status: draft
 Filed: 2026-11-19
 Epic: autonomous-orchestrators
 Consequence: judge
-Witness: (1) `scripts/group/slam.py` cannot build `af.UniformPrior(lower_limit=0.0, upper_limit=sigma_upper)` with `sigma_upper <= 0`: the bound has a positive floor, or the luminosity it comes from is guarded, and a comment says why; (2) the script passes 20 runs in a row under the smoke profile (`PYAUTO_TEST_MODE=1` plus the profile defaults); (3) the full-mode behaviour (a real fit's luminosity-derived bound) is unchanged
+Witness: (1) `scripts/group/slam.py` cannot build `af.UniformPrior(lower_limit=0.0, upper_limit=sigma_upper)` with `sigma_upper <= 0`: the bound has a positive floor, or the luminosity it comes from is guarded, and a comment says why; (2) the guarded bound is positive for a total luminosity of 0, a negative value and NaN, and the script runs end to end under the smoke profile (`PYAUTO_TEST_MODE=1` plus the profile defaults) — the earlier "20 runs in a row" was dropped by the human, 2026-11-19, since the guard makes a 0 bound impossible by construction; (3) the full-mode behaviour (a real fit's luminosity-derived bound) is unchanged
 Lane: any
 Unattended: ready
 
