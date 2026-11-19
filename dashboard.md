@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 299 |
+| [Backlog](#backlog) | 304 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1009,7 +1009,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 29 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 34 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1039,6 +1039,46 @@ Use the start-dev skill. draft/feature/pyautobrain/shift_cockpit_same_chat_and_l
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/shift_decisions_sheet.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_end_cloud_sweep_and_red_block.md">M3.7e Shift-end cloud sweep: dispatch, read the verdict, block unattended merges…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_end_cloud_sweep_and_red_block.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_speed_closeout_at_pr_open.md">M3.7b Close-out starts at PR-open, merges on green CI, no pre-merge full…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_speed_closeout_at_pr_open.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_speed_watcher_latency_and_refusals.md">M3.7c Watcher latency: short tick, early shift close, <code>decision-taken</code> refused at PR-open</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_speed_watcher_latency_and_refusals.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_speed_worker_chat_loop.md">M3.7a Shift worker runs the chat loop: changed tests, witness, targeted smoke…</a> — pyautobrain · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_speed_worker_chat_loop.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/workspace_smoke_nightly_and_pinned_shas.md">M3.7d Workspace Smoke runs nightly when a <code>main</code> moved, and accepts pinned…</a> — pyautoheart · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/workspace_smoke_nightly_and_pinned_shas.md
 ```
 
 </details>
@@ -1493,7 +1533,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 241 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 246 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
