@@ -26,7 +26,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/703
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Opus 5.5 (session + Opus worker)
-- status: library-shipped, smoke-pending
+- status: library-shipped, awaiting-merge (smoke 8/8 pass)
 - worktree: ~/Code/PyAutoLabs-wt/jax-0121-step0-structured
 - repos:
   - PyAutoArray: feature/jax-0121-step0-structured
