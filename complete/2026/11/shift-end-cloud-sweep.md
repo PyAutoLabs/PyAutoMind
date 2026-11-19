@@ -1,3 +1,19 @@
+M3.7e of the autonomous-orchestrators epic, the last M3.7 task. Ruling S4 added to `AUTONOMY.md` under "Shift speed — 2026-11-19", with the human's decisions: `/clear-sweep` as a new steer command, the dispatch under the human's own `gh` login (b), and the artifact downloads and compare reads approved (network-surface amendment). A shift that merged a library, chain or workspace PR dispatches Heart's `workspace-smoke.yml` once at close (or in the late window when a close-out merged after it), behind an exclusive marker. Each tick reads the sweep's runs; once per run id it downloads the M3.7d SHA record and, for a red run, the validation report. A red latest run blocks unattended merges on the repos in the failing workspaces' install chains (anything unmappable blocks every library, chain and workspace repo) until a later green run or `/clear-sweep`; running close-outs get a `.sweep-red` marker. A run list unreadable for 30 minutes makes PRs wait and keeps the shift open. One bug draft per red run through the one Mind writer, naming failing scripts and suspect PRs (one compare read per affected repo). Nothing reverts or bisects unattended. New module `agents/conductors/batch/_sweep.py`; 36 new tests in `tests/test_shift_end_sweep.py`.
+
+## Merge receipts
+
+- PyAutoBrain#693: 730d06548 (merged by the human's /prm, 2026-11-19)
+
+Feature head 356ad3c is an ancestor of origin/main. Organ repo: no release obligation.
+
+## Validation and review
+
+Tests first; full Brain suite 2520 passed, 1 skipped; skill line budget, tenant firewall and discovery OK; Heart scoped verdict green (after a `pyauto-heart tick`; it read stale while main CI for #691 finished, and the branch had been pushed before that read, with no PR until green); PR CI GREEN on 3.12 and 3.13. Independent review (Opus 5.5; parsed a real Heart report, checked all 10 cloud projects map): round 1 FINDINGS (2 medium fail-open gaps, 6 low), round 2 FINDINGS (unknown state refused too early; now a wait), round 3 CLEAN. Tier: judge (no shadow row).
+
+Follow-ups (low, not filed): `fail_since` survives the gap between shifts; the digest's per-PR row does not name the sweep wait. Known: the latest green sweep predates M3.7d and has no SHA record, so no "verified through" line until a newer green run.
+
+## Original prompt
+
 # M3.7e Shift-end cloud sweep: dispatch, read the verdict, block unattended merges on red
 
 Type: feature

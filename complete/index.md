@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2337 records across 11 buckets.
+2338 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -338,6 +338,7 @@ markers; everything below GENERATED is rebuilt.
 - [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…
 - [shift-defaults-4-workers-5m](2026/11/shift-defaults-4-workers-5m.md)
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
+- [shift-end-cloud-sweep](2026/11/shift-end-cloud-sweep.md)
 - [shift-launch-preflight](2026/11/shift-launch-preflight.md)
 - [shift-ledger-edit-op](2026/11/shift-ledger-edit-op.md)
 - [shift-library-slot-frees-after-merge](2026/11/shift-library-slot-frees-after-merge.md)
