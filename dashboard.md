@@ -86,7 +86,7 @@ _(no open questions)_
 
 **Shift**
 
-_(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](https://github.com/PyAutoLabs/PyAutoMind/issues/571))_
+_(last shift 2026-11-19-pm — closed, nothing to review · [shift issue #590](https://github.com/PyAutoLabs/PyAutoMind/issues/590))_
 
 ## Start here
 
