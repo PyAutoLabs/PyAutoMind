@@ -12,6 +12,7 @@ Consequence: glance
 Witness: A test calls the LOSSampler mass-function fit with `cosmology_astropy=astropy.cosmology.WMAP9` and the default `cosmology_name_colossus="planck15"` and asserts it raises a ValueError naming both cosmologies (or uses a matching colossus cosmology, whichever the fix chooses), and a second test asserts `LOSSampler(cosmology=<non-Planck>)` with a mismatched colossus name does the same; passing a matching pair works unchanged.
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-19 aa02375f (PyAutoLens)
 Lane: any
 
 ## Finding

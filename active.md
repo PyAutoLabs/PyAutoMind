@@ -74,3 +74,14 @@
 - epic: autonomous-orchestrators
 - tier: judge — merge mode: human /prm
 - note: PyAutoBrain is the running shift's watcher — merge only after 2026-11-19-pm2 stops (22:15Z + 45 min)
+
+## lossampler-cosmology-mismatch
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/873
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-pm2 (2040fb28)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/lossampler-cosmology-mismatch
+- repos:
+  - PyAutoLens: feature/lossampler-cosmology-mismatch
+- prompt: active/lossampler_silently_ignores_a_non_planck_cosmolo.md
+- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
