@@ -37,6 +37,15 @@ outranks an unqueued one, and among queued prompts the file's order wins.
 Below the queue it sorts by `Priority:`, then cheapest review first. An entry
 written against `draft/…` keeps its place after the prompt moves to `active/`.
 
+**Queuing an epic ledger queues its phases** (PyAutoBrain#696). An entry whose
+ref is an epic's ledger (the file `epics.md` names as its `- ledger:`) makes
+every member of that epic count as queued at the ledger's place, so a shift
+takes the epic's next phase even when it is medium or spans several repos.
+The other gates still apply: phase order, `Autonomy: human-required`,
+`Unattended:`, `Blocked-by:`, Witness and lane. `batch plan`, `brief --check`
+and the shift digest say, per queued epic, what it gave or why nothing did.
+Queue a single phase prompt to queue only that phase.
+
 **An empty list stops a shift** (M2.3, PyAutoBrain `AUTONOMY.md` "M2 rulings —
 2026-11-12"): with no live entry here an unattended shift takes its brief's
 named tasks and dips into no backlog. **Every ref is checked**:
