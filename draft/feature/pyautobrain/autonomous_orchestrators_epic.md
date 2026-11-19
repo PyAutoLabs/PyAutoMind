@@ -404,6 +404,38 @@ estimate, so both refusals happen live. If it lands fewer than eight, the carry-
 (M3.6c) makes the next shift finish them. Then the gate: the human's ruling on the unattended
 `glance` grant, and 4c closes with its write-up.
 
+### M3.7 Shift speed: the chat loop in the worker, the full sweep after merge (2026-11-19)
+
+Added after the speed review of shifts 2026-11-18-pm, -pm2 and 2026-11-19-am
+(`Science/scratch/orchestrator_speed_review_2026-11-19/review.md`) and the human's rulings in
+chat on 2026-11-19 ("approved, all rulings yes"). The real work takes 10 to 16 minutes per
+task; the rest was the full local suite, the serial smoke (0 failures in 7 tasks), ticks and
+the merge chain. Target: worker to PR in 10 to 16 minutes, merged when PR CI is green, the
+full workspace sweep in the cloud once per shift and nightly.
+
+**Rulings S1 to S7** (each recorded in the prompt that builds it):
+
+- S1 leg 1: changed test modules and the witness locally; PR CI is the full-suite verdict (M3.7a).
+- S2 leg 2: no full smoke before an unattended merge; the worker's targeted smoke stands.
+  Revert: one red sweep traced to an unattended merge (M3.7b).
+- S3 leg 5: one independent review in the worker, no adversary pass (M3.7a).
+- S4: the watcher dispatches `workspace-smoke.yml` at shift close and reads its runs; nightly
+  CI minutes accepted; a red sweep blocks unattended merges on the affected repos and files
+  one bug draft; reverts are draft PRs for the human; bisection from chat (M3.7d, M3.7e).
+- S5: a close-out may start at PR-open and wait in-turn for CI (M3.7b).
+- S6: M3.6j ruling (a) amended, branch update and CI rerun only on file overlap or a
+  conflict. Revert: one red `main` traced to two disjoint shift PRs (M3.7b).
+- S7: `decision-taken` refused at PR-open with no close-out; it stays an "earlier" PR in the
+  merge order (M3.7c).
+
+**Build order.** In chat, Opus 5.5 workers at medium effort, every PR merged by the human's
+`/prm`: M3.7a, then M3.7b, then M3.7c (same files, one at a time); M3.7d in parallel (Heart);
+M3.7e last. Deploy by pulling the canonical Brain and Heart checkouts only when no shift is
+live.
+
+**Later, not filed.** Two workers on one library on disjoint files; decide after M3.7 has run
+in a shift. PR CI is the remaining floor (PyAutoFit 10 minutes): a `/ci_speedup` task.
+
 ### Order after the M3 gate (2026-11-17)
 
 This replaces the 2026-11-12 "phases 5–7 parked behind M3" for the order only; that text stays
@@ -469,6 +501,11 @@ after M3:
 | M3 (ph 10) | M3.6f Worker cost: impact-scoped smoke and PR before long smoke, hermetic Brain tests, no `pgrep -f` waits, `ruff format`, worker PATH | not started (may ride in the shift's brief) | `draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md` |
 | M3 (ph 10) | M3.6g Cockpit: same-chat hand-over from the batch skill, watch to the end of the late window, `collect` on a brief shift | not started (may ride in the shift's brief) | `draft/feature/pyautobrain/shift_cockpit_same_chat_and_late_window.md` |
 | M3 (ph 10) | M3.6h Heart report-only RED needs no acknowledgement (R1) | not started (may ride in the shift's brief) | `draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` |
+| M3 (ph 10) | M3.7a Worker runs the chat loop: changed tests, witness, targeted smoke, one review (S1, S3) | not started | `draft/feature/pyautobrain/shift_speed_worker_chat_loop.md` |
+| M3 (ph 10) | M3.7b Close-out at PR-open, merge on green CI, no pre-merge full smoke, branch update only on overlap (S2, S5, S6) | not started | `draft/feature/pyautobrain/shift_speed_closeout_at_pr_open.md` |
+| M3 (ph 10) | M3.7c Watcher latency: 60 s tick and `.done` trigger, early shift close, `decision-taken` refused at PR-open (S7) | not started | `draft/feature/pyautobrain/shift_speed_watcher_latency_and_refusals.md` |
+| M3 (ph 10) | M3.7d Workspace Smoke nightly when a `main` moved, `commit_shas` input (S4) | not started | `draft/feature/pyautoheart/workspace_smoke_nightly_and_pinned_shas.md` |
+| M3 (ph 10) | M3.7e Shift-end cloud sweep: dispatch, verdict in the digest, red blocks unattended merges and files a bug draft (S4) | not started (needs M3.7d) | `draft/feature/pyautobrain/shift_end_cloud_sweep_and_red_block.md` |
 | M3 (ph 10) | gate: unattended `glance` grant; close 4c (PyAutoBrain#574) with write-up | not started | |
 | M4 (ph 11) | M4.1 Cloud rehearsal (library, workspace, organ task + two `mobile_shift_operation.md` prompts) — BRAIN-4, ORCH-4; re-check first | not started | |
 | M4 (ph 11) | M4.2 Cloud worker bundle, `doctor`, slim profile, travelling rules — `draft/feature/pyautobrain/cloud_worker_bundle_and_profile.md` (BRAIN-1, TOK-2, TOK-3) | not started | |
@@ -587,3 +624,4 @@ after M3:
 - 2026-11-17 — **M3.6c MERGED (Opus 5.5, mobile, human /prm):** PyAutoBrain#670 (#669) — carry-over of the last shift's late `glance`/`notify` PRs at the first tick (open PRs only; never dropped or question-parked), in-shift restart on an answer with > 30 min left (release held until spawn; bounded fetch, network-surface amendment human-approved), `first: glance` (spawn order), session cap from the token budget. Two Fable 5.2 review rounds, both FINDINGS, fixed (one high each). M3.6a–e are on main. **Next:** M3.3 slice 1 (the readiness pass), then the M3.2 shift.
 - 2026-11-18 — **M3.3 slice 1 and worker effort: PRs open (Opus 5.5, laptop).** The watcher's Brain checkout was pulled to `07db03a` (M3.6a–e). M3.3 slice 1 (PyAutoBrain#671): PyAutoMind#585 (the `ruling` inbox kind; merge first) and PyAutoBrain#674 (`batch ready`, run at shift end; the digest ends "The next shift needs N rulings from you."). Witness red on main, then 26 tests green; Fable 5.2 review round 1 FINDINGS (M1–M4, L2–L4, L6), fixed; round 2 CLEAN. A dry run on the real queue finds 7 rulings (likelihood-lifecycle p4 `unattended` ×2 and `claimed`; hpc-campaign `no-next-phase`; results-library p5 `claimed`, `unattended` and `human-required`), held back until Mind#585 merges. Human ruling: spawned workers and close-outs run Opus 5.5 at medium effort; PyAutoBrain#673 (#672), live `claude --bg --effort medium` spawn passed, Fable review three lows fixed. PyAutoBrain#674's commit says `Closes #671`: keep the prompt active for slice 2. **Open for the human:** L1 (an answered ruling is re-filed every shift end while its gate holds), L5 (shadow shifts file rulings too). **Follow-ups (not filed):** a campaign map with no `Epic:` header is graded as a prompt; a working-tree-only draft gets the advice "rerun after a pull". **Next:** /prm Mind#585, then Brain#674 and #673; pull the watcher's Brain checkout; clear the 7 rulings with /questions; then the M3.2 shift.
 - 2026-11-18 — **M3.3 slice 1 and worker effort MERGED (human /prm, Opus 5.5, laptop).** PyAutoMind#585, PyAutoBrain#673 and PyAutoBrain#674, all CI green; #674 gained the human's L1 ruling (a gate ruled on once, in any state, stays quiet) before merge; L5 kept (shadow shifts file rulings). Records `complete/2026/11/{shift-readiness-pass,worker-model-effort}.md`; slice 2 re-filed as `draft/feature/pyautobrain/shift_decisions_sheet.md`. **Next:** pull the watcher's Brain checkout, file the readiness rulings, the human clears them with /questions, then the M3.2 shift.
+- 2026-11-19 — **M3.7 Shift speed filed (Fable 5.2, laptop chat).** From the speed review of shifts 2026-11-18-pm, -pm2 and 2026-11-19-am: 176 of 314 worker-minutes were the serial smoke, which failed nothing; real work is 10 to 16 minutes per task. Human rulings S1 to S7 ("approved, all rulings yes"; section "M3.7 Shift speed"). Five drafts filed, M3.7a to M3.7e (state table). `workspace-smoke.yml` dispatched by hand at 12:09Z (PyAutoHeart run 44521331980) to cover the library PRs merged since the 2026-11-16 run. **Next:** build M3.7a, then b, then c, with M3.7d in parallel, then M3.7e; the human's `/prm` on each; pull the canonical Brain and Heart checkouts when no shift is live.
