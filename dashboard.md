@@ -86,7 +86,7 @@ _(no open questions)_
 
 **Shift** (2026-11-19-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 1 running, 4 finished · tokens 953856 of 5000000 (cache-read 27522590) · review-at 2026-11-19T20:30Z (as of 2026-11-19T19:25:24Z) · [shift issue #590](https://github.com/PyAutoLabs/PyAutoMind/issues/590#issuecomment-7018966507)
+Live: LIVE · 5 finished · tokens 1094448 of 5000000 (cache-read 30802247) · review-at 2026-11-19T20:30Z (as of 2026-11-19T19:33:34Z) · [shift issue #590](https://github.com/PyAutoLabs/PyAutoMind/issues/590#issuecomment-7018966507)
 
 _(nothing to review yet)_
 
@@ -1436,7 +1436,7 @@ Use the start-dev skill. active/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar
 
 </details>
 
-<details><summary>📋 <a href="active/nfwtruncatedsph_deflection_nan_at_r_0_and.md">NFWTruncatedSph deflection NaN at r=0 and imprecise at small radius</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/736">issue #736</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/nfwtruncatedsph_deflection_nan_at_r_0_and.md">NFWTruncatedSph deflection NaN at r=0 and imprecise at small radius</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/736">issue #736</a> — issued 2026-11-19 — pr-open (decision-taken) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/737">PyAutoGalaxy#737</a></summary>
 
 ```
 Use the start-dev skill. active/nfwtruncatedsph_deflection_nan_at_r_0_and.md
