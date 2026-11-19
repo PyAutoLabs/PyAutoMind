@@ -21,3 +21,15 @@
 - coordination: human approved PyAutoLens/paper_jax/paper.md-only edits alongside magnification-maps-wiring; no library code changes
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
+
+## shift-end-cloud-sweep
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/692
+- issued: 2026-11-19
+- session: claude-code desktop (WSL), Opus 5.5 session + Opus 5.5 worker
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/shift-end-cloud-sweep
+- repos:
+  - PyAutoBrain: feature/shift-end-cloud-sweep
+- prompt: active/shift_end_cloud_sweep_and_red_block.md
+- epic: autonomous-orchestrators (M3.7e)
+- tier: judge — merge mode: human /prm

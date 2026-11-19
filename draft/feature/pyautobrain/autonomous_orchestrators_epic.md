@@ -505,7 +505,7 @@ after M3:
 | M3 (ph 10) | M3.7b Close-out at PR-open, merge on green CI, no pre-merge full smoke, branch update only on overlap (S2, S5, S6) | **merged 2026-11-19** (PyAutoBrain#689, 1a120cbc1; human /prm) | `complete/2026/11/shift-speed-closeout-at-pr-open.md` |
 | M3 (ph 10) | M3.7c Watcher latency: 60 s tick and `.done` trigger, early shift close, `decision-taken` refused at PR-open (S7) | **merged 2026-11-19** (PyAutoBrain#691, 1f51de13e; human /prm) | `complete/2026/11/shift-speed-watcher-latency.md` |
 | M3 (ph 10) | M3.7d Workspace Smoke nightly when a `main` moved, `commit_shas` input (S4) | **merged 2026-11-19** (PyAutoHeart#355, 8ab527dfd; human /prm); witness items 2 to 4 outstanding until runs on `main` | `complete/2026/11/workspace-smoke-nightly.md` |
-| M3 (ph 10) | M3.7e Shift-end cloud sweep: dispatch, verdict in the digest, red blocks unattended merges and files a bug draft (S4) | not started (M3.7d merged 2026-11-19) | `draft/feature/pyautobrain/shift_end_cloud_sweep_and_red_block.md` |
+| M3 (ph 10) | M3.7e Shift-end cloud sweep: dispatch, verdict in the digest, red blocks unattended merges and files a bug draft (S4) | in progress 2026-11-19 (PyAutoBrain#692) | `active/shift_end_cloud_sweep_and_red_block.md` |
 | M3 (ph 10) | gate: unattended `glance` grant; close 4c (PyAutoBrain#574) with write-up | not started | |
 | M4 (ph 11) | M4.1 Cloud rehearsal (library, workspace, organ task + two `mobile_shift_operation.md` prompts) — BRAIN-4, ORCH-4; re-check first | not started | |
 | M4 (ph 11) | M4.2 Cloud worker bundle, `doctor`, slim profile, travelling rules — `draft/feature/pyautobrain/cloud_worker_bundle_and_profile.md` (BRAIN-1, TOK-2, TOK-3) | not started | |
