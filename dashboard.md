@@ -1428,7 +1428,7 @@ Use the start-dev skill. active/lossampler_hmf_import_fails_and_los_halos.md
 
 </details>
 
-<details><summary>📋 <a href="active/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md">NFWTruncatedMCR truncation radius uses kpc as arcseconds</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/732">issue #732</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md">NFWTruncatedMCR truncation radius uses kpc as arcseconds</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/732">issue #732</a> — issued 2026-11-19 — pr-open (decision-taken) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/733">PyAutoGalaxy#733</a></summary>
 
 ```
 Use the start-dev skill. active/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md
