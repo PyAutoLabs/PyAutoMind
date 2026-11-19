@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 297 |
+| [Backlog](#backlog) | 298 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -90,7 +90,15 @@ _(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
+
+<details><summary>📋 <a href="draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)</a> — autoarray · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -176,14 +184,6 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1493,7 +1493,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 239 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 240 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1853,7 +1853,15 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 61</summary>
+<summary><b>bug</b> — 62</summary>
+
+<details><summary>📋 <a href="draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)</a> — autoarray · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -3257,7 +3265,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3284,6 +3292,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md — unknown theme keyword(s): jax, inversion`
 - `draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md — unknown theme keyword(s): inversion, jax`
+- `draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md — unknown theme keyword(s): jax, triangles, release-blocker`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md — unknown theme keyword(s): performance, delaunay`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
