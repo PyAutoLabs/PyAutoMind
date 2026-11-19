@@ -1434,7 +1434,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_speed_worker_chat_loop.md">M3.7a Shift worker runs the chat loop: changed tests, witness, targeted smoke…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/686">issue #686</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_speed_worker_chat_loop.md">M3.7a Shift worker runs the chat loop: changed tests, witness, targeted smoke…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/686">issue #686</a> — issued 2026-11-19 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/687">PyAutoBrain#687</a></summary>
 
 ```
 Use the start-dev skill. active/shift_speed_worker_chat_loop.md
