@@ -39,7 +39,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/354
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Fable 5.2 architect + Opus 5.5 worker
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/355
 - worktree: ~/Code/PyAutoLabs-wt/workspace-smoke-nightly
 - repos:
   - PyAutoHeart: feature/workspace-smoke-nightly
