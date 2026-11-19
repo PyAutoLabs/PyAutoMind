@@ -1442,7 +1442,7 @@ Use the start-dev skill. active/shift_speed_worker_chat_loop.md
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_smoke_nightly_and_pinned_shas.md">M3.7d Workspace Smoke runs nightly when a <code>main</code> moved, and accepts pinned…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/354">issue #354</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/workspace_smoke_nightly_and_pinned_shas.md">M3.7d Workspace Smoke runs nightly when a <code>main</code> moved, and accepts pinned…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/354">issue #354</a> — issued 2026-11-19 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/355">PyAutoHeart#355</a></summary>
 
 ```
 Use the start-dev skill. active/workspace_smoke_nightly_and_pinned_shas.md

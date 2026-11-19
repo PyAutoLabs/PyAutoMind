@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 5 in flight",
-  "updated": "2026-11-19T12:19:51Z",
+  "updated": "2026-11-19T12:24:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "M3.7a Shift worker runs the chat loop: changed tests, witness, targeted smoke\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/687",
       "prompt": "Use the start-dev skill. active/shift_speed_worker_chat_loop.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "M3.7d Workspace Smoke runs nightly when a `main` moved, and accepts pinned\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/355",
+      "prompt": "Use the start-dev skill. active/workspace_smoke_nightly_and_pinned_shas.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#726 \u2014 stellar-m-l-gradient-profiles-sersicgradient-piv",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 delaunay-interpolated-plot",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
       "prompt": null
     }
   ]
