@@ -1,4 +1,4 @@
-# Heart: a weekly organ workflow's RED clears when the fix merges, not next Monday
+# Heart: a weekly organ workflow's RED clears when the fix merges, not next Monday (now Hands Python Version Matrix and URL Check)
 
 Type: bug
 Target: PyAutoHeart
@@ -20,7 +20,9 @@ Source: REL-15 of the ecosystem review (2026-11-10), section B8. **Unverified by
 
 **Already done (M2.1, PyAutoHeart#342):** organ workflows are "shown, never blocking" in the dev-ship gate (`heart/readiness.py:79-84`). What is left is the **release** verdict: a red weekly run stays a RED reason until the next scheduled run.
 
-**Anchors (Heart 00d979a):** `.github/workflows/workspace-smoke.yml:13` (`cron: "0 3 * * 1"`, Mondays only); `config/repos.yaml:119-126` and `:175` (Workspace Smoke as a release-gating organ workflow). The review also names PyAutoHands "Python Version Matrix".
+**Re-scoped 2026-11-19 (M3.7d, PyAutoHeart#355; M3.7e, PyAutoBrain#693).** Workspace Smoke is no longer weekly: it runs nightly, sweeps again after a red run, and the shift watcher dispatches it at shift close. Its "red until next Monday" case is gone. The still-weekly organ workflows are PyAutoHands `python_matrix.yml` (Python Version Matrix, Mondays 03:00 UTC) and PyAutoHeart `url-check.yml` (Mondays 04:00 UTC). Re-check whether either is a release-gating organ workflow in Heart `config/repos.yaml` before planning; if neither gates the release verdict, drop this draft. The Witness below still names Workspace Smoke and must be rewritten for the remaining workflow.
+
+**Anchors (Heart 00d979a, before M3.7d):** `.github/workflows/workspace-smoke.yml:13` (`cron: "0 3 * * 1"`, Mondays only); `config/repos.yaml:119-126` and `:175` (Workspace Smoke as a release-gating organ workflow). The review also names PyAutoHands "Python Version Matrix".
 
 **Re-check first:** `gh run list -R PyAutoLabs/PyAutoHeart --workflow workspace-smoke.yml --limit 10 --json conclusion,createdAt,event`, and for each red run, when the fix merged versus when the next run went green. Drop this draft if no red run outlived its fix by more than a day since 2026-10-01.
 

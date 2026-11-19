@@ -27,6 +27,10 @@ A scheduled Heart check: for each jax version the PyAutoNerves requirement allow
 - **Cadence:** weekly (Mondays, alongside workspace-smoke), plus whenever PyAutoNerves' jax
   requirement or the set of jax releases it allows changes. Implement it as a cheap daily
   fingerprint job that triggers the full run only on a change or on Monday.
+  *Note 2026-11-19:* workspace-smoke is no longer Mondays-only. Since M3.7d (PyAutoHeart#355)
+  it runs nightly and is skipped when no `main` moved. The weekly Monday cadence above is the
+  human's ruling and stands; "alongside workspace-smoke" now means the Monday nightly run.
+  Confirm with the human at plan time whether to keep Monday or follow the nightly gate.
 - **Plan:** phase 1 = Heart `jax-hang-guard.yml` on a 4-core runner. Enumerate every PyPI jax
   release inside Nerves' `jax` specifier (today 0.12.0, 0.12.0.1); one throwaway venv each;
   re-export the modules with the OLDEST allowed jax; read autolens_profiling
