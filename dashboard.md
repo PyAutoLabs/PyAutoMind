@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 291 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -190,7 +190,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 84
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1503,7 +1503,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 234 · ral 34 · local-dev 12 · wsl-data 9
+Lanes: any 239 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1863,7 +1863,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 56</summary>
+<summary><b>bug</b> — 61</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1945,10 +1945,26 @@ Use the start-dev skill. draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_a
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md">NFWTruncatedMCR truncation radius uses kpc as arcseconds</a> — autogalaxy · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens/colab_links_pinned_to_blob_main_in.md">Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs</a> — autolens · small · safe · medium</summary>
 
 ```
 Use the start-dev skill. draft/bug/autolens/colab_links_pinned_to_blob_main_in.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/substructure_util_galaxies_to_halo_arrays_drops.md">substructure_util galaxies_to_halo_arrays drops halos beyond max_n</a> — autolens · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/substructure_util_galaxies_to_halo_arrays_drops.md
 ```
 
 </details>
@@ -1997,6 +2013,22 @@ Use the start-dev skill. draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/nfwtruncatedsph_deflection_nan_at_r_0_and.md">NFWTruncatedSph deflection NaN at r=0 and imprecise at small radius</a> — autogalaxy · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/nfwtruncatedsph_deflection_nan_at_r_0_and.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/lossampler_hmf_import_fails_and_los_halos.md">LOSSampler hmf import fails and los_halos falls back silently</a> — autolens · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/lossampler_hmf_import_fails_and_los_halos.md
 ```
 
 </details>
@@ -2241,6 +2273,14 @@ Use the start-dev skill. draft/bug/autogalaxy/database_paths_dataset_fits_not_re
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/nfwtruncatedsph_total_mass_method_omits_the_nfw.md">NFWTruncatedSph total mass method omits the NFW mass factor</a> — autogalaxy · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/nfwtruncatedsph_total_mass_method_omits_the_nfw.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code> is never regenerated</a> — autolens_profiling · small · supervised · low</summary>
 
 ```
@@ -2316,7 +2356,7 @@ Use the start-dev skill. draft/bug/autolens/twins_provenance_versions.md
 </details>
 
 <details>
-<summary><b>research</b> — 24</summary>
+<summary><b>research</b> — 25</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2362,6 +2402,14 @@ Use the start-dev skill. draft/research/autolens_profiling/unexplained_gradient_
 
 ```
 Use the start-dev skill. draft/research/howtolens/browser_native_pyodide_jupyterlite_howtolens_alo.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/cdm_dark_matter_sightlines_research.md">CDM dark matter sightlines (research)</a> — autolens · large · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autolens/cdm_dark_matter_sightlines_research.md
 ```
 
 </details>
@@ -3170,7 +3218,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+119 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3215,7 +3263,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- _… and 78 more_
+- _… and 79 more_
 
 </details>
 
