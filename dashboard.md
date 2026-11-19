@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 3 |
+| [Autopilot](#autopilot) | 4 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 8 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_3 queued · 0 questions_
+_4 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -79,6 +79,7 @@ _3 queued · 0 questions_
 1. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
 2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
+4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
 **Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
 
