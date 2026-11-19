@@ -11,7 +11,7 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
@@ -1392,14 +1392,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/gnfw_mge_deflections_lose_accuracy_for_inner.md">gNFW MGE deflections lose accuracy for inner_slope above 2…</a></summary>
-
-```
-Use the start-dev skill. active/gnfw_mge_deflections_lose_accuracy_for_inner.md
 ```
 
 </details>
@@ -3365,6 +3357,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 - [PyAutoGalaxy#720](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/720) — `complete/2026/11/ellipse-multipole-latent-missing-m.md`
 - [PyAutoGalaxy#724](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724) — `complete/2026/11/gnfw-mcr-ludlow-normalisation.md`
+- [PyAutoGalaxy#730](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730) — `complete/2026/11/gnfw-mge-deflections-lose-accuracy-for-inner.md`
 - [PyAutoGalaxy#726](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726) — `complete/2026/11/stellar-m-l-gradient-profiles-sersicgradient-piv.md`
 
 **PyAutoLens**

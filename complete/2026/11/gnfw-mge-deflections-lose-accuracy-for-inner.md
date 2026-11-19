@@ -1,3 +1,11 @@
+`gNFW` MGE deflections were biased low for steep inner slopes (0.8% at inner_slope 2, 6% at 2.4, 10% at 2.5) because the 30-Gaussian MGE of the 3D density starts at scale_radius / 20000 and missed the mass inside that cut-off. The fix adds it back as a central term (exact 3D mass inside 10 sigma_min minus the Gaussians' mass there, as a uniform disc of radius sigma_min), with the matching potential term. Deflections now match direct numerical integration to <= 5.3e-5 over inner_slope 0–2.8 for scale_radius 5–40.
+
+Built by shift 2026-11-19-am (worker f6597b74). The human ended the shift early to skip the worker's full serial smoke sweep ("lets just say its ok and end it early … but try make sure a few key tests ran"); the PR was opened from the cockpit chat after a targeted smoke on the branch (two gNFW integral checks, misc/mass/dark.py, autolens group_halo modeling — all passed). Shipped in PyAutoGalaxy#730, merged 2026-11-19 by human /prm.
+
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730
+
+## Original prompt
+
 # gNFW MGE deflections lose accuracy for inner_slope above 2…
 
 Type: bug
