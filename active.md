@@ -66,7 +66,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/696
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Opus 5.5, ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/697
+- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/592
+- heart-red-override:
+  - authorized: live human, 2026-11-19, this session — "Override red" (option 1 of 1 override / 2 fix drift / 3 wait)
+  - red-reason: PyAutoMind: Lifecycle Drift failure on main (pre-existing planned.md cortex-development-split drift; not this change)
+  - gates: Brain 2538 passed, 1 skipped; Mind 167 passed; witness passes; smoke n/a (organ); review in-session, independent at /prm
 - worktree: ~/Code/PyAutoLabs-wt/queued-epics-drive-shifts
 - repos:
   - PyAutoBrain: feature/queued-epics-drive-shifts
