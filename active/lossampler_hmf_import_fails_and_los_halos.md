@@ -13,6 +13,7 @@ Consequence: glance
 Witness: In an environment with the declared dependencies only, `LOSSampler(z_lens=0.5, z_source=1.0)` with no precomputed coefficients samples a population whose per-plane mass-function slope is within 0.02 of -1.906 and whose expected halo count for 1e7 to 1e10 solar masses in a 5 arcsecond cone is within 5% of 1282; and the workspace `los_halos` simulators either use those real coefficients or stop with a clear message, never a silent placeholder.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-11-19
 Verified: 2026-11-19 a79a6b22 (PyAutoLens), 4674ae89 (autolens_workspace)
 Lane: any
 

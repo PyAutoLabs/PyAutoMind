@@ -34,3 +34,17 @@
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
 - heart-ack:
   - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+
+## lossampler_hmf_import_fails_and_los_halos
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/867
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-pm (16bf1edd-888e-48da-9906-1a04abd3106f)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/lossampler_hmf_import_fails_and_los_halos
+- repos:
+  - PyAutoLens: feature/los-sampler-colossus-mass-function
+  - autolens_workspace: feature/los-sampler-colossus-mass-function
+- prompt: active/lossampler_hmf_import_fails_and_los_halos.md
+- tier: effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- heart-ack:
+  - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): manifest drift: end-at-deliverable blocks (generated); manifest drift: generated hooks (session-start + end-at-deliverable)
