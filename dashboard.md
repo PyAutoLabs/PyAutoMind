@@ -1410,7 +1410,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/group_slam_sigma_upper_zero_flake.md">group/slam.py: the dPIE sigma prior's upper limit can be 0 under test…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/679">issue #679</a> — issued 2026-11-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/group_slam_sigma_upper_zero_flake.md">group/slam.py: the dPIE sigma prior's upper limit can be 0 under test…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/679">issue #679</a> — issued 2026-11-19 — workspace-shipped, awaiting /prm — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/680">autolens_workspace#680</a></summary>
 
 ```
 Use the start-dev skill. active/group_slam_sigma_upper_zero_flake.md
