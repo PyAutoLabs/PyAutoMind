@@ -86,7 +86,7 @@ _(no open questions)_
 
 **Shift** (2026-11-19-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 2 running, 2 finished · tokens 556379 of 5000000 (cache-read 16265494; 1 session(s) unmeasured) · review-at 2026-11-19T20:30Z (as of 2026-11-19T19:10:58Z) · [shift issue #590](https://github.com/PyAutoLabs/PyAutoMind/issues/590#issuecomment-7018966507)
+Live: LIVE · 2 running, 3 finished · tokens 834074 of 5000000 (cache-read 24557278; 1 session(s) unmeasured) · review-at 2026-11-19T20:30Z (as of 2026-11-19T19:21:17Z) · [shift issue #590](https://github.com/PyAutoLabs/PyAutoMind/issues/590#issuecomment-7018966507)
 
 _(nothing to review yet)_
 
@@ -1436,7 +1436,7 @@ Use the start-dev skill. active/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar
 
 </details>
 
-<details><summary>📋 <a href="active/nfwtruncatedsph_total_mass_method_omits_the_nfw.md">NFWTruncatedSph total mass method omits the NFW mass factor</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/734">issue #734</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/nfwtruncatedsph_total_mass_method_omits_the_nfw.md">NFWTruncatedSph total mass method omits the NFW mass factor</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/734">issue #734</a> — issued 2026-11-19 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/735">PyAutoGalaxy#735</a></summary>
 
 ```
 Use the start-dev skill. active/nfwtruncatedsph_total_mass_method_omits_the_nfw.md
