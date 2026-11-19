@@ -503,7 +503,7 @@ after M3:
 | M3 (ph 10) | M3.6h Heart report-only RED needs no acknowledgement (R1) | not started (may ride in the shift's brief) | `draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` |
 | M3 (ph 10) | M3.7a Worker runs the chat loop: changed tests, witness, targeted smoke, one review (S1, S3) | **merged 2026-11-19** (PyAutoBrain#687, 66ae0cf37; human /prm) | `complete/2026/11/shift-speed-worker-chat-loop.md` |
 | M3 (ph 10) | M3.7b Close-out at PR-open, merge on green CI, no pre-merge full smoke, branch update only on overlap (S2, S5, S6) | **merged 2026-11-19** (PyAutoBrain#689, 1a120cbc1; human /prm) | `complete/2026/11/shift-speed-closeout-at-pr-open.md` |
-| M3 (ph 10) | M3.7c Watcher latency: 60 s tick and `.done` trigger, early shift close, `decision-taken` refused at PR-open (S7) | not started | `draft/feature/pyautobrain/shift_speed_watcher_latency_and_refusals.md` |
+| M3 (ph 10) | M3.7c Watcher latency: 60 s tick and `.done` trigger, early shift close, `decision-taken` refused at PR-open (S7) | in progress 2026-11-19 (PyAutoBrain#690) | `active/shift_speed_watcher_latency_and_refusals.md` |
 | M3 (ph 10) | M3.7d Workspace Smoke nightly when a `main` moved, `commit_shas` input (S4) | **merged 2026-11-19** (PyAutoHeart#355, 8ab527dfd; human /prm); witness items 2 to 4 outstanding until runs on `main` | `complete/2026/11/workspace-smoke-nightly.md` |
 | M3 (ph 10) | M3.7e Shift-end cloud sweep: dispatch, verdict in the digest, red blocks unattended merges and files a bug draft (S4) | not started (M3.7d merged 2026-11-19) | `draft/feature/pyautobrain/shift_end_cloud_sweep_and_red_block.md` |
 | M3 (ph 10) | gate: unattended `glance` grant; close 4c (PyAutoBrain#574) with write-up | not started | |
