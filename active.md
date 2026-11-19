@@ -26,7 +26,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/692
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Opus 5.5 session + Opus 5.5 worker
-- status: library-dev
+- status: library-shipped, awaiting /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/693
 - worktree: ~/Code/PyAutoLabs-wt/shift-end-cloud-sweep
 - repos:
   - PyAutoBrain: feature/shift-end-cloud-sweep
