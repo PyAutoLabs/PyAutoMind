@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-19T13:17:03Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 2 in flight",
+  "updated": "2026-11-19T13:29:16Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "M3.7b Close-out starts at PR-open, merges on green CI, no pre-merge full\u2026 \u2014 library-shipped, awaiting /prm",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/689",
-      "prompt": "Use the start-dev skill. active/shift_speed_closeout_at_pr_open.md"
-    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#726 \u2014 stellar-m-l-gradient-profiles-sersicgradient-piv",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 delaunay-interpolated-plot",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
       "prompt": null
     }
   ]

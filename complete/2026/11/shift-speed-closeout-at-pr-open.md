@@ -1,3 +1,19 @@
+M3.7b of the autonomous-orchestrators epic. Rulings S2, S5 and S6 added to `AUTONOMY.md` under "Shift speed — 2026-11-19", with the human's plan decisions A and B. The shift close-out now starts at PR-open (CI RUNNING or HEALTHY; NO-CHECKS waits 10 minutes, then refuses), runs the witness and the diff read while CI runs, waits in-turn with `pyauto-brain ci-verdict --until` (the earlier of 30 minutes and review-at minus 5 minutes) and merges only on GREEN, pinned to the witnessed head with `--match-head-commit`. The close-out's full affected smoke is removed (S2). The branch update runs only when changed files overlap an earlier shift PR merged ahead on the library, a file list is unreadable or may be truncated, or GitHub reports a conflict (S6). Decision A: the close-out takes its own merge slot just before merging and goes on only on a `taken: ` line; the watcher only checks the cap has room. Decision B: a network-surface amendment for the changed-file lists, once per PR per shift. 27 new tests in `tests/test_closeout_at_pr_open.py`.
+
+## Merge receipts
+
+- PyAutoBrain#689: 1a120cbc1 (merged by the human's /prm, 2026-11-19)
+
+Feature head 9b71e7b is an ancestor of origin/main. Organ repo: no release obligation. Takes effect for shifts when the canonical Brain checkout is pulled, with no shift live.
+
+## Validation and review
+
+Tests first: 21 of the 27 new tests failed on main. Full Brain suite 2452 passed, 1 skipped; skill line budget, tenant firewall and discovery checks OK; Heart scoped verdict green; PR CI GREEN on 3.12 and 3.13. Independent review (Opus 5.5): round 1 FINDINGS (2 medium: the CI wait could pass review-at; an unreadable file list was re-read; 3 low: a take outside a shift exited 0, `--until` against the tool timeout, the merge not pinned to the witnessed head), all fixed; round 2 CLEAN. Tier: judge (no shadow row).
+
+Known choices recorded in the PR: an updated PR's merge close-out starts on RUNNING CI at the new head and waits in-turn (Witness item 4 holds through that wait); running close-outs without a slot count against the cap, so a cap-0 shift refuses at once; a file list of 100 or more files counts as unreadable.
+
+## Original prompt
+
 # M3.7b Close-out starts at PR-open, merges on green CI, no pre-merge full smoke
 
 Type: feature
