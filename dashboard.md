@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 300 |
+| [Backlog](#backlog) | 301 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -1009,7 +1009,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 31 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 32 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1079,6 +1079,14 @@ Use the start-dev skill. draft/feature/pyautobrain/maintenance_orchestrator.md
 
 ```
 Use the start-dev skill. draft/research/pyautobrain/experiment_capability_speedup_orchestrator_plan.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/group_slam_sigma_upper_zero_flake.md">group/slam.py: the dPIE sigma prior's upper limit can be 0 under test…</a> — autolens_workspace · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens_workspace/group_slam_sigma_upper_zero_flake.md
 ```
 
 </details>
@@ -1525,7 +1533,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 242 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 243 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
