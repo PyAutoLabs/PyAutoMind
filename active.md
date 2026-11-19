@@ -26,7 +26,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/679
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Opus 5.5 session
-- status: workspace-dev
+- status: workspace-shipped, awaiting /prm
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/680
 - worktree: ~/Code/PyAutoLabs-wt/group-slam-sigma-bound-guard
 - repos:
   - autolens_workspace: feature/group-slam-sigma-bound-guard
