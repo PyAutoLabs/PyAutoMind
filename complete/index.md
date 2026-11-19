@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2331 records across 11 buckets.
+2333 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -345,6 +345,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
 - [shift-readiness-pass](2026/11/shift-readiness-pass.md)
 - [shift-smoke-targeted](2026/11/shift-smoke-targeted.md)
+- [shift-speed-worker-chat-loop](2026/11/shift-speed-worker-chat-loop.md) — M3.7a
 - [shift-throughput-carryover](2026/11/shift-throughput-carryover.md)
 - [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)
 - [sibson-internal-edge-continuity](2026/11/sibson-internal-edge-continuity.md) — - The Watson per-triangle decomposition formed a circle through the query and every cavity-triangle edge, incl…
@@ -372,6 +373,7 @@ markers; everything below GENERATED is rebuilt.
 - [workspace-dataset-gallery](2026/11/workspace-dataset-gallery.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
 - [workspace-readme-images](2026/11/workspace-readme-images.md)
+- [workspace-smoke-nightly](2026/11/workspace-smoke-nightly.md) — M3.7d
 
 ## 2026/10/github-token-consolidation-epic_surveys
 

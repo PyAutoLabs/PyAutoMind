@@ -1,3 +1,21 @@
+# Shift speed: worker chat loop (M3.7a)
+
+Completed 2026-11-19. Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/686
+
+M3.7a of the autonomous-orchestrators epic. Added rulings S1 and S3 to `AUTONOMY.md` under "Shift speed — 2026-11-19". The shift worker template now runs the changed test modules, the witness, the targeted smoke and one independent review, with no adversary pass; leg 5 is kept for batch launches outside a shift, and the Heart leg is stated unchanged. The `ship_library` skill and its reference follow the rulings. 6 new tests.
+
+## Merge receipts
+
+- PyAutoBrain#687: 66ae0cf3758f1ff800799c1e41e1e58cde49b610 (merged by the human's /prm, 2026-11-19)
+
+Feature head 9ea459871 is an ancestor of origin/main. Organ repo: no release obligation.
+
+## Validation and review
+
+Review by Fable 5.2: round 1 FINDINGS (leg 5 kept for batch launches outside a shift; Heart leg stated unchanged), fixed. One CI red on the skill line budget, fixed. Tier: judge (no shadow row).
+
+## Original prompt
+
 # M3.7a Shift worker runs the chat loop: changed tests, witness, targeted smoke, one review
 
 Type: feature

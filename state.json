@@ -3,22 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 5 in flight",
-  "updated": "2026-11-19T12:24:19Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
+  "updated": "2026-11-19T12:40:37Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "M3.7a Shift worker runs the chat loop: changed tests, witness, targeted smoke\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/687",
-      "prompt": "Use the start-dev skill. active/shift_speed_worker_chat_loop.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "M3.7d Workspace Smoke runs nightly when a `main` moved, and accepts pinned\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/355",
-      "prompt": "Use the start-dev skill. active/workspace_smoke_nightly_and_pinned_shas.md"
-    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -126,6 +114,18 @@
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#726 \u2014 stellar-m-l-gradient-profiles-sersicgradient-piv",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 delaunay-interpolated-plot",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
+      "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }

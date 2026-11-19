@@ -1,3 +1,25 @@
+# Workspace smoke nightly and pinned SHAs (M3.7d)
+
+Completed 2026-11-19. Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/354
+
+M3.7d of the autonomous-orchestrators epic. Nightly `workspace-smoke.yml` with a SHA gate that skips when no workspace main moved and the latest run was green, a full sweep at least every 7 days, and a `force` input; a SHA record artifact on every run; smoke runs pinned to the gate's SHAs; a separate `workspace-smoke-pinned.yml` for bisect runs. Heart `test_run` reads only runs on main and re-attests a skipped night. The covered repos are read from `workspace-validation.yml`.
+
+## Merge receipts
+
+- PyAutoHeart#355: 8ab527dfda9c332a9effecebc0c46210abf81443 (merged by the human's /prm, 2026-11-19)
+
+Feature head 947756f90 is an ancestor of origin/main. Organ repo: no release obligation.
+
+## Validation and review
+
+Review by Fable 5.2: round 1 FINDINGS (1 high, 1 medium, 2 low), fixed. One CI red on the tenant firewall, fixed by reading the covered repos from `workspace-validation.yml`. Run 43034177136 (2026-11-11) was a real failure on a feature branch. Tier: judge (no shadow row).
+
+## Outstanding verification
+
+Witness items 2 (a skipped night), 3 (a pinned dispatch) and 4 (the SHA record on a real run) need runs on main. They are NOT verified by this merge and remain outstanding until the nightly and a pinned dispatch have run on main.
+
+## Original prompt
+
 # M3.7d Workspace Smoke runs nightly when a `main` moved, and accepts pinned SHAs
 
 Type: feature

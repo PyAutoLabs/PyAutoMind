@@ -11,7 +11,6 @@ Status: draft
 Filed: 2026-11-19
 Epic: autonomous-orchestrators
 Phase: 10
-Blocked-by: workspace_smoke_nightly_and_pinned_shas
 Consequence: judge
 Witness: (1) an orchestrator test: a shift that merged at least one library or workspace PR dispatches `workspace-smoke.yml` exactly once at its close, and a shift that merged none dispatches nothing; (2) the digest has the line "workspaces verified through `<sha>`" per library from the latest green sweep, or "sweep running: <url>" when the shift's own sweep has not finished; (3) an orchestrator test: when the latest completed sweep is red, no close-out starts for a PR on a repo in the failing workspaces' install chains, the PR is refused for `/prm` with the reason "workspace sweep red: <run url>", and PRs on unaffected repos still close out; (4) the same red run files one bug draft through the one Mind writer, naming the failing scripts and every PR merged on the affected repos between the last green sweep's SHAs and the red one's; a second tick on the same red run files nothing more; (5) nothing in the watcher or a close-out reverts a commit or dispatches a bisect run; (6) `AUTONOMY.md` records ruling S4 and the watcher network-surface amendment; (7) the Brain suite passes
 Lane: any
@@ -42,4 +41,4 @@ M3.7b removes the full smoke before an unattended merge. The full sweep then has
 
 ## Order
 
-Last of M3.7. After M3.7c (same file) and M3.7d (the workflow input and the recorded SHAs).
+Last of M3.7. After M3.7c (same file). M3.7d (the workflow input and the recorded SHAs) merged 2026-11-19 (PyAutoHeart#355, record `complete/2026/11/workspace-smoke-nightly.md`), so its blocked-by header is satisfied and removed; its witness items 2 to 4 still await runs on `main`.
