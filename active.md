@@ -45,3 +45,14 @@
 - prompt: active/workspace_smoke_nightly_and_pinned_shas.md
 - epic: autonomous-orchestrators (M3.7d)
 - tier: judge — merge mode: human /prm
+
+## jax-0121-step0-structured
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/703
+- issued: 2026-11-19
+- session: claude-code desktop (WSL), Opus 5.5 (session + Opus worker)
+- status: library-dev
+- repos:
+  - PyAutoArray: feature/jax-0121-step0-structured
+- prompt: active/jax_0_12_1_step0_structured_containment_diverges.md
+- blocks: pending library release (rehearsal fails on jax 0.12.1)
+- tier: supervised — merge mode: human /prm

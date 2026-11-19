@@ -12,7 +12,9 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-19
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/703
 Consequence: judge
 Witness: on jax 0.12.1, `pytest test_autoarray/structures/triangles/test_coordinate_jax.py -k step0_route_is_bit_identical` passes (or jax 0.12.1 is excluded from the pin with a recorded reason), and the PyAutoHands release.yml TestPyPI test step passes for PyAutoArray.
 Lane: any
