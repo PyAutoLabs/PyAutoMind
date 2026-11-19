@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 295 |
+| [Backlog](#backlog) | 298 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -189,7 +189,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 82
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -271,18 +271,18 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md">repos_sync tenant-firewall leg scans nested .worktrees/ folders</a> — pyautomind · small · safe · low</summary>
+<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md">Colab gate: colossus rationale is stale once los_halos needs it</a> — pyautoheart · small · supervised · low</summary>
 
 ```
-Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md
+Use the start-dev skill. draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually contains group members</a> — autolens_workspace_test · medium · supervised · low</summary>
+<details><summary>📋 <a href="draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md">repos_sync tenant-firewall leg scans nested .worktrees/ folders</a> — pyautomind · small · safe · low</summary>
 
 ```
-Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md
+Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md
 ```
 
 </details>
@@ -1566,7 +1566,7 @@ Use the start-dev skill. active/development_projects_split.md
 
 ## Backlog
 
-Lanes: any 237 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 240 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1926,7 +1926,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 57</summary>
+<summary><b>bug</b> — 60</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2176,6 +2176,14 @@ Use the start-dev skill. draft/bug/autolens/jit_cache_not_hit_modeling_visualiza
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autolens/substructure_jax_grad_is_nan_when_a.md">Substructure jax.grad is NaN when a zero-padded halo slot exists</a> — autolens · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/substructure_jax_grad_is_nan_when_a.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its 3600s override</a> — autolens_workspace · medium · supervised · normal</summary>
 
 ```
@@ -2304,10 +2312,26 @@ Use the start-dev skill. draft/bug/autogalaxy/nfwtruncatedsph_convergence_loses_
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autolens/lossampler_silently_ignores_a_non_planck_cosmolo.md">LOSSampler silently ignores a non-Planck cosmology_astropy</a> — autolens · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/lossampler_silently_ignores_a_non_planck_cosmolo.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code> is never regenerated</a> — autolens_profiling · small · supervised · low</summary>
 
 ```
 Use the start-dev skill. draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md">Colab gate: colossus rationale is stale once los_halos needs it</a> — pyautoheart · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md
 ```
 
 </details>

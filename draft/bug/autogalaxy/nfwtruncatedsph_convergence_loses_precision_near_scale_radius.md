@@ -9,7 +9,7 @@ Autonomy: supervised
 Priority: low
 Status: formalised
 Consequence: glance
-Witness: A unit test evaluates `NFWTruncatedSph.convergence_2d_from` at r/r_s = 1 ± 10^-k for k = 3 … 15 (and exactly 1) and asserts every value agrees with the value at r/r_s = 1 to 1e-6 relative in float64.
+Witness: A unit test evaluates `NFWTruncatedSph.convergence_2d_from` at r/r_s = 1 ± 10^-k for k = 3 … 15 (and exactly 1) and asserts every value agrees with the value at r/r_s = 1 to 1e-6 relative in float64; and the same for `deflections_yx_2d_from` / `radial_deflection_from` (float64 to 1e-10, jax float32 to 1e-4 relative against an mpmath reference), and `jax.grad` of the deflection at exactly r/r_s = 1 agrees with the mpmath derivative to 1e-6.
 Review-minutes: 3
 Unattended: ready
 Lane: any
@@ -42,7 +42,25 @@ a line-of-sight population of thousands of halos on an oversampled grid.
 2. Check `coord_func_m_from` (deflection) at the same radii.
 3. Add the witness test.
 
+## Deflection near r = r_s — adversary measurements (2026-11-19)
+
+The independent adversary review (Fable 5.2) of PyAutoGalaxy#737 (shift 2026-11-19-pm, finding F1)
+measured the same cancellation in the **deflection** closed form (`nfw_truncated.py:92-95`, the
+x ≥ 0.5 branch #737 leaves unchanged), identical on main:
+
+    float64: 4e-13 at x = 1.0004, 5.6e-11 at x = 0.999999
+    float32: 2.5e-4 at x = 0.9999 / 1.0001, 1.9e-3 at x = 0.99995, 9.5e-2 at x = 0.999999
+             (~0.2% of points in 0.5 ≤ x ≤ 5 exceed 1e-5)
+    jax.grad at exactly x = 1: d/dr 0.2715 vs true 0.00747 — from the `x == 1` constant
+             branch in `coord_func_f_from`
+
+So a float32 GPU line-of-sight run is still up to ~10% wrong for grid points within ~1e-6 r_s of
+a halo's scale radius. Ask step 2 now covers this: series-expand the deflection near x = 1 too,
+for real and JAX float32 inputs, and give the x = 1 branch the correct derivative. Land after
+PyAutoGalaxy#737 (it rewrites the x < 0.5 branch of the same function).
+
 ## Provenance
 
 [from: shift worker 2026-11-19-pm, task nfwtruncatedsph_total_mass_method_omits_the_nfw] found
 while writing the PyAutoGalaxy#734 witness test.
+[from: independent adversary review, Fable 5.2, shift 2026-11-19-pm] deflection measurements on PyAutoGalaxy#737 (F1).
