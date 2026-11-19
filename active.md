@@ -30,3 +30,17 @@
 - repos:
   - PyAutoHeart: feature/colab-gate-colossus-rationale
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/357
+
+## substructure-padded-slot-grad
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/871
+- issued: 2026-11-19
+- session: shift worker 2026-11-19-pm2 (40917658-06b8-4211-bdfc-15f1c8b24590)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/substructure-padded-slot-grad
+- repos:
+  - PyAutoGalaxy: feature/substructure-padded-slot-grad
+  - PyAutoLens: feature/substructure-padded-slot-grad
+- prompt: active/substructure_jax_grad_is_nan_when_a.md
+- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- heart-ack:
+  - acknowledged by the human 2026-11-19 ("Acknowledge, use these"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
