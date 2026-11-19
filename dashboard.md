@@ -87,7 +87,7 @@ _(no open questions)_
 
 **Shift** (2026-11-19-pm2 — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 3 running, 4 finished · tokens 537922 of 5000000 (cache-read 13417486; 2 session(s) unmeasured) · review-at 2026-11-19T22:15Z (as of 2026-11-19T21:33:59Z) · [shift issue #591](https://github.com/PyAutoLabs/PyAutoMind/issues/591#issuecomment-7022429539)
+Live: LIVE · 2 running, 5 finished · tokens 979108 of 5000000 (cache-read 24837854) · review-at 2026-11-19T22:15Z (as of 2026-11-19T21:39:10Z) · [shift issue #591](https://github.com/PyAutoLabs/PyAutoMind/issues/591#issuecomment-7022429539)
 
 _(nothing to review yet)_
 
@@ -1421,7 +1421,7 @@ Use the start-dev skill. active/development_projects_split.md
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_sync_submit_pass_time_requeue_env.md">autolens_inference <code>hpc/sync submit</code> can't pass <code>--time</code>, <code>--no-requeue</code> or environment variables, so every…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/71">issue #71</a> — issued 2026-11-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hpc_sync_submit_pass_time_requeue_env.md">autolens_inference <code>hpc/sync submit</code> can't pass <code>--time</code>, <code>--no-requeue</code> or environment variables, so every…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/71">issue #71</a> — issued 2026-11-19 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/72">autolens_inference#72</a></summary>
 
 ```
 Use the start-dev skill. active/hpc_sync_submit_pass_time_requeue_env.md
