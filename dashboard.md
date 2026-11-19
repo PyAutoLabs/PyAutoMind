@@ -11,7 +11,7 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 5 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
@@ -1400,14 +1400,6 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 ```
 Use the start-dev skill. active/gnfw_mge_deflections_lose_accuracy_for_inner.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/jax_grad_of_sersic_stellar_mass_deflections.md">jax.grad of Sersic stellar-mass deflections is NaN with respect to mass_to_light_ratio…</a></summary>
-
-```
-Use the start-dev skill. active/jax_grad_of_sersic_stellar_mass_deflections.md
 ```
 
 </details>
