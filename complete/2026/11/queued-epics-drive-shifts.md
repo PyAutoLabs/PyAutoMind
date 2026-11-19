@@ -1,3 +1,20 @@
+## Outcome
+Queuing an epic in `queue.md` now drives shifts, and shift briefs allow RAL by default (PyAutoBrain#696, from shift 2026-11-19-pm2 where four queued epics contributed nothing).
+
+- `batch brief --new` writes `lanes: any local-dev ral` + a default `ral-allowance:` (packets 2, partition ral, cpu-hours 64) and adds queued epics to `scoped: epics`.
+- A queue entry naming an epic ledger queues the epic's members at the ledger's rank (`queue_standing`); the 2026-11-16 scoped-reach rule is narrowed accordingly (AUTONOMY.md). Phase order, autonomy, Unattended, Blocked-by, Witness, lane, holds and budget unchanged; phase order now also counts members the brief scope or a claim withheld.
+- One line per queued epic (taken / why idle) in plan text + `--json` (`queued_epics`), `brief --check` and the shift digest.
+
+## Evidence
+- Brain full suite 2538 passed, 1 skipped; Mind 167 passed; Witness passes on the 2026-11-19 Mind state.
+- Shipped under the Heart RED development override (human: "Override red"; RED reason "PyAutoMind: Lifecycle Drift failure on main", pre-existing planned.md drift for cortex-development-split); merged by the human's /prm with ci-verdict GREEN.
+
+## Follow-ups
+- Add `Witness:` to the three hpc-campaign phase-5 prompts; results-library p5c (30 review-min) needs a brief budget above 45.
+- Out of scope, possible later: a shift worker that continues an epic from its ledger and files the next phase prompt.
+
+## Original prompt
+
 # Queued epics drive shifts, and briefs allow RAL by default
 
 Type: feature

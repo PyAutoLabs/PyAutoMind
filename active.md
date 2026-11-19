@@ -62,26 +62,6 @@
 - heart-ack:
   - acknowledged by the human 2026-11-19 ("Acknowledge, use these"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
 
-## queued-epics-drive-shifts
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/696
-- issued: 2026-11-19
-- session: claude-code desktop (WSL), Opus 5.5, ~/Code/PyAutoLabs session
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/697
-- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/592
-- heart-red-override:
-  - authorized: live human, 2026-11-19, this session — "Override red" (option 1 of 1 override / 2 fix drift / 3 wait)
-  - red-reason: PyAutoMind: Lifecycle Drift failure on main (pre-existing planned.md cortex-development-split drift; not this change)
-  - gates: Brain 2538 passed, 1 skipped; Mind 167 passed; witness passes; smoke n/a (organ); review in-session, independent at /prm
-- worktree: ~/Code/PyAutoLabs-wt/queued-epics-drive-shifts
-- repos:
-  - PyAutoBrain: feature/queued-epics-drive-shifts
-  - PyAutoMind: feature/queued-epics-drive-shifts
-- prompt: active/queued_epics_drive_shifts_and_ral_by_default.md
-- epic: autonomous-orchestrators
-- tier: judge — merge mode: human /prm
-- note: PyAutoBrain is the running shift's watcher — merge only after 2026-11-19-pm2 stops (22:15Z + 45 min)
-
 ## lossampler-cosmology-mismatch
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/873
 - issued: 2026-11-19

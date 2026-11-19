@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2345 records across 11 buckets.
+2346 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -317,6 +317,7 @@ markers; everything below GENERATED is rebuilt.
 - [pseudo-det-rebaseline](2026/11/pseudo-det-rebaseline.md)
 - [pulse-xla-pointers-to-dna](2026/11/pulse-xla-pointers-to-dna.md)
 - [queue-by-chat](2026/11/queue-by-chat.md)
+- [queued-epics-drive-shifts](2026/11/queued-epics-drive-shifts.md)
 - [r2-pages-function-access](2026/11/r2-pages-function-access.md)
 - [readme-frontdoors](2026/11/readme-frontdoors.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
