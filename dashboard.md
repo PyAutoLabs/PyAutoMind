@@ -1420,7 +1420,7 @@ Use the start-dev skill. active/development_projects_split.md
 
 </details>
 
-<details><summary>📋 <a href="active/lossampler_hmf_import_fails_and_los_halos.md">LOSSampler hmf import fails and los_halos falls back silently</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/867">issue #867</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/lossampler_hmf_import_fails_and_los_halos.md">LOSSampler hmf import fails and los_halos falls back silently</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/867">issue #867</a> — issued 2026-11-19 — ready-to-ship — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/868">PyAutoLens#868</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/681">autolens_workspace#681</a></summary>
 
 ```
 Use the start-dev skill. active/lossampler_hmf_import_fails_and_los_halos.md
