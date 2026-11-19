@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 2 in flight",
-  "updated": "2026-11-19T18:45:26Z",
+  "status": "red",
+  "headline": "RED \u2014 23 picks \u00b7 3 in flight",
+  "updated": "2026-11-19T18:47:56Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Cortex: split development projects from paper-bound science projects on the register\u2026 \u2014 blocked \u2014 repos claimed by other tasks",
+      "url": "https://github.com/PyAutoLabs/PyAutoCortex/issues/95",
+      "prompt": "Use the start-dev skill. active/development_projects_split.md"
+    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -120,12 +126,6 @@
       "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: HowToLens tutorial 4 (point sources): make image-plane vs source-plane clear",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md",
-      "prompt": "Use the start-dev skill. draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md"
     }
   ]
 }
