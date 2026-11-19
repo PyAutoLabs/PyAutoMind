@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 296 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1519,7 +1519,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 238 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 239 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1879,7 +1879,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 60</summary>
+<summary><b>bug</b> — 61</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2317,6 +2317,14 @@ Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_sca
 
 ```
 Use the start-dev skill. draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/gnfw_mge_potential_gradient_drifts_for_steep_slopes.md">gNFW MGE potential gradient drifts from the deflections for steep inner slopes</a> — autogalaxy · medium · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/gnfw_mge_potential_gradient_drifts_for_steep_slopes.md
 ```
 
 </details>
