@@ -26,7 +26,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/683
 - issued: 2026-11-19
 - session: Claude Code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/684
 - worktree: /home/jammy/Code/PyAutoLabs-wt/shift-merges-in-order
 - repos:
   - PyAutoBrain: feature/shift-merges-in-order
