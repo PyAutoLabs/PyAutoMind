@@ -13,6 +13,8 @@ Autonomy: supervised
 Priority: high
 Epic: autonomous-orchestrators
 Filed: 2026-11-19
+Issued: 2026-11-19
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/696
 Consequence: judge
 Review-minutes: 15
 Unattended: never
