@@ -40,8 +40,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/867
 - issued: 2026-11-19
 - session: shift worker 2026-11-19-pm (16bf1edd-888e-48da-9906-1a04abd3106f)
-- status: library-dev
+- status: ready-to-ship
 - worktree: ~/Code/PyAutoLabs-wt/lossampler_hmf_import_fails_and_los_halos
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/868
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/681
+- decision-taken: autolens_workspace#681 (simulator_jax batch loop fits colossus coefficients once and passes them; plan said pass none)
+- follow-ups: autolens_workspace_developer/los/simulator.py has the same silent placeholder fallback; Heart colab_gate.yaml hmf entry is stale
 - repos:
   - PyAutoLens: feature/los-sampler-colossus-mass-function
   - autolens_workspace: feature/los-sampler-colossus-mass-function
