@@ -1,3 +1,15 @@
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/703
+- pr: https://github.com/PyAutoLabs/PyAutoArray/pull/704 (merged 2026-11-19)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/704
+- what shipped: the step-0 `structured` containment route interleaves the six vertex components to row-major triangle order before `_barycentric_contains`, so the arithmetic runs on the same flat (N,) operands as the gather path. Still no (N,3,2) gather; default route stays `structured`; bit-identity fuzz unchanged in strictness.
+- root cause: XLA CPU FMA contraction. jax 0.12.1 fused the beta numerator the other way round on the old per-class 2-D blocks than on the gather path; every differing triangle was an exact edge tie (--xla_cpu_max_isa=AVX gave 0 diffs; exact-arithmetic emulation of both FMA orders matched each route in every case). Neither route is "more right".
+- found by: the /release session 2026-11-19 (PyAutoHands release.yml run 44501247836 failed the TestPyPI test step on PyAutoArray); release blocker.
+- numbers (laptop, jitted solver-lattice Point containment): gather ~820 us, old structured ~640 us, new ~740 us (jax 0.12.0.1); keeps about half the speed-up over gather.
+- validation: test_autoarray 2473 passed on jax 0.12.0.1 and 0.12.1; PyAutoLens test_autolens/point 319 passed / 1 xfailed on 0.12.1; smoke 8/8 workspaces (cached envs on jax 0.12.0.1); PR CI green on jax 0.12.1.
+- follow-up idea (not filed): win back the ~100 us; the fuzz test guards against a future XLA fusion change.
+
+## Original prompt
+
 # JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)
 
 Type: bug

@@ -22,19 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## jax-0121-step0-structured
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/703
-- issued: 2026-11-19
-- session: claude-code desktop (WSL), Opus 5.5 (session + Opus worker)
-- status: library-shipped, awaiting-merge (smoke 8/8 pass)
-- worktree: ~/Code/PyAutoLabs-wt/jax-0121-step0-structured
-- repos:
-  - PyAutoArray: feature/jax-0121-step0-structured
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/704
-- prompt: active/jax_0_12_1_step0_structured_containment_diverges.md
-- blocks: pending library release (rehearsal fails on jax 0.12.1)
-- tier: supervised — merge mode: human /prm
-
 ## shift-speed-closeout-at-pr-open
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/688
 - issued: 2026-11-19
