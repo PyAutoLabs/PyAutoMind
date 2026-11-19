@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-19T16:08:13Z",
+  "updated": "2026-11-19T16:40:08Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "M3.7e Shift-end cloud sweep: dispatch, read the verdict, block unattended merges\u2026 \u2014 library-shipped, awaiting /prm",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/693",
+      "prompt": "Use the start-dev skill. active/shift_end_cloud_sweep_and_red_block.md"
+    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#730 \u2014 gnfw-mge-deflections-lose-accuracy-for-inner",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#722 \u2014 Merge receipts",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722",
       "prompt": null
     }
   ]

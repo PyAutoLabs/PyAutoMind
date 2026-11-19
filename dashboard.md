@@ -1402,7 +1402,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_end_cloud_sweep_and_red_block.md">M3.7e Shift-end cloud sweep: dispatch, read the verdict, block unattended merges…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/692">issue #692</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_end_cloud_sweep_and_red_block.md">M3.7e Shift-end cloud sweep: dispatch, read the verdict, block unattended merges…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/692">issue #692</a> — issued 2026-11-19 — library-shipped, awaiting /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/693">PyAutoBrain#693</a></summary>
 
 ```
 Use the start-dev skill. active/shift_end_cloud_sweep_and_red_block.md
