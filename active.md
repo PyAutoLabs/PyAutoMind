@@ -86,6 +86,7 @@
   - PyAutoLens: feature/lossampler-cosmology-mismatch
 - prompt: active/lossampler_silently_ignores_a_non_planck_cosmolo.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/874
 
 ## nfwtruncatedsph_convergence_loses_precision_near_scale_radius
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/739
