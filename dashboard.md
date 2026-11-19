@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 297 |
+| [Backlog](#backlog) | 298 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -1012,7 +1012,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 31 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 32 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1178,6 +1178,14 @@ Use the start-dev skill. draft/feature/pyautobrain/nightly_ships_on_quarantine_o
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/premise_check_followups.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/queued_epics_drive_shifts_and_ral_by_default.md">Queued epics drive shifts, and briefs allow RAL by default</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/queued_epics_drive_shifts_and_ral_by_default.md
 ```
 
 </details>
@@ -1544,7 +1552,7 @@ Use the start-dev skill. active/development_projects_split.md
 
 ## Backlog
 
-Lanes: any 239 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 239 · ral 34 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3292,7 +3300,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3314,6 +3322,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/pyautobrain/autonomous_orchestrators_epic.md — unknown theme keyword(s): autonomy, orchestration`
+- `draft/feature/pyautobrain/queued_epics_drive_shifts_and_ral_by_default.md — unknown theme keyword(s): autonomy, orchestration`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md — unknown theme keyword(s): colab`
 - `draft/feature/pyautohands/release_fires_visualization_dispatch.md — unknown theme keyword(s): infrastructure`
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
