@@ -26,7 +26,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/688
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Opus 5.5 session + Opus 5.5 worker
-- status: library-dev
+- status: library-shipped, awaiting /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/689
 - worktree: ~/Code/PyAutoLabs-wt/shift-speed-closeout-at-pr-open
 - repos:
   - PyAutoBrain: feature/shift-speed-closeout-at-pr-open
