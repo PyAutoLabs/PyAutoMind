@@ -434,7 +434,7 @@ M3.7e last. Deploy by pulling the canonical Brain and Heart checkouts only when 
 live.
 
 **Later, filed 2026-11-19 as drafts.** Two workers on one library on disjoint files; decide after M3.7 has run
-in a shift (`draft/feature/pyautobrain/two_workers_one_library_disjoint_files.md`). PR CI is the remaining floor (PyAutoFit 10 minutes): a `/ci_speedup` task (`draft/maintenance/ci/pyautofit_ci_speedup.md`). M3.7e review follow-ups: `active/sweep_fail_streak_survives_shift_gap.md`, `active/digest_per_pr_row_names_sweep_wait.md` (in progress, 694).
+in a shift (`draft/feature/pyautobrain/two_workers_one_library_disjoint_files.md`). PR CI is the remaining floor (PyAutoFit 10 minutes): a `/ci_speedup` task (`draft/maintenance/ci/pyautofit_ci_speedup.md`). M3.7e review follow-ups: both merged 2026-11-19 (PyAutoBrain#695, `complete/2026/11/sweep-followups.md`).
 
 ### Order after the M3 gate (2026-11-17)
 
