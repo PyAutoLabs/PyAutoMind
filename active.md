@@ -26,10 +26,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/686
 - issued: 2026-11-19
 - session: claude-code desktop (WSL), Fable 5.2 architect + Opus 5.5 worker
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/shift-speed-worker-chat-loop
 - repos:
   - PyAutoBrain: feature/shift-speed-worker-chat-loop
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/687
 - prompt: active/shift_speed_worker_chat_loop.md
 - epic: autonomous-orchestrators (M3.7a)
 - tier: judge — merge mode: human /prm
