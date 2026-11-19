@@ -58,10 +58,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/734
 - issued: 2026-11-19
 - session: shift worker 2026-11-19-pm (76a27cc3-6466-4707-8409-d4dc7e50e87a)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/nfwtruncatedsph-total-mass
 - repos:
   - PyAutoGalaxy: feature/nfwtruncatedsph-total-mass
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/735
 - prompt: active/nfwtruncatedsph_total_mass_method_omits_the_nfw.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
 - heart-ack:
