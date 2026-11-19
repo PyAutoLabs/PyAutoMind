@@ -1418,7 +1418,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_speed_closeout_at_pr_open.md">M3.7b Close-out starts at PR-open, merges on green CI, no pre-merge full…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/688">issue #688</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_speed_closeout_at_pr_open.md">M3.7b Close-out starts at PR-open, merges on green CI, no pre-merge full…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/688">issue #688</a> — issued 2026-11-19 — library-shipped, awaiting /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/689">PyAutoBrain#689</a></summary>
 
 ```
 Use the start-dev skill. active/shift_speed_closeout_at_pr_open.md
