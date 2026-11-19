@@ -21,3 +21,11 @@
 - coordination: human approved PyAutoLens/paper_jax/paper.md-only edits alongside magnification-maps-wiring; no library code changes
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
+
+## colab_gate_colossus_rationale_is_stale_once
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/356
+- session: shift worker 2026-11-19-pm2 (4cccb01f-266e-40f6-bb37-5f0daf61a17c)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/colab-gate-colossus-rationale
+- repos:
+  - PyAutoHeart: feature/colab-gate-colossus-rationale
