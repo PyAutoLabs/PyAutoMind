@@ -22,18 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## jax_grad_of_sersic_stellar_mass_deflections
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/727
-- issued: 2026-11-19
-- session: shift worker 2026-11-19-am (05a69af9-990e-415e-acad-8d78e9b8b46a)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/728
-- worktree: ~/Code/PyAutoLabs-wt/jax-grad-sersic-cse
-- heart-ack:
-  - acknowledged by the human 2026-11-19 ("YELLOW acknowledged, go"): YELLOW score 85 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source
-- repos:
-  - PyAutoGalaxy: feature/jax-grad-sersic-cse
-
 ## shift-smoke-targeted
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/352
 - issued: 2026-11-19
