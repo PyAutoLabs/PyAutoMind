@@ -64,16 +64,16 @@ as a science project standalone before we bring stuff into the source code.
 
 ## Status
 
-Research dive done 2026-11-19. No code was changed. The full findings and phased plan, with the
-evidence, are on the laptop at
-`Science/scratch/dm_sightlines_research_2026-11-19/dm_sightlines_findings_and_plan.md`
-(`evidence/` beside it holds the numerical checks, the literature notes on 24 papers and the
-software survey of pyHalo, paltas and lenstronomy). Code audited: `@PyAutoLens` `main` a79a6b22c
-(`autolens/lens/los.py`, `autolens/lens/substructure_util.py`) and `@PyAutoGalaxy` `main` b9232172
+Research dive done 2026-11-19; no library code was changed. The work continues as the development
+science project `dm_sightlines` (`Science/development/dm_sightlines`, Cortex key `dm_sightlines`,
+born 2026-11-19, local git, no remote). Its `wiki/project/plan.md` is the plan of record, with the
+numerical checks in `results/verification_2026-11-19/` and the literature and software notes in
+`wiki/project/literature/`. Code audited: `@PyAutoLens` `main` a79a6b22c (`autolens/lens/los.py`,
+`autolens/lens/substructure_util.py`) and `@PyAutoGalaxy` `main` b9232172
 (`autogalaxy/profiles/mass/dark/`).
 
-Next step: a development science project (proposed `Science/development/dm_sightlines`), then
-promotion into the libraries through `/feature`. It waits on the open decisions below.
+Next step: phase 1 in the project (arrays-first line-of-sight population layer). Promotion into
+the libraries goes through `/feature` at phase 6.
 
 ## Findings in brief
 
@@ -123,25 +123,19 @@ pyHalo; (6) promotion into PyAutoGalaxy, PyAutoLens and the workspace.
 
 ## Decisions
 
-Answered by the human, 2026-11-19: "file the five library bugs and record it in PyAutoMind, go with
-conors most rercent parametterization."
+All by the human, 2026-11-19.
 
-- The five library bugs are filed (below).
-- The O'Riordan preset follows the most recent papers (2024 and 2025: the Moliné et al. 2022
-  v_max to r_max relation and the 2509.02660 mass function), not the 2023 power law. This is the
-  session's reading of "most recent parameterisation"; it may also have been meant to settle the
-  mass variable and truncation in favour of O'Riordan's choices, which is still to confirm.
+- "file the five library bugs and record it in PyAutoMind, go with conors most rercent
+  parametterization." The five bugs are filed (below). The `ORiordan2025` preset follows the most
+  recent papers (2024 and 2025: the Moliné et al. 2022 v_max to r_max relation and the 2509.02660
+  mass function), not the 2023 power law.
+- "go with your recommendations, create the dm_sightlines project." So: the fiducial mass variable
+  is infall M200c over 1e6 to 1e10 solar masses for both populations, with M_max and bound mass as
+  derived columns; the fiducial subhalo truncation is the Roche radius first, tidal-track bound
+  masses later; the project lives at `Science/development/dm_sightlines`.
 
-Open:
-
-1. Mass variable for the fiducial: infall M200c over 1e6 to 1e10 solar masses for both populations
-   (recommended), or M_max as O'Riordan.
-2. Subhalo truncation in the fiducial: Roche radius first and tidal-track bound masses later
-   (recommended), or untruncated as O'Riordan.
-3. Project home: `Science/development/dm_sightlines` with a Cortex row; local git or a GitHub
-   remote.
-4. Which Moliné et al. 2022 equation the O'Riordan 2024 and 2025 papers implement is not stated in
-   them; ask Conor before freezing the preset.
+Open: which Moliné et al. 2022 equation the O'Riordan 2024 and 2025 papers implement is not stated
+in them; ask Conor before the preset is frozen.
 
 ## Filed tasks
 
