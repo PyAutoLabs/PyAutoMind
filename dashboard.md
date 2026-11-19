@@ -1418,7 +1418,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/703">issue #703</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/703">issue #703</a> — issued 2026-11-19 — library-shipped, smoke-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/704">PyAutoArray#704</a></summary>
 
 ```
 Use the start-dev skill. active/jax_0_12_1_step0_structured_containment_diverges.md

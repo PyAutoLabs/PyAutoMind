@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-19T12:40:37Z",
+  "updated": "2026-11-19T12:46:32Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails) \u2014 library-shipped, smoke-pending",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/704",
+      "prompt": "Use the start-dev skill. active/jax_0_12_1_step0_structured_containment_diverges.md"
+    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -120,12 +126,6 @@
       "text": "pending release: PyAutoLens PyAutoLens#864 \u2014 delaunay-interpolated-plot",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/864",
       "prompt": null
-    },
-    {
-      "severity": "info",
-      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }
