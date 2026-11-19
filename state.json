@@ -3,22 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 4 in flight",
-  "updated": "2026-11-18T21:31:53Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 2 in flight",
+  "updated": "2026-11-19T08:20:25Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Model identifier raises \"TypeError: iteration over a 0-d array\" when a Galaxy\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1785",
-      "prompt": "Use the start-dev skill. active/model_identifier_raises_typeerror_iteration_over.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Stellar M/L-gradient profiles: SersicGradient pivots at R_e/q, GaussianGradient has the opposite sign\u2026 \u2014 library-shipped, awaiting-merge (decision-taken; ends at PR-open for /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726",
-      "prompt": "Use the start-dev skill. active/stellar_m_l_gradient_profiles_sersicgradient_piv.md"
-    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -93,6 +81,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1785 \u2014 model-identifier-0d-array",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1785",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1781 \u2014 Outcome",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1781",
       "prompt": null
@@ -107,6 +101,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#724 \u2014 gnfw-mcr-ludlow-normalisation",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/724",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#726 \u2014 stellar-m-l-gradient-profiles-sersicgradient-piv",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726",
       "prompt": null
     },
     {

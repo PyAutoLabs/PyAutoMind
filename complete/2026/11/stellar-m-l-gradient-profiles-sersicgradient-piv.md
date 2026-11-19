@@ -1,3 +1,13 @@
+`SersicGradient` and `GaussianGradient` now share one mass-to-light gradient convention: a positive `mass_to_light_gradient` means M/L falls outward, M/L ∝ (R / R_pivot)^-gradient. The Sersic pivot sits exactly on the R_e ellipse for any q (it was R_e/q); the GaussianGradient exponent sign is flipped and it pivots at `mass_to_light_radius`; `cse_settings_from` is branch-free so a free gradient runs under `jax.jit`. Release notes: GaussianGradient with a non-zero gradient reverses its radial trend; SersicGradient with q < 1 and a non-zero gradient changes normalisation by q^gradient.
+
+Decision taken, accepted as is by the human: the GaussianGradient 0.01 arcsec softening was dropped (M/L diverges as sigma -> 0 for a positive gradient).
+
+Shipped in PyAutoGalaxy#726 then autolens_workspace_test#368 (the Keeton-integral reference script's pivot), both merged 2026-11-19 by human /prm after shift 2026-11-18-pm2. Follow-ups noted on the PR, not filed: `convergence_2d_from` not jittable for any Sersic profile; a likelihood step at gradient 0.5 (CSE settings switch); ~2–3% CSE error at gradient -0.6, n = 4.5; dead `SersicGradient.decompose_convergence_via_mge`.
+
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/726
+
+## Original prompt
+
 # Stellar M/L-gradient profiles: SersicGradient pivots at R_e/q, GaussianGradient has the opposite sign…
 
 Type: bug
