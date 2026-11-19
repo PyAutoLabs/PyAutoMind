@@ -1429,7 +1429,7 @@ Use the start-dev skill. active/hpc_sync_submit_pass_time_requeue_env.md
 
 </details>
 
-<details><summary>📋 <a href="active/lossampler_silently_ignores_a_non_planck_cosmolo.md">LOSSampler silently ignores a non-Planck cosmology_astropy</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/873">issue #873</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/lossampler_silently_ignores_a_non_planck_cosmolo.md">LOSSampler silently ignores a non-Planck cosmology_astropy</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/873">issue #873</a> — issued 2026-11-19 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/874">PyAutoLens#874</a></summary>
 
 ```
 Use the start-dev skill. active/lossampler_silently_ignores_a_non_planck_cosmolo.md
