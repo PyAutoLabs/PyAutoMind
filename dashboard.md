@@ -1437,7 +1437,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/substructure_jax_grad_is_nan_when_a.md">Substructure jax.grad is NaN when a zero-padded halo slot exists</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/871">issue #871</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/substructure_jax_grad_is_nan_when_a.md">Substructure jax.grad is NaN when a zero-padded halo slot exists</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/871">issue #871</a> — issued 2026-11-19 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/738">PyAutoGalaxy#738</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/872">PyAutoLens#872</a></summary>
 
 ```
 Use the start-dev skill. active/substructure_jax_grad_is_nan_when_a.md
