@@ -22,18 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## shift-smoke-targeted
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/352
-- issued: 2026-11-19
-- session: Claude Code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/shift-smoke-targeted
-- repos:
-  - PyAutoHeart: feature/shift-smoke-targeted
-  - PyAutoBrain: feature/shift-smoke-targeted
-- prompt: active/shift_smoke_targeted_and_parallel.md
-- tier: judge — merge mode: human /prm
-
 ## gnfw_mge_deflections_lose_accuracy_for_inner
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/729
 - issued: 2026-11-19

@@ -1,3 +1,11 @@
+Shift workers now test like a task done in a chat: the changed repo's unit tests, the witness and a targeted smoke (`pyauto-heart smoke --targeted --changed-files …`: only curated scripts that reference the changed module or a touched public name). The full affected smoke (`pyauto-heart smoke --affected-by <repos> --jobs 3`, chain-selected workspaces in parallel with per-process thread caps) moves to the close-out and runs only before an unattended merge. `notify` workers no longer merge in-turn inside a shift; they end at PR-open and the close-out merges (human ruling "ii", 2026-11-19). A human `/smoke_test` with no flags still runs every workspace serially; Heart's release validation is unchanged.
+
+Motivated by shift 2026-11-19-am: the worker's serial all-workspace smoke took ~35–40 min of a 75-min shift (per-script speed at or below CI medians). Human: "this is over testing and makes things too slow"; approved plan C, then "ii".
+
+Shipped in PyAutoHeart#353 (`--affected-by`, `--jobs`, `--targeted`) and PyAutoBrain#685 (worker/close-out templates, AUTONOMY.md leg 2 and the notify ruling), merged 2026-11-19 by human /prm. Heart 1482 and Brain 2420 tests pass. Known limits on the PRs: order-dependent targeted scripts (euclid), HowToLens has no smoke_tests.txt.
+
+## Original prompt
+
 # Shift workers' smoke leg runs only the affected workspaces, in parallel
 
 Type: feature
