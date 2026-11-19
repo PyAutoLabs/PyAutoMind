@@ -13,6 +13,7 @@ Consequence: glance
 Witness: A unit test passes more halos on one plane than `max_n` to `galaxies_to_halo_arrays` and asserts it raises with a message naming the plane and the count needed; and a second test shows `max_n=None` sizes the arrays to the fullest plane and keeps every halo.
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-19 a79a6b22 (PyAutoLens), 4674ae89 (autolens_workspace)
 Lane: any
 
 ## Finding
