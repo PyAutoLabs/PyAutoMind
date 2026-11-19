@@ -1410,7 +1410,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_speed_watcher_latency_and_refusals.md">M3.7c Watcher latency: short tick, early shift close, <code>decision-taken</code> refused at PR-open</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/690">issue #690</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_speed_watcher_latency_and_refusals.md">M3.7c Watcher latency: short tick, early shift close, <code>decision-taken</code> refused at PR-open</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/690">issue #690</a> — issued 2026-11-19 — library-shipped, awaiting /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/691">PyAutoBrain#691</a></summary>
 
 ```
 Use the start-dev skill. active/shift_speed_watcher_latency_and_refusals.md

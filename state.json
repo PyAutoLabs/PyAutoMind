@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 3 in flight",
-  "updated": "2026-11-19T14:31:35Z",
+  "updated": "2026-11-19T14:33:52Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "M3.7c Watcher latency: short tick, early shift close, `decision-taken` refused at PR-open \u2014 library-shipped, awaiting /prm",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/691",
+      "prompt": "Use the start-dev skill. active/shift_speed_watcher_latency_and_refusals.md"
+    },
     {
       "severity": "yellow",
       "text": "looks shipped \u2014 confirm: M3.6h A Heart RED made only of report-only reasons needs no shift\u2026 (witness-exists)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#730 \u2014 gnfw-mge-deflections-lose-accuracy-for-inner",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/730",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#722 \u2014 Merge receipts",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/722",
       "prompt": null
     }
   ]
