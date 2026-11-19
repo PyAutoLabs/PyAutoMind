@@ -1,3 +1,15 @@
+`NFWTruncatedSph.total_mass_solar_masses` (renamed from `mass_at_truncation_radius_solar_mass`, no alias since nothing called the old name) now divides by ln(1+c) - c/(1+c) and threads `xp`. It returns the BMO09 total mass, which matches the integrated convergence. The abstract dark-profile docstrings now say M200c / c200c / r200c. On main the old method read 0.958 / 1.489 / 1.835 x the integrated convergence for (M200, c) = (1e8, 5) / (1e9, 10) / (1e10, 15); it now reads 1 +/- 6e-7.
+
+Witness: `pytest test_autogalaxy/profiles/mass/dark/test_nfw_truncated.py -k total_mass`, 3/3 passed (|total/integral - 1| = 1.2e-7, 3.3e-7, 6.1e-7); fails on main. mass/dark 250 passed; PyAutoLens full suite 1032 passed.
+
+- adversary: CLEAN, from Fable 5.2 (author Opus 5.5), 2026-11-19. Its own scipy 2D integral and a 3D BMO density integral that touches no profile code agree to 1.000000000 on 15 configurations. Notes: MCR totals move a second time with PyAutoGalaxy#733; the method is not jit-able (pre-existing scipy fsolve); the PR removes the public method `mass_at_truncation_radius_solar_mass` with no alias.
+
+Related, already filed: `draft/bug/autogalaxy/nfwtruncatedsph_convergence_loses_precision_near_scale_radius.md` (tNFW convergence loses precision within ~1e-6 of r = r_s, found while writing the witness).
+
+Shipped in PyAutoGalaxy#735 (https://github.com/PyAutoLabs/PyAutoGalaxy/pull/735, merged 2026-11-19 by human /prm). Done by shift worker 2026-11-19-pm (76a27cc3).
+
+## Original prompt
+
 # NFWTruncatedSph total mass method omits the NFW mass factor
 
 Type: bug

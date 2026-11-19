@@ -1,3 +1,17 @@
+`LOSSampler` with no precomputed coefficients now fits the Sheth-Tormen mass function from colossus (`sheth99`) instead of the broken, undeclared hmf. A missing colossus stops with an `ImportError` that names it, and colossus is the new `autolens[los]` extra (included in `[optional]`). The workspace `los_halos` simulators no longer fall back silently to placeholder coefficients. On main `LOSSampler(z_lens=0.5, z_source=1.0)` raised `ModuleNotFoundError: No module named 'hmf'`; now the slopes run -1.9054 to -1.9097 and the expected count is 1293.7 halos (1282 with the old hmf fit, +0.9%).
+
+Decision taken and accepted by the human at /prm (merged unchanged): autolens_workspace#681's `simulator_jax` batch loop fits the colossus coefficients once and passes them to every sampler, where the plan said to pass none. Human ruling 2026-11-19: "fine for los_halos to stop in Colab".
+
+Witness: `LOSSampler(z_lens=0.5, z_source=1.0, seed=1).galaxies_and_fields_from()` with no hmf installed, plus both simulators under `PYAUTO_TEST_MODE=2` with and without colossus blocked: PASS (blocked colossus gives the named ImportError, no silent fallback). `test_los.py` 9/9.
+
+- adversary: CLEAN, from Fable 5.2 (author Opus 5.5), 2026-11-19. Witness holds with hmf absent; references come from an independent hmf 3.7.2 run, not circular. Advisories: Colab `los_halos` notebooks will stop with the ImportError after regeneration (accepted by the human); `cosmology_astropy` is now ignored behind a hidden DeprecationWarning (~2% in counts for non-Planck); the witness test skips where `[optional]` is not installed.
+
+Related, already filed: `draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md`, `draft/bug/autolens/lossampler_silently_ignores_a_non_planck_cosmolo.md`. Outstanding from the worker: `autolens_workspace_developer/los/simulator.py` has the same silent placeholder fallback.
+
+Shipped in PyAutoLens#868 (https://github.com/PyAutoLabs/PyAutoLens/pull/868) and autolens_workspace#681 (https://github.com/PyAutoLabs/autolens_workspace/pull/681), merged 2026-11-19 by human /prm. Done by shift worker 2026-11-19-pm (16bf1edd).
+
+## Original prompt
+
 # LOSSampler hmf import fails and los_halos falls back silently
 
 Type: bug

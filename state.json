@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 8 in flight",
-  "updated": "2026-11-19T20:32:15Z",
+  "headline": "RED \u2014 23 picks \u00b7 3 in flight",
+  "updated": "2026-11-19T20:56:39Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Cortex: split development projects from paper-bound science projects on the register\u2026 \u2014 blocked \u2014 repos claimed by other tasks",
       "url": "https://github.com/PyAutoLabs/PyAutoCortex/issues/95",
       "prompt": "Use the start-dev skill. active/development_projects_split.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "NFWTruncatedSph total mass method omits the NFW mass factor \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/735",
-      "prompt": "Use the start-dev skill. active/nfwtruncatedsph_total_mass_method_omits_the_nfw.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Use readthedocs or migrate to GitHub docs",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
       "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }

@@ -149,12 +149,12 @@ Nothing is open in this record. It stays as the pointer from Mind to the project
 
 ## Filed tasks
 
-- Five library defects, one prompt each:
-  - `draft/bug/autogalaxy/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md`
-  - `draft/bug/autolens/lossampler_hmf_import_fails_and_los_halos.md`
-  - `draft/bug/autogalaxy/nfwtruncatedsph_total_mass_method_omits_the_nfw.md`
-  - `draft/bug/autolens/substructure_util_galaxies_to_halo_arrays_drops.md`
-  - `draft/bug/autogalaxy/nfwtruncatedsph_deflection_nan_at_r_0_and.md`
+- Five library defects, one prompt each (all shipped 2026-11-19; follow-ups in `draft/bug/autogalaxy/nfwtruncatedsph_convergence_loses_precision_near_scale_radius.md`, `draft/bug/autolens/substructure_jax_grad_is_nan_when_a.md`, `draft/bug/autolens/lossampler_silently_ignores_a_non_planck_cosmolo.md`, `draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md`):
+  - `complete/2026/11/nfwtruncatedmcr-truncation-radius.md` (shipped 2026-11-19, PyAutoGalaxy#733)
+  - `complete/2026/11/lossampler-hmf-import-fails-and-los-halos.md` (shipped 2026-11-19, PyAutoLens#868 + autolens_workspace#681)
+  - `complete/2026/11/nfwtruncatedsph-total-mass.md` (shipped 2026-11-19, PyAutoGalaxy#735)
+  - `complete/2026/11/substructure-halo-arrays-overflow.md` (shipped 2026-11-19, PyAutoLens#870 + autolens_workspace#682)
+  - `complete/2026/11/nfwtruncatedsph-small-radius-deflection.md` (shipped 2026-11-19, PyAutoGalaxy#737)
 - Further candidate tasks are staged as bullets in `ideas.md` tagged
   `[from: research dm-sightlines-cdm]`.
 

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2340 records across 11 buckets.
+2345 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -264,6 +264,7 @@ markers; everything below GENERATED is rebuilt.
 - [live-shift-view](2026/11/live-shift-view.md)
 - [live-shift-worker-gaps](2026/11/live-shift-worker-gaps.md) — pilot 4c follow-up; issue PyAutoBrain#594
 - [looks-shipped-guard-false-positives](2026/11/looks-shipped-guard-false-positives.md) — 33 → 1
+- [lossampler-hmf-import-fails-and-los-halos](2026/11/lossampler-hmf-import-fails-and-los-halos.md)
 - [m2-finish](2026/11/m2-finish.md)
 - [m31-blockers](2026/11/m31-blockers.md)
 - [m31-live-shift-findings](2026/11/m31-live-shift-findings.md)
@@ -294,6 +295,9 @@ markers; everything below GENERATED is rebuilt.
 - [nerves-false-workspace-stale](2026/11/nerves-false-workspace-stale.md) — already shipped — PyAutoNerves#203 (issue #202, merged 2026-10-17), record `complete/2026/10/workspace-freshne…
 - [new-user-guide-visuals](2026/11/new-user-guide-visuals.md)
 - [nfw-virial-mass-conc-jax](2026/11/nfw-virial-mass-conc-jax.md) — - `NFWVirialMassConcSph` (m200c + free concentration) is now JAX-traceable: `kappa_s_and_scale_radius` picks `…
+- [nfwtruncatedmcr-truncation-radius](2026/11/nfwtruncatedmcr-truncation-radius.md)
+- [nfwtruncatedsph-small-radius-deflection](2026/11/nfwtruncatedsph-small-radius-deflection.md)
+- [nfwtruncatedsph-total-mass](2026/11/nfwtruncatedsph-total-mass.md)
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
 - [no-untimed-network-downloads-check](2026/11/no-untimed-network-downloads-check.md)
 - [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)
@@ -364,6 +368,7 @@ markers; everything below GENERATED is rebuilt.
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)
 - [start-here-plot-ai](2026/11/start-here-plot-ai.md) — Introductory grid uses 30x30 points without x/y labels; subsequent light-profile and lensing calculations reta…
 - [stellar-m-l-gradient-profiles-sersicgradient-piv](2026/11/stellar-m-l-gradient-profiles-sersicgradient-piv.md)
+- [substructure-halo-arrays-overflow](2026/11/substructure-halo-arrays-overflow.md)
 - [sweep-followups](2026/11/sweep-followups.md)
 - [three-autos-public-framing](2026/11/three-autos-public-framing.md)
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface

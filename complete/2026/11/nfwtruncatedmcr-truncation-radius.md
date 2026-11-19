@@ -1,3 +1,15 @@
+`NFWTruncatedMCRLudlowSph`, `NFWTruncatedMCRScatterLudlowSph` and `NFWTruncatedMCRDuffySph` now truncate at 2 r200 in arcseconds (tau = 2c), not at 2 r200 in kpc read as arcseconds. At m200 = 1e9, z = 0.5 -> 1.0, Ludlow and Scatter (sigma = 0) tau went from 151.48 to 24.09 and Duffy from 116.13 to 18.47. The workspace subhalo simulators change deflection by 0.2% at 0.05", 1.3% at 1" and 4.5% at 3"; no subhalo dataset is committed.
+
+Decision taken and accepted by the human at /prm (merged unchanged): the `mcr_util` helpers keep returning r200 in kpc (6 tests pin that contract) and the conversion happens in the truncated classes, not in the helpers as the issue plan said.
+
+Witness: `pytest test_autogalaxy/profiles/mass/dark/ test_autogalaxy/test_priors_config.py`, 259 passed; new tests assert tau == 2c for all three classes at sigma = -1, 0, 1, and fail on main (151.48 vs 24.09).
+
+- adversary: FINDINGS (PR description only), from Fable 5.2 (author Opus 5.5), 2026-11-19. Witness holds, with an independent astropy Planck15 recompute giving tau = 2c. The PR's workspace-impact list named `autolens_workspace_test` substructure/subhalo.py (which uses the untruncated `NFWMCRLudlowSph`); the real users are the three `autolens_workspace` subhalo simulators. Pre-existing on main, not this PR: Duffy and traced-redshift JAX tracing fail; Duffy docstring still says H0 = 70, tau = 2.0.
+
+Shipped in PyAutoGalaxy#733 (https://github.com/PyAutoLabs/PyAutoGalaxy/pull/733, merged 2026-11-19 by human /prm). Done by shift worker 2026-11-19-pm (2bf4469f).
+
+## Original prompt
+
 # NFWTruncatedMCR truncation radius uses kpc as arcseconds
 
 Type: bug

@@ -1,3 +1,17 @@
+`galaxies_to_halo_arrays` / `los_realizations_to_arrays` no longer drop halos silently. An overflowing integer `max_n` raises a ValueError naming each plane, its count and the `max_n` needed, and `max_n=None` sizes the arrays to the fullest plane (across the batch). On main, 5 halos on one plane with max_n=3 kept 3 and raised nothing; the workspace `simulator_jax` example's fullest plane held 304 halos against max_n=200. It now keeps 1100/1100 halos ("Padded to 304 slots per plane").
+
+Decision taken and accepted by the human at /prm (merged unchanged): autolens_workspace#682 uses `max_n=None` rather than a larger fixed integer.
+
+Witness: `pytest test_autolens/lens/test_substructure_util.py`, 10 passed (5 new, 4 fail on main); `simulator_jax.py` full run PASS.
+
+- adversary: CLEAN, from Fable 5.2 (author Opus 5.5), 2026-11-19. No off-by-one at n == max_n; the check runs before any traced code; 180 arrays identical to main for a sufficient integer max_n; padded slots give exactly zero deflection; the three autolens_workspace_test substructure scripts pass. Note: `jax.grad` is NaN with zero-padded slots, pre-existing on main and not fixed by PyAutoGalaxy#737.
+
+Related, already filed: `draft/bug/autolens/substructure_jax_grad_is_nan_when_a.md`.
+
+Shipped in PyAutoLens#870 (https://github.com/PyAutoLabs/PyAutoLens/pull/870) and autolens_workspace#682 (https://github.com/PyAutoLabs/autolens_workspace/pull/682), merged 2026-11-19 by human /prm. Done by shift worker 2026-11-19-pm (4b5218b2).
+
+## Original prompt
+
 # substructure_util galaxies_to_halo_arrays drops halos beyond max_n
 
 Type: bug

@@ -1,3 +1,17 @@
+The `NFWTruncatedSph` deflection is finite and exactly 0 at r = 0, and exact at small radius: a new real-valued `radial_deflection_func_sph_from` uses an exact O(x^2) rearrangement below x = r/r_s = 0.5 and the closed form above it, in both the object and vmapped paths. On main at r = 0 the object path returned NaN and `jax.grad` was all NaN; now 0 at r = 0, within 1e-8 (float64) and 1e-4 (float32) of 50-digit mpmath, gradient finite.
+
+Decision taken and accepted by the human at /prm (merged unchanged): the shared `vmapped_deflections_from` (mass `abstract.py`) now uses a safe `sqrt` and `centred / r` instead of `arctan2`, so `jax.grad` is finite when a grid point sits on a halo centre (unchanged to <= 3e-17 at r > 0). cNFW, Kaplinghat and Yang24 now return (0, 0) at r = 0 instead of a spurious x-directed deflection.
+
+Witness: `pytest test_autogalaxy/profiles/mass/dark/test_nfw_truncated_small_radius.py`, 10 passed (8 of 10 fail on the unfixed source); mass/dark + mass/abstract + priors_config 331 passed.
+
+- adversary: FINDINGS (PR description overclaims; no code regression), from Fable 5.2 (author Opus 5.5), 2026-11-19. Witness holds against an independent 150-digit mpmath closed form and a quadrature projection to 1.8e-16; jax float64/float32 and vmapped `jax.grad` finite at r = 0. Findings: the "1e-14 / 1e-5 to x = 5" accuracy claim holds only below x = 0.5 (the unchanged closed form is still up to ~10% off in float32 within ~1e-6 r_s of r = r_s, as on main); "gradients finite" holds for NFWTruncatedSph only (cNFWSph gradients and d/dgrid with zero-padded slots stay NaN, as on main); float32 x < 1e-19 underflow corner.
+
+Related, already filed: `draft/bug/autogalaxy/nfwtruncatedsph_convergence_loses_precision_near_scale_radius.md` (extended with the deflection findings) and `draft/bug/autolens/substructure_jax_grad_is_nan_when_a.md`.
+
+Shipped in PyAutoGalaxy#737 (https://github.com/PyAutoLabs/PyAutoGalaxy/pull/737, merged 2026-11-19 by human /prm). Done by shift worker 2026-11-19-pm (87787193).
+
+## Original prompt
+
 # NFWTruncatedSph deflection NaN at r=0 and imprecise at small radius
 
 Type: bug
