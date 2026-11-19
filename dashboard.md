@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 3 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 4 |
+| [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 302 |
+| [Backlog](#backlog) | 301 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -90,15 +90,7 @@ _(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
-
-<details><summary>📋 <a href="draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)</a> — autoarray · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -184,6 +176,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1418,6 +1418,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/703">issue #703</a> — issued 2026-11-19 — library-dev</summary>
+
+```
+Use the start-dev skill. active/jax_0_12_1_step0_structured_containment_diverges.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147">issue #147</a> — issued 2026-11-12 — workspace-dev</summary>
 
 ```
@@ -1533,7 +1541,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 244 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 243 · ral 34 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1901,15 +1909,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 62</summary>
-
-<details><summary>📋 <a href="draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)</a> — autoarray · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md
-```
-
-</details>
+<summary><b>bug</b> — 61</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -3170,6 +3170,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-11-19 | issued | <a href="active/workspace_smoke_nightly_and_pinned_shas.md">M3.7d Workspace Smoke runs nightly when a <code>main</code> moved, and accepts…</a> |
 | 2026-11-19 | issued | <a href="active/shift_speed_worker_chat_loop.md">M3.7a Shift worker runs the chat loop: changed tests, witness…</a> |
+| 2026-11-19 | issued | <a href="active/jax_0_12_1_step0_structured_containment_diverges.md">JAX 0.12.1 breaks step-0 structured triangle containment…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
@@ -3177,12 +3178,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
-| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
@@ -3192,12 +3193,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
-| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
@@ -3207,12 +3208,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
@@ -3222,12 +3223,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
-| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
@@ -3237,7 +3238,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
-| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 
 </details>
 
@@ -3313,7 +3313,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3340,7 +3340,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md — unknown theme keyword(s): jax, inversion`
 - `draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md — unknown theme keyword(s): inversion, jax`
-- `draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md — unknown theme keyword(s): jax, triangles, release-blocker`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md — unknown theme keyword(s): performance, delaunay`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`

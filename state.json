@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 23 picks \u00b7 4 in flight",
-  "updated": "2026-11-19T12:13:40Z",
+  "headline": "YELLOW \u2014 23 picks \u00b7 5 in flight",
+  "updated": "2026-11-19T12:15:13Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -123,9 +123,9 @@
     },
     {
       "severity": "info",
-      "text": "pick: JAX 0.12.1 breaks step-0 structured triangle containment (bit-identity vs gather fails)",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/jax_0_12_1_step0_structured_containment_diverges.md"
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }
