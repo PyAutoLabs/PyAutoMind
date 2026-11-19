@@ -34,3 +34,15 @@
 - prompt: active/jax_0_12_1_step0_structured_containment_diverges.md
 - blocks: pending library release (rehearsal fails on jax 0.12.1)
 - tier: supervised — merge mode: human /prm
+
+## shift-speed-closeout-at-pr-open
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/688
+- issued: 2026-11-19
+- session: claude-code desktop (WSL), Opus 5.5 session + Opus 5.5 worker
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/shift-speed-closeout-at-pr-open
+- repos:
+  - PyAutoBrain: feature/shift-speed-closeout-at-pr-open
+- prompt: active/shift_speed_closeout_at_pr_open.md
+- epic: autonomous-orchestrators (M3.7b)
+- tier: judge — merge mode: human /prm
