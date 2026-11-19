@@ -35,7 +35,7 @@ The human, 2026-11-19: "fine for los_halos to stop in Colab". So **do not** add 
 2. Remove the stale `hmf` entry.
 3. Run the Colab gate against the notebooks regenerated after #681 merges.
 
-Blocked-by: PyAutoLens#868 and autolens_workspace#681 merged (the notebooks must exist).
+Unblocked 2026-11-19: PyAutoLens#868 and autolens_workspace#681 merged (20:50Z, 20:52Z), so the notebooks exist.
 
 ## Provenance
 

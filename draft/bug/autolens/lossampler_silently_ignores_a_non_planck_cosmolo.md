@@ -31,7 +31,7 @@ checked against the colossus cosmology name (that was already true for the conce
 2. Apply the same check between `LOSSampler(cosmology=...)` and the colossus name.
 3. Add the witness tests (skip without colossus).
 
-Blocked-by: PyAutoLens#868 merged.
+Unblocked 2026-11-19: PyAutoLens#868 merged (20:50Z).
 
 ## Provenance
 
