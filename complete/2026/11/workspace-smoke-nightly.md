@@ -62,3 +62,9 @@ Human, 2026-11-19, in chat, on the cloud verification lane of the orchestrator s
 ## Order
 
 Independent of M3.7a to M3.7c; may be built in parallel. M3.7e needs it.
+
+## Witness items 2 to 4, observed on `main` (2026-11-19, Opus 5.5 session)
+
+- **Item 4, the SHA record on a real run:** run 44573385455 (dispatch, 17:05Z) swept ("no SHA record from the last successful run (44521331980)") and uploaded `workspace-smoke-shas` with 15 repos' SHAs. Attempt 1 failed on one script (`autolens_workspace/scripts/group/slam.py`, a test-mode prior bound of 0; filed as `draft/bug/autolens_workspace/group_slam_sigma_upper_zero_flake.md`); the failed job re-run passed, so the run concluded success.
+- **Item 2, a skipped run:** run 44581790051 (dispatch, about 18:25Z) read `swept: false`, "no main moved since run 44573385455"; the gate passed and the smoke job was skipped. This was a dispatch rather than the 03:00 cron; both go through the same gate.
+- **Item 3, a pinned dispatch:** run 44579050941 of `workspace-smoke-pinned.yml` with `commit_shas={"PyAutoGalaxy":"2ec0e3611…"}` swept "pinned by dispatch: PyAutoGalaxy" and concluded success, on its own entry: the latest `workspace-smoke.yml` run on `main` stayed 44581790051.
