@@ -29,3 +29,4 @@
 - worktree: ~/Code/PyAutoLabs-wt/colab-gate-colossus-rationale
 - repos:
   - PyAutoHeart: feature/colab-gate-colossus-rationale
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/357
