@@ -50,6 +50,7 @@
 
 ## hpc-sync-submit-pass-through
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/71
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/72
 - issued: 2026-11-19
 - session: shift worker 2026-11-19-pm2 (98526c76-b5d3-4133-a2cd-c6809ed6edbb)
 - status: workspace-dev
