@@ -26,10 +26,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/732
 - issued: 2026-11-19
 - session: shift worker 2026-11-19-pm (2bf4469f-e7e4-4011-9109-b942513ad05c)
-- status: library-dev
+- status: pr-open (decision-taken)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/nfwtruncatedmcr-truncation-radius
 - repos:
   - PyAutoGalaxy: feature/nfwtruncatedmcr-truncation-radius
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/733
 - prompt: active/nfwtruncatedmcr_truncation_radius_uses_kpc_as_ar.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
 - heart-ack:
