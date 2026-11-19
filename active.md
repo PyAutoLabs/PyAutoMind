@@ -21,3 +21,27 @@
 - coordination: human approved PyAutoLens/paper_jax/paper.md-only edits alongside magnification-maps-wiring; no library code changes
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
+
+## shift-speed-worker-chat-loop
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/686
+- issued: 2026-11-19
+- session: claude-code desktop (WSL), Fable 5.2 architect + Opus 5.5 worker
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/shift-speed-worker-chat-loop
+- repos:
+  - PyAutoBrain: feature/shift-speed-worker-chat-loop
+- prompt: active/shift_speed_worker_chat_loop.md
+- epic: autonomous-orchestrators (M3.7a)
+- tier: judge — merge mode: human /prm
+
+## workspace-smoke-nightly
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/354
+- issued: 2026-11-19
+- session: claude-code desktop (WSL), Fable 5.2 architect + Opus 5.5 worker
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/workspace-smoke-nightly
+- repos:
+  - PyAutoHeart: feature/workspace-smoke-nightly
+- prompt: active/workspace_smoke_nightly_and_pinned_shas.md
+- epic: autonomous-orchestrators (M3.7d)
+- tier: judge — merge mode: human /prm

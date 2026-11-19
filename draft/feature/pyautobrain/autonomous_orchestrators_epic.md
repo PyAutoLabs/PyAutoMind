@@ -501,10 +501,10 @@ after M3:
 | M3 (ph 10) | M3.6f Worker cost: impact-scoped smoke and PR before long smoke, hermetic Brain tests, no `pgrep -f` waits, `ruff format`, worker PATH | not started (may ride in the shift's brief) | `draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md` |
 | M3 (ph 10) | M3.6g Cockpit: same-chat hand-over from the batch skill, watch to the end of the late window, `collect` on a brief shift | not started (may ride in the shift's brief) | `draft/feature/pyautobrain/shift_cockpit_same_chat_and_late_window.md` |
 | M3 (ph 10) | M3.6h Heart report-only RED needs no acknowledgement (R1) | not started (may ride in the shift's brief) | `draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` |
-| M3 (ph 10) | M3.7a Worker runs the chat loop: changed tests, witness, targeted smoke, one review (S1, S3) | not started | `draft/feature/pyautobrain/shift_speed_worker_chat_loop.md` |
+| M3 (ph 10) | M3.7a Worker runs the chat loop: changed tests, witness, targeted smoke, one review (S1, S3) | in progress 2026-11-19 (PyAutoBrain#686) | `active/shift_speed_worker_chat_loop.md` |
 | M3 (ph 10) | M3.7b Close-out at PR-open, merge on green CI, no pre-merge full smoke, branch update only on overlap (S2, S5, S6) | not started | `draft/feature/pyautobrain/shift_speed_closeout_at_pr_open.md` |
 | M3 (ph 10) | M3.7c Watcher latency: 60 s tick and `.done` trigger, early shift close, `decision-taken` refused at PR-open (S7) | not started | `draft/feature/pyautobrain/shift_speed_watcher_latency_and_refusals.md` |
-| M3 (ph 10) | M3.7d Workspace Smoke nightly when a `main` moved, `commit_shas` input (S4) | not started | `draft/feature/pyautoheart/workspace_smoke_nightly_and_pinned_shas.md` |
+| M3 (ph 10) | M3.7d Workspace Smoke nightly when a `main` moved, `commit_shas` input (S4) | in progress 2026-11-19 (PyAutoHeart#354) | `active/workspace_smoke_nightly_and_pinned_shas.md` |
 | M3 (ph 10) | M3.7e Shift-end cloud sweep: dispatch, verdict in the digest, red blocks unattended merges and files a bug draft (S4) | not started (needs M3.7d) | `draft/feature/pyautobrain/shift_end_cloud_sweep_and_red_block.md` |
 | M3 (ph 10) | gate: unattended `glance` grant; close 4c (PyAutoBrain#574) with write-up | not started | |
 | M4 (ph 11) | M4.1 Cloud rehearsal (library, workspace, organ task + two `mobile_shift_operation.md` prompts) — BRAIN-4, ORCH-4; re-check first | not started | |
