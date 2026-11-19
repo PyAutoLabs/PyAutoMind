@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 2 |
+| [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 292 |
+| [Backlog](#backlog) | 291 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -190,7 +190,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1396,6 +1396,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/jax_grad_of_sersic_stellar_mass_deflections.md">jax.grad of Sersic stellar-mass deflections is NaN with respect to mass_to_light_ratio…</a></summary>
+
+```
+Use the start-dev skill. active/jax_grad_of_sersic_stellar_mass_deflections.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147">issue #147</a> — issued 2026-11-12 — workspace-dev</summary>
 
 ```
@@ -1495,7 +1503,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 235 · ral 34 · local-dev 12 · wsl-data 9
+Lanes: any 234 · ral 34 · local-dev 12 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1855,7 +1863,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 57</summary>
+<summary><b>bug</b> — 56</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2157,14 +2165,6 @@ Use the start-dev skill. draft/bug/pyautobrain/cockpit_footer_broca_belongs_betw
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/gnfw_mge_deflections_lose_accuracy_for_inner.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy/jax_grad_of_sersic_stellar_mass_deflections.md">jax.grad of Sersic stellar-mass deflections is NaN with respect to mass_to_light_ratio…</a> — autogalaxy · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autogalaxy/jax_grad_of_sersic_stellar_mass_deflections.md
 ```
 
 </details>
