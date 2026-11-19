@@ -11,7 +11,7 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 11 |
 | [Backlog](#backlog) | 298 |
 | [Recent](#recent) | 50 |
@@ -273,10 +273,10 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md">Colab gate: colossus rationale is stale once los_halos needs it</a> — pyautoheart · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — pyautoheart · small · supervised · low</summary>
 
 ```
-Use the start-dev skill. draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md
+Use the start-dev skill. draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md
 ```
 
 </details>
@@ -1413,6 +1413,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/colab_gate_colossus_rationale_is_stale_once.md">Colab gate: colossus rationale is stale once los_halos needs it</a></summary>
+
+```
+Use the start-dev skill. active/colab_gate_colossus_rationale_is_stale_once.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/development_projects_split.md">Cortex: split development projects from paper-bound science projects on the register…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/95">issue #95</a> — filed 2026-11-19 — blocked — repos claimed by other tasks</summary>
 
 ```
@@ -2290,10 +2298,10 @@ Use the start-dev skill. draft/bug/autolens_profiling/stale_auto_simulated_clust
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md">Colab gate: colossus rationale is stale once los_halos needs it</a> — pyautoheart · small · supervised · low</summary>
+<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — pyautoheart · small · supervised · low</summary>
 
 ```
-Use the start-dev skill. draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md
+Use the start-dev skill. draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md
 ```
 
 </details>
