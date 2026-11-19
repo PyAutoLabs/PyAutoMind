@@ -7,8 +7,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-11-18
+Issued: 2026-11-19
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: `python -m pytest tests/test_batch_named_tasks.py tests/test_orchestrator_closeout.py -q` passes with new tests that fail on today's main: (1) two named glance tasks on one library — the second starts once the first's PR is open, even when the first's close-out was refused for a human /prm (decision-taken, public name, judge); (2) the second's close-out does not merge while the first's PR is open; (3) once the first merges, the second's close-out updates its branch from main and merges only on CI green at the new head; (4) never two workers live on one library at once
@@ -52,3 +53,9 @@ on the one step the shift cannot do.
 
 - Unattended merging of PRs that need a human /prm.
 - Raising merge-cap or changing close-out guards other than the wait.
+
+## Answers from the human
+
+2026-11-19, in chat: plan approved ("approved, all six yes"). Full plan and rulings on https://github.com/PyAutoLabs/PyAutoBrain/issues/683.
+
+(a) an unattended update session may push a merge-from-main (`gh pr update-branch`, never force) to a shift PR branch, then must end; a later session merges only on CI green at the new head. (b) the watcher may `gh pr view` blocking PRs every tick while a later PR waits, incl. carried ones. (c) an earlier PR blocks until GitHub says MERGED or CLOSED, whatever its state (dropped, red, abandoned). (d) parks on a question keep holding the library start. (e) a worker may proceed past a `worktree_check_conflict` hit naming only a listed sibling slug. (f) library repos only, and only PRs this shift knows (its outcomes + carried `behind`).
