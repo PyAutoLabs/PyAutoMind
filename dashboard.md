@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 0 |
+| [Autopilot](#autopilot) | 4 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 9 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_LIVE · 0 in progress_
+_4 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -81,15 +81,15 @@ _LIVE · 0 in progress_
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred, 3 rulings — [`questions.md`](questions.md))
 
-_(no open questions)_
+- Q14 — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it. (ruling claimed, today)
+- Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, today)
+- Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, today)
 
-**Shift** (2026-11-19-pm2 — 0 in progress · 0 awaiting review)
+**Shift**
 
-Live: LIVE · 7 finished · tokens 1134807 of 5000000 (cache-read 30980339) · review-at 2026-11-19T22:15Z (as of 2026-11-19T21:49:33Z) · [shift issue #591](https://github.com/PyAutoLabs/PyAutoMind/issues/591#issuecomment-7022429539)
-
-_(nothing to review yet)_
+_(last shift 2026-11-19-pm2 — closed, nothing to review · [shift issue #591](https://github.com/PyAutoLabs/PyAutoMind/issues/591))_
 
 ## Start here
 
