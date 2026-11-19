@@ -1453,7 +1453,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/queued_epics_drive_shifts_and_ral_by_default.md">Queued epics drive shifts, and briefs allow RAL by default</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/696">issue #696</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/queued_epics_drive_shifts_and_ral_by_default.md">Queued epics drive shifts, and briefs allow RAL by default</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/696">issue #696</a> — issued 2026-11-19 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/697">PyAutoBrain#697</a></summary>
 
 ```
 Use the start-dev skill. active/queued_epics_drive_shifts_and_ral_by_default.md
