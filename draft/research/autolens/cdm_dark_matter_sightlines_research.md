@@ -72,8 +72,8 @@ numerical checks in `results/verification_2026-11-19/` and the literature and so
 `autolens/lens/substructure_util.py`) and `@PyAutoGalaxy` `main` b9232172
 (`autogalaxy/profiles/mass/dark/`).
 
-Next step: phase 1 in the project (arrays-first line-of-sight population layer). Promotion into
-the libraries goes through `/feature` at phase 6.
+The project is exploratory and separate from the Mind orchestrator (see Decisions). Library
+changes it leads to are filed here one bounded prompt at a time, when they are ready.
 
 ## Findings in brief
 
@@ -134,8 +134,18 @@ All by the human, 2026-11-19.
   derived columns; the fiducial subhalo truncation is the Roche radius first, tidal-track bound
   masses later; the project lives at `Science/development/dm_sightlines`.
 
-Open: which Moliné et al. 2022 equation the O'Riordan 2024 and 2025 papers implement is not stated
-in them; ask Conor before the preset is frozen.
+- "not sure on Moline so just choose one." The session chose the redshift-dependent fit of Moliné
+  et al. 2022 (arXiv 2110.02097; no distance-from-host term) for the preset, because O'Riordan and
+  Vegetti 2024 call it "the redshift dependent v_max to r_max relation" and it is the only
+  redshift-dependent subhalo fit in that paper. The O'Riordan papers do not name the equation, so
+  this is a reading of them. Formula and coefficients are in the project's `AGENTS.md`.
+- "I think its prob separate.... the insight we learn which then would make its way into the
+  source code is what makes its way into Mind but the point is this project is exploratory." So
+  the project is not a Mind epic and is not run by the Mind orchestrator. Mind receives bounded
+  prompts for library source changes as the project produces them; the five bugs below are the
+  first. The project's phases are never filed here.
+
+Nothing is open in this record. It stays as the pointer from Mind to the project.
 
 ## Filed tasks
 
