@@ -196,7 +196,7 @@ only while a brief is open (`policy/shift_watcher.md`).
     - draft/feature/autofit/<name>.md
     - epics: euclid-dr1
   - review-minutes: 45
-  - lanes: any local-dev ral         # any subset of: any local-dev ral gpu wsl-data
+  - lanes: any local-dev ral         # the default; any subset of: any local-dev ral gpu wsl-data
   - merge-cap: 3                     # unattended glance merges this shift, at most
   - token-budget: <n>                # tokens the shift may spend, all sessions
   - max-workers: 4                   # optional: concurrent workers (default 4)
@@ -204,7 +204,7 @@ only while a brief is open (`policy/shift_watcher.md`).
   - worker-mode: auto                # optional: auto (default) | dontAsk | acceptEdits — never bypassPermissions
   - sandbox: no                      # optional: yes marks a test shift
   - shadow: no                       # optional: yes plans and digests, spawns nothing
-  - ral-allowance:                   # only when lanes includes ral; phase 5 consumes it
+  - ral-allowance:                   # required when lanes includes ral; these are the defaults
     - packets: 2
     - partition: ral
     - cpu-hours: 64
@@ -213,8 +213,11 @@ only while a brief is open (`policy/shift_watcher.md`).
 **Goals come from [`goals.md`](../goals.md)** (PyAutoMind#565). `pyauto-brain
 batch brief --new <slot> --review-at <ISO>` writes a skeleton brief whose
 `goals:` are that file's goals in order, with `backlog: scoped` to the union of
-their `epics:`/`tags:` (or `fill-idle` when no goal names any) and safe
-defaults (`merge-cap: 0`) for the rest; it prints to stdout unless `--out`
+their `epics:`/`tags:` (or `tiers: notify, glance` when no goal names any) plus
+the epics whose ledgers `queue.md` names, and defaults for the rest: `merge-cap:
+0`, and `lanes: any local-dev ral` with the `ral-allowance:` above (2 packets,
+partition `ral`, 64 cpu-hours; PyAutoBrain#696), so a queued RAL phase can run.
+Edit any of them per shift. It prints to stdout unless `--out`
 names a file, so writing the record — the dispatch — stays the human's act.
 `goals.md` is written by the human alone, so every goal is copied as written.
 `--new` also prints, on stderr, how the goals changed since the newest brief.
