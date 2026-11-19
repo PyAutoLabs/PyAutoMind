@@ -12,6 +12,7 @@ Consequence: notify
 Witness: `PyAutoHeart/heart/config/colab_gate.yaml` has no `hmf` entry, its `colossus` entry says the `los_halos` simulator notebooks stop on Colab with a clear ImportError naming colossus (accepted by the human 2026-11-19), and the Colab gate check passes against the regenerated autolens_workspace notebooks.
 Review-minutes: 0
 Unattended: ready
+Verified: 2026-11-19 44f1e202 (PyAutoHeart)
 Lane: any
 
 ## Finding

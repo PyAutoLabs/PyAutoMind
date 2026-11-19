@@ -13,6 +13,7 @@ Consequence: glance
 Witness: A test builds two planes with 2 and 5 NFWTruncatedSph halos, packs them with `galaxies_to_halo_arrays(max_n=8)` (so padded slots exist), and asserts `jax.grad` of the summed multi-plane deflection with respect to the grid and with respect to every real halo's params is finite and matches the gradient computed with no padding (max_n equal to each plane's count) to 1e-10 in float64; a second test asserts finite `jax.grad` through `cNFWSph.vmapped_deflections_from`.
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-19 5b85fbf0 (PyAutoGalaxy), aa02375f (PyAutoLens)
 Lane: any
 
 ## Finding
