@@ -100,3 +100,6 @@ at 40000 likelihood calls after 1 h 36 min and the other six bands never start.
   `343381_8` RUNNING 01:36:17.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-17 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/7bff8610-4b84-413a-a994-d72484c4c14c/scratchpad/intake_2a.md -->
+
+## Answers from the human
+- Q17 (2026-11-20, shift 2026-11-20-am question on euclid_strong_lens_modeling_pipeline#136): 1 — (a) wall-clock cap: library-first PyAutoFit PR adding a timeout to af.Nautilus, then the pipeline PR with per-band WAVEBAND_TIMEOUT_S, a lower named WAVEBAND_N_LIKE_MAX, a capped marker, QA column and a fast test https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7039080077

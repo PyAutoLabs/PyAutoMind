@@ -56,16 +56,6 @@ the ruling on the prompt.
 - asked: 2026-11-19T21:49Z
 - worker: readiness pass
 
-### Q17. sed_chain_waveband_fit_can_spin_forever — SED waveband hang: n_like_max=50000 already exists but caps calls, no…
-- task: active/sed_chain_waveband_fit_can_spin_forever.md
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
-- kind: question
-- ask: SED waveband hang: n_like_max=50000 already exists but caps calls, not time. Which cap, and who runs the RAL repro/witness?
-- options: (a) (1) Wall-clock cap: PyAutoFit Nautilus timeout + pipeline constants, marker, test (recommended) · (b) (2) Pipeline only: lower n_like_max named constant + capped marker + test · (c) (3) Close as covered by SED_SKIP_BANDS gap-fill
-- shift: 2026-11-20-am
-- asked: 2026-11-20T08:41Z
-- worker: 79ac305d
-
 ### Q21. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campai…
 - task: draft/feature/euclid/dr1_campaign_sed_status_root.md
 - kind: ruling
@@ -273,6 +263,19 @@ the ruling on the prompt.
 - answered: 2026-11-20T11:57Z by Jammy2211 (issue)
 - answer: do a and d — rectangular SMA: raise the SMA cell's S/N, re-simulate and rerun the rectangular legs on both routes; datacube SMA: first run the ~1 CPU-hour controlled RAL test on current main (frozen points re-evaluated inside a Nautilus-style worker pool vs serial) before choosing a remedy
 - answer-comment: https://github.com/PyAutoLabs/autolens_inference/issues/73#issuecomment-7038206561
+
+### Q17. sed_chain_waveband_fit_can_spin_forever — SED waveband hang: n_like_max=50000 already exists but caps calls, no…
+- task: active/sed_chain_waveband_fit_can_spin_forever.md
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
+- kind: question
+- ask: SED waveband hang: n_like_max=50000 already exists but caps calls, not time. Which cap, and who runs the RAL repro/witness?
+- options: (a) (1) Wall-clock cap: PyAutoFit Nautilus timeout + pipeline constants, marker, test (recommended) · (b) (2) Pipeline only: lower n_like_max named constant + capped marker + test · (c) (3) Close as covered by SED_SKIP_BANDS gap-fill
+- shift: 2026-11-20-am
+- asked: 2026-11-20T08:41Z
+- worker: 79ac305d
+- answered: 2026-11-20T12:05Z by Jammy2211 (issue)
+- answer: 1 — (a) wall-clock cap: library-first PyAutoFit PR adding a timeout to af.Nautilus, then the pipeline PR with per-band WAVEBAND_TIMEOUT_S, a lower named WAVEBAND_N_LIKE_MAX, a capped marker, QA column and a fast test
+- answer-comment: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7039080077
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
