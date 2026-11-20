@@ -12,7 +12,6 @@
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
 - [delaunay-nn-numba-remeasure](#delaunay-nn-numba-remeasure)
-- [cortex-development-split](#cortex-development-split)
 
 <!-- toc:end -->
 
@@ -150,16 +149,3 @@
   2. Submit autolens_profiling_p677/hpc/batch_cpu/submit_p1112_dnn_numba_remeasure_ral_cpu_hst_fp64 via `hpc/sync submit --cpu` from a copy of hpc/ whose sync.conf sets PROJECT_NAME=autolens_profiling_p677 (raw sbatch is hook-blocked). Risk: RAL venv jax 0.11.2 vs the release's jax floor.
   3. Ingest: old rows → results/imaging/delaunay_nn/hst/numba_cpu_sparse_fp64/hpc_ral_cpu/history/2026.10.23.1_2026-10-25/, new rows current; re-key catalogue/peak_rss_backfill.json to the history path; add the tag to catalogue/release_revisions.json; build_catalogue → build_dashboard (PYAUTO_BRAIN set) → coverage_matrix; commit all of dashboard/; PR closes #528.
   4. Pulse: update tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md (no longer blocked; day-zero rows were 2026.10.23.1 carried to .25.1). Frozen day_zero snapshot is never rewritten.
-
-## cortex-development-split
-- status: blocked — repos claimed by other tasks
-- filed: 2026-11-19
-- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/95
-- prompt: active/development_projects_split.md
-- summary: derive each project's category from its local_path folder (no new field — human ruling 2026-11-19) and split the Cortex board, census, check-in summary and Science/STATE.md into Science and Development sections with per-section counts; --category on pull/checkin
-- branch: feature/cortex-development-split
-- next: /start_library (merge mode: human /prm)
-- blocked-by: PyAutoBrain (shift-smoke-targeted)
-- affected-repos:
-  - PyAutoCortex
-  - PyAutoBrain

@@ -21,3 +21,16 @@
 - coordination: human approved PyAutoLens/paper_jax/paper.md-only edits alongside magnification-maps-wiring; no library code changes
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
+
+## cortex-development-split
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/95
+- issued: 2026-11-19
+- session: claude-code desktop (WSL), Opus 5.5, ~/Science session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-development-split
+- repos:
+  - PyAutoCortex: feature/cortex-development-split
+  - PyAutoBrain: feature/cortex-development-split
+- prompt: active/development_projects_split.md
+- tier: supervised — merge mode: human /prm
+- unblocked: 2026-11-20 — PyAutoBrain claims released (shift-smoke-targeted merged PyAutoBrain#685; queued-epics-drive-shifts released)
