@@ -66,16 +66,6 @@ the ruling on the prompt.
 - asked: 2026-11-20T08:41Z
 - worker: 79ac305d
 
-### Q20. numba_wtilde_validation_legs_stall_nautilus — Phase-4 stalls explained (rectangular SMA is flat on every route; dat…
-- task: active/numba_wtilde_validation_legs_stall_nautilus.md
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/73
-- kind: question
-- ask: Phase-4 stalls explained (rectangular SMA is flat on every route; datacube ~50% not-PD and unreproducible in-run values). Which remedy per leg?
-- options: (a) Rect: raise SMA S/N + rerun both routes; Datacube: 1 CPU-h RAL worker-vs-serial test first (recommended) · (b) Rect: guard zero adapt image, record unmeasurable; Datacube: shrink mesh or raise prior floor, rerun · (c) Record both as limitations only; mark the #59 rows invalid · (d) Other (answer on the issue)
-- shift: 2026-11-20-am
-- asked: 2026-11-20T09:22Z
-- worker: da579b3a
-
 ### Q21. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campai…
 - task: draft/feature/euclid/dr1_campaign_sed_status_root.md
 - kind: ruling
@@ -270,6 +260,19 @@ the ruling on the prompt.
 - answered: 2026-11-20T11:56Z by Jammy2211 (issue)
 - answer: 1 — (a) fix PyAutoFit first (the queued follow-up draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md), then resume branch feature/slam-simultaneous-subhalo-grid-search and open the PR
 - answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/683#issuecomment-7038127994
+
+### Q20. numba_wtilde_validation_legs_stall_nautilus — Phase-4 stalls explained (rectangular SMA is flat on every route; dat…
+- task: active/numba_wtilde_validation_legs_stall_nautilus.md
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/73
+- kind: question
+- ask: Phase-4 stalls explained (rectangular SMA is flat on every route; datacube ~50% not-PD and unreproducible in-run values). Which remedy per leg?
+- options: (a) Rect: raise SMA S/N + rerun both routes; Datacube: 1 CPU-h RAL worker-vs-serial test first (recommended) · (b) Rect: guard zero adapt image, record unmeasurable; Datacube: shrink mesh or raise prior floor, rerun · (c) Record both as limitations only; mark the #59 rows invalid · (d) Other (answer on the issue)
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:22Z
+- worker: da579b3a
+- answered: 2026-11-20T11:57Z by Jammy2211 (issue)
+- answer: do a and d — rectangular SMA: raise the SMA cell's S/N, re-simulate and rerun the rectangular legs on both routes; datacube SMA: first run the ~1 CPU-hour controlled RAL test on current main (frozen points re-evaluated inside a Nautilus-style worker pool vs serial) before choosing a remedy
+- answer-comment: https://github.com/PyAutoLabs/autolens_inference/issues/73#issuecomment-7038206561
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
