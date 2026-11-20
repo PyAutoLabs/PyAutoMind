@@ -58,3 +58,13 @@
   - PyAutoArray: feature/plot-grid-small-datasets-indexes
 - prompt: active/plot_grid_indexerror_under_small_datasets.md
 - tier: supervised — merge mode: auto-merge on green if the Witness passes after a merge slot (shift worker ends at PR-open)
+
+## sed-waveband-search-cap
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
+- issued: 2026-11-20
+- session: shift worker 2026-11-20-am (79ac305d-a450-40fe-b02b-8b0ccf4e159a)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7034635460
+- prompt: active/sed_chain_waveband_fit_can_spin_forever.md
+- note: parked before any claim or worktree; n_like_max=50000 cap already exists (calls, not wall time); wall-clock cap needs PyAutoFit `timeout`; repro + witness need a human-run RAL re-run
+- tier: supervised — merge mode: auto-merge on green if the Witness passes after a merge slot

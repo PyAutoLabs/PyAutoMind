@@ -56,6 +56,16 @@ the ruling on the prompt.
 - asked: 2026-11-19T21:49Z
 - worker: readiness pass
 
+### Q17. sed_chain_waveband_fit_can_spin_forever — SED waveband hang: n_like_max=50000 already exists but caps calls, no…
+- task: active/sed_chain_waveband_fit_can_spin_forever.md
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
+- kind: question
+- ask: SED waveband hang: n_like_max=50000 already exists but caps calls, not time. Which cap, and who runs the RAL repro/witness?
+- options: (a) (1) Wall-clock cap: PyAutoFit Nautilus timeout + pipeline constants, marker, test (recommended) · (b) (2) Pipeline only: lower n_like_max named constant + capped marker + test · (c) (3) Close as covered by SED_SKIP_BANDS gap-fill
+- shift: 2026-11-20-am
+- asked: 2026-11-20T08:41Z
+- worker: 79ac305d
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
