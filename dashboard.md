@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 4 |
+| [Autopilot](#autopilot) | 7 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_4 queued · 1 question_
+_7 queued · 1 question_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -76,10 +76,13 @@ _4 queued · 1 question_
 
 **Queue** ([`queue.md`](queue.md)) — read-only; change it in a `/queue` chat
 
-1. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
-2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
-3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
-4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
+1. [SearchGridSearch over a FactorGraphModel crashes in make_result](draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md)
+2. [SLaM simultaneous subhalo grid search fits last band only](active/slam_simultaneous_subhalo_grid_search_fits_last.md)
+3. [test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy](active/latent_total_source_flux_jax_vs_numpy_regression.md)
+4. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
+5. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
+6. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
+7. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
 **Questions** (1 open, 0 deferred, 5 rulings — [`questions.md`](questions.md))
 
