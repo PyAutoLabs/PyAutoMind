@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 293 |
+| [Backlog](#backlog) | 294 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -81,17 +81,18 @@ _LIVE · 0 in progress_
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (2 open, 0 deferred, 3 rulings — [`questions.md`](questions.md))
+**Questions** (3 open, 0 deferred, 3 rulings — [`questions.md`](questions.md))
 
 - Q17 — SED waveband hang: n_like_max=50000 already exists but caps calls, not time. Which cap, and who runs the RAL repro/witness? (https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136, today)
 - Q18 — The jit-vs-NumPy total_source_flux gap no longer reproduces (green on main CI 2026-11-16 and locally). How should the bug be closed? (https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137, today)
+- Q19 — SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a FactorGraphModel crashes in PyAutoFit make_result (KeyError). How to proceed? (https://github.com/PyAutoLabs/autolens_workspace/issues/683, today)
 - Q14 — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it. (ruling claimed, 1 day)
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 1 day)
 
 **Shift** (2026-11-20-am — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 4 running, 4 finished, 1 refusal reasons · tokens 465720 of 5000000 (cache-read 12328941; 1 session(s) unmeasured) · review-at 2026-11-20T09:30Z (as of 2026-11-20T08:48:49Z) · [shift issue #593](https://github.com/PyAutoLabs/PyAutoMind/issues/593#issuecomment-7034575460)
+Live: LIVE · 4 running, 5 finished, 1 refusal reasons · tokens 673314 of 5000000 (cache-read 20065474) · review-at 2026-11-20T09:30Z (as of 2026-11-20T09:06:32Z) · [shift issue #593](https://github.com/PyAutoLabs/PyAutoMind/issues/593#issuecomment-7034575460)
 
 _(nothing to review yet)_
 
@@ -1457,7 +1458,7 @@ Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md
 
 </details>
 
-<details><summary>📋 <a href="active/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/683">issue #683</a> — issued 2026-11-20 — workspace-dev</summary>
+<details><summary>📋 <a href="active/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/683">issue #683</a> — issued 2026-11-20 — awaiting-input (blocked on PyAutoFit: SearchGridSearch + FactorGraphModel make_result KeyError; question on issue #683)</summary>
 
 ```
 Use the start-dev skill. active/slam_simultaneous_subhalo_grid_search_fits_last.md
@@ -1556,7 +1557,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 239 · ral 31 · local-dev 11 · wsl-data 9 · gpu 1
+Lanes: any 240 · ral 31 · local-dev 11 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1916,7 +1917,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 53</summary>
+<summary><b>bug</b> — 54</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2058,6 +2059,14 @@ Use the start-dev skill. draft/bug/autolens_workspace/start_here_multistart_comp
 
 ```
 Use the start-dev skill. draft/bug/autofit/visualization_warmup_swallowed_exception.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md">SearchGridSearch over a FactorGraphModel crashes in make_result</a> — autofit · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md
 ```
 
 </details>
