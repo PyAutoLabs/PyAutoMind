@@ -22,21 +22,21 @@
 
 2 draft(s) with strong evidence the work already shipped (`intake looks-shipped`). Held out of the pick lists and the batch planner until closed or dismissed in [`looks_shipped_dismissed.md`](looks_shipped_dismissed.md).
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — witness-exists — Witness names <code>test_batch_brief</code>, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 1f51de1 2026-11-19 Merge pull…</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — witness-exists — Witness names <code>test_batch_brief</code>, defined in PyAutoBrain tests/test_batch_brief.py:1; added by fbe9fd7 2026-11-20 Merge pull…</summary>
 
 ```
 `draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
 
 Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 1f51de1 2026-11-19 Merge pull request #691 from PyAutoLabs/feature/shift-speed-watcher-latency (Filed 2026-11-17)
+- witness-exists: Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by fbe9fd7 2026-11-20 Merge pull request #698 from PyAutoLabs/feature/cortex-development-split (Filed 2026-11-17)
 
 1. Check each cited line: open the commit / definition / record and confirm it
    really is THIS draft's work, not a neighbour's.
 2. If it shipped, close it (write the record body first; the command is a dry
    run without --apply):
-   python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-19 --from-file <record-body.md> --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply
+   python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-20 --from-file <record-body.md> --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply
 3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md — 2026-11-19 — <why it is not shipped>' >> looks_shipped_dismissed.md
+   echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md — 2026-11-20 — <why it is not shipped>' >> looks_shipped_dismissed.md
 4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
 
 Report which you did and why.
@@ -44,21 +44,21 @@ Report which you did and why.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md">M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no <code>pgrep</code> waits…</a> — witness-exists — Witness names <code>test_orchestrator_mind_writer</code>, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 1f51de1…</summary>
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md">M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no <code>pgrep</code> waits…</a> — witness-exists — Witness names <code>test_orchestrator_mind_writer</code>, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by fbe9fd7…</summary>
 
 ```
 `draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
 
 Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 1f51de1 2026-11-19 Merge pull request #691 from PyAutoLabs/feature/shift-speed-watcher-latency (Filed 2026-11-17) (+1 more)
+- witness-exists: Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by fbe9fd7 2026-11-20 Merge pull request #698 from PyAutoLabs/feature/cortex-development-split (Filed 2026-11-17) (+1 more)
 
 1. Check each cited line: open the commit / definition / record and confirm it
    really is THIS draft's work, not a neighbour's.
 2. If it shipped, close it (write the record body first; the command is a dry
    run without --apply):
-   python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-19 --from-file <record-body.md> --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply
+   python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-20 --from-file <record-body.md> --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply
 3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md — 2026-11-19 — <why it is not shipped>' >> looks_shipped_dismissed.md
+   echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md — 2026-11-20 — <why it is not shipped>' >> looks_shipped_dismissed.md
 4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
 
 Report which you did and why.
