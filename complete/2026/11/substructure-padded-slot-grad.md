@@ -1,3 +1,13 @@
+`jax.grad` through the batched substructure path is finite when a zero-padded halo slot exists and through `cNFWSph`. Masked slots contribute exactly zero value and gradient, and deflection values are unchanged (the review found them bit-identical on 2,000+ points). PyAutoGalaxy#738 makes the shared `vmapped_deflections_from` grad-safe for masked slots and fixes the `cNFWSph` gradient; PyAutoLens#872 pads empty halo slots with benign params. Either PR alone passes the lens witness.
+
+Witness: on main, 2 + 5 tNFW halos at max_n=5 or 8 gave NaN d/dgrid and d/dparams, and a single cNFWSph gave d/dparams `[nan nan -1.64 nan nan]`. After the fix all are finite, padded == unpadded to 1e-10, padded-slot gradients exactly 0 (`test_substructure_util.py -k "padded_slots_keep or benign_padding"` 2 passed; `test_vmapped_deflections.py` 7 passed). Control: the lens witness fails with neither fix and passes with either. Tests: ag `test_autogalaxy/profiles` 924 passed, al `test_autolens/lens` 228 passed; targeted smoke using_jax.py x2 + witt_wynne.py PASS; independent Opus 5.5 review CLEAN; CI GREEN at /prm.
+
+Follow-ups (review nits, not filed): the lens test could assert the exact padding row; a `vmapped_padding_params` length mismatch with `n_radial` raises a raw concatenate error.
+
+Shipped in PyAutoGalaxy#738 (https://github.com/PyAutoLabs/PyAutoGalaxy/pull/738) and PyAutoLens#872 (https://github.com/PyAutoLabs/PyAutoLens/pull/872), merged 2026-11-20 by human /prm. Issue https://github.com/PyAutoLabs/PyAutoLens/issues/871. Done by shift worker 2026-11-19-pm2 (40917658).
+
+## Original prompt
+
 # Substructure jax.grad is NaN when a zero-padded halo slot exists
 
 Type: bug
