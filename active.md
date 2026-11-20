@@ -34,3 +34,27 @@
 - prompt: active/development_projects_split.md
 - tier: supervised — merge mode: human /prm
 - unblocked: 2026-11-20 — PyAutoBrain claims released (shift-smoke-targeted merged PyAutoBrain#685; queued-epics-drive-shifts released)
+
+## slam-simultaneous-subhalo-grid-search
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
+- issued: 2026-11-20
+- session: shift worker 2026-11-20-am (24ac8476-2f82-4029-b4e9-dfbd4eebbcbd)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/slam-simultaneous-subhalo-grid-search
+- repos:
+  - autolens_workspace: feature/slam-simultaneous-subhalo-grid-search
+- prompt: active/slam_simultaneous_subhalo_grid_search_fits_last.md
+- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- heart-ack:
+  - Heart GREEN at the door (2026-11-20); brief heart-ack covers the RED local-checkout and manifest-drift reasons
+
+## plot-grid-small-datasets-indexes
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/705
+- issued: 2026-11-20
+- session: shift worker 2026-11-20-am (9c372a5f-e023-412c-b694-19a647a4490d)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/plot-grid-small-datasets-indexes
+- repos:
+  - PyAutoArray: feature/plot-grid-small-datasets-indexes
+- prompt: active/plot_grid_indexerror_under_small_datasets.md
+- tier: supervised — merge mode: auto-merge on green if the Witness passes after a merge slot (shift worker ends at PR-open)
