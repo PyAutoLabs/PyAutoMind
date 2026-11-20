@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 295 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -197,7 +197,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1550,7 +1550,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 242 · ral 30 · local-dev 11 · wsl-data 9 · gpu 1
+Lanes: any 244 · ral 30 · local-dev 11 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1910,7 +1910,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 56</summary>
+<summary><b>bug</b> — 57</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2044,6 +2044,14 @@ Use the start-dev skill. draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/lossampler_default_of_4_4_planes_is.md">LOSSampler default of 4 + 4 planes is too coarse; default…</a> — autolens · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/lossampler_default_of_4_4_planes_is.md
 ```
 
 </details>
@@ -2363,7 +2371,7 @@ Use the start-dev skill. draft/bug/autolens/twins_provenance_versions.md
 </details>
 
 <details>
-<summary><b>research</b> — 25</summary>
+<summary><b>research</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2393,6 +2401,14 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/o_riordan_m_max_to_virial_mass.md">O'Riordan M_max to virial mass: a factor 15 to 40 mismatch…</a> — autolens · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autolens/o_riordan_m_max_to_virial_mass.md
 ```
 
 </details>
