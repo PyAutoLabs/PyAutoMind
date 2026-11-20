@@ -1425,7 +1425,7 @@ Use the start-dev skill. active/latent_total_source_flux_jax_vs_numpy_regression
 
 </details>
 
-<details><summary>📋 <a href="active/plot_grid_indexerror_under_small_datasets.md">plot_grid IndexError under small datasets</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/705">issue #705</a> — issued 2026-11-20 — library-dev</summary>
+<details><summary>📋 <a href="active/plot_grid_indexerror_under_small_datasets.md">plot_grid IndexError under small datasets</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/705">issue #705</a> — issued 2026-11-20 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/706">PyAutoArray#706</a></summary>
 
 ```
 Use the start-dev skill. active/plot_grid_indexerror_under_small_datasets.md
