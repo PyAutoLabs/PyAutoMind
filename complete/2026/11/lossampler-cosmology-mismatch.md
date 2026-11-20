@@ -1,3 +1,15 @@
+`mass_function_ab_from(cosmology_astropy=...)` and `LOSSampler(cosmology=..., cosmology_astropy=...)` now raise a ValueError naming both cosmologies when the supplied astropy cosmology disagrees with the colossus cosmology name (H0 rtol 1e-3, Om0 rtol 1e-2, Ok0 atol 1e-3). Matching pairs and precomputed coefficients are unchanged. Decision (settled in the plan on the issue, so no `decision-taken` label): raise rather than map the astropy cosmology to a colossus one.
+
+Witness: on main, WMAP9 + default planck15 silently returned the Planck15 fit (B = 8.116; true WMAP9 B = 8.108). Now it raises, with a hint to pass `cosmology_name='WMAP9'`. `pytest test_autolens/lens/test_los.py -k "mismatched or matching_cosmology or deprecated"` 4 passed; full `test_los.py` 12 passed. Targeted smoke: import check autolens_workspace guides/galaxies.py PASS. Independent Opus 5.5 review FINDINGS(2) (wrong argument name in the hint; flatness not compared), both fixed in ebe5a6223, then CLEAN. CI GREEN at /prm.
+
+Not checked: colossus cosmologies other than planck15, planck18 and WMAP9 (the tolerances accept planck13 against Planck15).
+
+Related: `draft/refactor/autogalaxy/one_cosmology_module_across_pyautogalaxy_and_pya.md` removes `cosmology_astropy` altogether, and this check with it.
+
+Shipped in PyAutoLens#874 (https://github.com/PyAutoLabs/PyAutoLens/pull/874), merged 2026-11-20 by human /prm. Issue https://github.com/PyAutoLabs/PyAutoLens/issues/873. Done by shift worker 2026-11-19-pm2 (2040fb28).
+
+## Original prompt
+
 # LOSSampler silently ignores a non-Planck cosmology_astropy
 
 Type: bug

@@ -45,18 +45,6 @@
 - heart-ack:
   - acknowledged by the human 2026-11-19 ("Acknowledge, use these"): YELLOW score 100 — manifest drift: end-at-deliverable blocks (generated) — 46 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: generated hooks (session-start + end-at-deliverable) — 2 mismatch(es) vs PyAutoMind/repos.yaml
 
-## lossampler-cosmology-mismatch
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/873
-- issued: 2026-11-19
-- session: shift worker 2026-11-19-pm2 (2040fb28)
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/lossampler-cosmology-mismatch
-- repos:
-  - PyAutoLens: feature/lossampler-cosmology-mismatch
-- prompt: active/lossampler_silently_ignores_a_non_planck_cosmolo.md
-- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/874
-
 ## nfwtruncatedsph_convergence_loses_precision_near_scale_radius
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/739
 - issued: 2026-11-19
