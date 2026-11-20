@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-20T09:10:29Z",
+  "headline": "RED \u2014 23 picks \u00b7 7 in flight",
+  "updated": "2026-11-20T09:20:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137",
       "prompt": "Use the start-dev skill. active/latent_total_source_flux_jax_vs_numpy_regression.md"
+    },
+    {
+      "severity": "red",
+      "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/autolens_inference/issues/73",
+      "prompt": "Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md"
     },
     {
       "severity": "red",
@@ -120,12 +126,6 @@
       "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
       "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
-      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
     }
   ]
 }
