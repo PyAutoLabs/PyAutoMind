@@ -55,7 +55,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/705
 - issued: 2026-11-20
 - session: shift worker 2026-11-20-am (9c372a5f-e023-412c-b694-19a647a4490d)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/706
 - worktree: ~/Code/PyAutoLabs-wt/plot-grid-small-datasets-indexes
 - repos:
   - PyAutoArray: feature/plot-grid-small-datasets-indexes
