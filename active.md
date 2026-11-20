@@ -26,7 +26,10 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
 - issued: 2026-11-20
 - session: shift worker 2026-11-20-am (24ac8476-2f82-4029-b4e9-dfbd4eebbcbd)
-- status: workspace-dev
+- status: awaiting-input (blocked on PyAutoFit: SearchGridSearch + FactorGraphModel make_result KeyError; question on issue #683)
+- question: https://github.com/PyAutoLabs/autolens_workspace/issues/683#issuecomment-7035177232
+- blocked-by: draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md
+- next: once PyAutoFit is fixed, rerun scripts/multi_dataset/features/slam/simultaneous.py under PYAUTO_TEST_MODE=1 on branch 84b05719, regenerate the notebook, ship
 - worktree: /home/jammy/Code/PyAutoLabs-wt/slam-simultaneous-subhalo-grid-search
 - repos:
   - autolens_workspace: feature/slam-simultaneous-subhalo-grid-search

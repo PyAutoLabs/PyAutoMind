@@ -76,6 +76,16 @@ the ruling on the prompt.
 - asked: 2026-11-20T08:43Z
 - worker: 8333550b
 
+### Q19. slam_simultaneous_subhalo_grid_search_fits_last — SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a…
+- task: active/slam_simultaneous_subhalo_grid_search_fits_last.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
+- kind: question
+- ask: SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a FactorGraphModel crashes in PyAutoFit make_result (KeyError). How to proceed?
+- options: (a) Fix PyAutoFit first (follow-up draft queued), then resume this branch (recommended) · (b) Ship a workspace-only interim: grid search on band 0 with its dataset_model, documented as single-band · (c) Leave the stage as is with a note in the script; close #683
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:06Z
+- worker: 24ac8476
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
