@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 4 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 3 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_4 queued · 0 questions_
+_LIVE · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -87,9 +87,11 @@ _4 queued · 0 questions_
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 1 day)
 
-**Shift**
+**Shift** (2026-11-20-am — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-20-am — closed, nothing to review · [shift issue #593](https://github.com/PyAutoLabs/PyAutoMind/issues/593))_
+Live: LIVE · 4 running, 1 finished, 1 refusal reasons · tokens 0 of 5000000 (4 session(s) unmeasured) · review-at 2026-11-20T09:30Z (as of 2026-11-20T08:37:12Z) · [shift issue #593](https://github.com/PyAutoLabs/PyAutoMind/issues/593#issuecomment-7034575460)
+
+_(nothing to review yet)_
 
 ## Start here
 
