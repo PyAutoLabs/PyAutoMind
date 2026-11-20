@@ -86,6 +86,16 @@ the ruling on the prompt.
 - asked: 2026-11-20T09:06Z
 - worker: 24ac8476
 
+### Q20. numba_wtilde_validation_legs_stall_nautilus — Phase-4 stalls explained (rectangular SMA is flat on every route; dat…
+- task: active/numba_wtilde_validation_legs_stall_nautilus.md
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/73
+- kind: question
+- ask: Phase-4 stalls explained (rectangular SMA is flat on every route; datacube ~50% not-PD and unreproducible in-run values). Which remedy per leg?
+- options: (a) Rect: raise SMA S/N + rerun both routes; Datacube: 1 CPU-h RAL worker-vs-serial test first (recommended) · (b) Rect: guard zero adapt image, record unmeasurable; Datacube: shrink mesh or raise prior floor, rerun · (c) Record both as limitations only; mark the #59 rows invalid · (d) Other (answer on the issue)
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:22Z
+- worker: da579b3a
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
