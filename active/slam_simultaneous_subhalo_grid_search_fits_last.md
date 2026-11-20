@@ -54,3 +54,6 @@ which leaves this stage alone. `subhalo_no_subhalo` and `subhalo_refine` are fin
 - Regenerate the notebook; smoke-run under `PYAUTO_TEST_MODE`.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-04 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/4caac41d-a9a3-4a30-8192-75baff5614bb/scratchpad/intake_subhalo.md -->
+
+## Answers from the human
+- Q19 (2026-11-20, shift 2026-11-20-am question on autolens_workspace#683): 1 — (a) fix PyAutoFit first (the queued follow-up draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md), then resume branch feature/slam-simultaneous-subhalo-grid-search and open the PR https://github.com/PyAutoLabs/autolens_workspace/issues/683#issuecomment-7038127994

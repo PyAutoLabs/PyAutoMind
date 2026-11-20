@@ -66,16 +66,6 @@ the ruling on the prompt.
 - asked: 2026-11-20T08:41Z
 - worker: 79ac305d
 
-### Q19. slam_simultaneous_subhalo_grid_search_fits_last — SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a…
-- task: active/slam_simultaneous_subhalo_grid_search_fits_last.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
-- kind: question
-- ask: SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a FactorGraphModel crashes in PyAutoFit make_result (KeyError). How to proceed?
-- options: (a) Fix PyAutoFit first (follow-up draft queued), then resume this branch (recommended) · (b) Ship a workspace-only interim: grid search on band 0 with its dataset_model, documented as single-band · (c) Leave the stage as is with a note in the script; close #683
-- shift: 2026-11-20-am
-- asked: 2026-11-20T09:06Z
-- worker: 24ac8476
-
 ### Q20. numba_wtilde_validation_legs_stall_nautilus — Phase-4 stalls explained (rectangular SMA is flat on every route; dat…
 - task: active/numba_wtilde_validation_legs_stall_nautilus.md
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/73
@@ -267,6 +257,19 @@ the ruling on the prompt.
 - answered: 2026-11-20T11:55Z by Jammy2211 (issue)
 - answer: 1 — (a) close as fixed upstream; file the hpc/sync items as their own prompt
 - answer-comment: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137#issuecomment-7038440330
+
+### Q19. slam_simultaneous_subhalo_grid_search_fits_last — SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a…
+- task: active/slam_simultaneous_subhalo_grid_search_fits_last.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
+- kind: question
+- ask: SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a FactorGraphModel crashes in PyAutoFit make_result (KeyError). How to proceed?
+- options: (a) Fix PyAutoFit first (follow-up draft queued), then resume this branch (recommended) · (b) Ship a workspace-only interim: grid search on band 0 with its dataset_model, documented as single-band · (c) Leave the stage as is with a note in the script; close #683
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:06Z
+- worker: 24ac8476
+- answered: 2026-11-20T11:56Z by Jammy2211 (issue)
+- answer: 1 — (a) fix PyAutoFit first (the queued follow-up draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md), then resume branch feature/slam-simultaneous-subhalo-grid-search and open the PR
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/683#issuecomment-7038127994
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
