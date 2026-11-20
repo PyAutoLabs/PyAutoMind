@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 0 |
+| [Autopilot](#autopilot) | 4 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 7 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_LIVE · 0 in progress_
+_4 queued · 4 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -81,7 +81,7 @@ _LIVE · 0 in progress_
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (4 open, 0 deferred, 3 rulings — [`questions.md`](questions.md))
+**Questions** (4 open, 0 deferred, 5 rulings — [`questions.md`](questions.md))
 
 - Q17 — SED waveband hang: n_like_max=50000 already exists but caps calls, not time. Which cap, and who runs the RAL repro/witness? (https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136, today)
 - Q18 — The jit-vs-NumPy total_source_flux gap no longer reproduces (green on main CI 2026-11-16 and locally). How should the bug be closed? (https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137, today)
@@ -90,12 +90,12 @@ _LIVE · 0 in progress_
 - Q14 — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it. (ruling claimed, 1 day)
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 1 day)
+- Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, today)
+- Q22 — `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit first) (its Blocked-by). (ruling blocked-by, today)
 
-**Shift** (2026-11-20-am — 0 in progress · 0 awaiting review)
+**Shift**
 
-Live: LIVE · 4 running, 6 finished, 1 refusal reasons · tokens 755794 of 5000000 (cache-read 24811076) · review-at 2026-11-20T09:30Z (as of 2026-11-20T09:22:10Z) · [shift issue #593](https://github.com/PyAutoLabs/PyAutoMind/issues/593#issuecomment-7034575460)
-
-_(nothing to review yet)_
+_(last shift 2026-11-20-am — closed, nothing to review · [shift issue #593](https://github.com/PyAutoLabs/PyAutoMind/issues/593))_
 
 ## Start here
 
