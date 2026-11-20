@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 291 |
+| [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -473,7 +473,7 @@ Use the start-dev skill. draft/feature/autolens/lenstwin_epic.md
 </details>
 
 <details>
-<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 4 queued prompt(s), in order</summary>
+<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — ledger: <code>draft/research/autofit/hpc_campaign_epic.md</code> — STARTED 2026-10-28 — concurrent with results-library; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
@@ -503,6 +503,22 @@ Use the start-dev skill. draft/feature/autofit/campaign_per_stage_status_root.md
 
 ```
 Use the start-dev skill. draft/feature/autofit/campaign_zip_complete_pattern.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/euclid/dr1_campaign_sed_status_root.md">dr1.yaml: give the sed stage its own status_root (output_sed/) and drop…</a> — euclid · small · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/euclid/dr1_campaign_sed_status_root.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/euclid/dr1_campaign_zip_success_checks.md">dr1.yaml: add zip_complete success checks per stage now that a pattern…</a> — euclid · small · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/euclid/dr1_campaign_zip_success_checks.md
 ```
 
 </details>
@@ -1548,7 +1564,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 237 · ral 31 · local-dev 11 · wsl-data 9 · gpu 1
+Lanes: any 239 · ral 31 · local-dev 11 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3256,7 +3272,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+67 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3273,6 +3289,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md — unknown theme keyword(s): measurement-tools`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
+- `draft/feature/euclid/dr1_campaign_sed_status_root.md — unknown theme keyword(s): euclid, hpc`
+- `draft/feature/euclid/dr1_campaign_zip_success_checks.md — unknown theme keyword(s): euclid, hpc`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md — unknown theme keyword(s): euclid, catalogue`
