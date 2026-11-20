@@ -1,3 +1,11 @@
+`plot_grid(indexes=...)` raised `IndexError` when a highlighted index lay outside the grid. HowToLens `chapter_1_introduction/tutorial_2_ray_tracing.py` picks indexes for its 101x101 grid, and `PYAUTO_SMALL_DATASETS=1` caps that grid to 256 points, so the tutorial crashed under small datasets.
+
+Shipped in PyAutoArray#706 (merged 0f4e8a0f, 2026-11-20, human /prm after the shift 2026-11-20-am review): `plot_grid` now drops out-of-range indexes and logs one INFO line with the count; a group with nothing left is skipped and each surviving group keeps its colour. Boolean-mask index groups are kept as masks (`flatnonzero`), a decision taken by the worker against the plan's int conversion after the independent review flagged the dtype.
+
+Witness: `test_autoarray/plot` 72 passed (the new `test_grid.py` fails 2/3 on main); `tutorial_2_ray_tracing.py` exits 0 under small and full datasets (exit 1 on main under small). Targeted smoke 7/7 (autogalaxy 2, autolens 5). Issue PyAutoArray#705 closed.
+
+## Original prompt
+
 # plot_grid IndexError under small datasets
 
 Type: bug

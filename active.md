@@ -38,18 +38,6 @@
 - heart-ack:
   - Heart GREEN at the door (2026-11-20); brief heart-ack covers the RED local-checkout and manifest-drift reasons
 
-## plot-grid-small-datasets-indexes
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/705
-- issued: 2026-11-20
-- session: shift worker 2026-11-20-am (9c372a5f-e023-412c-b694-19a647a4490d)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/706
-- worktree: ~/Code/PyAutoLabs-wt/plot-grid-small-datasets-indexes
-- repos:
-  - PyAutoArray: feature/plot-grid-small-datasets-indexes
-- prompt: active/plot_grid_indexerror_under_small_datasets.md
-- tier: supervised — merge mode: auto-merge on green if the Witness passes after a merge slot (shift worker ends at PR-open)
-
 ## sed-waveband-search-cap
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
 - issued: 2026-11-20

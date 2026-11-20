@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 7 in flight",
-  "updated": "2026-11-20T09:33:16Z",
+  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
+  "updated": "2026-11-20T11:50:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -30,12 +30,6 @@
       "text": "SLaM simultaneous subhalo grid search fits last band only \u2014 awaiting-input (blocked on PyAutoFit: SearchGridSearch + FactorGraphModel make_result KeyError; question on issue #683)",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/683",
       "prompt": "Use the start-dev skill. active/slam_simultaneous_subhalo_grid_search_fits_last.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "plot_grid IndexError under small datasets \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/706",
-      "prompt": "Use the start-dev skill. active/plot_grid_indexerror_under_small_datasets.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
       "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
+      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
     }
   ]
 }
