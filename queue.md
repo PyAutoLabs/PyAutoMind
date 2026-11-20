@@ -82,19 +82,34 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 1. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
+## 1. SearchGridSearch over a FactorGraphModel crashes in make_result
+- kind: prompt
+- ref: draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md
+- note: follow-up of the 2026-11-20-am review (Q19): PyAutoFit make_result KeyError on a grid search over a FactorGraphModel; unblocks autolens_workspace#683
+
+## 2. SLaM simultaneous subhalo grid search fits last band only
+- kind: prompt
+- ref: active/slam_simultaneous_subhalo_grid_search_fits_last.md
+- note: follow-up of the 2026-11-20-am review (Q19 = a): resume branch feature/slam-simultaneous-subhalo-grid-search once the PyAutoFit fix above merges
+
+## 3. test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
+- kind: prompt
+- ref: active/latent_total_source_flux_jax_vs_numpy_regression.md
+- note: follow-up of the 2026-11-20-am review (Q18 = a): close #137 as fixed upstream; file the hpc/sync items as their own prompt
+
+## 4. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
 - kind: prompt
 - ref: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 
-## 2. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
+## 5. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
 - kind: prompt
 - ref: draft/research/autofit/hpc_campaign_epic.md
 
-## 3. Results library — index, complete, export and ship thousands of PyAutoFit results
+## 6. Results library — index, complete, export and ship thousands of PyAutoFit results
 - kind: prompt
 - ref: draft/feature/autofit/results_library_epic.md
 
-## 4. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
+## 7. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
 - kind: prompt
 - ref: draft/maintenance/autocti/cti_upkeep_epic.md
 
