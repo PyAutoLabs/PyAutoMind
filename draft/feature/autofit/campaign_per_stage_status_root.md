@@ -21,7 +21,7 @@ Source: risks found in the review of PyAutoLabs/euclid_strong_lens_modeling_pipe
 
 1. Allow an optional `status_root:` on each stage, defaulting to the campaign's; the collector scans each stage's root for that stage's tasks. `retro.py` (~101-151) takes the same per-stage root.
 2. Tests, and the spec docstring.
-3. Follow-up in the pipeline: set `status_root: output_sed` on the sed stage in `hpc/campaign/dr1.yaml` and drop the caveat from its header and README.
+3. The pipeline follow-up (`status_root: output_sed` on the sed stage in `hpc/campaign/dr1.yaml`, caveat dropped) is its own prompt, `draft/feature/euclid/dr1_campaign_sed_status_root.md` (phase 5f, filed 2026-11-20). Do not edit the pipeline in this task.
 
 ## Answers from the human
 - Q12 (2026-11-18, ruling claimed, shift 2026-11-18-pm): (a) — the gate is clear: compound-prior-model-json shipped (PyAutoFit#1783 merged 2026-11-18T17:40Z by human /prm) and its active.md claim is released; PyAutoFit is free for this task.
