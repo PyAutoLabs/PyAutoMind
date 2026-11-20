@@ -13,6 +13,7 @@ Consequence: glance
 Witness: HowToLens scripts/chapter_1_introduction/tutorial_2_ray_tracing.py exits 0 with PYAUTO_SMALL_DATASETS=1 (and still exits 0 without it).
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-20 47758380 (HowToLens), e398b808 (PyAutoArray)
 Lane: local-dev
 
 @HowToLens `scripts/chapter_1_introduction/tutorial_2_ray_tracing.py` fails under `PYAUTO_SMALL_DATASETS=1`:
