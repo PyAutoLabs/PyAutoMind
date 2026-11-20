@@ -1,3 +1,13 @@
+autolens_inference `hpc/sync submit` now passes allow-listed sbatch overrides (`--time`, `--no-requeue`, `--mem`, `--array`, `--dependency`) and `--env NAME=VALUE` (exported on RAL before sbatch; `SBATCH_*`/`SLURM_*`/`LD_*`/`PATH`… are refused), and logs every submit and cancel to `campaign/<name>/actions.log` on RAL in the AUTONOMY.md "Scheduler actions" format. Before, it took only a script name and `--dependency`, silently treated unknown flags as the script name, and logged nothing. A likelihood-lifecycle phase-4 timing resubmit (24 h limit, no requeue, XLA eigen flag) no longer needs a `PYAUTO_SKIP_SCHEDULER_GUARD` exception.
+
+Witness (stub ssh/sbatch harness): `hpc/sync submit --cpu --campaign p4_validation --time 24:00:00 --no-requeue --env XLA_FLAGS=--xla_cpu_multi_thread_eigen=false submit_p4_validation_mge_hst_jax_cpu_dense` gives sbatch argv `["--time=24:00:00", "--no-requeue", "submit_p4_…"]` with XLA_FLAGS set, writes the actions.log line, and `scheduler_action_guard.check_command` ALLOWS the hpc/sync form while the old raw `ssh … sbatch` form is refused. `scripts/misc/test/test_hpc_sync_submit.py` 30 passed. Independent Opus review FINDINGS(3), fixed in ec96d96, then CLEAN. Heart GREEN at the door; CI GREEN at /prm.
+
+Not checked: no real RAL submit yet; the job-side environment is inferred from sbatch's default `--export=ALL`, not observed. Decision taken (PR labelled `decision-taken`, merged by the human): the generator-side default `--no-requeue` and eigen flag in `validation_p4.py` are left for a follow-up.
+
+Shipped in autolens_inference#72 (https://github.com/PyAutoLabs/autolens_inference/pull/72), merged 2026-11-20 by human /prm. Issue https://github.com/PyAutoLabs/autolens_inference/issues/71. Done by shift worker 2026-11-19-pm2 (98526c76); epic likelihood-lifecycle phase 4 tooling.
+
+## Original prompt
+
 # autolens_inference `hpc/sync submit` can't pass `--time`, `--no-requeue` or environment variables, so every timing resubmit needs a scheduler-guard exception
 
 Type: feature

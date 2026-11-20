@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2350 records across 11 buckets.
+2351 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -229,6 +229,7 @@ markers; everything below GENERATED is rebuilt.
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
 - [hpc-campaign-p5d-pipeline-adoption](2026/11/hpc-campaign-p5d-pipeline-adoption.md) — shipped
 - [hpc-keep-off-home](2026/11/hpc-keep-off-home.md)
+- [hpc-sync-submit-pass-through](2026/11/hpc-sync-submit-pass-through.md)
 - [hpc-tmpdir-slurm-default](2026/11/hpc-tmpdir-slurm-default.md)
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
