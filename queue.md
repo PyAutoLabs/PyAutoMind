@@ -97,19 +97,24 @@ phase is `local-dev` by construction.
 - ref: active/latent_total_source_flux_jax_vs_numpy_regression.md
 - note: follow-up of the 2026-11-20-am review (Q18 = a): close #137 as fixed upstream; file the hpc/sync items as their own prompt
 
-## 4. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
+## 4. SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain
+- kind: prompt
+- ref: active/sed_chain_waveband_fit_can_spin_forever.md
+- note: follow-up of the 2026-11-20-am review (Q17 = a): wall-clock cap — PyAutoFit af.Nautilus timeout first, then the pipeline PR (#136)
+
+## 5. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
 - kind: prompt
 - ref: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 
-## 5. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
+## 6. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
 - kind: prompt
 - ref: draft/research/autofit/hpc_campaign_epic.md
 
-## 6. Results library — index, complete, export and ship thousands of PyAutoFit results
+## 7. Results library — index, complete, export and ship thousands of PyAutoFit results
 - kind: prompt
 - ref: draft/feature/autofit/results_library_epic.md
 
-## 7. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
+## 8. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
 - kind: prompt
 - ref: draft/maintenance/autocti/cti_upkeep_epic.md
 
