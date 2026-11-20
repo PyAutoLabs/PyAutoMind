@@ -48,3 +48,6 @@ range is 3130898..94f9244 — its only source change on the latent path is `util
 
 ## Also (small, same repo)
 `hpc/sync` ROOT_FILES does not include the new root module `positions_finder.py` (added by #104/#106), so `hpc/sync push` never uploads it. It was rsynced to RAL by hand on 2026-09-25. Separately, `hpc/batch_cpu/output/` (1.6 GB of SLURM logs) and `hpc/upload_rest/` (738 MB) sit inside the pushed `hpc/` code dir, which makes `hpc/sync push --no-data` stall at the laptop's ~95 KB/s upload speed. Exclude them from CODE_DIRS pushes.
+
+## Answers from the human
+- Q18 (2026-11-20, shift 2026-11-20-am question on euclid_strong_lens_modeling_pipeline#137): 1 — (a) close as fixed upstream; file the hpc/sync items as their own prompt https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137#issuecomment-7038440330

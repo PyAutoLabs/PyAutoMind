@@ -66,16 +66,6 @@ the ruling on the prompt.
 - asked: 2026-11-20T08:41Z
 - worker: 79ac305d
 
-### Q18. latent_total_source_flux_jax_vs_numpy_regression — The jit-vs-NumPy total_source_flux gap no longer reproduces (green on…
-- task: active/latent_total_source_flux_jax_vs_numpy_regression.md
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137
-- kind: question
-- ask: The jit-vs-NumPy total_source_flux gap no longer reproduces (green on main CI 2026-11-16 and locally). How should the bug be closed?
-- options: (a) Close as fixed upstream; file the hpc/sync items as their own prompt (recommended) · (b) Bisect the library commits from 09-30 to 11-16 to name the root cause, then close · (c) Keep it open; fix only the hpc/sync items under #137
-- shift: 2026-11-20-am
-- asked: 2026-11-20T08:43Z
-- worker: 8333550b
-
 ### Q19. slam_simultaneous_subhalo_grid_search_fits_last — SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a…
 - task: active/slam_simultaneous_subhalo_grid_search_fits_last.md
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
@@ -264,6 +254,19 @@ the ruling on the prompt.
 - worker: readiness pass
 - answered: 2026-11-18T17:44Z by Jammy2211 (chat)
 - answer: (a) — the gate is clear: galaxy-duplicate-pytree-registration shipped (PyAutoArray#702, completed in Mind 8918e26d2) and its active.md claim is released; PyAutoArray is free for this task.
+
+### Q18. latent_total_source_flux_jax_vs_numpy_regression — The jit-vs-NumPy total_source_flux gap no longer reproduces (green on…
+- task: active/latent_total_source_flux_jax_vs_numpy_regression.md
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137
+- kind: question
+- ask: The jit-vs-NumPy total_source_flux gap no longer reproduces (green on main CI 2026-11-16 and locally). How should the bug be closed?
+- options: (a) Close as fixed upstream; file the hpc/sync items as their own prompt (recommended) · (b) Bisect the library commits from 09-30 to 11-16 to name the root cause, then close · (c) Keep it open; fix only the hpc/sync items under #137
+- shift: 2026-11-20-am
+- asked: 2026-11-20T08:43Z
+- worker: 8333550b
+- answered: 2026-11-20T11:55Z by Jammy2211 (issue)
+- answer: 1 — (a) close as fixed upstream; file the hpc/sync items as their own prompt
+- answer-comment: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137#issuecomment-7038440330
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
