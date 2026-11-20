@@ -22,22 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## cortex-development-split
-- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/95
-- issued: 2026-11-19
-- session: claude-code desktop (WSL), Opus 5.5, ~/Science session
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/cortex-development-split
-- repos:
-  - PyAutoCortex: feature/cortex-development-split
-  - PyAutoBrain: feature/cortex-development-split
-- prompt: active/development_projects_split.md
-- tier: supervised — merge mode: human /prm
-- unblocked: 2026-11-20 — PyAutoBrain claims released (shift-smoke-targeted merged PyAutoBrain#685; queued-epics-drive-shifts released)
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/698
-- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/96
-- merge-order: PyAutoBrain#698 first, then PyAutoCortex#96 (the board there is rendered by the Brain code)
-
 ## slam-simultaneous-subhalo-grid-search
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
 - issued: 2026-11-20

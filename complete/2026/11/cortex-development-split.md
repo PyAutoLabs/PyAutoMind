@@ -1,3 +1,18 @@
+## cortex-development-split
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/95
+- completed: 2026-11-20
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/698
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/96
+
+- The cortex conductor derives each project's category from the category folder in its `local_path` string (never the disk). `development/` is Development; everything else is Science (PyAutoCortex schema decision 66). Human ruling 2026-11-19: folder only, no `category`/`intent` field in `projects.yaml`.
+- `census` (text and `--json`) carries `category` plus per-kind Running / Open / Projects (Projects = rows not retired). The check-in dry run and read-back name the category. `pull` / `checkin` take `--category`.
+- The board (`dashboard.md` / `.html`) and the `Science/STATE.md` mirror render Science and Development sections, each with the old Summary + Projects layout one heading level deeper. The overall five-row counts table and `state.json` v1 are unchanged; the HTML anchors the hero links to stay on Science.
+- Trap: `cortex dashboard --apply` also writes the live `Science/STATE.md`, so the branch's board was rendered via `render_pages` directly to keep it out of the Science folder. STATE.md updates at the next check-in.
+- Trap: the prompt said the counts table had three rows (Running/Open/Projects). It has five (Running/Open/Active/Dormant/Retired). REFERENCE.md corrected.
+- Schema decision number is 66, not 63 as the issue body said (63–65 were taken).
+
+## Original prompt
+
 # Cortex: split development projects from paper-bound science projects on the register and board
 
 Type: feature

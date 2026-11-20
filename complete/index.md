@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2351 records across 11 buckets.
+2352 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -163,6 +163,7 @@ markers; everything below GENERATED is rebuilt.
 - [corner-anesthetic-speed](2026/11/corner-anesthetic-speed.md)
 - [cortex-agents-slim](2026/11/cortex-agents-slim.md) — PR is the tracking surface
 - [cortex-dashboard-status-split](2026/11/cortex-dashboard-status-split.md)
+- [cortex-development-split](2026/11/cortex-development-split.md)
 - [cortex-ledger-merge-pages](2026/11/cortex-ledger-merge-pages.md)
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
 - [cortex-state-md-tables](2026/11/cortex-state-md-tables.md)
