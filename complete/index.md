@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2349 records across 11 buckets.
+2350 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -152,6 +152,7 @@ markers; everything below GENERATED is rebuilt.
 - [close-out-guard](2026/11/close-out-guard.md)
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [cluster-regime-narrative](2026/11/cluster-regime-narrative.md)
+- [colab-gate-colossus-rationale-is-stale-once](2026/11/colab-gate-colossus-rationale-is-stale-once.md)
 - [colab-restart-fix](2026/11/colab-restart-fix.md)
 - [community-close-due](2026/11/community-close-due.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…

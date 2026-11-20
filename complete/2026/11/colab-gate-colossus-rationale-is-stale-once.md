@@ -1,3 +1,13 @@
+The `colossus` accepted-miss in PyAutoHeart `heart/config/colab_gate.yaml` now says the los_halos simulator notebooks reach it and stop on Colab with an ImportError naming colossus and `autolens[los]` (accepted 2026-11-19), instead of "no workspace or HowTo notebook reaches the module".
+
+Decision taken (PR labelled `decision-taken`, accepted by the human at /prm): the `hmf` entry is kept rather than removed, reworded "only released ≤2026.11.19.1; delete after next release". The released autolens 2026.11.19.1 on PyPI still imports hmf unguarded and the continuous check F audits PyPI, so without the entry check F fails. Deleting it after the next release is filed as `draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md`.
+
+Witness: `verify_install.sh F` (continuous, PyPI stack plus an autolens_workspace main clone with the regenerated los_halos notebooks) PASS — accepted colossus (autolens/lens/los.py:207) and hmf (los.py:147) warnings, imaging cell OK. Heart tests 74 passed; targeted smoke selected no script; tenant firewall OK; independent Opus review CLEAN; Heart GREEN; CI GREEN at /prm. Not checked: the los_halos notebooks were not run on real Colab.
+
+Shipped in PyAutoHeart#357 (https://github.com/PyAutoLabs/PyAutoHeart/pull/357), merged 2026-11-20 by human /prm. Issue https://github.com/PyAutoLabs/PyAutoHeart/issues/356. Done by shift worker 2026-11-19-pm2 (4cccb01f).
+
+## Original prompt
+
 # Colab gate: colossus rationale is stale once los_halos needs it
 
 Type: bug

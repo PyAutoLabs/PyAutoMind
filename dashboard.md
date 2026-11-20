@@ -11,7 +11,7 @@
 | [Autopilot](#autopilot) | 4 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 5 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 11 |
 | [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
@@ -1401,14 +1401,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/colab_gate_colossus_rationale_is_stale_once.md">Colab gate: colossus rationale is stale once los_halos needs it</a></summary>
-
-```
-Use the start-dev skill. active/colab_gate_colossus_rationale_is_stale_once.md
 ```
 
 </details>
