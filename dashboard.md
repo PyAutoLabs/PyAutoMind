@@ -1409,7 +1409,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/development_projects_split.md">Cortex: split development projects from paper-bound science projects on the register…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/95">issue #95</a> — issued 2026-11-19 — library-dev</summary>
+<details><summary>📋 <a href="active/development_projects_split.md">Cortex: split development projects from paper-bound science projects on the register…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/95">issue #95</a> — issued 2026-11-19 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/698">PyAutoBrain#698</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/96">PyAutoCortex#96</a></summary>
 
 ```
 Use the start-dev skill. active/development_projects_split.md
