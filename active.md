@@ -69,3 +69,14 @@
 - prompt: active/latent_total_source_flux_jax_vs_numpy_regression.md
 - note: does not reproduce on main (passes locally on febc33f + library mains; passed on main CI 2026-11-16); no branch, worktree or code change
 - tier: supervised — merge mode: none (parked before any PR)
+
+## numba-wtilde-validation-legs-stall
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/73
+- issued: 2026-11-20
+- session: shift worker 2026-11-20-am (da579b3a-de74-4060-a9fc-d5b17ae8c5c4)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/autolens_inference/issues/73#issuecomment-7035552262
+- verdict: https://github.com/PyAutoLabs/autolens_inference/issues/73#issuecomment-7035547161
+- prompt: active/numba_wtilde_validation_legs_stall_nautilus.md
+- note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
+- tier: supervised — merge mode: human /prm
