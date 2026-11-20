@@ -81,11 +81,12 @@ _LIVE · 0 in progress_
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (3 open, 0 deferred, 3 rulings — [`questions.md`](questions.md))
+**Questions** (4 open, 0 deferred, 3 rulings — [`questions.md`](questions.md))
 
 - Q17 — SED waveband hang: n_like_max=50000 already exists but caps calls, not time. Which cap, and who runs the RAL repro/witness? (https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136, today)
 - Q18 — The jit-vs-NumPy total_source_flux gap no longer reproduces (green on main CI 2026-11-16 and locally). How should the bug be closed? (https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137, today)
 - Q19 — SLaM simultaneous grid-search fix is blocked: SearchGridSearch over a FactorGraphModel crashes in PyAutoFit make_result (KeyError). How to proceed? (https://github.com/PyAutoLabs/autolens_workspace/issues/683, today)
+- Q20 — Phase-4 stalls explained (rectangular SMA is flat on every route; datacube ~50% not-PD and unreproducible in-run values). Which remedy per leg? (https://github.com/PyAutoLabs/autolens_inference/issues/73, today)
 - Q14 — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it. (ruling claimed, 1 day)
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 1 day)
