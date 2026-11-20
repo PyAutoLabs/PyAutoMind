@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-20T09:06:51Z",
+  "updated": "2026-11-20T09:10:29Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -105,6 +105,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: A compound-prior model reloaded from model.json has a different prior order\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md",
+      "prompt": "Use the start-dev skill. draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
@@ -120,12 +126,6 @@
       "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
       "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: CTI upkeep parity \u2014 bring PyAutoCTI and its satellites to the same\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md"
     }
   ]
 }

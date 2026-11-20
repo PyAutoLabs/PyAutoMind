@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 294 |
+| [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -98,7 +98,7 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 17
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -164,6 +164,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md">A compound-prior model reloaded from model.json has a different prior order…</a> — autofit · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
@@ -188,15 +196,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1557,7 +1557,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 240 · ral 31 · local-dev 11 · wsl-data 9 · gpu 1
+Lanes: any 241 · ral 31 · local-dev 11 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1917,7 +1917,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 54</summary>
+<summary><b>bug</b> — 55</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -1939,6 +1939,14 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md">A compound-prior model reloaded from model.json has a different prior order…</a> — autofit · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md
 ```
 
 </details>
