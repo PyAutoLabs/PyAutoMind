@@ -96,6 +96,26 @@ the ruling on the prompt.
 - asked: 2026-11-20T09:22Z
 - worker: da579b3a
 
+### Q21. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campai…
+- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
+- kind: ruling
+- gate: blocked-by
+- ask: `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by).
+- options: (a) wait for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFi… · (b) remove the Blocked-by · (c) drop it from the queue
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:30Z
+- worker: readiness pass
+
+### Q22. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/cam…
+- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
+- kind: ruling
+- gate: blocked-by
+- ask: `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit first) (its Blocked-by).
+- options: (a) wait for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit firs… · (b) remove the Blocked-by · (c) drop it from the queue
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:30Z
+- worker: readiness pass
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->

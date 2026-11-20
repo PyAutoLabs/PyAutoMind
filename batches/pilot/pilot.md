@@ -39,3 +39,4 @@ The target metric is verified merges (plus accepted drafts and packets) per
 | 2026-11-18-pm2 | live | 45 | ? | 0 | 0 | 0 | ? | 0 | 0 | 878300 | 0 |
 | 2026-11-19-pm | live | 45 | ? | 0 | 0 | 0 | ? | 0 | 0 | 1094448 | 0 |
 | 2026-11-19-pm2 | live | 45 | ? | 2 | 0 | 0 | ? | 0 | 0 | 1134807 | 0 |
+| 2026-11-20-am | live | 45 | ? | 1 | 0 | 0 | ? | 0 | 0 | 755794 | 0 |
