@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-20T08:42:28Z",
+  "headline": "RED \u2014 23 picks \u00b7 7 in flight",
+  "updated": "2026-11-20T08:43:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026 \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137",
+      "prompt": "Use the start-dev skill. active/latent_total_source_flux_jax_vs_numpy_regression.md"
+    },
     {
       "severity": "red",
       "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-input",
@@ -42,12 +48,6 @@
       "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
-      "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
     },
     {
       "severity": "info",
@@ -111,6 +111,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: CTI upkeep parity \u2014 bring PyAutoCTI and its satellites to the same\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
@@ -120,12 +126,6 @@
       "text": "pick: Use readthedocs or migrate to GitHub docs",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
       "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }
