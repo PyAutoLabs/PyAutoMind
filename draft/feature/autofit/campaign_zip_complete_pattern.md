@@ -12,6 +12,7 @@ Filed: 2026-11-16
 Epic: hpc-campaign
 Phase: 5e
 Consequence: judge
+Witness: a campaign test with real-style `<hash>.zip` outputs shows `zip_complete` given a glob (or a directory) marking the task successful when exactly one zip matches and its `members:` (e.g. `files/samples_summary.json`) are present, failing with the match count named for 0 or >1 matches and for a missing member, and the fixed-path `<zip_complete>.zip` form still passing; the existing campaign tests still pass (the pipeline `dr1.yaml` follow-up is out of this witness)
 Lane: any
 
 Source: risks found in the review of PyAutoLabs/euclid_strong_lens_modeling_pipeline#133 (HPC campaign phase 5d, merged 2026-11-16); see Mind `complete/2026/11/hpc-campaign-p5d-pipeline-adoption.md`.

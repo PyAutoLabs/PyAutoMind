@@ -12,6 +12,7 @@ Filed: 2026-11-16
 Epic: hpc-campaign
 Phase: 5e
 Consequence: judge
+Witness: a campaign test with one stage whose `status_root:` differs from the campaign's (records written under e.g. `output_sed/`) shows `status` reporting that stage's failed task with its recorded reason instead of a bare `failed`, while a stage with no `status_root:` still reads the campaign-wide root and `retro.py` reads the same per-stage root; the existing campaign tests still pass (the pipeline `dr1.yaml` follow-up is out of this witness)
 Lane: any
 
 Source: risks found in the review of PyAutoLabs/euclid_strong_lens_modeling_pipeline#133 (HPC campaign phase 5d, merged 2026-11-16); see Mind `complete/2026/11/hpc-campaign-p5d-pipeline-adoption.md`.

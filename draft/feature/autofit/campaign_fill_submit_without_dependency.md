@@ -12,6 +12,7 @@ Filed: 2026-11-18
 Epic: hpc-campaign
 Phase: 5e
 Consequence: judge
+Witness: a `FakeScheduler` test shows a fill/straggler submit in the new no-dependency mode emits an argv with no `--dependency`, the default submit still emits `--dependency=aftercorr:`/`afterok:` on the upstream array, and the no-dependency submit refuses — naming the stage — when one of the upstream stage's success-check outputs is missing; the existing campaign tests still pass and the mode is documented beside `resubmit --class`
 Lane: any
 
 Source: risks found in the review of PyAutoLabs/euclid_strong_lens_modeling_pipeline#133 (HPC campaign phase 5d, merged 2026-11-16); see Mind `complete/2026/11/hpc-campaign-p5d-pipeline-adoption.md`. The third PyAutoFit follow-up that review implied, beside `campaign_zip_complete_pattern.md` and `campaign_per_stage_status_root.md`. Phase 5e was set by the human's ruling on Q7 (2026-11-18).
