@@ -66,6 +66,16 @@ the ruling on the prompt.
 - asked: 2026-11-20T08:41Z
 - worker: 79ac305d
 
+### Q18. latent_total_source_flux_jax_vs_numpy_regression — The jit-vs-NumPy total_source_flux gap no longer reproduces (green on…
+- task: active/latent_total_source_flux_jax_vs_numpy_regression.md
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137
+- kind: question
+- ask: The jit-vs-NumPy total_source_flux gap no longer reproduces (green on main CI 2026-11-16 and locally). How should the bug be closed?
+- options: (a) Close as fixed upstream; file the hpc/sync items as their own prompt (recommended) · (b) Bisect the library commits from 09-30 to 11-16 to name the root cause, then close · (c) Keep it open; fix only the hpc/sync items under #137
+- shift: 2026-11-20-am
+- asked: 2026-11-20T08:43Z
+- worker: 8333550b
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->

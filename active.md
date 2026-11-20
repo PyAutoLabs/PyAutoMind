@@ -68,3 +68,13 @@
 - prompt: active/sed_chain_waveband_fit_can_spin_forever.md
 - note: parked before any claim or worktree; n_like_max=50000 cap already exists (calls, not wall time); wall-clock cap needs PyAutoFit `timeout`; repro + witness need a human-run RAL re-run
 - tier: supervised — merge mode: auto-merge on green if the Witness passes after a merge slot
+
+## latent-total-source-flux-jax-vs-numpy-regression
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137
+- issued: 2026-11-20
+- session: shift worker 2026-11-20-am (8333550b-b72f-47e9-a9c1-d7510145ae95)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137#issuecomment-7034677032
+- prompt: active/latent_total_source_flux_jax_vs_numpy_regression.md
+- note: does not reproduce on main (passes locally on febc33f + library mains; passed on main CI 2026-11-16); no branch, worktree or code change
+- tier: supervised — merge mode: none (parked before any PR)
