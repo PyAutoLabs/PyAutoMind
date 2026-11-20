@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 294 |
+| [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -197,7 +197,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1558,7 +1558,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 241 · ral 30 · local-dev 11 · wsl-data 9 · gpu 1
+Lanes: any 242 · ral 30 · local-dev 11 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1918,7 +1918,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 55</summary>
+<summary><b>bug</b> — 56</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -1988,6 +1988,14 @@ Use the start-dev skill. draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_ove
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md">substructure_util zero-padded halo slots make jax.grad NaN for every halo</a> — autogalaxy · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
 ```
 
 </details>
