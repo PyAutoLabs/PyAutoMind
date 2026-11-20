@@ -3205,16 +3205,13 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-121 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
-- `draft/feature/autofit/campaign_fill_submit_without_dependency.md`
-- `draft/feature/autofit/campaign_per_stage_status_root.md`
-- `draft/feature/autofit/campaign_zip_complete_pattern.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
@@ -3250,7 +3247,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/hilbert_image_mesh_frame_independent.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
-- _… and 81 more_
+- `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
+- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
+- `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
+- _… and 78 more_
 
 </details>
 
