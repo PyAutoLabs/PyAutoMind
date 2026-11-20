@@ -149,7 +149,7 @@ Nothing is open in this record. It stays as the pointer from Mind to the project
 
 ## Filed tasks
 
-- Five library defects, one prompt each (all shipped 2026-11-19; follow-ups in `draft/bug/autogalaxy/nfwtruncatedsph_convergence_loses_precision_near_scale_radius.md`, `complete/2026/11/substructure-padded-slot-grad.md` (shipped 2026-11-20, PyAutoGalaxy#738 + PyAutoLens#872), `complete/2026/11/lossampler-cosmology-mismatch.md` (shipped 2026-11-20, PyAutoLens#874), `draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md`):
+- Five library defects, one prompt each (all shipped 2026-11-19; follow-ups in `complete/2026/11/nfwtruncatedsph-convergence-loses-precision-near-scale-radius.md` (shipped 2026-11-20, PyAutoGalaxy#740), `complete/2026/11/substructure-padded-slot-grad.md` (shipped 2026-11-20, PyAutoGalaxy#738 + PyAutoLens#872), `complete/2026/11/lossampler-cosmology-mismatch.md` (shipped 2026-11-20, PyAutoLens#874), `draft/bug/pyautoheart/colab_gate_colossus_rationale_is_stale_once.md`):
   - `complete/2026/11/nfwtruncatedmcr-truncation-radius.md` (shipped 2026-11-19, PyAutoGalaxy#733)
   - `complete/2026/11/lossampler-hmf-import-fails-and-los-halos.md` (shipped 2026-11-19, PyAutoLens#868 + autolens_workspace#681)
   - `complete/2026/11/nfwtruncatedsph-total-mass.md` (shipped 2026-11-19, PyAutoGalaxy#735)

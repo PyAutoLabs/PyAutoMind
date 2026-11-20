@@ -1,3 +1,15 @@
+The NFW coordinate functions f(x) and g(x) now switch to a series in u = (1−x)(1+x) within |1−x²| < 0.1, so `NFWTruncatedSph` convergence and deflection are exact to round-off near r = r_s for real, r+0j and JAX inputs, and `jax.grad` at r = r_s is correct. New public names in `dark/abstract.py`: `SCALE_RADIUS_SERIES_WINDOW`, `coord_func_g_series_from`, `coord_func_u_from`.
+
+Witness (kappa_s=0.1, r_s=1, r_t=5, against 50-digit mpmath): convergence error 8.9e13 → <1e-10; float64 deflection 0.18 → 2.2e-15; JAX float32 deflection 0.098 → 1.4e-6; `jax.grad` at x=1 (float64) wrong → 5.9e-14. `pytest test_autogalaxy/profiles/mass/dark/test_nfw_truncated_scale_radius.py` 9 passed (control: 8/9 fail on main's f, g). Tests mass/dark + mass/abstract 341 passed (reviewer: full test_autogalaxy 1595 passed); targeted smoke import check autogalaxy guides/galaxies.py PASS; independent Opus 5.5 review CLEAN; CI GREEN at /prm.
+
+Decision taken and accepted by the human at /prm (merged unchanged): the Witness's literal "every κ at x = 1 ± 10⁻ᵏ, k = 3…15, within 1e-6 of κ(1)" cannot hold for k ≲ 6 (the true log-slope is −1.4). Continuity is checked for |x−1| < 1.5e-7 (19 points) and all 27 points are checked against mpmath at 1e-10.
+
+Not checked: JAX float32 `deflections_yx_2d_from` (float32 only via `radial_deflection_from`); the JAX float32 gradient just outside the window (x≈1.05) is still ~7e-3, as on main (out of scope).
+
+Shipped in PyAutoGalaxy#740 (https://github.com/PyAutoLabs/PyAutoGalaxy/pull/740), merged 2026-11-20 by human /prm. Issue https://github.com/PyAutoLabs/PyAutoGalaxy/issues/739. Done by shift worker 2026-11-19-pm2 (f77a9ef7).
+
+## Original prompt
+
 # NFWTruncatedSph convergence loses precision near r = r_s
 
 Type: bug

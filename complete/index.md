@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2348 records across 11 buckets.
+2349 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -297,6 +297,7 @@ markers; everything below GENERATED is rebuilt.
 - [new-user-guide-visuals](2026/11/new-user-guide-visuals.md)
 - [nfw-virial-mass-conc-jax](2026/11/nfw-virial-mass-conc-jax.md) — - `NFWVirialMassConcSph` (m200c + free concentration) is now JAX-traceable: `kappa_s_and_scale_radius` picks `…
 - [nfwtruncatedmcr-truncation-radius](2026/11/nfwtruncatedmcr-truncation-radius.md)
+- [nfwtruncatedsph-convergence-loses-precision-near-scale-radius](2026/11/nfwtruncatedsph-convergence-loses-precision-near-scale-radius.md)
 - [nfwtruncatedsph-small-radius-deflection](2026/11/nfwtruncatedsph-small-radius-deflection.md)
 - [nfwtruncatedsph-total-mass](2026/11/nfwtruncatedsph-total-mass.md)
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
