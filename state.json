@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 18 in flight",
-  "updated": "2026-11-22T18:06:04Z",
+  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
+  "updated": "2026-11-22T18:15:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -26,12 +26,6 @@
       "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
     },
     {
-      "severity": "red",
-      "text": "SLaM simultaneous subhalo grid search fits last band only \u2014 awaiting-input (blocked on PyAutoFit: SearchGridSearch + FactorGraphModel make_result KeyError; question on issue #683)",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/683",
-      "prompt": "Use the start-dev skill. active/slam_simultaneous_subhalo_grid_search_fits_last.md"
-    },
-    {
       "severity": "yellow",
       "text": "Agent --help text is rotted in feature, build and bug \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/703",
@@ -39,33 +33,9 @@
     },
     {
       "severity": "yellow",
-      "text": "Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits) \u2014 awaiting-merge (PRs open for human review)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
-      "prompt": "Use the start-dev skill. active/database_paths_dataset_fits_not_registered.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "autocti_workspace: database scripts delete the wrong .sqlite under test mode\u2026 \u2014 awaiting-merge (PRs open for human review)",
-      "url": "https://github.com/PyAutoLabs/autocti_workspace/pull/50",
-      "prompt": "Use the start-dev skill. active/database_scripts_stale_sqlite_under_test_mode.md"
-    },
-    {
-      "severity": "yellow",
       "text": "Docstrings printed as --help still carry incident history \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/705",
       "prompt": "Use the start-dev skill. active/docstrings_printed_as_help_still_carry_incident.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Interferometer `galaxy_image_dict` drops a mixed galaxy's ordinary light (dict merge overwrites) \u2014 awaiting-merge (PRs open for human review)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
-      "prompt": "Use the start-dev skill. active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "SearchGridSearch over a FactorGraphModel crashes in make_result \u2014 awaiting-merge (PRs open for human review)",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
-      "prompt": "Use the start-dev skill. active/grid_search_factor_graph_make_result_keyerror.md"
     },
     {
       "severity": "yellow",
@@ -78,18 +48,6 @@
       "text": "Remove what batch collect left behind in the planner and the status\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/707",
       "prompt": "Use the start-dev skill. active/remove_what_batch_collect_left_behind_in.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail\u2026 \u2014 awaiting-merge (PRs open for human review)",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1792",
-      "prompt": "Use the start-dev skill. active/truncated_normal_log_partition_tail_underflow.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`vis_lp` passes `batch_size=50` to `af.Nautilus`, which has no such parameter \u2014 awaiting-merge (PRs open for human review)",
-      "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/139",
-      "prompt": "Use the start-dev skill. active/vis_lp_batch_size_kwarg_silently_ignored.md"
     },
     {
       "severity": "yellow",
@@ -117,15 +75,57 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 SearchGridSearch over a FactorGraphModel crashes in make_result",
+      "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 grid-factor-results",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1792 \u2014 TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail\u2026",
+      "text": "pending release: PyAutoFit PyAutoFit#1792 \u2014 truncated-tail-evidence",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1792",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#746 \u2014 mixed-galaxy-light",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#878 \u2014 database-dataset-fits",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/878",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#877 \u2014 mixed-galaxy-light",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/877",
+      "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
     }
   ]
 }

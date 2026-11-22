@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2354 records across 11 buckets.
+2360 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -171,6 +171,7 @@ markers; everything below GENERATED is rebuilt.
 - [critical-curves-jax-viz-feasibility](2026/11/critical-curves-jax-viz-feasibility.md)
 - [cti-api-rst-rewrite](2026/11/cti-api-rst-rewrite.md)
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
+- [cti-database-reruns](2026/11/cti-database-reruns.md)
 - [cti-docs-yml-caller](2026/11/cti-docs-yml-caller.md)
 - [cti-fits-fit-output-dir](2026/11/cti-fits-fit-output-dir.md)
 - [cti-five-failing-scripts](2026/11/cti-five-failing-scripts.md)
@@ -184,6 +185,7 @@ markers; everything below GENERATED is rebuilt.
 - [dashboard-recent-lists-planned-tasks-twice](2026/11/dashboard-recent-lists-planned-tasks-twice.md) — shipped
 - [dashboard-titles-filed-line](2026/11/dashboard-titles-filed-line.md) — shipped by shift worker 2026-11-16-pm as Mind ledger ops (no repo PR), tracked on PyAutoMind#579. Moved `Filed…
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
+- [database-dataset-fits](2026/11/database-dataset-fits.md)
 - [dataset-model-free-grid-offset-pytree-roundtrip](2026/11/dataset-model-free-grid-offset-pytree-roundtrip.md)
 - [delaunay-interpolated-plot](2026/11/delaunay-interpolated-plot.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
@@ -199,6 +201,7 @@ markers; everything below GENERATED is rebuilt.
 - [ellipse-fit-filenames](2026/11/ellipse-fit-filenames.md)
 - [ellipse-multipole-latent-missing-m](2026/11/ellipse-multipole-latent-missing-m.md) — `af.Model(ag.EllipseMultipole)` / `af.Model(ag.EllipseMultipoleScaled)` built without an explicit `m` made `la…
 - [ep-projected-model-shared-prior](2026/11/ep-projected-model-shared-prior.md)
+- [euclid-nautilus-batch](2026/11/euclid-nautilus-batch.md)
 - [example-analysis-xp-sum](2026/11/example-analysis-xp-sum.md)
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
@@ -215,6 +218,7 @@ markers; everything below GENERATED is rebuilt.
 - [gnfwvirialmassconcsph-gives-kappa-s-1e-171-under](2026/11/gnfwvirialmassconcsph-gives-kappa-s-1e-171-under.md)
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [gradient-json-point-label](2026/11/gradient-json-point-label.md) — already shipped — autolens_profiling#518 (9d2ee2d3d, merged 2026-11-02 22:38, filed 16:18 the same day) record…
+- [grid-factor-results](2026/11/grid-factor-results.md)
 - [group-slam-sigma-bound-guard](2026/11/group-slam-sigma-bound-guard.md)
 - [health-review-cloud-observation](2026/11/health-review-cloud-observation.md) — - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every clo…
 - [heart-dev-scope](2026/11/heart-dev-scope.md)
@@ -286,6 +290,7 @@ markers; everything below GENERATED is rebuilt.
 - [merge-actor-audit](2026/11/merge-actor-audit.md)
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
 - [mind-writer-own-claim-update](2026/11/mind-writer-own-claim-update.md)
+- [mixed-galaxy-light](2026/11/mixed-galaxy-light.md)
 - [model-bullet-parameter-count-drift](2026/11/model-bullet-parameter-count-drift.md)
 - [model-identifier-0d-array](2026/11/model-identifier-0d-array.md)
 - [model-pytree-fixed-attributes](2026/11/model-pytree-fixed-attributes.md)
@@ -381,6 +386,7 @@ markers; everything below GENERATED is rebuilt.
 - [sweep-followups](2026/11/sweep-followups.md)
 - [three-autos-public-framing](2026/11/three-autos-public-framing.md)
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
+- [truncated-tail-evidence](2026/11/truncated-tail-evidence.md)
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [unit-timing-monitoring-min-delta](2026/11/unit-timing-monitoring-min-delta.md) — - `legacy_summaries()` now tiers only rows whose own both-gates `state` is `warn` (`slow_factor` 2.0 AND `min_…
 - [unit-trend-followups](2026/11/unit-trend-followups.md)

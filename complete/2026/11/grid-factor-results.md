@@ -1,3 +1,15 @@
+## grid-factor-results
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1789
+- completed: 2026-11-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1791
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1791
+
+Factor results use the fitted grid-cell submodels for full samples and summaries. Two shared priors across four grid cells reproduced the old KeyError and now yield both child results. The full PyAutoFit suite passed 4,311 tests. The existing SLaM task can resume at its workspace witness.
+
+GitHub CI at the approved heads: PyAutoLabs/PyAutoFit#1791: 5 successful checks, 1 skipped. Any skipped checks were non-test Heart-feed refreshes.
+
+## Original prompt
+
 # SearchGridSearch over a FactorGraphModel crashes in make_result
 
 Type: bug

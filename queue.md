@@ -82,39 +82,34 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 1. SearchGridSearch over a FactorGraphModel crashes in make_result
-- kind: prompt
-- ref: draft/bug/autofit/grid_search_factor_graph_make_result_keyerror.md
-- note: follow-up of the 2026-11-20-am review (Q19): PyAutoFit make_result KeyError on a grid search over a FactorGraphModel; unblocks autolens_workspace#683
-
-## 2. SLaM simultaneous subhalo grid search fits last band only
+## 1. SLaM simultaneous subhalo grid search fits last band only
 - kind: prompt
 - ref: active/slam_simultaneous_subhalo_grid_search_fits_last.md
-- note: follow-up of the 2026-11-20-am review (Q19 = a): resume branch feature/slam-simultaneous-subhalo-grid-search once the PyAutoFit fix above merges
+- note: follow-up of the 2026-11-20-am review (Q19 = a): resume branch feature/slam-simultaneous-subhalo-grid-search with the merged PyAutoFit fix (#1791)
 
-## 3. test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
+## 2. test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
 - kind: prompt
 - ref: active/latent_total_source_flux_jax_vs_numpy_regression.md
 - note: follow-up of the 2026-11-20-am review (Q18 = a): close #137 as fixed upstream; file the hpc/sync items as their own prompt
 
-## 4. SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain
+## 3. SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain
 - kind: prompt
 - ref: active/sed_chain_waveband_fit_can_spin_forever.md
 - note: follow-up of the 2026-11-20-am review (Q17 = a): wall-clock cap — PyAutoFit af.Nautilus timeout first, then the pipeline PR (#136)
 
-## 5. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
+## 4. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
 - kind: prompt
 - ref: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 
-## 6. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
+## 5. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
 - kind: prompt
 - ref: draft/research/autofit/hpc_campaign_epic.md
 
-## 7. Results library — index, complete, export and ship thousands of PyAutoFit results
+## 6. Results library — index, complete, export and ship thousands of PyAutoFit results
 - kind: prompt
 - ref: draft/feature/autofit/results_library_epic.md
 
-## 8. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
+## 7. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
 - kind: prompt
 - ref: draft/maintenance/autocti/cti_upkeep_epic.md
 
@@ -122,6 +117,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### SearchGridSearch over a FactorGraphModel crashes in make_result
+- shipped-as: complete/2026/11/grid-factor-results.md (2026-11-22)
+- note: follow-up of the 2026-11-20-am review (Q19): PyAutoFit make_result KeyError on a grid search over a FactorGraphModel; unblocks autolens_workspace#683 — retired by `lifecycle.py close`
 
 ### Release board run_logs enrichment
 - shelved-as: draft/feature/pyautohands/release_board_run_logs_enrichment.md — off the queue 2026-11-16; queue cleared by human 2026-11-16

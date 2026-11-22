@@ -1,3 +1,17 @@
+## database-dataset-fits
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/744
+- completed: 2026-11-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/878
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/878
+
+Dataset FITS products now round-trip through SQLite and directory-backed imaging and interferometer searches. Repeated saves keep one registration. Tests covered imaging plus in-memory and array-free interferometry in both libraries.
+
+GitHub CI at the approved heads: PyAutoLabs/PyAutoGalaxy#745: 4 successful checks, 1 skipped. PyAutoLabs/PyAutoLens#878: 4 successful checks, 1 skipped. Any skipped checks were non-test Heart-feed refreshes.
+
+## Original prompt
+
 # Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)
 
 Type: bug

@@ -1,3 +1,14 @@
+## cti-database-reruns
+- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/49
+- completed: 2026-11-22
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/50
+
+Five SQLite examples clean the resolved smoke output path and the temporal directory reader uses the same namespace. All six regenerated notebooks match the scripts. Each example passed twice with existing output, and all 44 curated smoke scripts passed.
+
+GitHub CI at the approved heads: PyAutoLabs/autocti_workspace#50: 7 successful checks, 0 skipped. Any skipped checks were non-test Heart-feed refreshes.
+
+## Original prompt
+
 # autocti_workspace: database scripts delete the wrong .sqlite under test mode, so a second run fails
 
 Type: bug

@@ -1,3 +1,14 @@
+## euclid-nautilus-batch
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/138
+- completed: 2026-11-22
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/139
+
+Five Nautilus calls now pass n_batch=50, including the vis_lp sampler which previously used 100. All 11 script constructors were checked, all 509 repository tests passed, and all nine curated scripts passed.
+
+GitHub CI at the approved heads: PyAutoLabs/euclid_strong_lens_modeling_pipeline#139: 9 successful checks, 0 skipped. Any skipped checks were non-test Heart-feed refreshes.
+
+## Original prompt
+
 # `vis_lp` passes `batch_size=50` to `af.Nautilus`, which has no such parameter
 
 Type: bug

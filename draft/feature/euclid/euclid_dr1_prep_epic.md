@@ -202,9 +202,8 @@ Read-only survey done while filing, so each phase prompt cites real paths:
     e.g. the empty `__Source Pix__` block), `catalogue/scripts/*.py` lifted toward the
     `workflow/example/` register. Recovered prose is 4+ months stale: verify against the
     code and `autolens_workspace` before restoring. Gates: 1, 2. Inserted 2026-08-31.
-    **SHIPPED 2026-09-01** — issue euclid#47 closed, PR #48 merged. Follow-up bug prompt
-    filed: `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md` (the `vis_lp`
-    search passes a `batch_size` kwarg `af.Nautilus` silently swallows).
+    **SHIPPED 2026-09-01** — issue euclid#47 closed, PR #48 merged. Follow-up merged 2026-11-22 in Euclid #139. Five searches now pass `n_batch=50`
+    (complete/2026/11/euclid-nautilus-batch.md).
 4. `complete/2026/09/euclid-cpu-two-stage-route.md` (was 3b) — preserve and
    document the two-stage vis_lp (JAX) → vis_pix (numba + multiprocessing) CPU route
    and the full-JAX-GPU route. Gate: 1 (can overlap 2). Ran after phase 3 so its new
