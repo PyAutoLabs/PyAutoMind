@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 17 in flight",
-  "updated": "2026-11-22T17:54:05Z",
+  "updated": "2026-11-22T17:56:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,6 +36,12 @@
       "text": "Agent --help text is rotted in feature, build and bug \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/703",
       "prompt": "Use the start-dev skill. active/agent_help_text_is_rotted_in_feature.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "autocti_workspace: database scripts delete the wrong .sqlite under test mode\u2026 \u2014 awaiting-merge (PRs open for human review)",
+      "url": "https://github.com/PyAutoLabs/autocti_workspace/pull/50",
+      "prompt": "Use the start-dev skill. active/database_scripts_stale_sqlite_under_test_mode.md"
     },
     {
       "severity": "yellow",
@@ -92,6 +98,18 @@
       "prompt": null
     },
     {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#746 \u2014 Interferometer `galaxy_image_dict` drops a mixed galaxy's ordinary light (dict merge overwrites)",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
+      "prompt": null
+    },
+    {
       "severity": "info",
       "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
@@ -108,24 +126,6 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
-      "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
     }
   ]
 }
