@@ -1,6 +1,7 @@
 # Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)
 
 Type: bug
+Issued: 2026-11-22
 Target: PyAutoGalaxy
 Repos:
 - PyAutoGalaxy

@@ -1,6 +1,7 @@
 # `vis_lp` passes `batch_size=50` to `af.Nautilus`, which has no such parameter
 
 Type: bug
+Issued: 2026-11-22
 Target: euclid
 Repos:
 - euclid_strong_lens_modeling_pipeline

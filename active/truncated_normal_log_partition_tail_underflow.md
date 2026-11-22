@@ -1,6 +1,7 @@
 # TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail (EP evidence +inf on analytic_gaussian seeds 25/172)
 
 Type: bug
+Issued: 2026-11-22
 Target: PyAutoFit
 Repos:
 - PyAutoFit

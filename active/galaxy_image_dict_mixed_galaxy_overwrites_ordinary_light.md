@@ -1,6 +1,7 @@
 # Interferometer `galaxy_image_dict` drops a mixed galaxy's ordinary light (dict merge overwrites)
 
 Type: bug
+Issued: 2026-11-22
 Target: PyAutoGalaxy
 Repos:
 - PyAutoGalaxy
