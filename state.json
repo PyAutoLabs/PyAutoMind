@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 5 in flight",
-  "updated": "2026-11-22T19:08:32Z",
+  "updated": "2026-11-22T19:10:09Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autolens_inference/issues/73",
       "prompt": "Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md"
-    },
-    {
-      "severity": "red",
-      "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136",
-      "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
       "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Physical model check when speeding up smoke tests",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
+      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     }
   ]
 }
