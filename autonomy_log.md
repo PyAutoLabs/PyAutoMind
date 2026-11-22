@@ -608,7 +608,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 67; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 70; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -789,6 +789,9 @@ week, never a hand-picked one.
 | 2026-11-20 | lossampler-cosmology-mismatch (PyAutoLens#874) | glance | tests: test_los.py 12 passed; witness WMAP9+planck15 raises naming both (fn + LOSSampler cosmology/cosmology_astropy), matching pairs pass (reproduced silent 8.116 on main) / smoke: targeted import check guides/galaxies.py PASS / review: independent Opus 5.5 FINDINGS(2)→fixed→CLEAN / heart: GREEN at door | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
 | 2026-11-20 | nfwtruncatedsph_convergence_loses_precision_near_scale_radius (PyAutoGalaxy#740) | glance | tests: mass/dark + mass/abstract 341 passed; witness 9/9 (8/9 fail on main f,g) / smoke: targeted import check ag guides/galaxies.py PASS / review: independent Opus 5.5 CLEAN (flags 3 new public names) / heart: GREEN at door, YELLOW acked in brief | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
 | 2026-11-20 | plot-grid-small-datasets-indexes (PyAutoArray#706) | glance | tests: test_autoarray/plot 72 passed (new test_grid.py fails 2/3 on main); witness tutorial_2 exit 0 small + full (exit 1 on main small) / smoke: targeted 7/7 PASS (ag 2, al 5) / review: independent Opus 5.5 FINDINGS(1, bool-mask dtype) → fixed → CLEAN / heart: GREEN dev-ship after tick | merged-unchanged | 1 | human-/prm |  |
+| 2026-11-22 | database-dataset-fits (PyAutoGalaxy#745 / PyAutoLens#878) | glance | tests green / smoke n/a / human review / Heart green / SQLite witness passed | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
+| 2026-11-22 | euclid-nautilus-batch (euclid_strong_lens_modeling_pipeline#139) | glance | tests green / smoke 9 of 9 / human review / Heart green / n_batch=50 verified | merged-unchanged | 1 | human-/prm |  |
+| 2026-11-22 | cti-database-reruns (autocti_workspace#50) | glance | tests green / smoke 44 of 44 / human review / Heart green / six scripts twice | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

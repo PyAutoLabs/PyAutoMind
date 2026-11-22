@@ -25,8 +25,8 @@ instruction to implement every item.
 - `draft/maintenance/autocti/cti_upkeep_epic.md` and its companion report:
   broader workspace, visualization and arcticpy upkeep.
 - `draft/docs/autocti/installation_docs_arcticpy_recipe.md`: installation guidance.
-- `draft/bug/autocti_workspace/database_scripts_stale_sqlite_under_test_mode.md`:
-  database and temporal rerun failures.
+- `complete/2026/11/cti-database-reruns.md`:
+  database and temporal rerun fixes (merged 2026-11-22).
 - Existing `scripts/dataset_1d/advanced/temporal/` examples already address part
   of the time-evolution topic. Assess current coverage before creating work.
 

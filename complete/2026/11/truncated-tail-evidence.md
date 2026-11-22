@@ -1,3 +1,16 @@
+## truncated-tail-evidence
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1790
+- completed: 2026-11-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1792
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1792
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/120
+
+Stable tail log probabilities keep seed 25 finite on all 45 updates. The posterior rows matched main byte for byte in the workspace control. The external project archive was unavailable. PyAutoFit passed 4,318 tests and the workspace passed 15 smoke scripts.
+
+GitHub CI at the approved heads: PyAutoLabs/PyAutoFit#1792: 5 successful checks, 1 skipped. PyAutoLabs/autofit_workspace_test#120: 3 successful checks, 0 skipped. Any skipped checks were non-test Heart-feed refreshes.
+
+## Original prompt
+
 # TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail (EP evidence +inf on analytic_gaussian seeds 25/172)
 
 Type: bug
