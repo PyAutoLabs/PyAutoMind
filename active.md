@@ -161,12 +161,13 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/138
 - issued: 2026-11-22
 - session: Codex desktop, approved six-bug review batch, distinct feature worktrees
-- status: workspace-dev
+- status: awaiting-merge (PRs open for human review)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/euclid-nautilus-batch
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/euclid-nautilus-batch
 - prompt: active/vis_lp_batch_size_kwarg_silently_ignored.md
 - tier: supervised — human review requested, leave PRs open
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/139
 
 ## cti-database-reruns
 - issue: https://github.com/PyAutoLabs/autocti_workspace/issues/49
