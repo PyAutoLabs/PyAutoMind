@@ -134,6 +134,8 @@
   - PyAutoLens: feature/mixed-galaxy-light
 - prompt: active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md
 - tier: supervised — human review requested, leave PRs open
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746
 
 ## truncated-tail-evidence
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1790
@@ -158,6 +160,8 @@
   - PyAutoLens: feature/database-dataset-fits
 - prompt: active/database_paths_dataset_fits_not_registered.md
 - tier: supervised — human review requested, leave PRs open
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
 
 ## euclid-nautilus-batch
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/138
@@ -175,12 +179,13 @@
 - issue: https://github.com/PyAutoLabs/autocti_workspace/issues/49
 - issued: 2026-11-22
 - session: Codex desktop, approved six-bug review batch, distinct feature worktrees
-- status: workspace-dev
+- status: awaiting-merge (PRs open for human review)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cti-database-reruns
 - repos:
   - autocti_workspace: feature/cti-database-reruns
 - prompt: active/database_scripts_stale_sqlite_under_test_mode.md
 - tier: supervised — human review requested, leave PRs open
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/50
 
 ## batch-collect-leftovers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/706
