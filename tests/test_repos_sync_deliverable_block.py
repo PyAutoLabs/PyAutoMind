@@ -195,3 +195,46 @@ def test_the_canonical_hook_ships_beside_the_prose():
     hook = MIND / repos_sync.DELIVERABLE_HOOK_FILE
     assert hook.exists()
     assert os.access(hook, os.X_OK)
+
+
+# --------------------------------------------------------------------------
+# The rollout: the propagation workflow carries this block (2026-11-22)
+# --------------------------------------------------------------------------
+# Left to a hand regeneration wave, the block was stranded: its policy text
+# changed, no wave ran, and 46 stale copies kept every shift brief YELLOW.
+
+def _workflow():
+    return (MIND / ".github/workflows/session_hook_propagate.yml").read_text()
+
+
+def test_write_deliverable_blocks_fills_a_stale_copy_and_touches_nothing_else(tmp_path):
+    stale = (f"# LibAlpha\n\nkeep me\n\n{_history_block()}\n\n"
+             f"{repos_sync.DELIVERABLE_BEGIN}\nan old rule\n{repos_sync.DELIVERABLE_END}\n\ntail\n")
+    _repo(tmp_path, "LibAlpha", stale)
+    _repo(tmp_path, "OrganCore", f"# OrganCore\n\n{_history_block()}\n")   # no markers yet
+    assert len(repos_sync.check_deliverable_blocks(tmp_path, REPOS, CANON)) == 2
+    repos_sync.write_deliverable_blocks(tmp_path, REPOS, CANON)
+    assert repos_sync.check_deliverable_blocks(tmp_path, REPOS, CANON) == []
+    text = (tmp_path / "LibAlpha" / "AGENTS.md").read_text()
+    assert "an old rule" not in text and "keep me" in text and text.endswith("tail\n")
+    assert _history_block() in text
+    before = {n: (tmp_path / n / "AGENTS.md").read_text() for n in REPOS}
+    repos_sync.write_deliverable_blocks(tmp_path, REPOS, CANON)            # idempotent
+    assert before == {n: (tmp_path / n / "AGENTS.md").read_text() for n in REPOS}
+
+
+def test_the_propagation_workflow_triggers_on_the_deliverable_policy():
+    import yaml
+    triggers = yaml.safe_load(_workflow())[True]
+    assert repos_sync.DELIVERABLE_POLICY_FILE in triggers["push"]["paths"]
+
+
+def test_the_propagation_workflow_writes_the_block_before_the_filing_block():
+    """The filing markers are inserted under the deliverable block, so the
+    deliverable block is written first; `AGENTS.md` is staged in both loops."""
+    text = _workflow()
+    assert "load_deliverable_policy(mind_root)" in text
+    assert text.index("repos_sync.write_deliverable_blocks(") \
+        < text.index("repos_sync.write_filing_blocks(")
+    staged = [line for line in text.splitlines() if line.strip().startswith("for rel in ")]
+    assert len(staged) == 2 and all("AGENTS.md" in line for line in staged)
