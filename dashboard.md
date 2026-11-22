@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 298 |
+| [Backlog](#backlog) | 304 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -197,7 +197,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 85
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -215,10 +215,26 @@ Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richard
 
 </details>
 
+<details><summary>📋 <a href="draft/docs/pyautobrain/docstrings_printed_as_help_still_carry_incident.md">Docstrings printed as --help still carry incident history</a> — pyautobrain · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautobrain/docstrings_printed_as_help_still_carry_incident.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/research/pyautohands/git_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautomind/docs_in_pyautomind_and_pyautoheart_still_describ.md">Docs in PyAutoMind and PyAutoHeart still describe the retired batch collect</a> — pyautomind · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautomind/docs_in_pyautomind_and_pyautoheart_still_describ.md
 ```
 
 </details>
@@ -239,6 +255,14 @@ Use the start-dev skill. draft/docs/howtolens/howtolens_tutorial_4_point_sources
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautobrain/agent_help_text_is_rotted_in_feature.md">Agent --help text is rotted in feature, build and bug</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/agent_help_text_is_rotted_in_feature.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/pyautobrain/cockpit_footer_broca_belongs_between_cortex_and.md">Cockpit footer: Broca belongs between Cortex and Memory</a> — pyautobrain · medium · safe · normal</summary>
 
 ```
@@ -247,50 +271,26 @@ Use the start-dev skill. draft/bug/pyautobrain/cockpit_footer_broca_belongs_betw
 
 </details>
 
+<details><summary>📋 <a href="draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautobrain/remove_what_batch_collect_left_behind_in.md">Remove what batch collect left behind in the planner and the status…</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/refactor/pyautobrain/remove_what_batch_collect_left_behind_in.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> — pyautohands · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrichment.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — pyautoheart · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md">repos_sync tenant-firewall leg scans nested .worktrees/ folders</a> — pyautomind · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md
 ```
 
 </details>
@@ -1550,7 +1550,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 244 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 250 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1910,7 +1910,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 58</summary>
+<summary><b>bug</b> — 59</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2196,6 +2196,14 @@ Use the start-dev skill. draft/bug/health_fixes/heart_health_rerun_stale_push.md
 
 ```
 Use the start-dev skill. draft/bug/priors/15_transformed_message_logpdf_jacobian.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/agent_help_text_is_rotted_in_feature.md">Agent --help text is rotted in feature, build and bug</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/agent_help_text_is_rotted_in_feature.md
 ```
 
 </details>
@@ -2592,7 +2600,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 26</summary>
+<summary><b>docs</b> — 28</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2638,6 +2646,22 @@ Use the start-dev skill. draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/docstrings_printed_as_help_still_carry_incident.md">Docstrings printed as --help still carry incident history</a> — pyautobrain · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautobrain/docstrings_printed_as_help_still_carry_incident.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautomind/docs_in_pyautomind_and_pyautoheart_still_describ.md">Docs in PyAutoMind and PyAutoHeart still describe the retired batch collect</a> — pyautomind · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautomind/docs_in_pyautomind_and_pyautoheart_still_describ.md
 ```
 
 </details>
@@ -2970,7 +2994,7 @@ Use the start-dev skill. draft/maintenance/autocti/legacy_root_notes_followup.md
 </details>
 
 <details>
-<summary><b>refactor</b> — 12</summary>
+<summary><b>refactor</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the mass model…</a> — autogalaxy · medium · supervised · medium</summary>
 
@@ -3020,10 +3044,34 @@ Use the start-dev skill. draft/refactor/autolens/one_construction_path_for_plane
 
 </details>
 
+<details><summary>📋 <a href="draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautobrain/remove_what_batch_collect_left_behind_in.md">Remove what batch collect left behind in the planner and the status…</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/refactor/pyautobrain/remove_what_batch_collect_left_behind_in.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautobrain/replace_the_nine_pure_launcher_scripts_with.md">Replace the nine pure launcher scripts with a registry entry</a> — pyautobrain · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/refactor/pyautobrain/replace_the_nine_pure_launcher_scripts_with.md
 ```
 
 </details>
