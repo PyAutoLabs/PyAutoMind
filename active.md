@@ -73,12 +73,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/702
 - issued: 2026-11-22
 - session: claude-code desktop (WSL), bounded Opus worker for ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/agent-help-text-rot
 - repos:
   - PyAutoBrain: feature/agent-help-text-rot
 - prompt: active/agent_help_text_is_rotted_in_feature.md
 - tier: supervised — merge mode: auto-merge on green (merge left to human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/703
 
 ## batch-collect-docs
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/596
