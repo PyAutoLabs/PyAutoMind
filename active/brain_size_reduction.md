@@ -8,8 +8,9 @@ Difficulty: medium
 Autonomy: supervised
 Consequence: judge
 Priority: medium
-Status: draft
+Status: active
 Filed: 2026-11-22
+Issued: 2026-11-22
 Lane: any
 
 A refactor review of @PyAutoBrain (2026-11-22) found the code is not bloated by
