@@ -1,3 +1,23 @@
+# PyAutoBrain size reduction: retired batch paths, dead code, test consolidation
+
+Shipped as PyAutoBrain#701 (issue PyAutoBrain#700), merged 2026-11-22.
+
+- Removed the August `batch collect` flow (collect code in `_batch.py`, `_integration.py`, `packet.js`, three test files), superseded by the shift orchestrator.
+- Removed the per-worker @mention path; the retry for needs-you event comments stays.
+- Removed `batch questions --backfill`, and with it the `questions` verb.
+- Removed the caller-less board overnight functions.
+- Swept dead code and unused imports across Python and shell.
+- Moved dated incident history out of comments and docstrings (comment-only, AST-checked).
+- Consolidated test setup into `tests/_helpers.py` and `tests/_shift_fixtures.py`; parametrized same-body tests; removed redundant ones.
+
+Python source 46,657 → 42,971 lines; tests 40,294 → 37,314; test functions 2,106 → 1,899; collected cases 2,560 → 2,451.
+
+Witness: full suite 2,448 passed, 3 skipped; CI green on 3.12 and 3.13; the surviving batch verbs print byte-identical output before and after against a real Mind. A live watcher tick was not run.
+
+Left for follow-up: the dashboard batch status box still keys its review button on `collected:`; `plan` still reads a "carried" outcomes block only collect wrote; PyAutoMind (`batches/AGENTS.md`, `REFERENCE.md`, packet template) and PyAutoHeart (`bin/pyauto-heart` help) still mention `batch collect`; about 18 `--help` docstrings still carry history; the nine pure launcher scripts and the `repos.yaml` parser unification from the review were not done.
+
+## Original prompt
+
 # PyAutoBrain size reduction: retire superseded batch paths, dead code, test consolidation
 
 Type: refactor
