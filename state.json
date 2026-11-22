@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 17 in flight",
-  "updated": "2026-11-22T18:00:59Z",
+  "updated": "2026-11-22T18:04:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -69,6 +69,12 @@
     },
     {
       "severity": "yellow",
+      "text": "One reader for repos.yaml instead of about ten \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/709",
+      "prompt": "Use the start-dev skill. active/one_reader_for_repos_yaml_instead_of.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Remove what batch collect left behind in the planner and the status\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/707",
       "prompt": "Use the start-dev skill. active/remove_what_batch_collect_left_behind_in.md"
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1792 \u2014 TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1792",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
       "prompt": null
     }
   ]

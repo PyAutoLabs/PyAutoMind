@@ -1475,7 +1475,7 @@ Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md
 
 </details>
 
-<details><summary>📋 <a href="active/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/708">issue #708</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/708">issue #708</a> — issued 2026-11-22 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/709">PyAutoBrain#709</a></summary>
 
 ```
 Use the start-dev skill. active/one_reader_for_repos_yaml_instead_of.md
