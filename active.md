@@ -109,3 +109,14 @@
 - prompt: active/docstrings_printed_as_help_still_carry_incident.md
 - tier: safe — merge mode: auto-merge on green (merge left to human /prm)
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/705
+
+## batch-collect-leftovers
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/706
+- issued: 2026-11-22
+- session: claude-code desktop (WSL), bounded Opus worker for ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/batch-collect-leftovers
+- repos:
+  - PyAutoBrain: feature/batch-collect-leftovers
+- prompt: active/remove_what_batch_collect_left_behind_in.md
+- tier: supervised — merge mode: auto-merge on green (merge left to human /prm)

@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-11-22
 Consequence: notify
 Witness: the intake dashboard renders the same for a current shift brief before and after; a record carrying `collected:` or `- outcomes:` still renders without error; `batch plan` output is unchanged against a Mind whose newest record is a shift brief.
 Review-minutes: 0
