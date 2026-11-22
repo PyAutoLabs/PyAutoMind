@@ -1483,7 +1483,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/remove_what_batch_collect_left_behind_in.md">Remove what batch collect left behind in the planner and the status…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/706">issue #706</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/remove_what_batch_collect_left_behind_in.md">Remove what batch collect left behind in the planner and the status…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/706">issue #706</a> — issued 2026-11-22 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/707">PyAutoBrain#707</a></summary>
 
 ```
 Use the start-dev skill. active/remove_what_batch_collect_left_behind_in.md

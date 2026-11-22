@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 16 in flight",
-  "updated": "2026-11-22T17:45:46Z",
+  "updated": "2026-11-22T17:47:09Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -42,6 +42,12 @@
       "text": "Docstrings printed as --help still carry incident history \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/705",
       "prompt": "Use the start-dev skill. active/docstrings_printed_as_help_still_carry_incident.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Remove what batch collect left behind in the planner and the status\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/707",
+      "prompt": "Use the start-dev skill. active/remove_what_batch_collect_left_behind_in.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Physical model check when speeding up smoke tests",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
       "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: A compound-prior model reloaded from model.json has a different prior order\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md",
-      "prompt": "Use the start-dev skill. draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md"
     }
   ]
 }
