@@ -102,9 +102,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/704
 - issued: 2026-11-22
 - session: claude-code desktop (WSL), bounded Opus worker for ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/help-docstrings-history
 - repos:
   - PyAutoBrain: feature/help-docstrings-history
 - prompt: active/docstrings_printed_as_help_still_carry_incident.md
 - tier: safe — merge mode: auto-merge on green (merge left to human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/705
