@@ -61,3 +61,16 @@
 - prompt: active/numba_wtilde_validation_legs_stall_nautilus.md
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
+
+## codex-orchestrator
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/712
+- issued: 2026-11-22
+- session: Codex Work (session ID unavailable)
+- status: library-dev
+- worktree: /workspace/scratch/fd35e294b56b-worktrees/codex-orchestrator
+- repos:
+  - PyAutoBrain: feature/codex-orchestrator
+  - PyAutoMind: feature/codex-orchestrator
+- prompt: active/codex_orchestrator.md
+- tier: judge — effective level human-required; merge mode human /prm
+- plan: approved by the human 2026-11-22; preserve Claude defaults and Opus review; no live shift
