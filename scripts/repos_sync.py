@@ -1189,6 +1189,23 @@ def insert_deliverable_markers(root, repos):
         print(f"inserted deliverable markers: {agents}")
 
 
+def write_deliverable_blocks(root, repos, policy):
+    """Insert the deliverable markers and fill the block in every checked-out
+    repo — and write nothing else. The narrow entry point the propagation
+    workflow calls (human-approved 2026-11-22: the block rides the bot push).
+    Until then nothing delivered it: the policy text changed, no regeneration
+    wave ran, and 46 stale copies kept every shift brief YELLOW."""
+    insert_deliverable_markers(root, repos)
+    for name in repos:
+        write_block(
+            repo_checkout(root, name) / "AGENTS.md",
+            policy,
+            DELIVERABLE_BEGIN,
+            DELIVERABLE_END,
+            required=False,
+        )
+
+
 def filing_block_excluded(repo_spec):
     """A manifest entry carrying `filing_block: false` is out of scope for the
     where-to-file block: neither written nor reported. A recorded exclusion,
@@ -3132,18 +3149,11 @@ def main():
         # here, so the block lands without thirty hand-edits. (The rule it
         # carries was broken twice by sessions reasoning past prose; waiting for
         # each repo to opt in is how the long tail stays unprotected.)
-        insert_deliverable_markers(root, repos)
         for name in repos:
             agents = repo_checkout(root, name) / "AGENTS.md"
             HISTORY_BLOCK.write(agents, hpol)
             REMOTE_BLOCK.write(agents, remote)
-            write_block(
-                agents,
-                deliverable,
-                DELIVERABLE_BEGIN,
-                DELIVERABLE_END,
-                required=False,
-            )
+        write_deliverable_blocks(root, repos, deliverable)
         # The where-to-file block self-installs the same way, one step further
         # down: under the deliverable block that the loop above just filled.
         write_filing_blocks(root, repos, filing)

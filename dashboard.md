@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 297 |
+| [Backlog](#backlog) | 298 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -1550,7 +1550,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 244 · ral 30 · local-dev 11 · wsl-data 9 · gpu 1
+Lanes: any 244 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1910,7 +1910,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 57</summary>
+<summary><b>bug</b> — 58</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2300,6 +2300,14 @@ Use the start-dev skill. draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_
 
 ```
 Use the start-dev skill. draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautomind/generated_hooks_two_mismatches_on_the_laptop.md">Heart reports 2 generated-hook mismatches on the laptop that no organ-only session…</a> — pyautomind · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautomind/generated_hooks_two_mismatches_on_the_laptop.md
 ```
 
 </details>
@@ -3249,7 +3257,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+119 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3294,7 +3302,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 78 more_
+- _… and 79 more_
 
 </details>
 

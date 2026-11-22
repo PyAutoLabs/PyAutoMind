@@ -28,14 +28,20 @@ name: Propagate the canonical hooks
 # already verified against Codex's PreToolUse payload. The same propagation
 # run writes `.codex/hooks.json` for those repos and nowhere else.
 #
-# ONE AGENTS.md BLOCK RIDES ALONG: the where-to-file block
-# (`policy/where_to_file.md`, PyAutoMind#442). Same justification — the commit is
-# a byte copy of text already reviewed on the Mind PR that changed it, and ~48
+# TWO AGENTS.md BLOCKS RIDE ALONG: the where-to-file block
+# (`policy/where_to_file.md`, PyAutoMind#442) and the end-at-deliverable block
+# (`policy/end_at_deliverable.md`). Same justification — the commit is a byte
+# copy of text already reviewed on the Mind PR that changed it, and ~48
 # AGENTS.md copies are a PR wave nobody would read (human-approved: bot push).
-# The job writes ONLY that block, through `repos_sync.write_filing_blocks`
-# (insert the markers under the deliverable block, fill them, touch nothing
-# else); the organism-map, history, remote-session and deliverable blocks stay
-# out of this job and keep their reviewed regeneration waves.
+# The job writes ONLY those blocks, through `repos_sync.write_deliverable_blocks`
+# and `repos_sync.write_filing_blocks` (insert the markers, fill them, touch
+# nothing else); the organism-map, history and remote-session blocks stay out
+# of this job and keep their reviewed regeneration waves.
+#
+# The deliverable block joined on 2026-11-22 (human-approved: bot push). Left to
+# a wave, it was stranded: its policy text changed, no wave ran, and 46 stale
+# copies kept Heart YELLOW on three shift briefs in a row, each acknowledged by
+# hand, from sessions that could reach only the organs.
 #
 # ONE DELETION RIDES ALONG, ON A HUMAN DISPATCH ONLY: the retired CLAUDE.md ->
 # AGENTS.md pointer (PyAutoMind#482). Claude Code loads AGENTS.md natively now,
@@ -73,6 +79,7 @@ on:
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
       - "policy/where_to_file.md"
+      - "policy/end_at_deliverable.md"
       - "repos.yaml"
       - "scripts/repos_sync.py"
       - ".github/workflows/session_hook_propagate.yml"
@@ -210,7 +217,11 @@ jobs:
               repos_sync.load_deliverable_hook(mind_root),
           )
           repos_sync.write_codex_hooks(Path("tree"), repos)
-          # The one AGENTS.md block this job propagates (see the header).
+          # The two AGENTS.md blocks this job propagates (see the header). The
+          # deliverable block first: the filing markers go in under it.
+          repos_sync.write_deliverable_blocks(
+              Path("tree"), repos, repos_sync.load_deliverable_policy(mind_root),
+          )
           repos_sync.write_filing_blocks(
               Path("tree"), repos, repos_sync.load_filing_policy(mind_root),
           )
