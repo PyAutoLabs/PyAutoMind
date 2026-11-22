@@ -9,6 +9,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-11-22
 Consequence: notify
 Witness: every verb's output is byte-identical before and after for `--help` and one real invocation; `tests/test_skill_install.py` and `tests/test_conductor_discovery.py` pass; `repos_sync.py --check` passes.
 Review-minutes: 0
