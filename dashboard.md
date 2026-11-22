@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 8 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 16 |
+| [In flight](#in-flight) | 17 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 294 |
+| [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -197,7 +197,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -247,14 +247,6 @@ Use the start-dev skill. draft/bug/pyautobrain/cockpit_footer_broca_belongs_betw
 
 </details>
 
-<details><summary>📋 <a href="draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
 
 ```
@@ -291,6 +283,14 @@ Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameteriza
 
 ```
 Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrichment.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — pyautoheart · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md
 ```
 
 </details>
@@ -1475,6 +1475,14 @@ Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md
 
 </details>
 
+<details><summary>📋 <a href="active/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/708">issue #708</a> — issued 2026-11-22 — library-dev</summary>
+
+```
+Use the start-dev skill. active/one_reader_for_repos_yaml_instead_of.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147">issue #147</a> — issued 2026-11-12 — workspace-dev</summary>
 
 ```
@@ -1614,7 +1622,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 240 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 239 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3002,7 +3010,7 @@ Use the start-dev skill. draft/maintenance/autocti/legacy_root_notes_followup.md
 </details>
 
 <details>
-<summary><b>refactor</b> — 14</summary>
+<summary><b>refactor</b> — 13</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the mass model…</a> — autogalaxy · medium · supervised · medium</summary>
 
@@ -3048,14 +3056,6 @@ Use the start-dev skill. draft/refactor/autogalaxy/one_cosmology_module_across_p
 
 ```
 Use the start-dev skill. draft/refactor/autolens/one_construction_path_for_plane_bound_lensing.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/refactor/pyautobrain/one_reader_for_repos_yaml_instead_of.md
 ```
 
 </details>
@@ -3214,16 +3214,17 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-22 | issued | <a href="active/truncated_normal_log_partition_tail_underflow.md">TruncatedNormalMessage.log_partition underflows to -inf when the…</a> |
 | 2026-11-22 | issued | <a href="active/grid_search_factor_graph_make_result_keyerror.md">SearchGridSearch over a FactorGraphModel crashes in make_result</a> |
 | 2026-11-22 | issued | <a href="active/remove_what_batch_collect_left_behind_in.md">Remove what batch collect left behind in the planner and the status…</a> |
+| 2026-11-22 | issued | <a href="active/one_reader_for_repos_yaml_instead_of.md">One reader for repos.yaml instead of about ten</a> |
 | 2026-11-22 | issued | <a href="active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-11-22 | issued | <a href="active/docstrings_printed_as_help_still_carry_incident.md">Docstrings printed as --help still carry incident history</a> |
 | 2026-11-22 | issued | <a href="active/docs_in_pyautomind_and_pyautoheart_still_describ.md">Docs in PyAutoMind and PyAutoHeart still describe the retired batch…</a> |
 | 2026-11-22 | issued | <a href="active/database_paths_dataset_fits_not_registered.md">Database-path searches cannot reload dataset.fits (written to disk…</a> |
-| 2026-11-22 | issued | <a href="active/agent_help_text_is_rotted_in_feature.md">Agent --help text is rotted in feature, build and bug</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-22 | issued | <a href="active/agent_help_text_is_rotted_in_feature.md">Agent --help text is rotted in feature, build and bug</a> |
 | 2026-11-20 | issued | <a href="active/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-11-20 | issued | <a href="active/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> |
 | 2026-11-20 | issued | <a href="active/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
@@ -3233,12 +3234,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
-| 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
@@ -3248,12 +3249,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
-| 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
@@ -3263,12 +3264,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
-| 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
@@ -3278,7 +3279,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
-| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 
 </details>
 
