@@ -1,6 +1,7 @@
 # autocti_workspace: database scripts delete the wrong .sqlite under test mode, so a second run fails
 
 Type: bug
+Issued: 2026-11-22
 Target: autocti_workspace
 Repos:
 - autocti_workspace

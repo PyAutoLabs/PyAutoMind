@@ -110,6 +110,75 @@
 - tier: safe — merge mode: auto-merge on green (merge left to human /prm)
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/705
 
+## grid-factor-results
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1789
+- issued: 2026-11-22
+- session: Codex desktop, approved six-bug review batch, distinct feature worktrees
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/grid-factor-results
+- repos:
+  - PyAutoFit: feature/grid-factor-results
+- prompt: active/grid_search_factor_graph_make_result_keyerror.md
+- tier: supervised — human review requested, leave PRs open
+
+## mixed-galaxy-light
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/743
+- issued: 2026-11-22
+- session: Codex desktop, approved six-bug review batch, distinct feature worktrees
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/mixed-galaxy-light
+- repos:
+  - PyAutoGalaxy: feature/mixed-galaxy-light
+  - PyAutoLens: feature/mixed-galaxy-light
+- prompt: active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md
+- tier: supervised — human review requested, leave PRs open
+
+## truncated-tail-evidence
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1790
+- issued: 2026-11-22
+- session: Codex desktop, approved six-bug review batch, distinct feature worktrees
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/truncated-tail-evidence
+- repos:
+  - PyAutoFit: feature/truncated-tail-evidence
+  - autofit_workspace_test: feature/truncated-tail-evidence
+- prompt: active/truncated_normal_log_partition_tail_underflow.md
+- tier: supervised — human review requested, leave PRs open
+
+## database-dataset-fits
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/744
+- issued: 2026-11-22
+- session: Codex desktop, approved six-bug review batch, distinct feature worktrees
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/database-dataset-fits
+- repos:
+  - PyAutoGalaxy: feature/database-dataset-fits
+  - PyAutoLens: feature/database-dataset-fits
+- prompt: active/database_paths_dataset_fits_not_registered.md
+- tier: supervised — human review requested, leave PRs open
+
+## euclid-nautilus-batch
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/138
+- issued: 2026-11-22
+- session: Codex desktop, approved six-bug review batch, distinct feature worktrees
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/euclid-nautilus-batch
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/euclid-nautilus-batch
+- prompt: active/vis_lp_batch_size_kwarg_silently_ignored.md
+- tier: supervised — human review requested, leave PRs open
+
+## cti-database-reruns
+- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/49
+- issued: 2026-11-22
+- session: Codex desktop, approved six-bug review batch, distinct feature worktrees
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cti-database-reruns
+- repos:
+  - autocti_workspace: feature/cti-database-reruns
+- prompt: active/database_scripts_stale_sqlite_under_test_mode.md
+- tier: supervised — human review requested, leave PRs open
+
 ## batch-collect-leftovers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/706
 - issued: 2026-11-22

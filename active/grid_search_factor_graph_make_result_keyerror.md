@@ -1,6 +1,7 @@
 # SearchGridSearch over a FactorGraphModel crashes in make_result
 
 Type: bug
+Issued: 2026-11-22
 Target: autofit
 Repos:
 - PyAutoFit
