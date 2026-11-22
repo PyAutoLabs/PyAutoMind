@@ -26,11 +26,13 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/683
 - issued: 2026-11-20
 - session: shift worker 2026-11-20-am (24ac8476-2f82-4029-b4e9-dfbd4eebbcbd)
-- status: workspace-dev (mode-1 grid search and refinement passed; full workspace smoke running)
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/684
 - resumed: 2026-11-22, Codex desktop; original feature branch and worktree, head 1bde121b
 - question: https://github.com/PyAutoLabs/autolens_workspace/issues/683#issuecomment-7035177232
 - unblocked-by: complete/2026/11/grid-factor-results.md (PyAutoFit#1791)
-- next: publish the tested branch for review after workspace smoke completes
+- validation: At 1bde121b, the mode-1 script and regenerated notebook each completed all four joint grid fits and the final refinement. Heart workspace smoke passed 42 scripts and 2 notebooks.
+- next: human review of autolens_workspace#684
 - worktree: /home/jammy/Code/PyAutoLabs-wt/slam-simultaneous-subhalo-grid-search
 - repos:
   - autolens_workspace: feature/slam-simultaneous-subhalo-grid-search

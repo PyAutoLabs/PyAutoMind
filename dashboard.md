@@ -1434,7 +1434,7 @@ Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md
 
 </details>
 
-<details><summary>📋 <a href="active/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/683">issue #683</a> — issued 2026-11-20 — workspace-dev (mode-1 grid search and refinement passed; full workspace smoke running)</summary>
+<details><summary>📋 <a href="active/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/683">issue #683</a> — issued 2026-11-20 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/684">autolens_workspace#684</a></summary>
 
 ```
 Use the start-dev skill. active/slam_simultaneous_subhalo_grid_search_fits_last.md
