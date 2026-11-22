@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2360 records across 11 buckets.
+2364 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/11
 
+- [agent-help-text-rot](2026/11/agent-help-text-rot.md)
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
 - [api-reference-polish](2026/11/api-reference-polish.md)
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
@@ -138,6 +139,8 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p4a](2026/11/autonomous-orchestrators-p4a.md) — phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [batch-claim-gate-declared-repos](2026/11/batch-claim-gate-declared-repos.md)
+- [batch-collect-docs](2026/11/batch-collect-docs.md)
+- [batch-collect-leftovers](2026/11/batch-collect-leftovers.md)
 - [batch-slice](2026/11/batch-slice.md)
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
 - [blurring-mask-separable](2026/11/blurring-mask-separable.md)
@@ -223,6 +226,7 @@ markers; everything below GENERATED is rebuilt.
 - [health-review-cloud-observation](2026/11/health-review-cloud-observation.md) — - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every clo…
 - [heart-dev-scope](2026/11/heart-dev-scope.md)
 - [heart-green-lane](2026/11/heart-green-lane.md)
+- [help-docstrings-history](2026/11/help-docstrings-history.md)
 - [homepage-flow-polish](2026/11/homepage-flow-polish.md)
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)

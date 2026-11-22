@@ -1,3 +1,14 @@
+## help-docstrings-history
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/704
+- completed: 2026-11-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/705
+- Follow-up to PyAutoBrain#701: module docstrings printed as `--help` (clone, check_boundary, hygiene extras/repos, workspace, lane_backfill, shift_ledger) and printed messages in batch, intake, profiling and mind_commit_guard now describe what the tool does in the present tense; dated incident history and milestone tags removed.
+- Kept on purpose: pointers to named AUTONOMY.md rulings (S6, R3), and the `batch brief --new` skeleton comment a test pins.
+- Witness: `tests/test_help_text_no_history.py`.
+- Human-accepted at /prm: Heart STALE at ship time was this network's TLS timeouts only.
+
+## Original prompt
+
 # Docstrings printed as --help still carry incident history
 
 Type: docs

@@ -1,3 +1,15 @@
+## batch-collect-docs
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/596
+- completed: 2026-11-22
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoMind/pull/597
+  - https://github.com/PyAutoLabs/PyAutoHeart/pull/362
+- Mind: `batches/AGENTS.md` marks the fields only collect wrote as `legacy` and describes the integration flow as history; the digest is appended by the watcher's first tick after `review-at:`; `batches/packets/{AGENTS,TEMPLATE}.md` document the archived pages (opt-in `packet: yes` → `digest.html`); `REFERENCE.md` no longer says "appended at collection".
+- Heart: `pyauto-heart freeze` help and `REFERENCE.md` list only `vitals` and `/prm` as freeze readers.
+- Witness: `git grep -n "batch collect"` in Mind returns only history, drafts about the retirement, the generated dashboard and the retirement sentences.
+
+## Original prompt
+
 # Docs in PyAutoMind and PyAutoHeart still describe the retired batch collect
 
 Type: docs

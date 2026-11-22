@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-22T18:17:36Z",
+  "headline": "RED \u2014 23 picks \u00b7 8 in flight",
+  "updated": "2026-11-22T18:18:40Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -27,27 +27,9 @@
     },
     {
       "severity": "yellow",
-      "text": "Agent --help text is rotted in feature, build and bug \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/703",
-      "prompt": "Use the start-dev skill. active/agent_help_text_is_rotted_in_feature.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Docstrings printed as --help still carry incident history \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/705",
-      "prompt": "Use the start-dev skill. active/docstrings_printed_as_help_still_carry_incident.md"
-    },
-    {
-      "severity": "yellow",
       "text": "One reader for repos.yaml instead of about ten \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/709",
       "prompt": "Use the start-dev skill. active/one_reader_for_repos_yaml_instead_of.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Remove what batch collect left behind in the planner and the status\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/707",
-      "prompt": "Use the start-dev skill. active/remove_what_batch_collect_left_behind_in.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +108,24 @@
       "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
       "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

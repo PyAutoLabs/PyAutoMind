@@ -1,3 +1,13 @@
+## agent-help-text-rot
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/702
+- completed: 2026-11-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/703
+- `feature.sh`, `build.sh` and `bug.sh` printed `--help` by slicing their own header with hardcoded `sed` line ranges that had rotted (leaked `set -uo pipefail`, truncated build options, an internal comment). All three now use the header-help `awk` already used by `health.sh`, `rehearse.sh`, `validate.sh` and `nightly.sh`.
+- Witness: `tests/test_agent_help_text.py` (3 of its 4 tests fail on the old code); full Brain suite 2454 passed, 1 skipped.
+- Human-accepted at /prm: Heart read STALE at ship time only because Heart's CI poll hit TLS timeouts on this network; Brain Tests and Brain Board were green on main.
+
+## Original prompt
+
 # Agent --help text is rotted in feature, build and bug
 
 Type: bug

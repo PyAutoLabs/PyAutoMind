@@ -1,3 +1,13 @@
+## batch-collect-leftovers
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/706
+- completed: 2026-11-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/707
+- Removed what the retired `batch collect` left in PyAutoBrain: the shift box review button, Pages packet URL and packet path keyed on `collected:` (`dev_status` loses `pages` and the `reviewable`/`url`/`packet` keys); the planner's `read_outcomes`, `previous_carried`, `newest_slot`, `batch_records`, `plan(carried=, carried_from=)` and the "Carried in" line; and the 506-line `packet.css` (the opt-in `digest.html` now carries a few lines of inline style).
+- Human decisions at /prm: (b) keep the shift box member rows and the in-progress/awaiting-review counts they feed; (c) drop the `carried` / `carried_from` keys from `batch plan --json` (nothing read them); (a) Heart STALE at ship time was this network's TLS timeouts only, accepted.
+- Witness: before/after render of the intake dashboard against one fixed Mind snapshot is unchanged for shift briefs.
+
+## Original prompt
+
 # Remove what batch collect left behind in the planner and the status…
 
 Type: refactor
