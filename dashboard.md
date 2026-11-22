@@ -1515,7 +1515,7 @@ Use the start-dev skill. active/truncated_normal_log_partition_tail_underflow.md
 
 </details>
 
-<details><summary>📋 <a href="active/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such parameter</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/138">issue #138</a> — issued 2026-11-22 — workspace-dev</summary>
+<details><summary>📋 <a href="active/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such parameter</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/138">issue #138</a> — issued 2026-11-22 — awaiting-merge (PRs open for human review) — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/139">euclid_strong_lens_modeling_pipeline#139</a></summary>
 
 ```
 Use the start-dev skill. active/vis_lp_batch_size_kwarg_silently_ignored.md
