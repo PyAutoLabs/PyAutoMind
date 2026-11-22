@@ -1411,7 +1411,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/agent_help_text_is_rotted_in_feature.md">Agent --help text is rotted in feature, build and bug</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/702">issue #702</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/agent_help_text_is_rotted_in_feature.md">Agent --help text is rotted in feature, build and bug</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/702">issue #702</a> — issued 2026-11-22 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/703">PyAutoBrain#703</a></summary>
 
 ```
 Use the start-dev skill. active/agent_help_text_is_rotted_in_feature.md
