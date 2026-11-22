@@ -1435,7 +1435,7 @@ Use the start-dev skill. active/docs_in_pyautomind_and_pyautoheart_still_describ
 
 </details>
 
-<details><summary>📋 <a href="active/docstrings_printed_as_help_still_carry_incident.md">Docstrings printed as --help still carry incident history</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/704">issue #704</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/docstrings_printed_as_help_still_carry_incident.md">Docstrings printed as --help still carry incident history</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/704">issue #704</a> — issued 2026-11-22 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/705">PyAutoBrain#705</a></summary>
 
 ```
 Use the start-dev skill. active/docstrings_printed_as_help_still_carry_incident.md
