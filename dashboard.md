@@ -1425,7 +1425,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136">issue #136</a> — issued 2026-11-20 — library-dev</summary>
+<details><summary>📋 <a href="active/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136">issue #136</a> — issued 2026-11-20 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1793">PyAutoFit#1793</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/140">euclid_strong_lens_modeling_pipeline#140</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md
@@ -3322,6 +3322,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1793](https://github.com/PyAutoLabs/PyAutoFit/pull/1793) — `active/sed_chain_waveband_fit_can_spin_forever.md`
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
 - [PyAutoFit#1792](https://github.com/PyAutoLabs/PyAutoFit/pull/1792) — `complete/2026/11/truncated-tail-evidence.md`
 
