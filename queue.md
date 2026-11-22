@@ -82,11 +82,6 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 1. SLaM simultaneous subhalo grid search fits last band only
-- kind: prompt
-- ref: active/slam_simultaneous_subhalo_grid_search_fits_last.md
-- note: follow-up of the 2026-11-20-am review (Q19 = a): resume branch feature/slam-simultaneous-subhalo-grid-search with the merged PyAutoFit fix (#1791)
-
 ## 2. test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
 - kind: prompt
 - ref: active/latent_total_source_flux_jax_vs_numpy_regression.md
@@ -117,6 +112,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### SLaM simultaneous subhalo grid search fits last band only
+- shipped-as: complete/2026/11/slam-simultaneous-subhalo-grid-search.md (2026-11-22)
+- note: follow-up of the 2026-11-20-am review (Q19 = a): resume branch feature/slam-simultaneous-subhalo-grid-search with the merged PyAutoFit fix (#1791) — retired by `lifecycle.py close`
 
 ### SearchGridSearch over a FactorGraphModel crashes in make_result
 - shipped-as: complete/2026/11/grid-factor-results.md (2026-11-22)
