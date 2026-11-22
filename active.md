@@ -193,3 +193,14 @@
 - prompt: active/remove_what_batch_collect_left_behind_in.md
 - tier: supervised — merge mode: auto-merge on green (merge left to human /prm)
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/707
+
+## one-repos-yaml-reader
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/708
+- issued: 2026-11-22
+- session: claude-code desktop (WSL), bounded Opus worker for ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/one-repos-yaml-reader
+- repos:
+  - PyAutoBrain: feature/one-repos-yaml-reader
+- prompt: active/one_reader_for_repos_yaml_instead_of.md
+- tier: supervised — merge mode: auto-merge on green (merge left to human /prm)

@@ -9,6 +9,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-11-22
 Consequence: notify
 Witness: for the real `repos.yaml` and for fixtures with quoted values, trailing comments and a block ended by a new top-level key, every replaced reader returns the same value before and after; `tests/test_repo_paths.py`, `tests/test_public_names.py`, `tests/test_hygiene_conductor.py`, `tests/test_grouped_organ_consumers.py` and `tests/test_docs_conductor.py` pass.
 Review-minutes: 0
