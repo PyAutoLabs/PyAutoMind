@@ -1857,12 +1857,6 @@ FIREWALL_ALLOWLIST = {
         "autofit_workspace",
         "autolens_assistant",
     },
-    "PyAutoBrain/agents/conductors/clone/clone.sh": {
-        "HowToFit",
-        "PyAutoFit",
-        "autofit_workspace",
-        "autolens_assistant",
-    },
     "PyAutoBrain/agents/conductors/community/_community.py": {
         "Jammy2211",
         "PyAutoLabs",
@@ -1881,7 +1875,6 @@ FIREWALL_ALLOWLIST = {
         "autolens_workspace",
     },
     "PyAutoBrain/agents/conductors/profiling/_profiling.py": {"autolens_profiling"},
-    "PyAutoBrain/agents/conductors/profiling/profiling.sh": {"autolens_profiling"},
     "PyAutoBrain/agents/conductors/release/nightly.sh": {"PyAutoLabs", "PyAutoLens"},
     "PyAutoBrain/agents/conductors/release/rehearse.sh": {
         "PyAutoArray",
