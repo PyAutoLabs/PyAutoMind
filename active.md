@@ -94,3 +94,14 @@
 - tier: notify — effective level: safe; merge mode: auto-merge on green (merge left to the human this session)
 - heart-ack:
   - Heart YELLOW at the door (2026-11-22): euclid_assistant end-at-deliverable block drift, fixed by open PR Jammy2211/euclid_assistant#18; unrelated
+
+## help-docstrings-history
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/704
+- issued: 2026-11-22
+- session: claude-code desktop (WSL), bounded Opus worker for ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/help-docstrings-history
+- repos:
+  - PyAutoBrain: feature/help-docstrings-history
+- prompt: active/docstrings_printed_as_help_still_carry_incident.md
+- tier: safe — merge mode: auto-merge on green (merge left to human /prm)

@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
+Issued: 2026-11-22
 Consequence: notify
 Witness: each tool's `--help` names no date, milestone tag or incident; the suite passes.
 Review-minutes: 0
