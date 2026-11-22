@@ -12,7 +12,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: high
 Status: formalised
-Consequence: glance
+Consequence: judge
 Witness: Tile102008532RA0683486015030DECNEG0642073552911 nir_y re-run under the capped search terminates within the cap and the tile's remaining six bands complete inside the 12 h walltime; today that band is still in Nautilus exploration at 40000 likelihood calls after 1 h 36 min and no other band starts
 Review-minutes: 3
 Unattended: ready
@@ -103,3 +103,4 @@ at 40000 likelihood calls after 1 h 36 min and the other six bands never start.
 
 ## Answers from the human
 - Q17 (2026-11-20, shift 2026-11-20-am question on euclid_strong_lens_modeling_pipeline#136): 1 — (a) wall-clock cap: library-first PyAutoFit PR adding a timeout to af.Nautilus, then the pipeline PR with per-band WAVEBAND_TIMEOUT_S, a lower named WAVEBAND_N_LIKE_MAX, a capped marker, QA column and a fast test https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7039080077
+- 2026-11-22, maintainer: “Fast local tests for the PRs, then I’ll run the tile on RAL after merge”. Keep the real-tile Witness for follow-up.

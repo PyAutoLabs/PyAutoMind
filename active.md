@@ -26,11 +26,16 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
 - issued: 2026-11-20
 - session: shift worker 2026-11-20-am (79ac305d-a450-40fe-b02b-8b0ccf4e159a)
-- status: awaiting-input
+- status: library-dev
+- resumed: 2026-11-22, Codex desktop, Q17 option 1
+- worktree: /home/jammy/Code/PyAutoLabs-wt/sed-waveband-search-cap
+- repos:
+  - PyAutoFit: feature/sed-waveband-search-cap
+  - euclid_strong_lens_modeling_pipeline: feature/sed-waveband-search-cap
 - question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7034635460
 - prompt: active/sed_chain_waveband_fit_can_spin_forever.md
-- note: parked before any claim or worktree; n_like_max=50000 cap already exists (calls, not wall time); wall-clock cap needs PyAutoFit `timeout`; repro + witness need a human-run RAL re-run
-- tier: supervised — merge mode: auto-merge on green if the Witness passes after a merge slot
+- validation: Fast local tests for the PRs. The maintainer will run the real tile on RAL after merge.
+- tier: judge — supervised, human review and /prm
 
 ## latent-total-source-flux-jax-vs-numpy-regression
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137
