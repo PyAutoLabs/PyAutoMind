@@ -138,10 +138,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/710
 - issued: 2026-11-22
 - session: claude-code desktop (WSL), bounded Opus worker for ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/launcher-registry
 - repos:
   - PyAutoBrain: feature/launcher-registry
   - PyAutoMind: feature/launcher-registry
 - prompt: active/replace_the_nine_pure_launcher_scripts_with.md
 - tier: supervised — merge mode: auto-merge on green (merge left to human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/711
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/598
