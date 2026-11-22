@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2366 records across 11 buckets.
+2367 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -382,6 +382,7 @@ markers; everything below GENERATED is rebuilt.
 - [simulator-poisson-flag-guard](2026/11/simulator-poisson-flag-guard.md) — - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_pois…
 - [simulator-roundoff-control](2026/11/simulator-roundoff-control.md)
 - [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
+- [slam-simultaneous-subhalo-grid-search](2026/11/slam-simultaneous-subhalo-grid-search.md)
 - [smoke-install-tfp-comment-sweep](2026/11/smoke-install-tfp-comment-sweep.md) — - Comment-only sweep after PyAutoArray#694 (record complete/2026/11/matern-vendor-bessel-kve.md): replaced the…
 - [stale-enable-pytrees-register-model-advice-in](2026/11/stale-enable-pytrees-register-model-advice-in.md)
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)

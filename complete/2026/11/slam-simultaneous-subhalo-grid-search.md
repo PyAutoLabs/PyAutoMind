@@ -1,3 +1,10 @@
+- Issue [autolens_workspace #683](https://github.com/PyAutoLabs/autolens_workspace/issues/683) closed when [PR #684](https://github.com/PyAutoLabs/autolens_workspace/pull/684) merged at `ba7f7738` on 2026-11-22.
+- The simultaneous SLaM grid search fits both waveband analyses in each cell, retaining a shared subhalo centre and per-band dataset offsets. Refinement uses the winning cell’s model for each band. The notebook was regenerated from the script.
+- The script and notebook independently completed all four grid cells and final refinement from fresh output in CPU test mode with merged [PyAutoFit #1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791). Every cell kept the reference-band offsets fixed and the second band’s offsets free.
+- Heart workspace smoke passed 42 scripts and two notebooks. All eight GitHub checks passed at `1bde121b`, including both Python 3.12 and 3.13 smoke jobs.
+
+## Original prompt
+
 # SLaM simultaneous subhalo grid search fits last band only
 
 Type: bug
