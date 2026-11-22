@@ -15,7 +15,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 2 |
+| [Pending release](#pending-release) | 3 |
 
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
@@ -1411,7 +1411,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/database_paths_dataset_fits_not_registered.md">Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/744">issue #744</a> — issued 2026-11-22 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745">PyAutoGalaxy#745</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/database_paths_dataset_fits_not_registered.md">Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/744">issue #744</a> — issued 2026-11-22 — awaiting-merge (PRs open for human review) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745">PyAutoGalaxy#745</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/878">PyAutoLens#878</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/database_paths_dataset_fits_not_registered.md
@@ -1443,7 +1443,7 @@ Use the start-dev skill. active/docstrings_printed_as_help_still_carry_incident.
 
 </details>
 
-<details><summary>📋 <a href="active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary light (dict merge overwrites)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/743">issue #743</a> — issued 2026-11-22 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746">PyAutoGalaxy#746</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary light (dict merge overwrites)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/743">issue #743</a> — issued 2026-11-22 — awaiting-merge (PRs open for human review) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746">PyAutoGalaxy#746</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/877">PyAutoLens#877</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md
@@ -1515,7 +1515,7 @@ Use the start-dev skill. active/slam_simultaneous_subhalo_grid_search_fits_last.
 
 </details>
 
-<details><summary>📋 <a href="active/truncated_normal_log_partition_tail_underflow.md">TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1790">issue #1790</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/truncated_normal_log_partition_tail_underflow.md">TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1790">issue #1790</a> — issued 2026-11-22 — awaiting-merge (PRs open for human review) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1792">PyAutoFit#1792</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace_test/pull/120">autofit_workspace_test#120</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/truncated_normal_log_partition_tail_underflow.md
@@ -3429,11 +3429,17 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoFit**
 
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `active/grid_search_factor_graph_make_result_keyerror.md`
+- [PyAutoFit#1792](https://github.com/PyAutoLabs/PyAutoFit/pull/1792) — `active/truncated_normal_log_partition_tail_underflow.md`
 
 **PyAutoGalaxy**
 
 - [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `active/database_paths_dataset_fits_not_registered.md`
 - [PyAutoGalaxy#746](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746) — `active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md`
+
+**PyAutoLens**
+
+- [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `active/database_paths_dataset_fits_not_registered.md`
+- [PyAutoLens#877](https://github.com/PyAutoLabs/PyAutoLens/pull/877) — `active/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
