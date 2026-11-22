@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-11-22
 Consequence: notify
 Witness: a test runs each of the three with `--help` and asserts no line starts with `set ` and that build's output names `--rehearsal-run-id` and the exit codes.
 Review-minutes: 0

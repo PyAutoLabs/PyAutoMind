@@ -68,3 +68,14 @@
 - prompt: active/numba_wtilde_validation_legs_stall_nautilus.md
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
+
+## agent-help-text-rot
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/702
+- issued: 2026-11-22
+- session: claude-code desktop (WSL), bounded Opus worker for ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/agent-help-text-rot
+- repos:
+  - PyAutoBrain: feature/agent-help-text-rot
+- prompt: active/agent_help_text_is_rotted_in_feature.md
+- tier: supervised — merge mode: auto-merge on green (merge left to human /prm)
