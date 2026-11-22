@@ -9,6 +9,7 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
+Issued: 2026-11-22
 Consequence: notify
 Witness: `git grep -n "batch collect"` in both repos returns only history (`complete/`, `queue.md` footer) and sentences that say it was retired.
 Review-minutes: 0

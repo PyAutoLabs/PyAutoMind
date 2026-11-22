@@ -79,3 +79,17 @@
   - PyAutoBrain: feature/agent-help-text-rot
 - prompt: active/agent_help_text_is_rotted_in_feature.md
 - tier: supervised — merge mode: auto-merge on green (merge left to human /prm)
+
+## batch-collect-docs
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/596
+- issued: 2026-11-22
+- session: claude-code desktop (WSL) worker, ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/batch-collect-docs
+- repos:
+  - PyAutoMind: feature/batch-collect-docs
+  - PyAutoHeart: feature/batch-collect-docs
+- prompt: active/docs_in_pyautomind_and_pyautoheart_still_describ.md
+- tier: notify — effective level: safe; merge mode: auto-merge on green (merge left to the human this session)
+- heart-ack:
+  - Heart YELLOW at the door (2026-11-22): euclid_assistant end-at-deliverable block drift, fixed by open PR Jammy2211/euclid_assistant#18; unrelated
