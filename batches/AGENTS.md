@@ -1,7 +1,7 @@
 # Batch records
 
-One file per dispatched batch: `<YYYY-MM-DD>-<am|pm>.md`. Written at dispatch,
-appended at collection. This is the ledger of what was sent into one shift and
+One file per dispatched batch: `<YYYY-MM-DD>-<am|pm>.md`. Written at dispatch
+(today that is the shift brief), with the digest appended after `review-at:`. This is the ledger of what was sent into one shift and
 what came back — the same genre as `complete/`, and the evidence base the budget
 and the review-minute estimate are calibrated from.
 
@@ -9,11 +9,12 @@ It auto-merges (`scripts/ledger_merge.py` — `batches/` is a ledger dir), becau
 an unattended system that cannot record its own history unattended will not
 record it.
 
-**Collected once, reviewed once.** A dev batch is dispatched as one shift and
-reviewed as one sitting: one `- review:` line, one review file. The dashboard's
-batch status box is the live view of the open slot — every member with what it
-is doing — and it offers the button to the review packet once `collected:` is
-stamped, because there is nothing to review before that. A science batch is a
+**Reviewed once.** A dev batch is dispatched as one shift and reviewed as one
+sitting: one `- review:` line, one review file. The dashboard's batch status box
+is the live view of the open slot — every member with what it is doing. Its
+button to the review packet keys on `collected:`, which only the retired collect
+step stamped, so a record written since does not show it; the digest comment on
+the shift's `issue:` is the review surface now. A science batch is a
 rolling board instead, ruled on more than once and closing only when nothing is
 left on the board (`PyAutoCortex/batches/AGENTS.md`, "A rolling board, not a
 dispatch"); that difference is the Cortex's, not a change here.
@@ -26,7 +27,7 @@ dispatch"); that difference is the Cortex's, not a change here.
 - review-at: 2026-09-04T08:00Z     # stated by the human AT DISPATCH
 - shift: night                     # free-text label the human gives it
 - lane: any
-- integration: yes            # optional, at dispatch: build the review's integration worktree at collect
+- integration: yes            # legacy: read only by the retired collect step
 - review-minutes-planned: 42
 - usage-window-at-dispatch: <5h %, weekly %, opus %>
 - heart-ack:                  # the reason set acknowledged FOR THIS SHIFT
@@ -35,23 +36,30 @@ dispatch"); that difference is the Cortex's, not a change here.
   - <member>: <what it may legitimately change, e.g. "merges into PyAutoArray and may stale release validation">
 - members:
   - <slug>: <prompt path> — <tier> — <review-minutes> — <outcome>
-- outcomes:                   # filled at collect, from the ledger only
+- outcomes:                   # legacy: filled by the retired collect step, from the ledger only
   - <slug>: merged | rejected-at-review | carried | unreviewed
-- merge-order:                # filled at collect — advice for /prm, not an action
+- merge-order:                # legacy: filled by the retired collect step — advice for /prm, not an action
   - 1. <slug> — library (PyAutoFit) — before its workspace dependants
-- collected: 2026-09-04T08:30Z
+- collected: 2026-09-04T08:30Z     # legacy
 - reviewed-at: 2026-09-04T08:30Z   # when they actually sat down
-- usage-window-at-collect: <5h %, weekly %, opus %>
+- usage-window-at-collect: <5h %, weekly %, opus %>   # legacy
 - delivered: <n>/<n>
 - packet: batches/packets/<YYYY-MM-DD>-<slot>.html
-- integration-root: ~/Code/PyAutoLabs-wt/integration-<YYYY-MM-DD>-<slot> — integration/<slot>; 3 clean, 1 conflicted
-- integration-remote: PyAutoFit:integration/<slot>, PyAutoArray:integration/<slot>-2   # only after --push
+- integration-root: ~/Code/PyAutoLabs-wt/integration-<YYYY-MM-DD>-<slot> — integration/<slot>; 3 clean, 1 conflicted   # legacy
+- integration-remote: PyAutoFit:integration/<slot>, PyAutoArray:integration/<slot>-2   # legacy
 - sweep-after: 2026-09-11        # when the branch sweep may delete those refs
 - review: batches/reviews/<YYYY-MM-DD>-<slot>.md
 - review-minutes-actual: <n>
 - notes: |
     What actually happened. Anything that stalled, and why.
 ```
+
+Fields marked `legacy` were written by `pyauto-brain batch collect`, the manual
+step that scored a dispatched batch into a review packet. `batch collect` was
+retired in PyAutoBrain#701: a shift is now a brief the watcher runs, and its
+digest is the report. Nothing writes those fields any more. Older records keep
+them, and the readers that still use them (`batch plan` on `outcomes:`, the
+branch sweep on `sweep-after:`) read them from those records.
 
 ## The four fields that are easy to get wrong
 
@@ -69,16 +77,16 @@ standing one, which doctrine voids.
 **`outcomes:` is the accounting; the member line is the evidence.** The member
 line's last column says what was *observed* ("PyAutoFit#1554, 4/4 checks
 green"); `outcomes:` says what *became of it*, in one of four words. `batch
-collect` fills it from the ledger and from nothing else — a `complete/` record
+collect` filled it, until it was retired, from the ledger and from nothing else — a `complete/` record
 naming the member (its `- batch:` line cites the slot and the member slug, or
 the record is filed under the member's own name) is `merged`; a review `decision:` that rejected it is
 `rejected-at-review`; a row still in `active.md` is `carried`; anything else is
 `unreviewed`. In that order, because a rejected member is still in `active.md`.
-No `gh` call is made to fill it, and none should be: the organism's own files
+No `gh` call was made to fill it, and none should be: the organism's own files
 are what a record is allowed to claim. This exists because all nine members of
 the 2026-08-31-pm slot merged and every one of them is recorded
 `decision: UNREVIEWED` — the completion records knew, and nothing read them.
-The next `batch plan` reads the `carried` members first: they are already
+`batch plan` still reads the `carried` members of the previous record first: they are already
 costing the human review-minutes in the slot being planned.
 
 **`merge-order:` is advice, and it is the only order the record can give.**
@@ -102,35 +110,26 @@ sentence where the path goes — are left alone.
 
 **`packet:` is the page the human actually reviewed, archived.** One
 self-contained HTML file per slot under `batches/packets/` (see that folder's
-`AGENTS.md`), written at dispatch with PENDING members and refreshed at
-collect. It is the historical record of what the human was shown; a batch
+`AGENTS.md`). The retired collect step wrote it at dispatch with PENDING members
+and refreshed it at collect; under a shift brief the page is opt-in
+(`packet: yes`) and the watcher writes it as `digest.html` with the digest. It is the historical record of what the human was shown; a batch
 whose packet was never archived cannot be audited against what they ruled on.
 
-**`integration:` is opt-in, and it is local.** `yes` asks the collect to build
-one throwaway worktree root for the slot merging every member's head branch per
-repo, so the reviewer can run the whole batch together. It costs git time, not
-tokens, and it is off by default because most slots do not need it. Nothing is
-pushed, nothing is resolved: a member whose merge conflicts is left out of that
-repo's branch and named with the conflicting paths — that report is the point,
-not a failure. `collect --integration` turns it on for one run without editing
-the record, and what happened comes back as `integration-root:`, a key of its
-own so the `yes` you wrote here survives.
+**`integration:`, `integration-root:` and `integration-remote:` are history.**
+The retired collect step could build one throwaway worktree root per slot that
+merged every member's head branch per repo (`integration: yes`, or
+`collect --integration` for one run), and could publish those merges as
+`integration/<slot>` refs (`--push`), listed under `integration-remote:`.
+Nothing builds or pushes an integration preview now, so no new record carries
+these keys.
 
-**`integration-remote:` is what was published; `sweep-after:` is when it
-dies.** Neither appears unless someone typed `collect --integration --push` —
-the record cannot ask for a push, only for the local preview. `integration-remote:`
-lists one `<Repo>:<branch>` per repo that got a ref, under the repo name the
-branch sweep matches on, and it is **rewritten on every push**: the current
-publication is the truth, and a stale entry would send the sweep after a ref
-that no longer exists. A `-N` suffix (`integration/<slot>-2`) means that
-refresh was not a fast-forward of what was already on origin — nothing was
-forced, the earlier ref is untouched, and the new state went out under a new
-name. `sweep-after:` is `review-at:` plus a week, **written once and yours to
-change**: `bin/branch_sweep.sh` protects an `integration/*` ref until that date
-and may delete it on or after the following day, and with no date — or no
-record naming the branch — it is protected outright. Edit the date, do not
-delete the key: without it the ref lives forever, because a merge preview can
-never be proven contained in `main`.
+**`sweep-after:` still governs the refs already published.** It is
+`review-at:` plus a week, written once and yours to change:
+`bin/branch_sweep.sh` protects an `integration/*` ref until that date and may
+delete it on or after the following day, and with no date — or no record
+naming the branch — it is protected outright. Edit the date, do not delete the
+key: without it the ref lives forever, because a merge preview can never be
+proven contained in `main`.
 
 **`review:` is what the human said, verbatim.** The markdown their packet-page
 submission produced (or the orchestrator transcribed), one file per slot under
@@ -308,8 +307,9 @@ nothing in it was dispatched, and `lifecycle.py` does not read it as one.
 
 ### Digest
 
-Appended to the record at collect, under a `## Digest` heading, and **posted
-once** as a comment on the shift's `issue:`. The record plus that comment is
+Appended to the record by the watcher's first tick after `review-at:`, under
+a `## Digest` heading, and **posted once** as a comment on the shift's
+`issue:`. The record plus that comment is
 the review surface; the HTML packet is written only when `packet: yes`.
 
 ```markdown

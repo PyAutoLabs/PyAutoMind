@@ -486,7 +486,8 @@ history unattended will not record it.
   dashboard shows a read-only ★ and rank `#n` on each queued task (PyAutoBrain#640,
   which removed the earlier issue-driven input path of PyAutoMind#565).
 - **`batches/<YYYY-MM-DD>-<am|pm>.md`** — one record per dispatched batch,
-  written at dispatch and appended at collection. Schema and the three fields
+  written at dispatch (the shift brief), with the digest appended after
+  `review-at:`. Schema and the three fields
   that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).
 
 ### Watching a shift: the cockpit

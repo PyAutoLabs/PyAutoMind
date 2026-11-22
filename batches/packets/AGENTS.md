@@ -12,10 +12,12 @@ Rules (2026-08-31):
 - **Self-contained means self-contained.** Figures are embedded as data URIs,
   styles and script are inline; the archive must render identically in ten
   years with no external fetch. Keep a page under ~5 MB; downsize figures.
-- **Written at dispatch, refreshed at collect.** The page opens with every
-  member present — overnight runs as PENDING entries — and carries
-  `generated:` / `refreshed:` stamps. The morning collect fills the PENDING
-  members in, normally while the human is already reading the finished ones.
+- **Written at dispatch, refreshed at collect (retired flow).** The pages in
+  this folder open with every member present — overnight runs as PENDING
+  entries — and carry `generated:` / `refreshed:` stamps; the morning collect
+  filled the PENDING members in. That collect step was retired in
+  PyAutoBrain#701. Under a shift brief the page is opt-in (`packet: yes`) and
+  the watcher writes it once, as `digest.html`, with the digest.
 - **Never rewritten after the review is submitted.** The archived page plus
   the `batches/reviews/` file together are the audit pair: what was shown,
   what was ruled. A correction gets a new dated page, not an edit.

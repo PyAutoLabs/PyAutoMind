@@ -1,7 +1,11 @@
 # Review-packet page template
 
-Spec for emitting a slot-review page (the surface a `batch collect` — or the session driving one —
-hands the human). Reference implementation: `PyAutoMind/batches/packets/2026-08-31-am.html`.
+Spec for the slot-review pages archived in this folder. They were the surface `batch collect` —
+or the session driving one — handed the human. `batch collect` was retired in PyAutoBrain#701:
+a shift is now a brief the watcher runs, and its digest is the report. Under a brief the HTML page
+is opt-in (`packet: yes`) and the watcher writes it as `digest.html`. This spec stays for reading
+the archived pages and for any page written by hand. Reference implementation:
+`PyAutoMind/batches/packets/2026-08-31-pm.html`.
 
 ## File
 
