@@ -1427,7 +1427,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/docs_in_pyautomind_and_pyautoheart_still_describ.md">Docs in PyAutoMind and PyAutoHeart still describe the retired batch collect</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/596">issue #596</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/docs_in_pyautomind_and_pyautoheart_still_describ.md">Docs in PyAutoMind and PyAutoHeart still describe the retired batch collect</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/596">issue #596</a> — issued 2026-11-22 — shipped (PRs open; merge is the human's)</summary>
 
 ```
 Use the start-dev skill. active/docs_in_pyautomind_and_pyautoheart_still_describ.md
