@@ -1,5 +1,20 @@
 # Codex execution backend for the shift orchestrator
 
+Implemented opt-in Codex workers while retaining Claude defaults, scheduling, Mind single-writer ownership, questions, expiry, recovery and independent Opus reviews. Added durable process supervision, restart-safe reservations, usage accounting, cancellation, schema validation and local preflight/smoke instructions.
+
+Merged on 2026-11-22 under explicit human /prm:
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/713 — 237459f07665b7999c8f20b89cc01bfef4a28305
+- https://github.com/PyAutoLabs/PyAutoMind/pull/599 — 68985fb02007491e1b4bb584917ab3a5e7362e9c
+- Issue https://github.com/PyAutoLabs/PyAutoBrain/issues/712 closed as completed.
+
+Validation: Brain 2,426 passed / 78 skipped; Mind 1,056 passed; independent implementation review CLEAN. Exact-head CI verdict GREEN for both: Brain three successful jobs; Mind two successful jobs and named skipped Spawn Drift / drift. Both feature heads are proven ancestors of main in unshallowed clones. Published scoped Heart was GREEN at shipping (2026-11-22T18:27:36Z).
+
+Live adoption remains pending: run the documented local preflight, explicit no-op smoke, then one approved no-merge pilot. The cloud environment lacks the Claude login needed for Opus reviews. No live model smoke, shift or timer was launched. This closes implementation and merge scope only.
+
+## Original prompt
+
+# Codex execution backend for the shift orchestrator
+
 Type: feature
 Target: PyAutoBrain
 Repos:
