@@ -114,12 +114,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1789
 - issued: 2026-11-22
 - session: Codex desktop, approved six-bug review batch, distinct feature worktrees
-- status: library-dev
+- status: awaiting-merge (PRs open for human review)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/grid-factor-results
 - repos:
   - PyAutoFit: feature/grid-factor-results
 - prompt: active/grid_search_factor_graph_make_result_keyerror.md
 - tier: supervised — human review requested, leave PRs open
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1791
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1791
 
 ## mixed-galaxy-light
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/743

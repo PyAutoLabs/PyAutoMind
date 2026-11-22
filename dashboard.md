@@ -15,7 +15,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 294 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 0 |
+| [Pending release](#pending-release) | 1 |
 
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
@@ -1451,7 +1451,7 @@ Use the start-dev skill. active/galaxy_image_dict_mixed_galaxy_overwrites_ordina
 
 </details>
 
-<details><summary>📋 <a href="active/grid_search_factor_graph_make_result_keyerror.md">SearchGridSearch over a FactorGraphModel crashes in make_result</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1789">issue #1789</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/grid_search_factor_graph_make_result_keyerror.md">SearchGridSearch over a FactorGraphModel crashes in make_result</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1789">issue #1789</a> — issued 2026-11-22 — awaiting-merge (PRs open for human review) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1791">PyAutoFit#1791</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/grid_search_factor_graph_make_result_keyerror.md
@@ -3426,7 +3426,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-_(nothing pending release)_
+**PyAutoFit**
+
+- [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `active/grid_search_factor_graph_make_result_keyerror.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
