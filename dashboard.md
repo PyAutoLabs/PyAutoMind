@@ -1401,7 +1401,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/codex_orchestrator.md">Codex execution backend for the shift orchestrator</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/712">issue #712</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/codex_orchestrator.md">Codex execution backend for the shift orchestrator</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/712">issue #712</a> — issued 2026-11-22 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/713">PyAutoBrain#713</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/599">PyAutoMind#599</a></summary>
 
 ```
 Use the start-dev skill. active/codex_orchestrator.md
