@@ -200,6 +200,7 @@ only while a brief is open (`policy/shift_watcher.md`).
   - token-budget: <n>                # tokens the shift may spend, all sessions
   - max-workers: 4                   # optional: concurrent workers (default 4)
   - max-sessions: 8                  # optional: sessions this shift, all told (default 8)
+  - worker-backend: claude           # optional: claude (default) | codex
   - worker-mode: auto                # optional: auto (default) | dontAsk | acceptEdits — never bypassPermissions
   - sandbox: no                      # optional: yes marks a test shift
   - shadow: no                       # optional: yes plans and digests, spawns nothing
@@ -297,6 +298,26 @@ parks it for the digest instead of leaving it waiting. `bypassPermissions` is
 refused. `sandbox: yes` marks a test shift. (Until phase 3c it was the only
 brief a real worker could run under; the one-Mind-writer path lifted that — the
 workers' Mind changes now reach `main` only through the orchestrator.)
+
+`worker-backend:` selects execution only: `claude` remains the default for
+existing briefs; `codex` uses the local Codex CLI on Linux/WSL. Codex briefs
+must also declare `codex-model: <model-id>`; `codex-effort:` accepts `low`,
+`medium` (default), `high` or `xhigh`. Use a model/effort supported by the
+installed CLI/account. Codex accepts `worker-mode: auto` (automatic approval
+review) or `dontAsk` (never ask); both retain workspace-write sandboxing.
+`acceptEdits` has no Codex equivalent and is refused. No API billing fallback
+or automatic hook trust is enabled.
+
+Codex workers use the same task, proof and question contracts. Their local
+supervisor supplies liveness; unavailable/corrupt state holds the lease rather
+than declaring a crash. `/kill` targets that supervisor; the existing retry
+and `/drop` rules remain unchanged. Codex's pre-ship review runs in a fresh
+Opus CLI session through the accounted review helper, and close-outs remain
+Opus. Thus **both CLI logins are required even with `merge-cap: 0`**. Reviews
+are included in the worker's token accounting; live/incomplete usage retains
+its reservation. Backend identity is stored per lease, so old sessions are
+observed using their own backend. Preparation and the explicit no-op smoke
+check are in PyAutoBrain `docs/codex_orchestrator.md`.
 
 **Calibration rule.** A new brief is not accepted while the previous record
 lacks `review-minutes-actual:`. The planned figure is a seed; the 2026-08-31
