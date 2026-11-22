@@ -85,7 +85,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/596
 - issued: 2026-11-22
 - session: claude-code desktop (WSL) worker, ~/Code/PyAutoLabs session
-- status: library-dev
+- status: shipped (PRs open; merge is the human's)
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoMind/pull/597
+  - https://github.com/PyAutoLabs/PyAutoHeart/pull/362
 - worktree: /home/jammy/Code/PyAutoLabs-wt/batch-collect-docs
 - repos:
   - PyAutoMind: feature/batch-collect-docs
