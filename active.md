@@ -127,7 +127,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/743
 - issued: 2026-11-22
 - session: Codex desktop, approved six-bug review batch, distinct feature worktrees
-- status: library-dev
+- status: awaiting-merge (PRs open for human review)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/mixed-galaxy-light
 - repos:
   - PyAutoGalaxy: feature/mixed-galaxy-light
@@ -136,24 +136,29 @@
 - tier: supervised — human review requested, leave PRs open
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/877
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/877
 
 ## truncated-tail-evidence
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1790
 - issued: 2026-11-22
 - session: Codex desktop, approved six-bug review batch, distinct feature worktrees
-- status: library-dev
+- status: awaiting-merge (PRs open for human review)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/truncated-tail-evidence
 - repos:
   - PyAutoFit: feature/truncated-tail-evidence
   - autofit_workspace_test: feature/truncated-tail-evidence
 - prompt: active/truncated_normal_log_partition_tail_underflow.md
 - tier: supervised — human review requested, leave PRs open
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1792
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1792
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/120
 
 ## database-dataset-fits
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/744
 - issued: 2026-11-22
 - session: Codex desktop, approved six-bug review batch, distinct feature worktrees
-- status: library-dev
+- status: awaiting-merge (PRs open for human review)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/database-dataset-fits
 - repos:
   - PyAutoGalaxy: feature/database-dataset-fits
@@ -162,6 +167,8 @@
 - tier: supervised — human review requested, leave PRs open
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/878
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/878
 
 ## euclid-nautilus-batch
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/138
