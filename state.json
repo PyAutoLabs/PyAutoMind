@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-22T18:26:58Z",
+  "updated": "2026-11-22T18:31:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,6 +24,12 @@
       "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136",
       "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "SLaM simultaneous subhalo grid search fits last band only \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/pull/684",
+      "prompt": "Use the start-dev skill. active/slam_simultaneous_subhalo_grid_search_fits_last.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
       "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
     }
   ]
 }
