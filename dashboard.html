@@ -333,7 +333,7 @@ Use intake to record new intent and the established development workflow for acc
 Keep track of decisions and outstanding questions throughout this conversation. After changes, report what was recorded, where it lives and what remains to do.
 
 Work on GitHub:
-- Open Mind repository: https://github.com/PyAutoLabs/PyAutoMind</textarea></details><div class="orchestration-freshness" data-freshness="grey"><details data-freshness-stamp data-refreshed-at="2026-11-22T13:48:58Z"><summary><span data-freshness-label>Last updated 2026-11-22 13:48:58 UTC</span></summary><time datetime="2026-11-22T13:48:58Z">2026-11-22 13:48:58 UTC</time></details><a data-refresh-link href="https://github.com/PyAutoLabs/PyAutoMind/actions/workflows/dashboard_refresh.yml" title="Open the dashboard refresh controls">↻ Update</a></div></div><p class="orchestration-status" role="status" aria-live="polite"></p></section>
+- Open Mind repository: https://github.com/PyAutoLabs/PyAutoMind</textarea></details><div class="orchestration-freshness" data-freshness="grey"><details data-freshness-stamp data-refreshed-at="2026-11-22T14:57:39Z"><summary><span data-freshness-label>Last updated 2026-11-22 14:57:39 UTC</span></summary><time datetime="2026-11-22T14:57:39Z">2026-11-22 14:57:39 UTC</time></details><a data-refresh-link href="https://github.com/PyAutoLabs/PyAutoMind/actions/workflows/dashboard_refresh.yml" title="Open the dashboard refresh controls">↻ Update</a></div></div><p class="orchestration-status" role="status" aria-live="polite"></p></section>
 <nav class="board-nav" style="--nav-columns:8" aria-label="Board sections"><a class="board-nav-card" href="#autopilot"><span class="board-nav-count">8</span><span class="board-nav-label">Autopilot</span></a><a class="board-nav-card" href="#start-here"><span class="board-nav-count">23</span><span class="board-nav-label">Start here</span></a><a class="board-nav-card" href="#epics"><span class="board-nav-count">25</span><span class="board-nav-label">Epics</span></a><a class="board-nav-card" href="#in-flight"><span class="board-nav-count">6</span><span class="board-nav-label">In flight</span></a><a class="board-nav-card" href="#planned"><span class="board-nav-count">10</span><span class="board-nav-label">Planned</span></a><a class="board-nav-card" href="#backlog"><span class="board-nav-count">298</span><span class="board-nav-label">Backlog</span></a><a class="board-nav-card" href="#recent"><span class="board-nav-count">50</span><span class="board-nav-label">Recent</span></a><a class="board-nav-card" href="#pending-release"><span class="board-nav-count">0</span><span class="board-nav-label">Pending release</span></a></nav>
 
 <details class="board-section"><summary><h2>Looks shipped — confirm</h2></summary><div class="board-section-body"><a id="looks-shipped"></a>
@@ -341,33 +341,33 @@ Work on GitHub:
 <div class="task"><button class="copy" data-cmd="`draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
 
 Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by fbe9fd7 2026-11-20 Merge pull request #698 from PyAutoLabs/feature/cortex-development-split (Filed 2026-11-17)
+- witness-exists: Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 58372ad 2026-11-22 Merge pull request #699 from PyAutoLabs/ccr-8a668897-mkcl3u (Filed 2026-11-17)
 
 1. Check each cited line: open the commit / definition / record and confirm it
    really is THIS draft's work, not a neighbour's.
 2. If it shipped, close it (write the record body first; the command is a dry
    run without --apply):
-   python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-20 --from-file &lt;record-body.md&gt; --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply
+   python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-22 --from-file &lt;record-body.md&gt; --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply
 3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md — 2026-11-20 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
+   echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md — 2026-11-22 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
 4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
 
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_batch_brief</code>, defined in PyAutoBrain tests/test_batch_brief.py:1; added by fbe9fd7 2026-11-20 Merge pull…</span></p></div>
+Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_batch_brief</code>, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 58372ad 2026-11-22 Merge pull…</span></p></div>
 <div class="task"><button class="copy" data-cmd="`draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
 
 Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by fbe9fd7 2026-11-20 Merge pull request #698 from PyAutoLabs/feature/cortex-development-split (Filed 2026-11-17) (+1 more)
+- witness-exists: Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 58372ad 2026-11-22 Merge pull request #699 from PyAutoLabs/ccr-8a668897-mkcl3u (Filed 2026-11-17) (+1 more)
 
 1. Check each cited line: open the commit / definition / record and confirm it
    really is THIS draft's work, not a neighbour's.
 2. If it shipped, close it (write the record body first; the command is a dry
    run without --apply):
-   python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-20 --from-file &lt;record-body.md&gt; --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply
+   python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-22 --from-file &lt;record-body.md&gt; --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply
 3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md — 2026-11-20 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
+   echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md — 2026-11-22 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
 4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
 
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md">M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no <code>pgrep</code> waits…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_orchestrator_mind_writer</code>, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by fbe9fd7…</span></p></div>
+Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md">M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no <code>pgrep</code> waits…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_orchestrator_mind_writer</code>, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 58372ad…</span></p></div>
 </div></details><details class="board-section"><summary><h2>Autopilot</h2><span class="section-badge">8 queued · 0 questions</span></summary><div class="board-section-body"><a id="autopilot"></a>
 <h3 id="goals">Goals</h3>
 <ol><li>Fix 3 bugs in the PyAutoMind dashboard in every orchestrator run</li></ol>
