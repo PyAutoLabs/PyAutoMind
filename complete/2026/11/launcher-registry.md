@@ -1,3 +1,14 @@
+## launcher-registry
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/710
+- completed: 2026-11-22
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/711
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/598
+- The nine pure launcher scripts (`docs`, `clone`, `workspace`, `profiling`, `eyes`, `community`, `cortex`, `batch`, `review`) are replaced by an `AGENT_PY` registry entry in `bin/pyauto-brain` with one `exec python3` branch; `help <verb>` still prints the module's `AGENTS.md`; CLI output unchanged. `review/AGENTS.md` now names `_review.py`.
+- Mind: `scripts/repos_sync.py` drops the tenant-firewall allow-list keys for the deleted `clone.sh` and `profiling.sh` (the `_clone.py` / `_profiling.py` keys stay). Merge order was Brain #711 first, then #598's firewall leg re-run green, then merge.
+- Human-accepted at /prm: Heart STALE at ship time was this network's TLS timeouts only.
+
+## Original prompt
+
 # Replace the nine pure launcher scripts with a registry entry
 
 Type: refactor

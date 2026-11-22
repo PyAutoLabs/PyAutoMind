@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2364 records across 11 buckets.
+2366 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -257,6 +257,7 @@ markers; everything below GENERATED is rebuilt.
 - [lane-fail-closed](2026/11/lane-fail-closed.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
+- [launcher-registry](2026/11/launcher-registry.md)
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…
 - [lifecycle-p3-designation-proposals](2026/11/lifecycle-p3-designation-proposals.md) — decided and shipped — the human approved all 39 designations (datacube/delaunay gpu_a100 held provisional); Py…
 - [likelihood-breakdown-cells-pdet](2026/11/likelihood-breakdown-cells-pdet.md)
@@ -320,6 +321,7 @@ markers; everything below GENERATED is rebuilt.
 - [numba-num-threads-pin-delaunay-nn](2026/11/numba-num-threads-pin-delaunay-nn.md)
 - [old-branch-workflow-secret-exposure](2026/11/old-branch-workflow-secret-exposure.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
+- [one-repos-yaml-reader](2026/11/one-repos-yaml-reader.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
 - [plot-grid-small-datasets-indexes](2026/11/plot-grid-small-datasets-indexes.md)
 - [plot-rst-missing-exports](2026/11/plot-rst-missing-exports.md)

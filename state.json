@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 8 in flight",
-  "updated": "2026-11-22T18:26:06Z",
+  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
+  "updated": "2026-11-22T18:26:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,18 +24,6 @@
       "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136",
       "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "One reader for repos.yaml instead of about ten \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/709",
-      "prompt": "Use the start-dev skill. active/one_reader_for_repos_yaml_instead_of.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Replace the nine pure launcher scripts with a registry entry \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/711",
-      "prompt": "Use the start-dev skill. active/replace_the_nine_pure_launcher_scripts_with.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +114,18 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
+      "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
+      "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
     }
   ]
 }
