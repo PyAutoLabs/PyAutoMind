@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-22T18:16:52Z",
+  "updated": "2026-11-22T18:17:36Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,6 +48,12 @@
       "text": "Remove what batch collect left behind in the planner and the status\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/707",
       "prompt": "Use the start-dev skill. active/remove_what_batch_collect_left_behind_in.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Replace the nine pure launcher scripts with a registry entry \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/711",
+      "prompt": "Use the start-dev skill. active/replace_the_nine_pure_launcher_scripts_with.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
       "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
     }
   ]
 }

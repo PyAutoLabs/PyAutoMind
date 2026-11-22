@@ -1466,7 +1466,7 @@ Use the start-dev skill. active/remove_what_batch_collect_left_behind_in.md
 
 </details>
 
-<details><summary>📋 <a href="active/replace_the_nine_pure_launcher_scripts_with.md">Replace the nine pure launcher scripts with a registry entry</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/710">issue #710</a> — issued 2026-11-22 — library-dev</summary>
+<details><summary>📋 <a href="active/replace_the_nine_pure_launcher_scripts_with.md">Replace the nine pure launcher scripts with a registry entry</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/710">issue #710</a> — issued 2026-11-22 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/711">PyAutoBrain#711</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/598">PyAutoMind#598</a></summary>
 
 ```
 Use the start-dev skill. active/replace_the_nine_pure_launcher_scripts_with.md
