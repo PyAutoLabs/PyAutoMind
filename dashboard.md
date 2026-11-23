@@ -19,7 +19,7 @@
 
 ## Autopilot
 
-_5 queued · 3 questions_
+_5 queued · 4 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -33,11 +33,12 @@ _5 queued · 3 questions_
 4. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 5. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (3 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
+**Questions** (4 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
 
 - Q25 — Open the Lens guard PR with the two pre-existing JIT timing failures documented, or wait for the separate cache fix? (https://github.com/PyAutoLabs/autolens_workspace_test/issues/369, today)
 - Q26 — Should this task include a coordinated PyAutoGalaxy PR to preserve the mask fingerprint through FITS reload? (https://github.com/PyAutoLabs/PyAutoArray/issues/707, today)
 - Q27 — Which subhalo should the pixelized sensitivity example inject and fit? (https://github.com/PyAutoLabs/autolens_workspace/issues/685, today)
+- Q28 — Should the cache-stats repair wait for the active PyAutoHeart #364 claim to clear, or proceed in a separate coordinated worktree? (https://github.com/PyAutoLabs/PyAutoHeart/issues/365, today)
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 4 days)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 4 days)
 - Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, 3 days)
