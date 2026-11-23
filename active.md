@@ -51,3 +51,15 @@
 - prompt: active/numba_wtilde_validation_legs_stall_nautilus.md
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
+
+## likelihood-lifecycle-p5a-nerves
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/222
+- issued: 2026-11-23
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5a-nerves
+- repos:
+  - PyAutoNerves: feature/likelihood-lifecycle-p5a-nerves
+- prompt: active/likelihood_lifecycle_p5a_nerves_environment.md
+- epic: likelihood-lifecycle (phase 5A of 5A–5H)
+- tier: judge — merge mode: human /prm

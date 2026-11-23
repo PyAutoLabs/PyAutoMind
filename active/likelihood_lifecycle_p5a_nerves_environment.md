@@ -10,7 +10,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-23
+Issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/222
 Consequence: judge
 Witness: PyAutoNerves main carries `autonerves.environment.Environment.detect()` returning gpu, gpu_name, gpu_memory_gb, cores (SLURM_CPUS_PER_TASK, then sched_getaffinity, then cpu_count), ram_gb, numba, nufftax and a site hint, each branch covered by a unit test with the environment monkeypatched; `jax_wrapper` honours `PYAUTO_SETUP=auto|cpu|gpu|<setup_id>` at import (explicit cpu/numba intents set JAX_PLATFORMS=cpu and the *_NUM_THREADS variables before JAX initialises; `auto` and unset set nothing), checked by subprocess import tests; under `JAX_ENABLE_X64=False` (and `0`) importing autonerves leaves `jax.config.read("jax_enable_x64")` False while unset still forces x64 on, checked by a subprocess test; full test suite green
 Review-minutes: 20
