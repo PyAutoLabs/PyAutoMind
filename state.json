@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-23T10:10:13Z",
+  "headline": "RED \u2014 23 picks \u00b7 5 in flight",
+  "updated": "2026-11-23T10:16:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autolens_inference/issues/73",
       "prompt": "Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Fix plot_utils docstrings that call zero_contour the critical-curve default \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
-      "prompt": "Use the start-dev skill. active/plot_utils_critical_curves_default_docstring_drift.md"
     },
     {
       "severity": "yellow",
@@ -57,12 +51,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#748 \u2014 Fix plot_utils docstrings that call zero_contour the critical-curve default",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
       "prompt": null
@@ -71,6 +59,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#746 \u2014 mixed-galaxy-light",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#748 \u2014 plot-utils-critical-curves-docstrings",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
       "prompt": null
     },
     {
@@ -126,6 +120,12 @@
       "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
       "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Physical model check when speeding up smoke tests",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
+      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     }
   ]
 }
