@@ -79,3 +79,14 @@
   - PyAutoBrain: feature/cockpit-footer-broca
 - prompt: active/cockpit_footer_broca_belongs_between_cortex_and.md
 - tier: notify
+
+## sensitivity_slam_source_pixelized_mappervalued
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
+- issued: 2026-11-23
+- session: shift worker 2026-11-23-am3 (codex:b1a928033a0d472f97e99ca81604b708)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/sensitivity-slam-source-pixelized
+- repos:
+  - autolens_workspace: feature/sensitivity-slam-source-pixelized
+- prompt: active/sensitivity_slam_source_pixelized_mappervalued.md
+- tier: glance
