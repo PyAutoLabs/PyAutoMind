@@ -96,16 +96,6 @@ the ruling on the prompt.
 - asked: 2026-11-23T11:25Z
 - worker: codex:6c263331ed1148a5bab5c2774723a66f
 
-### Q27. sensitivity_slam_source_pixelized_mappervalued — Which subhalo should the pixelized sensitivity example inject and fit?
-- task: active/sensitivity_slam_source_pixelized_mappervalued.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
-- kind: question
-- ask: Which subhalo should the pixelized sensitivity example inject and fit?
-- options: (a) Keep spherical Ludlow NFW and express the injection and fit prior using mass_at_200. · (b) Use spherical generalized NFW with the script’s explicit inner slope 2.2 and concentration 12.
-- shift: 2026-11-23-am3
-- asked: 2026-11-23T11:41Z
-- worker: codex:b1a928033a0d472f97e99ca81604b708
-
 ### Q28. smoke_cache_stats_warnings_nameerror — Should the cache-stats repair wait for the active PyAutoHeart #364 cl…
 - task: active/smoke_cache_stats_warnings_nameerror.md
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
@@ -341,6 +331,19 @@ the ruling on the prompt.
 - answered: 2026-11-23T16:59Z by Jammy2211 (issue)
 - answer: go with the recommendation
 - answer-comment: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7107940971
+
+### Q27. sensitivity_slam_source_pixelized_mappervalued — Which subhalo should the pixelized sensitivity example inject and fit?
+- task: active/sensitivity_slam_source_pixelized_mappervalued.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
+- kind: question
+- ask: Which subhalo should the pixelized sensitivity example inject and fit?
+- options: (a) Keep spherical Ludlow NFW and express the injection and fit prior using mass_at_200. · (b) Use spherical generalized NFW with the script’s explicit inner slope 2.2 and concentration 12.
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:41Z
+- worker: codex:b1a928033a0d472f97e99ca81604b708
+- answered: 2026-11-23T16:59Z by Jammy2211 (issue)
+- answer: use Keep the declared spherical Ludlow NFW model. Use its mass_at_200 parameter, with a fixed injection of 10⁹ solar masses and a log-uniform fit prior from 10⁶ to 10¹² solar masses, following the sensitivity start_here example's parameterization.
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/685#issuecomment-7107827909
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

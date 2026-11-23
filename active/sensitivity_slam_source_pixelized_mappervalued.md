@@ -32,3 +32,6 @@ the class moved or was renamed in PyAutoArray/PyAutoLens; the sensitivity mappin
 `visualize`/`mapper_valued` block is the call site. Check the parametric sibling
 `slam_source_parametric.py` too: the same record notes a separate pre-existing
 `'Model' object has no attribute 'centre'` failure there.
+
+## Answers from the human
+- Q27 (2026-11-23, shift 2026-11-23-am3 question on autolens_workspace#685): use Keep the declared spherical Ludlow NFW model. Use its mass_at_200 parameter, with a fixed injection of 10⁹ solar masses and a log-uniform fit prior from 10⁶ to 10¹² solar masses, following the sensitivity start_here example's parameterization. https://github.com/PyAutoLabs/autolens_workspace/issues/685#issuecomment-7107827909
