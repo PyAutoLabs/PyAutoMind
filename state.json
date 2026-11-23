@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
-  "updated": "2026-11-23T11:42:56Z",
+  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
+  "updated": "2026-11-23T11:45:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,6 +24,12 @@
       "text": "`subhalo/sensitivity/slam_source_pixelized.py` fails on main: `al.MapperValued` no longer exists \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/685",
       "prompt": "Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md"
+    },
+    {
+      "severity": "red",
+      "text": "Smoke cache-stats step fails with NameError: warnings \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/issues/365",
+      "prompt": "Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md"
     },
     {
       "severity": "red",
@@ -120,12 +126,6 @@
       "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
       "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
     }
   ]
 }
