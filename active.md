@@ -105,7 +105,8 @@
 ## colab-gate-delete-hmf
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/364
 - session: shift worker 2026-11-23-am3 (codex:863d5e51164847c3aeac683a8ff736d4)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/366
 - worktree: ~/Code/PyAutoLabs-wt/colab-gate-delete-hmf
 - prompt: active/colab_gate_delete_hmf_after_next_release.md
 - repos:
