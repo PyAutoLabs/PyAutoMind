@@ -56,7 +56,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/222
 - issued: 2026-11-23
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/223
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5a-nerves
 - repos:
   - PyAutoNerves: feature/likelihood-lifecycle-p5a-nerves
