@@ -24,3 +24,6 @@ proxy, which crossed zero for the interferometer script after PyAutoArray#683:
 
 They pass today. Check each; where it uses the net gap, assert the inversion's
 log-det terms directly, matching #362. Ideally share one helper.
+
+## Answers from the human
+- Q25 (2026-11-23, shift 2026-11-23-am3 question on autolens_workspace_test#369): Open the Lens PR now and document the two existing JIT timing failures. https://github.com/PyAutoLabs/autolens_workspace_test/issues/369#issuecomment-7108088891

@@ -30,3 +30,6 @@ Remove the stray line (the step parses no workspace scripts), or import
 Python blocks in workflows are at least compiled and checked for undefined
 names. Split out of PyAutoHeart#330 (the corrective arcticpy fix) to keep that
 PR to a single scope.
+
+## Answers from the human
+- Q28 (2026-11-23, shift 2026-11-23-am3 question on PyAutoHeart#365): Resume the cache-statistics repair once the existing PyAutoHeart #364 claim clears through the approved PR merge. https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7108095009

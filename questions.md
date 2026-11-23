@@ -86,26 +86,6 @@ the ruling on the prompt.
 - asked: 2026-11-23T09:59Z
 - worker: readiness pass
 
-### Q25. pr504_sibling_guards_net_gap_proxy — Open the Lens guard PR with the two pre-existing JIT timing failures…
-- task: active/pr504_sibling_guards_net_gap_proxy.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/369
-- kind: question
-- ask: Open the Lens guard PR with the two pre-existing JIT timing failures documented, or wait for the separate cache fix?
-- options: (a) Open the Lens PR with both timing failures documented · (b) Wait for the separate JIT-cache fix, then rerun the scripts
-- shift: 2026-11-23-am3
-- asked: 2026-11-23T11:25Z
-- worker: codex:6c263331ed1148a5bab5c2774723a66f
-
-### Q28. smoke_cache_stats_warnings_nameerror — Should the cache-stats repair wait for the active PyAutoHeart #364 cl…
-- task: active/smoke_cache_stats_warnings_nameerror.md
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
-- kind: question
-- ask: Should the cache-stats repair wait for the active PyAutoHeart #364 claim to clear, or proceed in a separate coordinated worktree?
-- options: (a) Resume once #364 releases PyAutoHeart · (b) Authorize separate coordinated worktrees
-- shift: 2026-11-23-am3
-- asked: 2026-11-23T11:46Z
-- worker: codex:5fc344efb14046e589cd52ab4d7cf254
-
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
@@ -344,6 +324,32 @@ the ruling on the prompt.
 - answered: 2026-11-23T16:59Z by Jammy2211 (issue)
 - answer: use Keep the declared spherical Ludlow NFW model. Use its mass_at_200 parameter, with a fixed injection of 10⁹ solar masses and a log-uniform fit prior from 10⁶ to 10¹² solar masses, following the sensitivity start_here example's parameterization.
 - answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/685#issuecomment-7107827909
+
+### Q25. pr504_sibling_guards_net_gap_proxy — Open the Lens guard PR with the two pre-existing JIT timing failures…
+- task: active/pr504_sibling_guards_net_gap_proxy.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/369
+- kind: question
+- ask: Open the Lens guard PR with the two pre-existing JIT timing failures documented, or wait for the separate cache fix?
+- options: (a) Open the Lens PR with both timing failures documented · (b) Wait for the separate JIT-cache fix, then rerun the scripts
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:25Z
+- worker: codex:6c263331ed1148a5bab5c2774723a66f
+- answered: 2026-11-23T17:03Z by Jammy2211 (chat)
+- answer: Open the Lens PR now and document the two existing JIT timing failures.
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace_test/issues/369#issuecomment-7108088891
+
+### Q28. smoke_cache_stats_warnings_nameerror — Should the cache-stats repair wait for the active PyAutoHeart #364 cl…
+- task: active/smoke_cache_stats_warnings_nameerror.md
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
+- kind: question
+- ask: Should the cache-stats repair wait for the active PyAutoHeart #364 claim to clear, or proceed in a separate coordinated worktree?
+- options: (a) Resume once #364 releases PyAutoHeart · (b) Authorize separate coordinated worktrees
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:46Z
+- worker: codex:5fc344efb14046e589cd52ab4d7cf254
+- answered: 2026-11-23T17:03Z by Jammy2211 (chat)
+- answer: Resume the cache-statistics repair once the existing PyAutoHeart #364 claim clears through the approved PR merge.
+- answer-comment: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7108095009
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
