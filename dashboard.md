@@ -33,8 +33,9 @@ _LIVE · 0 in progress_
 4. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 5. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (0 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
+**Questions** (1 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
 
+- Q25 — Open the Lens guard PR with the two pre-existing JIT timing failures documented, or wait for the separate cache fix? (https://github.com/PyAutoLabs/autolens_workspace_test/issues/369, today)
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 4 days)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 4 days)
 - Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, 3 days)
@@ -1346,7 +1347,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/cockpit_footer_broca_belongs_between_cortex_and.md">Cockpit footer: Broca belongs between Cortex and Memory</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/716">issue #716</a> — issued 2026-11-23 — library-dev</summary>
+<details><summary>📋 <a href="active/cockpit_footer_broca_belongs_between_cortex_and.md">Cockpit footer: Broca belongs between Cortex and Memory</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/716">issue #716</a> — issued 2026-11-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/717">PyAutoBrain#717</a></summary>
 
 ```
 Use the start-dev skill. active/cockpit_footer_broca_belongs_between_cortex_and.md
@@ -1362,7 +1363,7 @@ Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md
 
 </details>
 
-<details><summary>📋 <a href="active/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/369">issue #369</a> — issued 2026-11-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/369">issue #369</a> — issued 2026-11-23 — awaiting-input — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/138">autogalaxy_workspace_test#138</a></summary>
 
 ```
 Use the start-dev skill. active/pr504_sibling_guards_net_gap_proxy.md

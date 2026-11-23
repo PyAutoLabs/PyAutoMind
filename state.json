@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-23T11:05:28Z",
+  "updated": "2026-11-23T11:25:32Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,18 @@
       "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autolens_inference/issues/73",
       "prompt": "Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md"
+    },
+    {
+      "severity": "red",
+      "text": "Harden the sibling PR #504 non-vacuity guards (net fom\u2212logL gap proxy) \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/138",
+      "prompt": "Use the start-dev skill. active/pr504_sibling_guards_net_gap_proxy.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Cockpit footer: Broca belongs between Cortex and Memory \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/717",
+      "prompt": "Use the start-dev skill. active/cockpit_footer_broca_belongs_between_cortex_and.md"
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
-      "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
     }
   ]
 }
