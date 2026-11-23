@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 4 |
+| [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 292 |
+| [Backlog](#backlog) | 290 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -302,20 +302,12 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 8 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
 ```
 Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood' epic. Its canonical state lives in draft/research/autolens_profiling/likelihood_lifecycle_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autonerves/likelihood_lifecycle_p5a_nerves_environment.md">Likelihood lifecycle phase 5A: PyAutoNerves environment probe, <code>PYAUTO_SETUP</code> honoured at import…</a> — autonerves · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autonerves/likelihood_lifecycle_p5a_nerves_environment.md
 ```
 
 </details>
@@ -1352,6 +1344,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5a_nerves_environment.md">Likelihood lifecycle phase 5A: PyAutoNerves environment probe, <code>PYAUTO_SETUP</code> honoured at import…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/222">issue #222</a> — issued 2026-11-23 — library-dev</summary>
+
+```
+Use the start-dev skill. active/likelihood_lifecycle_p5a_nerves_environment.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/73">issue #73</a> — issued 2026-11-20 — awaiting-input</summary>
 
 ```
@@ -1467,7 +1467,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 238 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 236 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2477,7 +2477,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 26</summary>
+<summary><b>docs</b> — 25</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2587,14 +2587,6 @@ Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 
 ```
 Use the start-dev skill. draft/docs/workspaces/fred_again_lyric_at_the_bottom_of.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve default</a> — autogalaxy · trivial · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md
 ```
 
 </details>
@@ -3046,6 +3038,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-23 | issued | <a href="active/likelihood_lifecycle_p5a_nerves_environment.md">Likelihood lifecycle phase 5A: PyAutoNerves environment probe…</a> |
 | 2026-11-20 | issued | <a href="active/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
@@ -3055,12 +3048,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
-| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
@@ -3068,7 +3061,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
-| 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 
@@ -3142,7 +3134,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-119 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3187,11 +3179,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 79 more_
+- _… and 78 more_
 
 </details>
 
-62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+61 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3240,7 +3232,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autolens/witt_wynne_solver_library_home.md — unknown theme keyword(s): euclid`
 - `draft/docs/autocti/installation_docs_arcticpy_recipe.md — unknown theme keyword(s): install, docs`
-- `draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md — unknown theme keyword(s): critical-curves`
 - `draft/test/autofit/regression_test_nautilus_as_the_ep_default.md — unknown theme keyword(s): nautilus`
 - `draft/release/arcticpy/upstream_packaging_pr.md — unknown theme keyword(s): install, upstream`
 - `draft/maintenance/autocti/cti_upkeep_epic.md — unknown theme keyword(s): infrastructure`
