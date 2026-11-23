@@ -51,3 +51,15 @@
 - prompt: active/numba_wtilde_validation_legs_stall_nautilus.md
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
+
+## pr504-sibling-guards
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/369
+- issued: 2026-11-23
+- session: shift worker 2026-11-23-am3 (codex:6c263331ed1148a5bab5c2774723a66f)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/pr504-sibling-guards
+- prompt: active/pr504_sibling_guards_net_gap_proxy.md
+- repos:
+  - autolens_workspace_test: feature/pr504-sibling-guards
+  - autogalaxy_workspace_test: feature/pr504-sibling-guards
+- tier: judge — merge mode: human /prm

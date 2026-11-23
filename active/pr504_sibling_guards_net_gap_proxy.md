@@ -10,6 +10,7 @@ Status: formalised
 Consequence: judge
 Filed: 2026-11-11
 Lane: any
+Verified: 2026-11-23 a218130e (autolens_workspace_test)
 
 Split out of autolens_workspace_test#362 (the corrective fix to
 `scripts/interferometer/model_fit.py`). These scripts carry the same "within 1
