@@ -66,6 +66,26 @@ the ruling on the prompt.
 - asked: 2026-11-20T09:30Z
 - worker: readiness pass
 
+### Q23. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_…
+- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
+- kind: ruling
+- gate: claimed
+- ask: `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
+- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-23-am2
+- asked: 2026-11-23T09:59Z
+- worker: readiness pass
+
+### Q24. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_le…
+- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
+- kind: ruling
+- gate: claimed
+- ask: `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
+- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-23-am2
+- asked: 2026-11-23T09:59Z
+- worker: readiness pass
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
