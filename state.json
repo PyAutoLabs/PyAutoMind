@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 7 in flight",
-  "updated": "2026-11-23T11:35:19Z",
+  "headline": "RED \u2014 23 picks \u00b7 8 in flight",
+  "updated": "2026-11-23T11:37:25Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,18 @@
       "text": "Harden the sibling PR #504 non-vacuity guards (net fom\u2212logL gap proxy) \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/138",
       "prompt": "Use the start-dev skill. active/pr504_sibling_guards_net_gap_proxy.md"
+    },
+    {
+      "severity": "red",
+      "text": "`subhalo/sensitivity/slam_source_pixelized.py` fails on main: `al.MapperValued` no longer exists \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/685",
+      "prompt": "Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md"
+    },
+    {
+      "severity": "red",
+      "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
+      "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }
