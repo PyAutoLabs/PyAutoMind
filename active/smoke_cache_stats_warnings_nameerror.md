@@ -10,6 +10,7 @@ Status: formalised
 Consequence: judge
 Filed: 2026-11-11
 Lane: any
+Verified: 2026-11-23 f83ff168 (PyAutoHeart)
 
 ## Evidence
 

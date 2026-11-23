@@ -110,3 +110,12 @@
 - prompt: active/colab_gate_delete_hmf_after_next_release.md
 - repos:
   - PyAutoHeart: feature/colab-gate-delete-hmf
+
+## smoke_cache_stats_warnings_nameerror
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
+- session: shift worker 2026-11-23-am3 (codex:5fc344efb14046e589cd52ab4d7cf254)
+- status: awaiting-input
+- prompt: active/smoke_cache_stats_warnings_nameerror.md
+- blocked-by: colab-gate-delete-hmf (PyAutoHeart#364)
+- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
+- next: Resolve sequencing with the live PyAutoHeart claim before worktree setup.
