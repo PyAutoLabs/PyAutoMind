@@ -63,3 +63,14 @@
 - prompt: active/likelihood_lifecycle_p5a_nerves_environment.md
 - epic: likelihood-lifecycle (phase 5A of 5A–5H)
 - tier: judge — merge mode: human /prm
+
+## plot-utils-critical-curves-docstrings
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/747
+- issued: 2026-11-23
+- session: shift worker 2026-11-23-am2 (codex:bdcf6dbbd92948e69d9dd55313e27d37)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/plot-utils-critical-curves-docstrings
+- repos:
+  - PyAutoGalaxy: feature/plot-utils-critical-curves-docstrings
+- prompt: active/plot_utils_critical_curves_default_docstring_drift.md
+- tier: notify
