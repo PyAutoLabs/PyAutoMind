@@ -3,7 +3,6 @@
 Type: bug
 Target: PyAutoNerves
 Repos:
-- PyAutoNerves
 - PyAutoFit
 - autofit_inference
 Difficulty: small
@@ -11,10 +10,12 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
-Witness: under `JAX_ENABLE_X64=False` (and `0`), importing autofit leaves `jax.config.read("jax_enable_x64")` False, and an `autofit_inference` `local_jax_cpu_fp32` row records `device.x64` False; with the variable unset, x64 is still forced on; the `preflight.py` `X64_WARNING` text matches the behaviour that actually ships, checked by a test.
+Witness: an `autofit_inference` `local_jax_cpu_fp32` row records `device.x64` False; the `preflight.py` `X64_WARNING` text matches the behaviour that actually ships, checked by a test.
 Unattended: ready
 Lane: any
 Filed: 2026-10-08
+
+**Narrowed 2026-11-23:** defect 1 (the Nerves override) is FIXED by PyAutoNerves#223 (likelihood-lifecycle 5A, record `complete/2026/11/likelihood-lifecycle-p5a-nerves.md`): `JAX_ENABLE_X64=False|0` is now respected, and unset still forces x64. What remains is the PyAutoFit `preflight.py` `X64_WARNING` text, plus checking that an autofit_inference `local_jax_cpu_fp32` row records `device.x64` False. Both need a release carrying #223 (or a source checkout of Nerves main).
 
 Found by the A3b witness (PyAutoFit#1678 / PR #1681, record `complete/2026/10/search-ext-a3b-nss-preflight.md`). Two linked defects come from one root cause.
 

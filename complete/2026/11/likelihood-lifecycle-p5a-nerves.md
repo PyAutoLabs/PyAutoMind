@@ -1,3 +1,17 @@
+## likelihood-lifecycle-p5a-nerves
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/222
+- completed: 2026-11-23
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/223
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/223
+- epic: likelihood-lifecycle (phase 5A of 5A–5H)
+- Shipped `autonerves.environment` (`Environment.detect()` for GPU, cores via SLURM_CPUS_PER_TASK → affinity → cpu_count, RAM, numba, nufftax and site; never imports JAX). Also `parse_setup_intent()`, with the grammar `auto|cpu|gpu|(jax|numba|numpy)_(cpu|gpu)_<op>_(fp64|fp32|mp)[_<transformer>]`, which 5B reuses.
+- `jax_wrapper` honours `PYAUTO_SETUP` at import: a CPU intent sets JAX_PLATFORMS=cpu and the OMP/MKL/OPENBLAS/NUMBA thread counts to the detected cores, only where unset. auto, unset and gpu are no-ops; an invalid value raises ValueError.
+- x64 bug fixed at the root: `JAX_ENABLE_X64=False|0` is respected and unset still forces x64 on. The PyAutoFit preflight text and the autofit_inference fp32 row check stay in `draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md`.
+- Gate: 375 tests; smoke 8/8 workspaces against the worktree; Heart dev GREEN; CI GREEN.
+- Trap: the laptop venv hook `00_pyauto313.pth` forces JAX_PLATFORMS=cpu and threads=1 in every Python process, overriding `PYAUTO_SETUP` thread defaults on the laptop. The subprocess tests run `python -S` for this reason.
+
+## Original prompt
+
 # Likelihood lifecycle phase 5A: PyAutoNerves environment probe, `PYAUTO_SETUP` honoured at import, and the x64 opt-out bug
 
 Type: feature
