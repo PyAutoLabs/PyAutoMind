@@ -1,3 +1,11 @@
+## latent-total-source-flux-jax-vs-numpy-regression
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137
+- completed: 2026-11-23
+- Closed as not reproducing; no code changed. `test_latent_euclid_variables_traces_under_jax_jit` failed on main CI on 2026-09-30 (3.51109 jit vs 3.31988 NumPy) but passes on main since at least 2026-11-16; the 2026-11-20-am shift could not reproduce it (verified at febc33fd).
+- Human ruling 2026-11-23 (dashboard scan chat): remove it from the queue and close.
+
+## Original prompt
+
 # test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
 
 Type: bug

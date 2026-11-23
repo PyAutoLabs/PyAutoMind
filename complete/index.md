@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2369 records across 11 buckets.
+2370 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -258,6 +258,7 @@ markers; everything below GENERATED is rebuilt.
 - [knn-partial-point-block](2026/11/knn-partial-point-block.md) — - `get_interpolation_weights` sliced each point block with `lax.dynamic_slice`, which clamps the last partial …
 - [lane-fail-closed](2026/11/lane-fail-closed.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
+- [latent-total-source-flux-jax-vs-numpy-regression](2026/11/latent-total-source-flux-jax-vs-numpy-regression.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [launcher-registry](2026/11/launcher-registry.md)
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…

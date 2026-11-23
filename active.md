@@ -41,16 +41,6 @@
 - next: Human review of PyAutoFit #1793 first, then Euclid #140. The maintainer will run the original tile on RAL after merge and report on Euclid #136.
 - tier: judge — supervised, human review and /prm
 
-## latent-total-source-flux-jax-vs-numpy-regression
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137
-- issued: 2026-11-20
-- session: shift worker 2026-11-20-am (8333550b-b72f-47e9-a9c1-d7510145ae95)
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137#issuecomment-7034677032
-- prompt: active/latent_total_source_flux_jax_vs_numpy_regression.md
-- note: does not reproduce on main (passes locally on febc33f + library mains; passed on main CI 2026-11-16); no branch, worktree or code change
-- tier: supervised — merge mode: none (parked before any PR)
-
 ## numba-wtilde-validation-legs-stall
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/73
 - issued: 2026-11-20

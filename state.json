@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 5 in flight",
-  "updated": "2026-11-23T09:44:07Z",
+  "headline": "RED \u2014 23 picks \u00b7 4 in flight",
+  "updated": "2026-11-23T09:46:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026 \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/137",
-      "prompt": "Use the start-dev skill. active/latent_total_source_flux_jax_vs_numpy_regression.md"
-    },
     {
       "severity": "red",
       "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
@@ -126,6 +120,12 @@
       "text": "pick: Physical model check when speeding up smoke tests",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
       "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: A compound-prior model reloaded from model.json has a different prior order\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md",
+      "prompt": "Use the start-dev skill. draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md"
     }
   ]
 }

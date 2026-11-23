@@ -82,11 +82,6 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 2. test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
-- kind: prompt
-- ref: active/latent_total_source_flux_jax_vs_numpy_regression.md
-- note: follow-up of the 2026-11-20-am review (Q18 = a): close #137 as fixed upstream; file the hpc/sync items as their own prompt
-
 ## 3. SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain
 - kind: prompt
 - ref: active/sed_chain_waveband_fit_can_spin_forever.md
@@ -112,6 +107,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
+- shipped-as: complete/2026/11/latent-total-source-flux-jax-vs-numpy-regression.md (2026-11-23)
+- note: follow-up of the 2026-11-20-am review (Q18 = a): close #137 as fixed upstream; file the hpc/sync items as their own prompt — retired by `lifecycle.py close`
 
 ### SLaM simultaneous subhalo grid search fits last band only
 - shipped-as: complete/2026/11/slam-simultaneous-subhalo-grid-search.md (2026-11-22)
