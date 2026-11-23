@@ -63,3 +63,14 @@
   - autolens_workspace_test: feature/pr504-sibling-guards
   - autogalaxy_workspace_test: feature/pr504-sibling-guards
 - tier: judge — merge mode: human /prm
+
+## cockpit-footer-broca
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/716
+- issued: 2026-11-23
+- session: shift worker 2026-11-23-am3 (codex:8e7454ff7ce94bae87c341e8a04566a6)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-footer-broca
+- repos:
+  - PyAutoBrain: feature/cockpit-footer-broca
+- prompt: active/cockpit_footer_broca_belongs_between_cortex_and.md
+- tier: notify
