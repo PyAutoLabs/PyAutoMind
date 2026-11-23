@@ -111,7 +111,7 @@
 - planned: 2026-07-22
 - classification: workspace
 - suggested-branch: feature/latent-nan-guard-honest-run
-- blocked-by: slow-skip-timeout-cap-doc (using autolens_workspace_test; PR #194 OPEN/MERGEABLE)
+- blocked-by: none — slow-skip-timeout-cap-doc shipped (autolens_workspace_test PR #194 merged 2026-07-22; complete/2026/07/slow-skip-timeout-cap-doc.md)
 - affected-repos:
   - autolens_workspace_test
 

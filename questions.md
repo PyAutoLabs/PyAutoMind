@@ -26,16 +26,6 @@ the ruling on the prompt.
 
 ## Open
 
-### Q14. cti_upkeep_epic — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab…
-- task: draft/maintenance/autocti/cti_upkeep_epic.md
-- kind: ruling
-- gate: claimed
-- ask: `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it.
-- options: (a) wait for colab_gate_colossus_rationale_is_stale_once to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-19-pm2
-- asked: 2026-11-19T21:49Z
-- worker: readiness pass
-
 ### Q15. cti_upkeep_epic — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
 - task: draft/maintenance/autocti/cti_upkeep_epic.md
 - kind: ruling
@@ -276,6 +266,18 @@ the ruling on the prompt.
 - answered: 2026-11-20T12:05Z by Jammy2211 (issue)
 - answer: 1 — (a) wall-clock cap: library-first PyAutoFit PR adding a timeout to af.Nautilus, then the pipeline PR with per-band WAVEBAND_TIMEOUT_S, a lower named WAVEBAND_N_LIKE_MAX, a capped marker, QA column and a fast test
 - answer-comment: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7039080077
+
+### Q14. cti_upkeep_epic — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab…
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: claimed
+- ask: `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it.
+- options: (a) wait for colab_gate_colossus_rationale_is_stale_once to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+- answered: 2026-11-23T09:43Z by human (chat)
+- answer: (a) waited: colab_gate_colossus_rationale_is_stale_once has shipped (complete/2026/11/colab-gate-colossus-rationale-is-stale-once.md), so the PyAutoHeart claim is released and this gate no longer applies.
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

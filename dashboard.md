@@ -17,55 +17,6 @@
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
-<a id="looks-shipped"></a>
-## Looks shipped — confirm
-
-2 draft(s) with strong evidence the work already shipped (`intake looks-shipped`). Held out of the pick lists and the batch planner until closed or dismissed in [`looks_shipped_dismissed.md`](looks_shipped_dismissed.md).
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — witness-exists — Witness names <code>test_batch_brief</code>, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 58372ad 2026-11-22 Merge pull…</summary>
-
-```
-`draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_batch_brief`, defined in PyAutoBrain tests/test_batch_brief.py:1; added by 58372ad 2026-11-22 Merge pull request #699 from PyAutoLabs/ccr-8a668897-mkcl3u (Filed 2026-11-17)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close heart-report-only-red-needs-no-shift-ack --date 2026-11-22 --from-file <record-body.md> --prompt draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/pyautobrain/heart_report_only_red_needs_no_shift_ack.md — 2026-11-22 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md">M3.6f Shift worker cost: scoped smoke, hermetic Brain tests, no <code>pgrep</code> waits…</a> — witness-exists — Witness names <code>test_orchestrator_mind_writer</code>, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 58372ad…</summary>
-
-```
-`draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_orchestrator_mind_writer`, defined in PyAutoBrain tests/test_orchestrator_mind_writer.py:1; added by 58372ad 2026-11-22 Merge pull request #699 from PyAutoLabs/ccr-8a668897-mkcl3u (Filed 2026-11-17) (+1 more)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close shift-worker-cost-tests-smoke-and-path --date 2026-11-22 --from-file <record-body.md> --prompt draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/maintenance/pyautobrain/shift_worker_cost_tests_smoke_and_path.md — 2026-11-22 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
 ## Autopilot
 
 _LIVE · 0 in progress_
@@ -83,9 +34,8 @@ _LIVE · 0 in progress_
 5. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 6. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (0 open, 0 deferred, 5 rulings — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred, 4 rulings — [`questions.md`](questions.md))
 
-- Q14 — `cti_upkeep_epic` cannot start: repo PyAutoHeart is claimed by `colab_gate_colossus_rationale_is_stale_once` in active.md with no coordination line naming it. (ruling claimed, 4 days)
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 4 days)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 4 days)
 - Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, 3 days)
