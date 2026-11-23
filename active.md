@@ -56,7 +56,10 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/369
 - issued: 2026-11-23
 - session: shift worker 2026-11-23-am3 (codex:6c263331ed1148a5bab5c2774723a66f)
-- status: workspace-dev
+- status: awaiting-input
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/138
+- question: https://github.com/PyAutoLabs/autolens_workspace_test/issues/369#issuecomment-7099588669
+- next: await decision on opening Lens PR with the two existing JIT timing failures
 - worktree: /home/jammy/Code/PyAutoLabs-wt/pr504-sibling-guards
 - prompt: active/pr504_sibling_guards_net_gap_proxy.md
 - repos:
@@ -68,7 +71,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/716
 - issued: 2026-11-23
 - session: shift worker 2026-11-23-am3 (codex:8e7454ff7ce94bae87c341e8a04566a6)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/717
+- next: Human review of legacy-theme compatibility, then merge, refresh and verify the 15 published cockpit boards.
 - worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-footer-broca
 - repos:
   - PyAutoBrain: feature/cockpit-footer-broca

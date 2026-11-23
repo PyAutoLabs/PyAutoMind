@@ -86,6 +86,16 @@ the ruling on the prompt.
 - asked: 2026-11-23T09:59Z
 - worker: readiness pass
 
+### Q25. pr504_sibling_guards_net_gap_proxy — Open the Lens guard PR with the two pre-existing JIT timing failures…
+- task: active/pr504_sibling_guards_net_gap_proxy.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/369
+- kind: question
+- ask: Open the Lens guard PR with the two pre-existing JIT timing failures documented, or wait for the separate cache fix?
+- options: (a) Open the Lens PR with both timing failures documented · (b) Wait for the separate JIT-cache fix, then rerun the scripts
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:25Z
+- worker: codex:6c263331ed1148a5bab5c2774723a66f
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
