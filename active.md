@@ -67,19 +67,6 @@
   - autogalaxy_workspace_test: feature/pr504-sibling-guards
 - tier: judge — merge mode: human /prm
 
-## cockpit-footer-broca
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/716
-- issued: 2026-11-23
-- session: shift worker 2026-11-23-am3 (codex:8e7454ff7ce94bae87c341e8a04566a6)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/717
-- next: Human review of legacy-theme compatibility, then merge, refresh and verify the 15 published cockpit boards.
-- worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-footer-broca
-- repos:
-  - PyAutoBrain: feature/cockpit-footer-broca
-- prompt: active/cockpit_footer_broca_belongs_between_cortex_and.md
-- tier: notify
-
 ## sensitivity_slam_source_pixelized_mappervalued
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
 - issued: 2026-11-23
@@ -101,16 +88,6 @@
 - question: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7099834237
 - next: Resolve PyAutoGalaxy FITS round-trip scope and coordinate the reader with the aggregator-reload task before claiming worktrees.
 - tier: judge — supervised, human /prm
-
-## colab-gate-delete-hmf
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/364
-- session: shift worker 2026-11-23-am3 (codex:863d5e51164847c3aeac683a8ff736d4)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/366
-- worktree: ~/Code/PyAutoLabs-wt/colab-gate-delete-hmf
-- prompt: active/colab_gate_delete_hmf_after_next_release.md
-- repos:
-  - PyAutoHeart: feature/colab-gate-delete-hmf
 
 ## smoke_cache_stats_warnings_nameerror
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365

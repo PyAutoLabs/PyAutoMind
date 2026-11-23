@@ -1,3 +1,7 @@
+The canonical board order places Broca between Cortex and Memory. The worker verified all 15 local footer renders and preserved the older-theme fallback. PR https://github.com/PyAutoLabs/PyAutoBrain/pull/717.
+
+## Original prompt
+
 # Cockpit footer: Broca belongs between Cortex and Memory
 
 Type: bug

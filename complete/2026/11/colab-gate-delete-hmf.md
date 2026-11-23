@@ -1,3 +1,7 @@
+Removed the hmf exemption after checking the published autolens wheel. All 36 Colab gate tests and the continuous PyPI install audit passed. PR https://github.com/PyAutoLabs/PyAutoHeart/pull/366.
+
+## Original prompt
+
 # Colab gate: delete the hmf accepted-miss once autolens without hmf is on PyPI
 
 Type: bug
