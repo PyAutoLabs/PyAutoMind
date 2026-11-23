@@ -1,3 +1,7 @@
+The Lens and Galaxy guards inspect both inversion determinants. All four guards accepted a cancellation fixture and rejected either missing term. Existing Lens visualization cache-timing failures were documented with human approval. PRs https://github.com/PyAutoLabs/autolens_workspace_test/pull/370 and https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/138.
+
+## Original prompt
+
 # Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)
 
 Type: bug

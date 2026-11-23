@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
-  "updated": "2026-11-23T17:09:02Z",
+  "headline": "RED \u2014 23 picks \u00b7 8 in flight",
+  "updated": "2026-11-23T17:13:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autolens_inference/issues/73",
       "prompt": "Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md"
-    },
-    {
-      "severity": "red",
-      "text": "Harden the sibling PR #504 non-vacuity guards (net fom\u2212logL gap proxy) \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/138",
-      "prompt": "Use the start-dev skill. active/pr504_sibling_guards_net_gap_proxy.md"
     },
     {
       "severity": "red",
@@ -126,6 +120,12 @@
       "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     }
   ]
 }
