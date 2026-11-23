@@ -1,3 +1,7 @@
+PyAutoBrain PR #715 fixed automatic approval flag selection and made the disposable smoke use the production auto mode by default. Codex cockpit chats can follow the foreground shift stream, and the launch procedure verifies local brief pickup. The real WSL smoke wrote its marker and measured 22,124 tokens. All three PR checks passed. Merged at bab1ab96d792.
+
+## Original prompt
+
 # Fix Codex shift launch and smoke parity
 
 Issued: 2026-11-23

@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 6 in flight",
-  "updated": "2026-11-23T09:21:55Z",
+  "headline": "RED \u2014 23 picks \u00b7 5 in flight",
+  "updated": "2026-11-23T09:37:33Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autolens_inference/issues/73",
       "prompt": "Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Fix Codex shift launch and smoke parity \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/715",
-      "prompt": "Use the start-dev skill. active/codex_shift_launch_parity.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: jax.grad through zero-contour critical curves fails on jax 0.12",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md",
+      "prompt": "Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md"
     }
   ]
 }
