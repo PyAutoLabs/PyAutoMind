@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 6 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 5 |
@@ -68,7 +68,7 @@ Report which you did and why.
 
 ## Autopilot
 
-_6 queued · 0 questions_
+_LIVE · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -91,9 +91,11 @@ _6 queued · 0 questions_
 - Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, 3 days)
 - Q22 — `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit first) (its Blocked-by). (ruling blocked-by, 3 days)
 
-**Shift**
+**Shift** (2026-11-23-am — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-23-am — closed, nothing to review · [shift issue #600](https://github.com/PyAutoLabs/PyAutoMind/issues/600))_
+Live: LIVE · 1 running · tokens 0 of 250000 (1 session(s) unmeasured) · review-at 2026-11-23T09:30Z (as of 2026-11-23T09:10:35Z) · [shift issue #600](https://github.com/PyAutoLabs/PyAutoMind/issues/600#issuecomment-7096315866)
+
+_(nothing to review yet)_
 
 ## Start here
 
