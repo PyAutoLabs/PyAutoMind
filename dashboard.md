@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -149,7 +149,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 74
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1387,6 +1387,14 @@ Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md
 
 </details>
 
+<details><summary>📋 <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main: <code>al.MapperValued</code> no longer exists</a> — issued 2026-09-03</summary>
+
+```
+Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -1478,7 +1486,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 234 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 233 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1838,7 +1846,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 51</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -1916,14 +1924,6 @@ Use the start-dev skill. draft/bug/autogalaxy/substructure_util_zero_padded_halo
 
 ```
 Use the start-dev skill. draft/bug/autolens/colab_links_pinned_to_blob_main_in.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main: <code>al.MapperValued</code> no longer exists</a> — autolens_workspace · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_workspace/sensitivity_slam_source_pixelized_mappervalued.md
 ```
 
 </details>
