@@ -106,6 +106,16 @@ the ruling on the prompt.
 - asked: 2026-11-23T11:37Z
 - worker: codex:1b72ba278ac443b1bf858031a61c1c9a
 
+### Q27. sensitivity_slam_source_pixelized_mappervalued — Which subhalo should the pixelized sensitivity example inject and fit?
+- task: active/sensitivity_slam_source_pixelized_mappervalued.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
+- kind: question
+- ask: Which subhalo should the pixelized sensitivity example inject and fit?
+- options: (a) Keep spherical Ludlow NFW and express the injection and fit prior using mass_at_200. · (b) Use spherical generalized NFW with the script’s explicit inner slope 2.2 and concentration 12.
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:41Z
+- worker: codex:b1a928033a0d472f97e99ca81604b708
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->

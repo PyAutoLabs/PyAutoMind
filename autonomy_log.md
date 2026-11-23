@@ -559,6 +559,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 | 2026-11-23 | plot-utils-critical-curves-docstrings (PyAutoGalaxy#747, PR #748) | safe, notify | 6 tests passed, AST/config witness passed, targeted galaxies.py passed, independent review CLEAN, scoped Heart GREEN | PR open |
 | 2026-11-23 | pr504-sibling-guards (autolens_workspace_test#369) | supervised, judge | All four guards pass the cancellation witness. Galaxy full script and Lens model_fit pass. Two Lens JIT timings fail on main and branch. Targeted smoke PASS, Opus CLEAN, scoped Heart GREEN. | Galaxy PR #138 decision-taken, Lens awaiting-input |
 | 2026-11-23 | cockpit-footer-broca (PyAutoBrain#716, PR #717) | supervised (notify, shift) | 78 theme tests; 15 local renderers pass; targeted smoke selected no workspace; independent Opus CLEAN (343 targeted tests); scoped Heart GREEN; tenant firewall OK | PR open, decision-taken (retain historical theme fallbacks); live rollout pending |
+| 2026-11-23 | sensitivity_slam_source_pixelized_mappervalued (autolens_workspace#685) | supervised / glance | Interpolation passes; 8 datasets simulated; witness exits 1 on incompatible NFW perturbation parameters; targeted imaging/modeling.py PASS; independent FINDINGS; scoped Heart GREEN | parked |
 
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
 the `## Calibration runs` table **above**, at the end of its last segment, in
