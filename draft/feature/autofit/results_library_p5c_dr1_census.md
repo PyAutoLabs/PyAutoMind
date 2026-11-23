@@ -20,7 +20,7 @@ Lane: ral
 Epic: results-library
 Phase: 5c
 Filed: 2026-11-16
-Progress: 2026-11-16 — prep done (path repointed, bundle rebuilt from 2026.11.12.1, import check ok); human submitted RAL job 415560. Remaining: shape steps 3–4 after the job ends.
+Progress: 2026-11-16 — prep done (path repointed, bundle rebuilt from 2026.11.12.1, import check ok); human submitted RAL job 415560. Remaining: shape steps 3–4 after the job ends. 2026-11-23 — job 415560 exited after 1 s without running the census (exit 0 masked by the trailing `rm`); `/mnt/ral` unmounted on the login node, logs unread. Remaining: read logs once the mount is back, harden the sbatch, human resubmit, then steps 3–4.
 
 Gate (human, not an issue ref): the census job is a cluster submit. The 2026-11-02
 ledger line says it "awaits a human submit: `cd /mnt/ral/jnightin/scratch/results_library_census_20261102 && sbatch census.sbatch` (or a grant)".
