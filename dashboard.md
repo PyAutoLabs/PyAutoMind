@@ -1360,7 +1360,7 @@ Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md
 
 </details>
 
-<details><summary>📋 <a href="active/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve default</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/747">issue #747</a> — issued 2026-11-23 — library-dev</summary>
+<details><summary>📋 <a href="active/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve default</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/747">issue #747</a> — issued 2026-11-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748">PyAutoGalaxy#748</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/plot_utils_critical_curves_default_docstring_drift.md
@@ -3270,6 +3270,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#748](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748) — `active/plot_utils_critical_curves_default_docstring_drift.md`
 - [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoGalaxy#746](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746) — `complete/2026/11/mixed-galaxy-light.md`
 
