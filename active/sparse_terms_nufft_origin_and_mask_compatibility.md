@@ -9,7 +9,7 @@ Themes:
 - sparse-operator
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: awaiting-input
 Filed: 2026-10-01
 Difficulty: medium
 Consequence: judge

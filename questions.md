@@ -96,6 +96,16 @@ the ruling on the prompt.
 - asked: 2026-11-23T11:25Z
 - worker: codex:6c263331ed1148a5bab5c2774723a66f
 
+### Q26. sparse_terms_nufft_origin_and_mask_compatibility — Should this task include a coordinated PyAutoGalaxy PR to preserve th…
+- task: active/sparse_terms_nufft_origin_and_mask_compatibility.md
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
+- kind: question
+- ask: Should this task include a coordinated PyAutoGalaxy PR to preserve the mask fingerprint through FITS reload?
+- options: (a) Include PyAutoGalaxy and coordinate the reader change with the aggregator-reload task. · (b) Ship the two PyAutoArray fixes first and track the FITS round trip separately.
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:37Z
+- worker: codex:1b72ba278ac443b1bf858031a61c1c9a
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->

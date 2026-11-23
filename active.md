@@ -84,9 +84,20 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
 - issued: 2026-11-23
 - session: shift worker 2026-11-23-am3 (codex:b1a928033a0d472f97e99ca81604b708)
-- status: workspace-dev
+- status: awaiting-input
+- next: choose Ludlow NFW or generalized NFW on issue 685 and resume local adec6521
 - worktree: /home/jammy/Code/PyAutoLabs-wt/sensitivity-slam-source-pixelized
 - repos:
   - autolens_workspace: feature/sensitivity-slam-source-pixelized
 - prompt: active/sensitivity_slam_source_pixelized_mappervalued.md
 - tier: glance
+
+## sparse_terms_nufft_origin_and_mask_compatibility
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
+- issued: 2026-11-23
+- session: shift worker 2026-11-23-am3 (codex:1b72ba278ac443b1bf858031a61c1c9a)
+- status: awaiting-input
+- prompt: active/sparse_terms_nufft_origin_and_mask_compatibility.md
+- question: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7099834237
+- next: Resolve PyAutoGalaxy FITS round-trip scope and coordinate the reader with the aggregator-reload task before claiming worktrees.
+- tier: judge — supervised, human /prm

@@ -8,7 +8,7 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: awaiting-input
 Issued: 2026-09-03
 Consequence: glance
 Witness: `scripts/imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py` runs to completion under the smoke profile on a clean `main` checkout, and the symbol it uses for the source-plane mapper values is one the installed PyAutoLens exports.
