@@ -68,7 +68,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/747
 - issued: 2026-11-23
 - session: shift worker 2026-11-23-am2 (codex:bdcf6dbbd92948e69d9dd55313e27d37)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748
 - worktree: /home/jammy/Code/PyAutoLabs-wt/plot-utils-critical-curves-docstrings
 - repos:
   - PyAutoGalaxy: feature/plot-utils-critical-curves-docstrings
