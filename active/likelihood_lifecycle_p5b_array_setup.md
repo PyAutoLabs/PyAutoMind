@@ -10,7 +10,9 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-23
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/708
 Consequence: judge
 Witness: PyAutoArray main carries `aa.Setup` (the report §3.1 setup tuple plus `rule_id`, `regime`, `hardware_class`, `decision_id`, `extrapolated`) with `Setup.from_setup_id()` round-tripping every setup_id in the rule table; `autoarray/config/setup_rules.yaml` generated from PyAutoPulse `decisions.yaml` (39 designations) with a provenance header, and a parity test that regenerates it from a Pulse checkout when one is available (skipped otherwise); `aa.Setup.auto(dataset_type, variant, environment=None)` returns the designated optimal setup for every (likelihood, hardware class) row, unit-tested with a monkeypatched `Environment`; `PYAUTO_SETUP=<setup_id>` and an explicit `aa.Setup(...)` always win; `Imaging.apply_setup` / `Interferometer.apply_setup` attach the matching operator/transformer, are idempotent and survive `apply_mask` / `apply_over_sampling` / `apply_noise_scaling`; the inversion factory raises a clear error on an operator/backend mismatch instead of silently taking another path; full test suite green
 Review-minutes: 30
