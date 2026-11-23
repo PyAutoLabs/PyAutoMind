@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 11 in flight",
-  "updated": "2026-11-23T15:55:57Z",
+  "updated": "2026-11-23T16:35:20Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -51,6 +51,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5B: PyAutoArray `aa.Setup`, `Setup.auto`, rule table from the Pulse\u2026 \u2014 library-shipped (5B-1), awaiting-merge; 5B-2 next on a follow-up branch",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/709",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5b_array_setup.md"
+    },
+    {
+      "severity": "yellow",
       "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
       "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
@@ -66,6 +72,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#709 \u2014 Likelihood lifecycle phase 5B: PyAutoArray `aa.Setup`, `Setup.auto`, rule table from the Pulse\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/709",
+      "prompt": null
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pending release: PyAutoLens PyAutoLens#877 \u2014 mixed-galaxy-light",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/877",
       "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoNerves PyAutoNerves#223 \u2014 likelihood-lifecycle-p5a-nerves",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/223",
-      "prompt": null
-    },
-    {
-      "severity": "info",
-      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }
