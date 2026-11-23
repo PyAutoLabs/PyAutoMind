@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 5 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 4 |
@@ -19,7 +19,7 @@
 
 ## Autopilot
 
-_5 queued · 0 questions_
+_LIVE · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -42,9 +42,11 @@ _5 queued · 0 questions_
 - Q23 — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, today)
 - Q24 — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, today)
 
-**Shift**
+**Shift** (2026-11-23-am3 — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-23-am3 — closed, nothing to review · [shift issue #602](https://github.com/PyAutoLabs/PyAutoMind/issues/602))_
+Live: LIVE · 2 running, 1 refusal reasons · tokens 0 of 2000000 (2 session(s) unmeasured) · review-at 2026-11-23T11:45Z (as of 2026-11-23T10:59:21Z) · [shift issue #602](https://github.com/PyAutoLabs/PyAutoMind/issues/602#issuecomment-7098857340)
+
+_(nothing to review yet)_
 
 ## Start here
 
