@@ -116,6 +116,16 @@ the ruling on the prompt.
 - asked: 2026-11-23T11:41Z
 - worker: codex:b1a928033a0d472f97e99ca81604b708
 
+### Q28. smoke_cache_stats_warnings_nameerror — Should the cache-stats repair wait for the active PyAutoHeart #364 cl…
+- task: active/smoke_cache_stats_warnings_nameerror.md
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
+- kind: question
+- ask: Should the cache-stats repair wait for the active PyAutoHeart #364 claim to clear, or proceed in a separate coordinated worktree?
+- options: (a) Resume once #364 releases PyAutoHeart · (b) Authorize separate coordinated worktrees
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:46Z
+- worker: codex:5fc344efb14046e589cd52ab4d7cf254
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
