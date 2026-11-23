@@ -1346,7 +1346,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5a_nerves_environment.md">Likelihood lifecycle phase 5A: PyAutoNerves environment probe, <code>PYAUTO_SETUP</code> honoured at import…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/222">issue #222</a> — issued 2026-11-23 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5a_nerves_environment.md">Likelihood lifecycle phase 5A: PyAutoNerves environment probe, <code>PYAUTO_SETUP</code> honoured at import…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/222">issue #222</a> — issued 2026-11-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/223">PyAutoNerves#223</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5a_nerves_environment.md
