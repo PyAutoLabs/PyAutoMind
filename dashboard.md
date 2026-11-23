@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 286 |
+| [Backlog](#backlog) | 285 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -47,7 +47,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-23-am3 — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 2 running, 3 finished, 2 refusal reasons · tokens 566169 of 2000000 (cache-read 16551241; 2 session(s) unmeasured) · review-at 2026-11-23T11:45Z (as of 2026-11-23T11:37:03Z) · [shift issue #602](https://github.com/PyAutoLabs/PyAutoMind/issues/602#issuecomment-7098857340)
+Live: LIVE · 2 running, 4 finished, 2 refusal reasons · tokens 815251 of 2000000 (cache-read 24698930; 2 session(s) unmeasured) · review-at 2026-11-23T11:45Z (as of 2026-11-23T11:41:58Z) · [shift issue #602](https://github.com/PyAutoLabs/PyAutoMind/issues/602#issuecomment-7098857340)
 
 _(nothing to review yet)_
 
@@ -151,7 +151,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 73
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 72
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -225,14 +225,6 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — pyautoheart · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/pyautomind/repos_sync_tenant_firewall_leg_scans_nested.md">repos_sync tenant-firewall leg scans nested .worktrees/ folders</a> — pyautomind · small · safe · low</summary>
 
 ```
@@ -245,6 +237,14 @@ Use the start-dev skill. draft/bug/pyautomind/repos_sync_tenant_firewall_leg_sca
 
 ```
 Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 ```
 
 </details>
@@ -1357,6 +1357,14 @@ Use the start-dev skill. active/cockpit_footer_broca_belongs_between_cortex_and.
 
 </details>
 
+<details><summary>📋 <a href="active/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/364">issue #364</a> — library-dev</summary>
+
+```
+Use the start-dev skill. active/colab_gate_delete_hmf_after_next_release.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/73">issue #73</a> — issued 2026-11-20 — awaiting-input</summary>
 
 ```
@@ -1496,7 +1504,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 232 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 231 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1856,7 +1864,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 50</summary>
+<summary><b>bug</b> — 49</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2166,14 +2174,6 @@ Use the start-dev skill. draft/bug/autogalaxy/aggregator_reload_drops_sparse_ope
 
 ```
 Use the start-dev skill. draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — pyautoheart · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/colab_gate_delete_hmf_after_next_release.md
 ```
 
 </details>
