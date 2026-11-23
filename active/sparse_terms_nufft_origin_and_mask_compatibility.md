@@ -38,3 +38,6 @@ Source: Codex gpt-6-astra review of the streaming P5 branch (PyAutoLabs/PyAutoAr
    convention the DFT uses); extend the NUFFT-vs-DFT parity tests to a nonzero-origin mask.
 2. For (2) record a cheap mask fingerprint in `SparseTerms` provenance (e.g. `n_masked_pixels` + a hash of the mask
    array, or the mask itself) and check it in `__add__` and `from_sparse_terms`; persist it in the FITS round trip.
+
+## Answers from the human
+- Q26 (2026-11-23, shift 2026-11-23-am3 question on PyAutoArray#707): go with the recommendation https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7107940971

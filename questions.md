@@ -96,16 +96,6 @@ the ruling on the prompt.
 - asked: 2026-11-23T11:25Z
 - worker: codex:6c263331ed1148a5bab5c2774723a66f
 
-### Q26. sparse_terms_nufft_origin_and_mask_compatibility — Should this task include a coordinated PyAutoGalaxy PR to preserve th…
-- task: active/sparse_terms_nufft_origin_and_mask_compatibility.md
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
-- kind: question
-- ask: Should this task include a coordinated PyAutoGalaxy PR to preserve the mask fingerprint through FITS reload?
-- options: (a) Include PyAutoGalaxy and coordinate the reader change with the aggregator-reload task. · (b) Ship the two PyAutoArray fixes first and track the FITS round trip separately.
-- shift: 2026-11-23-am3
-- asked: 2026-11-23T11:37Z
-- worker: codex:1b72ba278ac443b1bf858031a61c1c9a
-
 ### Q27. sensitivity_slam_source_pixelized_mappervalued — Which subhalo should the pixelized sensitivity example inject and fit?
 - task: active/sensitivity_slam_source_pixelized_mappervalued.md
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
@@ -338,6 +328,19 @@ the ruling on the prompt.
 - worker: readiness pass
 - answered: 2026-11-23T09:43Z by human (chat)
 - answer: (a) waited: colab_gate_colossus_rationale_is_stale_once has shipped (complete/2026/11/colab-gate-colossus-rationale-is-stale-once.md), so the PyAutoHeart claim is released and this gate no longer applies.
+
+### Q26. sparse_terms_nufft_origin_and_mask_compatibility — Should this task include a coordinated PyAutoGalaxy PR to preserve th…
+- task: active/sparse_terms_nufft_origin_and_mask_compatibility.md
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
+- kind: question
+- ask: Should this task include a coordinated PyAutoGalaxy PR to preserve the mask fingerprint through FITS reload?
+- options: (a) Include PyAutoGalaxy and coordinate the reader change with the aggregator-reload task. · (b) Ship the two PyAutoArray fixes first and track the FITS round trip separately.
+- shift: 2026-11-23-am3
+- asked: 2026-11-23T11:37Z
+- worker: codex:1b72ba278ac443b1bf858031a61c1c9a
+- answered: 2026-11-23T16:59Z by Jammy2211 (issue)
+- answer: go with the recommendation
+- answer-comment: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7107940971
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
