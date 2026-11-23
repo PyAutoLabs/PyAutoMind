@@ -101,3 +101,12 @@
 - question: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7099834237
 - next: Resolve PyAutoGalaxy FITS round-trip scope and coordinate the reader with the aggregator-reload task before claiming worktrees.
 - tier: judge — supervised, human /prm
+
+## colab-gate-delete-hmf
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/364
+- session: shift worker 2026-11-23-am3 (codex:863d5e51164847c3aeac683a8ff736d4)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/colab-gate-delete-hmf
+- prompt: active/colab_gate_delete_hmf_after_next_release.md
+- repos:
+  - PyAutoHeart: feature/colab-gate-delete-hmf

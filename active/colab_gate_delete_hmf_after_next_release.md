@@ -12,6 +12,7 @@ Consequence: notify
 Witness: `PyAutoHeart/heart/config/colab_gate.yaml` has no `hmf` entry, `tests/test_colab_gate.py` asserts the exemption set {colossus, mcp}, and a continuous check F run (`verify_install.sh F`) against a PyPI autolens newer than 2026.11.19.1 passes with no hmf row.
 Review-minutes: 0
 Unattended: ready
+Verified: 2026-11-23 f83ff168 (PyAutoHeart)
 Lane: any
 
 ## Finding
