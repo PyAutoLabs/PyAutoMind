@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 10 in flight",
-  "updated": "2026-11-23T11:47:12Z",
+  "updated": "2026-11-23T11:53:23Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -42,6 +42,12 @@
       "text": "Cockpit footer: Broca belongs between Cortex and Memory \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/717",
       "prompt": "Use the start-dev skill. active/cockpit_footer_broca_belongs_between_cortex_and.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Colab gate: delete the hmf accepted-miss once autolens without hmf\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/366",
+      "prompt": "Use the start-dev skill. active/colab_gate_delete_hmf_after_next_release.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     }
   ]
 }

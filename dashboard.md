@@ -1356,7 +1356,7 @@ Use the start-dev skill. active/cockpit_footer_broca_belongs_between_cortex_and.
 
 </details>
 
-<details><summary>📋 <a href="active/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/364">issue #364</a> — library-dev</summary>
+<details><summary>📋 <a href="active/colab_gate_delete_hmf_after_next_release.md">Colab gate: delete the hmf accepted-miss once autolens without hmf…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/364">issue #364</a> — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/366">PyAutoHeart#366</a></summary>
 
 ```
 Use the start-dev skill. active/colab_gate_delete_hmf_after_next_release.md
