@@ -96,7 +96,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/718
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/719
+- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/606
 - worktree: /home/jammy/Code/PyAutoLabs-wt/digest-review-table
 - repos:
   - PyAutoBrain: feature/digest-review-table
