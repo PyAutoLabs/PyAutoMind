@@ -1,3 +1,14 @@
+Pinned the HowToGalaxy / HowToLens Colab links (course notebooks and the library docs that point at them) to the tagged course release instead of blob/main.
+
+- Library: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/751 (MERGED 2026-11-24)
+- Library: https://github.com/PyAutoLabs/PyAutoLens/pull/880 (MERGED 2026-11-24)
+- Course: https://github.com/PyAutoLabs/HowToGalaxy/pull/108 (MERGED 2026-11-24)
+- Course: https://github.com/PyAutoLabs/HowToLens/pull/138 (MERGED 2026-11-24)
+- Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/879 (closed)
+- Shift: 2026-11-24-am (Codex worker); merged by human /prm.
+
+## Original prompt
+
 # Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs
 
 Type: bug

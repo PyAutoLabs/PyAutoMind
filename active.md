@@ -117,23 +117,6 @@
 - repos:
   - PyAutoHeart: feature/heart-health-rerun-stale-push
 
-## colab-links-pinned-to-blob-main-in
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/879
-- session: shift worker 2026-11-24-am (codex:7081fb9a6a784d6da48340f205852a00)
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/751
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/880
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/108
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/138
-- worktree: /home/jammy/Code/PyAutoLabs-wt/colab-links-pinned-to-blob-main-in
-- repos:
-  - PyAutoGalaxy: feature/colab-links-pinned-to-blob-main-in
-  - PyAutoLens: feature/colab-links-pinned-to-blob-main-in
-  - HowToGalaxy: feature/colab-links-pinned-to-blob-main-in
-  - HowToLens: feature/colab-links-pinned-to-blob-main-in
-- prompt: active/colab_links_pinned_to_blob_main_in.md
-- tier: glance — supervised; shift close-out
-
 ## stale-auto-simulated-cluster-dataset
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/445
 - issued: 2026-11-24

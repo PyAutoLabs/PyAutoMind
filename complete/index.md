@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2376 records across 11 buckets.
+2377 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -161,6 +161,7 @@ markers; everything below GENERATED is rebuilt.
 - [codex-shift-launch-parity](2026/11/codex-shift-launch-parity.md)
 - [colab-gate-colossus-rationale-is-stale-once](2026/11/colab-gate-colossus-rationale-is-stale-once.md)
 - [colab-gate-delete-hmf](2026/11/colab-gate-delete-hmf.md)
+- [colab-links-pinned-to-blob-main-in](2026/11/colab-links-pinned-to-blob-main-in.md)
 - [colab-restart-fix](2026/11/colab-restart-fix.md)
 - [community-close-due](2026/11/community-close-due.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
