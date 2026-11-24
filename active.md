@@ -85,6 +85,7 @@
   - PyAutoBrain: feature/digest-review-table
   - PyAutoMind: feature/digest-review-table
 - prompt: active/digest_review_action_table.md
+- coordination: human-approved 2026-11-24 ("Release after 15 min", "fix it first" before the gate shift) — PyAutoBrain shared with parked-hold-grace (PyAutoBrain#720; _orchestrator.py, AUTONOMY.md) while #719 (_digest.py) awaits /prm
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; folds M3.3 slice 2 item 1)
 - tier: judge — merge mode: human /prm
 
@@ -98,4 +99,17 @@
   - PyAutoArray: feature/likelihood-lifecycle-p5b3-array
 - prompt: active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md
 - epic: likelihood-lifecycle (phase 5B-3; then 5C-3 Galaxy+Lens call sites + aggregator)
+- tier: judge — merge mode: human /prm
+
+## parked-hold-grace
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
+- issued: 2026-11-24
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/parked-hold-grace
+- repos:
+  - PyAutoBrain: feature/parked-hold-grace
+- prompt: active/shift_closes_early_with_held_tasks_unstarted.md
+- coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py); Mind batches/AGENTS.md edit rides this branch's Brain PR description, Mind PR separate
+- epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm
