@@ -142,12 +142,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/885
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev (5C-3a MERGED 2026-11-24 PyAutoGalaxy#753; 5C-3b PyAutoLens next on a new branch in the same worktree; issue #885 stays open until 5C-3b merges)
+- status: library-dev (5C-3a MERGED 2026-11-24 PyAutoGalaxy#753; 5C-3b PyAutoLens in progress on feature/likelihood-lifecycle-p5c3b-lens; issue #885 stays open until 5C-3b merges)
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5c3
 - repos:
   - PyAutoGalaxy: feature/likelihood-lifecycle-p5c3a-galaxy
+  - PyAutoLens: feature/likelihood-lifecycle-p5c3b-lens
 - prompt: active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md
 - epic: likelihood-lifecycle (phase 5C-3; two PRs: 5C-3a Galaxy, 5C-3b Lens; then 5D PyAutoFit)
 - tier: judge — merge mode: human /prm
