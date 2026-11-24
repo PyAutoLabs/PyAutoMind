@@ -92,23 +92,6 @@
 - tier: judge — supervised, human /prm
 - next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
 
-## likelihood-lifecycle-p5c-galaxy-lens
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/881
-- issued: 2026-11-24
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-shipped, awaiting-merge (5C-1 MERGED 2026-11-24 PyAutoGalaxy#752 5bcb54a9; 5C-2 PyAutoLens#882 OPEN 476b15ed, awaiting human /prm; issue #881 stays open until #882 merges)
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/882
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/882
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5c-galaxy-lens
-- repos:
-  - PyAutoGalaxy: feature/likelihood-lifecycle-p5c1-galaxy
-  - PyAutoLens: feature/likelihood-lifecycle-p5c2-lens
-- prompt: active/likelihood_lifecycle_p5c_galaxy_lens_setup.md
-- epic: likelihood-lifecycle (phase 5C of 5A–5H; two PRs: 5C-1 Galaxy, 5C-2 Lens)
-- tier: judge — merge mode: human /prm
-
 ## digest-review-table
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/718
 - issued: 2026-11-24

@@ -1,3 +1,43 @@
+## likelihood-lifecycle-p5c-galaxy-lens
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/881
+- completed: 2026-11-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/882
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/882
+- epic: likelihood-lifecycle (phase 5C; next 5B-3 lazy factory operator, then 5C-3 aggregator reapply, then 5D PyAutoFit)
+
+Phase 5C of the likelihood-lifecycle epic shipped as two PRs under one issue. It wires the 5B `aa.Setup` into the analyses: `setup=` is opt-in per R6, and without it nothing changes beyond an "auto would choose …" log line.
+
+- **5C-1, PyAutoGalaxy** (#752, merged 2026-11-24 as 5bcb54a9):
+  - `setup=None | "auto" | aa.Setup | setup_id` on `AnalysisDataset` / `AnalysisImaging` / `AnalysisInterferometer`.
+  - `resolve_setup(model)` runs first in `modify_before_fit`. It sets `_use_jax` from the setup's backend, calls `dataset.apply_setup`, runs the factory consistency check (via PyAutoArray's private `_check_*` helpers), calls `apply_threads` and logs the banner.
+  - `files/setup.json`.
+  - Rule key from the model's mesh: DelaunayNN → delaunay_nn, Delaunay* → delaunay, rectangular → rectangular, no mesh → mge. A missing row falls back, with a note in the banner.
+  - New module `autogalaxy.analysis.setup_util`.
+- **5C-2, PyAutoLens** (#882):
+  - Lens imaging and interferometer pass `setup=` to the Galaxy base; `_xp` follows `_use_jax`.
+  - `AnalysisPoint` / `AnalysisWeak` resolve through the `AnalysisSetupNoOperator` mixin. Point: a `FitPositionsSource` subclass → point_source_source/source_plane, else point_source_image/image_plane. Weak → weak/isothermal.
+  - `al.exc.SetupException` is raised at the top of `log_likelihood_function`, outside `raise_fit_exception`, when a setup was given but never resolved (factor graphs). `fit_from` is unguarded.
+- **Design calls (human-approved 2026-11-24):**
+  1. Resolve at `modify_before_fit`; the banner is the authoritative report.
+  2. No lens-scale hint arguments.
+  3. Factor-graph setup agreement → 5D.
+  4. SLaM one-setup → 5F.
+- **Gate:**
+  - 5C-1: 1641 tests; Heart dev GREEN; smoke 5/5.
+  - 5C-2: 1086 passed + 1 xfailed; Heart dev GREEN; smoke 4/4. Both smoke runs were against the branch.
+- **Scope added mid-phase (human-approved):** resolving only at `modify_before_fit` leaves calculations outside modeling on the slow dense route. Two follow-ups were filed:
+  - `draft/feature/autoarray/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md`: a lazy, size-gated operator in the inversion factory.
+  - `draft/feature/autolens/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md`: aggregator reloads reapply `setup.json`, and one shared resolution helper absorbs the duplicated `setup_environment`.
+- **Traps:**
+  - With no setup, `Environment.detect()` still runs every fit (about 1.4 s on the first call when `nvidia-smi` is present).
+  - `log_fit_start`'s JAX line can be stale under a setup.
+  - No cluster analysis class exists, so the `cluster/*` rules are unused.
+  - The canonical PyAutoArray and PyAutoLens checkouts had to be fast-forwarded so the task worktree's symlinks saw the setup code.
+
+## Original prompt
+
 # Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens `setup="auto"` (opt-in), `setup.json`, the setup banner, one setup through multi-dataset sums and SLaM, lens-scale keys resolved
 
 Type: feature

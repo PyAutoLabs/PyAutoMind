@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
-  "updated": "2026-11-24T12:19:05Z",
+  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
+  "updated": "2026-11-24T12:29:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,12 +36,6 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens `setup=\"auto\"` (opt-in), `setup.json`, the setup\u2026 \u2014 library-shipped, awaiting-merge (5C-1 MERGED 2026-11-24 PyAutoGalaxy#752 5bcb54a9; 5C-2 PyAutoLens#882 OPEN 476b15ed, awaiting\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5c_galaxy_lens_setup.md"
     },
     {
       "severity": "yellow",
@@ -93,14 +87,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#752 \u2014 Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens `setup=\"auto\"` (opt-in), `setup.json`, the setup\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#752 \u2014 likelihood-lifecycle-p5c-galaxy-lens",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752",
       "prompt": null
     },
     {
@@ -117,14 +111,20 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#882 \u2014 Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens `setup=\"auto\"` (opt-in), `setup.json`, the setup\u2026",
+      "text": "pending release: PyAutoLens PyAutoLens#878 \u2014 database-dataset-fits",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/878",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#882 \u2014 likelihood-lifecycle-p5c-galaxy-lens",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/882",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#878 \u2014 database-dataset-fits",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/878",
+      "text": "pending release: PyAutoLens PyAutoLens#877 \u2014 mixed-galaxy-light",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/877",
       "prompt": null
     }
   ]
