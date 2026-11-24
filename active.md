@@ -109,7 +109,8 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/parked-hold-grace
 - repos:
   - PyAutoBrain: feature/parked-hold-grace
+  - PyAutoMind: feature/parked-hold-grace
 - prompt: active/shift_closes_early_with_held_tasks_unstarted.md
-- coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py); Mind batches/AGENTS.md edit rides this branch's Brain PR description, Mind PR separate
+- coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py); PyAutoMind shared too (batches/AGENTS.md, a different section from #606)
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm
