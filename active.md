@@ -107,7 +107,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/883
 - issued: 2026-11-24
 - session: Codex desktop
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/884
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/884
+- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/20
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cluster-family-fit-figures
 - repos:
   - PyAutoLens: feature/cluster-family-fit-figures
