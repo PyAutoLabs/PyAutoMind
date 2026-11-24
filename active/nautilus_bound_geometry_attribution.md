@@ -13,7 +13,7 @@ Witness: Reconcile geometry wall and parent CPU across the same eleven bound bui
 Lane: local-dev
 Issued: 2026-11-24
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/18
-Status: approved for a draft PR on 2026-11-24
+Status: draft producer PR #19 open for human review
 
 ## User request (verbatim)
 
@@ -28,3 +28,7 @@ The [epic ledger](../draft/feature/autofit/nautilus_fast_likelihood_development_
 3. If the traces omit inner timings, design the smallest matched instrumented comparison that can identify the costly operations. Use a local engineering pilot with explicit resource bounds and an uninstrumented control. A campaign requires the canonical domain task first.
 
 The scope preserves the four native neural networks, serial training and existing pool safety. The wider 30D evidence check, sampler optimization, JAX acceleration and Pulse promotion remain separate decisions. Merge stays human.
+
+## Result — 2026-11-24
+
+[Draft PR #19](https://github.com/PyAutoLabs/autofit_profiling/pull/19) contains the verified replay, exact input fingerprints and matched timings. All eleven checkpoint geometries passed. The minimum-volume enclosing ellipsoid routine accounted for 97.3% and 97.4% of the local outer mixture constructor. These fractions do not establish its share of whole-bound or fit time on RAL. Producer head `8f1572f6bd6d5bfb2a7ded3078b4662519360557`. The packaged replay, input rejection checks, 111 Python 3.12 tooling tests, Ruff and catalogue validation passed. The scoped Heart gate was green and deferred the producer to PR checks. Merge stays human.

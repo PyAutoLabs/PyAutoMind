@@ -130,7 +130,8 @@
 ## nautilus-bound-geometry
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/18
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/19
 - prompt: active/nautilus_bound_geometry_attribution.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-geometry
 - repos:
