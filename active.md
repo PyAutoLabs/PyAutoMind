@@ -189,8 +189,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/31
 - prompt: active/nautilus_30d_evidence_check.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-evidence-check
-- repos:
-  - autofit_profiling: feature/nautilus-30d-evidence-check
+- retained-repos: autofit_profiling (feature/nautilus-30d-evidence-check); PR #31 awaits review. Coding claim transferred to nautilus-30d-independent.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
