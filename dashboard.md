@@ -1394,7 +1394,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/718">issue #718</a> — issued 2026-11-24 — library-dev</summary>
+<details><summary>📋 <a href="active/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/718">issue #718</a> — issued 2026-11-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/719">PyAutoBrain#719</a></summary>
 
 ```
 Use the start-dev skill. active/digest_review_action_table.md
