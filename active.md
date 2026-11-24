@@ -185,7 +185,8 @@
 ## nautilus-30d-evidence-check
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/30
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/31
 - prompt: active/nautilus_30d_evidence_check.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-evidence-check
 - repos:
