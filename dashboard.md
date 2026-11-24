@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 10 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 282 |
+| [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1347,6 +1347,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/368">issue #368</a> — issued 2026-10-25 — library-dev</summary>
+
+```
+Use the start-dev skill. active/heart_health_rerun_stale_push.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/likelihood_lifecycle_p5b_array_setup.md">Likelihood lifecycle phase 5B: PyAutoArray <code>aa.Setup</code>, <code>Setup.auto</code>, rule table from the Pulse…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/708">issue #708</a> — issued 2026-11-23 — library-shipped (5B-1), awaiting-merge; 5B-2 next on a follow-up branch — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/709">PyAutoArray#709</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
@@ -1510,7 +1518,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 228 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 227 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1870,7 +1878,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 46</summary>
+<summary><b>bug</b> — 45</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2084,14 +2092,6 @@ Use the start-dev skill. draft/bug/autolens_workspace/multi_galaxy_start_here_re
 
 ```
 Use the start-dev skill. draft/bug/health_fixes/ci_timing_execution_coverage.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> — health_fixes · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/health_fixes/heart_health_rerun_stale_push.md
 ```
 
 </details>
@@ -3065,7 +3065,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
+| 2026-10-25 | issued | <a href="active/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
@@ -3113,7 +3113,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-115 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3158,7 +3158,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 75 more_
+- _… and 74 more_
 
 </details>
 
