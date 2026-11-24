@@ -15,6 +15,7 @@ Consequence: glance
 Witness: `pyauto-heart url_check` exits 0 on PyAutoGalaxy, PyAutoLens, HowToGalaxy and HowToLens, and `pyauto-heart url_sweep` reports 0 forbidden patterns
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-24 7a7fee1d (HowToGalaxy), 1596dd5a (HowToLens), 1ba51f32 (PyAutoGalaxy), dbc63e65 (PyAutoLens)
 Lane: any
 
 Source: /health session 2026-11-18 (Heart url_check, swept 2026-11-18T08:31Z: 4 forbidden patterns in 4 repos). Human chose "file a bug prompt".
