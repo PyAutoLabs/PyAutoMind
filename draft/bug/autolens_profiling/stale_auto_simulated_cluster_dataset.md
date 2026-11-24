@@ -18,6 +18,7 @@ Filed: 2026-10-23
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/445
 Related: `draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md` (the same `should_simulate` existence-only gate)
 Lane: any
+Verified: 2026-11-24 9b4a6452 (autolens_profiling)
 
 ## Why
 
