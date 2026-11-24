@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 16 in flight",
-  "updated": "2026-11-24T16:36:40Z",
+  "updated": "2026-11-24T16:46:11Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,6 +48,12 @@
       "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
       "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Compare Nautilus bound-update intervals on complete PyAutoFit fits \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/27",
+      "prompt": "Use the start-dev skill. active/nautilus_bound_cadence.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1792 \u2014 truncated-tail-evidence",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1792",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#753 \u2014 Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753",
       "prompt": null
     }
   ]
