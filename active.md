@@ -197,7 +197,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1794
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev
+- status: library-shipped, awaiting-merge (PyAutoFit#1795 OPEN 6b8383b8, awaiting human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1795
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1795
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5d-fit
 - repos:
   - PyAutoFit: feature/likelihood-lifecycle-p5d-fit
