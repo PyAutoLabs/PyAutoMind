@@ -107,22 +107,6 @@
 - tier: judge — supervised, human /prm
 - next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
 
-## zero_contour_grad_fails_on_jax_0_12
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/749
-- issued: 2026-11-24
-- session: shift worker 2026-11-24-am (codex:4e6d6d0af3d149f0a3ae66e9af6e5034)
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/750
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/139
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/372
-- worktree: /home/jammy/Code/PyAutoLabs-wt/zero-contour-jax-grad
-- repos:
-  - PyAutoGalaxy: feature/zero-contour-jax-grad
-  - autogalaxy_workspace_test: feature/zero-contour-jax-grad
-  - autolens_workspace_test: feature/zero-contour-jax-grad
-- prompt: active/zero_contour_grad_fails_on_jax_0_12.md
-- tier: judge — merge mode: human /prm
-
 ## heart-health-rerun-stale-push
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/368
 - prompt: active/heart_health_rerun_stale_push.md

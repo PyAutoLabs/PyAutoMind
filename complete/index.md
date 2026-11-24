@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2375 records across 11 buckets.
+2376 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -416,6 +416,7 @@ markers; everything below GENERATED is rebuilt.
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
 - [workspace-readme-images](2026/11/workspace-readme-images.md)
 - [workspace-smoke-nightly](2026/11/workspace-smoke-nightly.md) — M3.7d
+- [zero-contour-grad-fails-on-jax-0-12](2026/11/zero-contour-grad-fails-on-jax-0-12.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys
 

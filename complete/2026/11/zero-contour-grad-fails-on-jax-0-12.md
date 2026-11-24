@@ -1,3 +1,13 @@
+Restored zero-contour (critical-curve / caustic) gradients under JAX 0.12 in PyAutoGalaxy, and re-enabled the workspace_test regression and smoke coverage that had been switched off.
+
+- Library: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/750 (MERGED 2026-11-24)
+- Workspace: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/139 (MERGED 2026-11-24)
+- Workspace: https://github.com/PyAutoLabs/autolens_workspace_test/pull/372 (MERGED 2026-11-24)
+- Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/749 (closed)
+- Shift: 2026-11-24-am (Codex worker); merged by human /prm.
+
+## Original prompt
+
 # jax.grad through zero-contour critical curves fails on jax 0.12
 
 Type: bug
