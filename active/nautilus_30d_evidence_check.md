@@ -21,3 +21,7 @@ This new bounded local follow-up permits three single-process children, each cap
 
 Issued: 2026-11-24
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/30
+
+## Execution
+
+All three pinned starting checkpoints passed their identity checks. The saved partial was corrected on its copy and matched the published posterior before advancing. Resampling seeds 1 and 2 began with the original 34,100-call exploration and zero fresh samples. An independent eigendecomposition gives analytic log evidence −36.76768815337412. The earlier timeout remains separate.
