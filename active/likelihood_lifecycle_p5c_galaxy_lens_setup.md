@@ -11,7 +11,9 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-24
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/881
 Consequence: judge
 Witness: with PyAutoGalaxy and PyAutoLens main, `al.AnalysisImaging(dataset, setup="auto")` (and the interferometer, point, weak and multi-dataset analyses, plus their PyAutoGalaxy counterparts) resolves the setup through `aa.Setup.auto` with the lens-scale keys mapped by the caller (imaging/interferometer variant from the model's pixelization / linear light profiles; group, multi_galaxy, cluster and point-source keys from the analysis type), applies it once at construction (`dataset.apply_setup` plus the factory consistency check, so a mismatch raises at construction rather than becoming rejected samples mid-search), writes `setup.json` beside the search output, and prints the setup banner line at fit start. An explicit `al.Setup(...)`, a setup_id string or `PYAUTO_SETUP=<setup_id>` always wins, and `use_jax=` stays as an explicit override that maps onto a Setup. Without `setup=` the behaviour is unchanged apart from a one-line "auto would choose …" banner (R6: opt-in release first, default flipped in a later release). Unit tests cover every analysis type, with a monkeypatched `Environment`; full PyAutoGalaxy and PyAutoLens suites are green, and `pyauto-heart smoke --affected-by PyAutoLens` passes.
 Review-minutes: 30

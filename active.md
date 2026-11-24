@@ -91,3 +91,15 @@
 - prompt: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
 - tier: judge — supervised, human /prm
 - next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
+
+## likelihood-lifecycle-p5c-galaxy-lens
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/881
+- issued: 2026-11-24
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: library-dev (5C-1 PyAutoGalaxy first; 5C-2 PyAutoLens on a follow-up branch after 5C-1 merges)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5c-galaxy-lens
+- repos:
+  - PyAutoGalaxy: feature/likelihood-lifecycle-p5c1-galaxy
+- prompt: active/likelihood_lifecycle_p5c_galaxy_lens_setup.md
+- epic: likelihood-lifecycle (phase 5C of 5A–5H; two PRs: 5C-1 Galaxy, 5C-2 Lens)
+- tier: judge — merge mode: human /prm
