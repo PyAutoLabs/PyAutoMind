@@ -8,18 +8,18 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 5 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 279 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
 ## Autopilot
 
-_5 queued · 3 questions_
+_LIVE · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -45,9 +45,11 @@ _5 queued · 3 questions_
 - Q23 — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, 1 day)
 - Q24 — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, 1 day)
 
-**Shift**
+**Shift** (2026-11-23-am — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-24-am — closed, nothing to review · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603))_
+Live: LIVE · 1 refusal reasons · tokens 0 of 250000 (1 session(s) unmeasured) · review-at 2026-11-23T09:30Z (as of 2026-11-23T09:12:02Z) · [shift issue #600](https://github.com/PyAutoLabs/PyAutoMind/issues/600#issuecomment-7096315866)
+
+_(nothing to review yet)_
 
 ## Start here
 
@@ -946,7 +948,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 31 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 32 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1080,6 +1082,14 @@ Use the start-dev skill. draft/feature/pyautobrain/cloud_worker_bundle_and_profi
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/dependants_tests_after_library_merge.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> — pyautobrain · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/digest_review_action_table.md
 ```
 
 </details>
@@ -1534,7 +1544,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 225 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 225 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
