@@ -226,7 +226,8 @@
 ## nautilus-30d-matched-ess
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/34
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/35
 - prompt: active/nautilus_30d_matched_ess.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-matched-ess
 - repos:
