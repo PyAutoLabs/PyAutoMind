@@ -189,3 +189,5 @@ The archived cadence sweep identifies a concrete next experiment. Doubling the i
 All eight log-evidence errors were below 0.058 against quadrature (reference −57.45410). Both signs were recovered in every symmetric fit, with positive-mode mass 0.490–0.520. All folded posterior checks passed. Three of four pairs exceeded the 25% allowance on evaluations to a peak. Keep the native default. Transfer to lensing remains unmeasured. For the single-mode pairs, 7.6–11.7 ms of additional work per serial evaluation would absorb the observed time saving if sampling paths and other costs stayed fixed.
 
 [Paired timings and reproduction](https://github.com/PyAutoLabs/autofit_profiling/blob/bfb33b7f4a2792bf467b16de640a58afe70e1e8c/experiments/nautilus_bound_cadence/README.md). All 111 tooling tests, Ruff and the Pulse catalogue check passed. The scoped Heart verdict was green with this producer deferred to PR checks. The draft PR awaits human review. Wider phase 0b and its 30D evidence gate remain open. Pulse promotion remains deferred.
+
+Maintainer decision, 2026-11-24: retain the native bound-update interval. The cadence pilot remains an experimental measurement.
