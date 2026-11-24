@@ -28,3 +28,11 @@ Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/26
 ## Gaussian-profile pairs
 
 Both reversed-order pairs completed. The doubled interval shortened full fits by 34.7% and 25.5%, with 1,800 extra likelihood evaluations in each. First near-peak calls moved from 4,278 to 6,020 and from 4,043 to 5,608. Both pairs passed evidence and folded-posterior checks and exceeded the registered discovery limit. The two-mode controls are in progress.
+
+## Completed comparison
+
+[Draft profiling PR #27](https://github.com/PyAutoLabs/autofit_profiling/pull/27) reports eight local CPU fits in four counterbalanced pairs. Doubling the native interval from 200 to 400 shortened the full Gaussian-profile fits by 34.7% and 25.5% and the symmetric two-mode fits by 31.2% and 32.4%. Bound builds fell from 25–28 to 18–19. The candidate required 1,600–1,800 additional likelihood evaluations per fit.
+
+All eight log-evidence errors were below 0.058 against quadrature (reference −57.45410). Both signs were recovered in every symmetric fit, with positive-mode mass 0.490–0.520. All folded posterior checks passed. Three of four pairs exceeded the 25% allowance on evaluations to a peak. Keep the native default. Transfer to lensing remains unmeasured. For the single-mode pairs, 7.6–11.7 ms of additional work per serial evaluation would absorb the observed time saving if sampling paths and other costs stayed fixed.
+
+[Paired timings and reproduction](https://github.com/PyAutoLabs/autofit_profiling/blob/bfb33b7f4a2792bf467b16de640a58afe70e1e8c/experiments/nautilus_bound_cadence/README.md). All 111 tooling tests, Ruff and the Pulse catalogue check passed. The scoped Heart verdict was green with this producer deferred to PR checks. The draft PR awaits human review. Wider phase 0b and its 30D evidence gate remain open. Pulse promotion remains deferred.

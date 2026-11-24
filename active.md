@@ -178,7 +178,8 @@
 ## nautilus-bound-cadence
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/26
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/27
 - prompt: active/nautilus_bound_cadence.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-cadence
 - repos:
