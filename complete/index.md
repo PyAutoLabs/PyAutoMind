@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2381 records across 11 buckets.
+2383 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -278,6 +278,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p4e-rerun-ingest](2026/11/likelihood-lifecycle-p4e-rerun-ingest.md)
 - [likelihood-lifecycle-p5a-nerves](2026/11/likelihood-lifecycle-p5a-nerves.md)
 - [likelihood-lifecycle-p5b-array](2026/11/likelihood-lifecycle-p5b-array.md)
+- [likelihood-lifecycle-p5c-galaxy-lens](2026/11/likelihood-lifecycle-p5c-galaxy-lens.md)
 - [likelihood-lifecycle-p6-delaunay-hilbert-roughness](2026/11/likelihood-lifecycle-p6-delaunay-hilbert-roughness.md)
 - [likelihood-lifecycle-p6a-gradient-harness](2026/11/likelihood-lifecycle-p6a-gradient-harness.md)
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
@@ -368,6 +369,7 @@ markers; everything below GENERATED is rebuilt.
 - [rtd-tutorials-consolidated](2026/11/rtd-tutorials-consolidated.md)
 - [scientist-minimal-starter](2026/11/scientist-minimal-starter.md) — already shipped — Mind#502 / PR #503, record `complete/2026/10/scientist-starter-acceptance.md`; slices PyAuto…
 - [search-seed-reproducibility](2026/11/search-seed-reproducibility.md) — already shipped — PyAutoFit#1686 (5bf057f2, 2026-10-14; search-ext A4b), record `complete/2026/10/search-ext-a…
+- [sed-waveband-search-cap](2026/11/sed-waveband-search-cap.md)
 - [seed-samplers-byte-stable](2026/11/seed-samplers-byte-stable.md) — Seeded every search in the autofit_visualization gallery producers (seed=1 on DynestyStatic, Emcee, Zeus, LBFG…
 - [sersic-products-read-sed-output-dir](2026/11/sersic-products-read-sed-output-dir.md) — already shipped — euclid_strong_lens_modeling_pipeline 126167b00 (2026-10-05) "catalogue: read Sersic fits fro…
 - [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…

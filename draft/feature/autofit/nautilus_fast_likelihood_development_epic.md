@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); experimental phase 0b.1 merged (autofit_profiling#11, issue #10 closed), experimental phase 0b.2 diagnostics awaiting human merge (autofit_profiling#13, issue #12); wider phase 0b incomplete; no Pulse campaign
+Status: Experimental phases 0a, 0b.1 and 0b.2 merged. Wider phase 0b remains open. The experimental parent CPU study completed on RAL. See the 2026-11-24 reconciliation below.
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
@@ -27,7 +27,7 @@ Lane: any
 
 ## Intent and current state
 
-James chose Nautilus development on 2026-11-09: profile and extend Nautilus for fast likelihoods on both CPU and GPU, CPU first. This is an implementation epic, not a replacement-sampler survey. It is FILED, not running. No performance result or implementation decision below is claimed as measured in this intake.
+James chose Nautilus development on 2026-11-09: profile and extend Nautilus for fast likelihoods on both CPU and GPU, CPU first. This is an implementation epic, not a replacement-sampler survey. The dated member records below track execution. No performance result or implementation decision below is claimed as measured in this intake.
 
 Preserve Nautilus's demonstrated usefulness for lens modelling while reducing the time spent outside useful likelihood work. Investigate the hypothesis that CPU batches wait on the slowest evaluation; measure both within-chunk imbalance and the final batch barrier. Also measure serial neural training, geometric bounds, serialization, wrapper overhead and checkpointing. Characterise degradation with increasing nonlinear dimension from the start; solving execution overhead does not by itself solve sample efficiency.
 
@@ -101,7 +101,7 @@ The user's choice is Nautilus development. Alternative samplers are optional dia
 
 Retain links from the preceding research as design references, not validated lensing results: [i-nessai](https://arxiv.org/abs/2302.08526), [JAXNS](https://github.com/Joshuaalbert/jaxns), [NS-SwiG](https://arxiv.org/abs/2602.17414), [SHARPy](https://github.com/gabrieledemasi/sharpy), [PARIS](https://github.com/mx-Liu123/parismc), [ASPIRE](https://github.com/mj-will/aspire), [neural transport NS](https://arxiv.org/abs/2609.29413). Reverify versions, public code and estimator assumptions before importing any idea. ASPIRE-style result reuse and hierarchical factorisation are separate science/workflow opportunities, not direct Nautilus CPU optimisations.
 
-## Tomorrow's starting point
+## Original starting point (2026-11-09)
 
 Resume this epic and start phase 0 only. Read current pins and claims, inspect the generic profiling harness, and produce the smallest instrumented CPU benchmark. Deliver a measured bottleneck ranking and the next single optimisation proposal. Aim for one verified CPU improvement in the next development step; do not begin by rewriting the neural network or the entire sampler in JAX.
 
@@ -122,11 +122,24 @@ Pilot: 26 successes, one fixed-cap timeout, nine unrun; 13 matched tracing pairs
 Next: separately scope high-dimensional evidence accuracy and end-of-fit output cost before expanding dimensions/targets or considering Pulse promotion. No new compute, optimization, merge or release is authorized by this completion record. Existing paused campaigns and parity blockers remain intact.
 
 
-## Proposed first optimization members — 2026-11-10
+## First optimization proposals as filed on 2026-11-10
 
 Human requested implementing the plotting adapter and starting CPU sampler-speed work. Two separate plans are prepared, awaiting approval before library edits/compute:
 
-- [Compact corner array adapter](../../../active/nautilus_compact_plot_adapter.md): PyAutoFit-owned opt-in path, numerical/visual parity and repeated wrapped-output comparisons; no anesthetic source edits.
+- [Compact corner array adapter](../../../complete/2026/11/nautilus-compact-plot-adapter.md): PyAutoFit-owned opt-in path, numerical/visual parity and repeated wrapped-output comparisons; no anesthetic source edits.
 - [CPU checkpoint batching](../../../active/nautilus_cpu_checkpoint_batching.md): opt-in interval5 versus native interval1, complete atomic snapshots, interruption/resume witnesses and paired5D/10D CPU runs.
 
 Both remain experimental/outside Pulse; fullphase0b is incomplete. The diagnostic PR13 remains unmerged. Default behavior and neural bounds remain; merge stays human. Approval must cover the detailed new resource bounds and extend the development HeartRED override to these phase1library changes; no release/CI bypass.
+
+## Reconciliation and measured CPU result — 2026-11-24
+
+| Member | Verified disposition |
+|---|---|
+| Baseline and dimensions | Phase 0a [PR #9](https://github.com/PyAutoLabs/autofit_profiling/pull/9) and experimental 0b.1 [PR #11](https://github.com/PyAutoLabs/autofit_profiling/pull/11) merged November 10. Experimental 0b.2 [PR #13](https://github.com/PyAutoLabs/autofit_profiling/pull/13) merged November 12. Issues #8, #10 and #12 are closed. The 30D full-corner diagnostic finished and identified drawing, quantiles and dispatch costs. The fresh-sample 30D evidence check timed out before its ESS target. |
+| Compact corner plotting | [PyAutoFit #1764](https://github.com/PyAutoLabs/PyAutoFit/pull/1764) and [profiling #14](https://github.com/PyAutoLabs/autofit_profiling/pull/14) closed without merge. Issue #1762 closed. Two matched replays gave identical PNGs and 1.34× and 2.02× wall-time ratios. The human declined to maintain the second renderer on this evidence. |
+| Checkpoint batching | [PyAutoFit #1765](https://github.com/PyAutoLabs/PyAutoFit/pull/1765) and [profiling #15](https://github.com/PyAutoLabs/autofit_profiling/pull/15) closed without merge. Interval 5 was slower on all six pairs, with a median 28.1% increase in sampler time. Keep native interval 1. [Issue #1763](https://github.com/PyAutoLabs/PyAutoFit/issues/1763) remains open and parked for human close-out. |
+| Spawned neural training | [Profiling #16](https://github.com/PyAutoLabs/autofit_profiling/issues/16) remains open and parked. [PR #17](https://github.com/PyAutoLabs/autofit_profiling/pull/17) closed without merge. The approved 12-fit job 415196 completed on November 12 and was recovered on November 24. All 12 fits passed exact parity and cleanup. The pooled timing effect reversed between passes. Closing workers after training left the same pattern, and serial controls also had slow tails. Keep production serial bound training. [Per-arm results, reference and archive identity](nautilus_parent_cpu_slowdown.md#job-415196-recovered-on-2026-11-24). |
+
+Mind has no active coding claim for this epic. Its checkpoint and training-pool members are in [parked.md](../../../parked.md). The separate Nautilus stall investigation in autolens_inference#73 belongs to the likelihood validation work. The parked experiments have no open implementation PR.
+
+Wider phase 0b remains the next gate. Preserve the unresolved high-dimensional evidence check. For serial CPU work, the retained 10D controls spent 4.82 and 8.94 s exclusively in bound construction, behind 11.08 and 16.63 s in neural training. The next bounded attribution should identify the expensive geometry operations against a matched baseline before selecting an optimization. Pulse promotion remains deferred. Resolve the canonical Pulse or Insight task before any campaign execution.

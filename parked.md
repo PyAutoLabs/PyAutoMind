@@ -135,7 +135,7 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: awaiting-merge (bounded experiment complete; negative performance result; human review)
+- status: Parked. Both checkpoint PRs closed without merge. PyAutoFit#1763 remains open for human close-out.
 - prompt: active/nautilus_cpu_checkpoint_batching.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-checkpoint-batching
 - retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-checkpoint-batching); all worktrees/raw retained, no further compute
@@ -146,14 +146,14 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1765
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/15
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1765
+- disposition: PyAutoFit#1765 and autofit_profiling#15 closed without merge. Native interval 1 retained.
 - validation: fullsuite4302passed/2skipped/1expected failure,10smoke cases,125tooling tests/Ruff/catalogue; author review only. Frozen librarye16fba3ee/producerd108719; attempt01 halted after38.12s: interruption success, resume receipt error,18unrun/all timings unrun. Integer serialization fixed in daf0cc6; test portability4e90392, report15afe55. Read-only checkpoint reopening confirmed exact control result with zero likelihood calls and unchanged bytes; failed pilot case remains failed. Live human selected "Run corrected checkpoint pilot once". Attempt02 uses clean15afe55 (harness identical to approved daf0cc6), unchanged20children/120s/4096MiB/1800s limits; stop on first failure. Attempt02 halted46.74s at host-load guard after one interruption success44.94s;19unrun including resume/all timings. Saved checkpoint hash unchanged,4600recoverable/4800completed,200lost/0inflight. Report5206f0b, tooling CI42869583879 green; exact library3.12/3.13/nojax CI42867205132 green. Both attempts retained (~15.7MiB); no further compute or merge.
 
 - fresh-pilot-approval: live human "Try the checkpoint pilot again once the host is quiet, with the same limits. Keep it outside Pulse and leave merge for me." Attempt03 authorized once, unchanged harness and20children/120s/4096MiB/1800s caps. Wait for three one-minute-load readings below1.0 spaced30s before launch; no change to in-run2.0 guard. Preserve attempts01/02/03.
 
 - final-experiment: approved quiet-host attempt03 at producer5206f0b/librarye16fba3ee completed20/20 in931.93s, max88.91s/493.1MiB;4exact recovery controls and6exact sampling pairs passed. Native interval1 faster in all6: sampler21.2–48.8%/median28.1% longer with interval5, fullfit15.6–46.6%/median23.8% longer. Checkpoint time2.81–4.44x, syscall bytes2.37–2.62x. Negative result; keep native default, no promotion. Controlled loss200/500completed,0inflight, saved file hashes intact. Reporte1cebf8; all3attempts~120MiB retained. CI exposed existing /proc test reaping race; narrow test-only fix c06cae0. Final exact-head CI42877256638 passed all125tooling/Ruff/format/catalogue/link checks. Both draft PRs remain open for human review; no further compute. No merge/release/Pulse; widerphase0b incomplete.
 - latest-heart: 2026-11-10T18:35:43.930077+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)". Existing task-wide live RED development approval retained; unrelated CTI source untouched, no release or CI bypass.
-- parked: 2026-11-12 — negative result; recommended CLOSE of PyAutoFit#1765 + autofit_profiling#15 and issue #1763 (agent close was permission-blocked; human to close). On close, write a not-merged completion record.
+- parked: 2026-11-12 after the negative result. Both PRs subsequently closed without merge. Human close-out of issue #1763 remains pending.
 
 ## nautilus-spawn-training-pool
 - proposed-follow-up: retained data localizes parent CPU loss after training (~87% more CPU in the final168 likelihood batches). Saved draft/feature/autofit/nautilus_parent_cpu_slowdown.md:12fit controlled study, one bounded original-node RAL job; awaiting explicit implementation/compute approval. No new science; outside Pulse; human merge.
@@ -168,7 +168,7 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: workspace-dev (parent CPU job415196 queued Resources; estimated2026-11-15T13:45Z; allowance CONSUMED; human merge)
+- status: Parked. RAL 415196 completed on 2026-11-12. Results recovered 2026-11-24 under the existing prompt. Issue #16 remains open and PR #17 closed without merge.
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -224,7 +224,7 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - RAL-final-result: Job415139 COMPLETED0:0 in591s at measured producerdb516b5.18/18 cases passed; six exact posterior/state/model/target timing pairs, both recovery controls and all checkpoint reopens passed. Bootstrap23.56s, pilot565.95s, max child47.92s/594.50MiB; cleanup complete and all descendants reaped.153,104,897bytes raw retained remotely/task-locally/human archive. Median paired workflow:5D17.9% faster(1.217x),10D2.4% slower(0.976x); median sampler speedups1.393x/1.038x. Mixed three-seed pilot, no production default change or30D claim. Report-only producer commit798d743 in PR17; measured producer CI43206509078/244tests green. Outside Pulse; human merge; no more compute.
 
 - 10D-diagnostic-proposal: user requested further investigation; read-only accounting complete. Proposed17-child single RAL job (one capture,12training replays,4traced fits), same4cores/8GiB/35min and120s/4GiB/1800s caps. Detailed plan in canonical task. Implementation/new compute await approval; completed pilot/PR17 remain reviewable, outside Pulse/human merge.
-- parked: 2026-11-12 — pre-autonomy wrap-up; RAL job 415196 still queued (est. 2026-11-15) — inspect its output on completion, no retry. Draft PR autofit_profiling#17 open; human merge.
+- parked: 2026-11-12 during pre-autonomy wrap-up. The queued-job handoff below is historical. The November 24 result in the [epic ledger](draft/feature/autofit/nautilus_fast_likelihood_development_epic.md) supersedes it.
 
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517

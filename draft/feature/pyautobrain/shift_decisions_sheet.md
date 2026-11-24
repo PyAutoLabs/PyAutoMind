@@ -12,7 +12,7 @@ Filed: 2026-11-18
 Epic: autonomous-orchestrators
 Phase: 10
 Consequence: judge
-Witness: replaying the 2026-11-16-pm record through `batch digest --record` ends in one numbered decisions block that lists autolens_inference#70, euclid#133 and PyAutoBrain#654 awaiting /prm, the `decision-taken` flags, the set-aside writes and the late PyAutoGalaxy#720, and a test shows a worker-filed untested risk as an inbox entry in that block
+Witness: a test shows a worker that lists a risk it cannot test filing it as an inbox entry, which then appears as a numbered row under "Answer" in the digest's review table (PyAutoBrain#718); and replaying a record with a set-aside write and a late arrival lists both as numbered rows in that table
 Lane: any
 Unattended: never
 
@@ -28,6 +28,13 @@ no follow-up and asked no question; one needed a code change (euclid#135).
 Human ruling R4 (2026-11-17): M3.3 is two sheets. This is the one after a shift.
 
 ## What
+
+**Scope changed 2026-11-24 (human-approved in chat).** Item 1's numbered block is built by
+PyAutoBrain#718: a numbered review table at the top of the digest, grouped by the human's next
+action (`/prm`, answer, fix, blocked, running, done), with `decision-taken` and refusal reasons
+in its Note column. What remains here: item 2 (workers file untested risks as inbox entries),
+and set-aside writes and late arrivals as rows in that table.
+
 
 1. The digest ends with one numbered decisions block: every PR waiting for `/prm`, every
    `decision-taken` flag, every risk a worker listed, every set-aside write and every late

@@ -1,3 +1,15 @@
+Bounded the SED-chain waveband fits that could run without end. PyAutoFit#1793 bounds Nautilus sampling time across updates. euclid_strong_lens_modeling_pipeline#140 caps non-VIS waveband sampling and reports the capped catalogue rows.
+
+- Library: https://github.com/PyAutoLabs/PyAutoFit/pull/1793 (merged 08eeecd85, 2026-11-24, human /prm, ci-verdict GREEN 5 success + 1 non-test skip)
+- Workspace: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/140 (merged 35388d9d8, 2026-11-24, human /prm, ci-verdict GREEN 9/9)
+- Issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136 (closed)
+- Built by shift worker 2026-11-20-am; resumed 2026-11-22 in Codex desktop on the human's answer to Q17 (option 1).
+- Validation (from the task row): PyAutoFit 936b073d4 passed the timeout and conformance checks, including a real sampler and empty-posterior recovery. Euclid 89b7f7c passed 511 fast tests and all nine smoke scripts. Two sequential synthetic plateau fits hit a reduced call budget and wrote QA markers.
+- Not done here: the maintainer runs the original tile on RAL after merge and reports on euclid#136.
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1793
+
+## Original prompt
+
 # SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain
 
 Type: bug

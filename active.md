@@ -22,25 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## sed-waveband-search-cap
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
-- issued: 2026-11-20
-- session: shift worker 2026-11-20-am (79ac305d-a450-40fe-b02b-8b0ccf4e159a)
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1793
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/140
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1793
-- resumed: 2026-11-22, Codex desktop, Q17 option 1
-- worktree: /home/jammy/Code/PyAutoLabs-wt/sed-waveband-search-cap
-- repos:
-  - PyAutoFit: feature/sed-waveband-search-cap
-  - euclid_strong_lens_modeling_pipeline: feature/sed-waveband-search-cap
-- question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7034635460
-- prompt: active/sed_chain_waveband_fit_can_spin_forever.md
-- validation: PyAutoFit 936b073d4 passed the timeout and conformance checks, including a real sampler and empty-posterior recovery. Euclid 89b7f7c passed 511 fast tests and all nine smoke scripts. Two sequential synthetic plateau fits hit a reduced call budget and wrote QA markers.
-- next: Human review of PyAutoFit #1793 first, then Euclid #140. The maintainer will run the original tile on RAL after merge and report on Euclid #136.
-- tier: judge — supervised, human review and /prm
-
 ## numba-wtilde-validation-legs-stall
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/73
 - issued: 2026-11-20
@@ -92,17 +73,44 @@
 - tier: judge — supervised, human /prm
 - next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
 
-## likelihood-lifecycle-p5c-galaxy-lens
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/881
+## digest-review-table
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/718
+- issued: 2026-11-24
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/719
+- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/606
+- worktree: /home/jammy/Code/PyAutoLabs-wt/digest-review-table
+- repos:
+  - PyAutoBrain: feature/digest-review-table
+  - PyAutoMind: feature/digest-review-table
+- prompt: active/digest_review_action_table.md
+- coordination: human-approved 2026-11-24 ("Release after 15 min", "fix it first" before the gate shift) — PyAutoBrain shared with parked-hold-grace (PyAutoBrain#720; _orchestrator.py, AUTONOMY.md) while #719 (_digest.py) awaits /prm
+- epic: autonomous-orchestrators (M3; before the M3 gate shift; folds M3.3 slice 2 item 1)
+- tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5b3-array
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/711
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev (5C-1 MERGED 2026-11-24 PyAutoGalaxy#752 5bcb54a9; 5C-2 PyAutoLens in progress on feature/likelihood-lifecycle-p5c2-lens; issue #881 stays open until 5C-2 merges)
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5c-galaxy-lens
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5b3-array
 - repos:
-  - PyAutoGalaxy: feature/likelihood-lifecycle-p5c1-galaxy
-  - PyAutoLens: feature/likelihood-lifecycle-p5c2-lens
-- prompt: active/likelihood_lifecycle_p5c_galaxy_lens_setup.md
-- epic: likelihood-lifecycle (phase 5C of 5A–5H; two PRs: 5C-1 Galaxy, 5C-2 Lens)
+  - PyAutoArray: feature/likelihood-lifecycle-p5b3-array
+- prompt: active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md
+- epic: likelihood-lifecycle (phase 5B-3; then 5C-3 Galaxy+Lens call sites + aggregator)
+- tier: judge — merge mode: human /prm
+
+## parked-hold-grace
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
+- issued: 2026-11-24
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/parked-hold-grace
+- repos:
+  - PyAutoBrain: feature/parked-hold-grace
+  - PyAutoMind: feature/parked-hold-grace
+- prompt: active/shift_closes_early_with_held_tasks_unstarted.md
+- coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py); PyAutoMind shared too (batches/AGENTS.md, a different section from #606)
+- epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm

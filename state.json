@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
-  "updated": "2026-11-24T11:49:10Z",
+  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
+  "updated": "2026-11-24T13:21:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "1 prompt(s) need lifecycle reconciliation",
+      "url": null,
+      "prompt": "Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:\n\n1. `git fetch origin && git status`. If behind `origin/main`, `git pull --ff-only`\n   before touching anything.\n2. `python3 scripts/lifecycle.py check`, `orphans`, and `index --check`. Fix\n   whatever drift they report.\n3. Reconcile finished work \u2014 this is the part nothing automates. For every prompt\n   under `draft/` and `active/`, decide whether it is already done: a `Status:`\n   header saying shipped/superseded/absorbed, a merged PR named in its body, or a\n   record in `complete/` whose scope already covers it (check `complete/index.md`\n   and grep the dated buckets). Treat a same-subject record as evidence, not\n   proof \u2014 read both and confirm the scope really matches before retiring a\n   prompt.\n4. For each one that IS done, write its record and retire the prompt:\n   `python3 scripts/lifecycle.py record <slug> --date <YYYY-MM-DD> --from-file\n   <body> --apply`, where <body> ends with `## Original prompt` followed by the\n   prompt's full text. Then `git rm` the prompt file and repoint every\n   cross-reference to it (grep the slug across `draft/`, `active/`, `epics.md`\n   and the registry files).\n5. Regenerate the page: `pyauto-brain intake --apply dashboard`. Never hand-edit\n   `dashboard.md` or `dashboard.html` \u2014 they are generated.\n6. Commit and push to `main`, so `dashboard_refresh.yml` agrees with the tree.\n\nReport what you retired, what you deliberately left in the backlog and why, and\nanything you could not verify."
+    },
     {
       "severity": "red",
       "text": "multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood on main (\u221272070 vs 1995) \u2014 awaiting-input",
@@ -39,9 +45,9 @@
     },
     {
       "severity": "yellow",
-      "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
-      "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
+      "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
+      "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
     },
     {
       "severity": "yellow",
@@ -69,14 +75,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1793 \u2014 SED chain waveband fit can spin forever in Nautilus exploration\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
+      "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 grid-factor-results",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 grid-factor-results",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
+      "text": "pending release: PyAutoFit PyAutoFit#1793 \u2014 sed-waveband-search-cap",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
       "prompt": null
     },
     {
@@ -87,14 +93,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#752 \u2014 Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens `setup=\"auto\"` (opt-in), `setup.json`, the setup\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#752 \u2014 likelihood-lifecycle-p5c-galaxy-lens",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752",
       "prompt": null
     },
     {
@@ -117,14 +123,8 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#877 \u2014 mixed-galaxy-light",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/877",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoNerves PyAutoNerves#223 \u2014 likelihood-lifecycle-p5a-nerves",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/223",
+      "text": "pending release: PyAutoLens PyAutoLens#882 \u2014 likelihood-lifecycle-p5c-galaxy-lens",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/882",
       "prompt": null
     }
   ]

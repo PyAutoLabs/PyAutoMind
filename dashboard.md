@@ -10,12 +10,16 @@
 |-------|------:|
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
-| [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 9 |
+| [Epics](#epics) | 25 |
+| [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
+
+> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
+
+> - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md — its own `Status:` says completed, but the prompt never left draft/ (reconcile its lifecycle)`
 
 ## Autopilot
 
@@ -27,11 +31,10 @@ _LIVE · 0 in progress_
 
 **Queue** ([`queue.md`](queue.md)) — read-only; change it in a `/queue` chat
 
-1. [SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain](active/sed_chain_waveband_fit_can_spin_forever.md)
-2. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
-3. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
-4. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
-5. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
+1. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
+2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
+3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
+4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
 **Questions** (3 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
 
@@ -253,11 +256,32 @@ Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
-<details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: <code>draft/feature/autofit/nautilus_fast_likelihood_development_epic.md</code> — PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record…</summary>
+<details>
+<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 2 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: <code>draft/feature/autofit/nautilus_fast_likelihood_development_epic.md</code> — Experimental CPU baseline and 30D diagnostics merged through phase 0b.2. The parent CPU experiment finished on RAL. Wider phase…</summary>
 
 ```
 Continue the 'Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration' epic. Its canonical state lives in draft/feature/autofit/nautilus_fast_likelihood_development_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Implementation epic; never issue the umbrella. Phase 0a complete: complete/2026/11/nautilus-cpu-profiling-baseline.md (autofit_profiling#8 → PR#9 merged); experimental phase 0b.1 complete: complete/2026/11/nautilus-cpu-campaign-setup.md (PR#11 merged); wider phase 0b remains pending, Pulse promotion deferred by human choice. Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics belong to phase 0b; 0a completion alone does not complete phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
 ```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_parent_cpu_slowdown.md">Diagnose parent CPU slowdown after native training-pool use</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_parent_cpu_slowdown.md
+```
+
+</details>
 
 </details>
 
@@ -307,12 +331,20 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 7 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 8 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
 ```
 Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood' epic. Its canonical state lives in draft/research/autolens_profiling/likelihood_lifecycle_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md">Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites…</a> — autolens · large · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md
 ```
 
 </details>
@@ -772,7 +804,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 <details>
 <summary><b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — ledger: <code>draft/feature/autolens/cluster_usability.md</code> — Dataset sequence approved; figure defaults under review</summary>
+<details><summary>📋 <b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — ledger: <code>draft/feature/autolens/cluster_usability.md</code> — Dataset sequence and simple fit-figure layout approved; implementation pending</summary>
 
 ```
 Continue the 'Cluster usability — three datasets for visualization, profiling, inference and teaching' epic. Its canonical state lives in draft/feature/autolens/cluster_usability.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532; validation of a present but malformed member CSV remains.
@@ -969,7 +1001,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 32 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 31 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1103,14 +1135,6 @@ Use the start-dev skill. draft/feature/pyautobrain/cloud_worker_bundle_and_profi
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/dependants_tests_after_library_merge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> — pyautobrain · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/digest_review_action_table.md
 ```
 
 </details>
@@ -1304,19 +1328,6 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>nautilus-fast-likelihoods</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
-
-<details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>autonomous-orchestrators (programme M3.4 companion)</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/questions_inbox_bulk_answering.md">Questions inbox: parked questions wait in one list the human works through…</a> — pyautobrain · medium · supervised · high</summary>
@@ -1378,10 +1389,18 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5c_galaxy_lens_setup.md">Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens <code>setup="auto"</code> (opt-in), <code>setup.json</code>, the setup…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/881">issue #881</a> — issued 2026-11-24 — library-dev (5C-1 MERGED 2026-11-24 PyAutoGalaxy#752 5bcb54a9; 5C-2 PyAutoLens in progress on… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752">PyAutoGalaxy#752</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/718">issue #718</a> — issued 2026-11-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/719">PyAutoBrain#719</a></summary>
 
 ```
-Use the start-dev skill. active/likelihood_lifecycle_p5c_galaxy_lens_setup.md
+Use the start-dev skill. active/digest_review_action_table.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md">Likelihood lifecycle phase 5B-3: PyAutoArray lazy, size-gated sparse operator on the dataset…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/711">issue #711</a> — issued 2026-11-24 — library-dev</summary>
+
+```
+Use the start-dev skill. active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md
 ```
 
 </details>
@@ -1410,18 +1429,18 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136">issue #136</a> — issued 2026-11-20 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1793">PyAutoFit#1793</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/140">euclid_strong_lens_modeling_pipeline#140</a> — ⏳ pending release: PyAutoFit</summary>
-
-```
-Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main: <code>al.MapperValued</code> no longer exists</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/685">issue #685</a> — issued 2026-11-23 — awaiting-input</summary>
 
 ```
 Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/720">issue #720</a> — issued 2026-11-24 — library-dev</summary>
+
+```
+Use the start-dev skill. active/shift_closes_early_with_held_tasks_unstarted.md
 ```
 
 </details>
@@ -1533,7 +1552,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 226 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 227 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1584,7 +1603,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 37</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1854,14 +1873,6 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 
 ```
 Use the start-dev skill. draft/feature/autoarray/matern_nu_gradient_via_bessel_k_order.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/nautilus_parent_cpu_slowdown.md">Diagnose parent CPU slowdown after native training-pool use</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/nautilus_parent_cpu_slowdown.md
 ```
 
 </details>
@@ -3017,20 +3028,21 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
-| 2026-11-24 | issued | <a href="active/likelihood_lifecycle_p5c_galaxy_lens_setup.md">Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens…</a> |
+| 2026-11-24 | issued | <a href="active/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> |
+| 2026-11-24 | issued | <a href="active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md">Likelihood lifecycle phase 5B-3: PyAutoArray lazy, size-gated sparse…</a> |
+| 2026-11-24 | issued | <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> |
 | 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-11-23 | issued | <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
-| 2026-11-20 | issued | <a href="active/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
-| 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
@@ -3040,12 +3052,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-11 | issued | <a href="active/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
-| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
@@ -3055,12 +3067,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
-| 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
@@ -3070,12 +3082,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
-| 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
@@ -3085,7 +3097,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
-| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 
 </details>
 
@@ -3237,20 +3248,21 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
-- [PyAutoFit#1793](https://github.com/PyAutoLabs/PyAutoFit/pull/1793) — `active/sed_chain_waveband_fit_can_spin_forever.md`
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
+- [PyAutoFit#1793](https://github.com/PyAutoLabs/PyAutoFit/pull/1793) — `complete/2026/11/sed-waveband-search-cap.md`
 - [PyAutoFit#1792](https://github.com/PyAutoLabs/PyAutoFit/pull/1792) — `complete/2026/11/truncated-tail-evidence.md`
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#752](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752) — `active/likelihood_lifecycle_p5c_galaxy_lens_setup.md`
 - [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `complete/2026/11/database-dataset-fits.md`
+- [PyAutoGalaxy#752](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoGalaxy#746](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746) — `complete/2026/11/mixed-galaxy-light.md`
 - [PyAutoGalaxy#748](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748) — `complete/2026/11/plot-utils-critical-curves-docstrings.md`
 
 **PyAutoLens**
 
 - [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `complete/2026/11/database-dataset-fits.md`
+- [PyAutoLens#882](https://github.com/PyAutoLabs/PyAutoLens/pull/882) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoLens#877](https://github.com/PyAutoLabs/PyAutoLens/pull/877) — `complete/2026/11/mixed-galaxy-light.md`
 
 **PyAutoNerves**

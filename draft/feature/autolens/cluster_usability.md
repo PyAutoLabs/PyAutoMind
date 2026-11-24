@@ -4,7 +4,7 @@ Type: feature
 Target: PyAutoLens
 Epic: cluster-usability
 Priority: high
-Status: dataset sequence approved; figure defaults under review
+Status: dataset sequence and Simple fit-figure layout approved; implementation pending
 Consequence: judge
 
 Prioritise this work ahead of the [cluster strong-lensing science epic](source_cluster_arc.md). The goal is to make today's cluster modelling usable at three scales. A reader should be able to see the constraints, identify which multiple-image family fits poorly, and follow that family into a diagnostic figure. The same examples should tell developers how runtime and inference behave as the science case gets harder. New lensing methods belong in the science epic.
@@ -33,6 +33,21 @@ For each tier, record the input provenance, family IDs and redshifts, member cat
 
 6. **Review the workspace examples with the author.** Use Brain's workspace documentation agent to compare the cluster scripts with established introductory examples. First review a proposed reading order and a before/after excerpt from `start_here.py` with Jammy. Then review each example in turn. Teach the CSV API through the walkthrough, retain `csv_api.py` as a separate reference away from the core entry points, and propose where the mass-parameterization material belongs once readers have fitted Simple. Settle the sequence and level of detail together before rewriting the package.
 
-## First review
+## Author review of the Simple figures
 
-The approved sequence is Simple → Pandora → MACS J0416. The next author decision is which figures to use by default. For the first visual comparison, show the current introductory figure beside the proposed image overlay, then show a cluster fit overview beside the detailed fit for its worst-fitting family. These comparisons give the author concrete figures and tutorial text to revise before the defaults are adopted.
+The author approved the Simple → Pandora → MACS J0416 progression and reviewed the two-family Simple simulation. Keep the greyscale image stretch and distinguish the two families by both colour and shape (amber circles and cyan diamonds in Simple). Check the palette and legend on Pandora and MACS J0416 as their catalogues are added.
+
+The default family fit figure has four panels:
+
+| | Left | Right |
+| --- | --- | --- |
+| Top | Cluster overview with family redshifts, the fitted statistic, and image numbers for the selected family. | One equally scaled zoom per image. For an image-plane fit, draw the observation, paired model position and positional uncertainty. For a source-plane fit, draw the back-traced observation, its propagated uncertainty and the fitted source centre. |
+| Bottom | Per-image contributions ranked from largest to smallest. | All images of the selected family back-traced to their source plane, with the fitted source centre marked. Keep this context for either likelihood. |
+
+Use PyAutoLens spatial-axis conventions in arcseconds. Centre each individual zoom on its actual observed or back-traced coordinates. Keep the two lower plotting areas the same size. Offer a single shared-coordinate detail panel as an option.
+
+Up to six image zooms fit on one page in image-number order. For larger families, put the six largest contributions on page one and continue in groups of six. Preserve original image numbers, repeat the overview, full ranking and source-plane summary, and highlight the images on each page. The scratch renderer exercised six- and seven-image synthetic layouts in both planes.
+
+Use the statistic supplied by the fitted likelihood. In particular, a nearest-image displacement alone cannot represent an all-pairs mixture. If a repeat-pairing fit penalizes an unmatched prediction, identify that penalty separately so the reader can reconcile the plotted contributions with the family total.
+
+Simple supplied the visual design review. Production implementation, saved and interactive checks, and review on the larger tiers remain open.
