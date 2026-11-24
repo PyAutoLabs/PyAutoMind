@@ -33,10 +33,11 @@ _LIVE · 0 in progress_
 4. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 5. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 
-**Questions** (2 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
+**Questions** (3 open, 0 deferred, 6 rulings — [`questions.md`](questions.md))
 
 - Q29 — Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction? (https://github.com/PyAutoLabs/autolens_workspace_test/issues/371, today)
 - Q30 — All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population? (https://github.com/PyAutoLabs/PyAutoLens/issues/871, today)
+- Q31 — see the question on the issue (https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143, today)
 - Q15 — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 5 days)
 - Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 5 days)
 - Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, 4 days)
@@ -46,7 +47,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-24-am — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 1 running, 7 finished, 2 refusal reasons · tokens 651550 of 2000000 (cache-read 15278309; 2 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:32:52Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
+Live: LIVE · 8 finished, 2 refusal reasons · tokens 689002 of 2000000 (cache-read 15800933; 1 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:34:47Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
 
 _(nothing to review yet)_
 
