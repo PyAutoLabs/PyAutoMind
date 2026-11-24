@@ -1405,7 +1405,7 @@ Use the start-dev skill. active/multi_dataset_jax_likelihood_delaunay_wrong_like
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_30d_evidence_check.md">Complete the conditional 30D Nautilus evidence check</a> — issued 2026-11-24</summary>
+<details><summary>📋 <a href="active/nautilus_30d_evidence_check.md">Complete the conditional 30D Nautilus evidence check</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/30">issue #30</a> — issued 2026-11-24 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/nautilus_30d_evidence_check.md
