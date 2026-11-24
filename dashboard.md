@@ -1378,7 +1378,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5c_galaxy_lens_setup.md">Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens <code>setup="auto"</code> (opt-in), <code>setup.json</code>, the setup…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/881">issue #881</a> — issued 2026-11-24 — library-dev (5C-1 PyAutoGalaxy first; 5C-2 PyAutoLens on a follow-up branch after 5C-1 merges)</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5c_galaxy_lens_setup.md">Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens <code>setup="auto"</code> (opt-in), <code>setup.json</code>, the setup…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/881">issue #881</a> — issued 2026-11-24 — library-shipped, awaiting-merge (5C-1 PyAutoGalaxy#752 OPEN 4d351b72, awaiting human /prm; 5C-2 PyAutoLens on a follow-up branch… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752">PyAutoGalaxy#752</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5c_galaxy_lens_setup.md
@@ -3243,6 +3243,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#752](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752) — `active/likelihood_lifecycle_p5c_galaxy_lens_setup.md`
 - [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoGalaxy#746](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746) — `complete/2026/11/mixed-galaxy-light.md`
 - [PyAutoGalaxy#748](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748) — `complete/2026/11/plot-utils-critical-curves-docstrings.md`
