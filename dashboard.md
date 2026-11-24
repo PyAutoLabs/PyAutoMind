@@ -45,7 +45,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-24-am — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 2 running, 3 finished, 2 refusal reasons · tokens 239097 of 2000000 (cache-read 6337631; 2 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:16:56Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
+Live: LIVE · 2 running, 4 finished, 2 refusal reasons · tokens 427521 of 2000000 (cache-read 10852272; 2 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:22:39Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
 
 _(nothing to review yet)_
 
@@ -1355,7 +1355,7 @@ Use the start-dev skill. active/colab_links_pinned_to_blob_main_in.md
 
 </details>
 
-<details><summary>📋 <a href="active/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/368">issue #368</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/368">issue #368</a> — issued 2026-10-25 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/369">PyAutoHeart#369</a></summary>
 
 ```
 Use the start-dev skill. active/heart_health_rerun_stale_push.md
