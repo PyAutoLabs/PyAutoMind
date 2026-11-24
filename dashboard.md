@@ -1397,7 +1397,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md">Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/885">issue #885</a> — issued 2026-11-24 — library-dev (5C-3a MERGED 2026-11-24 PyAutoGalaxy#753; 5C-3b PyAutoLens next on a new branch in the same worktree; issue #885… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753">PyAutoGalaxy#753</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md">Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/885">issue #885</a> — issued 2026-11-24 — library-dev (5C-3a MERGED 2026-11-24 PyAutoGalaxy#753; 5C-3b PyAutoLens in progress on feature/likelihood-lifecycle-p5c3b-lens… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753">PyAutoGalaxy#753</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md
