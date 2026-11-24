@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -149,7 +149,7 @@ Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 72
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 71
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1347,6 +1347,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/colab_links_pinned_to_blob_main_in.md">Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/879">issue #879</a> — library-dev</summary>
+
+```
+Use the start-dev skill. active/colab_links_pinned_to_blob_main_in.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/368">issue #368</a> — issued 2026-10-25 — library-dev</summary>
 
 ```
@@ -1518,7 +1526,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 227 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
+Lanes: any 226 · ral 30 · local-dev 12 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1878,7 +1886,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 45</summary>
+<summary><b>bug</b> — 44</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -1940,14 +1948,6 @@ Use the start-dev skill. draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_a
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/colab_links_pinned_to_blob_main_in.md">Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs</a> — autolens · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens/colab_links_pinned_to_blob_main_in.md
 ```
 
 </details>
