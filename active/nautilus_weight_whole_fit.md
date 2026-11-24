@@ -28,3 +28,9 @@ Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/24
 4. Publish the harness and compact receipt through a draft profiling PR and update the epic. Preserve raw results in scratch. The pilot is local and off-board, with production adoption and merge left to human review.
 
 Effective level is supervised. Merge mode is human /prm.
+
+## Result — 2026-11-24
+
+[Draft producer PR #25](https://github.com/PyAutoLabs/autofit_profiling/pull/25) is stacked on #23. The candidate took 43.17 s against 41.48 s native in the first pair (4.1% slower) and 38.22 s against 45.08 s native in the reverse pair (15.2% faster). The registered pair-direction rule gives an inconclusive end-to-end timing result. Keep the scalar update experimental. All four cases matched the frozen native ordered posterior, log evidence, ESS, 12 shells and 23,500 likelihood calls, including on unmodified native checkpoint reopening. Every case made 101 solver calls with matching input shapes in order.
+
+Four local fits completed within 174.7 s and the declared caps, with no failures or unrun cases. Implementation `b601d24`, report `b10c0b1`. All 111 tooling tests passed, Ruff and catalogue validation passed, and the scoped Heart development gate was green. [Measured pairs and validation](https://github.com/PyAutoLabs/autofit_profiling/blob/b10c0b142adeaf486109b30fe1052aabc6d0c898/experiments/nautilus_weight_whole_fit/README.md). Before pursuing a production change, a quieter paired multi-seed comparison would need to resolve total-fit and kernel time together. Link the owning domain task before executing a campaign. Wider phase 0b and the 30D evidence gate remain open. No new campaign was submitted.

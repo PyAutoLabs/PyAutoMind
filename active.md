@@ -164,7 +164,8 @@
 ## nautilus-weight-whole-fit
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/24
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/25
 - prompt: active/nautilus_weight_whole_fit.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-weight-whole-fit
 - repos:
