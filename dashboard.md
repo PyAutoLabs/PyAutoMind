@@ -1397,7 +1397,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5e_runtime_estimator.md">Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/887">issue #887</a> — issued 2026-11-24 — library-dev (5E-1 MERGED 2026-11-24 autolens_profiling#535; 5E-2 PyAutoFit#1796 OPEN 3333c1a3, awaiting human /prm; 5E-3… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1796">PyAutoFit#1796</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/535">autolens_profiling#535</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5e_runtime_estimator.md">Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/887">issue #887</a> — issued 2026-11-24 — library-shipped, awaiting-merge (5E-1 MERGED 2026-11-24 autolens_profiling#535; 5E-2 PyAutoFit#1796 OPEN 3333c1a3, awaiting human… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1796">PyAutoFit#1796</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/888">PyAutoLens#888</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/535">autolens_profiling#535</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5e_runtime_estimator.md
@@ -3345,6 +3345,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#888](https://github.com/PyAutoLabs/PyAutoLens/pull/888) — `active/likelihood_lifecycle_p5e_runtime_estimator.md`
 - [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoLens#882](https://github.com/PyAutoLabs/PyAutoLens/pull/882) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoLens#886](https://github.com/PyAutoLabs/PyAutoLens/pull/886) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
