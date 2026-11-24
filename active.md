@@ -153,7 +153,8 @@
 ## nautilus-ellipsoid-weight-update
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/22
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/23
 - prompt: active/nautilus_ellipsoid_weight_update.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ellipsoid-weight-update
 - repos:
