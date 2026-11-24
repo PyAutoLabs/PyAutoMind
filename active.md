@@ -170,7 +170,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/25
 - prompt: active/nautilus_weight_whole_fit.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-weight-whole-fit
-- repos:
-  - autofit_profiling: feature/nautilus-weight-whole-fit
+- retained-repos: autofit_profiling (feature/nautilus-weight-whole-fit); PR #25 awaits human review. Coding claim transferred to nautilus-bound-cadence.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
