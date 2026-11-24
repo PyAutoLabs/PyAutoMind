@@ -200,8 +200,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/33
 - prompt: active/nautilus_30d_independent.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-independent
-- repos:
-  - autofit_profiling: feature/nautilus-30d-independent
+- retained-repos: autofit_profiling (feature/nautilus-30d-independent); PR #33 awaits review. Coding claim transferred to nautilus-30d-matched-ess.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
