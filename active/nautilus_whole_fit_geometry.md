@@ -11,7 +11,9 @@ Autonomy: supervised
 Consequence: judge
 Witness: Two complete traced fits match two same-seed controls on ordered posterior arrays, calls, ESS, evidence, shells, and reopened checkpoints. Report enclosing-ellipsoid time inside native bound builds divided by complete fit time, with tracing overhead and independent-seed limitations visible.
 Lane: local-dev
-Status: filed 2026-11-24
+Issued: 2026-11-24
+Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/20
+Status: Approved for the four-fit local pilot and draft PR.
 
 ## Original request
 

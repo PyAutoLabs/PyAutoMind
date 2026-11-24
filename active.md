@@ -123,7 +123,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/19
 - prompt: active/nautilus_bound_geometry_attribution.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-geometry
-- repos:
-  - autofit_profiling: feature/nautilus-bound-geometry
+- retained-repos: autofit_profiling (feature/nautilus-bound-geometry); PR #19 remains in review. Coding claim transferred to nautilus-whole-fit-geometry.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm

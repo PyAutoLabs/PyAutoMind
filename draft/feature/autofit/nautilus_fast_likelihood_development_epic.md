@@ -152,4 +152,4 @@ Wider phase 0b remains the next gate. Preserve the unresolved high-dimensional e
 
 ## Whole-fit attribution follow-up — 2026-11-24
 
-The [phase prompt](../../research/autofit_profiling/nautilus_whole_fit_geometry.md) scopes a four-fit local comparison. In the retained RAL controls, the entire exclusive bound-build residual was 4.825 / 8.939 s out of 27.621 / 43.485 s in `Sampler.run` (17.5% / 20.6%). Those are context for the requested measurement. They combine multiple operations and cannot provide the ellipsoid-only fraction. PR #19 remains open for human review.
+The [phase prompt](../../../active/nautilus_whole_fit_geometry.md) scopes a four-fit local comparison. In the retained RAL controls, the entire exclusive bound-build residual was 4.825 / 8.939 s out of 27.621 / 43.485 s in `Sampler.run` (17.5% / 20.6%). Those are context for the requested measurement. They combine multiple operations and cannot provide the ellipsoid-only fraction. PR #19 remains open for human review.
