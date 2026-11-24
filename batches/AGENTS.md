@@ -384,13 +384,19 @@ backlog pick in one table, numbered straight through so a reply can say "prm
 1–4, 6", under a count line. Each task sits in exactly one group, its most
 urgent, in this order; an empty group is left out:
 
-1. **Merge: your /prm** — awaiting /prm, CI green, no CI checks, waits behind
-   another PR, or merged in-turn with no merge slot.
+1. **Merge: your /prm** — awaiting /prm, CI green, running, unknown or absent,
+   a branch updated from main with CI not red, waits behind another PR, held on
+   an unknown workspace sweep, or merged in-turn with no merge slot. The late
+   sweep closes nothing out, so a PR still in CI at review time is yours.
 2. **Answer: question on the issue** — parked on an issue, or blocked on a person.
-3. **Fix: CI failed or crashed** — CI failed, crashed, abandoned, killed.
-4. **Blocked or not started** — not started (with the skip reason), dropped, obsolete.
-5. **Still running** — at review time, a close-out running, CI running.
-6. **Done** — merged, verdict posted, finished.
+3. **Fix: CI failed or crashed** — CI failed (also after a branch update),
+   crashed, abandoned, killed.
+4. **Blocked or not started** — not started (with the skip reason), dropped
+   (unless a PR of it still needs merging or fixing), obsolete, finished with
+   no PR or issue named.
+5. **Still running** — a worker still out at review time, or a close-out
+   checking or updating a PR.
+6. **Done** — merged, already merged, verdict posted.
 7. **Proposed (shadow)** — a shadow shift's proposals.
 
 `Work` lists each PR or issue as `repo#n` in merge order, with "after repo#m"
