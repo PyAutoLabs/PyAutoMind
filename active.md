@@ -178,7 +178,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/29
 - prompt: active/nautilus_worker_headroom.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-worker-headroom
-- repos:
-  - autofit_profiling: feature/nautilus-worker-headroom
+- retained-repos: autofit_profiling (feature/nautilus-worker-headroom); PR #29 awaits review. Coding claim transferred to nautilus-30d-evidence-check.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
