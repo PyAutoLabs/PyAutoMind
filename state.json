@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 15 in flight",
-  "updated": "2026-11-24T15:04:39Z",
+  "updated": "2026-11-24T15:38:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,6 +48,12 @@
       "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
       "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites\u2026 \u2014 library-shipped, awaiting-merge (5C-3a PyAutoGalaxy#753 OPEN 092a047f, awaiting human /prm; 5C-3b PyAutoLens on a follow-up\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1792 \u2014 truncated-tail-evidence",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1792",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
       "prompt": null
     }
   ]
