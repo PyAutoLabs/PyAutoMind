@@ -10,10 +10,10 @@
 |-------|------:|
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
-| [Epics](#epics) | 25 |
+| [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 280 |
+| [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -766,6 +766,27 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 ```
 Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human intent 2026-09-30 — solver tolerance/accuracy keeps recurring (#571/#572/#573, certified solver, 07-09 NNLS ledger, warm-start memo), so it gets one home that accumulates runs and data across releases. Phase 1 = `scripts/lens/solver/` package + corpus + CPU fp64 accuracy/early-stopping study + pre-registered rule + wiki page. Phase 2 = PyAutoArray fix per the verdict (shipped: `complete/2026/09/raw-pdip-forward-polish.md`; library-first, then re-verify the euclid latent test on library main). Phase 3 = GPU/vmap/A100 timing + parity rows (absorbs `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md`). Standing: re-run the accuracy cell per release.
 ```
+
+</details>
+
+<details>
+<summary><b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — 1 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — ledger: <code>draft/feature/autolens/cluster_usability.md</code> — Draft for human review</summary>
+
+```
+Continue the 'Cluster usability — three datasets for visualization, profiling, inference and teaching' epic. Its canonical state lives in draft/feature/autolens/cluster_usability.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Prioritised ahead of cluster-strong-lensing. Continue the profiling input fix on autolens_profiling#445.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/cluster_usability.md">Cluster usability — from the first plot to a paper-scale fit</a> — autolens · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/cluster_usability.md
+```
+
+</details>
 
 </details>
 
@@ -1528,7 +1549,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 225 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 226 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3107,7 +3128,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+115 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3118,6 +3139,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
+- `draft/feature/autolens/cluster_usability.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md`
@@ -3151,8 +3173,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 74 more_
+- _… and 75 more_
 
 </details>
 

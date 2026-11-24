@@ -141,6 +141,12 @@ epic, never picked standalone.
 - status: phase 2 SHIPPED 2026-09-30 — PyAutoArray#595 merged (7a89e19a0, forward polish; pending release) + autolens_profiling#357 merged (4652580b2, ledger Phase 2 rows), issue PyAutoArray#594 closed, record `complete/2026/09/raw-pdip-forward-polish.md`; phase 1 shipped 2026-09-30 — autolens_profiling#355 merged (3ad68afad), record `complete/2026/09/linear-solver-accuracy-study.md`; next = phase 3 `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md` (GPU/A100 timing + parity rows; blocked on a release shipping PyAutoArray#595)
 - notes: human intent 2026-09-30 — solver tolerance/accuracy keeps recurring (#571/#572/#573, certified solver, 07-09 NNLS ledger, warm-start memo), so it gets one home that accumulates runs and data across releases. Phase 1 = `scripts/lens/solver/` package + corpus + CPU fp64 accuracy/early-stopping study + pre-registered rule + wiki page. Phase 2 = PyAutoArray fix per the verdict (shipped: `complete/2026/09/raw-pdip-forward-polish.md`; library-first, then re-verify the euclid latent test on library main). Phase 3 = GPU/vmap/A100 timing + parity rows (absorbs `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md`). Standing: re-run the accuracy cell per release.
 
+## cluster-usability
+- title: Cluster usability — three datasets for visualization, profiling, inference and teaching
+- ledger: draft/feature/autolens/cluster_usability.md
+- status: Draft for human review
+- notes: Prioritised ahead of cluster-strong-lensing. Continue the profiling input fix on autolens_profiling#445.
+
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
 - ledger: draft/feature/autolens/source_cluster_arc.md
