@@ -24,3 +24,7 @@ Use the existing [Pulse producer task](https://github.com/PyAutoLabs/PyAutoPulse
 
 Issued: 2026-11-24
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/26
+
+## Gaussian-profile pairs
+
+Both reversed-order pairs completed. The doubled interval shortened full fits by 34.7% and 25.5%, with 1,800 extra likelihood evaluations in each. First near-peak calls moved from 4,278 to 6,020 and from 4,043 to 5,608. Both pairs passed evidence and folded-posterior checks and exceeded the registered discovery limit. The two-mode controls are in progress.
