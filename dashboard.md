@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 14 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 282 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -257,7 +257,7 @@ Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: <code>draft/feature/autofit/nautilus_fast_likelihood_development_epic.md</code> — Experimental 0b.2 merged. Geometry attribution (#19, #21) and the scalar weight candidate (#23, stacked on #19) await human…</summary>
 
@@ -279,6 +279,14 @@ Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_developm
 
 ```
 Use the start-dev skill. draft/feature/autofit/nautilus_parent_cpu_slowdown.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit_profiling/nautilus_weight_whole_fit.md">Measure the scalar ellipsoid update in complete native fits</a> — autofit_profiling · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/research/autofit_profiling/nautilus_weight_whole_fit.md
 ```
 
 </details>
@@ -1576,7 +1584,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 226 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 226 · ral 30 · local-dev 14 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
