@@ -154,7 +154,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/445
 - issued: 2026-11-24
 - session: shift worker 2026-11-24-am (codex:ed9c08135ae444d58e3a7109b7db7613)
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/532
 - worktree: /home/jammy/Code/PyAutoLabs-wt/stale-auto-simulated-cluster-dataset
 - repos:
   - autolens_profiling: feature/stale-auto-simulated-cluster-dataset

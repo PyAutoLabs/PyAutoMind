@@ -565,6 +565,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 | 2026-11-24 | zero_contour_grad_fails_on_jax_0_12 (PyAutoGalaxy#749, PR #750; autogalaxy_workspace_test#139; autolens_workspace_test#372) | supervised, shift --auto, judge | 47 tests passed; both witnesses passed; targeted critical-curve smoke passed; independent review CLEAN; Heart dev GREEN; decision-taken for residual representation | parked at PR-open |
 | 2026-11-24 | heart_health_rerun_stale_push (PyAutoHeart#368, PR #369) | supervised, judge | 78 targeted tests passed including 4 bare-remote cases, targeted smoke selected no workspace, supplemental imports passed, independent Opus CLEAN at 07d8976, scoped Heart GREEN | PR open for human /prm |
 | 2026-11-24 | colab-links-pinned-to-blob-main-in (PyAutoLens#879) | supervised, shift glance | 124 tagged targets verified, bumper 124/124, URL sweep 12 clean, targeted smoke PASS, independent Opus CLEAN, Heart YELLOW acknowledged | PR-open: PyAutoGalaxy#751, PyAutoLens#880, HowToGalaxy#108, HowToLens#138 |
+| 2026-11-24 | stale-auto-simulated-cluster-dataset (autolens_profiling#445, PR #532) | supervised | regression and real stale/fresh witness passed, both cluster import smokes passed, independent Opus CLEAN, scoped Heart GREEN | PR open, decision-taken |
 
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
 the `## Calibration runs` table **above**, at the end of its last segment, in
