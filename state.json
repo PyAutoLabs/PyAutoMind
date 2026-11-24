@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-24T14:06:42Z",
+  "updated": "2026-11-24T14:13:22Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -54,6 +54,12 @@
       "text": "Attribute CPU time inside Nautilus bound construction \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/19",
       "prompt": "Use the start-dev skill. active/nautilus_bound_geometry_attribution.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Measure ellipsoid fitting inside a complete native Nautilus fit \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/21",
+      "prompt": "Use the start-dev skill. active/nautilus_whole_fit_geometry.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#746 \u2014 mixed-galaxy-light",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#748 \u2014 plot-utils-critical-curves-docstrings",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
       "prompt": null
     }
   ]
