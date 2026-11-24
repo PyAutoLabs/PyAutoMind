@@ -131,3 +131,16 @@
 - worktree: ~/Code/PyAutoLabs-wt/heart-health-rerun-stale-push
 - repos:
   - PyAutoHeart: feature/heart-health-rerun-stale-push
+
+## colab-links-pinned-to-blob-main-in
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/879
+- session: shift worker 2026-11-24-am (codex:7081fb9a6a784d6da48340f205852a00)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/colab-links-pinned-to-blob-main-in
+- repos:
+  - PyAutoGalaxy: feature/colab-links-pinned-to-blob-main-in
+  - PyAutoLens: feature/colab-links-pinned-to-blob-main-in
+  - HowToGalaxy: feature/colab-links-pinned-to-blob-main-in
+  - HowToLens: feature/colab-links-pinned-to-blob-main-in
+- prompt: active/colab_links_pinned_to_blob_main_in.md
+- tier: glance — supervised; shift close-out
