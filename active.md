@@ -93,7 +93,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/711
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev
+- status: library-shipped, awaiting-merge (PyAutoArray#712 OPEN 56c25cc8, awaiting human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/712
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/712
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5b3-array
 - repos:
   - PyAutoArray: feature/likelihood-lifecycle-p5b3-array
