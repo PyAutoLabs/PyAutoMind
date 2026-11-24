@@ -4,7 +4,7 @@ Type: feature
 Target: PyAutoLens
 Epic: cluster-usability
 Priority: high
-Status: dataset sequence and Simple fit-figure layout approved; implementation pending
+Status: Simple family fit figures in review. Pandora and MACS J0416 reviews pending.
 Consequence: judge
 
 Prioritise this work ahead of the [cluster strong-lensing science epic](source_cluster_arc.md). The goal is to make today's cluster modelling usable at three scales. A reader should be able to see the constraints, identify which multiple-image family fits poorly, and follow that family into a diagnostic figure. The same examples should tell developers how runtime and inference behave as the science case gets harder. New lensing methods belong in the science epic.
@@ -50,4 +50,4 @@ Up to six image zooms fit on one page in image-number order. For larger families
 
 Use the statistic supplied by the fitted likelihood. In particular, a nearest-image displacement alone cannot represent an all-pairs mixture. If a repeat-pairing fit penalizes an unmatched prediction, identify that penalty separately so the reader can reconcile the plotted contributions with the family total.
 
-Simple supplied the visual design review. Production implementation, saved and interactive checks, and review on the larger tiers remain open.
+The Simple family diagnostics and gallery renders are open for review in [PyAutoLens #884](https://github.com/PyAutoLabs/PyAutoLens/pull/884) and [autolens_visualization #20](https://github.com/PyAutoLabs/autolens_visualization/pull/20). With a 0.003″ offset in the first source’s y coordinate, image 4 contributes 66.44 of the family’s 88.22 source-plane χ² and 66.11 of its 86.80 image-plane χ². The saved figures and the interactive figure construction were checked on Simple. Review on Pandora and MACS J0416 remains open.

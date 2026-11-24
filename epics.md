@@ -144,7 +144,7 @@ epic, never picked standalone.
 ## cluster-usability
 - title: Cluster usability — three datasets for visualization, profiling, inference and teaching
 - ledger: draft/feature/autolens/cluster_usability.md
-- status: Dataset sequence and simple fit-figure layout approved; implementation pending
+- status: Simple family fit figures in review (PyAutoLens#884 and autolens_visualization#20). Pandora and MACS J0416 reviews pending.
 - notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532; validation of a present but malformed member CSV remains.
 
 ## cluster-strong-lensing
