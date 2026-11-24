@@ -126,3 +126,14 @@
 - retained-repos: autofit_profiling (feature/nautilus-bound-geometry); PR #19 remains in review. Coding claim transferred to nautilus-whole-fit-geometry.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## nautilus-whole-fit-geometry
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/20
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_whole_fit_geometry.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-whole-fit-geometry
+- repos:
+  - autofit_profiling: feature/nautilus-whole-fit-geometry
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
