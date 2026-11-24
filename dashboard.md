@@ -1378,7 +1378,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5c_galaxy_lens_setup.md">Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens <code>setup="auto"</code> (opt-in), <code>setup.json</code>, the setup…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/881">issue #881</a> — issued 2026-11-24 — library-shipped, awaiting-merge (5C-1 PyAutoGalaxy#752 OPEN 4d351b72, awaiting human /prm; 5C-2 PyAutoLens on a follow-up branch… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752">PyAutoGalaxy#752</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5c_galaxy_lens_setup.md">Likelihood lifecycle phase 5C: PyAutoGalaxy + PyAutoLens <code>setup="auto"</code> (opt-in), <code>setup.json</code>, the setup…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/881">issue #881</a> — issued 2026-11-24 — library-dev (5C-1 MERGED 2026-11-24 PyAutoGalaxy#752 5bcb54a9; 5C-2 PyAutoLens in progress on… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752">PyAutoGalaxy#752</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5c_galaxy_lens_setup.md
