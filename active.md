@@ -208,7 +208,8 @@
 ## nautilus-30d-independent
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/32
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/33
 - prompt: active/nautilus_30d_independent.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-independent
 - repos:

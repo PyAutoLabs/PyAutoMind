@@ -213,3 +213,9 @@ The conditional 30D evidence check is complete. The original protocol set no num
 ## Independent 30D explorations — 2026-11-24
 
 [Phase issue](https://github.com/PyAutoLabs/autofit_profiling/issues/32) starts seeds 1–3 from scratch to assess the sign and size of evidence errors across separately learned bounds. [Registered protocol](../../../active/nautilus_30d_independent.md).
+
+[Draft profiling PR #33](https://github.com/PyAutoLabs/autofit_profiling/pull/33), stacked on #31, started three native 30D samplers in empty directories. All three learned distinct ellipsoid geometries, also distinct from seed 0. At the exploration boundary the signed log-evidence errors were −0.892372, −0.955682 and −0.888639. Each independently learned exploration substantially underestimated the analytic evidence at that point.
+
+All three children hit their registered 2,400-second limit before fresh-only ESS 10,000. The terminal files were intact. Seed 1 was 0.42% above analytic evidence (ESS 8,147; 1,074,100 fresh samples), seed 2 was 1.76% below (ESS 9,904; 1,090,100 fresh samples), and seed 3 was 0.35% below (ESS 6,920; 936,500 fresh samples). All three terminal estimates agreed between direct HDF5 reconstruction and native reopening, with source hashes preserved. The sign is mixed at the observed sample sizes. The matched-ESS comparison remains open. [Per-seed report, receipts and checkpoint audit](https://github.com/PyAutoLabs/autofit_profiling/blob/06c9c887a9d487f8325d25554d780f856f5b4049/experiments/nautilus_30d_independent/README.md).
+
+All 111 tooling tests, Ruff and the catalogue validator passed. The bounded attempt awaits draft-PR review. Retain all three raw checkpoints for a separately scoped continuation. Native bound cadence, wider phase 0b and deferred Pulse promotion remain as recorded.
