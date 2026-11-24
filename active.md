@@ -189,7 +189,8 @@
 ## nautilus-worker-headroom
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/28
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/29
 - prompt: active/nautilus_worker_headroom.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-worker-headroom
 - repos:

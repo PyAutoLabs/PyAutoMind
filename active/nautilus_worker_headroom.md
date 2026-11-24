@@ -21,3 +21,9 @@ For each intact logical batch compare the observed submit-to-collection interval
 
 Issued: 2026-11-24
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/28
+
+## Result
+
+[Draft profiling PR #29](https://github.com/PyAutoLabs/autofit_profiling/pull/29) replays all 14 selected two-worker phase 0a traces with fixed, correlated and random costs. All 35,600 proposals in 356 complete batches matched the native counts and archived service totals. Although workers were occupied for 29.7–72.6% of the map intervals, those intervals used only 0.65–1.44% of traced full-fit wall. With measured service times fixed, an ideal scheduler with free dispatch and collection could recover at most 0.39–0.51% of full wall across the cases. Zero-overhead simulation of single-proposal chunks predicts 0.003–0.033% savings over native chunks of 13.
+
+Deprioritise scheduler changes on this cheap 5D fixture. All cases fall below the 5% gate. A costlier target needs its own measured map share before reopening this lead. This archival analysis does not advance asynchronous adaptation or complete phase 2. Keep native cadence. The next unresolved correctness gate is phase 0b's 30D fresh-sample evidence check. Pulse promotion remains deferred. [Replay, decision and per-fit evidence](https://github.com/PyAutoLabs/autofit_profiling/blob/0a34a82f998f46ce4322f449edc27378dd59a325/experiments/nautilus_worker_headroom/README.md). All 111 tooling tests, Ruff and the catalogue validator passed. The PR awaits human review.
