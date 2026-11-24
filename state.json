@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 14 in flight",
-  "updated": "2026-11-24T14:35:12Z",
+  "updated": "2026-11-24T14:39:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -54,6 +54,12 @@
       "text": "Attribute CPU time inside Nautilus bound construction \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/19",
       "prompt": "Use the start-dev skill. active/nautilus_bound_geometry_attribution.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Test the scalar weight update on retained Nautilus ellipsoid inputs \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/23",
+      "prompt": "Use the start-dev skill. active/nautilus_ellipsoid_weight_update.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#752 \u2014 likelihood-lifecycle-p5c-galaxy-lens",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#746 \u2014 mixed-galaxy-light",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
       "prompt": null
     }
   ]
