@@ -23,3 +23,7 @@ Verify starting hashes and prior estimates, native reopening, geometry and fresh
 
 Issued: 2026-11-24
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/34
+
+## Execution
+
+All three source copies passed their registered checkpoint and evidence checks before sampling. Seed 2 reached ESS 10,002.99 and reopened with signed log-evidence error −0.018021. Seeds 1 and 3 continue under the same shared deadline.
