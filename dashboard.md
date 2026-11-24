@@ -1413,7 +1413,7 @@ Use the start-dev skill. active/multi_dataset_jax_likelihood_delaunay_wrong_like
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_bound_cadence.md">Compare Nautilus bound-update intervals on complete PyAutoFit fits</a> — issued 2026-11-24</summary>
+<details><summary>📋 <a href="active/nautilus_bound_cadence.md">Compare Nautilus bound-update intervals on complete PyAutoFit fits</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/26">issue #26</a> — issued 2026-11-24 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/nautilus_bound_cadence.md
