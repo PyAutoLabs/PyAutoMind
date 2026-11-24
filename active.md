@@ -119,3 +119,12 @@
   - autolens_workspace_test: feature/zero-contour-jax-grad
 - prompt: active/zero_contour_grad_fails_on_jax_0_12.md
 - tier: judge — merge mode: human /prm
+
+## heart-health-rerun-stale-push
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/368
+- prompt: active/heart_health_rerun_stale_push.md
+- session: shift worker 2026-11-24-am (codex:7b6c27f423a44787b350ac948dd0f10b)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/heart-health-rerun-stale-push
+- repos:
+  - PyAutoHeart: feature/heart-health-rerun-stale-push
