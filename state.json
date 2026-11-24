@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
-  "updated": "2026-11-24T13:21:06Z",
+  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
+  "updated": "2026-11-24T13:43:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -51,6 +51,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Attribute CPU time inside Nautilus bound construction \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/19",
+      "prompt": "Use the start-dev skill. active/nautilus_bound_geometry_attribution.md"
+    },
+    {
+      "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
@@ -71,6 +77,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#710 \u2014 likelihood-lifecycle-p5b-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/710",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#712 \u2014 likelihood-lifecycle-p5b3-array",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/712",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#748 \u2014 plot-utils-critical-curves-docstrings",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#878 \u2014 database-dataset-fits",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/878",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#882 \u2014 likelihood-lifecycle-p5c-galaxy-lens",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/882",
       "prompt": null
     }
   ]

@@ -89,18 +89,6 @@
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; folds M3.3 slice 2 item 1)
 - tier: judge — merge mode: human /prm
 
-## likelihood-lifecycle-p5b3-array
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/711
-- issued: 2026-11-24
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5b3-array
-- repos:
-  - PyAutoArray: feature/likelihood-lifecycle-p5b3-array
-- prompt: active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md
-- epic: likelihood-lifecycle (phase 5B-3; then 5C-3 Galaxy+Lens call sites + aggregator)
-- tier: judge — merge mode: human /prm
-
 ## parked-hold-grace
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
 - issued: 2026-11-24
@@ -113,4 +101,26 @@
 - prompt: active/shift_closes_early_with_held_tasks_unstarted.md
 - coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py); PyAutoMind shared too (batches/AGENTS.md, a different section from #606)
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
+- tier: judge — merge mode: human /prm
+
+## cluster-family-fit-figures
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/883
+- issued: 2026-11-24
+- session: Codex desktop
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cluster-family-fit-figures
+- repos:
+  - PyAutoLens: feature/cluster-family-fit-figures
+  - autolens_visualization: feature/cluster-family-fit-figures
+
+## nautilus-bound-geometry
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/18
+- issued: 2026-11-24
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/19
+- prompt: active/nautilus_bound_geometry_attribution.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-geometry
+- repos:
+  - autofit_profiling: feature/nautilus-bound-geometry
+- epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm

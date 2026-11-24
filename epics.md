@@ -27,7 +27,7 @@ epic, never picked standalone.
 ## nautilus-fast-likelihoods
 - title: Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration
 - ledger: draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
-- status: Experimental CPU baseline and 30D diagnostics merged through phase 0b.2. The parent CPU experiment finished on RAL. Wider phase 0b remains open and Pulse promotion is deferred. See the ledger for results and the next step.
+- status: Experimental phase 0b.2 merged. Retained-input geometry attribution is in draft autofit_profiling#19 for human review. Wider phase 0b remains open and Pulse promotion is deferred.
 - notes: Implementation epic; never issue the umbrella. Phase 0a complete: complete/2026/11/nautilus-cpu-profiling-baseline.md (autofit_profiling#8 → PR#9 merged); experimental phase 0b.1 complete: complete/2026/11/nautilus-cpu-campaign-setup.md (PR#11 merged); wider phase 0b remains pending, Pulse promotion deferred by human choice. Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics belong to phase 0b; 0a completion alone does not complete phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
 
 ## cti-upkeep
