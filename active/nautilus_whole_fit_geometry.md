@@ -13,7 +13,7 @@ Witness: Two complete traced fits match two same-seed controls on ordered poster
 Lane: local-dev
 Issued: 2026-11-24
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/20
-Status: Approved for the four-fit local pilot and draft PR.
+Status: Pilot complete; draft PR #21 awaiting human review.
 
 ## Original request
 
@@ -30,3 +30,9 @@ The retained-array experiment in [PR #19](https://github.com/PyAutoLabs/autofit_
 3. Implement the harness and evidence in a new producer directory with no edits to PR #19. Use feature/nautilus-whole-fit-geometry from clean producer main and transfer the same chat's coding claim from #19, preserving that PR, its review status and worktree. Reuse the process supervisor. Limit the pilot to four local children, 180 seconds and 4096 MiB each, 720 seconds in aggregate. Stop on a cap or mismatch, retain partial receipts and report the outcome. Publish the issue, evidence and a draft producer PR. Merge stays human.
 
 Effective level is supervised. Merge mode is human /prm.
+
+## Result — 2026-11-24
+
+[Draft PR #21](https://github.com/PyAutoLabs/autofit_profiling/pull/21) measures native minimum-volume ellipsoid fitting inside the complete 10D, seed-2 fit. The counter recorded 101 calls across eleven bound builds. Ellipsoid fitting took 7.88 / 42.34 s and 7.37 / 38.63 s (18.6% / 19.1% of the traced whole fits). Controls took 40.43 and 39.94 s. Each fit and its reopened checkpoint matched exactly on posterior, evidence, ESS and calls. All 23,500 evaluations were accounted for. The ordered posterior hash also matches the RAL reference. These are native-fit timings on one local CPU fixture. The 97% measured in PR #19 used only the outer mixture constructor as its denominator.
+
+The four authorized local children finished in 166.6 s with no failures or unrun cases. The measured script is at `44c5325` and the report head is `d8709a7`. The 111 tooling tests, Ruff and the Pulse catalogue validator passed. The scoped Heart gate was green. Both PRs await human review. The next bounded CPU experiment can test a numerically equivalent change within the enclosing-ellipsoid routine on retained inputs before seeking a whole-fit speedup. Wider phase 0b and the 30D accuracy gate remain open. [Results and replay instructions](https://github.com/PyAutoLabs/autofit_profiling/blob/d8709a7d536a61f278a311b67ac99ea66f61702f/experiments/nautilus_whole_fit_geometry/README.md).

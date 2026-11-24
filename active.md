@@ -130,7 +130,8 @@
 ## nautilus-whole-fit-geometry
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/20
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/21
 - prompt: active/nautilus_whole_fit_geometry.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-whole-fit-geometry
 - repos:
