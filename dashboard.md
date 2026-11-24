@@ -1357,7 +1357,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5b_array_setup.md">Likelihood lifecycle phase 5B: PyAutoArray <code>aa.Setup</code>, <code>Setup.auto</code>, rule table from the Pulse…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/708">issue #708</a> — issued 2026-11-23 — library-shipped (5B-1), awaiting-merge; 5B-2 next on a follow-up branch — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/709">PyAutoArray#709</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5b_array_setup.md">Likelihood lifecycle phase 5B: PyAutoArray <code>aa.Setup</code>, <code>Setup.auto</code>, rule table from the Pulse…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/708">issue #708</a> — issued 2026-11-23 — library-dev (5B-1 MERGED 2026-11-24 PyAutoArray#709 e70af85d; 5B-2 next, new branch off origin/main in the same worktree; issue… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/709">PyAutoArray#709</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5b_array_setup.md
