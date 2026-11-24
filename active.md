@@ -111,7 +111,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/749
 - issued: 2026-11-24
 - session: shift worker 2026-11-24-am (codex:4e6d6d0af3d149f0a3ae66e9af6e5034)
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/750
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/139
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/372
 - worktree: /home/jammy/Code/PyAutoLabs-wt/zero-contour-jax-grad
 - repos:
   - PyAutoGalaxy: feature/zero-contour-jax-grad
