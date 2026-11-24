@@ -4,7 +4,7 @@ Work type: feature
 Primary: @autofit_profiling
 Read-only dependency: PyAutoFit (not an affected source repository)
 Epic: nautilus-fast-likelihoods
-Status: approved — workspace implementation
+Status: Parked. The approved 12-fit parent CPU study completed, and its results were recovered on 2026-11-24. Issue #16 remains open. PR #17 closed without merge.
 Issued: 2026-11-10
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 Consequence: judge
@@ -528,3 +528,7 @@ One hpc/sync submission at04b33ab after322tests/zero-science smoke/CI43237941034
 Read-only scheduler check2026-11-12 around14:36Z: PENDING(Resources). Required euclid-ral-compute-1 is occupied by another campaign job415182 on252CPUs; its scheduler limit ends2026-11-15T13:43:17. SLURM estimates our start2026-11-15T13:45:17 (estimate, not a guarantee). No scientific child has started; no new result. Leave the existing approved submission queued. Do not alter/cancel other jobs, relax node pinning, resubmit or arm monitoring automation.
 
 Exact measured source remains04b33ab, runtime artifact15 and dedicated environment staged on witnessed storage. Freeze the remote task checkout/wrapper/environment while queued; edits could invalidate its checksums. Resume by reading accounting/state for415196, not by rerunning submission/staging scripts. Allowance is CONSUMED; stop-first-failure still applies once it runs. PR17 remains draft/open/unmerged, outside Pulse; human merge. Local .session/RESUME_PARENT_CPU.md and human review job415196/RESUME.md record commands/paths.
+
+### Parent CPU recovery — 2026-11-24
+
+Job 415196 completed on the reference node on November 12. All 12 fits matched the frozen reference and passed cleanup. The training-pool effect reversed between the two passes, with slow tails also appearing in serial controls. Retain serial bound training. The [full result and six-arm table](../draft/feature/autofit/nautilus_parent_cpu_slowdown.md#job-415196-recovered-on-2026-11-24) supersede the queued-job handoff. The single-job grant is consumed. Issue #16 remains open and PR #17 closed without merge. The work remains outside Pulse.

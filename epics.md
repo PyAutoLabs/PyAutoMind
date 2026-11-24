@@ -24,10 +24,10 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
-## nautilus-fast-likelihoods Experimental phase 0b.2 diagnostics PR autofit_profiling#13 awaits human merge (issue #12); initial2successes/1capped/3unrun; authorized output-only continuation capped inside visualization; corrected comparison completed no-corner/six-small/full30D capped; later full30D attribution succeeded and isolates drawing/quantile/dispatch costs, CI green; all earlier failures retained; no Pulse promotion.
+## nautilus-fast-likelihoods
 - title: Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration
 - ledger: draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
-- status: PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record complete/2026/11/nautilus-cpu-profiling-baseline.md. Experimental phase 0b.1 MERGED 2026-11-10 (autofit_profiling#11, issue #10 closed): 26 success / 1 timeout / 9 unrun, no Pulse registration by human choice; phase 0 not complete.
+- status: Experimental CPU baseline and 30D diagnostics merged through phase 0b.2. The parent CPU experiment finished on RAL. Wider phase 0b remains open and Pulse promotion is deferred. See the ledger for results and the next step.
 - notes: Implementation epic; never issue the umbrella. Phase 0a complete: complete/2026/11/nautilus-cpu-profiling-baseline.md (autofit_profiling#8 → PR#9 merged); experimental phase 0b.1 complete: complete/2026/11/nautilus-cpu-campaign-setup.md (PR#11 merged); wider phase 0b remains pending, Pulse promotion deferred by human choice. Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics belong to phase 0b; 0a completion alone does not complete phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
 
 ## cti-upkeep

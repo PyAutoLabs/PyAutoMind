@@ -80,3 +80,7 @@ Attempt03 completed all20children in931.93s; four exact recovery controls and si
 ## Final CI receipt — 2026-11-10
 
 Experiment head c06cae034c3f7b6b68267821fbf1f2ff6c62191d passed every step of Actions run42877256638: 125 tooling tests, Ruff check/format, catalogue validation and links. The only post-report change fixes the existing process-reaping test race. Measured producer5206f0b/librarye16fba3ee and all results remain unchanged. Both draft PRs await human review; no merge, issue closure, further compute or data cleanup.
+
+## Disposition verified 2026-11-24
+
+PyAutoFit#1765 and autofit_profiling#15 closed without merge. The native checkpoint interval remains 1. The negative result is retained, and PyAutoFit#1763 remains open for human close-out.

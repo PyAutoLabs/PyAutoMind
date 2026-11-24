@@ -1,9 +1,10 @@
 # Diagnose parent CPU slowdown after native training-pool use
 
-Status: approved 2026-11-12 by live human; one gated 12-fit RAL job authorized, not yet submitted.
+Status: Completed on RAL 2026-11-12. Results recovered and verified 2026-11-24 under autofit_profiling#16. The 12-fit comparison and disposition are recorded below.
 Target: @autofit_profiling
+Epic: nautilus-fast-likelihoods
 Consequence: judge
-Continuation: issue16 / draft PR17, nautilus-spawn-training-pool.
+Continuation: autofit_profiling#16 (open). Implementation PR #17 closed without merge.
 Lane: any
 Existing worktree: .worktrees/nautilus-spawn-training-pool/autofit_profiling
 Existing branch: feature/nautilus-spawn-training-pool (clean fc508ae)
@@ -98,3 +99,26 @@ The onset analysis sums exclusive parent-process CPU from existing Sampler.evalu
 | fit-1-w2/child.json | b42754aae7dd6a53e29b89a6de6ddd154c89005181a7430a9317d62c2066c7ab |
 | fit-2-w2/child.json | 428be0248fe214cdd99df90f85e306679ea95a30aef09da444e7c1632562b349 |
 | fit-3-w0/child.json | 7a1aa42822f75844d247636aac3f8e3157f67d5fa4d809850aca14d55dd057fc |
+
+## Job 415196 recovered on 2026-11-24
+
+The approved parent CPU investigation ran on 2026-11-12 on `euclid-ral-compute-1`. SLURM records 15:43:15–15:54:23, COMPLETED, exit 0:0. The job reserved the node exclusively and its science step used four CPUs. Its pre-approved single submission is spent. The existing [protocol](https://github.com/PyAutoLabs/autofit_profiling/blob/04b33ab7be4d976c43beaaaedf09892f96703974/experiments/nautilus_spawn_training_pool/parent_cpu/PROTOCOL.md) and [issue #16](https://github.com/PyAutoLabs/autofit_profiling/issues/16) identify this member.
+
+All 12 fits finished in the approved order, ABCDEFFEDCBA, using the same 10D target, seed 2 and four native neural networks. Each matched the frozen [job 415139 reference](https://github.com/PyAutoLabs/autofit_profiling/blob/04b33ab7be4d976c43beaaaedf09892f96703974/experiments/nautilus_spawn_training_pool/diagnostics_10d/reference.json) on the posterior hash, 23,500 likelihood calls, ESS 10,038.507608002912, 12 shells, exploration flags, target hash and ordered model hashes. All checkpoints reopened exactly in the run. The recovery check matched their retained file hashes, confirmed all expected phase counts and exact timing accounting, and verified all process groups exited cleanly. Bootstrap cleanup passed. The job used 638.60 s of the 1,800 s experiment budget. Its in-job accounting query failed to reach the SLURM database. The terminal accounting above was recovered separately from the login node.
+
+Each pair below gives the first occurrence and the reverse-order occurrence of that arm. Workflow includes worker startup and teardown. Tail CPU sums exclusive parent-process CPU seconds over the same 168 likelihood batches after the last training call.
+
+| Arm | Workflow seconds | Tail CPU seconds |
+|---|---:|---:|
+| A · Serial | 32.45 / 50.88 | 1.87 / 3.43 |
+| B · Two persistent training workers | 39.30 / 33.62 | 3.47 / 1.83 |
+| C · Shut workers down after final training | 39.67 / 32.88 | 3.46 / 1.85 |
+| D · Serial with model serialization roundtrip | 32.44 / 32.29 | 1.87 / 1.84 |
+| E · Serial, parent pinned | 32.70 / 50.29 | 1.86 / 3.36 |
+| F · Parent and two training workers on disjoint cores | 31.76 / 31.69 | 1.84 / 1.85 |
+
+The earlier [17-case diagnostic](https://github.com/PyAutoLabs/autofit_profiling/blob/fc508aefcabf58e7c4cb65a12fcf19f2375daa8a/experiments/nautilus_spawn_training_pool/diagnostics_10d/RESULT_ATTEMPT02.md) found a longer post-training tail with a pool. Here the shared-pool comparison reverses by pass. Removing the workers in C leaves the same pattern as B. In both B tails each worker accumulated zero observable CPU ticks over 13.5–20.6 s. Main-thread CPU closely tracked parent CPU, and GC overlap was below 4 ms in every tail. Two purely serial runs, A and E on the reverse pass, were already slower before training and had slow tails. Serialization alone produced two fast tails. Both disjoint-placement runs were fast, but were adjacent in execution order. Two observations per arm on one seed cannot isolate a placement benefit, establish the cause of the slowdown or justify a production pool change.
+
+Keep serial bound training and the existing pool safeguards. The serial controls still spent 11.08 / 16.63 s in neural training and 4.82 / 8.94 s exclusively in bound construction. These are instrumented costs. The next CPU optimization candidate is the geometry inside bound construction, with neural bounds enabled. A matched phase-0b baseline and finer attribution are needed before choosing a kernel or changing the sampler. The 30D evidence-accuracy gate also remains outstanding.
+
+The retained output claim is `output/parent-cpu-diagnostics-ral-01` in the RAL producer checkout. The recovery included the complete claim and both batch logs. All 326 file hashes matched the remote manifest. SHA-256 of the recovered archive is `8ff46ff18d6a9f982b192eea7a67b8d0ad09089d53cd88c7a18c1c4034eb8be6`. The raw data and verification material are retained in the local task recovery directory and human review bundle. This recovery used stored receipts only.
