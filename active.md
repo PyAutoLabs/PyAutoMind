@@ -114,3 +114,13 @@
 - coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py); PyAutoMind shared too (batches/AGENTS.md, a different section from #606)
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm
+
+## cluster-family-fit-figures
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/883
+- issued: 2026-11-24
+- session: Codex desktop
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cluster-family-fit-figures
+- repos:
+  - PyAutoLens: feature/cluster-family-fit-figures
+  - autolens_visualization: feature/cluster-family-fit-figures
