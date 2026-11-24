@@ -144,8 +144,8 @@ epic, never picked standalone.
 ## cluster-usability
 - title: Cluster usability — three datasets for visualization, profiling, inference and teaching
 - ledger: draft/feature/autolens/cluster_usability.md
-- status: Draft for human review
-- notes: Prioritised ahead of cluster-strong-lensing. Continue the profiling input fix on autolens_profiling#445.
+- status: Dataset sequence approved; figure defaults under review
+- notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532; validation of a present but malformed member CSV remains.
 
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
