@@ -1,3 +1,11 @@
+Heart Health reruns now publish their writeback safely when main has advanced since the run started (the stale-push failure).
+
+- PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/369 (MERGED 2026-11-24)
+- Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/368 (closed)
+- Shift: 2026-11-24-am (Codex worker); merged by human /prm.
+
+## Original prompt
+
 # Heart Health rerun cannot publish after main advances
 
 Type: bug

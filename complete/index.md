@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2377 records across 11 buckets.
+2378 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -231,6 +231,7 @@ markers; everything below GENERATED is rebuilt.
 - [health-review-cloud-observation](2026/11/health-review-cloud-observation.md) — - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every clo…
 - [heart-dev-scope](2026/11/heart-dev-scope.md)
 - [heart-green-lane](2026/11/heart-green-lane.md)
+- [heart-health-rerun-stale-push](2026/11/heart-health-rerun-stale-push.md)
 - [help-docstrings-history](2026/11/help-docstrings-history.md)
 - [homepage-flow-polish](2026/11/homepage-flow-polish.md)
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…

@@ -79,9 +79,8 @@
 - session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7)
 - status: awaiting-input
 - prompt: active/smoke_cache_stats_warnings_nameerror.md
-- blocked-by: heart-health-rerun-stale-push (PyAutoHeart#368, PR #369)
 - question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
-- next: Resume when the #368 claim clears or the human authorizes separate worktrees.
+- next: #368 claim cleared 2026-11-24 (PyAutoHeart#369 merged; record complete/2026/11/heart-health-rerun-stale-push.md) — resumable.
 
 ## likelihood-lifecycle-p5b-array
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/708
@@ -106,16 +105,6 @@
 - prompt: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
 - tier: judge — supervised, human /prm
 - next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
-
-## heart-health-rerun-stale-push
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/368
-- prompt: active/heart_health_rerun_stale_push.md
-- session: shift worker 2026-11-24-am (codex:7b6c27f423a44787b350ac948dd0f10b)
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/369
-- worktree: ~/Code/PyAutoLabs-wt/heart-health-rerun-stale-push
-- repos:
-  - PyAutoHeart: feature/heart-health-rerun-stale-push
 
 ## stale-auto-simulated-cluster-dataset
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/445
