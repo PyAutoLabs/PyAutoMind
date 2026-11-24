@@ -76,12 +76,12 @@
 
 ## smoke_cache_stats_warnings_nameerror
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
-- session: shift worker 2026-11-23-am3 (codex:5fc344efb14046e589cd52ab4d7cf254)
+- session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7)
 - status: awaiting-input
 - prompt: active/smoke_cache_stats_warnings_nameerror.md
-- blocked-by: colab-gate-delete-hmf (PyAutoHeart#364)
-- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
-- next: Resolve sequencing with the live PyAutoHeart claim before worktree setup.
+- blocked-by: heart-health-rerun-stale-push (PyAutoHeart#368, PR #369)
+- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
+- next: Resume when the #368 claim clears or the human authorizes separate worktrees.
 
 ## likelihood-lifecycle-p5b-array
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/708

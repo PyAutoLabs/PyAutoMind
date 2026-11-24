@@ -106,6 +106,15 @@ the ruling on the prompt.
 - asked: 2026-11-24T08:32Z
 - worker: codex:33cff8e853b042bc81657d044e7b878b
 
+### Q31. smoke_cache_stats_warnings_nameerror — see the question on the issue
+- task: active/smoke_cache_stats_warnings_nameerror.md
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
+- kind: question
+- ask: see the question on the issue
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:34Z
+- worker: codex:64472140ca8443f8a5e1ce9c73f90fc7
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
