@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
-  "updated": "2026-11-24T12:54:24Z",
+  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
+  "updated": "2026-11-24T12:55:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -69,14 +69,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1793 \u2014 SED chain waveband fit can spin forever in Nautilus exploration\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
+      "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 grid-factor-results",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 grid-factor-results",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
+      "text": "pending release: PyAutoFit PyAutoFit#1793 \u2014 sed-waveband-search-cap",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
       "prompt": null
     },
     {

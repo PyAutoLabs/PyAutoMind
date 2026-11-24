@@ -82,11 +82,6 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 3. SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain
-- kind: prompt
-- ref: active/sed_chain_waveband_fit_can_spin_forever.md
-- note: follow-up of the 2026-11-20-am review (Q17 = a): wall-clock cap — PyAutoFit af.Nautilus timeout first, then the pipeline PR (#136)
-
 ## 4. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
 - kind: prompt
 - ref: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
@@ -107,6 +102,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### SED chain waveband fit can spin forever in Nautilus exploration (343381_8 nir_y, 40k calls, plateau) — cap the search so one band cannot block a tile's whole chain
+- shipped-as: complete/2026/11/sed-waveband-search-cap.md (2026-11-24)
+- note: follow-up of the 2026-11-20-am review (Q17 = a): wall-clock cap — PyAutoFit af.Nautilus timeout first, then the pipeline PR (#136) — retired by `lifecycle.py close`
 
 ### test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit and NumPy
 - shipped-as: complete/2026/11/latent-total-source-flux-jax-vs-numpy-regression.md (2026-11-23)
