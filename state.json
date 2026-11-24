@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 17 in flight",
-  "updated": "2026-11-24T16:55:56Z",
+  "updated": "2026-11-24T17:06:18Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,6 +48,12 @@
       "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
       "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites\u2026 \u2014 library-shipped, awaiting-merge (5C-3a MERGED 2026-11-24 PyAutoGalaxy#753; 5C-3b PyAutoLens#886 OPEN aeaf7493, awaiting human\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 grid-factor-results",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1793 \u2014 sed-waveband-search-cap",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
       "prompt": null
     }
   ]

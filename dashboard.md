@@ -1397,7 +1397,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md">Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/885">issue #885</a> — issued 2026-11-24 — library-dev (5C-3a MERGED 2026-11-24 PyAutoGalaxy#753; 5C-3b PyAutoLens in progress on feature/likelihood-lifecycle-p5c3b-lens… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753">PyAutoGalaxy#753</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md">Likelihood lifecycle phase 5C-3: PyAutoGalaxy + PyAutoLens fit call sites…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/885">issue #885</a> — issued 2026-11-24 — library-shipped, awaiting-merge (5C-3a MERGED 2026-11-24 PyAutoGalaxy#753; 5C-3b PyAutoLens#886 OPEN aeaf7493, awaiting human… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753">PyAutoGalaxy#753</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/886">PyAutoLens#886</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md
@@ -3319,6 +3319,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#886](https://github.com/PyAutoLabs/PyAutoLens/pull/886) — `active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md`
 - [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoLens#882](https://github.com/PyAutoLabs/PyAutoLens/pull/882) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoLens#877](https://github.com/PyAutoLabs/PyAutoLens/pull/877) — `complete/2026/11/mixed-galaxy-light.md`
