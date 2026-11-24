@@ -86,6 +86,16 @@ the ruling on the prompt.
 - asked: 2026-11-23T09:59Z
 - worker: readiness pass
 
+### Q29. multi_dataset_jax_likelihood_delaunay_wrong_likelihood — Retire the September likelihood report now that fresh main passes, or…
+- task: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
+- kind: question
+- ask: Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction?
+- options: (a) Retire the report · (b) Supply September g/r FITS files, stack revisions and configuration
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:07Z
+- worker: codex:996ec11541bd477796142ec5b768b320
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->

@@ -96,3 +96,26 @@
 - prompt: active/likelihood_lifecycle_p5b_array_setup.md
 - epic: likelihood-lifecycle (phase 5B of 5A–5H; two PRs: 5B-1 choose, 5B-2 apply)
 - tier: judge — merge mode: human /prm
+
+## multi_dataset_jax_likelihood_delaunay_wrong_likelihood
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
+- issued: 2026-11-24
+- session: shift worker 2026-11-24-am (01a20c95-1f26-72d0-8529-1a903019348a)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
+- prompt: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
+- tier: judge — supervised, human /prm
+- next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
+
+## zero_contour_grad_fails_on_jax_0_12
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/749
+- issued: 2026-11-24
+- session: shift worker 2026-11-24-am (codex:4e6d6d0af3d149f0a3ae66e9af6e5034)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/zero-contour-jax-grad
+- repos:
+  - PyAutoGalaxy: feature/zero-contour-jax-grad
+  - autogalaxy_workspace_test: feature/zero-contour-jax-grad
+  - autolens_workspace_test: feature/zero-contour-jax-grad
+- prompt: active/zero_contour_grad_fails_on_jax_0_12.md
+- tier: judge — merge mode: human /prm

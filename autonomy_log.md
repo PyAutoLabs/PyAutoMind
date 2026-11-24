@@ -561,6 +561,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 | 2026-11-23 | cockpit-footer-broca (PyAutoBrain#716, PR #717) | supervised (notify, shift) | 78 theme tests; 15 local renderers pass; targeted smoke selected no workspace; independent Opus CLEAN (343 targeted tests); scoped Heart GREEN; tenant firewall OK | PR open, decision-taken (retain historical theme fallbacks); live rollout pending |
 | 2026-11-23 | sensitivity_slam_source_pixelized_mappervalued (autolens_workspace#685) | supervised / glance | Interpolation passes; 8 datasets simulated; witness exits 1 on incompatible NFW perturbation parameters; targeted imaging/modeling.py PASS; independent FINDINGS; scoped Heart GREEN | parked |
 | 2026-11-23 | colab_gate_delete_hmf_after_next_release (PyAutoHeart#364, PR #366) | supervised | 36 tests passed, targeted smoke selected no workspace, direct config import passed, continuous F passed on PyPI 2026.11.22.1, independent review CLEAN, scoped Heart GREEN | PR opened |
+| 2026-11-24 | multi_dataset_jax_likelihood_delaunay_wrong_likelihood | supervised | main witness PASS / smoke and review inapplicable / Heart YELLOW | parked on #371 for original failing inputs or retirement |
 
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
 the `## Calibration runs` table **above**, at the end of its last segment, in

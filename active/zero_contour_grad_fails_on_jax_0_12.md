@@ -10,6 +10,8 @@ Status: formalised
 Consequence: judge
 Filed: 2026-11-12
 Lane: any
+Verified: 2026-11-24 1ba51f32 (PyAutoGalaxy)
+Issued: 2026-11-24
 
 ## Evidence (PyAutoNerves#215 phase-1 validation)
 
