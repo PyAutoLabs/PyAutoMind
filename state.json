@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 11 in flight",
-  "updated": "2026-11-24T08:13:14Z",
+  "updated": "2026-11-24T08:17:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,6 +48,12 @@
       "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
       "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "jax.grad through zero-contour critical curves fails on jax 0.12 \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/750",
+      "prompt": "Use the start-dev skill. active/zero_contour_grad_fails_on_jax_0_12.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pending release: PyAutoNerves PyAutoNerves#223 \u2014 likelihood-lifecycle-p5a-nerves",
       "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/223",
       "prompt": null
-    },
-    {
-      "severity": "info",
-      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }

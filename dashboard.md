@@ -45,7 +45,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-24-am — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 2 running, 2 finished, 2 refusal reasons · tokens 51460 of 2000000 (cache-read 1138688; 2 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:08:48Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
+Live: LIVE · 2 running, 3 finished, 2 refusal reasons · tokens 239097 of 2000000 (cache-read 6337631; 2 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:16:56Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
 
 _(nothing to review yet)_
 
@@ -1419,7 +1419,7 @@ Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility
 
 </details>
 
-<details><summary>📋 <a href="active/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/749">issue #749</a> — issued 2026-11-24 — library-dev</summary>
+<details><summary>📋 <a href="active/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/749">issue #749</a> — issued 2026-11-24 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/750">PyAutoGalaxy#750</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/139">autogalaxy_workspace_test#139</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/372">autolens_workspace_test#372</a></summary>
 
 ```
 Use the start-dev skill. active/zero_contour_grad_fails_on_jax_0_12.md
