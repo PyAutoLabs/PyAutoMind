@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-24T08:22:56Z",
+  "updated": "2026-11-24T08:24:49Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,6 +36,12 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/751",
+      "prompt": "Use the start-dev skill. active/colab_links_pinned_to_blob_main_in.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#878 \u2014 database-dataset-fits",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/878",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#877 \u2014 mixed-galaxy-light",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/877",
       "prompt": null
     }
   ]

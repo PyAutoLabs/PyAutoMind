@@ -1347,7 +1347,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/colab_links_pinned_to_blob_main_in.md">Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/879">issue #879</a> — library-dev</summary>
+<details><summary>📋 <a href="active/colab_links_pinned_to_blob_main_in.md">Colab links pinned to /blob/main/ in HowTo READMEs and library howto docs</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/879">issue #879</a> — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/751">PyAutoGalaxy#751</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/880">PyAutoLens#880</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/108">HowToGalaxy#108</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/138">HowToLens#138</a></summary>
 
 ```
 Use the start-dev skill. active/colab_links_pinned_to_blob_main_in.md
