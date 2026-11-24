@@ -182,7 +182,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/27
 - prompt: active/nautilus_bound_cadence.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-cadence
-- repos:
-  - autofit_profiling: feature/nautilus-bound-cadence
+- retained-repos: autofit_profiling (feature/nautilus-bound-cadence); PR #27 awaits human review. Coding claim transferred to nautilus-worker-headroom.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
