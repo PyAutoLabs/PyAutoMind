@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 19 in flight",
-  "updated": "2026-11-24T18:23:55Z",
+  "updated": "2026-11-24T18:46:29Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -54,6 +54,12 @@
       "text": "Complete the conditional 30D Nautilus evidence check \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/31",
       "prompt": "Use the start-dev skill. active/nautilus_30d_evidence_check.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Test 30D evidence across independently learned Nautilus bounds \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/33",
+      "prompt": "Use the start-dev skill. active/nautilus_30d_independent.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#712 \u2014 likelihood-lifecycle-p5b3-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/712",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1791 \u2014 grid-factor-results",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1791",
       "prompt": null
     }
   ]
