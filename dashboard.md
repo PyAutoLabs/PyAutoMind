@@ -1405,7 +1405,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md">Likelihood lifecycle phase 5B-3: PyAutoArray lazy, size-gated sparse operator on the dataset…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/711">issue #711</a> — issued 2026-11-24 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md">Likelihood lifecycle phase 5B-3: PyAutoArray lazy, size-gated sparse operator on the dataset…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/711">issue #711</a> — issued 2026-11-24 — library-shipped, awaiting-merge (PyAutoArray#712 OPEN 56c25cc8, awaiting human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/712">PyAutoArray#712</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md
@@ -3259,6 +3259,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#712](https://github.com/PyAutoLabs/PyAutoArray/pull/712) — `active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md`
 - [PyAutoArray#709](https://github.com/PyAutoLabs/PyAutoArray/pull/709) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
 - [PyAutoArray#710](https://github.com/PyAutoLabs/PyAutoArray/pull/710) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
 
