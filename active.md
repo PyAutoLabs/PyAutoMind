@@ -26,19 +26,18 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136
 - issued: 2026-11-20
 - session: shift worker 2026-11-20-am (79ac305d-a450-40fe-b02b-8b0ccf4e159a)
-- status: awaiting-merge
+- status: library merged 2026-11-24 (PyAutoFit#1793 08eeecd85, human /prm), awaiting workspace merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1793
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/140
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1793
 - resumed: 2026-11-22, Codex desktop, Q17 option 1
 - worktree: /home/jammy/Code/PyAutoLabs-wt/sed-waveband-search-cap
 - repos:
-  - PyAutoFit: feature/sed-waveband-search-cap
   - euclid_strong_lens_modeling_pipeline: feature/sed-waveband-search-cap
 - question: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/136#issuecomment-7034635460
 - prompt: active/sed_chain_waveband_fit_can_spin_forever.md
 - validation: PyAutoFit 936b073d4 passed the timeout and conformance checks, including a real sampler and empty-posterior recovery. Euclid 89b7f7c passed 511 fast tests and all nine smoke scripts. Two sequential synthetic plateau fits hit a reduced call budget and wrote QA markers.
-- next: Human review of PyAutoFit #1793 first, then Euclid #140. The maintainer will run the original tile on RAL after merge and report on Euclid #136.
+- next: Euclid #140 (CI GREEN 2026-11-24), then close out; PyAutoFit claim released after #1793 merged. The maintainer will run the original tile on RAL after merge and report on Euclid #136.
 - tier: judge — supervised, human review and /prm
 
 ## numba-wtilde-validation-legs-stall
