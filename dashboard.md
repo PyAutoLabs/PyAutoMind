@@ -10,12 +10,16 @@
 |-------|------:|
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
-| [Epics](#epics) | 26 |
+| [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
+
+> ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
+
+> - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md — its own `Status:` says completed, but the prompt never left draft/ (reconcile its lifecycle)`
 
 ## Autopilot
 
@@ -252,11 +256,32 @@ Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
-<details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: <code>draft/feature/autofit/nautilus_fast_likelihood_development_epic.md</code> — PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record…</summary>
+<details>
+<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 2 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: <code>draft/feature/autofit/nautilus_fast_likelihood_development_epic.md</code> — Experimental CPU baseline and 30D diagnostics merged through phase 0b.2. The parent CPU experiment finished on RAL. Wider phase…</summary>
 
 ```
 Continue the 'Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration' epic. Its canonical state lives in draft/feature/autofit/nautilus_fast_likelihood_development_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Implementation epic; never issue the umbrella. Phase 0a complete: complete/2026/11/nautilus-cpu-profiling-baseline.md (autofit_profiling#8 → PR#9 merged); experimental phase 0b.1 complete: complete/2026/11/nautilus-cpu-campaign-setup.md (PR#11 merged); wider phase 0b remains pending, Pulse promotion deferred by human choice. Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics belong to phase 0b; 0a completion alone does not complete phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
 ```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_parent_cpu_slowdown.md">Diagnose parent CPU slowdown after native training-pool use</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_parent_cpu_slowdown.md
+```
+
+</details>
 
 </details>
 
@@ -1303,19 +1328,6 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>nautilus-fast-likelihoods</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
-
-<details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>autonomous-orchestrators (programme M3.4 companion)</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/questions_inbox_bulk_answering.md">Questions inbox: parked questions wait in one list the human works through…</a> — pyautobrain · medium · supervised · high</summary>
@@ -1591,7 +1603,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 37</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1861,14 +1873,6 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 
 ```
 Use the start-dev skill. draft/feature/autoarray/matern_nu_gradient_via_bessel_k_order.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/nautilus_parent_cpu_slowdown.md">Diagnose parent CPU slowdown after native training-pool use</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/nautilus_parent_cpu_slowdown.md
 ```
 
 </details>
