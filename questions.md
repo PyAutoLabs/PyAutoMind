@@ -96,6 +96,16 @@ the ruling on the prompt.
 - asked: 2026-11-24T08:07Z
 - worker: codex:996ec11541bd477796142ec5b768b320
 
+### Q30. substructure_util_zero_padded_halo_slots_make — All four profile families pass the padded scan witness on main. Retir…
+- task: draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/871
+- kind: question
+- ask: All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population?
+- options: (a) Retire the duplicate draft · (b) Supply a different failing population
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:32Z
+- worker: codex:33cff8e853b042bc81657d044e7b878b
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
