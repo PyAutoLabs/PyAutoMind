@@ -209,3 +209,7 @@ Deprioritise scheduler changes on this cheap 5D fixture. All cases fall below th
 All three native checkpoints reopened exactly. Independent reconstruction from 2,452,000 fresh rows confirmed evidence and ESS, and checksums verified the original inputs remained intact. [Report, per-stream receipts and independent checks](https://github.com/PyAutoLabs/autofit_profiling/blob/10c951cae4c875321048c6ab7841bca10e85896c/experiments/nautilus_30d_evidence_check/README.md). All 111 tooling tests, Ruff and the catalogue check passed. The draft PR awaits human review.
 
 The conditional 30D evidence check is complete. The original protocol set no numerical pass band. All three streams share one exploration, and both sample selection and sample count changed from the original fit. The remaining 30D accuracy question is sensitivity across independently learned bounds. Wider phase 0b remains open, native cadence is retained and Pulse promotion stays deferred.
+
+## Independent 30D explorations — 2026-11-24
+
+[Phase issue](https://github.com/PyAutoLabs/autofit_profiling/issues/32) starts seeds 1–3 from scratch to assess the sign and size of evidence errors across separately learned bounds. [Registered protocol](../../../active/nautilus_30d_independent.md).

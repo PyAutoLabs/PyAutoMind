@@ -204,3 +204,14 @@
 - prompt: active/likelihood_lifecycle_p5d_fit_auto_cores.md
 - epic: likelihood-lifecycle (phase 5D; then 5E estimator)
 - tier: judge — merge mode: human /prm
+
+## nautilus-30d-independent
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/32
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_30d_independent.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-independent
+- repos:
+  - autofit_profiling: feature/nautilus-30d-independent
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
