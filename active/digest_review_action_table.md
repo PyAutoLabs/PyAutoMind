@@ -8,8 +8,10 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-11-24
+Issued: 2026-11-24
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/718
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: the digest of a replayed real shift (2026-11-24-am's counters and slot) opens with a review table in which every named and backlog task sits in exactly one action group (merge, answer, blocked/not started, done), each PR listed in merge order with its repo#n link, and `_digest.validate` still passes on the full record

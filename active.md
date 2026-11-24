@@ -106,3 +106,16 @@
 - prompt: active/likelihood_lifecycle_p5c_galaxy_lens_setup.md
 - epic: likelihood-lifecycle (phase 5C of 5A–5H; two PRs: 5C-1 Galaxy, 5C-2 Lens)
 - tier: judge — merge mode: human /prm
+
+## digest-review-table
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/718
+- issued: 2026-11-24
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/digest-review-table
+- repos:
+  - PyAutoBrain: feature/digest-review-table
+  - PyAutoMind: feature/digest-review-table
+- prompt: active/digest_review_action_table.md
+- epic: autonomous-orchestrators (M3; before the M3 gate shift; folds M3.3 slice 2 item 1)
+- tier: judge — merge mode: human /prm
