@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 10 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -53,20 +53,12 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/xla_census_anchors_stale_after_convolver_move.md">autolens_profiling lint is red on main: XLA census PSF anchors point…</a> — autolens_profiling · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/xla_census_anchors_stale_after_convolver_move.md
 ```
 
 </details>
@@ -151,7 +143,15 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 72
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 71
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1429,6 +1429,14 @@ Use the start-dev skill. active/stale_auto_simulated_cluster_dataset.md
 
 </details>
 
+<details><summary>📋 <a href="active/xla_census_anchors_stale_after_convolver_move.md">autolens_profiling lint is red on main: XLA census PSF anchors point…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/533">issue #533</a> — issued 2026-11-24 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/xla_census_anchors_stale_after_convolver_move.md
+```
+
+</details>
+
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -1520,7 +1528,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 226 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 225 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1880,15 +1888,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 44</summary>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/xla_census_anchors_stale_after_convolver_move.md">autolens_profiling lint is red on main: XLA census PSF anchors point…</a> — autolens_profiling · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/xla_census_anchors_stale_after_convolver_move.md
-```
-
-</details>
+<summary><b>bug</b> — 43</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -3012,7 +3012,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
-| 2026-11-24 | filed | <a href="draft/bug/autolens_profiling/xla_census_anchors_stale_after_convolver_move.md">autolens_profiling lint is red on main: XLA census PSF anchors point…</a> |
+| 2026-11-24 | issued | <a href="active/xla_census_anchors_stale_after_convolver_move.md">autolens_profiling lint is red on main: XLA census PSF anchors point…</a> |
 | 2026-11-24 | issued | <a href="active/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-11-23 | issued | <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
