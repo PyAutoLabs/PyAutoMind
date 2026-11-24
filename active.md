@@ -192,3 +192,15 @@
   - autofit_profiling: feature/nautilus-30d-evidence-check
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5d-fit
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1794
+- issued: 2026-11-24
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5d-fit
+- repos:
+  - PyAutoFit: feature/likelihood-lifecycle-p5d-fit
+- prompt: active/likelihood_lifecycle_p5d_fit_auto_cores.md
+- epic: likelihood-lifecycle (phase 5D; then 5E estimator)
+- tier: judge — merge mode: human /prm
