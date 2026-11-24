@@ -45,7 +45,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-24-am — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 2 running, 5 finished, 2 refusal reasons · tokens 613963 of 2000000 (cache-read 14421477; 2 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:28:39Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
+Live: LIVE · 1 running, 6 finished, 2 refusal reasons · tokens 613963 of 2000000 (cache-read 14421477; 2 session(s) unmeasured) · review-at 2026-11-24T09:30Z (as of 2026-11-24T08:30:46Z) · [shift issue #603](https://github.com/PyAutoLabs/PyAutoMind/issues/603#issuecomment-7125681566)
 
 _(nothing to review yet)_
 
@@ -1427,7 +1427,7 @@ Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility
 
 </details>
 
-<details><summary>📋 <a href="active/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code> is never regenerated</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/445">issue #445</a> — issued 2026-11-24 — workspace-dev</summary>
+<details><summary>📋 <a href="active/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code> is never regenerated</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/445">issue #445</a> — issued 2026-11-24 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/532">autolens_profiling#532</a></summary>
 
 ```
 Use the start-dev skill. active/stale_auto_simulated_cluster_dataset.md

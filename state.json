@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 13 in flight",
-  "updated": "2026-11-24T08:29:05Z",
+  "updated": "2026-11-24T08:31:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -60,6 +60,12 @@
       "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
       "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`@autolens_profiling` stale auto-simulated `dataset/cluster/simple` is never regenerated \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/532",
+      "prompt": "Use the start-dev skill. active/stale_auto_simulated_cluster_dataset.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#748 \u2014 plot-utils-critical-curves-docstrings",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#878 \u2014 database-dataset-fits",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/878",
       "prompt": null
     }
   ]
