@@ -21,3 +21,7 @@ Report the signed log-evidence and relative evidence errors against the analytic
 
 Issued: 2026-11-24
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/32
+
+## Exploration completed
+
+All three runs began empty. Their learned outer ellipsoid fingerprints differ from each other and from the historical seed-0 checkpoint. At the native exploration cutoff the signed log-evidence errors for seeds 1, 2 and 3 were −0.8924, −0.9557 and −0.8886. Fresh-only sampling is in progress for the registered endpoint.
