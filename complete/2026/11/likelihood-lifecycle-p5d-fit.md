@@ -1,3 +1,31 @@
+## likelihood-lifecycle-p5d-fit
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1794
+- completed: 2026-11-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1795
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1795
+- epic: likelihood-lifecycle (phase 5D; next 5E runtime estimator)
+
+Phase 5D shipped as PyAutoFit#1795 (merged 2026-11-24 as 23b7dfea).
+
+- **`number_of_cores`:** an int ≥ 1, None or "auto", validated in `SettingsSearch` and `NonLinearSearch`. `search.json` keeps the request.
+- **Resolving "auto":** `runtime.resolve_fit_parallel` resolves it right after `modify_before_fit`, via `resolve_number_of_cores` → `ParallelResolution`. The result is the detected cores; 1 for JAX and EP factor searches (the EP optimiser marks `_ep_factor_search`); capped by min(cores // cpus_per_eval, available memory // peak_rss_gb) only when the analysis has `resources_per_eval()`. There is no η cap.
+- **Memory:** the new `parallel/resources.py` reads MemAvailable, lowers it to the cgroup v2 headroom when that is smaller, and falls back to total RAM.
+- **Banner and metadata:** one `Parallel:` banner line; `log_fit_start` no longer claims a count. `search.summary` and `files/parallel.json` record the resolution.
+- **Factor graphs:** `FactorGraphModel.modify_before_fit` forwards to each `AnalysisFactor`; `rebind_analysis` updates both the factor's and the FactorCallable's analysis reference; HierarchicalFactor is skipped. `check_setup_agreement` runs at the end and in preflight.
+- **Grid search / Sensitivity** accept "auto" for job counts.
+- **Design calls (human-approved 2026-11-24):**
+  1. No η cap: the only measured curve, imaging/rectangular numba, has cores × η rising at every step up to 32 cores.
+  2. A memory-cap hook, live once 5E implements `resources_per_eval()` in PyAutoLens.
+  3. "auto" validated everywhere.
+  4. Factor-graph forwarding lives in PyAutoFit.
+- **Gate:** 4376 passed + 2 skipped + 1 xfailed (51 new tests); Galaxy compatibility 1659 (one wall-clock test flaked under CPU contention and passes alone); Lens compatibility 1123 + 1 xfailed; Heart GREEN; smoke 8/8; PR CI GREEN, including the no-JAX leg.
+- **Traps:**
+  - `test_abstract_search_is_at_most_600_lines` enforces a 600-line budget on `abstract_search.py`; new search-lifecycle helpers go in `runtime.py`.
+  - `test_conformance_backend._GENERIC_FILES` lists every file a fit writes; add new `files/*.json` to it.
+- **Gap:** `ModelAnalysis` (`.with_model`) doesn't forward `modify_before_fit` to the analysis it wraps. This predates 5D and is a small follow-up if wanted.
+
+## Original prompt
+
 # Likelihood lifecycle phase 5D: PyAutoFit `number_of_cores="auto"`, a post-setup parallel banner, parallel metadata, and factor graphs that forward `modify_before_fit` with a setup-agreement check
 
 Type: feature
