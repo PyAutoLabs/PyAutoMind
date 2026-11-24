@@ -136,7 +136,11 @@
 ## colab-links-pinned-to-blob-main-in
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/879
 - session: shift worker 2026-11-24-am (codex:7081fb9a6a784d6da48340f205852a00)
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/751
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/880
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/108
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/138
 - worktree: /home/jammy/Code/PyAutoLabs-wt/colab-links-pinned-to-blob-main-in
 - repos:
   - PyAutoGalaxy: feature/colab-links-pinned-to-blob-main-in
