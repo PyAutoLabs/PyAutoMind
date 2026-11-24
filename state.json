@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
-  "updated": "2026-11-24T10:20:41Z",
+  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
+  "updated": "2026-11-24T10:27:22Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,12 +48,6 @@
       "text": "SED chain waveband fit can spin forever in Nautilus exploration\u2026 \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
       "prompt": "Use the start-dev skill. active/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@autolens_profiling` stale auto-simulated `dataset/cluster/simple` is never regenerated \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/532",
-      "prompt": "Use the start-dev skill. active/stale_auto_simulated_cluster_dataset.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#877 \u2014 mixed-galaxy-light",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/877",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoNerves PyAutoNerves#223 \u2014 likelihood-lifecycle-p5a-nerves",
+      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/223",
       "prompt": null
     }
   ]

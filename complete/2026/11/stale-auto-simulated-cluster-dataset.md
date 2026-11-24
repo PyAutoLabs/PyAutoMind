@@ -1,3 +1,13 @@
+## stale-auto-simulated-cluster-dataset
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/445
+- completed: 2026-11-24
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/532
+- The simple-cluster cache gate (`dataset/cluster/simple`) now requires `scaling_galaxies.csv` and deserializes the saved tracer with the installed PyAutoLens before reuse; a stale directory raises an error naming the offending file (`scaling_galaxies.csv` or `tracer.json`) and how to regenerate it. Covers both cluster profiling cells and the robust-settings sweep.
+- Validation: reproduced on main 9b4a6452 with the legacy dataset (old `rs` keyword); witness on branch rejected stale, accepted a fresh `scripts/misc/simulators/cluster.py` output; regression test + ruff; cluster import smokes; independent Opus review CLEAN; scoped Heart GREEN.
+- Merge waited on autolens_profiling#534 (xla census anchors after the convolver move) fixing main lint; merged by human /prm after a branch update from main only.
+
+## Original prompt
+
 # `@autolens_profiling` stale auto-simulated `dataset/cluster/simple` is never regenerated
 
 Type: bug
