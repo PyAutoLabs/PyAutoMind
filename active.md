@@ -185,3 +185,14 @@
 - retained-repos: autofit_profiling (feature/nautilus-bound-cadence); PR #27 awaits human review. Coding claim transferred to nautilus-worker-headroom.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## nautilus-worker-headroom
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/28
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_worker_headroom.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-worker-headroom
+- repos:
+  - autofit_profiling: feature/nautilus-worker-headroom
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm

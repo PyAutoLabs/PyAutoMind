@@ -191,3 +191,7 @@ All eight log-evidence errors were below 0.058 against quadrature (reference −
 [Paired timings and reproduction](https://github.com/PyAutoLabs/autofit_profiling/blob/bfb33b7f4a2792bf467b16de640a58afe70e1e8c/experiments/nautilus_bound_cadence/README.md). All 111 tooling tests, Ruff and the Pulse catalogue check passed. The scoped Heart verdict was green with this producer deferred to PR checks. The draft PR awaits human review. Wider phase 0b and its 30D evidence gate remain open. Pulse promotion remains deferred.
 
 Maintainer decision, 2026-11-24: retain the native bound-update interval. The cadence pilot remains an experimental measurement.
+
+## Two-worker scheduling headroom — 2026-11-24
+
+[Phase issue](https://github.com/PyAutoLabs/autofit_profiling/issues/28) replays frozen batches from phase 0a to estimate the share of full fit time available to worker scheduling. [Registered comparison](../../../active/nautilus_worker_headroom.md).
