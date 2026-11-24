@@ -143,3 +143,7 @@ Both remain experimental/outside Pulse; fullphase0b is incomplete. The diagnosti
 Mind has no active coding claim for this epic. Its checkpoint and training-pool members are in [parked.md](../../../parked.md). The separate Nautilus stall investigation in autolens_inference#73 belongs to the likelihood validation work. The parked experiments have no open implementation PR.
 
 Wider phase 0b remains the next gate. Preserve the unresolved high-dimensional evidence check. For serial CPU work, the retained 10D controls spent 4.82 and 8.94 s exclusively in bound construction, behind 11.08 and 16.63 s in neural training. The next bounded attribution should identify the expensive geometry operations against a matched baseline before selecting an optimization. Pulse promotion remains deferred. Resolve the canonical Pulse or Insight task before any campaign execution.
+
+## Geometry attribution — 2026-11-24
+
+[Profiling issue #18](https://github.com/PyAutoLabs/autofit_profiling/issues/18) owns this bounded retained-input diagnostic. The [phase prompt](../../../active/nautilus_bound_geometry_attribution.md) is approved through a draft producer PR. Its scope covers the two native serial-control traces and a local deterministic reconstruction of their eleven outer mixture bounds.

@@ -124,3 +124,14 @@
 - repos:
   - PyAutoLens: feature/cluster-family-fit-figures
   - autolens_visualization: feature/cluster-family-fit-figures
+
+## nautilus-bound-geometry
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/18
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_bound_geometry_attribution.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-geometry
+- repos:
+  - autofit_profiling: feature/nautilus-bound-geometry
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
