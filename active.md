@@ -116,3 +116,16 @@
 - repos:
   - autolens_profiling: feature/stale-auto-simulated-cluster-dataset
 - prompt: active/stale_auto_simulated_cluster_dataset.md
+- coordination: xla-census-anchors-convolver (autolens_profiling#533) also claims autolens_profiling on its own branch feature/xla-census-anchors-convolver; it edits only scripts/misc/likelihood_breakdown/xla_attribution.py and its test (different files from this task), and its merge fixes the red main lint that blocks #532
+
+## xla-census-anchors-convolver
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/533
+- issued: 2026-11-24
+- session: Claude Code (Opus 5.5 bounded worker)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/xla-census-anchors-convolver
+- repos:
+  - autolens_profiling: feature/xla-census-anchors-convolver
+- prompt: active/xla_census_anchors_stale_after_convolver_move.md
+- coordination: shares autolens_profiling with stale-auto-simulated-cluster-dataset (human approved 2026-11-24); separate branch, different files
+- tier: glance — supervised; merge mode: auto-merge on green if the Witness passes

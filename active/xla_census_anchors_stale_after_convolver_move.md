@@ -16,6 +16,7 @@ Review-minutes: 5
 Unattended: ready
 Lane: any
 Filed: 2026-11-24
+Issued: 2026-11-24
 
 Original request (human, 2026-11-24, after `/prm` refused autolens_profiling#532 on red lint): "File the bug"
 
