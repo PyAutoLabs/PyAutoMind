@@ -1397,7 +1397,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5e_runtime_estimator.md">Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/887">issue #887</a> — issued 2026-11-24 — workspace-dev (5E-1 autolens_profiling first; 5E-2 PyAutoFit and 5E-3 PyAutoLens on follow-up branches)</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5e_runtime_estimator.md">Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/887">issue #887</a> — issued 2026-11-24 — workspace-shipped, awaiting-merge (5E-1 autolens_profiling#535 OPEN bbe3d739, awaiting human /prm; then 5E-2 PyAutoFit and 5E-3… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/535">autolens_profiling#535</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5e_runtime_estimator.md

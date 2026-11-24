@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 19 in flight",
-  "updated": "2026-11-24T20:08:24Z",
+  "updated": "2026-11-24T20:18:32Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,6 +48,12 @@
       "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
       "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes\u2026 \u2014 workspace-shipped, awaiting-merge (5E-1 autolens_profiling#535 OPEN bbe3d739, awaiting human /prm; then 5E-2 PyAutoFit and 5E-3\u2026",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/535",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5e_runtime_estimator.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#710 \u2014 likelihood-lifecycle-p5b-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/710",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#712 \u2014 likelihood-lifecycle-p5b3-array",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/712",
       "prompt": null
     }
   ]
