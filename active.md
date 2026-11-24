@@ -157,7 +157,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/23
 - prompt: active/nautilus_ellipsoid_weight_update.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ellipsoid-weight-update
-- repos:
-  - autofit_profiling: feature/nautilus-ellipsoid-weight-update
+- retained-repos: autofit_profiling (feature/nautilus-ellipsoid-weight-update); PR #23 awaits human review. Coding claim transferred to nautilus-weight-whole-fit.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm

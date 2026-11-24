@@ -11,6 +11,8 @@ Autonomy: supervised
 Consequence: judge
 Witness: Compare two counterbalanced local native/candidate fit pairs on the frozen 10D seed-2 fixture. Require exact ordered posterior, evidence, ESS, calls, shells and native checkpoint reopening for each case. Show every time, pair direction and failed or missing case.
 Lane: local-dev
+Issued: 2026-11-24
+Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/24
 
 ## Original request
 
