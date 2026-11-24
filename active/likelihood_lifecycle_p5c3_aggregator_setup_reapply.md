@@ -11,7 +11,9 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
+Issued: 2026-11-24
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/885
 Consequence: judge
 Witness: The PyAutoGalaxy and PyAutoLens fits (`AbstractFit.sparse_operator`, `fit_imaging.py` / `fit_interferometer.py`, `lens/to_inversion.py`) pass `self.dataset.sparse_operator_for(xp, has_pixelization)` (5B-3) into `aa.DatasetInterface`, so a plain `al.FitImaging(dataset, tracer)` gets the lazy operator when the policy is on. Loading a fit from the aggregator (`al.agg.FitImagingAgg` / `FitInterferometerAgg` and their PyAutoGalaxy counterparts) for a search that wrote `files/setup.json` reapplies that setup to the reloaded dataset (`dataset.apply_setup`). So the reloaded fit takes the same operator route as the search, and its log likelihood matches the stored value to the search's tolerance. A search with no `setup.json` reloads exactly as before. The analysis's `modify_before_fit` resolution and the 5B-3 lazy factory path share one resolution helper rather than two copies. The full PyAutoGalaxy and PyAutoLens suites are green.
 Review-minutes: 20
