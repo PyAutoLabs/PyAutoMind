@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-24T13:42:55Z",
+  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
+  "updated": "2026-11-24T13:43:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -51,12 +51,6 @@
     },
     {
       "severity": "yellow",
-      "text": "Likelihood lifecycle phase 5B-3: PyAutoArray lazy, size-gated sparse operator on the dataset\u2026 \u2014 library-shipped, awaiting-merge (PyAutoArray#712 OPEN 56c25cc8, awaiting human /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/712",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5b3_array_lazy_factory_operator.md"
-    },
-    {
-      "severity": "yellow",
       "text": "Attribute CPU time inside Nautilus bound construction \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/19",
       "prompt": "Use the start-dev skill. active/nautilus_bound_geometry_attribution.md"
@@ -75,12 +69,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#712 \u2014 Likelihood lifecycle phase 5B-3: PyAutoArray lazy, size-gated sparse operator on the dataset\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/712",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#709 \u2014 likelihood-lifecycle-p5b-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/709",
       "prompt": null
@@ -89,6 +77,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#710 \u2014 likelihood-lifecycle-p5b-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/710",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#712 \u2014 likelihood-lifecycle-p5b3-array",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/712",
       "prompt": null
     },
     {
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#746 \u2014 mixed-galaxy-light",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#748 \u2014 plot-utils-critical-curves-docstrings",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
       "prompt": null
     }
   ]

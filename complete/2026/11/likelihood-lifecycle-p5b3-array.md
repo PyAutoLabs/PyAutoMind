@@ -1,3 +1,30 @@
+## likelihood-lifecycle-p5b3-array
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/711
+- completed: 2026-11-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/712
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/712
+- epic: likelihood-lifecycle (phase 5B-3; next 5C-3 Galaxy/Lens call sites + aggregator reapply + shared helper, then 5D)
+
+Phase 5B-3 shipped as PyAutoArray#712 (merged 2026-11-24 as faa80349): a lazy, size-gated sparse operator on the real dataset, so calculations outside modeling can get the optimal operator once 5C-3 adds the call sites.
+
+- **API:** `Imaging.sparse_operator_for(xp, needs_operator, settings)` / `Interferometer.sparse_operator_for(...)` return the attached operator; otherwise, with the policy on, they build once and cache privately on the dataset; otherwise None.
+- **Builds:** they reuse `apply_sparse_operator_cpu()` / `apply_sparse_operator()`, with exact / 1e-14 equality. Above 1e6 visibilities the interferometer uses `apply_sparse_operator_from_chunks` (2**18 per chunk, matching to 1e-12). One log line gives the build time.
+- **Policy:** an explicit `Settings(lazy_sparse_operator=...)` wins; otherwise `general.yaml` `inversion: lazy_sparse_operator: "auto"` (quoted, because YAML reads a bare `off` as False) or `PYAUTO_SETUP=auto` turns it on. An unset or empty `PYAUTO_SETUP` stays off. Default off (R6). An extra config key, `inversion: lazy_sparse_operator_visibility_budget`, overrides the 1e6 budget.
+- **Gates (never build):**
+  - `xp` isn't numpy, or a JAX tracer is detected (jax is checked only if already imported);
+  - inside a multiprocessing worker (`numba_util.parallel_kernel_allowed()`), where it returns an inherited cache but never builds;
+  - an explicit setup whose operator isn't sparse;
+  - `needs_operator=False`;
+  - real ≠ imaginary noise, which gives a one-time warning and never pools.
+- **Cache:** carried by `apply_over_sampling`; cleared by every rebuilding `apply_*`, by `apply_setup`'s copy shortcut and by `trimmed_after_convolution_from`.
+- **Design (human-approved after a read-only survey):** the hook is on the real dataset, not the inversion factory, because every fit wraps its data in a fresh `aa.DatasetInterface` with no back-reference. The fit call sites moved to 5C-3, and the 5B-3/5C-3 drafts were amended to match.
+- **Gate:** 2614 tests (20 new); Heart dev GREEN; smoke 7/7 against the branch; PR CI GREEN, including the no-JAX leg.
+- **Traps:**
+  - A Mind push in this phase was rejected by a concurrent push, and the temp worktree was removed by an `&&` chain before the retry. The dangling commit was recovered with `git fsck --lost-found` and cherry-picked. Remove temp Mind worktrees only after a successful push.
+  - The commit message's "Closes #711" auto-closed the issue on merge.
+
+## Original prompt
+
 # Likelihood lifecycle phase 5B-3: PyAutoArray lazy, size-gated sparse operator on the dataset (`dataset.sparse_operator_for`), so non-modeling calculations get the optimal setup
 
 Type: feature
