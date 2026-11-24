@@ -179,3 +179,7 @@ Four local fits completed within 174.7 s and the declared caps, with no failures
 Three fresh PyAutoFit Gaussian-profile fits with output enabled spent 61.51–64.95% of wall time in neural training and bound geometry combined. All three used the same seed. The point-lens archive establishes a very small warm likelihood share. For HST imaging the source stage dominated the two chain walls, but its internal training and geometry costs remain unknown.
 
 The archived cadence sweep identifies a concrete next experiment. Doubling the interval between updates retained the neural ensemble and reduced the 10D run from five bound builds to three and from 20.92 s to 7.00 s. The single-seed peak metric gave that fixture little power to expose slower discovery. Test cadence on the application fit with paired seeds and an explicit mode-recovery gate before adoption. The scalar candidate remains experimental. Profiling PRs #19, #21, #23 and #25 await human review. Wider 0b remains open and Pulse promotion is deferred. [Completed research note and pinned source receipts](../../../complete/2026/11/nautilus_workload_transfer.md).
+
+## Paired bound-update cadence pilot — 2026-11-24
+
+[Phase issue](https://github.com/PyAutoLabs/autofit_profiling/issues/26) compares default and doubled bound-update intervals on a Gaussian-profile fit and its symmetric two-mode control across paired seeds. [Registered gates](../../../active/nautilus_bound_cadence.md) cover total time, evidence accuracy, posterior recovery and evaluations to each peak.

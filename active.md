@@ -173,3 +173,14 @@
 - retained-repos: autofit_profiling (feature/nautilus-weight-whole-fit); PR #25 awaits human review. Coding claim transferred to nautilus-bound-cadence.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## nautilus-bound-cadence
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/26
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_bound_cadence.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-cadence
+- repos:
+  - autofit_profiling: feature/nautilus-bound-cadence
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
