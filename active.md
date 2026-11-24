@@ -208,12 +208,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/887
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev (5E-1 MERGED 2026-11-24 autolens_profiling#535; 5E-2 PyAutoFit hook in progress on feature/likelihood-lifecycle-p5e2-fit; then 5E-3 PyAutoLens)
+- status: library-dev (5E-1 MERGED 2026-11-24 autolens_profiling#535; 5E-2 PyAutoFit#1796 OPEN 3333c1a3, awaiting human /prm; 5E-3 PyAutoLens in progress on feature/likelihood-lifecycle-p5e3-lens)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1796
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1796
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/535
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5e
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p5e1-profiling
   - PyAutoFit: feature/likelihood-lifecycle-p5e2-fit
+  - PyAutoLens: feature/likelihood-lifecycle-p5e3-lens
 - prompt: active/likelihood_lifecycle_p5e_runtime_estimator.md
 - epic: likelihood-lifecycle (phase 5E; three PRs: 5E-1 profiling, 5E-2 Fit, 5E-3 Lens)
 - tier: judge — merge mode: human /prm
