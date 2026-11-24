@@ -217,3 +217,14 @@
 - prompt: active/likelihood_lifecycle_p5e_runtime_estimator.md
 - epic: likelihood-lifecycle (phase 5E; three PRs: 5E-1 profiling, 5E-2 Fit, 5E-3 Lens)
 - tier: judge — merge mode: human /prm
+
+## nautilus-30d-matched-ess
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/34
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_30d_matched_ess.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-matched-ess
+- repos:
+  - autofit_profiling: feature/nautilus-30d-matched-ess
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
