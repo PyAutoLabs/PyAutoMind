@@ -1,3 +1,39 @@
+## likelihood-lifecycle-p5b-array
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/708
+- completed: 2026-11-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/709
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/710
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/709
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/710
+- epic: likelihood-lifecycle (phase 5B; next 5C PyAutoGalaxy + PyAutoLens)
+
+Phase 5B of the likelihood-lifecycle epic shipped in PyAutoArray as two PRs under one issue.
+
+- **5B-1, choosing a setup** (#709, merged 2026-11-24 as e70af85d):
+  - `aa.Setup`, with `from_setup_id` / `.setup_id`.
+  - `Setup.auto(dataset_type, variant, regime, environment)`.
+  - `autoarray/config/setup_rules.yaml`: 39 rows from Pulse 94a101f4, written by the `python -m autoarray.setup.generate_rules --pulse … [--check]` generator.
+  - Hardware with no designation uses the nearest class, with `extrapolated=True`.
+- **5B-2, applying a setup** (#710):
+  - `Imaging.apply_setup`: sparse → `apply_sparse_operator` (jax) / `apply_sparse_operator_cpu` (numba); dense → no operator. With a `.setup`, `apply_mask` / `apply_noise_scaling` re-apply it, so the operator is rebuilt for the new mask or noise-map. `apply_over_sampling` carries it.
+  - `Interferometer.apply_setup`: `_nufft` → `TransformerNUFFT`; `_wtilde` → `apply_sparse_operator`. One finufft-built operator serves both backends, and `xp` picks the route. A constructor `setup` skips the >10,000-visibility DFT guard.
+  - Both `apply_setup` methods are idempotent.
+  - The inversion factory raises `InversionException` on an operator/backend mismatch. One case is new even without a setup: a numba imaging operator under JAX `xp`.
+  - `Setup.apply_threads()`: numba plus threadpoolctl. It never raises, and it leaves numba alone inside multiprocessing workers.
+- **Gate:**
+  - 5B-1: 85 + 2562 tests; smoke 7/7.
+  - 5B-2: 2594 tests; Heart dev GREEN; smoke 7/7 against the branch.
+  - #710's first CI run failed `unittest-nojax`: five new tests built the JAX operator without `pytest.importorskip("jax")`. Fixed in 3aebdb19.
+- **Traps:**
+  - Local venvs always have JAX, so a new test that builds `ImagingSparseOperator` needs an importorskip or it only fails on the no-JAX CI leg.
+  - Heart smoke grades the worktree only when `activate.sh` exports `PYAUTO_ROOT`. It did here.
+- **For 5C:**
+  - A factory mismatch raised inside a search is caught as a rejected sample (`FitException`) or a skipped plot, so 5C should check, or `apply_setup`, once when the analysis is constructed.
+  - The lens-scale keys (group, multi_galaxy, cluster, point source) are resolved by the caller.
+  - R6: `setup="auto"` is opt-in first, with a "would choose" banner.
+
+## Original prompt
+
 # Likelihood lifecycle phase 5B: PyAutoArray `aa.Setup`, `Setup.auto`, rule table from the Pulse designations, `dataset.apply_setup`, operator/backend consistency check
 
 Type: feature

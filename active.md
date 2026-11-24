@@ -82,22 +82,6 @@
 - question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
 - next: #368 claim cleared 2026-11-24 (PyAutoHeart#369 merged; record complete/2026/11/heart-health-rerun-stale-push.md) — resumable.
 
-## likelihood-lifecycle-p5b-array
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/708
-- issued: 2026-11-23
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-shipped, awaiting-merge (5B-1 MERGED 2026-11-24 PyAutoArray#709 e70af85d; 5B-2 PR PyAutoArray#710 OPEN 32888ab5, awaiting human /prm; issue #708 stays open until #710 merges)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/709
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/709
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/710
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/710
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5b-array
-- repos:
-  - PyAutoArray: feature/likelihood-lifecycle-p5b2-array
-- prompt: active/likelihood_lifecycle_p5b_array_setup.md
-- epic: likelihood-lifecycle (phase 5B of 5A–5H; two PRs: 5B-1 choose, 5B-2 apply)
-- tier: judge — merge mode: human /prm
-
 ## multi_dataset_jax_likelihood_delaunay_wrong_likelihood
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
 - issued: 2026-11-24
