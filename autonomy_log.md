@@ -618,7 +618,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 71; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 72; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -803,6 +803,7 @@ week, never a hand-picked one.
 | 2026-11-22 | euclid-nautilus-batch (euclid_strong_lens_modeling_pipeline#139) | glance | tests green / smoke 9 of 9 / human review / Heart green / n_batch=50 verified | merged-unchanged | 1 | human-/prm |  |
 | 2026-11-22 | cti-database-reruns (autocti_workspace#50) | glance | tests green / smoke 44 of 44 / human review / Heart green / six scripts twice | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
 | 2026-11-22 | slam-simultaneous-subhalo-grid-search (autolens_workspace#684) | glance | tests: 8/8 GitHub checks; smoke: 42 scripts and 2 notebooks passed; review: human; Heart: scoped GREEN; witness: four joint cells and refinement passed independently in script and notebook | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
+| 2026-11-24 | colab-links-pinned-to-blob-main-in (PyAutoLens#879 / PyAutoGalaxy#751, PyAutoLens#880, HowToGalaxy#108, HowToLens#138) | glance | 124 tagged targets verified, bumper 124/124, URL sweep 12 clean, targeted smoke PASS, independent Opus CLEAN, Heart YELLOW acknowledged | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211, 4/5 PRs) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 
