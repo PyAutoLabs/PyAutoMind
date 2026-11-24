@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 20 in flight",
-  "updated": "2026-11-24T21:19:10Z",
+  "updated": "2026-11-24T21:33:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -69,6 +69,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Resume three independently explored 30D checkpoints to matched ESS \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/35",
+      "prompt": "Use the start-dev skill. active/nautilus_30d_matched_ess.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Compare Nautilus bound-update intervals on complete PyAutoFit fits \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/27",
       "prompt": "Use the start-dev skill. active/nautilus_bound_cadence.md"
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#709 \u2014 likelihood-lifecycle-p5b-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/709",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#710 \u2014 likelihood-lifecycle-p5b-array",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/710",
       "prompt": null
     }
   ]
