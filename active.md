@@ -86,12 +86,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/708
 - issued: 2026-11-23
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev (5B-1 MERGED 2026-11-24 PyAutoArray#709 e70af85d; 5B-2 next, new branch off origin/main in the same worktree; issue #708 stays open until 5B-2 merges)
+- status: library-dev (5B-1 MERGED 2026-11-24 PyAutoArray#709 e70af85d; 5B-2 in progress on feature/likelihood-lifecycle-p5b2-array; issue #708 stays open until 5B-2 merges)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/709
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/709
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5b-array
 - repos:
-  - PyAutoArray: feature/likelihood-lifecycle-p5b-array
+  - PyAutoArray: feature/likelihood-lifecycle-p5b2-array
 - prompt: active/likelihood_lifecycle_p5b_array_setup.md
 - epic: likelihood-lifecycle (phase 5B of 5A–5H; two PRs: 5B-1 choose, 5B-2 apply)
 - tier: judge — merge mode: human /prm
