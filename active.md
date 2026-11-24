@@ -209,7 +209,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/887
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-dev (5E-1 autolens_profiling first; 5E-2 PyAutoFit and 5E-3 PyAutoLens on follow-up branches)
+- status: workspace-shipped, awaiting-merge (5E-1 autolens_profiling#535 OPEN bbe3d739, awaiting human /prm; then 5E-2 PyAutoFit and 5E-3 PyAutoLens)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/535
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5e
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p5e1-profiling
