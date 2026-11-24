@@ -149,3 +149,14 @@
 - prompt: active/likelihood_lifecycle_p5c3_aggregator_setup_reapply.md
 - epic: likelihood-lifecycle (phase 5C-3; two PRs: 5C-3a Galaxy, 5C-3b Lens; then 5D PyAutoFit)
 - tier: judge — merge mode: human /prm
+
+## nautilus-ellipsoid-weight-update
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/22
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_ellipsoid_weight_update.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ellipsoid-weight-update
+- repos:
+  - autofit_profiling: feature/nautilus-ellipsoid-weight-update
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
