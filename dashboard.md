@@ -1397,7 +1397,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5d_fit_auto_cores.md">Likelihood lifecycle phase 5D: PyAutoFit <code>number_of_cores="auto"</code>, a post-setup parallel banner, parallel metadata…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1794">issue #1794</a> — issued 2026-11-24 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5d_fit_auto_cores.md">Likelihood lifecycle phase 5D: PyAutoFit <code>number_of_cores="auto"</code>, a post-setup parallel banner, parallel metadata…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1794">issue #1794</a> — issued 2026-11-24 — library-shipped, awaiting-merge (PyAutoFit#1795 OPEN 6b8383b8, awaiting human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1795">PyAutoFit#1795</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5d_fit_auto_cores.md
@@ -3321,6 +3321,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1795](https://github.com/PyAutoLabs/PyAutoFit/pull/1795) — `active/likelihood_lifecycle_p5d_fit_auto_cores.md`
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
 - [PyAutoFit#1793](https://github.com/PyAutoLabs/PyAutoFit/pull/1793) — `complete/2026/11/sed-waveband-search-cap.md`
 - [PyAutoFit#1792](https://github.com/PyAutoLabs/PyAutoFit/pull/1792) — `complete/2026/11/truncated-tail-evidence.md`

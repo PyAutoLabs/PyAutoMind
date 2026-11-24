@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 19 in flight",
-  "updated": "2026-11-24T18:46:29Z",
+  "updated": "2026-11-24T18:55:10Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,6 +48,12 @@
       "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
       "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5D: PyAutoFit `number_of_cores=\"auto\"`, a post-setup parallel banner, parallel metadata\u2026 \u2014 library-shipped, awaiting-merge (PyAutoFit#1795 OPEN 6b8383b8, awaiting human /prm)",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1795",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5d_fit_auto_cores.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#710 \u2014 likelihood-lifecycle-p5b-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/710",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#712 \u2014 likelihood-lifecycle-p5b3-array",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/712",
       "prompt": null
     }
   ]
