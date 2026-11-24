@@ -1,3 +1,11 @@
+- Issue [autolens_profiling #533](https://github.com/PyAutoLabs/autolens_profiling/issues/533) closed when [PR #534](https://github.com/PyAutoLabs/autolens_profiling/pull/534) merged at `5f56fb27` on 2026-11-24.
+- PyAutoArray `main` moved the functions in `autoarray/operators/convolver.py` down by about 60 lines, so the XLA census's hard-coded PSF ranges no longer enclosed them and `lint` was red on `main` from 2026-11-22. Every range in `scripts/misc/likelihood_breakdown/xla_attribution.py` was re-derived with `ast` against PyAutoArray `origin/main` (e70af85d): `convolved_mapping_matrix_from` 1086-1300 → 1153-1330, over-sampled np 632-642 → 693-702, over-sampled jax 670-691 → 731-750, plus the comment ranges. The stage rules, `requires=`, `_is_mapping_convolution` and `CENSUS_ANCHORS` moved together.
+- Local `pytest scripts/misc/*/test` against PyAutoArray main: 1907 passed, 6 skipped. PR lint at `a775544a` the same, with `test_census_anchors_verify_against_the_installed_pyautoarray` passing; ci-verdict GREEN.
+- Follow-up idea, not filed: `census_anchor_status()` already resolves live spans with `ast`, so the rules could take their ranges from those spans and stop breaking when PyAutoArray moves code.
+- Unblocks autolens_profiling#532 (`stale-auto-simulated-cluster-dataset`), whose lint was red on this bug.
+
+## Original prompt
+
 # autolens_profiling lint is red on main: XLA census PSF anchors point at stale PyAutoArray `convolver.py` line ranges
 
 Type: bug
