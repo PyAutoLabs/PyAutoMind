@@ -11,6 +11,8 @@ Autonomy: supervised
 Consequence: judge
 Witness: Compare native and candidate calculations on all 57 ellipsoid calls triggered by eleven retained 10D outer bounds, including the lower-dimensional projections. Require identical input and output bytes for corresponding calls and matching reconstructed geometry. Publish every paired timing or the first failure.
 Lane: local-dev
+Issued: 2026-11-24
+Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/22
 
 ## Original request
 

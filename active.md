@@ -134,8 +134,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/21
 - prompt: active/nautilus_whole_fit_geometry.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-whole-fit-geometry
-- repos:
-  - autofit_profiling: feature/nautilus-whole-fit-geometry
+- retained-repos: autofit_profiling (feature/nautilus-whole-fit-geometry); PR #21 awaits human review. Coding claim transferred to nautilus-ellipsoid-weight-update.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
