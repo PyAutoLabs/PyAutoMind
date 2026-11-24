@@ -563,6 +563,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 | 2026-11-23 | colab_gate_delete_hmf_after_next_release (PyAutoHeart#364, PR #366) | supervised | 36 tests passed, targeted smoke selected no workspace, direct config import passed, continuous F passed on PyPI 2026.11.22.1, independent review CLEAN, scoped Heart GREEN | PR opened |
 | 2026-11-24 | multi_dataset_jax_likelihood_delaunay_wrong_likelihood | supervised | main witness PASS / smoke and review inapplicable / Heart YELLOW | parked on #371 for original failing inputs or retirement |
 | 2026-11-24 | zero_contour_grad_fails_on_jax_0_12 (PyAutoGalaxy#749, PR #750; autogalaxy_workspace_test#139; autolens_workspace_test#372) | supervised, shift --auto, judge | 47 tests passed; both witnesses passed; targeted critical-curve smoke passed; independent review CLEAN; Heart dev GREEN; decision-taken for residual representation | parked at PR-open |
+| 2026-11-24 | heart_health_rerun_stale_push (PyAutoHeart#368, PR #369) | supervised, judge | 78 targeted tests passed including 4 bare-remote cases, targeted smoke selected no workspace, supplemental imports passed, independent Opus CLEAN at 07d8976, scoped Heart GREEN | PR open for human /prm |
 
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
 the `## Calibration runs` table **above**, at the end of its last segment, in

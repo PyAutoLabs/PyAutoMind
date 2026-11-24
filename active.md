@@ -127,7 +127,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/368
 - prompt: active/heart_health_rerun_stale_push.md
 - session: shift worker 2026-11-24-am (codex:7b6c27f423a44787b350ac948dd0f10b)
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/369
 - worktree: ~/Code/PyAutoLabs-wt/heart-health-rerun-stale-push
 - repos:
   - PyAutoHeart: feature/heart-health-rerun-stale-push
