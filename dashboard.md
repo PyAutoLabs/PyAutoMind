@@ -1397,7 +1397,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5e_runtime_estimator.md">Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/887">issue #887</a> — issued 2026-11-24 — library-dev (5E-1 MERGED 2026-11-24 autolens_profiling#535; 5E-2 PyAutoFit hook in progress on… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/535">autolens_profiling#535</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5e_runtime_estimator.md">Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/887">issue #887</a> — issued 2026-11-24 — library-dev (5E-1 MERGED 2026-11-24 autolens_profiling#535; 5E-2 PyAutoFit#1796 OPEN 3333c1a3, awaiting human /prm; 5E-3… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1796">PyAutoFit#1796</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/535">autolens_profiling#535</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5e_runtime_estimator.md
@@ -3329,6 +3329,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1796](https://github.com/PyAutoLabs/PyAutoFit/pull/1796) — `active/likelihood_lifecycle_p5e_runtime_estimator.md`
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
 - [PyAutoFit#1795](https://github.com/PyAutoLabs/PyAutoFit/pull/1795) — `complete/2026/11/likelihood-lifecycle-p5d-fit.md`
 - [PyAutoFit#1793](https://github.com/PyAutoLabs/PyAutoFit/pull/1793) — `complete/2026/11/sed-waveband-search-cap.md`
