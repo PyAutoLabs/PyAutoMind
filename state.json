@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
-  "updated": "2026-11-24T13:51:43Z",
+  "headline": "RED \u2014 23 picks \u00b7 17 in flight",
+  "updated": "2026-11-24T17:25:20Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -51,9 +51,39 @@
     },
     {
       "severity": "yellow",
+      "text": "Compare Nautilus bound-update intervals on complete PyAutoFit fits \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/27",
+      "prompt": "Use the start-dev skill. active/nautilus_bound_cadence.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Attribute CPU time inside Nautilus bound construction \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/19",
       "prompt": "Use the start-dev skill. active/nautilus_bound_geometry_attribution.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Test the scalar weight update on retained Nautilus ellipsoid inputs \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/23",
+      "prompt": "Use the start-dev skill. active/nautilus_ellipsoid_weight_update.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
+      "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Measure ellipsoid fitting inside a complete native Nautilus fit \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/21",
+      "prompt": "Use the start-dev skill. active/nautilus_whole_fit_geometry.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Bound the whole-fit gain available from scheduling two CPU workers \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/29",
+      "prompt": "Use the start-dev skill. active/nautilus_worker_headroom.md"
     },
     {
       "severity": "yellow",
@@ -95,36 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1793 \u2014 sed-waveband-search-cap",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1793",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1792 \u2014 truncated-tail-evidence",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1792",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#745 \u2014 database-dataset-fits",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#752 \u2014 likelihood-lifecycle-p5c-galaxy-lens",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#746 \u2014 mixed-galaxy-light",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#748 \u2014 plot-utils-critical-curves-docstrings",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748",
       "prompt": null
     }
   ]

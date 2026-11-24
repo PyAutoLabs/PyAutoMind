@@ -123,7 +123,72 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/19
 - prompt: active/nautilus_bound_geometry_attribution.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-geometry
+- retained-repos: autofit_profiling (feature/nautilus-bound-geometry); PR #19 remains in review. Coding claim transferred to nautilus-whole-fit-geometry.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-whole-fit-geometry
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/20
+- issued: 2026-11-24
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/21
+- prompt: active/nautilus_whole_fit_geometry.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-whole-fit-geometry
+- retained-repos: autofit_profiling (feature/nautilus-whole-fit-geometry); PR #21 awaits human review. Coding claim transferred to nautilus-ellipsoid-weight-update.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-ellipsoid-weight-update
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/22
+- issued: 2026-11-24
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/23
+- prompt: active/nautilus_ellipsoid_weight_update.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ellipsoid-weight-update
+- retained-repos: autofit_profiling (feature/nautilus-ellipsoid-weight-update); PR #23 awaits human review. Coding claim transferred to nautilus-weight-whole-fit.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-weight-whole-fit
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/24
+- issued: 2026-11-24
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/25
+- prompt: active/nautilus_weight_whole_fit.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-weight-whole-fit
+- retained-repos: autofit_profiling (feature/nautilus-weight-whole-fit); PR #25 awaits human review. Coding claim transferred to nautilus-bound-cadence.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-bound-cadence
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/26
+- issued: 2026-11-24
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/27
+- prompt: active/nautilus_bound_cadence.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-cadence
+- retained-repos: autofit_profiling (feature/nautilus-bound-cadence); PR #27 awaits human review. Coding claim transferred to nautilus-worker-headroom.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-worker-headroom
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/28
+- issued: 2026-11-24
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/29
+- prompt: active/nautilus_worker_headroom.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-worker-headroom
+- retained-repos: autofit_profiling (feature/nautilus-worker-headroom); PR #29 awaits review. Coding claim transferred to nautilus-30d-evidence-check.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-30d-evidence-check
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/30
+- issued: 2026-11-24
+- status: workspace-dev
+- prompt: active/nautilus_30d_evidence_check.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-evidence-check
 - repos:
-  - autofit_profiling: feature/nautilus-bound-geometry
+  - autofit_profiling: feature/nautilus-30d-evidence-check
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm

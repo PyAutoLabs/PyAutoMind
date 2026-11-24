@@ -27,7 +27,7 @@ epic, never picked standalone.
 ## nautilus-fast-likelihoods
 - title: Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration
 - ledger: draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
-- status: Experimental phase 0b.2 merged. Retained-input geometry attribution is in draft autofit_profiling#19 for human review. Wider phase 0b remains open and Pulse promotion is deferred.
+- status: Keep native bound cadence after #27. Two-worker replay #29 puts ideal scheduling savings at or below 0.51% of full fit wall on the cheap phase 0a fixture. Profiling PRs #19, #21, #23, #25, #27 and #29 await review. Experimental 0b.2 merged. Wider 0b and its 30D evidence gate remain open. Pulse promotion is deferred.
 - notes: Implementation epic; never issue the umbrella. Phase 0a complete: complete/2026/11/nautilus-cpu-profiling-baseline.md (autofit_profiling#8 → PR#9 merged); experimental phase 0b.1 complete: complete/2026/11/nautilus-cpu-campaign-setup.md (PR#11 merged); wider phase 0b remains pending, Pulse promotion deferred by human choice. Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics belong to phase 0b; 0a completion alone does not complete phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
 
 ## cti-upkeep
@@ -144,7 +144,7 @@ epic, never picked standalone.
 ## cluster-usability
 - title: Cluster usability — three datasets for visualization, profiling, inference and teaching
 - ledger: draft/feature/autolens/cluster_usability.md
-- status: Simple family fit figures in review (PyAutoLens#884 and autolens_visualization#20). Pandora and MACS J0416 reviews pending.
+- status: Simple figures live on PyAutoEyes. Pandora first-look figures ready for author review. MACS J0416 follows.
 - notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532; validation of a present but malformed member CSV remains.
 
 ## cluster-strong-lensing
