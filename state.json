@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 8 in flight",
-  "updated": "2026-11-24T08:04:04Z",
+  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
+  "updated": "2026-11-24T08:07:16Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood on main (\u221272070 vs 1995) \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/issues/371",
+      "prompt": "Use the start-dev skill. active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md"
+    },
     {
       "severity": "red",
       "text": "Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer\u2026 \u2014 awaiting-input",
@@ -120,12 +126,6 @@
       "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     }
   ]
 }
