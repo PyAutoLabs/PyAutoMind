@@ -25,3 +25,11 @@ Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/30
 ## Execution
 
 All three pinned starting checkpoints passed their identity checks. The saved partial was corrected on its copy and matched the published posterior before advancing. Resampling seeds 1 and 2 began with the original 34,100-call exploration and zero fresh samples. An independent eigendecomposition gives analytic log evidence −36.76768815337412. The earlier timeout remains separate.
+
+## Result
+
+[Draft profiling PR #31](https://github.com/PyAutoLabs/autofit_profiling/pull/31) completes the three registered conditional 30D streams on the original seed-0 learned bounds. Each met fresh-only ESS 10,000 and the 100-per-shell minimum at native cadence. Against analytic log evidence −36.7676881534, the signed errors were −0.029026 (saved), −0.048116 (resampling seed 1) and −0.027755 (seed 2). Final fresh counts were 980,300, 636,100 and 835,600. All estimates were low by 2.74–4.70% on the evidence scale, compared with 59.67% for the original exploration-inclusive run. The earlier 120-second timeout remains incomplete.
+
+All three native checkpoints reopened exactly. Independent reconstruction from 2,452,000 fresh rows confirmed evidence and ESS, and checksums verified the original inputs remained intact. [Report, per-stream receipts and independent checks](https://github.com/PyAutoLabs/autofit_profiling/blob/10c951cae4c875321048c6ab7841bca10e85896c/experiments/nautilus_30d_evidence_check/README.md). All 111 tooling tests, Ruff and the catalogue check passed. The draft PR awaits human review.
+
+The conditional 30D evidence check is complete. The original protocol set no numerical pass band. All three streams share one exploration, and both sample selection and sample count changed from the original fit. The remaining 30D accuracy question is sensitivity across independently learned bounds. Wider phase 0b remains open, native cadence is retained and Pulse promotion stays deferred.

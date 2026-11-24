@@ -4,7 +4,7 @@ Type: feature
 Target: PyAutoLens
 Epic: cluster-usability
 Priority: high
-Status: Simple figures published on PyAutoEyes. Pandora first-look figures ready for author review. MACS J0416 follows Pandora.
+Status: Simple and Pandora figures live on PyAutoEyes. MACS J0416 first figures ready for author review.
 Consequence: judge
 
 Prioritise this work ahead of the [cluster strong-lensing science epic](source_cluster_arc.md). The goal is to make today's cluster modelling usable at three scales. A reader should be able to see the constraints, identify which multiple-image family fits poorly, and follow that family into a diagnostic figure. The same examples should tell developers how runtime and inference behave as the science case gets harder. New lensing methods belong in the science epic.
@@ -54,10 +54,18 @@ The Simple family diagnostics, cluster dataset and walkthrough figures, and stan
 
 [PyAutoEyes #36](https://github.com/PyAutoLabs/PyAutoEyes/pull/36) published the updated [live Eyes dashboard](https://pyautolabs.github.io/PyAutoEyes/). At publication it offered 311 distinct figures, including 86 PyAutoLens figures. All 30 cluster and standalone point-source PNGs matched their gallery manifest checksums.
 
-## Pandora first look
+## Pandora publication
 
-The [workspace catalogue](https://github.com/PyAutoLabs/autolens_workspace/blob/ba7f7738538069ea4c725a3797b10582eb970d0e/dataset/cluster/a2744/point_datasets.csv) has 24 observed positions across seven families. In catalogue order the image counts are 3, 4, 4, 3, 3, 3 and 4. The dataset README says 25. Use the measured rows for this review and reconcile the documentation before publishing the Pandora example.
+The [workspace catalogue](https://github.com/PyAutoLabs/autolens_workspace/blob/ba7f7738538069ea4c725a3797b10582eb970d0e/dataset/cluster/a2744/point_datasets.csv) has 24 observed positions across seven families. In catalogue order the image counts are 3, 4, 4, 3, 3, 3 and 4. The dataset README and walkthrough now use the measured count.
 
-The first review uses the cached 600 × 600 HST H-band cutout at 0.3″ per pixel. The catalogue axes increase east and north. The cutout’s FITS columns increase west and its rows increase north. The review reoriented the raster and used its reference pixel to place the catalogue origin. Across all 24 positions the largest difference between the catalogue’s tangent-plane approximation and the FITS WCS was 0.0036″. Carry this registration into the workspace and gallery before publishing.
+The first review uses the cached 600 × 600 HST H-band cutout at 0.3″ per pixel. The catalogue axes increase east and north. The cutout’s FITS columns increase west and its rows increase north. The review reoriented the raster and used its reference pixel to place the catalogue origin. Across all 24 positions the largest difference between the catalogue’s tangent-plane approximation and the FITS WCS was 0.0036″. The workspace and gallery now share this registration.
 
-The source-plane diagnostic uses the two CSV dPIE galaxies, the CSV NFW halo and all 188 scaling members. The lens parameters are fixed at a starting configuration, with member reference velocity dispersion 150 km/s and an analytically solved centre for each source. At this starting point, `point_6` contributes 14,234.79 to the position χ², including 6,397.30 from image 4. Review the registered overlay and this family first. Pandora gallery publication, profiling and inference remain open.
+The source-plane diagnostic uses the two CSV dPIE galaxies, the CSV NFW halo and all 188 scaling members. The lens parameters are fixed at a starting configuration, with member reference velocity dispersion 150 km/s and an analytically solved centre for each source. At this starting point, `point_6` contributes 14,234.79 to the position χ², including 6,397.30 from image 4. The author approved this diagnostic and the registered overlay.
+
+[Workspace #686](https://github.com/PyAutoLabs/autolens_workspace/pull/686) merged the HST registration, the corrected image count and the pinned cutout download. [Gallery #21](https://github.com/PyAutoLabs/autolens_visualization/pull/21) merged four cluster overviews and seven source-plane family figures. [PyAutoEyes #37](https://github.com/PyAutoLabs/PyAutoEyes/pull/37) published all eleven under `PyAutoLens → cluster_pandora` on the [live Eyes dashboard](https://pyautolabs.github.io/PyAutoEyes/). At publication the dashboard had 322 distinct figure choices, including 97 PyAutoLens figures. The eleven live Pandora PNGs matched the gallery manifest by size and SHA-256. Pandora profiling and inference remain open.
+
+## MACS J0416 first review
+
+The scratch review uses all 237 observed positions in 88 knot families and the 222-component [Bergamini et al. model release](https://www.fe.infn.it/astro/lensing/M0416_Bergamini22/). The catalogue uses north/west offsets. All 237 positions fall on the [HST F160W mosaic](https://archive.stsci.edu/pub/hlsp/frontier/macs0416/images/hst/v1.0-epoch2/), registered using the FITS sky coordinates. The review pins the input checksums and preserves the catalogue image IDs.
+
+The overview uses source redshift for colour. The published image-plane offsets from `chires.dat` give an all-image RMS of 0.430″ and place family 101 first by family RMS (1.081″). For the fixed published masses and analytically solved source centres, family 210.4 has the largest PyAutoLens source-plane χ² (11.70). Separate family views show those two diagnostics and exercise the six-image layout on family 14.1. These are review figures. Gallery publication, profiling and inference for this tier remain open.
