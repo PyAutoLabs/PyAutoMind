@@ -43,9 +43,13 @@ For each setting, one fiducial simulated lens and one fiducial pixelised-source 
 - a check that the set-up recovers the true macro model (slope, Einstein radius) on the fiducial lens, noise-free and with noise, with no perturbers in the image;
 - a home where agents and tasks will find it and use it by default (the workspace, `Science/simulators/`, the assistant's skills, or a mix), and a statement of when a fit is outside what the fiducial covers.
 
+## Settled (human, 2026-11-25)
+
+- "Each setting" means each data regime a task is likely to simulate (HST-like, Euclid-like, and so on): one fiducial lens and one pixelised-source set-up per regime.
+
 ## To settle at the start
 
-- What "each setting" spans: my reading is each data regime a task is likely to simulate (for example HST-like, Euclid-like, higher resolution), but it could also mean each mesh type or each source type. Ask the human.
+- Which data regimes to cover, and in what order. Proposed, not ruled: HST-like, Euclid-like, and one higher-resolution regime.
 - Whether the fiducial lens is one of the existing standard simulated lenses in `Science/simulators/` or a new one.
 
 ## Not in scope
