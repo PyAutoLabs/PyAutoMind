@@ -256,10 +256,13 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/688
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-dev (PR1 workspace core + PR3 HowToLens in progress; PR2 SLaM gated on a JAX→numba chained-fit test)
+- status: workspace-shipped, awaiting-merge (PR1 autolens_workspace#689 + PR3 HowToLens#139 OPEN; PR2 SLaM in progress on feature/likelihood-lifecycle-p5f2-slam; merge with/after the release carrying 5A–5E + banner)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/689
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/139
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5f
 - repos:
   - autolens_workspace: feature/likelihood-lifecycle-p5f1-workspace
+  - autolens_workspace: feature/likelihood-lifecycle-p5f2-slam
   - HowToLens: feature/likelihood-lifecycle-p5f3-howtolens
 - prompt: active/likelihood_lifecycle_p5f_workspace_setup.md
 - coordination: human-approved claim override 2026-11-25 for autolens_workspace (held by `cluster-family-fit-figures` PR #687: scripts/cluster/plot.py + generated indexes; and `sensitivity_slam_source_pixelized_mappervalued`: subhalo/sensitivity/slam_source_pixelized.py, which 5F leaves untouched). Whichever merges second regenerates llms-full.txt / workspace_index.json.
