@@ -1493,7 +1493,7 @@ Use the start-dev skill. active/nautilus_ellipsoid_weight_update.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_gpu_feed.md">Can CPU sampler workers feed GPU likelihood batches faster?</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/42">issue #42</a> — issued 2026-11-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/nautilus_gpu_feed.md">Can CPU sampler workers feed GPU likelihood batches faster?</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/42">issue #42</a> — issued 2026-11-25 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/43">autofit_profiling#43</a></summary>
 
 ```
 Use the start-dev skill. active/nautilus_gpu_feed.md
