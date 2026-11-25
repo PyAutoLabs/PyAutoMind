@@ -1885,7 +1885,7 @@ Use the start-dev skill. draft/feature/autogalaxy/piemass_potential.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_assistant/fiducial_lens_and_pixelised_source_set_up.md">Fiducial lens and pixelised-source set-up for each setting, so pixelisation fits…</a> — autolens_assistant · too-large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/autolens_assistant/fiducial_lens_and_pixelised_source_set_up.md">Fiducial lens and pixelised-source set-up for each setting</a> — autolens_assistant · too-large · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/feature/autolens_assistant/fiducial_lens_and_pixelised_source_set_up.md

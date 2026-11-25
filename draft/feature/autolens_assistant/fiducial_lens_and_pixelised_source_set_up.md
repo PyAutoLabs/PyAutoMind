@@ -1,4 +1,4 @@
-# Fiducial lens and pixelised-source set-up for each setting, so pixelisation fits…
+# Fiducial lens and pixelised-source set-up for each setting
 
 Type: feature
 Target: autolens_assistant
@@ -14,15 +14,6 @@ Witness: For each setting, a committed script fits the fiducial lens (smooth, no
 Review-minutes: 3
 Unattended: needs-slicing
 Lane: ral
-
-Fiducial lens and pixelised-source set-up for each setting, so pixelisation fits are not wrong by default
-
-Type: feature
-Target: autolens_assistant
-Repos:
-- autolens_assistant
-- autolens_workspace
-Witness: For each setting, a committed script fits the fiducial lens (smooth, no perturbers, with noise) using the fiducial pixelised-source set-up, and the true power-law slope and Einstein radius lie inside the fit's 3 sigma posterior intervals; the assistant's pixelisation skill names the fiducial set-up as the default.
 
 Set up a fiducial lens for each setting, with a pixelised-source set-up that is known to give correct fits, so that a task which needs a pixelised-source fit knows to use it and does not end up with incorrect pixelisation fits.
 
