@@ -1461,7 +1461,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p5h_euclid_pipeline_setup.m
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_pre_release_setup_fixes.md">Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/756">issue #756</a> — issued 2026-11-25 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_pre_release_setup_fixes.md">Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/756">issue #756</a> — issued 2026-11-25 — library-shipped, awaiting-merge (judge tier: human /prm; merge Fit → Galaxy → Lens; no workspace impact) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1798">PyAutoFit#1798</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757">PyAutoGalaxy#757</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/892">PyAutoLens#892</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoFit's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_pre_release_setup_fixes.md
@@ -3475,30 +3475,36 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1798](https://github.com/PyAutoLabs/PyAutoFit/pull/1798) — `active/likelihood_lifecycle_pre_release_setup_fixes.md`
 - [PyAutoFit#1797](https://github.com/PyAutoLabs/PyAutoFit/pull/1797) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
 - [PyAutoFit#1795](https://github.com/PyAutoLabs/PyAutoFit/pull/1795) — `complete/2026/11/likelihood-lifecycle-p5d-fit.md`
 - [PyAutoFit#1796](https://github.com/PyAutoLabs/PyAutoFit/pull/1796) — `complete/2026/11/likelihood-lifecycle-p5e.md`
 - [PyAutoFit#1793](https://github.com/PyAutoLabs/PyAutoFit/pull/1793) — `complete/2026/11/sed-waveband-search-cap.md`
 - [PyAutoFit#1792](https://github.com/PyAutoLabs/PyAutoFit/pull/1792) — `complete/2026/11/truncated-tail-evidence.md`
+- ⏸ waiting: [Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup…](active/likelihood_lifecycle_pre_release_setup_fixes.md)
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#757](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757) — `active/likelihood_lifecycle_pre_release_setup_fixes.md`
 - [PyAutoGalaxy#755](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoGalaxy#752](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoGalaxy#753](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
 - [PyAutoGalaxy#746](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746) — `complete/2026/11/mixed-galaxy-light.md`
 - [PyAutoGalaxy#748](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748) — `complete/2026/11/plot-utils-critical-curves-docstrings.md`
+- ⏸ waiting: [Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup…](active/likelihood_lifecycle_pre_release_setup_fixes.md)
 
 **PyAutoLens**
 
+- [PyAutoLens#892](https://github.com/PyAutoLabs/PyAutoLens/pull/892) — `active/likelihood_lifecycle_pre_release_setup_fixes.md`
 - [PyAutoLens#889](https://github.com/PyAutoLabs/PyAutoLens/pull/889) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoLens#882](https://github.com/PyAutoLabs/PyAutoLens/pull/882) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoLens#886](https://github.com/PyAutoLabs/PyAutoLens/pull/886) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
 - [PyAutoLens#888](https://github.com/PyAutoLabs/PyAutoLens/pull/888) — `complete/2026/11/likelihood-lifecycle-p5e.md`
 - [PyAutoLens#877](https://github.com/PyAutoLabs/PyAutoLens/pull/877) — `complete/2026/11/mixed-galaxy-light.md`
+- ⏸ waiting: [Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup…](active/likelihood_lifecycle_pre_release_setup_fixes.md)
 
 **PyAutoNerves**
 
