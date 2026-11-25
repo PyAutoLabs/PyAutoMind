@@ -103,6 +103,19 @@
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm
 
+## simple-cluster-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/536
+- issued: 2026-11-25
+- session: Codex desktop
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/537
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/simple-cluster-profiling
+- repos:
+  - autolens_profiling: feature/simple-cluster-profiling
+- prompt: active/simple_cluster_profiling.md
+- epic: cluster-usability
+- tier: judge
+
 ## cluster-family-fit-figures
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/883
 - issued: 2026-11-24
@@ -307,15 +320,14 @@
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
-## simple-cluster-profiling
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/536
+## likelihood-lifecycle-p5g
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/191
 - issued: 2026-11-25
-- session: Codex desktop
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/537
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/simple-cluster-profiling
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5g
 - repos:
-  - autolens_profiling: feature/simple-cluster-profiling
-- prompt: active/simple_cluster_profiling.md
-- epic: cluster-usability
-- tier: judge
+  - autolens_assistant: feature/likelihood-lifecycle-p5g-assistant
+- prompt: active/likelihood_lifecycle_p5g_assistant_setup.md
+- epic: likelihood-lifecycle (phase 5G; merge with/after the library release)
+- tier: judge — merge mode: human /prm
