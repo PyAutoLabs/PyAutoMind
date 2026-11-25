@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 26 |
+| [In flight](#in-flight) | 27 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 294 |
+| [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -331,7 +331,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 10 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -393,14 +393,6 @@ Use the start-dev skill. draft/research/autolens_profiling/piecewise_constant_im
 
 ```
 Use the start-dev skill. draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/likelihood_lifecycle_r6_default_auto_setup.md">Likelihood lifecycle R6: flip the default to <code>setup="auto"</code>, then sweep <code>use_jax=</code> out…</a> — autogalaxy · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/likelihood_lifecycle_r6_default_auto_setup.md
 ```
 
 </details>
@@ -1458,6 +1450,14 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
+<details><summary>📋 <a href="active/likelihood_lifecycle_r6_default_auto_setup.md">Likelihood lifecycle R6: flip the default to <code>setup="auto"</code>, then sweep <code>use_jax=</code> out…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/759">issue #759</a> — issued 2026-11-25 — library-dev</summary>
+
+```
+Use the start-dev skill. active/likelihood_lifecycle_r6_default_auto_setup.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/714">issue #714</a> — issued 2026-11-25 — research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)</summary>
 
 ```
@@ -1733,7 +1733,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 236 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
+Lanes: any 235 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3275,18 +3275,19 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: `'Model'…</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
+| 2026-11-25 | issued | <a href="active/likelihood_lifecycle_r6_default_auto_setup.md">Likelihood lifecycle R6: flip the default to <code>setup="auto"</code>, then…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_bound_core_scaling.md">Does parallel native ensemble training shorten complete Nautilus fits?</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_ring_latent_placement.md">Does CPU placement of posterior derived quantities shorten a GPU…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_shell_geometry_signal.md">Do frozen Nautilus bounds predict the high-weight draws inside a…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_ring_gpu_feed.md">Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging?</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_shell_efficiency.md">Diagnose the loss of fresh-sample efficiency across dimensions</a> |
-| 2026-11-25 | issued | <a href="active/nautilus_gpu_feed.md">Can CPU sampler workers feed GPU likelihood batches faster?</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-25 | issued | <a href="active/nautilus_gpu_feed.md">Can CPU sampler workers feed GPU likelihood batches faster?</a> |
 | 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_ellipsoid_weight_update.md">Test the scalar weight update on retained Nautilus ellipsoid inputs</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_30d_independent.md">Test 30D evidence across independently learned Nautilus bounds</a> |
@@ -3296,12 +3297,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-24 | issued | <a href="active/nautilus_whole_fit_geometry.md">Measure ellipsoid fitting inside a complete native Nautilus fit</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_30d_evidence_check.md">Complete the conditional 30D Nautilus evidence check</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_bound_cadence.md">Compare Nautilus bound-update intervals on complete PyAutoFit fits</a> |
-| 2026-11-24 | issued | <a href="active/nautilus_worker_headroom.md">Bound the whole-fit gain available from scheduling two CPU workers</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-24 | issued | <a href="active/nautilus_worker_headroom.md">Bound the whole-fit gain available from scheduling two CPU workers</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_bound_geometry_attribution.md">Attribute CPU time inside Nautilus bound construction</a> |
 | 2026-11-24 | issued | <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> |
 | 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
@@ -3311,12 +3312,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
-| 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
@@ -3326,12 +3327,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
-| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
@@ -3341,7 +3342,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 
 </details>
 
