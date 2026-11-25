@@ -336,6 +336,19 @@ the review surface; the HTML packet is written only when `packet: yes`.
 ```markdown
 ## Digest
 
+### Review table
+2 to /prm (3 PRs) · 1 to answer · 1 blocked or not started
+
+| # | Task | Tier | Work | Note |
+|---|---|---|---|---|
+| | **Merge: your /prm** | | | |
+| 1 | [<prompt title>](<Mind prompt>) | judge | [PyAutoGalaxy#<n>](<url>) | tier judge |
+| 2 | [<prompt title>](<Mind prompt>) | glance | [PyAutoGalaxy#<m>](<url>) after PyAutoGalaxy#<n><br>[PyAutoLens#<k>](<url>) | merge-cap 0 reached this shift |
+| | **Answer: question on the issue** | | | |
+| 3 | [<prompt title>](<Mind prompt>) | judge | [PyAutoLens#<i>](<url>) | question on PyAutoLens#<i> |
+| | **Blocked or not started** | | | |
+| 4 | <slug> | — | — | autogalaxy held by <task> |
+
 ### Brief work
 - [<prompt title>](<link to the prompt>) (`<slug>`; small · PyAutoLens) — PyAutoLens#<n> — HEALTHY — glance
 - [<prompt title>](<link>) (`<slug>`; medium · PyAutoArray) — parked: awaiting-input (blocked on a person)
@@ -365,6 +378,30 @@ the review surface; the HTML packet is written only when `packet: yes`.
 ### Refusals
 - <task> — token-budget 100: 55 committed + 60 reserved per worker — 2× from <at>
 ```
+
+**The review table comes first** (PyAutoBrain#718): every named task and
+backlog pick in one table, numbered straight through so a reply can say "prm
+1–4, 6", under a count line. Each task sits in exactly one group, its most
+urgent, in this order; an empty group is left out:
+
+1. **Merge: your /prm** — awaiting /prm, CI green, running, unknown or absent,
+   a branch updated from main with CI not red, waits behind another PR, held on
+   an unknown workspace sweep, or merged in-turn with no merge slot. The late
+   sweep closes nothing out, so a PR still in CI at review time is yours.
+2. **Answer: question on the issue** — parked on an issue, or blocked on a person.
+3. **Fix: CI failed or crashed** — CI failed (also after a branch update),
+   crashed, abandoned, killed.
+4. **Blocked or not started** — not started (with the skip reason), dropped
+   (unless a PR of it still needs merging or fixing), obsolete, finished with
+   no PR or issue named.
+5. **Still running** — a worker still out at review time, or a close-out
+   checking or updating a PR.
+6. **Done** — merged, already merged, verdict posted.
+7. **Proposed (shadow)** — a shadow shift's proposals.
+
+`Work` lists each PR or issue as `repo#n` in merge order, with "after repo#m"
+where it waits. A carried-over task whose PRs you already merged is left out of
+the table, as it is of the entries below. The entries below are unchanged.
 
 Brief work and backlog picks stay separate, and **every backlog pick carries a
 one-line reason**: the brief's rule it was picked under, then the planner's
