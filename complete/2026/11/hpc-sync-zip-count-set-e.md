@@ -1,3 +1,16 @@
+`hpc/sync` in the three assistant repos ran under `set -euo pipefail` and unpacked pulled archives with `unzip ... && (( zip_count++ ))`. At `zip_count=0` the post-increment returns 1, so `set -e` killed `pull` and `pull-full` after the first archive, skipping the rest and any later `PULL_DIRS` roots (seen 2026-11-25 in `development/stars_dm_slope`).
+
+Fix: both unzip sites now use `if unzip ...; then zip_count=$(( zip_count + 1 )); else echo WARNING ...; fi`, matching autolens_profiling `0dcc528f`. A failed unzip is reported and the pull continues.
+
+- autolens_assistant#190: fix plus two regression tests in `autoassistant/tests/test_hpc_sync.py` (pull over `output` + `results` with three zips; pull-full with two). Both failed on the old main; 51 passed after.
+- autogalaxy_assistant#50, autofit_assistant#65: same fix, no test file; the pull scenario was run by hand (main: exit 1, one archive; fixed: exit 0, "extracted 3 archive(s)", "Done.").
+
+Found along the way: the autogalaxy and autofit scripts hard-code `PULL_DIRS=(output)` with no `PYAUTO_PULL_DIRS` hook, unlike autolens_assistant.
+
+Left open: the eight science-project copies carrying the bug (`development/{analytic_gaussian, dm_sightlines, ep_gnfw_slope, ep_toy_gaussian, erc_angular_structure, ic50_workspace, slope_hierarchy_scale, stars_dm_slope}`), for the human to decide.
+
+## Original prompt
+
 # hpc/sync pull exits 1 after the first extracted archive: `(( zip_count++ ))` under `set -e`
 
 Type: bug

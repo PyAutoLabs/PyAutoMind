@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 24 in flight",
-  "updated": "2026-11-25T11:29:08Z",
+  "headline": "RED \u2014 23 picks \u00b7 23 in flight",
+  "updated": "2026-11-25T11:34:18Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,12 +48,6 @@
       "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
       "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "hpc/sync pull exits 1 after the first extracted archive: `(( zip_count++ ))`\u2026 \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_assistant/issues/189",
-      "prompt": "Use the start-dev skill. active/hpc_sync_zip_count_set_e.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
+      "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
     }
   ]
 }
