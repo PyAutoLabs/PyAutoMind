@@ -349,6 +349,7 @@
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
 - status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5-setup-fixes
 - repos:
   - PyAutoFit: feature/likelihood-lifecycle-p5-setup-fixes
   - PyAutoGalaxy: feature/likelihood-lifecycle-p5-setup-fixes
