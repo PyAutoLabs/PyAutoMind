@@ -1,3 +1,9 @@
+Each assistant's reusable `wiki-currency.yml` (autolens, autogalaxy, autofit, autocti) now retries the pinned install of the released stack: `--no-cache-dir`, up to 10 attempts 30 s apart, exact pin only, `::error::` + exit 1 after the last. At release 2026.11.22.1 PyAutoHands' `wait_for_released_stack` saw the release on its runner while the autolens/autocti wiki jobs, a minute later on other runners, could not install it (PyPI CDN inconsistency), turning the run red and filing false issues (autolens_assistant#188, autocti_assistant#44 — both closed after green re-runs against 2026.11.22.1).
+
+Verified: YAML parses x4; the extracted step under `bash -e` with a fake pip: present → 1 call; late → success on attempt 3; absent → 10 calls, `::error::`, exit 1. PR CI green on all four. Live proof pending: the next release's wiki-currency legs.
+
+## Original prompt
+
 # Wiki-currency install races PyPI's CDN across runners
 
 Type: bug

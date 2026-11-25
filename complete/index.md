@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2392 records across 11 buckets.
+2393 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -426,6 +426,7 @@ markers; everything below GENERATED is rebuilt.
 - [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
 - [website-lensing-intro](2026/11/website-lensing-intro.md) — - Added the approved three-sentence strong-lensing introduction with the autolens_assistant 2D schematic befor…
+- [wiki-currency-install-retry](2026/11/wiki-currency-install-retry.md)
 - [worker-model-effort](2026/11/worker-model-effort.md)
 - [workspace-dataset-gallery](2026/11/workspace-dataset-gallery.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
