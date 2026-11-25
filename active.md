@@ -226,3 +226,18 @@
   - autofit_profiling: feature/nautilus-shell-efficiency
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## auto-setup-banner
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/754
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/auto-setup-banner
+- repos:
+  - PyAutoArray: feature/auto-setup-banner
+  - PyAutoFit: feature/auto-setup-banner
+  - PyAutoGalaxy: feature/auto-setup-banner
+  - PyAutoLens: feature/auto-setup-banner
+- prompt: active/likelihood_lifecycle_p5_setup_banner.md
+- epic: likelihood-lifecycle (phase 5 follow-up, before 5F)
+- tier: judge — merge mode: human /prm (Array → Fit → Galaxy → Lens)
