@@ -1,3 +1,15 @@
+# 30D evidence across independent Nautilus explorations — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#33](https://github.com/PyAutoLabs/autofit_profiling/pull/33), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Three seeds each learned their own bounds; all exploration-only estimates were low (logZ errors −0.892, −0.956, −0.889), so the low early estimate recurs.
+- All three runs hit the 2,400 s cap before fresh-only ESS 10,000; terminal estimates had mixed signs (+0.42%, −1.76%, −0.35%). Verified partial results.
+- The matched-ESS comparison was left to nautilus-30d-matched-ess.
+
+## Original prompt
+
 # Test 30D evidence across independently learned Nautilus bounds
 
 Type: research

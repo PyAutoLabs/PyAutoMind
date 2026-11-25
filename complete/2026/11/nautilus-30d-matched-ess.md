@@ -1,3 +1,15 @@
+# Independent 30D evidence at matched ESS — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#35](https://github.com/PyAutoLabs/autofit_profiling/pull/35), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Continued the three independent 30D checkpoints from #33 under one shared deadline to fresh-only ESS ≥10,000 (`experiments/nautilus_30d_matched_ess/`).
+- Evidence errors for seeds 1–3: −0.24%, −1.79%, +0.58%. The large early underestimate repeats across explorations; the residual at the registered endpoint has mixed signs.
+- Independent reconstruction from 3,906,700 fresh samples reproduced every final log-evidence and ESS value.
+
+## Original prompt
+
 # Resume three independently explored 30D checkpoints to matched ESS
 
 Type: research

@@ -1,3 +1,15 @@
+# Frozen Nautilus geometry as a high-weight 30D predictor — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#39](https://github.com/PyAutoLabs/autofit_profiling/pull/39), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Replayed frozen bounds from the three independent 30D fits over 60 shells and 1,953,350 held-out rows (`experiments/nautilus_shell_geometry_signal/`).
+- The ellipsoid score selected about a tenth of points and captured 84.06%, 83.41% and 64.32% of squared posterior weight, beating the registered 2× enrichment threshold on every seed; the neural margin missed on every seed.
+- This identifies a candidate for a support-preserving proposal experiment; time savings and evidence accuracy under a modified proposal remain open.
+
+## Original prompt
+
 # Do frozen Nautilus bounds predict the high-weight draws inside a shell?
 
 Type: research

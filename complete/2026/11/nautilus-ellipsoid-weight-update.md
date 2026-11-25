@@ -1,3 +1,15 @@
+# Nautilus ellipsoid weight-update allocation ablation — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#23](https://github.com/PyAutoLabs/autofit_profiling/pull/23), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Replaced the one-hot allocation in the enclosing-ellipsoid weight update with an in-place scaling on a temporary copy of the pinned solver (`experiments/nautilus_ellipsoid_weight_update/`).
+- Retained outer-bound reconstruction was faster on all six paired blocks: median elapsed time fell 14.4% (range 1.6–25.5%).
+- All 57 solver inputs/outputs matched byte-for-byte. Replay-only on one 10D seed; sampler-level gain left to the whole-fit comparison.
+
+## Original prompt
+
 # Test the scalar weight update on retained Nautilus ellipsoid inputs
 
 Type: research

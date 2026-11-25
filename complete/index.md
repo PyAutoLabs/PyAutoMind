@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2397 records across 11 buckets.
+2411 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -323,11 +323,25 @@ markers; everything below GENERATED is rebuilt.
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
 - [nautilus-30d-diagnostics](2026/11/nautilus-30d-diagnostics.md) — Full-30D Nautilus plotting cost attribution and evidence-discrepancy investigation merged unchanged during the…
+- [nautilus-30d-evidence-check](2026/11/nautilus-30d-evidence-check.md)
+- [nautilus-30d-independent](2026/11/nautilus-30d-independent.md)
+- [nautilus-30d-matched-ess](2026/11/nautilus-30d-matched-ess.md)
+- [nautilus-bound-cadence](2026/11/nautilus-bound-cadence.md)
+- [nautilus-bound-core-scaling](2026/11/nautilus-bound-core-scaling.md)
+- [nautilus-bound-geometry](2026/11/nautilus-bound-geometry.md)
 - [nautilus-compact-plot-adapter](2026/11/nautilus-compact-plot-adapter.md) — - Validation: full suite 4298 passes / 2 skips / 1 expected failure at e57611dc6; exact-head Python 3.12/3.13/…
 - [nautilus-cpu-campaign-setup](2026/11/nautilus-cpu-campaign-setup.md) — Experimental phase 0b.1 implementation and bounded local pilot merged unchanged. Full phase 0b remains incompl…
 - [nautilus-cpu-profiling-baseline](2026/11/nautilus-cpu-profiling-baseline.md) — Phase 0a controlled CPU harness and exploratory local pilot merged unchanged. Phase 0b canonical representativ…
+- [nautilus-ellipsoid-weight-update](2026/11/nautilus-ellipsoid-weight-update.md)
 - [nautilus-ep-use-jax-guard](2026/11/nautilus-ep-use-jax-guard.md) — superseded — PyAutoFit 196abf39a (2026-10-08) "Analysis.is_jax as the single JAX probe": Nautilus reads `analy…
+- [nautilus-gpu-feed](2026/11/nautilus-gpu-feed.md)
 - [nautilus-pin-tracks-autofit](2026/11/nautilus-pin-tracks-autofit.md) — already shipped — PyAutoNerves#169 (merge 8eca4b3, 2026-09-15), record `complete/2026/09/colab-bootstrap-lazy-…
+- [nautilus-ring-gpu-feed](2026/11/nautilus-ring-gpu-feed.md)
+- [nautilus-shell-efficiency](2026/11/nautilus-shell-efficiency.md)
+- [nautilus-shell-geometry-signal](2026/11/nautilus-shell-geometry-signal.md)
+- [nautilus-weight-whole-fit](2026/11/nautilus-weight-whole-fit.md)
+- [nautilus-whole-fit-geometry](2026/11/nautilus-whole-fit-geometry.md)
+- [nautilus-worker-headroom](2026/11/nautilus-worker-headroom.md)
 - [nautilus_workload_transfer](2026/11/nautilus_workload_transfer.md)
 - [nerves-false-workspace-stale](2026/11/nerves-false-workspace-stale.md) — already shipped — PyAutoNerves#203 (issue #202, merged 2026-10-17), record `complete/2026/10/workspace-freshne…
 - [new-user-guide-visuals](2026/11/new-user-guide-visuals.md)

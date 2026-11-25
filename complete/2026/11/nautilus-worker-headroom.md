@@ -1,3 +1,15 @@
+# CPU worker-scheduling headroom in Nautilus traces — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#29](https://github.com/PyAutoLabs/autofit_profiling/pull/29), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Replayed 14 phase 0a two-worker traces (356 logical batches, 35,600 evaluations) reconciled against original hashes (`experiments/nautilus_worker_headroom/`).
+- Ideal scheduling plus free dispatch/collection would reduce whole-fit time by only 0.39–0.51%; single-proposal chunks predict 0.003–0.033%.
+- Keep the worker scheduler as is for these cheap fixtures; slower likelihoods may differ.
+
+## Original prompt
+
 # Bound the whole-fit gain available from scheduling two CPU workers
 
 Type: research

@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 27 in flight",
-  "updated": "2026-11-25T21:47:59Z",
+  "headline": "RED \u2014 23 picks \u00b7 13 in flight",
+  "updated": "2026-11-25T21:54:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -45,87 +45,87 @@
     },
     {
       "severity": "yellow",
-      "text": "Complete the conditional 30D Nautilus evidence check \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/31",
-      "prompt": "Use the start-dev skill. active/nautilus_30d_evidence_check.md"
+      "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
+      "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
     },
     {
       "severity": "yellow",
-      "text": "Test 30D evidence across independently learned Nautilus bounds \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/33",
-      "prompt": "Use the start-dev skill. active/nautilus_30d_independent.md"
+      "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
+      "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
     },
     {
-      "severity": "yellow",
-      "text": "Resume three independently explored 30D checkpoints to matched ESS \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/35",
-      "prompt": "Use the start-dev skill. active/nautilus_30d_matched_ess.md"
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     },
     {
-      "severity": "yellow",
-      "text": "Compare Nautilus bound-update intervals on complete PyAutoFit fits \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/27",
-      "prompt": "Use the start-dev skill. active/nautilus_bound_cadence.md"
+      "severity": "info",
+      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     },
     {
-      "severity": "yellow",
-      "text": "Does parallel native ensemble training shorten complete Nautilus fits? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/41",
-      "prompt": "Use the start-dev skill. active/nautilus_bound_core_scaling.md"
+      "severity": "info",
+      "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
     },
     {
-      "severity": "yellow",
-      "text": "Attribute CPU time inside Nautilus bound construction \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/19",
-      "prompt": "Use the start-dev skill. active/nautilus_bound_geometry_attribution.md"
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     },
     {
-      "severity": "yellow",
-      "text": "Test the scalar weight update on retained Nautilus ellipsoid inputs \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/23",
-      "prompt": "Use the start-dev skill. active/nautilus_ellipsoid_weight_update.md"
+      "severity": "info",
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     },
     {
-      "severity": "yellow",
-      "text": "Can CPU sampler workers feed GPU likelihood batches faster? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/43",
-      "prompt": "Use the start-dev skill. active/nautilus_gpu_feed.md"
+      "severity": "info",
+      "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
+      "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
     },
     {
-      "severity": "yellow",
-      "text": "Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/75",
-      "prompt": "Use the start-dev skill. active/nautilus_ring_gpu_feed.md"
+      "severity": "info",
+      "text": "pick: Physical model check when speeding up smoke tests",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
+      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     },
     {
-      "severity": "yellow",
-      "text": "Diagnose the loss of fresh-sample efficiency across dimensions \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/37",
-      "prompt": "Use the start-dev skill. active/nautilus_shell_efficiency.md"
+      "severity": "info",
+      "text": "pick: A compound-prior model reloaded from model.json has a different prior order\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md",
+      "prompt": "Use the start-dev skill. draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md"
     },
     {
-      "severity": "yellow",
-      "text": "Do frozen Nautilus bounds predict the high-weight draws inside a shell? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/39",
-      "prompt": "Use the start-dev skill. active/nautilus_shell_geometry_signal.md"
+      "severity": "info",
+      "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
+      "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
     },
     {
-      "severity": "yellow",
-      "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
-      "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
+      "severity": "info",
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     },
     {
-      "severity": "yellow",
-      "text": "Measure ellipsoid fitting inside a complete native Nautilus fit \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/21",
-      "prompt": "Use the start-dev skill. active/nautilus_whole_fit_geometry.md"
+      "severity": "info",
+      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
+      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
     },
     {
-      "severity": "yellow",
-      "text": "Bound the whole-fit gain available from scheduling two CPU workers \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/29",
-      "prompt": "Use the start-dev skill. active/nautilus_worker_headroom.md"
+      "severity": "info",
+      "text": "pick: CTI upkeep parity \u2014 bring PyAutoCTI and its satellites to the same\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md"
     }
   ]
 }

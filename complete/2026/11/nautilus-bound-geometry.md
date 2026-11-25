@@ -1,3 +1,15 @@
+# Nautilus outer-bound geometry attribution — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#19](https://github.com/PyAutoLabs/autofit_profiling/pull/19), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Replayed the native outer mixture constructor on the eleven retained 400 × 10 live-point arrays from RAL job 415196 (`experiments/nautilus_bound_geometry/`).
+- The first two bounds account for 39 of the 57 ellipsoid fits per pass; the minimum-volume enclosing ellipsoid routine took 97.3–97.4% of the local outer mixture constructor.
+- All 44 reconstruction checks matched (masks and membership exact, no RNG draws). Whole-bound and end-to-end costs were left to the follow-up whole-fit measurement.
+
+## Original prompt
+
 # Attribute CPU time inside Nautilus bound construction
 
 Type: research

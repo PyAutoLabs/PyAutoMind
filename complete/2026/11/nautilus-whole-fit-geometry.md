@@ -1,3 +1,15 @@
+# Ellipsoid fitting inside complete native Nautilus fits — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#21](https://github.com/PyAutoLabs/autofit_profiling/pull/21), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Timed the minimum-volume enclosing ellipsoid routine inside four complete native Nautilus fits (`experiments/nautilus_whole_fit_geometry/`).
+- Both traced runs made 101 calls across eleven bound builds; the routine took 7.88 of 42.34 s and 7.37 of 38.63 s (18.6% and 19.1% of whole-fit time).
+- All four fits matched calls, posterior hash, ESS, evidence and shell count; checkpoints reopened identically. Local timing, one seed, one target.
+
+## Original prompt
+
 # Measure ellipsoid fitting inside a complete native Nautilus fit
 
 Type: research

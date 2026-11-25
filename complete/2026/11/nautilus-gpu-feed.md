@@ -1,3 +1,15 @@
+# CPU workers feeding GPU likelihood batches — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#43](https://github.com/PyAutoLabs/autofit_profiling/pull/43), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Phase 4 local pilot: 16 complete PyAutoFit fits on an RTX 2060 Max-Q with JAX CPU, full-width GPU, serial split GPU or two CPU feeder threads (`experiments/nautilus_gpu_feed/`).
+- Two CPU feeders did not consistently improve whole-fit wall time over serial GPU; full-width GPU likelihood evaluation was only 0.78–1.61% of whole-fit wall.
+- All 119,200 likelihoods audited against NumPy. Keep the native defaults.
+
+## Original prompt
+
 # Can CPU sampler workers feed GPU likelihood batches faster?
 
 Type: research

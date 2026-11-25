@@ -1,3 +1,15 @@
+# Whole-fit CPU scaling during native Nautilus bound training — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#41](https://github.com/PyAutoLabs/autofit_profiling/pull/41), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Eighteen complete PyAutoFit fits compared native serial ensemble training with two and four in-process training workers (`experiments/nautilus_bound_core_scaling/`).
+- All 12 threaded comparisons were slower: median increases 39% / 80% (Gaussian profile) and 41% / 105% (two-mode control) for 2 / 4 workers.
+- Keep native serial training. Magnitudes are host-specific (shared WSL laptop, fixed core affinity).
+
+## Original prompt
+
 # Does parallel native ensemble training shorten complete Nautilus fits?
 
 Type: research

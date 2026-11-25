@@ -1,3 +1,15 @@
+# Nautilus bound-update cadence in paired PyAutoFit runs — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#27](https://github.com/PyAutoLabs/autofit_profiling/pull/27), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Doubling the interval between bound updates cut complete PyAutoFit wall time by 25.5–34.7% in all four paired comparisons (`experiments/nautilus_bound_cadence/`).
+- It cost 1,600–1,800 extra likelihood evaluations per fit; three pairs crossed the registered 25% limit on extra evaluations to reach a peak. Native cadence stays the default.
+- All eight log-evidence estimates were within 0.058 of independent quadrature; both modes of the two-mode control were recovered.
+
+## Original prompt
+
 # Compare Nautilus bound-update intervals on complete PyAutoFit fits
 
 Type: research

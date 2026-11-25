@@ -1,3 +1,15 @@
+# Within-shell weight concentration at 30D — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#37](https://github.com/PyAutoLabs/autofit_profiling/pull/37), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Fresh likelihood calls per unit ESS: 1.17 / 1.64 / 98.02 at 5D / 10D / 30D (seed 0); 109.73–156.04 for the three independent 30D runs (`experiments/nautilus_shell_efficiency/`).
+- The top 1% of draws in each shell carry 94.85–95.61% of squared posterior weight.
+- Perfect shell reallocation saves at most 0.0061% of calls; split-half chosen proportions cost 8.48–17.36% more. Keep native shell allocation; within-shell proposal quality is the next candidate.
+
+## Original prompt
+
 # Diagnose the loss of fresh-sample efficiency across dimensions
 
 Type: research

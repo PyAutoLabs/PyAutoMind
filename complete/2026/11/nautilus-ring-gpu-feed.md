@@ -1,3 +1,15 @@
+# CPU-fed GPU Nautilus fits on the COSMOS-Web Ring — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autolens_inference#75](https://github.com/PyAutoLabs/autolens_inference/pull/75), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Eight complete conditional fits to the observed JWST COSMOS-Web Ring transferred the ordered-feeder experiment from autofit_profiling#43 to a real imaging likelihood.
+- CPU feeders increased whole-fit time by 12.8% and 13.6% against serial full-batch GPU; CPU-only finished fastest on both seeds. Native posterior-derived output took 39.8–42.6 s on GPU vs 9.4–10.4 s on CPU.
+- Keep native sampler defaults; a matched posterior replay would be needed to establish any hybrid placement benefit.
+
+## Original prompt
+
 # Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging?
 
 Type: research

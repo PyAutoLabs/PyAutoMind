@@ -1,3 +1,15 @@
+# Scalar vs native ellipsoid update in complete fits — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#25](https://github.com/PyAutoLabs/autofit_profiling/pull/25), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- Four supervised complete fits compared the scalar weight-update candidate with native (`experiments/nautilus_weight_whole_fit/`).
+- Timing was inconclusive under the pre-registered rule: 4.1% slower in native–candidate order, 15.2% faster in candidate–native order. The candidate stays experimental.
+- All four fits matched the native posterior, log evidence, ESS, shell and evaluation counts; all 101 ellipsoid call shapes matched.
+
+## Original prompt
+
 # Measure the scalar ellipsoid update in complete native fits
 
 Type: research

@@ -1,3 +1,15 @@
+# Conditional 30D Nautilus evidence check — merged
+
+Merged 2026-11-25 under the human's `/prm`: [autofit_profiling#31](https://github.com/PyAutoLabs/autofit_profiling/pull/31), CI green, head an ancestor of origin/main.
+
+## Delivered
+
+- All three conditional 30D resampling streams on the seed-0 learned bounds reached fresh-only ESS 10,000 (`experiments/nautilus_30d_evidence_check/`).
+- Signed log-evidence errors vs analytic −36.767688: −0.029, −0.048, −0.028, against −0.908 for the original exploration-inclusive estimate. All three remain below truth.
+- 2,452,000 fresh rows independently verified; checkpoints reopened unchanged. Shared exploration limits the inference.
+
+## Original prompt
+
 # Complete the conditional 30D Nautilus evidence check
 
 Type: research
