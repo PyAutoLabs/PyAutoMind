@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 25 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 284 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -331,7 +331,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -385,6 +385,14 @@ Use the start-dev skill. draft/research/autolens_profiling/piecewise_constant_im
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/setup_auto_unresolved_before_fit_print_vram_use.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/setup_banner_shows_jax_under_disable_jax.md">Setup banner shows the designated JAX setup when <code>PYAUTO_DISABLE_JAX=1</code> forces NumPy</a> — autogalaxy · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/setup_banner_shows_jax_under_disable_jax.md
 ```
 
 </details>
@@ -1680,7 +1688,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 228 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 231 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2040,7 +2048,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 44</summary>
+<summary><b>bug</b> — 46</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2102,6 +2110,14 @@ Use the start-dev skill. draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_a
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>: <code>image_with_positions</code> gets inhomogeneous multi-plane positions</a> — autolens · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md
 ```
 
 </details>
@@ -2318,6 +2334,14 @@ Use the start-dev skill. draft/bug/autoarray/sub_slim_indexes_for_pix_index_padd
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: <code>'Model' object has no attribute 'centre'</code> in <code>base_model_narrow_priors_from</code></a> — autolens_workspace · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md
 ```
 
 </details>
@@ -3171,21 +3195,23 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-25 | filed | <a href="draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: `'Model'…</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | issued | <a href="active/likelihood_lifecycle_p5f_workspace_setup.md">Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a…</a> |
+| 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_bound_core_scaling.md">Does parallel native ensemble training shorten complete Nautilus fits?</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_shell_geometry_signal.md">Do frozen Nautilus bounds predict the high-weight draws inside a…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_shell_efficiency.md">Diagnose the loss of fresh-sample efficiency across dimensions</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_gpu_feed.md">Can CPU sampler workers feed GPU likelihood batches faster?</a> |
 | 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_ellipsoid_weight_update.md">Test the scalar weight update on retained Nautilus ellipsoid inputs</a> |
-| 2026-11-24 | issued | <a href="active/nautilus_30d_independent.md">Test 30D evidence across independently learned Nautilus bounds</a> |
-| 2026-11-24 | issued | <a href="active/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-24 | issued | <a href="active/nautilus_30d_independent.md">Test 30D evidence across independently learned Nautilus bounds</a> |
+| 2026-11-24 | issued | <a href="active/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_30d_matched_ess.md">Resume three independently explored 30D checkpoints to matched ESS</a> |
 | 2026-11-24 | issued | <a href="active/cluster_family_fit_figures.md">Render cluster family fit diagnostics in the point visualizer</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_weight_whole_fit.md">Measure the scalar ellipsoid update in complete native fits</a> |
@@ -3194,13 +3220,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-24 | issued | <a href="active/nautilus_bound_cadence.md">Compare Nautilus bound-update intervals on complete PyAutoFit fits</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_worker_headroom.md">Bound the whole-fit gain available from scheduling two CPU workers</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_bound_geometry_attribution.md">Attribute CPU time inside Nautilus bound construction</a> |
-| 2026-11-24 | issued | <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> |
-| 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-24 | issued | <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> |
+| 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-11-23 | issued | <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
@@ -3209,13 +3235,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
-| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
-| 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
+| 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
 | 2026-11-11 | issued | <a href="active/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
@@ -3224,13 +3250,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
-| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
-| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
+| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
@@ -3239,8 +3265,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
-| 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 
 </details>
 
@@ -3316,7 +3340,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-59 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+60 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3354,6 +3378,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — unknown theme keyword(s): caustics, lens-calc`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
+- `draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md — unknown theme keyword(s): subhalo`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
 - `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
