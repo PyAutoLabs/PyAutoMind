@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 29 |
+| [In flight](#in-flight) | 30 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 288 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -56,20 +56,12 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/nightly_rehearsal_ancestry_check.md">Nightly release driver never runs Heart's rehearsal-ancestry check</a> — pyautobrain · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/nightly_rehearsal_ancestry_check.md
 ```
 
 </details>
@@ -150,6 +142,14 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 ```
 
 </details>
@@ -1573,6 +1573,14 @@ Use the start-dev skill. active/nautilus_worker_headroom.md
 
 </details>
 
+<details><summary>📋 <a href="active/nightly_rehearsal_ancestry_check.md">Nightly release driver never runs Heart's rehearsal-ancestry check</a> — issued 2026-11-25</summary>
+
+```
+Use the start-dev skill. active/nightly_rehearsal_ancestry_check.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/73">issue #73</a> — issued 2026-11-20 — awaiting-input</summary>
 
 ```
@@ -1712,7 +1720,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 231 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 230 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2072,15 +2080,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 47</summary>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/nightly_rehearsal_ancestry_check.md">Nightly release driver never runs Heart's rehearsal-ancestry check</a> — pyautobrain · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/nightly_rehearsal_ancestry_check.md
-```
-
-</details>
+<summary><b>bug</b> — 46</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -3244,7 +3244,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-25 | filed | <a href="draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: `'Model'…</a> |
-| 2026-11-25 | filed | <a href="draft/bug/pyautobrain/nightly_rehearsal_ancestry_check.md">Nightly release driver never runs Heart's rehearsal-ancestry check</a> |
+| 2026-11-25 | issued | <a href="active/nightly_rehearsal_ancestry_check.md">Nightly release driver never runs Heart's rehearsal-ancestry check</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | issued | <a href="active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md">Likelihood lifecycle phase 5H: euclid_strong_lens_modeling_pipeline…</a> |
 | 2026-11-25 | issued | <a href="active/likelihood_lifecycle_p5g_assistant_setup.md">Likelihood lifecycle phase 5G: autolens_assistant: an…</a> |
@@ -3339,7 +3339,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-119 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3384,7 +3384,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- _… and 79 more_
+- _… and 78 more_
 
 </details>
 
