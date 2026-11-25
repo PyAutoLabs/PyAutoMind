@@ -13,6 +13,8 @@ Consequence: judge
 Priority: high
 Status: draft
 Filed: 2026-11-25
+Issued: 2026-11-25
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/193
 Lane: any
 
 At release 2026.11.22.1 (PyAutoHands run 45013510824), PyAutoHands' `wait_for_released_stack` job found every package on PyPI at 11:02:47Z, yet one minute later the autolens and autocti `wiki-currency` reusable workflows, on other runners, failed `pip install "<lib>==2026.11.22.1"` with "No matching distribution found". PyPI's CDN is not consistent across runners, so a single poll on one runner proves nothing for the next. The failure turned a shipped release red and opened false "could not complete" issues (autolens_assistant#188, autocti_assistant#44).
