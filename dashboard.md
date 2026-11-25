@@ -1421,7 +1421,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5f_workspace_setup.md">Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a <code>guides/advanced</code> auto-setup guide, retired…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/688">issue #688</a> — issued 2026-11-25 — workspace-shipped, awaiting-merge (PR1 autolens_workspace#689 + PR3 HowToLens#139 OPEN; PR2 SLaM in progress on… — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/689">autolens_workspace#689</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/139">HowToLens#139</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5f_workspace_setup.md">Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a <code>guides/advanced</code> auto-setup guide, retired…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/688">issue #688</a> — issued 2026-11-25 — workspace-shipped, awaiting-merge (all 3 PRs OPEN: PR1 autolens_workspace#689, PR2 autolens_workspace#690 (merge after #689), PR3… — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/689">autolens_workspace#689</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/139">HowToLens#139</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/690">autolens_workspace#690</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5f_workspace_setup.md
