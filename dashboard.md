@@ -1397,7 +1397,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_sync_zip_count_set_e.md">hpc/sync pull exits 1 after the first extracted archive: <code>(( zip_count++ ))</code>…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/189">issue #189</a> — issued 2026-11-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hpc_sync_zip_count_set_e.md">hpc/sync pull exits 1 after the first extracted archive: <code>(( zip_count++ ))</code>…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/189">issue #189</a> — issued 2026-11-25 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/hpc_sync_zip_count_set_e.md
