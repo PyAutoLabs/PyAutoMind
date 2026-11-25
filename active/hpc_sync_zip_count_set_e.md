@@ -17,6 +17,7 @@ Witness: A new offline test in `autoassistant/tests/test_hpc_sync.py` runs `hpc/
 Review-minutes: 3
 Filed: 2026-11-25
 Updated: 2026-11-25
+Issued: 2026-11-25
 
 ## Request (verbatim)
 
