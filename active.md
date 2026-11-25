@@ -303,7 +303,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/75
 - prompt: active/nautilus_ring_gpu_feed.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ring-gpu-feed
-- repos:
+- retained-repos:
   - autolens_inference: feature/nautilus-ring-gpu-feed
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
