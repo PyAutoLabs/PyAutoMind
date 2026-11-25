@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 23 |
+| [In flight](#in-flight) | 24 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 284 |
+| [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -56,15 +56,7 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
-
-<details><summary>📋 <a href="draft/bug/autolens_assistant/hpc_sync_zip_count_set_e.md">hpc/sync pull exits 1 after the first extracted archive: <code>(( zip_count++ ))</code>…</a> — autolens_assistant · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_assistant/hpc_sync_zip_count_set_e.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -150,6 +142,14 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 ```
 
 </details>
@@ -1397,6 +1397,14 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
+<details><summary>📋 <a href="active/hpc_sync_zip_count_set_e.md">hpc/sync pull exits 1 after the first extracted archive: <code>(( zip_count++ ))</code>…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/189">issue #189</a> — issued 2026-11-25 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/hpc_sync_zip_count_set_e.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/likelihood_lifecycle_p5f_workspace_setup.md">Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a <code>guides/advanced</code> auto-setup guide, retired…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/688">issue #688</a> — issued 2026-11-25 — workspace-dev (PR1 workspace core + PR3 HowToLens in progress; PR2 SLaM gated on a JAX→numba chained-fit test)</summary>
 
 ```
@@ -1648,7 +1656,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 227 · ral 32 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 226 · ral 32 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2008,15 +2016,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 45</summary>
-
-<details><summary>📋 <a href="draft/bug/autolens_assistant/hpc_sync_zip_count_set_e.md">hpc/sync pull exits 1 after the first extracted archive: <code>(( zip_count++ ))</code>…</a> — autolens_assistant · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_assistant/hpc_sync_zip_count_set_e.md
-```
-
-</details>
+<summary><b>bug</b> — 44</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
 
@@ -3155,7 +3155,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-25 | filed | <a href="draft/bug/autolens_assistant/hpc_sync_zip_count_set_e.md">hpc/sync pull exits 1 after the first extracted archive: `((…</a> |
+| 2026-11-25 | issued | <a href="active/hpc_sync_zip_count_set_e.md">hpc/sync pull exits 1 after the first extracted archive: `((…</a> |
 | 2026-11-25 | issued | <a href="active/likelihood_lifecycle_p5f_workspace_setup.md">Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_bound_core_scaling.md">Does parallel native ensemble training shorten complete Nautilus fits?</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_shell_geometry_signal.md">Do frozen Nautilus bounds predict the high-weight draws inside a…</a> |
@@ -3300,7 +3300,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-60 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+59 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3338,7 +3338,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — unknown theme keyword(s): caustics, lens-calc`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
-- `draft/bug/autolens_assistant/hpc_sync_zip_count_set_e.md — unknown theme keyword(s): hpc`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
 - `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
