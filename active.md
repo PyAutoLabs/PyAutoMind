@@ -264,7 +264,17 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/39
 - prompt: active/nautilus_shell_geometry_signal.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-geometry-signal
+- retained-repos: autofit_profiling (feature/nautilus-shell-geometry-signal); PR #39 awaits review. Coding claim transferred to nautilus-bound-core-scaling.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-bound-core-scaling
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/40
+- issued: 2026-11-25
+- status: workspace-dev
+- prompt: active/nautilus_bound_core_scaling.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-core-scaling
 - repos:
-  - autofit_profiling: feature/nautilus-shell-geometry-signal
+  - autofit_profiling: feature/nautilus-bound-core-scaling
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm

@@ -255,3 +255,7 @@ The first hosted check passed 110 of 111 tests. The existing supervisor timing t
 The maintainer prioritised execution improvements that can serve different likelihood functions. Park the proposed ellipsoid-guided sampling experiment from #39. Its measured enrichment depends on how the 30D Gaussian's likelihood varies with radius. The replay establishes a diagnostic result and leaves execution speed unmeasured.
 
 Next CPU task: test whether idle cores can shorten native bound construction. Use the existing application-fit timing receipts to select the expensive stage, check which work already runs in parallel, and compare the existing execution path with bounded parallel execution of independent work where available. Keep the likelihood, proposed points, seeds, neural bounds and update interval fixed for a paired replay. Measure stage and whole-fit wall time at a fixed core budget, including dispatch overhead and native numerical-library threads. Use a contrasting workload to check transfer before recommending a default. For GPU work, retain the phase 4 CPU sampler pool feeding GPU likelihood batches and the existing variable-batch compilation task. The relevant workload properties are evaluation cost, cost variability and batchability.
+
+## CPU core scaling during bound construction — 2026-11-25
+
+[Phase issue](https://github.com/PyAutoLabs/autofit_profiling/issues/40) compares native serial training to two and four in-process training threads on complete paired PyAutoFit fits. [Registered protocol](../../../active/nautilus_bound_core_scaling.md).
