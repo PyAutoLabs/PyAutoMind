@@ -324,7 +324,8 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/141
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (euclid_strong_lens_modeling_pipeline#142 OPEN f80ccef; merge with/after the library release; HPCPullPyAuto before RAL use; at close-out, retire draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md as superseded)
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5h
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/likelihood-lifecycle-p5h-setup
