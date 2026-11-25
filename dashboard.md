@@ -1621,7 +1621,7 @@ Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility
 
 </details>
 
-<details><summary>📋 <a href="active/wiki_currency_install_retry.md">Wiki-currency install races PyPI's CDN across runners</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/193">issue #193</a> — issued 2026-11-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/wiki_currency_install_retry.md">Wiki-currency install races PyPI's CDN across runners</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/193">issue #193</a> — issued 2026-11-25 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/194">autolens_assistant#194</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/51">autogalaxy_assistant#51</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/66">autofit_assistant#66</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/45">autocti_assistant#45</a></summary>
 
 ```
 Use the start-dev skill. active/wiki_currency_install_retry.md
