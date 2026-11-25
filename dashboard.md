@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 29 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 293 |
+| [Backlog](#backlog) | 294 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -154,7 +154,7 @@ Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 72
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 73
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1757,7 +1757,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 235 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 235 · ral 33 · local-dev 13 · wsl-data 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2498,7 +2498,7 @@ Use the start-dev skill. draft/bug/autolens/twins_provenance_versions.md
 </details>
 
 <details>
-<summary><b>research</b> — 28</summary>
+<summary><b>research</b> — 29</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2632,6 +2632,14 @@ Use the start-dev skill. draft/research/pyautoinsight/slim_inference_repo_output
 
 ```
 Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/roche_against_pyhalo_tidal_track_subhalo_strippi.md">Roche against pyHalo tidal-track subhalo stripping: explain the factor of 70</a> — autolens · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autolens/roche_against_pyhalo_tidal_track_subhalo_strippi.md
 ```
 
 </details>
