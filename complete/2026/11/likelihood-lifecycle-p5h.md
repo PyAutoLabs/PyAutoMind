@@ -1,3 +1,16 @@
+## likelihood-lifecycle-p5h
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/141
+- completed: 2026-11-25
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142
+- epic: likelihood-lifecycle (phase 5H)
+- supersedes (retired with this record): draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md
+
+Euclid pipeline adopts `--setup <auto|cpu|gpu|setup_id>` (default auto) and `--number_of_cores auto`; `--use_cpu` is a deprecated alias for `--setup cpu`. dr1.yaml vis_lp/vis_pix use `--setup=cpu --number_of_cores=auto`. Human ruling kept local `--stage all` (CPU) as one process (vis_lp JAX then forked numba vis_pix); HPC routes stay two-process. Merged after library release 2026.11.25.1.
+
+Before the next RAL use: run HPCPullPyAuto so the shared install carries 2026.11.25.1 (needs the human's OK per policy/hpc_ral.md).
+
+## Original prompt
+
 # Likelihood lifecycle phase 5H: euclid_strong_lens_modeling_pipeline: `--setup` replaces `--use_cpu`, `--number_of_cores auto`, and the single-process draft closed as superseded
 
 Type: feature

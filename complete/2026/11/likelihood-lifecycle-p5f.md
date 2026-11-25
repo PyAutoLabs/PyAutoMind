@@ -1,3 +1,17 @@
+## likelihood-lifecycle-p5f
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/688
+- completed: 2026-11-25
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/689
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/690
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/139
+- epic: likelihood-lifecycle (phase 5F)
+
+Workspace adoption of the automatic compute setup (`setup="auto"`, `number_of_cores="auto"`, setup banner) across autolens_workspace (start_here/guides, then SLaM) and HowToLens. Merged after library release 2026.11.25.1, which carries 5A–5E, the setup banner and the pre-release fixes (complete/2026/11/likelihood-lifecycle-p5-setup-fixes.md).
+
+Follow-up (out of scope here): a later docs pass can switch the scripts to the simpler pre-fit calls the pre-release fixes enabled (`print_vram_use` with `setup="auto"`, `al.estimate_runtime(..., setup="auto", number_of_cores="auto")`).
+
+## Original prompt
+
 # Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a `guides/advanced` auto-setup guide, retired stale compute-setup prose, `cpu_fast_modeling.py` as the override example, and SLaM scripts passing one setup to every stage
 
 Type: feature
