@@ -11,7 +11,7 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 23 |
+| [In flight](#in-flight) | 22 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 284 |
 | [Recent](#recent) | 50 |
@@ -1401,14 +1401,6 @@ Use the start-dev skill. active/cluster_family_fit_figures.md
 
 ```
 Use the start-dev skill. active/digest_review_action_table.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5_setup_banner.md">Likelihood lifecycle phase 5 follow-up: a concise automatic compute-setup banner at fit…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/754">issue #754</a> — issued 2026-11-25 — library-shipped, awaiting-merge (5 PRs on feature/auto-setup-banner; merge order Nerves → Array → Fit → Galaxy → Lens) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/224">PyAutoNerves#224</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/713">PyAutoArray#713</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1797">PyAutoFit#1797</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755">PyAutoGalaxy#755</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/889">PyAutoLens#889</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
-
-```
-Use the start-dev skill. active/likelihood_lifecycle_p5_setup_banner.md
 ```
 
 </details>
@@ -3155,7 +3147,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-25 | issued | <a href="active/likelihood_lifecycle_p5_setup_banner.md">Likelihood lifecycle phase 5 follow-up: a concise automatic…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_bound_core_scaling.md">Does parallel native ensemble training shorten complete Nautilus fits?</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_shell_geometry_signal.md">Do frozen Nautilus bounds predict the high-weight draws inside a…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_shell_efficiency.md">Diagnose the loss of fresh-sample efficiency across dimensions</a> |
@@ -3165,12 +3156,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-24 | issued | <a href="active/digest_review_action_table.md">Shift digest: open with one review table grouped by what the human…</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_30d_matched_ess.md">Resume three independently explored 30D checkpoints to matched ESS</a> |
 | 2026-11-24 | issued | <a href="active/cluster_family_fit_figures.md">Render cluster family fit diagnostics in the point visualizer</a> |
+| 2026-11-24 | issued | <a href="active/nautilus_weight_whole_fit.md">Measure the scalar ellipsoid update in complete native fits</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-24 | issued | <a href="active/nautilus_weight_whole_fit.md">Measure the scalar ellipsoid update in complete native fits</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_whole_fit_geometry.md">Measure ellipsoid fitting inside a complete native Nautilus fit</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_30d_evidence_check.md">Complete the conditional 30D Nautilus evidence check</a> |
 | 2026-11-24 | issued | <a href="active/nautilus_bound_cadence.md">Compare Nautilus bound-update intervals on complete PyAutoFit fits</a> |
@@ -3180,12 +3171,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-11-23 | issued | <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
+| 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
@@ -3195,12 +3186,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
+| 2026-11-11 | issued | <a href="active/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-11 | issued | <a href="active/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
@@ -3210,12 +3201,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
+| 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
@@ -3225,6 +3216,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 
 </details>
 
@@ -3371,14 +3363,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
-- [PyAutoArray#713](https://github.com/PyAutoLabs/PyAutoArray/pull/713) — `active/likelihood_lifecycle_p5_setup_banner.md`
+- [PyAutoArray#713](https://github.com/PyAutoLabs/PyAutoArray/pull/713) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoArray#709](https://github.com/PyAutoLabs/PyAutoArray/pull/709) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
 - [PyAutoArray#710](https://github.com/PyAutoLabs/PyAutoArray/pull/710) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
 - [PyAutoArray#712](https://github.com/PyAutoLabs/PyAutoArray/pull/712) — `complete/2026/11/likelihood-lifecycle-p5b3-array.md`
 
 **PyAutoFit**
 
-- [PyAutoFit#1797](https://github.com/PyAutoLabs/PyAutoFit/pull/1797) — `active/likelihood_lifecycle_p5_setup_banner.md`
+- [PyAutoFit#1797](https://github.com/PyAutoLabs/PyAutoFit/pull/1797) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
 - [PyAutoFit#1795](https://github.com/PyAutoLabs/PyAutoFit/pull/1795) — `complete/2026/11/likelihood-lifecycle-p5d-fit.md`
 - [PyAutoFit#1796](https://github.com/PyAutoLabs/PyAutoFit/pull/1796) — `complete/2026/11/likelihood-lifecycle-p5e.md`
@@ -3387,7 +3379,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#755](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755) — `active/likelihood_lifecycle_p5_setup_banner.md`
+- [PyAutoGalaxy#755](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoGalaxy#752](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoGalaxy#753](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
@@ -3396,7 +3388,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
-- [PyAutoLens#889](https://github.com/PyAutoLabs/PyAutoLens/pull/889) — `active/likelihood_lifecycle_p5_setup_banner.md`
+- [PyAutoLens#889](https://github.com/PyAutoLabs/PyAutoLens/pull/889) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoLens#882](https://github.com/PyAutoLabs/PyAutoLens/pull/882) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoLens#886](https://github.com/PyAutoLabs/PyAutoLens/pull/886) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
@@ -3405,7 +3397,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoNerves**
 
-- [PyAutoNerves#224](https://github.com/PyAutoLabs/PyAutoNerves/pull/224) — `active/likelihood_lifecycle_p5_setup_banner.md`
+- [PyAutoNerves#224](https://github.com/PyAutoLabs/PyAutoNerves/pull/224) — `complete/2026/11/auto-setup-banner.md`
 - [PyAutoNerves#223](https://github.com/PyAutoLabs/PyAutoNerves/pull/223) — `complete/2026/11/likelihood-lifecycle-p5a-nerves.md`
 
 

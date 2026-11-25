@@ -1,3 +1,34 @@
+## auto-setup-banner
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/754
+- completed: 2026-11-25
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/224
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/713
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1797
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/889
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/224
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/713
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1797
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/889
+- epic: likelihood-lifecycle (phase 5 follow-up; next 5F)
+
+The automatic compute-setup choice is now visible and concise. A fit prints one header line saying this is the automatic CPU/GPU setup choice, then aligned, contiguous `Setup:` / `Parallel:` / `Estimate:` lines. When the setup acts outside modeling (a lazy sparse-operator build, or an aggregator reload reapplying setup.json), a one-line notice says so.
+
+- **Format** approved by the human on 2026-11-25: "pretty much good, but maybe also have a header … and make sure such a message appears outside of modeling too so a user knows it happened".
+- **The PRs**, all sharing the branch `feature/auto-setup-banner` so each repo's CI tested them together, merged in order:
+  - Nerves#224 (3af6de8d): detect_gpu respects `JAX_PLATFORMS`.
+  - Array#713 (5240c7e8): the lazy-build notice.
+  - Fit#1797 (cc764bf7): `Parallel:` with the device; `log_fit_start` makes no JAX claim.
+  - Galaxy#755 (9756fa9c): header + Setup line logged at the end of `modify_before_fit`; the not-set line; the aggregator notice; `resolve_setup(model, log_banner=...)`.
+  - Lens#889 (0c617e7d): wall-first Estimate.
+- **Bug found by the demo** (and the reason for the Nerves PR): once PyAutoFit's old fit-start line, which imported JAX by calling `jax.devices()`, was removed, `detect_gpu` fell back to `nvidia-smi` and auto picked `JAX · GPU · dense` on a laptop with `JAX_PLATFORMS=cpu`, so the fit ran a GPU setup on the CPU. Now a `JAX_PLATFORMS` / `JAX_PLATFORM_NAME` that names no `cuda`/`rocm`/`gpu` means no GPU.
+- **PyAutoLens claim override:** human-approved. The `cluster-family-fit-figures` claim was stale (its PyAutoLens#884 was merged); its close-out stays with its owning session.
+- **Gate:** suites 384 / 2614 / 4385 + 2 skipped + 1 xfailed / 1664 / 1155 + 1 xfailed; Heart GREEN; smoke 8/8 over the task root; all PR CI GREEN.
+- **Trap:** an override of `resolve_setup(self, model)` needs `**kwargs` for the new `log_banner` keyword.
+
+## Original prompt
+
 # Likelihood lifecycle phase 5 follow-up: a concise automatic compute-setup banner at fit start, and notices when the setup acts outside modeling
 
 Type: feature
