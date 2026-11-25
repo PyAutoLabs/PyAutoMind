@@ -208,27 +208,63 @@
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
-## likelihood-lifecycle-p5e
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/887
-- issued: 2026-11-24
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev (5E-1 MERGED 2026-11-24 autolens_profiling#535; 5E-2 PyAutoFit hook in progress on feature/likelihood-lifecycle-p5e2-fit; then 5E-3 PyAutoLens)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/535
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5e
-- repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p5e1-profiling
-  - PyAutoFit: feature/likelihood-lifecycle-p5e2-fit
-- prompt: active/likelihood_lifecycle_p5e_runtime_estimator.md
-- epic: likelihood-lifecycle (phase 5E; three PRs: 5E-1 profiling, 5E-2 Fit, 5E-3 Lens)
-- tier: judge — merge mode: human /prm
-
 ## nautilus-30d-matched-ess
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/34
 - issued: 2026-11-24
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/35
 - prompt: active/nautilus_30d_matched_ess.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-matched-ess
+- retained-repos: autofit_profiling (feature/nautilus-30d-matched-ess); PR #35 awaits review. Coding claim transferred to nautilus-shell-efficiency.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## nautilus-shell-efficiency
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/36
+- issued: 2026-11-25
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/37
+- prompt: active/nautilus_shell_efficiency.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-efficiency
+- retained-repos: autofit_profiling (feature/nautilus-shell-efficiency); PR #37 awaits review. Coding claim transferred to nautilus-shell-geometry-signal.
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## auto-setup-banner
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/754
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: library-shipped, awaiting-merge (5 PRs on feature/auto-setup-banner; merge order Nerves → Array → Fit → Galaxy → Lens)
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/224
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/224
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/713
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/713
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1797
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1797
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/889
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/889
+- worktree: /home/jammy/Code/PyAutoLabs-wt/auto-setup-banner
 - repos:
-  - autofit_profiling: feature/nautilus-30d-matched-ess
+  - PyAutoNerves: feature/auto-setup-banner
+  - PyAutoArray: feature/auto-setup-banner
+  - PyAutoFit: feature/auto-setup-banner
+  - PyAutoGalaxy: feature/auto-setup-banner
+  - PyAutoLens: feature/auto-setup-banner
+- prompt: active/likelihood_lifecycle_p5_setup_banner.md
+- coordination: human-approved claim override 2026-11-25 for PyAutoLens: the claim by `cluster-family-fit-figures` is stale (its PyAutoLens#884 is MERGED; it touched cluster/point plotting only); this task edits only autolens/analysis/runtime_estimate.py and its tests
+- epic: likelihood-lifecycle (phase 5 follow-up, before 5F)
+- tier: judge — merge mode: human /prm (Array → Fit → Galaxy → Lens)
+
+## nautilus-shell-geometry-signal
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/38
+- issued: 2026-11-25
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/39
+- prompt: active/nautilus_shell_geometry_signal.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-geometry-signal
+- repos:
+  - autofit_profiling: feature/nautilus-shell-geometry-signal
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm

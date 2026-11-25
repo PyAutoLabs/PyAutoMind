@@ -1,3 +1,49 @@
+## likelihood-lifecycle-p5e
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/887
+- completed: 2026-11-24
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/535
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1796
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/888
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1796
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/888
+- epic: likelihood-lifecycle (phase 5E; next 5F workspace prose)
+
+Phase 5E, the runtime estimator, shipped as three PRs under one issue. A lens fit with a compute setup now logs an `Estimate:` line after PyAutoFit's `Parallel:` banner, and 5D's `number_of_cores="auto"` memory cap is live.
+
+- **5E-1, autolens_profiling** (#535, 72939f36):
+  - `runtime_estimates.yaml` v2: `n_pixels_masked` / `n_vis` / `source_pixels` read from each record's evidence JSON `configuration` (106/116 rows sized);
+  - the measured η curve in the header (cited constant, with an ast-parsed equality test against autolens_inference `wall/model.py`);
+  - `--copy-to <PyAutoLens>`.
+- **5E-2, PyAutoFit** (#1796, dbdf4f9c): `resolve_fit_parallel(search, analysis, model=None)`; `runtime_estimate_line` calls the duck-typed `analysis.runtime_estimate(search, model, number_of_cores)`, logs it and records `estimate_line` in `parallel.json`. Raises and empty returns are ignored.
+- **5E-3, PyAutoLens** (#888, 4dbe09e9):
+  - `autolens/config/runtime_estimates.yaml` (v2);
+  - `autolens/analysis/wall_model.py` (a port of the wall model);
+  - `autolens/analysis/runtime_estimate.py`: cached v2 loader; `RuntimeEstimate`; match by decision_id + setup_id, otherwise setup_id + hardware_class + likelihood; nearest instrument by log size, otherwise a band; η only for numba; interferometer, weak and datacube uncalibrated; non-Nautilus searches get "no estimate";
+  - the `AnalysisRuntimeEstimate` mixin first in `AnalysisDataset`, `AnalysisPoint` and `AnalysisWeak`;
+  - exports `al.Setup`, `al.RuntimeEstimate`, `al.estimate_runtime`.
+- **Design calls (human-approved 2026-11-24):**
+  1. The estimator lives in PyAutoLens.
+  2. Size matching, otherwise a band.
+  3. Honest labels.
+  4. `al.estimate_runtime` rather than `al.Setup.estimate`.
+- **Gate:**
+  - 5E-1: 1915 passed; ruff clean; `--check` current.
+  - 5E-2: 4383 passed + 2 skipped + 1 xfailed; smoke 8/8.
+  - 5E-3: 1154 passed + 1 xfailed; smoke 4/4.
+  - Heart GREEN throughout.
+  - PR CI GREEN. #888's first run failed only `test__hook__resolve_fit_parallel_logs_estimate` (`TypeError: resolve_fit_parallel() got an unexpected keyword argument 'model'`) until #1796 merged; the re-run was GREEN.
+- **Traps:**
+  - Library CI clones dependency repos at a *matching branch name*, otherwise main. Cross-repo PRs with different branch names must merge upstream first and then re-run the downstream CI.
+  - Smoke uses the whole task root, so it sees in-progress sibling branches.
+- **Caveats / follow-ups:**
+  - The estimate is single-stage; there is no SLaM multi-stage pricing.
+  - The euclid imaging/rectangular numba row has `peak_rss_gb` null, so no memory cap for fits matched to it.
+  - `n_datasets` / `n_channels` multiplicity is not in the yaml.
+  - autolens_profiling `reference_hosts.json` still declares η = 1.0 for the Pulse projection.
+  - Interferometer and weak estimates read 2–5× low on held-out data (labelled uncalibrated).
+
+## Original prompt
+
 # Likelihood lifecycle phase 5E: runtime estimator: profiling exporter v2 with dataset sizes, a PyAutoFit estimate hook, and the PyAutoLens estimator, data file and memory cap
 
 Type: feature

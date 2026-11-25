@@ -27,3 +27,11 @@ Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/34
 ## Execution
 
 All three source copies passed their registered checkpoint and evidence checks before sampling. Seed 2 reached ESS 10,002.99 and reopened with signed log-evidence error −0.018021. Seeds 1 and 3 continue under the same shared deadline.
+
+## Result
+
+[Draft profiling PR #35](https://github.com/PyAutoLabs/autofit_profiling/pull/35), stacked on #33, completes the matched-ESS comparison for the three independently learned 30D bounds. All three continuations reached fresh-only ESS ≥10,000 with at least 100 fresh points per shell within 49 min 27 s of one shared local hour. Compared with analytic log evidence −36.7676881534, the signed log-evidence errors were −0.002393, −0.018021 and +0.005755 for seeds 1, 2 and 3. These correspond to evidence errors of −0.24%, −1.79% and +0.58%. The earlier partial estimates were +0.42%, −1.76% and −0.35%; two signs changed. The additional likelihood calls were 174,400, 7,500 and 624,100 respectively.
+
+The large early underestimate occurred in all three independent explorations. Its residual at matched ESS has mixed signs on this analytic fixture. Three full explorations give a descriptive comparison and leave uncertainty calibration open. The seed-0 conditional repetitions remain separate. Native reopening and independent HDF5 reconstruction matched all endpoints across 3,906,700 fresh samples. The original checkpoint hashes were preserved. [Per-seed comparison and receipts](https://github.com/PyAutoLabs/autofit_profiling/blob/04ca731d1ddd244f3dca034a28d6485efcf25477/experiments/nautilus_30d_matched_ess/README.md).
+
+All 111 tooling tests passed on rerun; one supervisor timing test initially failed and passed in isolation. Ruff and catalogue validation passed. The phase 0b independent 30D endpoint check is complete. Wider 0b remains open, native cadence is retained, and Pulse promotion is deferred.
