@@ -15,7 +15,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 294 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 5 |
+| [Pending release](#pending-release) | 0 |
 
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
@@ -3519,47 +3519,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-**PyAutoArray**
-
-- [PyAutoArray#713](https://github.com/PyAutoLabs/PyAutoArray/pull/713) — `complete/2026/11/auto-setup-banner.md`
-- [PyAutoArray#709](https://github.com/PyAutoLabs/PyAutoArray/pull/709) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
-- [PyAutoArray#710](https://github.com/PyAutoLabs/PyAutoArray/pull/710) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
-- [PyAutoArray#712](https://github.com/PyAutoLabs/PyAutoArray/pull/712) — `complete/2026/11/likelihood-lifecycle-p5b3-array.md`
-
-**PyAutoFit**
-
-- [PyAutoFit#1797](https://github.com/PyAutoLabs/PyAutoFit/pull/1797) — `complete/2026/11/auto-setup-banner.md`
-- [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
-- [PyAutoFit#1798](https://github.com/PyAutoLabs/PyAutoFit/pull/1798) — `complete/2026/11/likelihood-lifecycle-p5-setup-fixes.md`
-- [PyAutoFit#1795](https://github.com/PyAutoLabs/PyAutoFit/pull/1795) — `complete/2026/11/likelihood-lifecycle-p5d-fit.md`
-- [PyAutoFit#1796](https://github.com/PyAutoLabs/PyAutoFit/pull/1796) — `complete/2026/11/likelihood-lifecycle-p5e.md`
-- [PyAutoFit#1793](https://github.com/PyAutoLabs/PyAutoFit/pull/1793) — `complete/2026/11/sed-waveband-search-cap.md`
-- [PyAutoFit#1792](https://github.com/PyAutoLabs/PyAutoFit/pull/1792) — `complete/2026/11/truncated-tail-evidence.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#755](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755) — `complete/2026/11/auto-setup-banner.md`
-- [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `complete/2026/11/database-dataset-fits.md`
-- [PyAutoGalaxy#757](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757) — `complete/2026/11/likelihood-lifecycle-p5-setup-fixes.md`
-- [PyAutoGalaxy#752](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
-- [PyAutoGalaxy#753](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
-- [PyAutoGalaxy#746](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746) — `complete/2026/11/mixed-galaxy-light.md`
-- [PyAutoGalaxy#748](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748) — `complete/2026/11/plot-utils-critical-curves-docstrings.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#889](https://github.com/PyAutoLabs/PyAutoLens/pull/889) — `complete/2026/11/auto-setup-banner.md`
-- [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `complete/2026/11/database-dataset-fits.md`
-- [PyAutoLens#892](https://github.com/PyAutoLabs/PyAutoLens/pull/892) — `complete/2026/11/likelihood-lifecycle-p5-setup-fixes.md`
-- [PyAutoLens#882](https://github.com/PyAutoLabs/PyAutoLens/pull/882) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
-- [PyAutoLens#886](https://github.com/PyAutoLabs/PyAutoLens/pull/886) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
-- [PyAutoLens#888](https://github.com/PyAutoLabs/PyAutoLens/pull/888) — `complete/2026/11/likelihood-lifecycle-p5e.md`
-- [PyAutoLens#877](https://github.com/PyAutoLabs/PyAutoLens/pull/877) — `complete/2026/11/mixed-galaxy-light.md`
-
-**PyAutoNerves**
-
-- [PyAutoNerves#224](https://github.com/PyAutoLabs/PyAutoNerves/pull/224) — `complete/2026/11/auto-setup-banner.md`
-- [PyAutoNerves#223](https://github.com/PyAutoLabs/PyAutoNerves/pull/223) — `complete/2026/11/likelihood-lifecycle-p5a-nerves.md`
+_(nothing pending release)_
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

@@ -4,8 +4,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/535
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1796
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/888
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1796
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/888
 - epic: likelihood-lifecycle (phase 5E; next 5F workspace prose)
 
 Phase 5E, the runtime estimator, shipped as three PRs under one issue. A lens fit with a compute setup now logs an `Estimate:` line after PyAutoFit's `Parallel:` banner, and 5D's `number_of_cores="auto"` memory cap is live.

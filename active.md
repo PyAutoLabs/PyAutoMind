@@ -111,9 +111,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/884
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/890
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/891
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/884
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/890
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/891
 - release-gate: PyAutoLens
 - workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/20
 - workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/22

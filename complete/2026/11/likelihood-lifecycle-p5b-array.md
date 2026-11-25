@@ -3,8 +3,6 @@
 - completed: 2026-11-24
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/709
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/710
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/709
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/710
 - epic: likelihood-lifecycle (phase 5B; next 5C PyAutoGalaxy + PyAutoLens)
 
 Phase 5B of the likelihood-lifecycle epic shipped in PyAutoArray as two PRs under one issue.

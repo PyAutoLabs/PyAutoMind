@@ -6,11 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1797
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/889
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/224
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/713
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1797
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/889
 - epic: likelihood-lifecycle (phase 5 follow-up; next 5F)
 
 The automatic compute-setup choice is now visible and concise. A fit prints one header line saying this is the automatic CPU/GPU setup choice, then aligned, contiguous `Setup:` / `Parallel:` / `Estimate:` lines. When the setup acts outside modeling (a lazy sparse-operator build, or an aggregator reload reapplying setup.json), a one-line notice says so.

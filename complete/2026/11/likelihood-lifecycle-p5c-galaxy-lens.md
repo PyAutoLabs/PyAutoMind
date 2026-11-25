@@ -3,8 +3,6 @@
 - completed: 2026-11-24
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/882
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/882
 - epic: likelihood-lifecycle (phase 5C; next 5B-3 lazy factory operator, then 5C-3 aggregator reapply, then 5D PyAutoFit)
 
 Phase 5C of the likelihood-lifecycle epic shipped as two PRs under one issue. It wires the 5B `aa.Setup` into the analyses: `setup=` is opt-in per R6, and without it nothing changes beyond an "auto would choose …" log line.

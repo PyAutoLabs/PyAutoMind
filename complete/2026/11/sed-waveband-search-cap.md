@@ -6,7 +6,6 @@ Bounded the SED-chain waveband fits that could run without end. PyAutoFit#1793 b
 - Built by shift worker 2026-11-20-am; resumed 2026-11-22 in Codex desktop on the human's answer to Q17 (option 1).
 - Validation (from the task row): PyAutoFit 936b073d4 passed the timeout and conformance checks, including a real sampler and empty-posterior recovery. Euclid 89b7f7c passed 511 fast tests and all nine smoke scripts. Two sequential synthetic plateau fits hit a reduced call budget and wrote QA markers.
 - Not done here: the maintainer runs the original tile on RAL after merge and reports on euclid#136.
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1793
 
 ## Original prompt
 

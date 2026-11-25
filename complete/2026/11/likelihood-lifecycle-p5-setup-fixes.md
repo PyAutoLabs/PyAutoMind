@@ -4,9 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1798
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/892
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1798
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/892
 - epic: likelihood-lifecycle (phase 5 pre-release fixes)
 - supersedes (retired with this record): draft/bug/autogalaxy/setup_auto_unresolved_before_fit_print_vram_use.md, draft/feature/autolens/estimate_runtime_accept_auto.md, draft/bug/autogalaxy/setup_banner_shows_jax_under_disable_jax.md
 

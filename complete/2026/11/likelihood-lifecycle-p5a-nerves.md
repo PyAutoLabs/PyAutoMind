@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/222
 - completed: 2026-11-23
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/223
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/223
 - epic: likelihood-lifecycle (phase 5A of 5A–5H)
 - Shipped `autonerves.environment` (`Environment.detect()` for GPU, cores via SLURM_CPUS_PER_TASK → affinity → cpu_count, RAM, numba, nufftax and site; never imports JAX). Also `parse_setup_intent()`, with the grammar `auto|cpu|gpu|(jax|numba|numpy)_(cpu|gpu)_<op>_(fp64|fp32|mp)[_<transformer>]`, which 5B reuses.
 - `jax_wrapper` honours `PYAUTO_SETUP` at import: a CPU intent sets JAX_PLATFORMS=cpu and the OMP/MKL/OPENBLAS/NUMBA thread counts to the detected cores, only where unset. auto, unset and gpu are no-ops; an invalid value raises ValueError.

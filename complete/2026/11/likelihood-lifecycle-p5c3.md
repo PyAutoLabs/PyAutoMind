@@ -3,8 +3,6 @@
 - completed: 2026-11-24
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/886
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/886
 - epic: likelihood-lifecycle (phase 5C-3; next 5D PyAutoFit)
 
 Phase 5C-3 shipped as two PRs under one issue. Together with 5B-3 (PyAutoArray#712), fits outside modeling can now get the optimal sparse operator when the lazy policy is on (default off until the R6 flip).
