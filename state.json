@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 31 in flight",
-  "updated": "2026-11-25T16:21:26Z",
+  "updated": "2026-11-25T16:23:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -69,6 +69,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup\u2026 \u2014 library-shipped, awaiting-merge (judge tier: human /prm; merge Fit \u2192 Galaxy \u2192 Lens; no workspace impact)",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1798",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_pre_release_setup_fixes.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Complete the conditional 30D Nautilus evidence check \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/31",
       "prompt": "Use the start-dev skill. active/nautilus_30d_evidence_check.md"
@@ -120,12 +126,6 @@
       "text": "Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging? \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_inference/pull/75",
       "prompt": "Use the start-dev skill. active/nautilus_ring_gpu_feed.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Diagnose the loss of fresh-sample efficiency across dimensions \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/37",
-      "prompt": "Use the start-dev skill. active/nautilus_shell_efficiency.md"
     }
   ]
 }
