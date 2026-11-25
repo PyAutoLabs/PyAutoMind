@@ -288,3 +288,19 @@
 - prompt: active/intake_apply_crashes_on_memory_citations_when.md
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
+
+## likelihood-lifecycle-r6-default-auto
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/759
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-r6-default-auto
+- repos:
+  - PyAutoArray: feature/likelihood-lifecycle-r6-default-auto
+  - PyAutoFit: feature/likelihood-lifecycle-r6-default-auto
+  - PyAutoGalaxy: feature/likelihood-lifecycle-r6-default-auto
+  - PyAutoLens: feature/likelihood-lifecycle-r6-default-auto
+- prompt: active/likelihood_lifecycle_r6_default_auto_setup.md
+- epic: likelihood-lifecycle (R6 phase A library; release before phase B workspace sweep merges)
+- tier: judge — merge mode: human /prm
+- note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap 2026-11-25
