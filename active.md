@@ -109,12 +109,16 @@
 - session: Codex desktop
 - status: awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/884
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/890
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/884
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/890
+- release-gate: PyAutoLens
 - workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/20
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cluster-family-fit-figures
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/687
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/family-plot-api
 - repos:
-  - PyAutoLens: feature/cluster-family-fit-figures
-  - autolens_visualization: feature/cluster-family-fit-figures
+  - PyAutoLens: feature/family-plot-api
+  - autolens_workspace: feature/family-plot-api
 
 ## nautilus-bound-geometry
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/18

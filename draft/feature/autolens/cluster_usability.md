@@ -4,7 +4,7 @@ Type: feature
 Target: PyAutoLens
 Epic: cluster-usability
 Priority: high
-Status: draft for human review
+Status: Simple and Pandora figures live on PyAutoEyes. MACS J0416 first figures ready for author review.
 Consequence: judge
 
 Prioritise this work ahead of the [cluster strong-lensing science epic](source_cluster_arc.md). The goal is to make today's cluster modelling usable at three scales. A reader should be able to see the constraints, identify which multiple-image family fits poorly, and follow that family into a diagnostic figure. The same examples should tell developers how runtime and inference behave as the science case gets harder. New lensing methods belong in the science epic.
@@ -13,15 +13,15 @@ Prioritise this work ahead of the [cluster strong-lensing science epic](source_c
 
 | Dataset | Science case | What it should demonstrate |
 | --- | --- | --- |
-| **Simple** | The introductory cluster with two multiple-image families. Use it throughout the core workspace walkthrough. | A newcomer can load the catalogue, recognise each family in the image and interpret a first fit. It also provides a quick baseline for all three projects. |
-| **Intermediate** | Pandora, with seven multiple-image families and a richer lens-member catalogue. | Family markers and the legend stay readable in a crowded field. Profiling and inference exercise multiple source redshifts and a larger galaxy population. |
-| **Complex** | The Hubble Frontier Fields (HFF) lens and existing model used in the PyAutoLens II paper. | Figures, runtime measurements and inference runs exercise the family catalogue and member population of the paper fit. Confirm the exact cluster, model revision and distributable inputs before adopting it. |
+| **Simple** | The simulated introductory cluster with two multiple-image families. Use it throughout the core workspace walkthrough. | A newcomer can load the catalogue, recognise each family in the image and interpret a first fit. It also provides a quick baseline for all three projects. |
+| **Intermediate** | Pandora (Abell 2744), with seven observed gold families, 24 catalogued images and 188 scaling members. Use it as the first real-data example. | Family markers and the legend stay readable in a crowded field. Profiling and inference exercise multiple source redshifts and a larger galaxy population. |
+| **Complex** | MACS J0416, the PyAutoLens II cluster case. Use the [Bergamini et al. published best model](https://www.fe.infn.it/astro/lensing/M0416_Bergamini22/) with 237 images across 88 families and 222 mass components. | Figures, runtime measurements and inference runs exercise the family catalogue and member population of the paper fit. Pin the model revision and input checksums. Use the case study’s download procedure while redistribution terms are checked. Record the fit configuration for any reduced pilot. |
 
 For each tier, record the input provenance, family IDs and redshifts, member catalogue, model configuration and image scale. Use those identifiers across the workspace, visualization, profiling and inference projects so that a result labelled “intermediate” can be traced to the same Pandora case. Distinguish observed constraints, simulated truth and paper reference models when judging a fit.
 
 ## Proposed work in priority order
 
-1. **Establish the datasets and protect profiling inputs.** Inventory the existing examples against the three tiers. Continue the stale-data fix on the existing profiling issue. Before profiling an existing cluster, validate the scaling catalogue with the consuming reader and load the tracer. A missing or unusable catalogue, or a tracer that fails to deserialize, should stop the run with the offending path and instructions to preserve the directory and regenerate a fresh copy. Exercise stale and current fixtures, checking that rejected fixtures remain intact and a current fixture reaches profiling. [autolens_profiling #445](https://github.com/PyAutoLabs/autolens_profiling/issues/445)
+1. **Establish the datasets and protect profiling inputs.** Inventory the existing examples against the three tiers. Profiling issue [#445](https://github.com/PyAutoLabs/autolens_profiling/issues/445) closed with [PR #532](https://github.com/PyAutoLabs/autolens_profiling/pull/532). Before reusing Simple, the cache guard checks that the member CSV exists and deserializes the tracer. The remaining case is a present but malformed scaling catalogue: validate it with the consuming reader before profiling. A missing or unusable catalogue, or a tracer that fails to deserialize, should stop the run with the offending path and instructions to preserve the directory and regenerate a fresh copy. Exercise stale and current fixtures, checking that rejected fixtures remain intact and a current fixture reaches profiling.
 
 2. **Make the first figure worth opening.** Keep the cluster-level `dataset.png` and add a view of the observed family positions over the cluster image. Use that overlay as the first workspace view when imaging is available. Compare the stretch, colormap, figure size and field framing on all three tiers. On a field spanning −30″ to +30″ the arcs, lens galaxies and family markers should be individually recognisable. Also inspect the larger Pandora cutout shown by the current example. Reproduce the sequence of empty Matplotlib windows in an interactive run and verify that every window the introductory script opens contains an intended figure.
 
@@ -33,6 +33,41 @@ For each tier, record the input provenance, family IDs and redshifts, member cat
 
 6. **Review the workspace examples with the author.** Use Brain's workspace documentation agent to compare the cluster scripts with established introductory examples. First review a proposed reading order and a before/after excerpt from `start_here.py` with Jammy. Then review each example in turn. Teach the CSV API through the walkthrough, retain `csv_api.py` as a separate reference away from the core entry points, and propose where the mass-parameterization material belongs once readers have fitted Simple. Settle the sequence and level of detail together before rewriting the package.
 
-## First review
+## Author review of the Simple figures
 
-Review the proposed Simple → Pandora → HFF progression and identify the paper model for Complex. For the first visual comparison, show the current introductory figure beside the proposed image overlay, then show a cluster fit overview beside the detailed fit for its worst-fitting family. These comparisons give the author concrete figures and tutorial text to revise before the defaults are adopted.
+The author approved the Simple → Pandora → MACS J0416 progression and reviewed the two-family Simple simulation. Keep the greyscale image stretch and distinguish the two families by both colour and shape (amber circles and cyan diamonds in Simple). Check the palette and legend on Pandora and MACS J0416 as their catalogues are added.
+
+The default family fit figure has four panels:
+
+| | Left | Right |
+| --- | --- | --- |
+| Top | Cluster overview with family redshifts, the fitted statistic, and image numbers for the selected family. | One equally scaled zoom per image. For an image-plane fit, draw the observation, paired model position and positional uncertainty. For a source-plane fit, draw the back-traced observation, its propagated uncertainty and the fitted source centre. |
+| Bottom | Per-image contributions ranked from largest to smallest. | All images of the selected family back-traced to their source plane, with the fitted source centre marked. Keep this context for either likelihood. |
+
+Use PyAutoLens spatial-axis conventions in arcseconds. Centre each individual zoom on its actual observed or back-traced coordinates. Keep the two lower plotting areas the same size. Offer a single shared-coordinate detail panel as an option.
+
+Up to six image zooms fit on one page in image-number order. For larger families, put the six largest contributions on page one and continue in groups of six. Preserve original image numbers, repeat the overview, full ranking and source-plane summary, and highlight the images on each page. The scratch renderer exercised six- and seven-image synthetic layouts in both planes.
+
+Use the statistic supplied by the fitted likelihood. In particular, a nearest-image displacement alone cannot represent an all-pairs mixture. If a repeat-pairing fit penalizes an unmatched prediction, identify that penalty separately so the reader can reconcile the plotted contributions with the family total.
+
+The Simple family diagnostics, cluster dataset and walkthrough figures, and standalone point-source styling merged in [PyAutoLens #884](https://github.com/PyAutoLabs/PyAutoLens/pull/884). The production gallery merged in [autolens_visualization #20](https://github.com/PyAutoLabs/autolens_visualization/pull/20). With a 0.003″ offset in the first source’s y coordinate, image 4 contributes 66.44 of the family’s 88.22 source-plane χ² and 66.11 of its 86.80 image-plane χ². The saved figures and the interactive figure construction were checked on Simple.
+
+[PyAutoEyes #36](https://github.com/PyAutoLabs/PyAutoEyes/pull/36) published the updated [live Eyes dashboard](https://pyautolabs.github.io/PyAutoEyes/). At publication it offered 311 distinct figures, including 86 PyAutoLens figures. All 30 cluster and standalone point-source PNGs matched their gallery manifest checksums.
+
+## Pandora publication
+
+The [workspace catalogue](https://github.com/PyAutoLabs/autolens_workspace/blob/ba7f7738538069ea4c725a3797b10582eb970d0e/dataset/cluster/a2744/point_datasets.csv) has 24 observed positions across seven families. In catalogue order the image counts are 3, 4, 4, 3, 3, 3 and 4. The dataset README and walkthrough now use the measured count.
+
+The first review uses the cached 600 × 600 HST H-band cutout at 0.3″ per pixel. The catalogue axes increase east and north. The cutout’s FITS columns increase west and its rows increase north. The review reoriented the raster and used its reference pixel to place the catalogue origin. Across all 24 positions the largest difference between the catalogue’s tangent-plane approximation and the FITS WCS was 0.0036″. The workspace and gallery now share this registration.
+
+The source-plane diagnostic uses the two CSV dPIE galaxies, the CSV NFW halo and all 188 scaling members. The lens parameters are fixed at a starting configuration, with member reference velocity dispersion 150 km/s and an analytically solved centre for each source. At this starting point, `point_6` contributes 14,234.79 to the position χ², including 6,397.30 from image 4. The author approved this diagnostic and the registered overlay.
+
+[Workspace #686](https://github.com/PyAutoLabs/autolens_workspace/pull/686) merged the HST registration, the corrected image count and the pinned cutout download. [Gallery #21](https://github.com/PyAutoLabs/autolens_visualization/pull/21) merged four cluster overviews and seven source-plane family figures. [PyAutoEyes #37](https://github.com/PyAutoLabs/PyAutoEyes/pull/37) published all eleven under `PyAutoLens → cluster_pandora` on the [live Eyes dashboard](https://pyautolabs.github.io/PyAutoEyes/). At publication the dashboard had 322 distinct figure choices, including 97 PyAutoLens figures. The eleven live Pandora PNGs matched the gallery manifest by size and SHA-256. Pandora profiling and inference remain open.
+
+The public panel API is in review in [PyAutoLens #890](https://github.com/PyAutoLabs/PyAutoLens/pull/890). The [workspace walkthrough and notebook](https://github.com/PyAutoLabs/autolens_workspace/pull/687) introduce each panel separately on `point_6`: find the family on the sky, rank the contributions, inspect Image 4, and compare all four back-traced images at their common source plane. The final call assembles the same panels into the family subplot. The walkthrough depends on the library release.
+
+## MACS J0416 first review
+
+The scratch review uses all 237 observed positions in 88 knot families and the 222-component [Bergamini et al. model release](https://www.fe.infn.it/astro/lensing/M0416_Bergamini22/). The catalogue uses north/west offsets. All 237 positions fall on the [HST F160W mosaic](https://archive.stsci.edu/pub/hlsp/frontier/macs0416/images/hst/v1.0-epoch2/), registered using the FITS sky coordinates. The review pins the input checksums and preserves the catalogue image IDs.
+
+The overview uses source redshift for colour. The published image-plane offsets from `chires.dat` give an all-image RMS of 0.430″ and place family 101 first by family RMS (1.081″). For the fixed published masses and analytically solved source centres, family 210.4 has the largest PyAutoLens source-plane χ² (11.70). Separate family views show those two diagnostics and exercise the six-image layout on family 14.1. These are review figures. Gallery publication, profiling and inference for this tier remain open.
