@@ -260,9 +260,10 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/688
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-shipped, awaiting-merge (PR1 autolens_workspace#689 + PR3 HowToLens#139 OPEN; PR2 SLaM in progress on feature/likelihood-lifecycle-p5f2-slam; merge with/after the release carrying 5A–5E + banner)
+- status: workspace-shipped, awaiting-merge (all 3 PRs OPEN: PR1 autolens_workspace#689, PR2 autolens_workspace#690 (merge after #689), PR3 HowToLens#139; merge with/after the library release carrying 5A–5E + banner)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/689
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/139
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/690
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5f
 - repos:
   - autolens_workspace: feature/likelihood-lifecycle-p5f1-workspace
