@@ -77,6 +77,74 @@ recovery fits pass). In the normalised frame 27 of 27 pass and the tilt goes.
    one shared helper should serve both.
 4. **A workspace example** in `autolens_workspace`: simulate a stars + gNFW lens, fit it in
    the frame, convert the result back to physical units, and say when to use it.
+5. **Physical-units profiles** (M200 for the halo, a physical stellar mass or M/L for the
+   stars): see "Physical-units parameterisation" below.
+
+Item 1 describes the prototype. Whether the rescaling should instead be a separate object
+that wraps ordinary mass profiles is the first thing to assess: see "Assess first" below.
+
+## Assess first: can the mass-sheet rescaling be its own profile?
+
+Maintainer's steer (2026-11-25): the rescaling is general enough that we would want to
+apply it to a power law too, and keeping it out of the Sérsic and dark-matter profiles
+keeps the source cleaner. So before building the composite as prototyped, assess a design
+in which:
+
+- the mass profiles stay ordinary (the aperture-normalised Sérsic and gNFW of slice 1, or
+  an existing `PowerLaw`), and
+- one separate object applies kappa' = kappa / λ₀ + 1 − 1 / λ₀ to whatever mass profiles it
+  is given, with λ₀ = 1 − kappa_ring(theta_ap) taken from their deflections.
+
+What the assessment must settle:
+
+- Where it lives: a profile (for example beside `MassSheet` in `mass/sheets/`) wrapping a
+  list of mass profiles, a galaxy-level option, or a model-composition helper; and how a
+  PyAutoFit model composes it, given that it depends on its sibling profiles.
+- λ₀ must depend on the shape only, never on the sampled mass. The prototype gets this by
+  evaluating λ₀ at the nominal aperture mass π theta_ap² and sampling the mass as the
+  offset `eps`. A general wrapper needs a rule for which parameter of the wrapped profiles
+  is "the mass". For a circular power law it is the Einstein radius: kappa_ring at the
+  Einstein radius is (3 − slope) / 2, a function of the slope alone.
+- The dark-fraction split belongs to the mass profiles (compound priors, or one small
+  stars + halo profile), not to the wrapper.
+- Cost under JAX: λ₀ needs one extra deflection call on 128 ring points per likelihood;
+  the stars' term is a constant only when the light is fixed.
+- The positions penalty and the shear and source priors change with the frame whatever the
+  wrapped profiles are, so they belong with the wrapper.
+- Equivalence: the wrapper around stars + gNFW must reproduce the prototype's
+  `StarsGNFWMSTFrame` deflections to numerical precision, so the project's 27 of 27
+  recovery result carries over; add one power-law check.
+
+If the separation does not come out clean, say why and fall back to the composite profile.
+The project tested the frame on stars + gNFW only; a power law in the frame is untested.
+
+## Physical-units parameterisation
+
+Maintainer's addition (2026-11-25). The recommended forms use a dark fraction, not physical
+masses: P1-inv and P1′-f-inv sample `eps` and `f_dm`, and the ordinary-units physical form
+P1′-f samples the total projected mass inside 5 kpc (M☉) and `f_dm_5`. The maintainer also
+wants a parameterisation in the usual physical values: M200 for the dark matter and a
+physical stellar mass, or mass-to-light ratio, for the stars.
+
+- **Dark matter.** The library has `gNFWVirialMassConcSph` (`log10m_vir`, `c_2`,
+  overdensity, redshifts) and the mass–concentration classes. Check they are JAX-traceable
+  end to end (`gnfw_virial_mass_gnfw_conc.py` calls `scipy.integrate.quad`) and decide
+  whether an "M200 + scale radius in arcsec" form is wanted. The project's `gNFWM200Sph`
+  and `gNFWM200ConcSph` are closed-form, JAX-traceable prototypes (log10 M200c with r_s, or
+  with c200 = r200 / r_s).
+- **Stars.** The library has no stellar mass profile normalised by a physical mass:
+  `mass_to_light_ratio` is in angular (convergence) units. Prototype: `SersicLogStellarMass`
+  (log10 of the total stellar mass in M☉, with Σ_cr D_d² in M☉ / arcsec² passed in). Decide
+  between total stellar mass and a physical M/L (M☉ / L☉ needs the photometric zero point
+  and band), and take the critical density from redshifts and a cosmology, as
+  `gNFWVirialMassConcSph` does, in place of a number passed in.
+- **What the project found, for the documentation.** With log-uniform priors on M* and M200
+  (its P2-log; also P1′-log, with log M* and log M_DM inside 5 kpc) 0 of 27 recovery fits
+  pass: the measure piles the dark fraction onto 0 or 1, and M200 inside the sampling
+  carries a hidden prior on the inner slope. No other prior on these parameters was
+  fitted. So ship the profiles, document the caveat, and also give the conversions as
+  derived quantities, so that a fit in the frame, or in any other form, reports M*, the
+  physical M/L, M200 and the concentration.
 
 ## Slices
 
@@ -84,21 +152,21 @@ recovery fits pass). In the normalised frame 27 of 27 pass and the tilt goes.
    convergence from deflections, and the Sérsic and gNFW profiles normalised by projected
    mass inside an aperture. *Repos:* PyAutoGalaxy
    *Witness:* unit tests show the 2F1 helper matches `scipy.special.hyp2f1` to 1e-12 for slopes 0 to 2.4 on NumPy and JAX, and each aperture-normalised profile encloses its `mass_ap` inside `theta_ap` to 1e-8.
-2. **The mass-sheet-frame profile.** The stars + gNFW profile in the normalised frame, its
+2. **The mass-sheet frame.** First the assessment in the epic prompt's "Assess first" section (a separate, general rescaling
+   object against the composite profile), written into the plan; then the chosen form, its
    λ₀ helper, the physical-unit attributes, and the positions penalty scaled by 1 / λ₀.
    *Repos:* PyAutoGalaxy, PyAutoLens
-   *Witness:* a unit test shows its deflections equal `(stars + gNFW deflections) / lambda_0 + (1 - 1/lambda_0) * (grid - centre)` to 1e-10 on NumPy and JAX, and the ring convergence of the transformed lens at `theta_ap` is zero to 1e-6 at `eps = 0`. *Depends:* 1
-3. **Workspace example.** Simulate a stars + gNFW lens, fit it in the frame, convert the
-   result back to physical units. *Repos:* autolens_workspace
+   *Witness:* a unit test shows the frame's deflections for stars + gNFW equal `(stars + gNFW deflections) / lambda_0 + (1 - 1/lambda_0) * (grid - centre)` to 1e-10 on NumPy and JAX, the ring convergence of the transformed lens at `theta_ap` is zero to 1e-6 at zero mass offset, and, if the separate form is chosen, the same identity holds for a power law. *Depends:* 1
+3. **Physical-units profiles.** A Sérsic normalised by physical stellar mass (or M/L) and a
+   gNFW by M200, JAX-traceable, with the conversions also available as derived quantities (detail: the epic prompt's "Physical-units parameterisation" section).
+   *Repos:* PyAutoGalaxy
+   *Witness:* unit tests show a Sérsic built from a stellar mass returns that total mass to 1e-8 and a gNFW built from M200 encloses M200 inside r200 to 1e-6, on NumPy and JAX. *Depends:* 1
+4. **Workspace example.** Simulate a stars + gNFW lens, fit it in the frame, convert the
+   result back to physical units (M*, M200). *Repos:* autolens_workspace
    *Witness:* the example runs in smoke and recovers the input dark-matter fraction inside its 95% interval. *Depends:* 2
 
 ## Design questions for the plan
 
-- The prototype is one composite profile holding stars + halo + sheet with the light shape
-  passed in as fixed numbers. Decide the library form: a composite mass profile as
-  prototyped, or a general "mass-sheet frame" wrapper around any list of mass profiles with
-  λ₀ from their ring convergence. The second is more general but must keep λ₀ independent
-  of the sampled mass.
 - Free lens light: every project fit fixed the light to the truth. With free light, λ₀
   depends on the light parameters; the prototype handles this on the JAX path
   (`lambda0_terms`) but it was never fitted.

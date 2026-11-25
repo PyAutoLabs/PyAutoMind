@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 29 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 292 |
+| [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1270,12 +1270,12 @@ Use the start-dev skill. draft/research/pyautobrain/ecosystem_review_for_autonom
 </details>
 
 <details>
-<summary><b>Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</b> — 4 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</b> — ledger: <code>draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md</code> — SLICED 2026-11-25 by <code>batch slice</code> into 3 children…</summary>
+<details><summary>📋 <b>Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</b> — ledger: <code>draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md</code> — SLICED 2026-11-25 by <code>batch slice</code> into 4 children…</summary>
 
 ```
-Continue the 'Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)' epic. Its canonical state lives in draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phases in order: 1 Building blocks (PyAutoGalaxy) → 2 The mass-sheet-frame profile (PyAutoGalaxy, PyAutoLens) → 3 Workspace example (autolens_workspace)
+Continue the 'Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)' epic. Its canonical state lives in draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phases in order: 1 Building blocks (PyAutoGalaxy) → 2 The mass-sheet frame (PyAutoGalaxy, PyAutoLens) → 3 Physical-units profiles (PyAutoGalaxy) → 4 Workspace example (autolens_workspace)
 ```
 
 </details>
@@ -1288,18 +1288,26 @@ Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_m
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame_profile.md">The mass-sheet-frame profile</a> — autogalaxy · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame.md">The mass-sheet frame</a> — autogalaxy · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame_profile.md
+Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_workspace_example.md">Workspace example</a> — autogalaxy · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_physical_units_profiles.md">Physical-units profiles</a> — autogalaxy · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_workspace_example.md
+Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_physical_units_profiles.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s4_workspace_example.md">Workspace example</a> — autogalaxy · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s4_workspace_example.md
 ```
 
 </details>
@@ -1749,7 +1757,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 234 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 235 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>

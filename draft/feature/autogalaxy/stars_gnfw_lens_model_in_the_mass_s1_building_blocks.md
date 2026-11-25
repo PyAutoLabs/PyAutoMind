@@ -17,4 +17,4 @@ A shared JAX-safe 2F1 helper for the gNFW enclosed mass, the ring convergence fr
 
 ## Seam
 
-Slice 1 of 3 of `draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md` (epic `stars-gnfw-lens-model-in-the-mass`): owns PyAutoGalaxy; first — nothing before it; before slice 2 (The mass-sheet-frame profile). One unattended run; reviewed against its own witness; revertible on its own PR(s).
+Slice 1 of 4 of `draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md` (epic `stars-gnfw-lens-model-in-the-mass`): owns PyAutoGalaxy; first — nothing before it; before slice 2 (The mass-sheet frame). One unattended run; reviewed against its own witness; revertible on its own PR(s).

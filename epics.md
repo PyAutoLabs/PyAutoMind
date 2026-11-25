@@ -167,5 +167,5 @@ epic, never picked standalone.
 ## stars-gnfw-lens-model-in-the-mass
 - title: Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)
 - ledger: draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md
-- status: SLICED 2026-11-25 by `batch slice` into 3 children (draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s1_building_blocks.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame_profile.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_workspace_example.md); the parent is unchanged and stays the ledger
-- notes: phases in order: 1 Building blocks (PyAutoGalaxy) → 2 The mass-sheet-frame profile (PyAutoGalaxy, PyAutoLens) → 3 Workspace example (autolens_workspace)
+- status: SLICED 2026-11-25 by `batch slice` into 4 children (draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s1_building_blocks.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_physical_units_profiles.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s4_workspace_example.md); the parent is unchanged and stays the ledger
+- notes: phases in order: 1 Building blocks (PyAutoGalaxy) → 2 The mass-sheet frame (PyAutoGalaxy, PyAutoLens) → 3 Physical-units profiles (PyAutoGalaxy) → 4 Workspace example (autolens_workspace)
