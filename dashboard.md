@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 27 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 287 |
+| [Backlog](#backlog) | 288 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -331,12 +331,20 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 10 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 11 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
 ```
 Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood' epic. Its canonical state lives in draft/research/autolens_profiling/likelihood_lifecycle_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_assistant/hpc_setup_flag_and_wiki_auto_setup.md">autolens_assistant HPC: <code>--use_cpu</code> → <code>--setup</code> in the hpc templates, and the wiki/core…</a> — autolens_assistant · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_assistant/hpc_setup_flag_and_wiki_auto_setup.md
 ```
 
 </details>
@@ -1704,7 +1712,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 231 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 232 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3307,7 +3315,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-115 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3321,6 +3329,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/cluster_usability.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
+- `draft/feature/autolens_assistant/hpc_setup_flag_and_wiki_auto_setup.md`
 - `draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md`
 - `draft/feature/autolens_profiling/gradient_cost_hazard_on_ral_cpu_value.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
@@ -3351,8 +3360,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- _… and 75 more_
+- _… and 76 more_
 
 </details>
 
