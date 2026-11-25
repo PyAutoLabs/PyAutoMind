@@ -299,7 +299,8 @@
 ## nautilus-ring-gpu-feed
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/74
 - issued: 2026-11-25
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/75
 - prompt: active/nautilus_ring_gpu_feed.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ring-gpu-feed
 - repos:
