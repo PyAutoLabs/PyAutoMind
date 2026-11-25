@@ -239,3 +239,7 @@ All 111 tooling tests passed on rerun; one supervisor timing test initially fail
 With measured shell volumes and moments held fixed, the optimal continuous allocation could reduce calls by at most 0.0061% across all six 30D cases. Allocation chosen from the early half of each shell predicted 8.48–17.36% more calls on later rows. The latter is a fixed-volume sensitivity check. Both findings are local to the archived fixture. Native shell allocation stays in place. A candidate for the next bounded diagnostic is whether pre-likelihood geometry indicators predict where the high weights occur within a shell on held-out draws, before proposing an algorithm change.
 
 Eight native ESS, evidence and count receipts reconciled; independent raw-row calculations reproduced the weighting and allocation results. All 111 tooling tests, Ruff and catalogue validation passed. Scoped Heart dev-ship readiness was green. [Full diagnostic, model assumptions and per-case numbers](https://github.com/PyAutoLabs/autofit_profiling/blob/540497fdb77e2987c63e36f7d26eb6890f5ec3f4/experiments/nautilus_shell_efficiency/README.md). Wider phase 0b remains open and Pulse promotion stays deferred.
+
+## Within-shell geometry signal — 2026-11-25
+
+[Phase issue](https://github.com/PyAutoLabs/autofit_profiling/issues/38) tests whether frozen ellipsoid and neural scores identify high-weight draws in the held-out half of each independent 30D shell. [Registered decision rule](../../../active/nautilus_shell_geometry_signal.md).

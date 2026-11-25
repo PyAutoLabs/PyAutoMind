@@ -241,3 +241,14 @@
 - coordination: human-approved claim override 2026-11-25 for PyAutoLens: the claim by `cluster-family-fit-figures` is stale (its PyAutoLens#884 is MERGED; it touched cluster/point plotting only); this task edits only autolens/analysis/runtime_estimate.py and its tests
 - epic: likelihood-lifecycle (phase 5 follow-up, before 5F)
 - tier: judge — merge mode: human /prm (Array → Fit → Galaxy → Lens)
+
+## nautilus-shell-geometry-signal
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/38
+- issued: 2026-11-25
+- status: workspace-dev
+- prompt: active/nautilus_shell_geometry_signal.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-geometry-signal
+- repos:
+  - autofit_profiling: feature/nautilus-shell-geometry-signal
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
