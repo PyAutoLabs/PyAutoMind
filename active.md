@@ -214,3 +214,14 @@
 - retained-repos: autofit_profiling (feature/nautilus-30d-matched-ess); PR #35 awaits review. Coding claim transferred to nautilus-shell-efficiency.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## nautilus-shell-efficiency
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/36
+- issued: 2026-11-25
+- status: workspace-dev
+- prompt: active/nautilus_shell_efficiency.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-efficiency
+- repos:
+  - autofit_profiling: feature/nautilus-shell-efficiency
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm

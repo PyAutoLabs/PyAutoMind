@@ -229,3 +229,7 @@ All 111 tooling tests, Ruff and the catalogue validator passed. The bounded atte
 The large early underestimate occurred in all three independent explorations. Its residual at matched ESS has mixed signs on this analytic fixture. Three full explorations give a descriptive comparison and leave uncertainty calibration open. The seed-0 conditional repetitions remain separate. Native reopening and independent HDF5 reconstruction matched all endpoints across 3,906,700 fresh samples. The original checkpoint hashes were preserved. [Per-seed comparison and receipts](https://github.com/PyAutoLabs/autofit_profiling/blob/04ca731d1ddd244f3dca034a28d6485efcf25477/experiments/nautilus_30d_matched_ess/README.md).
 
 All 111 tooling tests passed on rerun; one supervisor timing test initially failed and passed in isolation. Ruff and catalogue validation passed. The phase 0b independent 30D endpoint check is complete. Wider 0b remains open, native cadence is retained, and Pulse promotion is deferred.
+
+## Dimension-dependent fresh-sample efficiency — 2026-11-25
+
+[Phase issue](https://github.com/PyAutoLabs/autofit_profiling/issues/36) examines within-shell weights and allocation using the completed 5D, 10D and 30D direct Gaussian fits. [Registered diagnostic](../../../active/nautilus_shell_efficiency.md).
