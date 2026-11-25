@@ -1573,7 +1573,7 @@ Use the start-dev skill. active/nautilus_worker_headroom.md
 
 </details>
 
-<details><summary>📋 <a href="active/nightly_rehearsal_ancestry_check.md">Nightly release driver never runs Heart's rehearsal-ancestry check</a> — issued 2026-11-25</summary>
+<details><summary>📋 <a href="active/nightly_rehearsal_ancestry_check.md">Nightly release driver never runs Heart's rehearsal-ancestry check</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/721">issue #721</a> — issued 2026-11-25 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/nightly_rehearsal_ancestry_check.md
