@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 22 in flight",
-  "updated": "2026-11-25T10:41:59Z",
+  "updated": "2026-11-25T10:48:09Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -93,6 +93,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Do frozen Nautilus bounds predict the high-weight draws inside a shell? \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/39",
+      "prompt": "Use the start-dev skill. active/nautilus_shell_geometry_signal.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
       "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
@@ -120,12 +126,6 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#709 \u2014 likelihood-lifecycle-p5b-array",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/709",
-      "prompt": null
     }
   ]
 }
