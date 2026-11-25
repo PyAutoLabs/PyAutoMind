@@ -1453,7 +1453,7 @@ Use the start-dev skill. active/nautilus_bound_cadence.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_bound_core_scaling.md">Does parallel native ensemble training shorten complete Nautilus fits?</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/40">issue #40</a> — issued 2026-11-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/nautilus_bound_core_scaling.md">Does parallel native ensemble training shorten complete Nautilus fits?</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/40">issue #40</a> — issued 2026-11-25 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/41">autofit_profiling#41</a></summary>
 
 ```
 Use the start-dev skill. active/nautilus_bound_core_scaling.md
