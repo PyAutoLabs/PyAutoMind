@@ -295,3 +295,16 @@
   - autofit_profiling: feature/nautilus-gpu-feed
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## simple-cluster-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/536
+- issued: 2026-11-25
+- session: Codex desktop
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/537
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/simple-cluster-profiling
+- repos:
+  - autolens_profiling: feature/simple-cluster-profiling
+- prompt: active/simple_cluster_profiling.md
+- epic: cluster-usability
+- tier: judge
