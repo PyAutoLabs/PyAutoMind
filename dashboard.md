@@ -10,10 +10,10 @@
 |-------|------:|
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
-| [Epics](#epics) | 25 |
+| [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 30 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 292 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -56,7 +56,7 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 17
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -1270,6 +1270,43 @@ Use the start-dev skill. draft/research/pyautobrain/ecosystem_review_for_autonom
 </details>
 
 <details>
+<summary><b>Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</b> — 3 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</b> — ledger: <code>draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md</code> — SLICED 2026-11-25 by <code>batch slice</code> into 3 children…</summary>
+
+```
+Continue the 'Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)' epic. Its canonical state lives in draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phases in order: 1 Building blocks (PyAutoGalaxy) → 2 The mass-sheet-frame profile (PyAutoGalaxy, PyAutoLens) → 3 Workspace example (autolens_workspace)
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s1_building_blocks.md">Building blocks</a> — autogalaxy · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s1_building_blocks.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame_profile.md">The mass-sheet-frame profile</a> — autogalaxy · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame_profile.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_workspace_example.md">Workspace example</a> — autogalaxy · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_workspace_example.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
@@ -1720,7 +1757,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 234 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1771,7 +1808,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1785,6 +1822,14 @@ Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md">Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</a> — autogalaxy · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md
 ```
 
 </details>
