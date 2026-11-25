@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2391 records across 11 buckets.
+2392 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -332,6 +332,7 @@ markers; everything below GENERATED is rebuilt.
 - [nfwtruncatedsph-convergence-loses-precision-near-scale-radius](2026/11/nfwtruncatedsph-convergence-loses-precision-near-scale-radius.md)
 - [nfwtruncatedsph-small-radius-deflection](2026/11/nfwtruncatedsph-small-radius-deflection.md)
 - [nfwtruncatedsph-total-mass](2026/11/nfwtruncatedsph-total-mass.md)
+- [nightly-rehearsal-ancestry](2026/11/nightly-rehearsal-ancestry.md)
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
 - [no-untimed-network-downloads-check](2026/11/no-untimed-network-downloads-check.md)
 - [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)

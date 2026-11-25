@@ -1,3 +1,11 @@
+The scheduled-nightly release driver (`agents/conductors/release/nightly.sh`, step 4c) now runs PyAutoHeart's `heart.checks.rehearsal_ancestry` after the validation ingest and before `state.aggregate()`, non-fatal like `ci_status`. Before this, any library `main` that moved during the ~1h validation window read as "ancestry unproven" and the release-ci gate returned STALE, which blocked the nightly on 2026-11-23, 24 and 25 (anchor stuck at 2026-11-22T09:26:59Z) despite M2.4 (PyAutoHands#337).
+
+Verified: `bash -n`; new `test_nightly_proves_rehearsal_ancestry_before_aggregate` passes on the branch and fails on old main; full Brain suite 2506 passed / 1 skipped; Heart's module run on a fixture `HEART_STATE_DIR` with the 2026-11-25 pattern proved PyAutoFit (ahead 3) and PyAutoLens (ahead 8) as ancestors. PR CI green (pytest 3.12, 3.13).
+
+Not yet proven live: the first scheduled nightly with mid-window merges should report `ahead_by` instead of "ancestry unproven".
+
+## Original prompt
+
 # Nightly release driver never runs Heart's rehearsal-ancestry check
 
 Type: bug
