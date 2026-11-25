@@ -270,8 +270,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/189
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Science session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/hpc-sync-zip-count-set-e
+- prs:
+  - https://github.com/PyAutoLabs/autolens_assistant/pull/190
+  - https://github.com/PyAutoLabs/autogalaxy_assistant/pull/50
+  - https://github.com/PyAutoLabs/autofit_assistant/pull/65
 - repos:
   - autolens_assistant: feature/hpc-sync-zip-count-set-e
   - autogalaxy_assistant: feature/hpc-sync-zip-count-set-e
