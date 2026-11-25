@@ -211,7 +211,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/35
 - prompt: active/nautilus_30d_matched_ess.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-matched-ess
-- repos:
-  - autofit_profiling: feature/nautilus-30d-matched-ess
+- retained-repos: autofit_profiling (feature/nautilus-30d-matched-ess); PR #35 awaits review. Coding claim transferred to nautilus-shell-efficiency.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
