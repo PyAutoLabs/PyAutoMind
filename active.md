@@ -306,3 +306,15 @@
   - autolens_inference: feature/nautilus-ring-gpu-feed
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5g
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/191
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5g
+- repos:
+  - autolens_assistant: feature/likelihood-lifecycle-p5g-assistant
+- prompt: active/likelihood_lifecycle_p5g_assistant_setup.md
+- epic: likelihood-lifecycle (phase 5G; merge with/after the library release)
+- tier: judge — merge mode: human /prm
