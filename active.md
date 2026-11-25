@@ -230,9 +230,20 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/754
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: library-dev
+- status: library-shipped, awaiting-merge (5 PRs on feature/auto-setup-banner; merge order Nerves → Array → Fit → Galaxy → Lens)
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/224
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/224
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/713
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/713
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1797
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1797
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/889
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/889
 - worktree: /home/jammy/Code/PyAutoLabs-wt/auto-setup-banner
 - repos:
+  - PyAutoNerves: feature/auto-setup-banner
   - PyAutoArray: feature/auto-setup-banner
   - PyAutoFit: feature/auto-setup-banner
   - PyAutoGalaxy: feature/auto-setup-banner
