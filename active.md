@@ -280,3 +280,11 @@
   - autolens_inference: feature/nautilus-ring-latent-placement
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## intake-memory-workspace-root
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/723
+- issued: 2026-11-25
+- status: issued
+- prompt: active/intake_apply_crashes_on_memory_citations_when.md
+- summary: |
+    Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.

@@ -1450,7 +1450,7 @@ Use the start-dev skill. active/cluster_family_fit_figures.md
 
 </details>
 
-<details><summary>📋 <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> — issued 2026-11-25</summary>
+<details><summary>📋 <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/723">issue #723</a> — issued 2026-11-25 — issued</summary>
 
 ```
 Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
