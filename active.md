@@ -311,7 +311,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/191
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release — wiki-currency checks released autolens)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/192
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5g
 - repos:
   - autolens_assistant: feature/likelihood-lifecycle-p5g-assistant
