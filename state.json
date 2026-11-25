@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 27 in flight",
-  "updated": "2026-11-25T20:23:35Z",
+  "headline": "RED \u2014 23 picks \u00b7 26 in flight",
+  "updated": "2026-11-25T20:32:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -42,12 +42,6 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Likelihood lifecycle phase 5G: autolens_assistant: an `al_explain_setup` skill and an \"auto unless\u2026\"\u2026 \u2014 workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release \u2014 wiki-currency\u2026",
-      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/192",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5g_assistant_setup.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "Measure ellipsoid fitting inside a complete native Nautilus fit \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/21",
       "prompt": "Use the start-dev skill. active/nautilus_whole_fit_geometry.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Bound the whole-fit gain available from scheduling two CPU workers \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/29",
+      "prompt": "Use the start-dev skill. active/nautilus_worker_headroom.md"
     }
   ]
 }

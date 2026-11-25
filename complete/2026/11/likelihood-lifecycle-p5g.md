@@ -1,3 +1,17 @@
+## likelihood-lifecycle-p5g
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/191
+- completed: 2026-11-25
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/192
+- epic: likelihood-lifecycle (phase 5G)
+
+autolens_assistant adopts the automatic compute setup: new `skills/al_explain_setup.md` (reads setup.json/parallel.json, quotes the setup_rules.yaml rule, explains the estimate, flags untested branches) and `al_configure_search` "Compute setup: auto unless…" (stale sparse claims fixed), plus README/AGENTS/skill edits and tests. Merged after library release 2026.11.25.1.
+
+Trap: the PR's wiki-currency check failed on API drift against the pre-release baseline; a re-run reuses the old `refs/pull/N/merge`, so it stays red. The release commit on assistant main re-pins the baseline (03696c6), so merging main into the branch fixes it; no local `--write-baseline` needed.
+
+Follow-up (now unblocked): `draft/feature/autolens_assistant/hpc_setup_flag_and_wiki_auto_setup.md`.
+
+## Original prompt
+
 # Likelihood lifecycle phase 5G: autolens_assistant: an `al_explain_setup` skill and an "auto unless…" rewrite of `al_configure_search`
 
 Type: feature

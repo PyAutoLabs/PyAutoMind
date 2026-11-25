@@ -270,19 +270,6 @@
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
-## likelihood-lifecycle-p5g
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/191
-- issued: 2026-11-25
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release — wiki-currency checks released autolens)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/192
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5g
-- repos:
-  - autolens_assistant: feature/likelihood-lifecycle-p5g-assistant
-- prompt: active/likelihood_lifecycle_p5g_assistant_setup.md
-- epic: likelihood-lifecycle (phase 5G; merge with/after the library release)
-- tier: judge — merge mode: human /prm
-
 ## nautilus-ring-latent-placement
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/76
 - issued: 2026-11-25
