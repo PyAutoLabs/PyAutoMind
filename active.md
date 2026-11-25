@@ -320,3 +320,15 @@
 - prompt: active/likelihood_lifecycle_p5g_assistant_setup.md
 - epic: likelihood-lifecycle (phase 5G; merge with/after the library release)
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5h
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/141
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5h
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/likelihood-lifecycle-p5h-setup
+- prompt: active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md
+- epic: likelihood-lifecycle (phase 5H; merge with/after the library release; HPCPullPyAuto before RAL use)
+- tier: judge — merge mode: human /prm
