@@ -30,7 +30,7 @@ Human ruling R4 (2026-11-17): M3.3 is two sheets. This is the one after a shift.
 ## What
 
 **Scope changed 2026-11-24 (human-approved in chat).** Item 1's numbered block is built by
-PyAutoBrain#718: a numbered review table at the top of the digest, grouped by the human's next
+PyAutoBrain#718 (shipped 2026-11-25, PyAutoBrain#719; `complete/2026/11/digest-review-table.md`): a numbered review table at the top of the digest, grouped by the human's next
 action (`/prm`, answer, fix, blocked, running, done), with `decision-taken` and refusal reasons
 in its Note column. What remains here: item 2 (workers file untested risks as inbox entries),
 and set-aside writes and late arrivals as rows in that table.

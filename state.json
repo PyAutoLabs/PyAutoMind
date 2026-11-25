@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 28 in flight",
-  "updated": "2026-11-25T20:16:24Z",
+  "headline": "RED \u2014 23 picks \u00b7 27 in flight",
+  "updated": "2026-11-25T20:23:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -42,12 +42,6 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
-      "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
       "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Measure ellipsoid fitting inside a complete native Nautilus fit \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/21",
+      "prompt": "Use the start-dev skill. active/nautilus_whole_fit_geometry.md"
     }
   ]
 }

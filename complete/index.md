@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2395 records across 11 buckets.
+2396 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -200,6 +200,7 @@ markers; everything below GENERATED is rebuilt.
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
 - [deliverable-block-wave-575](2026/11/deliverable-block-wave-575.md)
 - [dev-metrics-boards](2026/11/dev-metrics-boards.md)
+- [digest-review-table](2026/11/digest-review-table.md) — PyAutoBrain#719. The shift digest opens with a numbered `### Review table` (after the closed-early line and in…
 - [dna-policies-section](2026/11/dna-policies-section.md)
 - [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…

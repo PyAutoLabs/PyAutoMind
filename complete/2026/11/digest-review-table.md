@@ -1,3 +1,17 @@
+## digest-review-table
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/718
+- completed: 2026-11-25
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/719
+- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/606
+- epic: autonomous-orchestrators (M3; before the M3 gate shift; folds M3.3 slice 2 item 1)
+- summary: PyAutoBrain#719. The shift digest opens with a numbered `### Review table` (after the closed-early line and inbox notice, before `### Brief work`), with one count line above it. Groups in order, empty ones left out: Merge: your /prm · Answer: question on the issue · Fix: CI failed or crashed · Blocked or not started · Still running · Done (plus Proposed (shadow) on a shadow brief). Each task sits in its single most urgent group; an unrecognised state fails toward Merge. Rows numbered 1..N; Work lists PRs as `repo#n` in merge order with "after repo#m"; cells escape `|`, `<`, `>`. Everything from `### Brief work` down is byte-identical; `validate`/`_slug` ignore the table. PyAutoMind#606 documents it in `batches/AGENTS.md`.
+- trigger: human review of shift 2026-11-24-am: "a more structured table like format ... so I know what needs comments, prm, was blocked".
+- witness: PASS. Replaying 2026-11-24-am put all 9 tasks in exactly one row, PRs in merge order, `validate` → `[]`; all 19 real slots replayed under HEALTHY/RUNNING/FAILED (57 builds) clean. Brain 2544 passed; Mind 1056 passed.
+- review: independent fresh-context review round 1 FINDINGS (branch-updated PR with CI FAILED landed in Still running; CI-running and sweep waits belong in Merge; others), all fixed in bd4b2e6; round 2 CLEAN.
+- heart: GREEN (dev-ship gate); judge tier, human /prm.
+
+## Original prompt
+
 # Shift digest: open with one review table grouped by what the human does next
 
 Type: feature
