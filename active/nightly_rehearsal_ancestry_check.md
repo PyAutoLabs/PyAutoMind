@@ -10,6 +10,8 @@ Consequence: judge
 Priority: high
 Status: draft
 Filed: 2026-11-25
+Issued: 2026-11-25
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/721
 Lane: any
 
 Bug fix in PyAutoBrain: the scheduled-nightly release driver
