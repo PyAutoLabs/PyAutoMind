@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 20 in flight",
-  "updated": "2026-11-25T09:48:18Z",
+  "updated": "2026-11-25T09:54:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -87,6 +87,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Diagnose the loss of fresh-sample efficiency across dimensions \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/37",
+      "prompt": "Use the start-dev skill. active/nautilus_shell_efficiency.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
       "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#709 \u2014 likelihood-lifecycle-p5b-array",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/709",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#710 \u2014 likelihood-lifecycle-p5b-array",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/710",
       "prompt": null
     }
   ]
