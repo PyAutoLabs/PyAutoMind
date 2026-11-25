@@ -1453,7 +1453,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p5g_assistant_setup.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md">Likelihood lifecycle phase 5H: euclid_strong_lens_modeling_pipeline: <code>--setup</code> replaces <code>--use_cpu</code>, <code>--number_of_cores auto</code>…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/141">issue #141</a> — issued 2026-11-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md">Likelihood lifecycle phase 5H: euclid_strong_lens_modeling_pipeline: <code>--setup</code> replaces <code>--use_cpu</code>, <code>--number_of_cores auto</code>…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/141">issue #141</a> — issued 2026-11-25 — workspace-shipped, awaiting-merge (euclid_strong_lens_modeling_pipeline#142 OPEN f80ccef; merge with/after the library release… — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142">euclid_strong_lens_modeling_pipeline#142</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md

@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 29 in flight",
-  "updated": "2026-11-25T14:02:53Z",
+  "updated": "2026-11-25T14:17:49Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -60,6 +60,12 @@
       "text": "Likelihood lifecycle phase 5G: autolens_assistant: an `al_explain_setup` skill and an \"auto unless\u2026\"\u2026 \u2014 workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release \u2014 wiki-currency\u2026",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/192",
       "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5g_assistant_setup.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5H: euclid_strong_lens_modeling_pipeline: `--setup` replaces `--use_cpu`, `--number_of_cores auto`\u2026 \u2014 workspace-shipped, awaiting-merge (euclid_strong_lens_modeling_pipeline#142 OPEN f80ccef; merge with/after the library release\u2026",
+      "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "Diagnose the loss of fresh-sample efficiency across dimensions \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/37",
       "prompt": "Use the start-dev skill. active/nautilus_shell_efficiency.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Do frozen Nautilus bounds predict the high-weight draws inside a shell? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/39",
-      "prompt": "Use the start-dev skill. active/nautilus_shell_geometry_signal.md"
     }
   ]
 }
