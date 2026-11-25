@@ -248,8 +248,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/41
 - prompt: active/nautilus_bound_core_scaling.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-core-scaling
-- repos:
-  - autofit_profiling: feature/nautilus-bound-core-scaling
+- retained-repos: autofit_profiling (feature/nautilus-bound-core-scaling); PR #41 awaits review. Coding claim transferred to nautilus-gpu-feed.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
@@ -275,4 +274,15 @@
 - prompt: active/make_the_source_adapt_image_hilbert_image.md
 - note: research, no claim/worktree. Library phase (PyAutoArray, PyAutoGalaxy), workspace phase (autolens_workspace) and docs are filed as their own prompts after the human judges the fits; suggested branch feature/adapt-mesh-weighting. Human added 5 COWLS M25 lenses (F150W, F277W) on 2026-11-25.
 - next: gate 1, the human picks 1-2 candidate weightings from Science/development/adapt_snr_cap/results/weighting/index.html
+- tier: judge — merge mode: human /prm
+
+## nautilus-gpu-feed
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/42
+- issued: 2026-11-25
+- status: workspace-dev
+- prompt: active/nautilus_gpu_feed.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-gpu-feed
+- repos:
+  - autofit_profiling: feature/nautilus-gpu-feed
+- epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
