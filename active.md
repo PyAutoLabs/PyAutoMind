@@ -218,7 +218,8 @@
 ## nautilus-shell-efficiency
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/36
 - issued: 2026-11-25
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/37
 - prompt: active/nautilus_shell_efficiency.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-efficiency
 - repos:
