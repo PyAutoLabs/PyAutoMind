@@ -11,7 +11,9 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-25
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/688
 Consequence: judge
 Witness: `autolens_workspace/scripts/guides/advanced/auto_setup.py` exists (with its generated notebook) and explains, runnable in test mode:
 - what `setup="auto"` decides (backend, device, operator, precision, transformer, threads, `number_of_cores="auto"`) and what it never decides (model, sampler, HPC request);

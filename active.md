@@ -251,3 +251,17 @@
   - autofit_profiling: feature/nautilus-bound-core-scaling
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5f
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/688
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: workspace-dev (PR1 workspace core + PR3 HowToLens in progress; PR2 SLaM gated on a JAX→numba chained-fit test)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5f
+- repos:
+  - autolens_workspace: feature/likelihood-lifecycle-p5f1-workspace
+  - HowToLens: feature/likelihood-lifecycle-p5f3-howtolens
+- prompt: active/likelihood_lifecycle_p5f_workspace_setup.md
+- coordination: human-approved claim override 2026-11-25 for autolens_workspace (held by `cluster-family-fit-figures` PR #687: scripts/cluster/plot.py + generated indexes; and `sensitivity_slam_source_pixelized_mappervalued`: subhalo/sensitivity/slam_source_pixelized.py, which 5F leaves untouched). Whichever merges second regenerates llms-full.txt / workspace_index.json.
+- epic: likelihood-lifecycle (phase 5F; three PRs; merge with/after the release carrying 5A–5E + banner)
+- tier: judge — merge mode: human /prm
