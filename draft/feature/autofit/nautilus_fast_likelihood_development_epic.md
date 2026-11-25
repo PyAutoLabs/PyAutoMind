@@ -283,3 +283,5 @@ All arms followed identical ordered proposals. Across 29,300 paired JAX CPU/GPU 
 ## Matched derived-output placement — 2026-11-25
 
 [Inference phase #76](https://github.com/PyAutoLabs/autolens_inference/issues/76) will test CPU placement after GPU sampling using both saved JWST ring posteriors. [Registered controls and gates](../../../active/nautilus_ring_latent_placement.md).
+
+Matched replay passed on both retained posteriors. All 1,000 derived values and both native summaries agreed within tolerance. A fresh CPU worker including setup and return reduced the stage from 45.82 to 21.26 s and 46.98 to 21.99 s. Four end-to-end GPU fits are in progress.
