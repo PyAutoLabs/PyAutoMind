@@ -1437,7 +1437,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p5f_workspace_setup.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5g_assistant_setup.md">Likelihood lifecycle phase 5G: autolens_assistant: an <code>al_explain_setup</code> skill and an "auto unless…"…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/191">issue #191</a> — issued 2026-11-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5g_assistant_setup.md">Likelihood lifecycle phase 5G: autolens_assistant: an <code>al_explain_setup</code> skill and an "auto unless…"…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/191">issue #191</a> — issued 2026-11-25 — workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release — wiki-currency… — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/192">autolens_assistant#192</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5g_assistant_setup.md

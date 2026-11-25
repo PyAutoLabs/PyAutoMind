@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 27 in flight",
-  "updated": "2026-11-25T13:30:31Z",
+  "updated": "2026-11-25T13:43:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -54,6 +54,12 @@
       "text": "Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a `guides/advanced` auto-setup guide, retired\u2026 \u2014 workspace-shipped, awaiting-merge (all 3 PRs OPEN: PR1 autolens_workspace#689, PR2 autolens_workspace#690 (merge after #689), PR3\u2026",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/pull/689",
       "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5f_workspace_setup.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5G: autolens_assistant: an `al_explain_setup` skill and an \"auto unless\u2026\"\u2026 \u2014 workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release \u2014 wiki-currency\u2026",
+      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/192",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5g_assistant_setup.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
       "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Measure ellipsoid fitting inside a complete native Nautilus fit \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/21",
-      "prompt": "Use the start-dev skill. active/nautilus_whole_fit_geometry.md"
     }
   ]
 }
