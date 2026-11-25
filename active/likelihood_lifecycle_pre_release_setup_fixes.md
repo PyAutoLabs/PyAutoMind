@@ -28,6 +28,7 @@ Epic: likelihood-lifecycle
 Phase: 5
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-11-25
+Issued: 2026-11-25
 Supersedes:
 - draft/bug/autogalaxy/setup_auto_unresolved_before_fit_print_vram_use.md
 - draft/feature/autolens/estimate_runtime_accept_auto.md

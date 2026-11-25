@@ -343,3 +343,16 @@
   - autolens_inference: feature/nautilus-ring-latent-placement
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5-setup-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/756
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: library-dev
+- repos:
+  - PyAutoFit: feature/likelihood-lifecycle-p5-setup-fixes
+  - PyAutoGalaxy: feature/likelihood-lifecycle-p5-setup-fixes
+  - PyAutoLens: feature/likelihood-lifecycle-p5-setup-fixes
+- prompt: active/likelihood_lifecycle_pre_release_setup_fixes.md
+- epic: likelihood-lifecycle (phase 5 pre-release fixes; merge Fit → Galaxy → Lens, pending-release; must land before the release carrying 5A–5E + banner)
+- note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap 2026-11-25
