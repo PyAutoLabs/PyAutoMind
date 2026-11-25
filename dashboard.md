@@ -1405,7 +1405,7 @@ Use the start-dev skill. active/digest_review_action_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p5_setup_banner.md">Likelihood lifecycle phase 5 follow-up: a concise automatic compute-setup banner at fit…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/754">issue #754</a> — issued 2026-11-25 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p5_setup_banner.md">Likelihood lifecycle phase 5 follow-up: a concise automatic compute-setup banner at fit…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/754">issue #754</a> — issued 2026-11-25 — library-shipped, awaiting-merge (5 PRs on feature/auto-setup-banner; merge order Nerves → Array → Fit → Galaxy → Lens) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/224">PyAutoNerves#224</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/713">PyAutoArray#713</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1797">PyAutoFit#1797</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755">PyAutoGalaxy#755</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/889">PyAutoLens#889</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p5_setup_banner.md
@@ -3355,12 +3355,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#713](https://github.com/PyAutoLabs/PyAutoArray/pull/713) — `active/likelihood_lifecycle_p5_setup_banner.md`
 - [PyAutoArray#709](https://github.com/PyAutoLabs/PyAutoArray/pull/709) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
 - [PyAutoArray#710](https://github.com/PyAutoLabs/PyAutoArray/pull/710) — `complete/2026/11/likelihood-lifecycle-p5b-array.md`
 - [PyAutoArray#712](https://github.com/PyAutoLabs/PyAutoArray/pull/712) — `complete/2026/11/likelihood-lifecycle-p5b3-array.md`
 
 **PyAutoFit**
 
+- [PyAutoFit#1797](https://github.com/PyAutoLabs/PyAutoFit/pull/1797) — `active/likelihood_lifecycle_p5_setup_banner.md`
 - [PyAutoFit#1791](https://github.com/PyAutoLabs/PyAutoFit/pull/1791) — `complete/2026/11/grid-factor-results.md`
 - [PyAutoFit#1795](https://github.com/PyAutoLabs/PyAutoFit/pull/1795) — `complete/2026/11/likelihood-lifecycle-p5d-fit.md`
 - [PyAutoFit#1796](https://github.com/PyAutoLabs/PyAutoFit/pull/1796) — `complete/2026/11/likelihood-lifecycle-p5e.md`
@@ -3369,6 +3371,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#755](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/755) — `active/likelihood_lifecycle_p5_setup_banner.md`
 - [PyAutoGalaxy#745](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoGalaxy#752](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/752) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoGalaxy#753](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/753) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
@@ -3377,6 +3380,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#889](https://github.com/PyAutoLabs/PyAutoLens/pull/889) — `active/likelihood_lifecycle_p5_setup_banner.md`
 - [PyAutoLens#878](https://github.com/PyAutoLabs/PyAutoLens/pull/878) — `complete/2026/11/database-dataset-fits.md`
 - [PyAutoLens#882](https://github.com/PyAutoLabs/PyAutoLens/pull/882) — `complete/2026/11/likelihood-lifecycle-p5c-galaxy-lens.md`
 - [PyAutoLens#886](https://github.com/PyAutoLabs/PyAutoLens/pull/886) — `complete/2026/11/likelihood-lifecycle-p5c3.md`
@@ -3385,6 +3389,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoNerves**
 
+- [PyAutoNerves#224](https://github.com/PyAutoLabs/PyAutoNerves/pull/224) — `active/likelihood_lifecycle_p5_setup_banner.md`
 - [PyAutoNerves#223](https://github.com/PyAutoLabs/PyAutoNerves/pull/223) — `complete/2026/11/likelihood-lifecycle-p5a-nerves.md`
 
 
