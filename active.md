@@ -331,3 +331,14 @@
 - prompt: active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md
 - epic: likelihood-lifecycle (phase 5H; merge with/after the library release; HPCPullPyAuto before RAL use)
 - tier: judge — merge mode: human /prm
+
+## nautilus-ring-latent-placement
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/76
+- issued: 2026-11-25
+- status: workspace-dev
+- prompt: active/nautilus_ring_latent_placement.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ring-latent-placement
+- repos:
+  - autolens_inference: feature/nautilus-ring-latent-placement
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
