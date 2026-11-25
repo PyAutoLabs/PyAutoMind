@@ -265,3 +265,13 @@
 - coordination: human-approved claim override 2026-11-25 for autolens_workspace (held by `cluster-family-fit-figures` PR #687: scripts/cluster/plot.py + generated indexes; and `sensitivity_slam_source_pixelized_mappervalued`: subhalo/sensitivity/slam_source_pixelized.py, which 5F leaves untouched). Whichever merges second regenerates llms-full.txt / workspace_index.json.
 - epic: likelihood-lifecycle (phase 5F; three PRs; merge with/after the release carrying 5A–5E + banner)
 - tier: judge — merge mode: human /prm
+
+## adapt-mesh-weighting
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/714
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Science session (Fable 5.2)
+- status: research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)
+- prompt: active/make_the_source_adapt_image_hilbert_image.md
+- note: research, no claim/worktree. Library phase (PyAutoArray, PyAutoGalaxy), workspace phase (autolens_workspace) and docs are filed as their own prompts after the human judges the fits; suggested branch feature/adapt-mesh-weighting. Human added 5 COWLS M25 lenses (F150W, F277W) on 2026-11-25.
+- next: gate 1, the human picks 1-2 candidate weightings from Science/development/adapt_snr_cap/results/weighting/index.html
+- tier: judge — merge mode: human /prm

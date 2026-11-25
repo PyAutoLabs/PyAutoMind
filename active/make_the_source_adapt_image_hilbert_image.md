@@ -14,6 +14,7 @@ Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
 Lane: ral
+Issued: 2026-11-25
 
 ## Background (read these first)
 - Evidence and audit that motivated this:
