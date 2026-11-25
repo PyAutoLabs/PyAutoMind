@@ -23,3 +23,7 @@ Advance a score to a bounded support-preserving proposal experiment only if it a
 
 Issued: 2026-11-25
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/38
+
+## Outcome
+
+[Draft PR #39](https://github.com/PyAutoLabs/autofit_profiling/pull/39). On the three independent seeds, ellipsoid distance captured 64.32–84.06% of held-out squared weight at about 10% selection. Only ellipsoid distance qualified for the support-preserving proposal experiment. [Results and validation](https://github.com/PyAutoLabs/autofit_profiling/blob/406a436acbf78e701644f6d82349a4cbb597996c/experiments/nautilus_shell_geometry_signal/README.md). Awaiting human review.

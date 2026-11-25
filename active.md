@@ -245,7 +245,8 @@
 ## nautilus-shell-geometry-signal
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/38
 - issued: 2026-11-25
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/39
 - prompt: active/nautilus_shell_geometry_signal.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-geometry-signal
 - repos:
