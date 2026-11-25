@@ -144,7 +144,7 @@ epic, never picked standalone.
 ## cluster-usability
 - title: Cluster usability — three datasets for visualization, profiling, inference and teaching
 - ledger: draft/feature/autolens/cluster_usability.md
-- status: Simple and Pandora figures live on PyAutoEyes. MACS J0416 first figures ready for author review.
+- status: Simple and Pandora figures live on PyAutoEyes. Nine MACS J0416 figures approved by the author and in review for publication.
 - notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532; validation of a present but malformed member CSV remains.
 
 ## cluster-strong-lensing
