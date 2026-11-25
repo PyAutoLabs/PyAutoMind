@@ -21,3 +21,7 @@ Use two paired seeds, reversed orders, an application-style 100-point Gaussian-p
 Use 64 copies for the heavier case, average the repeated log likelihood, and use seeds 1 and 2. Compare common log likelihoods at rtol 5e-12 / atol 1e-8. For full fits require valid native stopping, absolute paired log-evidence difference <= 0.1, marginal means within 0.1 serial posterior standard deviations and relative ESS within 10%. Report trajectory equality separately.
 
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/42
+
+## Outcome
+
+[Draft profiling PR #43](https://github.com/PyAutoLabs/autofit_profiling/pull/43) awaits human review. Neither workload met the registered speed criterion. Retain native defaults. [All paired timings and correctness checks](https://github.com/PyAutoLabs/autofit_profiling/blob/7db263c56cddd3c177aab815cce467b0393ed537/experiments/nautilus_gpu_feed/README.md).

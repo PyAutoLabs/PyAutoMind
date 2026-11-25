@@ -282,7 +282,8 @@
 ## nautilus-gpu-feed
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/42
 - issued: 2026-11-25
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/43
 - prompt: active/nautilus_gpu_feed.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-gpu-feed
 - repos:
