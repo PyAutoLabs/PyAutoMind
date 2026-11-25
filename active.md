@@ -244,7 +244,8 @@
 ## nautilus-bound-core-scaling
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/40
 - issued: 2026-11-25
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/41
 - prompt: active/nautilus_bound_core_scaling.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-core-scaling
 - repos:

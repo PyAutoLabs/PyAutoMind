@@ -19,3 +19,7 @@ Use the baseline arm of [the application-fit protocol](https://github.com/PyAuto
 Run sequentially with rotated arm order for seeds 1–3 in both fixtures. Include executor setup, dispatch and teardown in complete fit wall. Measure neural training, remaining bound geometry, concurrent training CPU and rest of fit. Report each paired ratio, medians by fixture, and numerical parity. Treat a worker count as a promising follow-up only if its median whole-fit improvement is at least 5% on both fixtures, every matched fit improves, and parity holds. Record negative or mixed results. Use the existing [Pulse producer task](https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/autofit_profiling_bootstrap.md). Local experiment only. Update the epic and open a draft PR for human review.
 
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/40
+
+## Outcome
+
+[Draft profiling PR #41](https://github.com/PyAutoLabs/autofit_profiling/pull/41) awaits human review. Both threaded arms were slower on every paired whole fit. Retain native serial training. [Timings and parity checks](https://github.com/PyAutoLabs/autofit_profiling/blob/27da441f6c5416c981858e70b5f9bfde62a8a637/experiments/nautilus_bound_core_scaling/README.md).
