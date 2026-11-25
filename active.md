@@ -348,7 +348,11 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/193
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; release check-in chat)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/194
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/51
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/66
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/45
 - worktree: /home/jammy/Code/PyAutoLabs-wt/wiki-currency-install-retry
 - repos:
   - autolens_assistant: feature/wiki-currency-install-retry
