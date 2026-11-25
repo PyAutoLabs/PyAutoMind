@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 25 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 282 |
+| [Backlog](#backlog) | 284 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -331,7 +331,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 7 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -381,10 +381,26 @@ Use the start-dev skill. draft/research/autolens_profiling/piecewise_constant_im
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/setup_auto_unresolved_before_fit_print_vram_use.md"><code>setup="auto"</code> analyses raise a misleading SetupException when used before <code>search.fit</code> (e.g</a> — autogalaxy · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/setup_auto_unresolved_before_fit_print_vram_use.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md">Legacy numba "production" presets in autolens_profiling deviate from the real production pipeline</a> — autolens_profiling · small · supervised · medium</summary>
 
 ```
 Use the start-dev skill. draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/estimate_runtime_accept_auto.md"><code>al.estimate_runtime</code> accepts <code>setup="auto"</code> and <code>number_of_cores="auto"</code>, and says "no estimate" instead of returning…</a> — autolens · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/estimate_runtime_accept_auto.md
 ```
 
 </details>
@@ -1664,7 +1680,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 226 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 228 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
