@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 20 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 282 |
+| [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1632,7 +1632,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 227 · ral 30 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 227 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1683,7 +1683,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 38</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1881,6 +1881,14 @@ Use the start-dev skill. draft/feature/autoarray/rectangular_multi_submesh.md
 
 ```
 Use the start-dev skill. draft/feature/autogalaxy/piemass_potential.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_assistant/fiducial_lens_and_pixelised_source_set_up.md">Fiducial lens and pixelised-source set-up for each setting, so pixelisation fits…</a> — autolens_assistant · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_assistant/fiducial_lens_and_pixelised_source_set_up.md
 ```
 
 </details>
