@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 30 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 291 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1744,7 +1744,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 233 · ral 31 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 233 · ral 33 · local-dev 13 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2477,7 +2477,7 @@ Use the start-dev skill. draft/bug/autolens/twins_provenance_versions.md
 </details>
 
 <details>
-<summary><b>research</b> — 26</summary>
+<summary><b>research</b> — 28</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2619,6 +2619,22 @@ Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_r
 
 ```
 Use the start-dev skill. draft/research/libraries/plus_y_north_at_fits_load.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md">Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay</a> — autoarray · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md">Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…</a> — autoarray · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
 ```
 
 </details>
@@ -3347,7 +3363,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3392,7 +3408,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- _… and 76 more_
+- _… and 78 more_
 
 </details>
 
