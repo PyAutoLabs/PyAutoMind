@@ -222,8 +222,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/37
 - prompt: active/nautilus_shell_efficiency.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-efficiency
-- repos:
-  - autofit_profiling: feature/nautilus-shell-efficiency
+- retained-repos: autofit_profiling (feature/nautilus-shell-efficiency); PR #37 awaits review. Coding claim transferred to nautilus-shell-geometry-signal.
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
