@@ -1,3 +1,30 @@
+## likelihood-lifecycle-p5-setup-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/756
+- completed: 2026-11-25
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1798
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/892
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1798
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/892
+- epic: likelihood-lifecycle (phase 5 pre-release fixes)
+- supersedes (retired with this record): draft/bug/autogalaxy/setup_auto_unresolved_before_fit_print_vram_use.md, draft/feature/autolens/estimate_runtime_accept_auto.md, draft/bug/autogalaxy/setup_banner_shows_jax_under_disable_jax.md
+
+Four pre-release fixes to the automatic compute setup, merged Fit → Galaxy → Lens before the release carrying 5A–5E and the setup banner:
+
+- **ModelAnalysis forwarding (Fit):** `ModelAnalysis` (`analysis.with_model`) now forwards `modify_before_fit` / `modify_after_fit` with its own model and rebinds; the base `Analysis.modify_before_fit` had shadowed `__getattr__`, so wrapped `setup="auto"` analyses never resolved (also inside `AnalysisFactor`).
+- **Pre-fit resolution (Fit + Galaxy + Lens):** new `Analysis.prepare_for_model(model)` hook, called by `print_vram_use` / `batched_memory_bytes`; `AnalysisSetupMixin` resolves the setup there; `resolve_setup` is idempotent (same setup_id + chosen_by → no second banner). Lens `SetupException` reworded (no stale "planned 5D / factor graph" text).
+- **JAX fallback banner (Galaxy):** `Setup:` reports `numpy · CPU … designated JAX; JAX disabled|not installed`; `Parallel:` agrees.
+- **estimate_runtime (Lens):** accepts `setup="auto"` / `number_of_cores="auto"`; no-cell setups return an estimate whose line says so (fit-time line stays silent); a JAX setup running on numpy is not priced by JAX rows and `resources_per_eval()` returns None for it.
+
+Traps:
+- The no-JAX CI leg has no JAX installed, so any test pricing JAX setups must pin `find_spec("jax")` (PyAutoLens 712be5c2c). Local laptops have JAX, so this only shows on CI; reproduce locally with `sys.modules["jax"] = None`.
+- PyAutoFit `pytest -n 4` races on `test_autofit/output` in `aggregator/summary_files/test_aggregate_fits.py` (pre-existing, serial passes).
+
+Open (not done here): `AnalysisFactor` does not forward `prepare_for_model` (works via attribute forwarding of `print_vram_use`); the "auto would choose" not-set line still shows the designated backend.
+
+## Original prompt
+
 # Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup, before the release that ships it
 
 Type: feature
