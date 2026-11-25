@@ -836,7 +836,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 <details>
 <summary><b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — ledger: <code>draft/feature/autolens/cluster_usability.md</code> — Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Simple CPU profiling measured both likelihoods and is in review.</summary>
+<details><summary>📋 <b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — ledger: <code>draft/feature/autolens/cluster_usability.md</code> — Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Seven-image Simple CPU profiling is in review. The standard…</summary>
 
 ```
 Continue the 'Cluster usability — three datasets for visualization, profiling, inference and teaching' epic. Its canonical state lives in draft/feature/autolens/cluster_usability.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532. The Simple cache validation and CPU benchmark results are tracked in autolens_profiling#536.

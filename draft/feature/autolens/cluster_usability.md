@@ -76,6 +76,13 @@ The overview uses source redshift for colour. The published image-plane offsets 
 
 ## Simple profiling
 
-The first local CPU run for [profiling #536](https://github.com/PyAutoLabs/autolens_profiling/issues/536) used a fresh simulation. It contained two families at redshifts 1 and 2 with three images each, two main dPIE lenses, ten scaling members and an NFW halo. The profiling model uses the `b0` dPIE parameterization. The gallery uses the velocity-dispersion parameterization and its Simple catalogue has five and two images. Keep the dataset provenance with the timings.
+[Profiling #537](https://github.com/PyAutoLabs/autolens_profiling/pull/537) aligns Simple with the reviewed gallery. The simulator and both likelihoods now use the gallery's velocity-dispersion dPIE model, with two main galaxies, ten scaling members and an NFW halo. All five `point_0` observations at z = 1 and both `point_1` observations at z = 2 match the pinned gallery catalogue exactly, including their 0.005″ uncertainties. At the fitted prior medians the back-traced coordinates agree exactly on both source planes for the seven observations and 256 additional test rays.
 
-With both source centres solved analytically, the median of 200 warmed likelihood evaluations was 0.760 ms in the source plane and 6.931 ms in the image plane on the local i9-10885H CPU (JAX FP64). Both log likelihoods matched their eager NumPy reference at the tested parameter vector. The image-plane fit used the standard 100 × 100 grid at 1″ per pixel and 0.001″ precision. The existing local cache lacked its scaling CSV and was preserved. The profiling change validates the member table with the galaxy CSV reader before reusing a dataset.
+| Likelihood | First call after compile (ms) | Warm median (ms) | Warm p10–p90 (ms) | Absolute JAX–NumPy log L difference |
+| --- | ---: | ---: | ---: | ---: |
+| Source plane | 2.67 | 0.518 | 0.467–0.594 | 4.58e-09 |
+| Image plane | 13.66 | 8.918 | 8.271–10.401 | 1.75e-10 |
+
+Times are per likelihood evaluation over both families on the local i9-10885H CPU using JAX FP64. Both source centres are solved analytically. The warm median uses five warm-ups and 200 synchronized calls. The earlier three-plus-three `b0` measurements use a different catalogue and parameter vector and are archived separately.
+
+The standard image-plane solver starts at 1″ per pixel on a 100 × 100 grid. It returns four predictions for the five `point_0` observations and two for `point_1`. The second `point_0` observation at (y, x) = (10.362″, 8.143″) lies 2.764″ from its nearest prediction. At the same solved source centre, field size and 0.001″ refinement precision, 0.5″ also misses it. Both 0.25″ and 0.2″ starting grids recover it, at separations of 0.00745″ and 0.00672″ respectively. The standard-grid image-plane time is diagnostic because it measures an incomplete solve.

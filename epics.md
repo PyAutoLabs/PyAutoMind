@@ -144,7 +144,7 @@ epic, never picked standalone.
 ## cluster-usability
 - title: Cluster usability — three datasets for visualization, profiling, inference and teaching
 - ledger: draft/feature/autolens/cluster_usability.md
-- status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Simple CPU profiling measured both likelihoods and is in review.
+- status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Seven-image Simple CPU profiling is in review. The standard image-plane grid recovers six predictions.
 - notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532. The Simple cache validation and CPU benchmark results are tracked in autolens_profiling#536.
 
 ## cluster-strong-lensing
