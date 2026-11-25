@@ -275,3 +275,13 @@ Retain native serial training and execution defaults. No feeder configuration ad
 ## Observational GPU feeder transfer — 2026-11-25
 
 [Local JWST phase](https://github.com/PyAutoLabs/autolens_inference/issues/74) compares whole fits using the committed COSMOS-Web Ring F444W data. [Registered comparison](../../../active/nautilus_ring_gpu_feed.md).
+
+[Draft inference PR #75](https://github.com/PyAutoLabs/autolens_inference/pull/75) completes eight local native-settings conditional fits on the observed JWST F444W COSMOS-Web Ring. Two CPU feeders increased whole-fit time by 12.8% and 13.6% against serial-host GPU across the two seeds. CPU-only took 149.8 and 136.3 s, serial full-width GPU 197.5 and 190.0 s, and feeders 222.7 and 215.9 s. GPU warm logical batches took 44.5–45.4 ms versus 76.9–85.4 ms on CPU, but GPU evaluation occupied just 5.9–6.4% of the complete fit. Keep native training and dispatch. [Controls, all timings and audits](https://github.com/PyAutoLabs/autolens_inference/blob/573bf267e22a13c195966747f71c3350a78d984d/results/misc/nautilus_ring_gpu_feed/README.md).
+
+All arms followed identical ordered proposals. Across 29,300 paired JAX CPU/GPU values, 19 exceeded the strict pointwise tolerance and the largest difference was 4.51e-6. All GPU arms agreed within 3.64e-12; paired log evidence agreed within 4.87e-9. The scalar NumPy outlier audit also found differences up to 1.01e-4. Full-output timing identified a hardware-placement follow-up: the native derived quantities for 100 posterior samples took 9.4–10.4 s on CPU versus 39.8–42.6 s on serial-host GPU. Replay the exact same saved posterior samples and derived quantities on each device, including transfer and setup, before proposing a mixed-placement change. Mixed likelihood workers and multi-GPU execution remain open. All 509 tooling tests and scoped Heart readiness passed.
+
+## Matched derived-output placement — 2026-11-25
+
+[Inference phase #76](https://github.com/PyAutoLabs/autolens_inference/issues/76) will test CPU placement after GPU sampling using both saved JWST ring posteriors. [Registered controls and gates](../../../active/nautilus_ring_latent_placement.md).
+
+Matched replay passed on both retained posteriors. All 1,000 derived values and both native summaries agreed within tolerance. A fresh CPU worker including setup and return reduced the stage from 45.82 to 21.26 s and 46.98 to 21.99 s. Four end-to-end GPU fits are in progress.

@@ -15,3 +15,7 @@ Compare full-batch CPU, full-batch GPU, serial split GPU and two CPU feeders wit
 [Predecessor](https://github.com/PyAutoLabs/autofit_profiling/pull/43) · [Insight's imaging inference task](https://github.com/PyAutoLabs/PyAutoInsight/blob/main/tasks/hst_mass_samplers_wave1.md) · [Pulse profiling task](https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/autofit_profiling_bootstrap.md). This is a local engineering pilot using separate JWST data. Campaign ownership and promotion remain unchanged.
 
 Issue: https://github.com/PyAutoLabs/autolens_inference/issues/74
+
+## Outcome
+
+[Draft PR #75](https://github.com/PyAutoLabs/autolens_inference/pull/75) awaits human review. Eight completed conditional fits. CPU-only finished fastest in both seeds and CPU-fed GPU missed the promotion threshold. [Timings, precision exceptions and posterior-output follow-up](https://github.com/PyAutoLabs/autolens_inference/blob/573bf267e22a13c195966747f71c3350a78d984d/results/misc/nautilus_ring_gpu_feed/README.md).

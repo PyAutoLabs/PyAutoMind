@@ -312,11 +312,11 @@
 ## nautilus-ring-gpu-feed
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/74
 - issued: 2026-11-25
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/75
 - prompt: active/nautilus_ring_gpu_feed.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ring-gpu-feed
-- repos:
-  - autolens_inference: feature/nautilus-ring-gpu-feed
+- retained-repos: autolens_inference (feature/nautilus-ring-gpu-feed), awaiting review
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
@@ -324,10 +324,49 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/191
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release — wiki-currency checks released autolens)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/192
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5g
 - repos:
   - autolens_assistant: feature/likelihood-lifecycle-p5g-assistant
 - prompt: active/likelihood_lifecycle_p5g_assistant_setup.md
 - epic: likelihood-lifecycle (phase 5G; merge with/after the library release)
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5h
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/141
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
+- status: workspace-shipped, awaiting-merge (euclid_strong_lens_modeling_pipeline#142 OPEN f80ccef; merge with/after the library release; HPCPullPyAuto before RAL use; at close-out, retire draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md as superseded)
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5h
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/likelihood-lifecycle-p5h-setup
+- prompt: active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md
+- epic: likelihood-lifecycle (phase 5H; merge with/after the library release; HPCPullPyAuto before RAL use)
+- tier: judge — merge mode: human /prm
+
+## nautilus-ring-latent-placement
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/76
+- issued: 2026-11-25
+- status: workspace-dev
+- prompt: active/nautilus_ring_latent_placement.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ring-latent-placement
+- repos:
+  - autolens_inference: feature/nautilus-ring-latent-placement
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p5-setup-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/756
+- issued: 2026-11-25
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5-setup-fixes
+- repos:
+  - PyAutoFit: feature/likelihood-lifecycle-p5-setup-fixes
+  - PyAutoGalaxy: feature/likelihood-lifecycle-p5-setup-fixes
+  - PyAutoLens: feature/likelihood-lifecycle-p5-setup-fixes
+- prompt: active/likelihood_lifecycle_pre_release_setup_fixes.md
+- epic: likelihood-lifecycle (phase 5 pre-release fixes; merge Fit → Galaxy → Lens, pending-release; must land before the release carrying 5A–5E + banner)
+- note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap 2026-11-25

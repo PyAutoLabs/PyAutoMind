@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 28 in flight",
-  "updated": "2026-11-25T13:31:26Z",
+  "headline": "RED \u2014 23 picks \u00b7 31 in flight",
+  "updated": "2026-11-25T16:15:08Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -57,6 +57,18 @@
     },
     {
       "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5G: autolens_assistant: an `al_explain_setup` skill and an \"auto unless\u2026\"\u2026 \u2014 workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release \u2014 wiki-currency\u2026",
+      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/192",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5g_assistant_setup.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle phase 5H: euclid_strong_lens_modeling_pipeline: `--setup` replaces `--use_cpu`, `--number_of_cores auto`\u2026 \u2014 workspace-shipped, awaiting-merge (euclid_strong_lens_modeling_pipeline#142 OPEN f80ccef; merge with/after the library release\u2026",
+      "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Complete the conditional 30D Nautilus evidence check \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/31",
       "prompt": "Use the start-dev skill. active/nautilus_30d_evidence_check.md"
@@ -105,27 +117,15 @@
     },
     {
       "severity": "yellow",
+      "text": "Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging? \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/75",
+      "prompt": "Use the start-dev skill. active/nautilus_ring_gpu_feed.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Diagnose the loss of fresh-sample efficiency across dimensions \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/37",
       "prompt": "Use the start-dev skill. active/nautilus_shell_efficiency.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Do frozen Nautilus bounds predict the high-weight draws inside a shell? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/39",
-      "prompt": "Use the start-dev skill. active/nautilus_shell_geometry_signal.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
-      "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Measure ellipsoid fitting inside a complete native Nautilus fit \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/21",
-      "prompt": "Use the start-dev skill. active/nautilus_whole_fit_geometry.md"
     }
   ]
 }
