@@ -296,6 +296,17 @@
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
+## nautilus-ring-gpu-feed
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/74
+- issued: 2026-11-25
+- status: workspace-dev
+- prompt: active/nautilus_ring_gpu_feed.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ring-gpu-feed
+- repos:
+  - autolens_inference: feature/nautilus-ring-gpu-feed
+- epic: nautilus-fast-likelihoods
+- tier: judge — merge mode: human /prm
+
 ## simple-cluster-profiling
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/536
 - issued: 2026-11-25
