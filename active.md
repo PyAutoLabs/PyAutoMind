@@ -348,7 +348,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/721
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; release check-in chat)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/722
 - worktree: /home/jammy/Code/PyAutoLabs-wt/nightly-rehearsal-ancestry
 - repos:
   - PyAutoBrain: feature/nightly-rehearsal-ancestry
