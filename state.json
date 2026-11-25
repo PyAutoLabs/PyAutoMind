@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 27 in flight",
-  "updated": "2026-11-25T13:43:19Z",
+  "updated": "2026-11-25T13:51:51Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -111,6 +111,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging? \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/75",
+      "prompt": "Use the start-dev skill. active/nautilus_ring_gpu_feed.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Diagnose the loss of fresh-sample efficiency across dimensions \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/37",
       "prompt": "Use the start-dev skill. active/nautilus_shell_efficiency.md"
@@ -120,12 +126,6 @@
       "text": "Do frozen Nautilus bounds predict the high-weight draws inside a shell? \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/39",
       "prompt": "Use the start-dev skill. active/nautilus_shell_geometry_signal.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Measure the scalar ellipsoid update in complete native fits \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/25",
-      "prompt": "Use the start-dev skill. active/nautilus_weight_whole_fit.md"
     }
   ]
 }

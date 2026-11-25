@@ -1525,7 +1525,7 @@ Use the start-dev skill. active/nautilus_gpu_feed.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_ring_gpu_feed.md">Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging?</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/74">issue #74</a> — issued 2026-11-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/nautilus_ring_gpu_feed.md">Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging?</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/74">issue #74</a> — issued 2026-11-25 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/75">autolens_inference#75</a></summary>
 
 ```
 Use the start-dev skill. active/nautilus_ring_gpu_feed.md
