@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 22 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 284 |
+| [Backlog](#backlog) | 285 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -257,7 +257,7 @@ Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: <code>draft/feature/autofit/nautilus_fast_likelihood_development_epic.md</code> — Independent 30D matched-ESS check #35 complete. Phase 0b #37 found 110–156 calls per ESS from within-shell concentration and…</summary>
 
@@ -279,6 +279,14 @@ Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_developm
 
 ```
 Use the start-dev skill. draft/feature/autofit/nautilus_parent_cpu_slowdown.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit_profiling/nautilus_bound_core_scaling.md">Does parallel native ensemble training shorten complete Nautilus fits?</a> — autofit_profiling</summary>
+
+```
+Use the start-dev skill. draft/research/autofit_profiling/nautilus_bound_core_scaling.md
 ```
 
 </details>
@@ -1648,7 +1656,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 227 · ral 32 · local-dev 13 · wsl-data 9 · gpu 1
+Lanes: any 227 · ral 32 · local-dev 14 · wsl-data 9 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3243,7 +3251,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+117 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3288,7 +3296,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- _… and 76 more_
+- _… and 77 more_
 
 </details>
 
