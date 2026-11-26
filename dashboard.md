@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 10 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
@@ -23,7 +23,7 @@
 
 ## Autopilot
 
-_10 queued · 0 questions_
+_LIVE · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -52,9 +52,11 @@ _10 queued · 0 questions_
 - Q37 — `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it. (ruling claimed, today)
 - Q38 — `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, today)
 
-**Shift**
+**Shift** (2026-11-26-pm2 — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-26-pm2 — closed, nothing to review · [shift issue #610](https://github.com/PyAutoLabs/PyAutoMind/issues/610))_
+Live: LIVE · 4 running · tokens 0 of 3000000 (4 session(s) unmeasured) · review-at 2026-11-26T22:00Z (as of 2026-11-26T21:25:40Z) · [shift issue #610](https://github.com/PyAutoLabs/PyAutoMind/issues/610#issuecomment-7203720372)
+
+_(nothing to review yet)_
 
 ## Start here
 
