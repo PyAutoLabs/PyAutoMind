@@ -89,7 +89,9 @@
 ## grid-search-cores-auto
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1805
 - issued: 2026-11-26
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1806
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1806
 - tier: supervised
 - epic: likelihood-lifecycle
 - prompt: active/grid_search_number_of_cores_auto_hangs.md
