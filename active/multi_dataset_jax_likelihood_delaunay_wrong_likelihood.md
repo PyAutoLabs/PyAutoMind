@@ -13,7 +13,7 @@ Witness: The script's own parity assertion passes on main (ACTUAL == DESIRED at 
 Review-minutes: 10
 Unattended: safe
 Issued: 2026-11-24
-Verified: 2026-11-24 48f40953 (autolens_workspace_test)
+Verified: 2026-11-26 be51efb0 (autolens_workspace_test)
 Lane: any
 Filed: 2026-09-23
 
