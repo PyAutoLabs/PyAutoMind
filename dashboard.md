@@ -1507,7 +1507,7 @@ Use the start-dev skill. active/shift_closes_early_with_held_tasks_unstarted.md
 
 </details>
 
-<details><summary>📋 <a href="active/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: <code>'Model' object has no attribute 'centre'</code> in <code>base_model_narrow_priors_from</code></a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/695">issue #695</a> — issued 2026-11-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: <code>'Model' object has no attribute 'centre'</code> in <code>base_model_narrow_priors_from</code></a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/695">issue #695</a> — issued 2026-11-26 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/slam_source_parametric_model_has_no_centre.md
