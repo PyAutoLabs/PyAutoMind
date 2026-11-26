@@ -1,4 +1,4 @@
-# LOSSampler default of 4 + 4 planes is too coarse; default…
+# LOSSampler default of 4 + 4 planes is too coarse; default… — SUPERSEDED 2026-11-26
 
 Type: bug
 Target: PyAutoLens
@@ -14,6 +14,13 @@ Witness: `LOSSampler(z_lens=0.5, z_source=1.0)` with no plane arguments builds 9
 Review-minutes: 20
 Unattended: ready
 Lane: any
+
+## Superseded
+
+Retired by the human on 2026-11-26, not shipped. Its fix (a default plane spacing of 0.01) is part of
+`draft/feature/autolens/arrays_first_line_of_sight_halo_population.md`, the arrays-first line-of-sight
+sampler promoted from the `dm_sightlines` science project. The measured convergence table below is
+kept as that prompt's evidence.
 
 ## Finding
 

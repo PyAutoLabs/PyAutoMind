@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 295 |
+| [Backlog](#backlog) | 299 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -155,7 +155,7 @@ Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 73
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1614,7 +1614,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 237 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
+Lanes: any 236 · ral 32 · wsl-data 15 · local-dev 13 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1665,7 +1665,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 44</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1763,6 +1763,14 @@ Use the start-dev skill. draft/feature/autoarray/multiwavelength_inversion.md
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autogalaxy/nfwtruncatedsph_constructors_from_physical_param.md">NFWTruncatedSph: constructors from physical parameters and derived masses</a> — autogalaxy · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/nfwtruncatedsph_constructors_from_physical_param.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autolens/pointsolver_figure_source_plane_view_of_the.md">PointSolver figure: source-plane view of the triangles</a> — autolens · medium · supervised · normal</summary>
 
 ```
@@ -1835,6 +1843,30 @@ Use the start-dev skill. draft/feature/autofit_assistant/remote_mcp_deployment_t
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autolens/arrays_first_line_of_sight_halo_population.md">Arrays-first line-of-sight halo population sampler</a> — autolens · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/arrays_first_line_of_sight_halo_population.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/cdm_lens_subhalo_population_sampler_with_the.md">CDM lens subhalo population sampler with the two frozen presets</a> — autolens · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/cdm_lens_subhalo_population_sampler_with_the.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/chunked_multi_plane_ray_tracing_for_large.md">Chunked multi-plane ray tracing for large halo populations</a> — autolens · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/chunked_multi_plane_ray_tracing_for_large.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> — autolens · large · supervised · normal</summary>
 
 ```
@@ -1847,6 +1879,14 @@ Use the start-dev skill. draft/feature/autolens/multi_plane_time_delays.md
 
 ```
 Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/workspace_examples_simulate_cdm_subhalos_and_lin.md">Workspace examples: simulate CDM subhalos and line-of-sight halos</a> — autolens_workspace · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_workspace/workspace_examples_simulate_cdm_subhalos_and_lin.md
 ```
 
 </details>
@@ -1982,7 +2022,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 46</summary>
+<summary><b>bug</b> — 45</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2084,14 +2124,6 @@ Use the start-dev skill. draft/bug/autoarray/sparse_vs_dense_log_likelihood_mism
 
 ```
 Use the start-dev skill. draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/lossampler_default_of_4_4_planes_is.md">LOSSampler default of 4 + 4 planes is too coarse; default…</a> — autolens · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens/lossampler_default_of_4_4_planes_is.md
 ```
 
 </details>
