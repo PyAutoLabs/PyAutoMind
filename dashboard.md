@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 13 |
+| [In flight](#in-flight) | 14 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 299 |
+| [Backlog](#backlog) | 298 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -56,7 +56,7 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -94,14 +94,6 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — autogalaxy · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md
 ```
 
 </details>
@@ -150,6 +142,14 @@ Use the start-dev skill. draft/feature/autolens_workspace/adapt_mesh_weighting_w
 
 ```
 Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 ```
 
 </details>
@@ -1450,6 +1450,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
+<details><summary>📋 <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762">issue #762</a> — issued 2026-11-26 — library-dev</summary>
+
+```
+Use the start-dev skill. active/adapt_mesh_weighting_galaxy_adapt_images.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap)</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/372">issue #372</a> — issued 2026-11-26 — library-merged, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/373">PyAutoHeart#373</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/132">PyAutoCTI#132</a></summary>
 
 ```
@@ -1645,7 +1653,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 241 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
+Lanes: any 240 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1696,15 +1704,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 41</summary>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — autogalaxy · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md
-```
-
-</details>
+<summary><b>feature</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -3211,7 +3211,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
 | 2026-11-26 | issued | <a href="active/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI…</a> |
 | 2026-11-26 | filed | <a href="draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the…</a> |
-| 2026-11-26 | filed | <a href="draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> |
+| 2026-11-26 | issued | <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> |
 | 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: `'Model'…</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
@@ -3304,7 +3304,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-123 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+122 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3314,7 +3314,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
-- `draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/cluster_usability.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
@@ -3349,7 +3348,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/hilbert_image_mesh_frame_independent.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
-- _… and 83 more_
+- `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
+- _… and 82 more_
 
 </details>
 
