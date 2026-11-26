@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 13 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 290 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1416,7 +1416,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/convolver_blurring_image_warning.md">Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/719">issue #719</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/convolver_blurring_image_warning.md">Convolver "No blurring_image provided" warning in canonical workspace scripts</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/719">issue #719</a> — issued 2026-11-26 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/720">PyAutoArray#720</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/convolver_blurring_image_warning.md
@@ -1436,14 +1436,6 @@ Use the start-dev skill. active/cosmos_web_ring_mask_dtype.md
 
 ```
 Use the start-dev skill. active/grid_search_number_of_cores_auto_hangs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/installation_docs_arcticpy_recipe.md">autocti docs: rewrite installation pages around the arcticpy recipe</a> — <a href="https://github.com/PyAutoLabs/PyAutoCTI/issues/133">issue #133</a> — issued 2026-11-26 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/134">PyAutoCTI#134</a></summary>
-
-```
-Use the start-dev skill. active/installation_docs_arcticpy_recipe.md
 ```
 
 </details>
@@ -1603,7 +1595,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 225 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
+Lanes: any 226 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2019,7 +2011,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 43</summary>
+<summary><b>bug</b> — 44</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2289,6 +2281,14 @@ Use the start-dev skill. draft/bug/autoarray/sub_slim_indexes_for_pix_index_padd
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/deflections_simulator_no_psf_padding.md">PyAutoLens <code>via_deflections_galaxies_from</code> simulates without PSF padding/trim</a> — autolens · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/deflections_simulator_no_psf_padding.md
 ```
 
 </details>
@@ -3135,7 +3135,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-26 | issued | <a href="active/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of…</a> |
-| 2026-11-26 | issued | <a href="active/installation_docs_arcticpy_recipe.md">autocti docs: rewrite installation pages around the arcticpy recipe</a> |
+| 2026-11-26 | filed | <a href="draft/bug/autolens/deflections_simulator_no_psf_padding.md">PyAutoLens <code>via_deflections_galaxies_from</code> simulates without PSF…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md">Pooled Emcee and Zeus return wrong likelihoods, and Emcee leaves its…</a> |
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
@@ -3279,7 +3279,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-48 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+49 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3310,6 +3310,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md — unknown theme keyword(s): sparse-operator, aggregator`
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — unknown theme keyword(s): caustics, lens-calc`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
+- `draft/bug/autolens/deflections_simulator_no_psf_padding.md — unknown theme keyword(s): correctness`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
@@ -3339,6 +3340,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#720](https://github.com/PyAutoLabs/PyAutoArray/pull/720) — `active/convolver_blurring_image_warning.md`
 - [PyAutoArray#718](https://github.com/PyAutoLabs/PyAutoArray/pull/718) — `complete/2026/11/adapt-mesh-weighting-galaxy.md`
 - [PyAutoArray#717](https://github.com/PyAutoLabs/PyAutoArray/pull/717) — `complete/2026/11/adapt-mesh-weighting-library.md`
 - [PyAutoArray#718](https://github.com/PyAutoLabs/PyAutoArray/pull/718) — `complete/2026/11/hilbert-image-mesh-frame-independent.md`
