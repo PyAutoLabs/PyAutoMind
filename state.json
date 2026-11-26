@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 15 in flight",
-  "updated": "2026-11-26T11:41:39Z",
+  "headline": "RED \u2014 23 picks \u00b7 16 in flight",
+  "updated": "2026-11-26T11:51:01Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -45,6 +45,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Adapt mesh weighting: S/N-budget Hilbert mesh and soft adapt image\u2026 \u2014 library-shipped, workspace-pending",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/717",
+      "prompt": "Use the start-dev skill. active/adapt_mesh_weighting_library_default.md"
+    },
+    {
+      "severity": "yellow",
       "text": "Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap) \u2014 library-shipped, workspace-pending",
       "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/373",
       "prompt": "Use the start-dev skill. active/arcticpy_27_git_source_stopgap.md"
@@ -60,6 +66,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#717 \u2014 Adapt mesh weighting: S/N-budget Hilbert mesh and soft adapt image\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/717",
+      "prompt": null
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Physical model check when speeding up smoke tests",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
-      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     }
   ]
 }
