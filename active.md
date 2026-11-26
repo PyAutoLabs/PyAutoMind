@@ -103,7 +103,11 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/693
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
-- status: workspace-dev
+- status: workspace-dev (3a PRs open, release-gated; 3b autolens_workspace pending its claim)
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/141
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/110
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/374
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/142
 - prompt: active/adapt_mesh_weighting_workspace_default.md
 - worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-workspaces
 - repos:
@@ -116,10 +120,10 @@
 - release-gate: PyAutoLens
 - heart-red-override:
   - authorized: live human, 2026-11-26, this session — "Override for phase 3" (autolens_workspace#693)
-  - red-reason: "Heart: RED — Release RED; monitoring RED" (release validation FAILED stage integrate, Workspace Smoke, PyAutoFit/PyAutoGalaxy/PyAutoLens red; full list on the issue)
-  - gates: pending (filled at PR-open)
+  - not exercised for 3a: the scoped dev gate (HowToLens, HowToGalaxy, autolens_workspace_test, autogalaxy_workspace_test) was GREEN at PR-open
   - record: https://github.com/PyAutoLabs/autolens_workspace/issues/693
 - note: phase 3a now (HowTo tutorials, _test pinned HilbertSNR scripts); 3b autolens_workspace after sensitivity_slam_source_pixelized_mappervalued (#685) releases its claim
+- next: 3a PRs merge only after a release carries PyAutoArray#717/#718, PyAutoGalaxy#763, PyAutoLens#897 (human /prm); 3b (autolens_workspace ~37 scripts) once sensitivity_slam_source_pixelized_mappervalued releases autolens_workspace
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement
