@@ -218,10 +218,10 @@ Library first; one issue per repo per phase; each phase routes through
 
 - Phase 0: 0b DONE 2026-11-04 — `complete/2026/11/cti-likelihood-pins.md` (autocti_workspace_test#25)
 - Phase 1: DONE 2026-11-05 — `complete/2026/11/cti-release-train-wiring.md` (PyAutoHands#332; Nerves#210, Hands#333, Brain#585, Heart#323, Mind#535, autocti_workspace#40; TestPyPI rehearsal run 42011123173 passed, 6 wheels). Scope deferred to p3/5: Heart workspace-validation/release-integrate rows, run_all, docs-build mapping. New phase-3 member: fits_fit FAST_PLOTS bug (DONE 2026-11-05, `complete/2026/11/cti-fits-fit-output-dir.md`). First modern autocti PyPI release rides the next lockstep release.
-- Phase 2 (filed 2026-11-05): 2a `draft/release/arcticpy/upstream_packaging_pr.md` (PR jkeger/arctic#73 OPEN 2026-11-05; human asks Massey for 2.7);
-  2b `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` (blocked by the upstream release);
+- Phase 2 (filed 2026-11-05): 2a `draft/release/arcticpy/upstream_packaging_pr.md` (jkeger/arctic#73 + #75 MERGED 2026-11-10; 2.7 not on PyPI — Jammy is the sole PyPI owner and his MFA is broken);
+  2b STOPGAP DONE 2026-11-26 `complete/2026/11/arcticpy-27-git-source.md` (organism builds 2.7 from jkeger/arctic@6f51535; PyAutoHeart#373, PyAutoCTI#132, autocti_workspace_test#28; pins unchanged under 2.7) — the PyPI revert remains in `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` (blocked by the PyPI login);
   2c DONE 2026-11-05 `complete/2026/11/arcticpy-lazy-import.md` (PyAutoCTI#118 merged) and
-  `draft/docs/autocti/installation_docs_arcticpy_recipe.md` (blocked by 2b)
+  `draft/docs/autocti/installation_docs_arcticpy_recipe.md` (unblocked 2026-11-26: document the pinned-commit recipe)
 - Phase 3 (started 2026-11-05 while 2b waits on upstream): five failing scripts DONE 2026-11-06 `complete/2026/11/cti-five-failing-scripts.md` (autocti_workspace#46; smoke 36→44; follow-up `complete/2026/11/cti-database-reruns.md`); 3b DONE 2026-11-06 `complete/2026/11/cti-workspace-test-rebuild.md` (autocti_workspace_test#27; legacy/ + imaging_ci/ via Gut; smoke 5→10); 3c DONE 2026-11-06 `complete/2026/11/cti-docs-yml-caller.md` (PyAutoHeart#325 + PyAutoCTI#126; docs build on PRs, baseline 15); 3a DONE 2026-11-05 `complete/2026/11/cti-smoke-breadth.md` (autocti_workspace#44; smoke 6→36); DONE 2026-11-05 `complete/2026/11/cti-fits-fit-output-dir.md` (PyAutoCTI#120 + autocti_workspace#41; FAST_PLOTS back to 1); dataset_1d results/database drift DONE 2026-11-05 `complete/2026/11/cti-database-examples-drift.md` (PyAutoCTI#122 + autocti_workspace#42; new follow-up `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md`)
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
   `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`;
@@ -251,3 +251,4 @@ Library first; one issue per repo per phase; each phase routes through
 
 ## Answers from the human
 - Q14 (2026-11-23, ruling claimed, shift 2026-11-19-pm2): (a) waited: colab_gate_colossus_rationale_is_stale_once has shipped (complete/2026/11/colab-gate-colossus-rationale-is-stale-once.md), so the PyAutoHeart claim is released and this gate no longer applies.
+- 2026-11-26 — 2b STOPGAP MERGED: arcticpy 2.7 builds from the pinned GitHub commit everywhere (PyAutoHeart#373, PyAutoCTI#132, autocti_workspace_test#28; complete/2026/11/arcticpy-27-git-source.md). Hands PYPI token is rhayes777's (403 on arcticpy); PyPI 2.7 waits on Jammy's PyPI support case. 2c docs unblocked.

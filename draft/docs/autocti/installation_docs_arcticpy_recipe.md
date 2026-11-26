@@ -19,7 +19,7 @@ Unattended: ready
 Lane: any
 Epic: cti-upkeep
 Phase: 2c
-Blocked-by: draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md (the recipe text depends on whether upstream ships wheels)
+Unblocked: 2026-11-26 by the 2.7 git-source stopgap (complete/2026/11/arcticpy-27-git-source.md) — document the pinned-commit recipe (`pip install "arcticpy @ git+https://github.com/jkeger/arctic@6f5153582aca00b7b0cc11ab04b2c58a7502400d" --no-build-isolation --no-deps` after numpy>=2, cython>=3, GSL); the PyPI bump later switches it to `arcticpy==2.7`.
 
 Follows the PyAutoBrain `skills/WRITING_STYLE.md` rules: human-first, a short
 start, no jargon. If the lazy import (shipped 2026-11-05, complete/2026/11/arcticpy-lazy-import.md)

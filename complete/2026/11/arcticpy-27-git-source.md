@@ -1,3 +1,18 @@
+## Outcome
+arcticpy 2.7 (numpy 2 / Cython 3, upstream jkeger/arctic #73 + #75) could not go to PyPI: the only PyPI owner of arcticpy is Jammy2211, whose PyPI MFA is broken (open PyPI support case), and the Hands `PYPI` secret is rhayes777's whole-account token — a no-publish probe (byte-identical re-upload of the 2.6 sdist) returned `403 The user 'rhayes777' isn't allowed to upload to project 'arcticpy'`. Stopgap shipped: the organism builds arcticpy 2.7 from the pinned commit `6f5153582aca00b7b0cc11ab04b2c58a7502400d`.
+
+- PyAutoLabs/PyAutoHeart#373 (merged e1cf49e): `install_arcticpy.sh` gains `ARCTICPY_SOURCE` (default the pinned git URL); `ARCTICPY_VERSION` defaults empty and, when set, installs that PyPI version. Build deps `numpy>=2` / `cython>=3`. Tests assert a full 40-hex pin. All consumers (lib-tests, smoke-tests, docs-build, Hands python_matrix, local smoke, Nerves Colab) switched on merge.
+- PyAutoLabs/PyAutoCTI#132 (merged 8c3781d): pyproject note, `.readthedocs.yaml`, AGENTS.md recipe.
+- PyAutoLabs/autocti_workspace_test#28 (merged 67b73bc): pins.py provenance lines — verified unchanged under 2.7.
+- Evidence: test_autocti 279 passed; smoke autocti 44/44, autocti_test 10/10; likelihood pins unchanged (the 2b draft's expected DR2 pin movement did not occur); arcticpy action self-test green on 3.12/3.13; independent review CLEAN.
+- #373 was opened under the Heart RED development override (reason "PyAutoHeart: Heart Tests failure on main", unrelated date drift), cleared by the corrective PyAutoHeart#375 before merge; all merges were on green checks with Heart dev readiness GREEN.
+
+## Follow-ups
+- Revert path: `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` — publish 2.7 to PyPI from the same commit once the login works, then default `ARCTICPY_VERSION` to `2.7`; also consider adding rhayes777 as an arcticpy maintainer so Hands can release it.
+- 2c install-docs rewrite (`draft/docs/autocti/installation_docs_arcticpy_recipe.md`) can now use the git recipe.
+
+## Original prompt
+
 # Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap)
 
 Type: maintenance
