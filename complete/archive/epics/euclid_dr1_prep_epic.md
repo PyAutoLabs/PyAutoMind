@@ -345,3 +345,40 @@ prompt stays in `draft/`, and the prompt carries the `Issue:` line so `create_is
   `complete/2026/09/restore-pipeline-narrative-prose.md` carries the folded prompt with
   the verified drift list.
 - Issue **one** phase at a time. Do not queue GitHub issues for later phases.
+
+## Retired from epics.md (2026-11-26)
+
+## euclid-dr1-prep
+- title: Euclid DR1 preparation — 15k-lens modelling prep
+- ledger: draft/feature/euclid/euclid_dr1_prep_epic.md
+- status: RETIRED by the human 2026-11-26 (unfinished; not shipped). Previous status: science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex
+  `phases/euclid/` 4, 5, 6, 7); the Mind keeps the software phases, renumbered 3a→3, 3b→4,
+  6c→8, 7→9 — the renumbering table is in the ledger
+- notes: 7 Mind phases (0, 1, 2, 3, 4, 8, 9) — issue ONE at a time as predecessors near
+  shipping, no bulk issue queues. The four science phases moved to PyAutoCortex on
+  2026-09-01 as `phases/euclid/` 4, 5, 6, 7 (were Mind 4, 5, 6a, 6b): RAL runs, human-driven
+  and supervised, whose deliverable is a result and a written verdict, not a merged PR;
+  never route them to an autonomous ship gate. Mind phase 8 (was 6c) is a PyAutoArray source
+  audit that may spawn a separate bug prompt and can run alongside Cortex phase 7. Mind
+  phase 9's (was 7) retroactive-update leg is explicitly allowed to conclude "no elegant
+  solution — don't build it". The full renumbering table is in the ledger. Source of truth for
+  all drift is /mnt/c/Users/Jammy/Science/euclid. Science half: PyAutoCortex
+  `projects/euclid_dr1_prelim.md` (the former Cortex phases 4-7).
+  Phase 0 shipped 2026-08-28; phase 1 shipped 2026-08-29 (euclid#43 closed, PR #44
+  merged); phase 2 shipped 2026-08-29 (euclid#45 closed, PR #46 merged) — which also
+  satisfies phase 4's "2 strongly preferred" gate. Phase 3a was INSERTED 2026-08-31
+  (docs: restore the in-script narrative prose lost at 355b309; start_here.py back to a
+  full end-to-end guide) and the old phase 3 renumbered to 3b; on 2026-09-01 the letters
+  died in the Cortex split and 3a/3b became plain 3/4. Phase 3 shipped 2026-09-01
+  (euclid#47 closed, PR #48 merged; record
+  complete/2026/09/restore-pipeline-narrative-prose.md). Phase 4 shipped 2026-09-03
+  (euclid#49 closed, PR #50 merged; record complete/2026/09/euclid-cpu-two-stage-route.md) —
+  all Mind software phases 0-4 are now shipped, and both gates of the Cortex 10-lens science
+  run (euclid#48, euclid#49) are closed. Phase 8 (Delaunay area audit) shipped 2026-09-04
+  (PyAutoArray#522 closed, PR #523 merged, audit on the issue; record
+  complete/2026/09/delaunay-area-magnification-audit.md): two defects proven and filed as follow-up
+  bug prompts (autoarray Voronoi-vs-dual-area denominator; autolens magnification latent 0/0
+  for pixelized sources — which also taints the vis_pix catalogue column Cortex phase 4
+  witnesses). The autoarray fix shipped 2026-09-05 (PyAutoArray#524 closed, PR #525 merged,
+  pending-release; record complete/2026/09/delaunay-dual-area-magnification.md); the autolens
+  fix is next. Mind phase 9 remains, gated on Cortex phase 4.

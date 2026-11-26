@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 296 |
+| [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -687,51 +687,6 @@ Use the start-dev skill. draft/bug/autofit/ep_moments_loggaussian_transformed_sc
 </details>
 
 <details>
-<summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 4 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: <code>draft/feature/euclid/euclid_dr1_prep_epic.md</code> — science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</summary>
-
-```
-Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its canonical state lives in draft/feature/euclid/euclid_dr1_prep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 Mind phases (0, 1, 2, 3, 4, 8, 9) — issue ONE at a time as predecessors near
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/euclid/catalogue_extension_coolest_mass_fits.md">Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility…</a> — euclid · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/drawer_pix_initializer_exception_flake.md"><code>test_latent_run_level.py</code> slow suite flakes 1-in-7: the <code>drawer_pix</code> Drawer raises <code>InitializerException</code> because all…</a> — euclid · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/euclid/drawer_pix_initializer_exception_flake.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 1 h 14 min to 1 h 44 min…</a> — euclid · medium · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/euclid/euclid_dr1_prep_epic.md">Euclid DR1 preparation — 15k-lens modelling prep…</a> — euclid · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/euclid/euclid_dr1_prep_epic.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — ledger: <code>draft/feature/autofit/model_figures_epic.md</code></summary>
@@ -1372,6 +1327,35 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
+<summary><b>euclid-dr1-prep</b> — 3 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
+
+<details><summary>📋 <a href="draft/feature/euclid/catalogue_extension_coolest_mass_fits.md">Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility…</a> — euclid · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/euclid/drawer_pix_initializer_exception_flake.md"><code>test_latent_run_level.py</code> slow suite flakes 1-in-7: the <code>drawer_pix</code> Drawer raises <code>InitializerException</code> because all…</a> — euclid · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/euclid/drawer_pix_initializer_exception_flake.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 1 h 14 min to 1 h 44 min…</a> — euclid · medium · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>autonomous-orchestrators (programme M3.4 companion)</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/questions_inbox_bulk_answering.md">Questions inbox: parked questions wait in one list the human works through…</a> — pyautobrain · medium · supervised · high</summary>
@@ -1604,7 +1588,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 234 · ral 31 · wsl-data 15 · local-dev 13 · gpu 1
+Lanes: any 234 · ral 30 · wsl-data 15 · local-dev 13 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3263,7 +3247,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-119 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+118 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3282,7 +3266,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 - `draft/feature/cortex/output_summary.md`
-- `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautobrain/autonomous_orchestrators_epic.md`
@@ -3308,11 +3291,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 79 more_
+- `draft/bug/autofit/grid_search_number_of_cores_auto_hangs.md`
+- _… and 78 more_
 
 </details>
 
-58 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+57 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3331,7 +3315,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/dr1_campaign_sed_status_root.md — unknown theme keyword(s): euclid, hpc`
 - `draft/feature/euclid/dr1_campaign_zip_success_checks.md — unknown theme keyword(s): euclid, hpc`
-- `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/pyautobrain/autonomous_orchestrators_epic.md — unknown theme keyword(s): autonomy, orchestration`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md — unknown theme keyword(s): colab`
