@@ -1,3 +1,17 @@
+## Summary
+Cortex ledger auto-merges that add or retire a project left main red until the nightly cron, because `ledger_merge.yml` dispatched `cortex_check.yml` onto a tip whose board was stale and never dispatched `dashboard_refresh.yml` (seen at `09a0de6`, the `sdssj0946_subhalo_v2` birth, 2026-11-26).
+
+## Shipped
+- PyAutoCortex#104 (merge `cca40ce`), closes PyAutoCortex#103.
+- `ledger_merge.yml` dispatches `dashboard_refresh.yml` after a merge (falls back to the check if the dispatch fails).
+- `dashboard_refresh.yml` dispatches `cortex_check.yml` after a heal push, and on a fresh tip for `workflow_dispatch`/`schedule` runs.
+- New text test in `tests/test_ledger_merge.py`; 107 tests pass.
+
+## Open
+- Witness is post-merge: the next birth/retirement ledger merge (likely PyAutoCortex#102 once its board is regenerated) should leave main green with no manual dispatch; record the run links on PyAutoCortex#103.
+
+## Original prompt
+
 # Cortex ledger auto-merge leaves main red after a project birth — ledger_merge.yml never dispatches dashboard_refresh.yml
 
 Type: bug

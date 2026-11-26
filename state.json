@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-26T18:12:22Z",
+  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
+  "updated": "2026-11-26T18:13:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,12 +36,6 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Cortex ledger auto-merge leaves main red after a project birth \u2014 ledger_merge.yml\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/104",
-      "prompt": "Use the start-dev skill. active/ledger_merge_dispatch_dashboard_refresh.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pending release: PyAutoLens PyAutoLens#896 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/896",
       "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }
