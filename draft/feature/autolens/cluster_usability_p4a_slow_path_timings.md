@@ -37,8 +37,17 @@ This phase does the measurement and diagnosis only (slice 4a). The optimisation,
 3. Tutorial stages: first download (empty cache dir), cached load (second run), first useful figure (first saved/opened figure that contains data), `search.fit` wall clock. Run headless (`MPLBACKEND=Agg`) with test-mode settings off for the fit; if the full fit would exceed ~30 minutes on the laptop, stop it at the first Nautilus checkpoint and report the extrapolation instead of running on.
 4. Simulator stages: setup, first JAX compilation, synchronised warm execution (median of ≥ 5), file output.
 5. Record dataset, backend, FP precision, CPU/GPU model, Python/JAX versions and the commits used. Write the tables and the named bottleneck with its cause to the folder README. Put any plots in `Science/scratch/cluster_usability_timing/`.
-6. File the 4b draft prompt (Phase: 4b, same Epic) describing the proposed optimisation of the largest stage, which repo it lands in, and the same-inputs output comparison it must pass.
+6. File the 4b draft prompt (Phase: 4b, same Epic) describing the proposed optimisation of the largest stage, which repo it lands in, and the same-inputs output comparison it must pass, and moving the post-fix run times into autolens_profiling.
 7. Ship via ship_workspace to an open PR. Update the ledger's item 4 with the measured table link.
+
+## The human's decision on where timings live (2026-11-26)
+
+> I think so, with fast run times once sorted then in autolens_profiling
+
+The timing harness lives in `autolens_workspace_developer/cluster_tutorial_timing/` while the
+slow paths are being found and fixed. Once 4b has made the tutorial and simulator fast, their
+run times move into autolens_profiling (and Pulse) as a tracked entry; the 4b draft this phase
+files must include that step.
 
 ## Rules
 
