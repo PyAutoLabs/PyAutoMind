@@ -128,3 +128,14 @@
 - prompt: active/smoke_cache_stats_warnings_nameerror.md
 - previous-session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7) — parked Q31, answered "resume after 369 merges"
 - next: human /prm (Consequence: judge; review CLEAN, witness red-on-main/green-on-branch)
+
+## regression-test-nautilus-ep-default
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1807
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm (3d69db99-aa12-4830-bbe5-1e44471b2f5c)
+- status: library-dev
+- prompt: active/regression_test_nautilus_as_the_ep_default.md
+- worktree: /home/jammy/Code/PyAutoLabs-wt/regression-test-nautilus-ep-default
+- repos:
+  - PyAutoFit: feature/regression-test-nautilus-ep-default
+- tier: safe — merge mode: auto-merge on green if the Witness passes after a merge slot
