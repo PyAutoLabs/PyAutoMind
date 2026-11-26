@@ -120,7 +120,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/103
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/104
+- workspace-impact: none (CI workflows only); Witness is post-merge
 - tier: human-required — merge mode: auto-merge on green if the Witness passes
 - prompt: active/ledger_merge_dispatch_dashboard_refresh.md
 - worktree: ~/Code/PyAutoLabs-wt/cortex-ledger-merge-refresh
