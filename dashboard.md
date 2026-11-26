@@ -37,12 +37,11 @@ _LIVE · 0 in progress_
 4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 5. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
 
-**Questions** (3 open, 0 deferred, 5 rulings — [`questions.md`](questions.md))
+**Questions** (3 open, 0 deferred, 4 rulings — [`questions.md`](questions.md))
 
 - Q29 — Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction? (https://github.com/PyAutoLabs/autolens_workspace_test/issues/371, 2 days)
 - Q30 — All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population? (https://github.com/PyAutoLabs/PyAutoLens/issues/871, 2 days)
 - Q31 — see the question on the issue (https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143, 2 days)
-- Q16 — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 7 days)
 - Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, 6 days)
 - Q22 — `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit first) (its Blocked-by). (ruling blocked-by, 6 days)
 - Q23 — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, 3 days)
