@@ -26,6 +26,76 @@ the ruling on the prompt.
 
 ## Open
 
+### Q32. cluster_usability — `cluster_usability` is Unattended: needs-slicing, so no shift starts…
+- task: draft/feature/autolens/cluster_usability.md
+- kind: ruling
+- gate: unattended
+- ask: `cluster_usability` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
+### Q33. cluster_usability — `cluster_usability` is Autonomy: human-required, so a shift worker wo…
+- task: draft/feature/autolens/cluster_usability.md
+- kind: ruling
+- gate: human-required
+- ask: `cluster_usability` is Autonomy: human-required, so a shift worker would park at ship.
+- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
+### Q34. cluster_usability — `cluster_usability` has no valid Lane:, so every unattended pick fail…
+- task: draft/feature/autolens/cluster_usability.md
+- kind: ruling
+- gate: no-lane
+- ask: `cluster_usability` has no valid Lane:, so every unattended pick fails closed.
+- options: (a) declare Lane: any · (b) declare a laptop lane · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
+### Q35. adaptive_rectangular_meshes_repeat_the_adapt_ima — `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo…
+- task: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+- kind: ruling
+- gate: claimed
+- ask: `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
+- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
+### Q36. adaptive_rectangular_meshes_repeat_the_adapt_ima — `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: nee…
+- task: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+- kind: ruling
+- gate: unattended
+- ask: `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
+### Q37. interferometer_adapt_image_get_the_imaging_mesh — `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo…
+- task: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+- kind: ruling
+- gate: claimed
+- ask: `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
+- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
+### Q38. interferometer_adapt_image_get_the_imaging_mesh — `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: need…
+- task: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+- kind: ruling
+- gate: unattended
+- ask: `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
