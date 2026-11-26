@@ -10,11 +10,13 @@ Priority: high
 Status: draft
 Epic: stars-gnfw-lens-model-in-the-mass
 Phase: 2
-Witness: a unit test shows the frame's deflections for stars + gNFW equal `(stars + gNFW deflections) / lambda_0 + (1 - 1/lambda_0) * (grid - centre)` to 1e-10 on NumPy and JAX, the ring convergence of the transformed lens at `theta_ap` is zero to 1e-6 at zero mass offset, and, if the separate form is chosen, the same identity holds for a power law.
+Witness: unit tests show, on NumPy and JAX, for the frame around stars + gNFW and around an elliptical power law: a grid traces to `centre + (source-plane grid of the physical lens - centre) / lambda_0` to 1e-10; the mean convergence inside `theta_ap` is `1 + eps` and the ring convergence at `theta_ap` is zero at `eps = 0`, both to 1e-6; a circular power law gives `lambda_0 = (slope - 1) / 2` to 1e-6; changing the power law's `einstein_radius` leaves the frame's deflections unchanged to 1e-10; and `PositionsLH` gives the same penalty for a frame lens as for its physical lens (the physical view, with the shear times `lambda_0`).
 Lane: any
 Filed: 2026-11-25
 
-First the assessment in the epic prompt's "Assess first" section (a separate, general rescaling object against the composite profile), written into the plan; then the chosen form, its λ₀ helper, the physical-unit attributes, and the positions penalty scaled by 1 / λ₀.
+The general `MassSheetFrame` of the epic prompt's "Assessment" section (settled 2026-11-26: a profile wrapping a list of mass profiles; the composite is not built), its λ₀ and `mass_scale`, the physical view and attributes, and the positions penalty scaled by 1 / λ₀.
+
+The design question is closed: do not reassess it. Read the epic prompt's "Assessment" section first; it gives the algebra, where the object lives, what was checked numerically and what goes with the frame. The sketch it was checked with is `~/Science/Science/scratch/mass_sheet_frame_assessment/general_frame_check.py` (a sketch, not library code).
 
 ## Seam
 

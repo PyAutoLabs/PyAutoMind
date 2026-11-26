@@ -13,7 +13,9 @@ Witness: the example runs in smoke and recovers the input dark-matter fraction i
 Lane: any
 Filed: 2026-11-25
 
-Simulate a stars + gNFW lens, fit it in the frame, convert the result back to physical units (M*, M200).
+Simulate a stars + gNFW lens, fit it in the frame (the general frame around the aperture-normalised Sérsic and gNFW, `f_dm` shared by compound priors, the frame-unit shear and source priors), convert the result back to physical units (M*, M200).
+
+The model shares `f_dm` through compound priors, so this slice also waits for the fix of `draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md`; do not ship the project's `with_stable_prior_order` workaround. Model composition and the frame-unit priors: the epic prompt's "Assessment" section.
 
 ## Seam
 
