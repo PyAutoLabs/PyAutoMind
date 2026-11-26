@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 24 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -52,7 +52,7 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -150,7 +150,7 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1348,6 +1348,14 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
+<details><summary>📋 <a href="active/ledger_merge_dispatch_dashboard_refresh.md">Cortex ledger auto-merge leaves main red after a project birth — ledger_merge.yml…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/103">issue #103</a> — issued 2026-11-26 — library-dev</summary>
+
+```
+Use the start-dev skill. active/ledger_merge_dispatch_dashboard_refresh.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/714">issue #714</a> — issued 2026-11-25 — research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)</summary>
 
 ```
@@ -1511,7 +1519,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 233 · ral 27 · wsl-data 15 · local-dev 10 · gpu 1
+Lanes: any 232 · ral 27 · wsl-data 15 · local-dev 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1919,7 +1927,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 46</summary>
+<summary><b>bug</b> — 45</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -1957,14 +1965,6 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 ```
 Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautocortex/ledger_merge_dispatch_dashboard_refresh.md">Cortex ledger auto-merge leaves main red after a project birth — ledger_merge.yml…</a> — pyautocortex · easy · safe-capped · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautocortex/ledger_merge_dispatch_dashboard_refresh.md
 ```
 
 </details>
@@ -3086,7 +3086,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-26 | filed | <a href="draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md">Pooled Emcee and Zeus return wrong likelihoods, and Emcee leaves its…</a> |
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
-| 2026-11-26 | filed | <a href="draft/bug/pyautocortex/ledger_merge_dispatch_dashboard_refresh.md">Cortex ledger auto-merge leaves main red after a project birth…</a> |
+| 2026-11-26 | issued | <a href="active/ledger_merge_dispatch_dashboard_refresh.md">Cortex ledger auto-merge leaves main red after a project birth…</a> |
 | 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
@@ -3227,7 +3227,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-51 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+50 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3260,7 +3260,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
-- `draft/bug/pyautocortex/ledger_merge_dispatch_dashboard_refresh.md — unknown theme keyword(s): cortex, ci`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
 - `draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md — unknown theme keyword(s): critical-curves`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
