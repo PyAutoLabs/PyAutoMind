@@ -14,7 +14,8 @@ Repos:
 Difficulty: large
 Autonomy: supervised
 Priority: medium
-Status: formalised
+Status: superseded 2026-11-26 — remaining workspace prose folded into draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md; API assessment answered by PyAutoGalaxy#763
+Superseded-by: draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 Consequence: glance
 Witness: no `__Adapt Images__` cell in any workspace still calls the adapt image an "estimate of the
 Review-minutes: 3

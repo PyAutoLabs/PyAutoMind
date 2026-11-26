@@ -49,3 +49,16 @@ merged.
 
 Evidence for the default: `~/Science/Science/development/adapt_snr_cap/` (`wiki/project/state.md`,
 `results/snr_range/`, `results/compare_cpu/`).
+
+## Folded in: adapt image is the S/N map (prose)
+
+From `draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md` (superseded 2026-11-26; its library
+docstrings shipped in PyAutoGalaxy#644, and its API-honesty assessment is answered by the S/N-map
+API of PyAutoGalaxy#763: `galaxy_snr_maps_from`, `soft_snr_maps_from`, `AdaptImages.from_result`).
+Where the scripts are rewritten for the new default, the `__Adapt Images__` cells say what the adapt
+input is: the source's signal-to-noise map (data with the other galaxies' model images subtracted,
+over the noise map) from the previous result, what the mesh and the adaptive regularization adapt
+to, and why S/N (unit-free, the same across datasets, where an image depends on brightness units).
+Known stale cells (2026-11-05 sweep): autolens_workspace `scripts/guides/modeling/slam_start_here.py`,
+`scripts/multi_galaxy/features/pixelization/adaptive.py`, the subhalo `slam_source_pixelized.py`
+("an initial estimate of the source morphology").

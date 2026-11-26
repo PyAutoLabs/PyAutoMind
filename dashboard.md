@@ -20,6 +20,7 @@
 > ⚠️ **Needs lifecycle reconciliation** — these draft prompts record a fix PR in their body: the work looks done, but the prompt never advanced, so it still renders as backlog:
 
 > - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md — its own `Status:` says completed, but the prompt never left draft/ (reconcile its lifecycle)`
+> - `draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md — its own `Status:` says superseded, but the prompt never left draft/ (reconcile its lifecycle)`
 
 ## Autopilot
 
