@@ -1,4 +1,4 @@
-# GPU route takes 1 h 14 min to 1 h 44 min per lens with the committed config, not the documented ~10 min
+# GPU route takes 1 h 14 min to 1 h 44 min per lens with the committed config, not the documented ~10 min — RETIRED 2026-11-26 (with the euclid-dr1-prep epic)
 
 Type: bug
 Target: euclid

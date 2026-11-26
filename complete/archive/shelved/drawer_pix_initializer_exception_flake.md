@@ -1,4 +1,4 @@
-# `test_latent_run_level.py` slow suite flakes 1-in-7: the `drawer_pix` Drawer raises `InitializerException` because all three draws share one figure of merit
+# `test_latent_run_level.py` slow suite flakes 1-in-7: the `drawer_pix` Drawer raises `InitializerException` because all three draws share one figure of merit — RETIRED 2026-11-26 (with the euclid-dr1-prep epic)
 
 Type: bug
 Target: euclid

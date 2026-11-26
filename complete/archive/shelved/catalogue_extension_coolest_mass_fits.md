@@ -1,4 +1,4 @@
-# Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility verdict
+# Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility verdict — RETIRED 2026-11-26 (with the euclid-dr1-prep epic)
 
 Type: feature
 Target: euclid

@@ -10,10 +10,10 @@
 |-------|------:|
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
-| [Epics](#epics) | 26 |
+| [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 296 |
+| [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1327,35 +1327,6 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>euclid-dr1-prep</b> — 3 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
-
-<details><summary>📋 <a href="draft/feature/euclid/catalogue_extension_coolest_mass_fits.md">Extend the catalogue: COOLEST CSV, mass-model FITS products, and a retroactive-update feasibility…</a> — euclid · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/euclid/catalogue_extension_coolest_mass_fits.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/drawer_pix_initializer_exception_flake.md"><code>test_latent_run_level.py</code> slow suite flakes 1-in-7: the <code>drawer_pix</code> Drawer raises <code>InitializerException</code> because all…</a> — euclid · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/euclid/drawer_pix_initializer_exception_flake.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 1 h 14 min to 1 h 44 min…</a> — euclid · medium · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>autonomous-orchestrators (programme M3.4 companion)</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/questions_inbox_bulk_answering.md">Questions inbox: parked questions wait in one list the human works through…</a> — pyautobrain · medium · supervised · high</summary>
@@ -1588,7 +1559,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 235 · ral 30 · wsl-data 15 · local-dev 13 · gpu 1
+Lanes: any 233 · ral 29 · wsl-data 15 · local-dev 13 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3304,7 +3275,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-58 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+55 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3320,7 +3291,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/results_library_p5c_dr1_census.md — unknown theme keyword(s): results, euclid, hpc`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md — unknown theme keyword(s): measurement-tools`
-- `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/dr1_campaign_sed_status_root.md — unknown theme keyword(s): euclid, hpc`
 - `draft/feature/euclid/dr1_campaign_zip_success_checks.md — unknown theme keyword(s): euclid, hpc`
 - `draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md — unknown theme keyword(s): euclid, catalogue`
@@ -3341,8 +3311,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
-- `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
-- `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/pyautocortex/ledger_merge_dispatch_dashboard_refresh.md — unknown theme keyword(s): cortex, ci`
 - `draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md — unknown theme keyword(s): hpc, dependencies, reproducibility`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
