@@ -29,3 +29,6 @@ The DR1 campaign ships with no zip success checks. A fit's zip is named after it
 2. Replace the "Success checks" comment block with a short note on what the checks catch. Keep the line about the seed guards being load-bearing after a purged dependency.
 3. Update `hpc/README.md` where it describes per-lens success, if it does.
 4. No RAL submit, for the same reason as `dr1_campaign_sed_status_root.md`: the shared RAL install is the human's call.
+
+## Answers from the human
+- Q22 (2026-11-26, ruling blocked-by, shift 2026-11-20-am): (a) wait for campaign_zip_complete_pattern; blocker promoted to the top of the autopilot queue.
