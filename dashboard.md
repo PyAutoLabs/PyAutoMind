@@ -1442,7 +1442,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap)</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/372">issue #372</a> — issued 2026-11-26 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/373">PyAutoHeart#373</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/132">PyAutoCTI#132</a></summary>
+<details><summary>📋 <a href="active/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap)</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/372">issue #372</a> — issued 2026-11-26 — library-merged, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/373">PyAutoHeart#373</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/132">PyAutoCTI#132</a></summary>
 
 ```
 Use the start-dev skill. active/arcticpy_27_git_source_stopgap.md
