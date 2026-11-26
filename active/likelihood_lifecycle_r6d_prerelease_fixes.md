@@ -18,6 +18,7 @@ Epic: likelihood-lifecycle
 Phase: 6 (R6 rollout, pre-release fixes)
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-11-26
+Issued: 2026-11-26
 
 ## Human rulings (2026-11-26)
 

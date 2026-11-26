@@ -167,3 +167,18 @@
 - prompt: active/hpc_setup_flag_and_wiki_auto_setup.md
 - epic: likelihood-lifecycle (R6 phase C; merges before the release by human ruling 2026-11-26)
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-r6d-prerelease-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/895
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-r6d-prerelease-fixes
+- repos:
+  - PyAutoFit: feature/likelihood-lifecycle-r6d-prerelease-fixes
+  - PyAutoGalaxy: feature/likelihood-lifecycle-r6d-prerelease-fixes
+  - PyAutoLens: feature/likelihood-lifecycle-r6d-prerelease-fixes
+- prompt: active/likelihood_lifecycle_r6d_prerelease_fixes.md
+- epic: likelihood-lifecycle (R6 pre-release fixes; must merge before the release)
+- tier: judge — merge mode: human /prm
+- note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap
