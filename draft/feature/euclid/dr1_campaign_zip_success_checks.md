@@ -32,3 +32,4 @@ The DR1 campaign ships with no zip success checks. A fit's zip is named after it
 
 ## Answers from the human
 - Q22 (2026-11-26, ruling blocked-by, shift 2026-11-20-am): (a) wait for campaign_zip_complete_pattern; blocker promoted to the top of the autopilot queue.
+- Q24 (2026-11-26, ruling claimed, shift 2026-11-23-am2): (a) resolved: sed-waveband-search-cap shipped 2026-11-24 and its euclid pipeline claim cleared.

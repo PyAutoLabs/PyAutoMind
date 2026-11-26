@@ -37,3 +37,6 @@ instance; decide whether DESIRED is stale (then fix the constant with its deriva
 the dataset/simulator changed (then re-simulate and re-pin), or a library regression exists (then
 route to the library via start_dev). Check the Heart workspace-validation run history for when it
 first went red.
+
+## Answers from the human
+- Q29 (2026-11-26, shift 2026-11-24-am question on autolens_workspace_test#371): retire https://github.com/PyAutoLabs/autolens_workspace_test/issues/371#issuecomment-7127116263

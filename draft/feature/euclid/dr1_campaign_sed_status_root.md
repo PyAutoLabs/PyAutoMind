@@ -31,3 +31,4 @@ The DR1 campaign's `sed` stage writes into `output_sed/` (`PYAUTO_OUTPUT_DIR`), 
 
 ## Answers from the human
 - Q21 (2026-11-26, ruling blocked-by, shift 2026-11-20-am): (a) wait for campaign_per_stage_status_root; blocker promoted to #1 of the autopilot queue.
+- Q23 (2026-11-26, ruling claimed, shift 2026-11-23-am2): (a) resolved: sed-waveband-search-cap shipped 2026-11-24 and its euclid pipeline claim cleared.

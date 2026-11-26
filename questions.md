@@ -26,55 +26,6 @@ the ruling on the prompt.
 
 ## Open
 
-### Q23. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_…
-- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
-- kind: ruling
-- gate: claimed
-- ask: `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
-- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-23-am2
-- asked: 2026-11-23T09:59Z
-- worker: readiness pass
-
-### Q24. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_le…
-- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
-- kind: ruling
-- gate: claimed
-- ask: `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
-- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-23-am2
-- asked: 2026-11-23T09:59Z
-- worker: readiness pass
-
-### Q29. multi_dataset_jax_likelihood_delaunay_wrong_likelihood — Retire the September likelihood report now that fresh main passes, or…
-- task: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
-- kind: question
-- ask: Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction?
-- options: (a) Retire the report · (b) Supply September g/r FITS files, stack revisions and configuration
-- shift: 2026-11-24-am
-- asked: 2026-11-24T08:07Z
-- worker: codex:996ec11541bd477796142ec5b768b320
-
-### Q30. substructure_util_zero_padded_halo_slots_make — All four profile families pass the padded scan witness on main. Retir…
-- task: draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/871
-- kind: question
-- ask: All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population?
-- options: (a) Retire the duplicate draft · (b) Supply a different failing population
-- shift: 2026-11-24-am
-- asked: 2026-11-24T08:32Z
-- worker: codex:33cff8e853b042bc81657d044e7b878b
-
-### Q31. smoke_cache_stats_warnings_nameerror — see the question on the issue
-- task: active/smoke_cache_stats_warnings_nameerror.md
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
-- kind: question
-- ask: see the question on the issue
-- shift: 2026-11-24-am
-- asked: 2026-11-24T08:34Z
-- worker: codex:64472140ca8443f8a5e1ce9c73f90fc7
-
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
@@ -387,6 +338,68 @@ the ruling on the prompt.
 - worker: readiness pass
 - answered: 2026-11-26T18:07Z by Jammy2211 (chat)
 - answer: (a) wait for campaign_zip_complete_pattern; blocker promoted to the top of the autopilot queue.
+
+### Q23. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_…
+- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
+- kind: ruling
+- gate: claimed
+- ask: `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
+- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-23-am2
+- asked: 2026-11-23T09:59Z
+- worker: readiness pass
+- answered: 2026-11-26T18:08Z by Jammy2211 (chat)
+- answer: (a) resolved: sed-waveband-search-cap shipped 2026-11-24 and its euclid pipeline claim cleared.
+
+### Q24. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_le…
+- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
+- kind: ruling
+- gate: claimed
+- ask: `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
+- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-23-am2
+- asked: 2026-11-23T09:59Z
+- worker: readiness pass
+- answered: 2026-11-26T18:08Z by Jammy2211 (chat)
+- answer: (a) resolved: sed-waveband-search-cap shipped 2026-11-24 and its euclid pipeline claim cleared.
+
+### Q29. multi_dataset_jax_likelihood_delaunay_wrong_likelihood — Retire the September likelihood report now that fresh main passes, or…
+- task: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
+- kind: question
+- ask: Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction?
+- options: (a) Retire the report · (b) Supply September g/r FITS files, stack revisions and configuration
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:07Z
+- worker: codex:996ec11541bd477796142ec5b768b320
+- answered: 2026-11-26T18:08Z by Jammy2211 (issue)
+- answer: retire
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371#issuecomment-7127116263
+
+### Q30. substructure_util_zero_padded_halo_slots_make — All four profile families pass the padded scan witness on main. Retir…
+- task: draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/871
+- kind: question
+- ask: All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population?
+- options: (a) Retire the duplicate draft · (b) Supply a different failing population
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:32Z
+- worker: codex:33cff8e853b042bc81657d044e7b878b
+- answered: 2026-11-26T18:08Z by Jammy2211 (issue)
+- answer: retire
+- answer-comment: https://github.com/PyAutoLabs/PyAutoLens/issues/871#issuecomment-7127151259
+
+### Q31. smoke_cache_stats_warnings_nameerror — see the question on the issue
+- task: active/smoke_cache_stats_warnings_nameerror.md
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
+- kind: question
+- ask: see the question on the issue
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:34Z
+- worker: codex:64472140ca8443f8a5e1ce9c73f90fc7
+- answered: 2026-11-26T18:08Z by Jammy2211 (issue)
+- answer: resume after 369 merges (Heart#369 merged 2026-11-24T09:21Z)
+- answer-comment: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7127183290
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

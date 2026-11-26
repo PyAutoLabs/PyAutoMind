@@ -63,3 +63,6 @@ render layer, which pads with finite values. Reproduction script and log in the 
 calls are `galaxies_to_halo_arrays(..., max_n=None)` and `traced_grids_via_scan`).
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-20 from file:/tmp/claude-1000/-home-jammy-Science/4c8e2ded-c0f1-44a2-878a-797321efeaa7/scratchpad/raw/b6.md -->
+
+## Answers from the human
+- Q30 (2026-11-26, shift 2026-11-24-am question on PyAutoLens#871): retire https://github.com/PyAutoLabs/PyAutoLens/issues/871#issuecomment-7127151259
