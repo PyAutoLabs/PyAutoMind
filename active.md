@@ -124,3 +124,25 @@
   - PyAutoLens: feature/data-temp-write-paths
 - prompt: active/data_temp_write_paths_not_ignored.md
 - tier: safe — merge mode: auto-merge on green if the Witness passes after a merge slot
+
+## installation_docs_arcticpy_recipe
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/133
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm (d3322c16-c97e-4195-8166-6d268d4f1fe5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/installation-docs-arcticpy-recipe
+- prompt: active/installation_docs_arcticpy_recipe.md
+- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
+- repos:
+  - PyAutoCTI: feature/installation-docs-arcticpy-recipe
+
+## skip_fit_output_no_longer_gates_save_results_docs_drift
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/143
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm (ed17e1af)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/skip_fit_output_no_longer_gates_save_results_docs_drift
+- prompt: active/skip_fit_output_no_longer_gates_save_results_docs_drift.md
+- tier: glance — safe; auto-merge on green if the Witness passes after a merge slot
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/skip-fit-output-save-results-docs
