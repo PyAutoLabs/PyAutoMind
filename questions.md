@@ -26,16 +26,6 @@ the ruling on the prompt.
 
 ## Open
 
-### Q15. cti_upkeep_epic — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
-- task: draft/maintenance/autocti/cti_upkeep_epic.md
-- kind: ruling
-- gate: unattended
-- ask: `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
-- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
-- shift: 2026-11-19-pm2
-- asked: 2026-11-19T21:49Z
-- worker: readiness pass
-
 ### Q16. cti_upkeep_epic — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker woul…
 - task: draft/maintenance/autocti/cti_upkeep_epic.md
 - kind: ruling
@@ -379,6 +369,18 @@ the ruling on the prompt.
 - answered: 2026-11-23T17:03Z by Jammy2211 (chat)
 - answer: Resume the cache-statistics repair once the existing PyAutoHeart #364 claim clears through the approved PR merge.
 - answer-comment: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7108095009
+
+### Q15. cti_upkeep_epic — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: unattended
+- ask: `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+- answered: 2026-11-26T18:03Z by Jammy2211 (chat)
+- answer: (a) make it ready: slice or size it so a shift can start it.
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

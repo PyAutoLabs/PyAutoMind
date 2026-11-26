@@ -252,3 +252,4 @@ Library first; one issue per repo per phase; each phase routes through
 ## Answers from the human
 - Q14 (2026-11-23, ruling claimed, shift 2026-11-19-pm2): (a) waited: colab_gate_colossus_rationale_is_stale_once has shipped (complete/2026/11/colab-gate-colossus-rationale-is-stale-once.md), so the PyAutoHeart claim is released and this gate no longer applies.
 - 2026-11-26 — 2b STOPGAP MERGED: arcticpy 2.7 builds from the pinned GitHub commit everywhere (PyAutoHeart#373, PyAutoCTI#132, autocti_workspace_test#28; complete/2026/11/arcticpy-27-git-source.md). Hands PYPI token is rhayes777's (403 on arcticpy); PyPI 2.7 waits on Jammy's PyPI support case. 2c docs unblocked.
+- Q15 (2026-11-26, ruling unattended, shift 2026-11-19-pm2): (a) make it ready: slice or size it so a shift can start it.
