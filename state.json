@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 15 in flight",
-  "updated": "2026-11-26T11:59:46Z",
+  "headline": "RED \u2014 23 picks \u00b7 14 in flight",
+  "updated": "2026-11-26T12:10:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -45,12 +45,6 @@
     },
     {
       "severity": "yellow",
-      "text": "Adapt mesh weighting: S/N-budget Hilbert mesh and soft adapt image\u2026 \u2014 library-shipped, workspace-pending",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/717",
-      "prompt": "Use the start-dev skill. active/adapt_mesh_weighting_library_default.md"
-    },
-    {
-      "severity": "yellow",
       "text": "Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap) \u2014 library-shipped, workspace-pending",
       "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/373",
       "prompt": "Use the start-dev skill. active/arcticpy_27_git_source_stopgap.md"
@@ -69,7 +63,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#717 \u2014 Adapt mesh weighting: S/N-budget Hilbert mesh and soft adapt image\u2026",
+      "text": "pending release: PyAutoArray PyAutoArray#717 \u2014 adapt-mesh-weighting-library",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/717",
       "prompt": null
     },
@@ -126,6 +120,12 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md",
+      "prompt": "Use the start-dev skill. draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md"
     }
   ]
 }

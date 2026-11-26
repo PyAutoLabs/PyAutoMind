@@ -12,7 +12,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Consequence: judge
-Parent: active/adapt_mesh_weighting_library_default.md (PyAutoArray#716)
+Parent: complete/2026/11/adapt-mesh-weighting-library.md (PyAutoArray#716)
 Filed: 2026-11-26
 
 Phase 3 of making the adapt-mesh-weighting result the default everywhere (human, 2026-11-26:

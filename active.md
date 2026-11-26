@@ -112,22 +112,7 @@
 - status: research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)
 - prompt: active/make_the_source_adapt_image_hilbert_image.md
 - note: research, no claim/worktree. Library phase (PyAutoArray, PyAutoGalaxy), workspace phase (autolens_workspace) and docs are filed as their own prompts after the human judges the fits; suggested branch feature/adapt-mesh-weighting. Human added 5 COWLS M25 lenses (F150W, F277W) on 2026-11-25.
-- next: gate 2 passed 2026-11-26 (human approved the unified arm, unfloored input); library phase is adapt-mesh-weighting-library (PyAutoArray#716), then PyAutoGalaxy and workspace phases
-- tier: judge — merge mode: human /prm
-
-## adapt-mesh-weighting-library
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/716
-- issued: 2026-11-26
-- session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
-- status: library-shipped, workspace-pending
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/717
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/717
-- prompt: active/adapt_mesh_weighting_library_default.md
-- worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-library
-- repos:
-  - PyAutoArray: feature/adapt-mesh-weighting-library
-- note: phase 1 of 3 (PyAutoArray HilbertSNR + soft S/N transform); phase 2 PyAutoGalaxy (claimed by likelihood-lifecycle-r6d-prerelease-fixes at filing), phase 3 workspaces default to HilbertSNR; Hilbert and AdaptSplit keep BC
-- next: human /prm on PyAutoArray#717; phase 2 PyAutoGalaxy and phase 3 workspaces filed as their own prompts
+- next: gate 2 passed 2026-11-26; library phase 1 shipped (PyAutoArray#717, record complete/2026/11/adapt-mesh-weighting-library.md); phase 2 draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md, phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement

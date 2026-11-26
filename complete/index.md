@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2416 records across 11 buckets.
+2417 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/11
 
+- [adapt-mesh-weighting-library](2026/11/adapt-mesh-weighting-library.md)
 - [agent-help-text-rot](2026/11/agent-help-text-rot.md)
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
 - [api-reference-polish](2026/11/api-reference-polish.md)

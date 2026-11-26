@@ -1,3 +1,15 @@
+## adapt-mesh-weighting-library
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/716
+- completed: 2026-11-26
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/717
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/717
+- Phase 1 of making the adapt-mesh-weighting result (PyAutoArray#714) the default everywhere. Added `image_mesh.HilbertSNR` (Hilbert draw with a point budget in absolute S/N: 25% even, 5% by (s/max)^8, 70% by (x/(x+3))^2 with x = max(S/N - 2, 0); `HilbertSNR(pixels=...)` is the default the human approved at gate 2), `image_mesh.soft_snr_from` and `image_mesh.adapt_image_soft_from` (the AdaptSplit adapt image). `Hilbert` and the regularizations unchanged (backward compatible, as the human asked).
+- Evidence: 8 new tests, full test_autoarray 2622 passed; library mesh and adapt image equal the science project's unified arm exactly (a test-mode SLaM fit, and the mesh on 15 real lenses). Science project: `Science/development/adapt_snr_cap` (`wiki/project/state.md`, `results/snr_range/`).
+- Scope merged is phase 1 only. Remainder filed as fresh prompts: phase 2 `draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md` (public unfloored S/N map + one-call soft AdaptSplit image), phase 3 `draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md` (all workspaces switch to HilbertSNR, drop weight_power / weight_floor and the S/N 3 cap).
+- Trap: the input must be the S/N map before PyAutoGalaxy's 1% adapt floor; above peak S/N 200 the floor lifts sky over S/N 2 (2.5 at peak 250) and it is weighted as source.
+
+## Original prompt
+
 # Adapt mesh weighting: S/N-budget Hilbert mesh and soft adapt image in the library
 
 Type: feature
