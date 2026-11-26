@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 0 |
+| [Autopilot](#autopilot) | 10 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 12 |
@@ -23,7 +23,7 @@
 
 ## Autopilot
 
-_LIVE · 0 in progress_
+_10 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -42,15 +42,19 @@ _LIVE · 0 in progress_
 9. [Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay](draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md)
 10. [Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…](draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md)
 
-**Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred, 7 rulings — [`questions.md`](questions.md))
 
-_(no open questions)_
+- Q32 — `cluster_usability` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, today)
+- Q33 — `cluster_usability` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, today)
+- Q34 — `cluster_usability` has no valid Lane:, so every unattended pick fails closed. (ruling no-lane, today)
+- Q35 — `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it. (ruling claimed, today)
+- Q36 — `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, today)
+- Q37 — `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it. (ruling claimed, today)
+- Q38 — `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, today)
 
-**Shift** (2026-11-26-pm — 0 in progress · 0 awaiting review)
+**Shift**
 
-Live: LIVE · 11 finished, 1 refusal reasons · tokens 2025671 of 5000000 (close-outs 309103; cache-read 53432565) · review-at 2026-11-26T21:45Z (as of 2026-11-26T20:56:12Z) · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609#issuecomment-7202427627)
-
-_(nothing to review yet)_
+_(last shift 2026-11-26-pm — closed, nothing to review · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609))_
 
 ## Start here
 
