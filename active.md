@@ -36,11 +36,10 @@
 ## sensitivity_slam_source_pixelized_mappervalued
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
 - issued: 2026-11-23
-- session: shift worker 2026-11-23-am3 (codex:b1a928033a0d472f97e99ca81604b708)
+- session: claude-desktop 2026-11-26 (Opus 5.5), resumed from shift worker 2026-11-23-am3 (codex:b1a928033a0d472f97e99ca81604b708)
 - status: awaiting-merge
 - pr: https://github.com/PyAutoLabs/autolens_workspace/pull/694
 - next: human /prm on autolens_workspace#694 (scope beyond plan: adapt_images wiring fix); merge releases the autolens_workspace claim
-- session: claude-desktop 2026-11-26 (Opus 5.5)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/sensitivity-slam-source-pixelized
 - repos:
   - autolens_workspace: feature/sensitivity-slam-source-pixelized
