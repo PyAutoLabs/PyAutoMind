@@ -165,7 +165,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/372
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: library-dev
+- status: library-shipped, workspace-pending
 - worktree: /home/jammy/Code/PyAutoLabs-wt/arcticpy-27-git-source
 - repos:
   - PyAutoHeart: feature/arcticpy-27-git-source
@@ -174,3 +174,10 @@
 - prompt: active/arcticpy_27_git_source_stopgap.md
 - epic: cti-upkeep (phase 2b stopgap; PyPI bump draft stays as the revert)
 - tier: judge — merge mode: human /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/373, https://github.com/PyAutoLabs/PyAutoCTI/pull/132
+- heart-red-override:
+  - authorized: live human, 2026-11-26, this session — "Override, open PRs" (PyAutoHeart#372)
+  - red-reason: "PyAutoHeart: Heart Tests failure on main" (tests/test_smoke_sha_gate.py date drift; unrelated)
+  - gates: Heart 1521 passed / 2 main failures; test_autocti 279 on 2.7; smoke autocti 44/44; review CLEAN
+  - record: https://github.com/PyAutoLabs/PyAutoHeart/issues/372#issuecomment-7191035110
+- next: workspace_test pins provenance note via start_workspace; Heart PR merge waits on Heart main's smoke_sha_gate fix
