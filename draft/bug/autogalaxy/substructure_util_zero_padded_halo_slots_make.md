@@ -13,7 +13,7 @@ Consequence: glance
 Witness: A unit test builds padded halo arrays with `galaxies_to_halo_arrays` for a population in which at least one plane has unused slots, takes `jax.grad` of a scalar function of the source-plane grid from `traced_grids_via_scan` with respect to `halo_params`, and asserts every gradient entry of a real (unmasked) halo is finite and every masked slot's gradient is exactly zero; the forward traced grids are unchanged to 1e-12 against the current values.
 Review-minutes: 3
 Unattended: ready
-Verified: 2026-11-24 1ba51f32 (PyAutoGalaxy), dbc63e65 (PyAutoLens)
+Verified: 2026-11-26 68dc088c (PyAutoGalaxy), 903c0814 (PyAutoLens)
 Lane: any
 
 ## Finding
