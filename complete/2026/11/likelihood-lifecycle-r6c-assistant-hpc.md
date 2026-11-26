@@ -1,3 +1,18 @@
+## likelihood-lifecycle-r6c-assistant-hpc
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/195
+- completed: 2026-11-26
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/196
+- epic: likelihood-lifecycle (R6 phase C)
+
+autolens_assistant HPC templates moved to the automatic compute setup, merged before the R6 release by human ruling (works on 2026.11.25.1: `setup=` passed explicitly).
+
+- `hpc/template.py`, `hpc/batch_cpu/{template,stage}`, `hpc/batch_gpu/template`: `--setup <auto|cpu|gpu|setup_id>` (default auto) and `--number_of_cores <auto|int>` (default auto), the same contract as euclid_strong_lens_modeling_pipeline#142; `--use_cpu` is a deprecated alias for `--setup cpu`. `cpu`/`gpu` export `PYAUTO_SETUP` and resolve as `"auto"`.
+- Kept pins (commented): `JAX_PLATFORMS=cpu` on CPU jobs; `BLAS_THREADS` default 1 driving OMP/MKL/OpenBLAS/`NUMBA_NUM_THREADS`, because `number_of_cores=auto` runs one numba worker per CPU (differs from the Euclid stage, which defaults to the allocated CPUs).
+- `wiki/core/operations/hpc.md` rewritten via al_update_wiki from the real `setup_rules.yaml`, stale "sparse operator CPU/numba-only" claim removed, pinned to library main (Array e261e6d6, Galaxy 9c391639, Fit 67164d22); `hpc_infrastructure.md`, `skills/init-slam.md`, `scripts/AGENTS.md` aligned.
+- Tests: new `test_hpc_template.py`, updated `test_hpc_sync.py` (59 pass). The 9 `test_forward_model_consistency.py` errors ("Reference requires autolens==2026.9.27.2") are pre-existing on main.
+
+## Original prompt
+
 # autolens_assistant HPC: `--use_cpu` → `--setup` in the hpc templates, and the wiki/core HPC pages rewritten for the automatic compute setup
 
 Type: feature
