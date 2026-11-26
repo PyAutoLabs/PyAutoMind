@@ -3,6 +3,7 @@
 Type: feature
 Target: autolens_workspace
 Repos:
+- PyAutoLens
 - autolens_workspace
 - HowToLens
 - HowToGalaxy
@@ -23,6 +24,10 @@ weight_floor=0.01 the default always gives this great adaption"). Needs phase 1
 merged.
 
 ## What to do
+
+- PyAutoLens: export `galaxy_name_soft_image_dict_from` in `autolens/__init__.py` next to
+  `galaxy_name_image_dict_via_result_from` (moved here from phase 2, PyAutoGalaxy#762, because
+  PyAutoLens was claimed); library first.
 
 - Every script that builds a Hilbert image mesh switches from
   `image_mesh.Hilbert(pixels=..., weight_power=3.5, weight_floor=0.01)` to

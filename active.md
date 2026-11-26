@@ -115,6 +115,23 @@
 - next: gate 2 passed 2026-11-26; library phase 1 shipped (PyAutoArray#717, record complete/2026/11/adapt-mesh-weighting-library.md); phase 2 draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md, phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 - tier: judge — merge mode: human /prm
 
+## adapt-mesh-weighting-galaxy
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
+- status: library-dev
+- prompt: active/adapt_mesh_weighting_galaxy_adapt_images.md
+- worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-galaxy
+- repos:
+  - PyAutoGalaxy: feature/adapt-mesh-weighting-galaxy
+- heart-red-override:
+  - authorized: live human, 2026-11-26, this session — "Override, proceed" (phase 2 of adapt-mesh-weighting, PyAutoGalaxy#762)
+  - red-reason: "Heart: RED — Release RED; monitoring RED · 14/100 · 132 unresolved" (PyAutoFit CI failure, release validation FAILED stage integrate, workspace validation NOT ready; full list on the issue; unrelated)
+  - gates: pending (filled at PR-open)
+  - record: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
+- note: phase 2 of 3; the `al.` export (PyAutoLens __init__) moved to phase 3 because PyAutoLens is claimed by cluster-family-fit-figures
+- tier: judge — merge mode: human /prm
+
 ## nautilus-ring-latent-placement
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/76
 - issued: 2026-11-25
