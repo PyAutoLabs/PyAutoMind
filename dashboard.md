@@ -1538,7 +1538,7 @@ Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_sha_gate_tests_date_drift.md">Heart: smoke_sha_gate main() tests fail as the real clock passes their fixed…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/374">issue #374</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/smoke_sha_gate_tests_date_drift.md">Heart: smoke_sha_gate main() tests fail as the real clock passes their fixed…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/374">issue #374</a> — issued 2026-11-26 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/375">PyAutoHeart#375</a></summary>
 
 ```
 Use the start-dev skill. active/smoke_sha_gate_tests_date_drift.md
