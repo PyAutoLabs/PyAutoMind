@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2417 records across 11 buckets.
+2418 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -299,6 +299,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-r6-default-auto](2026/11/likelihood-lifecycle-r6-default-auto.md)
 - [likelihood-lifecycle-r6b-use-jax-sweep](2026/11/likelihood-lifecycle-r6b-use-jax-sweep.md)
 - [likelihood-lifecycle-r6c-assistant-hpc](2026/11/likelihood-lifecycle-r6c-assistant-hpc.md)
+- [likelihood-lifecycle-r6d-prerelease-fixes](2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md)
 - [live-shift-view](2026/11/live-shift-view.md)
 - [live-shift-worker-gaps](2026/11/live-shift-worker-gaps.md) — pilot 4c follow-up; issue PyAutoBrain#594
 - [looks-shipped-guard-false-positives](2026/11/looks-shipped-guard-false-positives.md) — 33 → 1

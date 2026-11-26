@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 14 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 298 |
+| [Backlog](#backlog) | 299 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -331,7 +331,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 11 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 12 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -409,6 +409,14 @@ Use the start-dev skill. draft/bug/autogalaxy_workspace_test/sparse_operator_rou
 
 ```
 Use the start-dev skill. draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/remove_r6_sweep_pins_after_release.md">Remove the temporary R6 sweep pins (mixed factor graphs, weak) after…</a> — autolens_workspace · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_workspace/remove_r6_sweep_pins_after_release.md
 ```
 
 </details>
@@ -1474,14 +1482,6 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_r6d_prerelease_fixes.md">Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/895">issue #895</a> — issued 2026-11-26 — library-shipped, awaiting-merge (judge: human /prm; merge Fit → Galaxy → Lens; then the release) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1801">PyAutoFit#1801</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761">PyAutoGalaxy#761</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/896">PyAutoLens#896</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoFit's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
-
-```
-Use the start-dev skill. active/likelihood_lifecycle_r6d_prerelease_fixes.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/714">issue #714</a> — issued 2026-11-25 — research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)</summary>
 
 ```
@@ -1645,7 +1645,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 240 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
+Lanes: any 241 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3209,7 +3209,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
-| 2026-11-26 | issued | <a href="active/likelihood_lifecycle_r6d_prerelease_fixes.md">Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614)…</a> |
 | 2026-11-26 | issued | <a href="active/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI…</a> |
 | 2026-11-26 | filed | <a href="draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the…</a> |
 | 2026-11-26 | filed | <a href="draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> |
@@ -3218,12 +3217,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_ring_latent_placement.md">Does CPU placement of posterior derived quantities shorten a GPU…</a> |
+| 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-11-24 | issued | <a href="active/cluster_family_fit_figures.md">Render cluster family fit diagnostics in the point visualizer</a> |
 | 2026-11-24 | issued | <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> |
 | 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
@@ -3233,12 +3232,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
+| 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
@@ -3248,12 +3247,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
+| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
@@ -3263,12 +3262,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
@@ -3278,6 +3277,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
+| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 
 </details>
 
@@ -3304,7 +3304,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-122 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+123 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3324,6 +3324,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
+- `draft/feature/autolens_workspace/remove_r6_sweep_pins_after_release.md`
 - `draft/feature/cortex/output_summary.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
@@ -3348,8 +3349,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/hilbert_image_mesh_frame_independent.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
-- `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
-- _… and 82 more_
+- _… and 83 more_
 
 </details>
 
@@ -3429,21 +3429,18 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
-- [PyAutoFit#1801](https://github.com/PyAutoLabs/PyAutoFit/pull/1801) — `active/likelihood_lifecycle_r6d_prerelease_fixes.md`
 - [PyAutoFit#1800](https://github.com/PyAutoLabs/PyAutoFit/pull/1800) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
-- ⏸ waiting: [Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…](active/likelihood_lifecycle_r6d_prerelease_fixes.md)
+- [PyAutoFit#1801](https://github.com/PyAutoLabs/PyAutoFit/pull/1801) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#761](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761) — `active/likelihood_lifecycle_r6d_prerelease_fixes.md`
 - [PyAutoGalaxy#760](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
-- ⏸ waiting: [Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…](active/likelihood_lifecycle_r6d_prerelease_fixes.md)
+- [PyAutoGalaxy#761](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 
 **PyAutoLens**
 
-- [PyAutoLens#896](https://github.com/PyAutoLabs/PyAutoLens/pull/896) — `active/likelihood_lifecycle_r6d_prerelease_fixes.md`
 - [PyAutoLens#894](https://github.com/PyAutoLabs/PyAutoLens/pull/894) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
-- ⏸ waiting: [Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…](active/likelihood_lifecycle_r6d_prerelease_fixes.md)
+- [PyAutoLens#896](https://github.com/PyAutoLabs/PyAutoLens/pull/896) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

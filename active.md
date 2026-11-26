@@ -134,28 +134,6 @@
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
 
-## likelihood-lifecycle-r6d-prerelease-fixes
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/895
-- issued: 2026-11-26
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: library-shipped, awaiting-merge (judge: human /prm; merge Fit → Galaxy → Lens; then the release)
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1801
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/896
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1801
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/896
-- release-gate: PyAutoFit, PyAutoGalaxy, PyAutoLens
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-r6d-prerelease-fixes
-- repos:
-  - PyAutoFit: feature/likelihood-lifecycle-r6d-prerelease-fixes
-  - PyAutoGalaxy: feature/likelihood-lifecycle-r6d-prerelease-fixes
-  - PyAutoLens: feature/likelihood-lifecycle-r6d-prerelease-fixes
-- prompt: active/likelihood_lifecycle_r6d_prerelease_fixes.md
-- epic: likelihood-lifecycle (R6 pre-release fixes; must merge before the release)
-- tier: judge — merge mode: human /prm
-- note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap
-
 ## arcticpy-27-git-source
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/372
 - issued: 2026-11-26
