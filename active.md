@@ -162,7 +162,8 @@
 ## jit_cache_not_hit_modeling_visualization
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/375
 - session: shift worker 2026-11-26-pm2 (f2260bde-3b41-455c-bff0-04b02e1681ac)
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/376
 - worktree: ~/Code/PyAutoLabs-wt/jit-cache-modeling-visualization
 - repos:
   - autolens_workspace_test: feature/jit-cache-modeling-visualization
