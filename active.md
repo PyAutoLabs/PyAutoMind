@@ -89,11 +89,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/693
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
-- status: workspace-dev (3a PRs open, release-gated; 3b autolens_workspace pending its claim)
+- status: workspace-shipped, awaiting-release (all phase 3 PRs open, release-gated)
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/141
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/110
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/374
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/142
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/697
 - prompt: active/adapt_mesh_weighting_workspace_default.md
 - worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-workspaces
 - repos:
@@ -107,10 +108,10 @@
 - release-gate: PyAutoLens
 - heart-red-override:
   - authorized: live human, 2026-11-26, this session — "Override for phase 3" (autolens_workspace#693)
-  - not exercised for 3a: the scoped dev gate (HowToLens, HowToGalaxy, autolens_workspace_test, autogalaxy_workspace_test) was GREEN at PR-open
+  - not exercised: the scoped dev gate was GREEN at every PR-open (3a repos; autolens_workspace)
   - record: https://github.com/PyAutoLabs/autolens_workspace/issues/693
 - note: phase 3a now (HowTo tutorials, _test pinned HilbertSNR scripts); 3b autolens_workspace after sensitivity_slam_source_pixelized_mappervalued (#685) releases its claim
-- next: 3a PRs merge only after a release carries PyAutoArray#717/#718, PyAutoGalaxy#763, PyAutoLens#897 (human /prm); 3b (autolens_workspace ~37 scripts) once sensitivity_slam_source_pixelized_mappervalued releases autolens_workspace
+- next: all five PRs merge only after a release carries PyAutoArray#717/#718, PyAutoGalaxy#763, PyAutoLens#897 (human /prm); then the science project's slam.py unified arm moves to the library calls. Rectangular-mesh scripts (31) deliberately unchanged: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement
