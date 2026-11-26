@@ -133,8 +133,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1807
 - issued: 2026-11-26
 - session: shift worker 2026-11-26-pm (3d69db99-aa12-4830-bbe5-1e44471b2f5c)
-- status: library-dev
+- status: library-pr
 - prompt: active/regression_test_nautilus_as_the_ep_default.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1808
 - worktree: /home/jammy/Code/PyAutoLabs-wt/regression-test-nautilus-ep-default
 - repos:
   - PyAutoFit: feature/regression-test-nautilus-ep-default
