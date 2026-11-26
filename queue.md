@@ -82,21 +82,25 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 4. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
+## 1. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
 - kind: prompt
 - ref: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 
-## 5. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
+## 2. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
 - kind: prompt
 - ref: draft/research/autofit/hpc_campaign_epic.md
 
-## 6. Results library — index, complete, export and ship thousands of PyAutoFit results
+## 3. Results library — index, complete, export and ship thousands of PyAutoFit results
 - kind: prompt
 - ref: draft/feature/autofit/results_library_epic.md
 
-## 7. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
+## 4. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
 - kind: prompt
 - ref: draft/maintenance/autocti/cti_upkeep_epic.md
+
+## 5. Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)
+- kind: prompt
+- ref: draft/docs/workspaces/assistants_regime_extension.md
 
 ## Retired
 
