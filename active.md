@@ -45,11 +45,13 @@
 
 ## smoke_cache_stats_warnings_nameerror
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
-- session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7)
-- status: awaiting-input
+- session: shift worker 2026-11-26-pm (claude:9e8338a5)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/smoke_cache_stats_warnings_nameerror
+- repos:
+  - PyAutoHeart: feature/smoke_cache_stats_warnings_nameerror
 - prompt: active/smoke_cache_stats_warnings_nameerror.md
-- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
-- next: #368 claim cleared 2026-11-24 (PyAutoHeart#369 merged; record complete/2026/11/heart-health-rerun-stale-push.md) — resumable.
+- previous-session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7) — parked Q31, answered "resume after 369 merges"
 
 ## parked-hold-grace
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
