@@ -168,3 +168,13 @@
 - worktree: ~/Code/PyAutoLabs-wt/jit-cache-modeling-visualization
 - repos:
   - autolens_workspace_test: feature/jit-cache-modeling-visualization
+
+## vmap-jit-recompiles-per-nautilus-batch-length
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1811
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm2 (04ca20f9-79a0-4372-9b9b-1a21cf73502d)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
+- prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
+- repos:
+  - PyAutoFit: (no branch; parked before implementation — stated bug did not reproduce)

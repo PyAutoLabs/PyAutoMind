@@ -116,6 +116,15 @@ the ruling on the prompt.
 - asked: 2026-11-26T21:31Z
 - worker: 0f971892
 
+### Q41. vmap_jit_recompiles_per_nautilus_batch_length — see the question on the issue
+- task: active/vmap_jit_recompiles_per_nautilus_batch_length.md
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
+- kind: question
+- ask: see the question on the issue
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:49Z
+- worker: 04ca20f9
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
