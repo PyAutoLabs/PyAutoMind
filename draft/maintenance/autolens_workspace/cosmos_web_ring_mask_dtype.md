@@ -14,6 +14,7 @@ Consequence: glance
 Witness: Every `mask_extra_galaxies.fits` under `dataset/imaging/cosmos_web_ring` is stored as `uint8`, the loaded boolean masks compare equal to the current ones, both `start_here` scripts smoke-run, the dataset is under 8 MB, and the F115W/F150W keep-or-drop decision is recorded in the PR.
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-26 083c65e8 (autolens_workspace)
 Lane: any
 Filed: 2026-08-04 (backfilled from git)
 
