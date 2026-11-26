@@ -118,10 +118,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/899
 - issued: 2026-11-26
 - session: shift worker 2026-11-26-pm (8a116519-17eb-417f-8489-1a07e073b5c5)
-- status: library-dev
+- status: pr-open
 - worktree: ~/Code/PyAutoLabs-wt/data-temp-write-paths
 - repos:
   - PyAutoLens: feature/data-temp-write-paths
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/900
 - prompt: active/data_temp_write_paths_not_ignored.md
 - tier: safe — merge mode: auto-merge on green if the Witness passes after a merge slot
 
@@ -139,8 +140,9 @@
 ## skip_fit_output_no_longer_gates_save_results_docs_drift
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/143
 - issued: 2026-11-26
-- session: shift worker 2026-11-26-pm (ed17e1af)
+- session: shift worker 2026-11-26-pm (ed17e1af-d8bf-4471-b4de-72b0509cbb64)
 - status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/144
 - worktree: ~/Code/PyAutoLabs-wt/skip_fit_output_no_longer_gates_save_results_docs_drift
 - prompt: active/skip_fit_output_no_longer_gates_save_results_docs_drift.md
 - tier: glance — safe; auto-merge on green if the Witness passes after a merge slot
