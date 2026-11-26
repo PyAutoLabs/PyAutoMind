@@ -103,3 +103,15 @@
 - prompt: active/intake_apply_crashes_on_memory_citations_when.md
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
+
+## remove-r6-sweep-pins
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/698
+- issued: 2026-11-26
+- status: workspace-dev
+- tier: supervised
+- epic: likelihood-lifecycle
+- prompt: active/remove_r6_sweep_pins_after_release.md
+- worktree: ~/Code/PyAutoLabs-wt/remove-r6-sweep-pins
+- repos:
+  - autolens_workspace: feature/remove-r6-sweep-pins
+  - autogalaxy_workspace: feature/remove-r6-sweep-pins
