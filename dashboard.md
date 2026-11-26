@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 14 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 294 |
+| [Backlog](#backlog) | 296 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -286,7 +286,7 @@ Use the start-dev skill. draft/feature/autofit/nautilus_parent_cpu_slowdown.md
 </details>
 
 <details>
-<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 4 queued prompt(s), in order</summary>
+<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: <code>draft/maintenance/autocti/cti_upkeep_epic.md</code> — IN PROGRESS — 11-06: phases 0, 1, 2c, 3a, 3b, 3c, 5c(api) DONE; 3b DONE (autocti_workspace_test#27 merged); 2a jkeger/arctic#73…</summary>
 
@@ -312,6 +312,14 @@ Use the start-dev skill. draft/docs/autocti/installation_docs_arcticpy_recipe.md
 
 </details>
 
+<details><summary>📋 <a href="draft/maintenance/pyautoheart/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap)</a> — pyautoheart · small · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautoheart/arcticpy_27_git_source_stopgap.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md">Heart/DNA: bump the arcticpy pin after the upstream release, re-pin CTI values</a> — pyautoheart · medium · human-required · normal</summary>
 
 ```
@@ -331,7 +339,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -393,6 +401,14 @@ Use the start-dev skill. draft/bug/autofit/grid_search_number_of_cores_auto_hang
 
 ```
 Use the start-dev skill. draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/likelihood_lifecycle_r6d_prerelease_fixes.md">Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…</a> — autolens · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/likelihood_lifecycle_r6d_prerelease_fixes.md
 ```
 
 </details>
@@ -1629,7 +1645,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 236 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
+Lanes: any 238 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3272,7 +3288,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-119 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+120 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3317,11 +3333,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- _… and 79 more_
+- _… and 80 more_
 
 </details>
 
-59 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+60 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3373,6 +3389,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/maintenance/autocti/cti_upkeep_epic.md — unknown theme keyword(s): infrastructure`
 - `draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md — unknown theme keyword(s): euclid, simulation`
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
+- `draft/maintenance/pyautoheart/arcticpy_27_git_source_stopgap.md — unknown theme keyword(s): install`
 - `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md — unknown theme keyword(s): install`
 - `draft/maintenance/pyautomind/witness_backfill_scan.md — unknown theme keyword(s): autonomy`
 - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md — unknown theme keyword(s): jax-grad`
