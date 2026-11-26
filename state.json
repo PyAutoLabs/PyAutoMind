@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 14 in flight",
-  "updated": "2026-11-26T13:39:58Z",
+  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
+  "updated": "2026-11-26T13:42:39Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,18 +48,6 @@
       "text": "Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input\u2026 \u2014 library-shipped, workspace-pending",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/718",
       "prompt": "Use the start-dev skill. active/adapt_mesh_weighting_galaxy_adapt_images.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Emcee and Zeus default to one core until their pooled path\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1803",
-      "prompt": "Use the start-dev skill. active/emcee_zeus_default_one_core.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "autogalaxy_workspace_test sparse-operator routing assertions still expect the pre-R6 mapping route \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/141",
-      "prompt": "Use the start-dev skill. active/sparse_operator_routing_assertions_after_r6.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +114,18 @@
       "text": "pending release: PyAutoLens PyAutoLens#894 \u2014 likelihood-lifecycle-r6-default-auto",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/894",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#896 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/896",
+      "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }

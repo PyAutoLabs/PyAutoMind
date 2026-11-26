@@ -1,3 +1,10 @@
+The autogalaxy_workspace_test jax_assertions sparse-operator scripts give their mapping leg `lazy_sparse_operator="off"`, so it stays on the dense mapping route under R6's lazy sparse default. The sparse leg and all assertions are unchanged. Corrective PR under Heart RED ("✗ release validation FAILED (stage integrate)"), authorized live 2026-11-26.
+
+- PR: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/141 (merged 91b4f4eb9)
+- Validation: on library main the unmodified scripts fail with the CI assertions; the branch passes all assertions incl. parity; PR smoke CI green on 3.12 and 3.13.
+
+## Original prompt
+
 # autogalaxy_workspace_test sparse-operator routing assertions still expect the pre-R6 mapping route
 
 Type: bug

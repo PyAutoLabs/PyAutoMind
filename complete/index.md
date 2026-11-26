@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2420 records across 11 buckets.
+2422 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -213,6 +213,7 @@ markers; everything below GENERATED is rebuilt.
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
 - [ellipse-fit-filenames](2026/11/ellipse-fit-filenames.md)
 - [ellipse-multipole-latent-missing-m](2026/11/ellipse-multipole-latent-missing-m.md) — `af.Model(ag.EllipseMultipole)` / `af.Model(ag.EllipseMultipoleScaled)` built without an explicit `m` made `la…
+- [emcee-zeus-default-one-core](2026/11/emcee-zeus-default-one-core.md)
 - [ep-projected-model-shared-prior](2026/11/ep-projected-model-shared-prior.md)
 - [euclid-nautilus-batch](2026/11/euclid-nautilus-batch.md)
 - [example-analysis-xp-sum](2026/11/example-analysis-xp-sum.md)
@@ -433,6 +434,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-install-tfp-comment-sweep](2026/11/smoke-install-tfp-comment-sweep.md) — - Comment-only sweep after PyAutoArray#694 (record complete/2026/11/matern-vendor-bessel-kve.md): replaced the…
 - [smoke-sha-gate-date-drift](2026/11/smoke-sha-gate-date-drift.md)
 - [smoke-sha-gate-tests-clock-time-bomb](2026/11/smoke-sha-gate-tests-clock-time-bomb.md)
+- [sparse-routing-assertions-r6](2026/11/sparse-routing-assertions-r6.md)
 - [stale-auto-simulated-cluster-dataset](2026/11/stale-auto-simulated-cluster-dataset.md)
 - [stale-enable-pytrees-register-model-advice-in](2026/11/stale-enable-pytrees-register-model-advice-in.md)
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)

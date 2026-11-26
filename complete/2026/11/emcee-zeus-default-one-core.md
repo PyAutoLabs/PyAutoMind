@@ -1,3 +1,12 @@
+Emcee and Zeus default back to `number_of_cores=1` (R6 had made `"auto"` the default, which sent default fits through their broken multiprocessing pool). `"auto"` stays an explicit opt-in. Corrective PR under Heart RED ("✗ PyAutoFit: CI failure"), authorized live 2026-11-26.
+
+- PR: https://github.com/PyAutoLabs/PyAutoFit/pull/1803 (merged 551f61756)
+- Validation: full PyAutoFit suite on 3.13 passed 4399, 0 failed; PR CI green (3.12, 3.13, no-jax, docs). emcee_plotter.py with fresh output: main hangs to the cap, branch 15s.
+- Follow-up: draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md (pooled Emcee returns inf and leaves SneakyPool workers running; pooled Zeus gets wrong log probabilities; predates R6).
+- Heart: the integrate stage stays failed until a new release-integrate run passes (needs a human go).
+
+## Original prompt
+
 # Emcee and Zeus default to one core until their pooled path is fixed
 
 Type: bug
