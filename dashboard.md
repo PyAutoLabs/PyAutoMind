@@ -1434,7 +1434,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762">issue #762</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762">issue #762</a> — issued 2026-11-26 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/718">PyAutoArray#718</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763">PyAutoGalaxy#763</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/adapt_mesh_weighting_galaxy_adapt_images.md
@@ -1458,7 +1458,7 @@ Use the start-dev skill. active/cluster_family_fit_figures.md
 
 </details>
 
-<details><summary>📋 <a href="active/emcee_zeus_default_one_core.md">Emcee and Zeus default to one core until their pooled path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1802">issue #1802</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/emcee_zeus_default_one_core.md">Emcee and Zeus default to one core until their pooled path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1802">issue #1802</a> — issued 2026-11-26 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1803">PyAutoFit#1803</a></summary>
 
 ```
 Use the start-dev skill. active/emcee_zeus_default_one_core.md
@@ -1538,7 +1538,7 @@ Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_operator_routing_assertions_after_r6.md">autogalaxy_workspace_test sparse-operator routing assertions still expect the pre-R6 mapping route</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/140">issue #140</a> — issued 2026-11-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/sparse_operator_routing_assertions_after_r6.md">autogalaxy_workspace_test sparse-operator routing assertions still expect the pre-R6 mapping route</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/140">issue #140</a> — issued 2026-11-26 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/141">autogalaxy_workspace_test#141</a></summary>
 
 ```
 Use the start-dev skill. active/sparse_operator_routing_assertions_after_r6.md
@@ -3424,6 +3424,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#718](https://github.com/PyAutoLabs/PyAutoArray/pull/718) — `active/adapt_mesh_weighting_galaxy_adapt_images.md`
 - [PyAutoArray#717](https://github.com/PyAutoLabs/PyAutoArray/pull/717) — `complete/2026/11/adapt-mesh-weighting-library.md`
 - [PyAutoArray#715](https://github.com/PyAutoLabs/PyAutoArray/pull/715) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 
@@ -3434,6 +3435,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#763](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763) — `active/adapt_mesh_weighting_galaxy_adapt_images.md`
 - [PyAutoGalaxy#760](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 - [PyAutoGalaxy#761](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 
