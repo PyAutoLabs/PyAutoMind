@@ -97,6 +97,29 @@
 - next: phases 1-2 merged 2026-11-26 (records complete/2026/11/adapt-mesh-weighting-library.md, adapt-mesh-weighting-galaxy.md); phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 - tier: judge — merge mode: human /prm
 
+## adapt-mesh-weighting-workspaces
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/693
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
+- status: workspace-dev
+- prompt: active/adapt_mesh_weighting_workspace_default.md
+- worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-workspaces
+- repos:
+  - HowToLens: feature/adapt-mesh-weighting-workspaces
+  - HowToGalaxy: feature/adapt-mesh-weighting-workspaces
+  - autolens_workspace_test: feature/adapt-mesh-weighting-workspaces
+  - autogalaxy_workspace_test: feature/adapt-mesh-weighting-workspaces
+- release-gate: PyAutoArray
+- release-gate: PyAutoGalaxy
+- release-gate: PyAutoLens
+- heart-red-override:
+  - authorized: live human, 2026-11-26, this session — "Override for phase 3" (autolens_workspace#693)
+  - red-reason: "Heart: RED — Release RED; monitoring RED" (release validation FAILED stage integrate, Workspace Smoke, PyAutoFit/PyAutoGalaxy/PyAutoLens red; full list on the issue)
+  - gates: pending (filled at PR-open)
+  - record: https://github.com/PyAutoLabs/autolens_workspace/issues/693
+- note: phase 3a now (HowTo tutorials, _test pinned HilbertSNR scripts); 3b autolens_workspace after sensitivity_slam_source_pixelized_mappervalued (#685) releases its claim
+- tier: judge — merge mode: human /prm
+
 ## nautilus-ring-latent-placement
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/76
 - issued: 2026-11-25

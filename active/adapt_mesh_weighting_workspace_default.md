@@ -14,6 +14,8 @@ Priority: high
 Consequence: judge
 Parent: complete/2026/11/adapt-mesh-weighting-library.md (PyAutoArray#716)
 Filed: 2026-11-26
+Issued: 2026-11-26
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/693
 
 Phase 3 of making the adapt-mesh-weighting result the default everywhere (human, 2026-11-26:
 "make this the default everywhere (but keep BC via `Hilbert` ..., ensure `AdaptSplit` retains BC
