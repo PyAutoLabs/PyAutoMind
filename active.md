@@ -107,9 +107,12 @@
 ## remove-r6-sweep-pins
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/698
 - issued: 2026-11-26
-- status: workspace-shipped, awaiting-merge
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/699
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/286
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/142
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/198
 - tier: supervised
 - epic: likelihood-lifecycle
 - prompt: active/remove_r6_sweep_pins_after_release.md
@@ -117,3 +120,6 @@
 - repos:
   - autolens_workspace: feature/remove-r6-sweep-pins
   - autogalaxy_workspace: feature/remove-r6-sweep-pins
+  - HowToLens: feature/remove-r6-sweep-pins
+  - autolens_assistant: feature/remove-r6-sweep-pins
+  - PyAutoGalaxy: feature/remove-r6-sweep-pins
