@@ -128,3 +128,23 @@
 - prompt: active/smoke_cache_stats_warnings_nameerror.md
 - previous-session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7) — parked Q31, answered "resume after 369 merges"
 - next: human /prm (Consequence: judge; review CLEAN, witness red-on-main/green-on-branch)
+
+## group-subhalo-sensitivity
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/702
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm2 (0f971892-bf2d-4ebe-8fb3-1d104ea7a79c)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/autolens_workspace/issues/702#issuecomment-7203769475
+- prompt: active/group_subhalo_sensitivity.md
+- note: no repo claim, branch or worktree yet. autolens_workspace is held by cosmos-web-ring-mask-dtype (PR #701), and under smoke the Witness evidence map is all zeros. Imaging half already done; its no_run.yaml entry is stale (runs in 18s under smoke).
+- next: human answers both questions on #702, then branch feature/group-subhalo-sensitivity from the plan in the issue body
+- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
+## a-compound-prior-model-reloaded-from-model
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1809
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm2 (fc7a6684-3089-4049-93a5-98256bb23677)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/a-compound-prior-model-reloaded-from-model
+- prompt: active/a_compound_prior_model_reloaded_from_model.md
+- repos:
+  - PyAutoFit: feature/a-compound-prior-model-reloaded-from-model
