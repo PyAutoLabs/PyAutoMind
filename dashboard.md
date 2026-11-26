@@ -1474,7 +1474,7 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_r6d_prerelease_fixes.md">Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/895">issue #895</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_r6d_prerelease_fixes.md">Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/895">issue #895</a> — issued 2026-11-26 — library-shipped, awaiting-merge (judge: human /prm; merge Fit → Galaxy → Lens; then the release) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1801">PyAutoFit#1801</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761">PyAutoGalaxy#761</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/896">PyAutoLens#896</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoFit's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_r6d_prerelease_fixes.md
@@ -3429,15 +3429,21 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1801](https://github.com/PyAutoLabs/PyAutoFit/pull/1801) — `active/likelihood_lifecycle_r6d_prerelease_fixes.md`
 - [PyAutoFit#1800](https://github.com/PyAutoLabs/PyAutoFit/pull/1800) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
+- ⏸ waiting: [Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…](active/likelihood_lifecycle_r6d_prerelease_fixes.md)
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#761](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761) — `active/likelihood_lifecycle_r6d_prerelease_fixes.md`
 - [PyAutoGalaxy#760](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
+- ⏸ waiting: [Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…](active/likelihood_lifecycle_r6d_prerelease_fixes.md)
 
 **PyAutoLens**
 
+- [PyAutoLens#896](https://github.com/PyAutoLabs/PyAutoLens/pull/896) — `active/likelihood_lifecycle_r6d_prerelease_fixes.md`
 - [PyAutoLens#894](https://github.com/PyAutoLabs/PyAutoLens/pull/894) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
+- ⏸ waiting: [Likelihood lifecycle R6 pre-release fixes: JAX weak plotting (#614) and mixed factor…](active/likelihood_lifecycle_r6d_prerelease_fixes.md)
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
