@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 10 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
@@ -23,7 +23,7 @@
 
 ## Autopilot
 
-_10 queued · 0 questions_
+_LIVE · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -46,9 +46,11 @@ _10 queued · 0 questions_
 
 _(no open questions)_
 
-**Shift**
+**Shift** (2026-11-26-pm — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-26-pm — closed, nothing to review · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609))_
+Live: LIVE · 4 running, 1 finished, 1 refusal reasons · tokens 0 of 5000000 (4 session(s) unmeasured) · review-at 2026-11-26T21:45Z (as of 2026-11-26T20:12:50Z) · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609#issuecomment-7202427627)
+
+_(nothing to review yet)_
 
 ## Start here
 
