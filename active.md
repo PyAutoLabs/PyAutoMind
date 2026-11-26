@@ -37,13 +37,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
 - issued: 2026-11-23
 - session: shift worker 2026-11-26-pm (claude-job-1492608b)
-- status: library-dev
+- status: library-pr
 - prompt: active/sparse_terms_nufft_origin_and_mask_compatibility.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/721
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/766
 - worktree: /home/jammy/Code/PyAutoLabs-wt/sparse-terms-nufft-origin
 - repos:
   - PyAutoArray: feature/sparse-terms-nufft-origin
   - PyAutoGalaxy: feature/sparse-terms-nufft-origin
-- next: Q26 answered (coordinated PyAutoArray + PyAutoGalaxy PRs); implement NUFFT origin fix + mask fingerprint + FITS round trip.
+- next: human /prm — merge PyAutoArray#721 first, then PyAutoGalaxy#766 (both labelled decision-taken; public name mask_fingerprint_from added).
 - tier: judge — supervised, human /prm
 
 ## parked-hold-grace
