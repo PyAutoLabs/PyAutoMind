@@ -119,18 +119,22 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/718
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/718
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763
 - prompt: active/adapt_mesh_weighting_galaxy_adapt_images.md
 - worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-galaxy
 - repos:
   - PyAutoGalaxy: feature/adapt-mesh-weighting-galaxy
   - PyAutoArray: feature/adapt-mesh-weighting-galaxy
 - heart-red-override:
-  - authorized: live human, 2026-11-26, this session — "Override, proceed" (phase 2 of adapt-mesh-weighting, PyAutoGalaxy#762)
-  - red-reason: "Heart: RED — Release RED; monitoring RED · 14/100 · 132 unresolved" (PyAutoFit CI failure, release validation FAILED stage integrate, workspace validation NOT ready; full list on the issue; unrelated)
-  - gates: pending (filled at PR-open)
+  - authorized: live human, 2026-11-26, this session — "Override, proceed" (phase 2, PyAutoGalaxy#762)
+  - not exercised: the scoped dev gate (--repos PyAutoArray,PyAutoGalaxy) was GREEN at PR-open; global Heart RED (PyAutoFit CI failure, release validation FAILED stage integrate) shown in the PR bodies
   - record: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
 - note: phase 2 of 3; API settled with the human 2026-11-26 (galaxy_snr_maps_from, soft_snr_maps_from, AdaptImages.from_result, short galaxy keys; HilbertSNR(background=, peak=, edge_pixels=), image_mesh.soft_snr_map_from) so PyAutoArray joins this task; the `al.` export (PyAutoLens __init__) moved to phase 3 because PyAutoLens is claimed by cluster-family-fit-figures
+- next: human /prm on PyAutoArray#718 then PyAutoGalaxy#763; then phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement
