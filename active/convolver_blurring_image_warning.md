@@ -17,6 +17,7 @@ Consequence: glance
 Witness: One canonical script run without `PYAUTO_WORKSPACE_SMALL_DATASETS=1` records whether the `No blurring_image provided` warning persists; if it does not, the small-dataset profile silences it and the audited scripts run warning-free under smoke; if it does, a bug prompt against the workspace scripts is filed and this one closes.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-11-26
 Verified: 2026-11-26 86623611 (PyAutoArray), 6ef113ed (autogalaxy_workspace), 083c65e8 (autolens_workspace)
 Lane: any
 Filed: 2026-08-06 (backfilled from git)

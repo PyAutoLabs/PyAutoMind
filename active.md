@@ -146,3 +146,14 @@
 - tier: glance — safe; auto-merge on green if the Witness passes after a merge slot
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/skip-fit-output-save-results-docs
+
+## convolver_blurring_image_warning
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/719
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm (13f69e98-e9f4-48ff-8459-52f29d0f9cd8)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/convolver-blurring-image-warning
+- prompt: active/convolver_blurring_image_warning.md
+- tier: supervised — auto-merge on green if the Witness passes after a merge slot (decision-taken → human /prm)
+- repos:
+  - PyAutoArray: feature/convolver-blurring-image-warning
