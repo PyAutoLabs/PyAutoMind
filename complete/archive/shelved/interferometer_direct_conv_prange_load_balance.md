@@ -1,4 +1,4 @@
-# Load-balance the `prange` direct_conv interferometer kernel (Delaunay stalls at 2 threads, autolens_profiling#332)
+# Load-balance the `prange` direct_conv interferometer kernel (Delaunay stalls at 2 threads, autolens_profiling#332) — RETIRED 2026-11-26 (with the interferometer-likelihood-campaign epic)
 
 Type: feature
 Target: autoarray

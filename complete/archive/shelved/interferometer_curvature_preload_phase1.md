@@ -1,4 +1,4 @@
-# Fixed-mapper interferometer searches, phase 1: pin the `preloads.curvature_matrix` reuse invariant and measure it on a CPU breakdown cell
+# Fixed-mapper interferometer searches, phase 1: pin the `preloads.curvature_matrix` reuse invariant and measure it on a CPU breakdown cell — RETIRED 2026-11-26 (with the interferometer-likelihood-campaign epic)
 
 Type: feature
 Target: autoarray

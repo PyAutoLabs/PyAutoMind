@@ -1,4 +1,4 @@
-# Interferometer likelihood campaign: chunk TransformerNUFFT.transform_mapping_matrix over columns and visibilities
+# Interferometer likelihood campaign: chunk TransformerNUFFT.transform_mapping_matrix over columns and visibilities — RETIRED 2026-11-26 (with the interferometer-likelihood-campaign epic)
 
 Type: feature
 Target: PyAutoArray

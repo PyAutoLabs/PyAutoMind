@@ -1,4 +1,4 @@
-# Reuse the fnnls Cholesky factor for the log det when edge-zeroed pixels are solved out (rect mesh, autolens_profiling#332)
+# Reuse the fnnls Cholesky factor for the log det when edge-zeroed pixels are solved out (rect mesh, autolens_profiling#332) — RETIRED 2026-11-26 (with the interferometer-likelihood-campaign epic)
 
 Type: feature
 Target: autoarray

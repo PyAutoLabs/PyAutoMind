@@ -10,10 +10,10 @@
 |-------|------:|
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
-| [Epics](#epics) | 25 |
+| [Epics](#epics) | 24 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 293 |
+| [Backlog](#backlog) | 288 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1258,51 +1258,6 @@ Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_m
 </details>
 
 <details>
-<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md">Reuse the fnnls Cholesky factor for the log det when edge-zeroed pixels…</a> — autoarray · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md">Interferometer likelihood campaign: chunk TransformerNUFFT.transform_mapping_matrix over columns and visibilities</a> — autoarray · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/interferometer_curvature_preload_phase1.md">Fixed-mapper interferometer searches, phase 1: pin the <code>preloads.curvature_matrix</code> reuse invariant and measure…</a> — autoarray · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/interferometer_curvature_preload_phase1.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/interferometer_direct_conv_prange_load_balance.md">Load-balance the <code>prange</code> direct_conv interferometer kernel (Delaunay stalls at 2 threads, autolens_profiling#332)</a> — autoarray · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/interferometer_direct_conv_prange_load_balance.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>certified-positive-solver</b> — 2 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md"><code>jax.jit(jax.vmap(fn))</code> at B=50 returns wrong HST-scale inversion log likelihoods on an A100</a> — autoarray · medium · supervised · high</summary>
@@ -1556,7 +1511,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 233 · ral 29 · wsl-data 15 · local-dev 13 · gpu 1
+Lanes: any 233 · ral 27 · wsl-data 15 · local-dev 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3272,15 +3227,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-55 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+51 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
-- `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
-- `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
-- `draft/feature/autoarray/interferometer_curvature_preload_phase1.md — unknown theme keyword(s): inversion, likelihood-profiling`
 - `draft/feature/autoarray/matern_nu_gradient_via_bessel_k_order.md — unknown theme keyword(s): jax`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
@@ -3309,7 +3261,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
 - `draft/bug/pyautocortex/ledger_merge_dispatch_dashboard_refresh.md — unknown theme keyword(s): cortex, ci`
-- `draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md — unknown theme keyword(s): hpc, dependencies, reproducibility`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
 - `draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md — unknown theme keyword(s): critical-curves`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`

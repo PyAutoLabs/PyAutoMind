@@ -1,4 +1,4 @@
-# RAL PyAuto venv: third-party packages below the library floors (anesthetic, dynesty, psutil, tfp-nightly)
+# RAL PyAuto venv: third-party packages below the library floors (anesthetic, dynesty, psutil, tfp-nightly) — RETIRED 2026-11-26 (with the interferometer-likelihood-campaign epic)
 
 Type: bug
 Target: PyAutoHeart
