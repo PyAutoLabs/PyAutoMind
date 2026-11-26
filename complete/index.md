@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2434 records across 11 buckets.
+2435 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -264,6 +264,7 @@ markers; everything below GENERATED is rebuilt.
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
 - [insight-lint-point-source-family](2026/11/insight-lint-point-source-family.md)
 - [installation-docs-polish](2026/11/installation-docs-polish.md)
+- [installation_docs_arcticpy_recipe](2026/11/installation_docs_arcticpy_recipe.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
 - [interferometer-fit-png-show-zoomed-no-zoom](2026/11/interferometer-fit-png-show-zoomed-no-zoom.md)
