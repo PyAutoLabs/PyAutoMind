@@ -107,7 +107,9 @@
 ## remove-r6-sweep-pins
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/698
 - issued: 2026-11-26
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/699
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/286
 - tier: supervised
 - epic: likelihood-lifecycle
 - prompt: active/remove_r6_sweep_pins_after_release.md
