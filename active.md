@@ -160,7 +160,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/372
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: library-shipped, workspace-pending
+- status: library-merged, workspace-pending
 - worktree: /home/jammy/Code/PyAutoLabs-wt/arcticpy-27-git-source
 - repos:
   - PyAutoHeart: feature/arcticpy-27-git-source
@@ -175,4 +175,4 @@
   - red-reason: "PyAutoHeart: Heart Tests failure on main" (tests/test_smoke_sha_gate.py date drift; unrelated)
   - gates: Heart 1521 passed / 2 main failures; test_autocti 279 on 2.7; smoke autocti 44/44; review CLEAN
   - record: https://github.com/PyAutoLabs/PyAutoHeart/issues/372#issuecomment-7191035110
-- next: workspace_test pins provenance note via start_workspace; Heart main fix merged (PyAutoHeart#375, 2026-11-26) — re-run #373 checks, then /prm
+- next: libraries MERGED 2026-11-26 (PyAutoHeart#373 e1cf49e, PyAutoCTI#132 8c3781d); remaining: autocti_workspace_test pins.py provenance note via start_workspace, then /prm close-out
