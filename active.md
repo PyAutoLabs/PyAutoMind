@@ -133,3 +133,33 @@
 - prompt: active/intake_apply_crashes_on_memory_citations_when.md
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
+
+## likelihood-lifecycle-r6b-use-jax-sweep
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/691
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-r6b-use-jax-sweep
+- repos:
+  - autolens_workspace: feature/likelihood-lifecycle-r6b-use-jax-sweep
+  - autogalaxy_workspace: feature/likelihood-lifecycle-r6b-use-jax-sweep
+  - HowToLens: feature/likelihood-lifecycle-r6b-use-jax-sweep
+  - HowToGalaxy: feature/likelihood-lifecycle-r6b-use-jax-sweep
+  - autolens_workspace_test: feature/likelihood-lifecycle-r6b-use-jax-sweep
+  - autogalaxy_workspace_test: feature/likelihood-lifecycle-r6b-use-jax-sweep
+- prompt: active/likelihood_lifecycle_r6b_workspace_use_jax_sweep.md
+- epic: likelihood-lifecycle (R6 phase B; merges before the release by human ruling 2026-11-26)
+- tier: judge — merge mode: human /prm
+- coordination: autolens_workspace also claimed by cluster-family-fit-figures (#687: scripts/cluster/plot.py + generated indexes) and sensitivity_slam_source_pixelized_mappervalued (subhalo/sensitivity/slam_source_pixelized.py); both files excluded; human-approved overlap 2026-11-26
+
+## likelihood-lifecycle-r6c-assistant-hpc
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/195
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-r6c-assistant-hpc
+- repos:
+  - autolens_assistant: feature/likelihood-lifecycle-r6c-assistant-hpc
+- prompt: active/hpc_setup_flag_and_wiki_auto_setup.md
+- epic: likelihood-lifecycle (R6 phase C; merges before the release by human ruling 2026-11-26)
+- tier: judge — merge mode: human /prm

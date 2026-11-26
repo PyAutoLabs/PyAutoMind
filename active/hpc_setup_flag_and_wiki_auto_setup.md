@@ -21,7 +21,8 @@ Review-minutes: 20
 Unattended: no
 Lane: any
 Filed: 2026-11-25
-Gate: MET 2026-11-25 — release 2026.11.25.1 published (carries 5A–5E and the setup banner); 5G merged (autolens_assistant#192, record complete/2026/11/likelihood-lifecycle-p5g.md).
+Issued: 2026-11-26
+Gate: lifted 2026-11-26 by the human — merges before the release (wording true on both releases; no R6-only arguments).
 Epic: likelihood-lifecycle
 Phase: 5
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md

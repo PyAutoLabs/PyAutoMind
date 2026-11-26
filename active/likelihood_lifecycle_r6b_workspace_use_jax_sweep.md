@@ -20,8 +20,9 @@ Witness: autolens_workspace and autogalaxy_workspace start_here scripts construc
 Epic: likelihood-lifecycle
 Phase: 6 (R6 rollout, phase B)
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
-Gate: the library release carrying R6 phase A (PyAutoArray#715, PyAutoFit#1800, PyAutoGalaxy#760, PyAutoLens#894; record complete/2026/11/likelihood-lifecycle-r6-default-auto.md).
+Gate: lifted 2026-11-26 by the human — merges before the release (wording true on both releases; no R6-only arguments).
 Filed: 2026-11-26
+Issued: 2026-11-26
 
 ## Context
 
