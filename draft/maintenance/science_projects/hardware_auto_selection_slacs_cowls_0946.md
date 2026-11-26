@@ -25,3 +25,18 @@ Status: draft — parked 2026-11-26, human resumes 2026-11-27. Do not start befo
 - If `auto` itself chooses wrongly for imaging, that is a library bug: file it separately, don't
   patch around it in the science scripts.
 - Plan before editing; laptop pilots only, real runs on RAL per `policy/hpc_ral.md`.
+
+## Added 2026-11-26: check the two-job split on RAL
+
+Request (verbatim):
+
+> also when we do this tomorrow also investigate if this is true on RAL Why two jobs: JAX and the
+> Nautilus process pool can't share a process, so source_lp gets its own job. Job B reloads A's result.
+
+- Find where this claim is made (job scripts, READMEs or comments in the science projects' RAL
+  submission setup) and test whether it still holds on RAL with the current stack.
+- In particular: can a JAX fit (earlier pipeline stages) and a Nautilus CPU process pool
+  (`source_lp`) run in one process or job, or does the pool genuinely break or hang after JAX
+  has initialised? Run a small pilot on RAL rather than reasoning from memory.
+- If one job works, the A → B split (job B reloading job A's result) may be unnecessary; if it
+  is still needed, record why in the project docs. Tie the answer into the `auto` change above.
