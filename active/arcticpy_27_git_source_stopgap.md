@@ -19,6 +19,8 @@ Unattended: never
 Lane: any
 Epic: cti-upkeep
 Phase: 2b
+Issued: 2026-11-26
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/372
 Supersedes-blocker-of: draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md (that draft stays as the switch back to PyPI)
 
 ## Request (human, 2026-11-26, verbatim)

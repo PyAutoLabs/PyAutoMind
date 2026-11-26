@@ -182,3 +182,17 @@
 - epic: likelihood-lifecycle (R6 pre-release fixes; must merge before the release)
 - tier: judge — merge mode: human /prm
 - note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap
+
+## arcticpy-27-git-source
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/372
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/arcticpy-27-git-source
+- repos:
+  - PyAutoHeart: feature/arcticpy-27-git-source
+  - PyAutoCTI: feature/arcticpy-27-git-source
+  - autocti_workspace_test: feature/arcticpy-27-git-source
+- prompt: active/arcticpy_27_git_source_stopgap.md
+- epic: cti-upkeep (phase 2b stopgap; PyPI bump draft stays as the revert)
+- tier: judge — merge mode: human /prm
