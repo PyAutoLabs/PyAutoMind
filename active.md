@@ -184,3 +184,18 @@
   - gates: Heart 1521 passed / 2 main failures; test_autocti 279 on 2.7; smoke autocti 44/44; review CLEAN
   - record: https://github.com/PyAutoLabs/PyAutoHeart/issues/372#issuecomment-7191035110
 - next: workspace_test pins provenance note via start_workspace; Heart PR merge waits on Heart main's smoke_sha_gate fix
+
+## smoke-sha-gate-date-drift
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/374
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/smoke-sha-gate-date-drift
+- repos:
+  - PyAutoHeart: feature/smoke-sha-gate-date-drift
+- prompt: active/smoke_sha_gate_tests_date_drift.md
+- tier: judge — merge mode: human /prm
+- corrective-red:
+  - reason: "PyAutoHeart: Heart Tests failure on main"
+  - authorization: https://github.com/PyAutoLabs/PyAutoHeart/issues/374#issuecomment-7191236646 (live human, 2026-11-26: "Approve, corrective")
+- coordination: human-approved 2026-11-26 — PyAutoHeart shared with arcticpy-27-git-source (same session; different branch and files: tests/test_smoke_sha_gate.py vs install-arcticpy + tests/test_smoke.py); merge this first to clear the RED blocking PyAutoHeart#373

@@ -15,6 +15,8 @@ Consequence: judge
 Review-minutes: 5
 Unattended: never
 Lane: any
+Issued: 2026-11-26
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/374
 
 ## Request (human, 2026-11-26, verbatim)
 
