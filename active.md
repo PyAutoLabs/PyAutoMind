@@ -116,7 +116,7 @@
   - not exercised: the scoped dev gate (--repos PyAutoArray,PyAutoGalaxy) was GREEN at PR-open; global Heart RED (PyAutoFit CI failure, release validation FAILED stage integrate) shown in the PR bodies
   - record: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
 - note: phase 2 of 3; API settled with the human 2026-11-26 (galaxy_snr_maps_from, soft_snr_maps_from, AdaptImages.from_result, short galaxy keys; HilbertSNR(background=, peak=, edge_pixels=), image_mesh.soft_snr_map_from) so PyAutoArray joins this task; the `al.` export (PyAutoLens __init__) moved to phase 3 because PyAutoLens is claimed by cluster-family-fit-figures
-- next: human /prm on PyAutoArray#718 then PyAutoGalaxy#763; then phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
+- next: human /prm on PyAutoArray#718 then PyAutoGalaxy#763 (#718 also fixes draft/bug/autoarray/hilbert_image_mesh_frame_independent.md and adds the HilbertSNR 8-point cap — retire that prompt at close-out); then phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement

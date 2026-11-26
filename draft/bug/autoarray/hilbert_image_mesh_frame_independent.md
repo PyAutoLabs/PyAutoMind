@@ -12,6 +12,7 @@ Priority: high
 Consequence: judge
 Community: https://github.com/PyAutoLabs/.github/discussions/43
 Filed: 2026-11-17
+Status: fixed in PyAutoArray#718 (open, 2026-11-26) — retire when it merges
 
 Agreed by the human in the /community chat on 2026-11-17. Separate from PyAutoArray#675
 (Sam's FFT-frame trim), which was reworked to live inside `ConvolverState` so the
@@ -61,3 +62,15 @@ jax_assertions, visualization) in autolens_workspace_test and autogalaxy_workspa
   correct on non-square frames; unit tests for both.
 - The likelihood change is understood and judged (plots of the mesh before/after), and the
   pinned values are re-pinned with a one-line reason, in a workspace_test PR after the library PR.
+
+## 2026-11-26: fixed in PyAutoArray#718 (human's choice: opt-in for `Hilbert`)
+
+Measured first on `main` (cda647d3): padding a lens's frame by 10-20 pixels moved `HilbertSNR` points
+by up to 6-9 image pixels (mean 0.3-0.8 px; `Hilbert(3.5)` 4-5 px), and a non-square frame raised
+`ValueError: different number of values and points`. PyAutoArray#718 adds
+`image_and_grid_from(..., frame_independent=True)`: bilinear `scipy.ndimage.map_coordinates(order=1)`
+on the image's own shape, pixel scales and origin. Same mesh in any frame (to 1e-9, square or not),
+exact on a linear image. The human chose: `HilbertSNR` uses it by default; `Hilbert` keeps the
+original `griddata` unless `frame_independent=True`, so no pinned value moves and no workspace_test
+re-pin is needed. On real lenses the bilinear mesh differs from the griddata one by a mean of
+0.35-0.62 px. Retire this prompt in the /prm close-out of PyAutoArray#718.

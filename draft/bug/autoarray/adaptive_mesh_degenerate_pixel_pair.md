@@ -71,5 +71,6 @@ caused or fixed by the weighting; the fix belongs in the source-plane mesh const
 Separately, `HilbertSNR` crowds points in the image plane on faint sources (up to 61 points in one
 image pixel; COSJ095950+022057_F150W: 539 points within 0.05 image pixels of another). That is
 not this bug (crowded points stay locally spaced in the source plane); a per-pixel cap in
-`HilbertSNR` (8 points per image pixel removes it on all 20 datasets) is planned with
-PyAutoArray#718's task.
+`HilbertSNR` (8 points per image pixel removes it on all 20 datasets) is in PyAutoArray#718
+(`max_per_pixel=8`, default on). This prompt stays open: next is research (reproduce on the
+Euclid tile; check the unified fits for reconstruction spikes) before a source-plane fix is planned.
