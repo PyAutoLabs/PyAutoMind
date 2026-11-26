@@ -112,6 +112,10 @@ phase is `local-dev` by construction.
 - kind: prompt
 - ref: draft/docs/workspaces/assistants_regime_extension.md
 
+## 8. Cluster usability — from the first plot to a paper-scale fit
+- kind: prompt
+- ref: draft/feature/autolens/cluster_usability.md
+
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
