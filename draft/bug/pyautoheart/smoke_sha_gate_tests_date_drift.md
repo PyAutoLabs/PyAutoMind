@@ -1,0 +1,42 @@
+# Heart: smoke_sha_gate main() tests fail as the real clock passes their fixed dates
+
+Type: bug
+Target: PyAutoHeart
+Repos:
+- @PyAutoHeart
+Themes:
+- ci
+- tests
+Difficulty: small
+Autonomy: human-required
+Priority: high
+Status: formalised
+Consequence: judge
+Review-minutes: 5
+Unattended: never
+Lane: any
+
+## Request (human, 2026-11-26, verbatim)
+
+> Do this task here: "Fix date drift in Heart smoke_sha_gate tests"
+
+## Diagnosis (2026-11-26)
+
+Heart Tests on main fail since 2026-11-26 (last green 2026-11-24, run 45364461481):
+- `tests/test_smoke_sha_gate.py::test_main_writes_record_outputs_and_summary`
+- `tests/test_smoke_sha_gate.py::test_main_reads_force_and_the_latest_run_from_the_environment[env2-no main moved since run 100]`
+
+`.github/scripts/smoke_sha_gate.py` `main()` passes `datetime.now(utc)` to the gate, which forces a
+full sweep when the last one is `>= FULL_SWEEP_MAX_AGE_DAYS` (7) days old. Both tests build the
+previous record with `_previous()`'s default `full_ts="2026-11-18T03:00:00Z"`, which became 7 days
+old on 2026-11-25, so `main()` now reports "...a full sweep runs at least every 7 days" instead of
+"no main moved since run 100". The pure-function tests use a fixed `NOW` and are unaffected.
+
+This is the Heart RED reason "PyAutoHeart: Heart Tests failure on main", which blocks merging
+PyAutoLabs/PyAutoHeart#373 (arcticpy 2.7 stopgap, issue PyAutoHeart#372).
+
+## Scope
+
+Test-only: give the two `main()` tests a previous full-sweep timestamp relative to the real clock
+(e.g. one day ago), so they keep exercising the "no main moved" path on any date. Do not change the
+gate or loosen `FULL_SWEEP_MAX_AGE_DAYS`.
