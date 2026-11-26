@@ -89,7 +89,9 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/695
 - issued: 2026-11-26
 - session: claude-desktop 2026-11-26 (Opus 5.5), ~/Science session
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/696
+- next: human /prm on autolens_workspace#696; merge releases the autolens_workspace claim
 - worktree: /home/jammy/Code/PyAutoLabs-wt/sensitivity-slam-source-parametric
 - repos:
   - autolens_workspace: feature/sensitivity-slam-source-parametric
