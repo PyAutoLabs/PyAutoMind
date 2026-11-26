@@ -53,3 +53,22 @@ log-det/regularisation term.
 ## Related
 
 Pipeline issue #78 (clump finder made robust to this), PyAutoArray #526 (edge ring).
+
+## 2026-11-26: the new `HilbertSNR` default makes this common on faint sources
+
+Measured offline on the 20 adapt_snr_cap datasets (`Science/development/adapt_snr_cap`, the
+`uncapped` `source_pix[1]` S/N maps, 1250 points, no edge points), nearest-neighbour distance between
+mesh points in image pixels:
+
+- `Hilbert(weight_power=3.5, weight_floor=0.01)` and the cap-3 set-up: never below 0.07 px on any lens.
+- `HilbertSNR()` (PyAutoArray#717, to become the workspace default in
+  `draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md`): below 0.05 px on
+  12 of 20 datasets. COSJ095950+022057_F150W (peak S/N 4.7): 76 points closer than 0.01 px, 539
+  closer than 0.05 px; SDSSJ2228+1205: 122 closer than 0.05 px; Euclid tile 102057493: 48.
+
+Cause: the deterministic Hilbert draw places points at equal steps of the cumulative weight, so a
+cell holding a large share of the weight (the 70% source share on a few pixels above S/N 2, plus the
+5% peak share) gets many points interpolated inside it. The fix belongs in the draw (e.g. a minimum
+separation, or merging points within a fraction of the local spacing) or in `HilbertSNR` (a cap on
+points per image pixel, the `density` candidate of the study). Decide before phase 3 switches the
+workspaces.
