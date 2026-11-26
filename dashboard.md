@@ -1480,7 +1480,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/remove_r6_sweep_pins_after_release.md">Remove the temporary R6 sweep pins (mixed factor graphs, weak) after…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/698">issue #698</a> — issued 2026-11-26 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/699">autolens_workspace#699</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/286">autogalaxy_workspace#286</a></summary>
+<details><summary>📋 <a href="active/remove_r6_sweep_pins_after_release.md">Remove the temporary R6 sweep pins (mixed factor graphs, weak) after…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/698">issue #698</a> — issued 2026-11-26 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765">PyAutoGalaxy#765</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/699">autolens_workspace#699</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/286">autogalaxy_workspace#286</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/142">HowToLens#142</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/198">autolens_assistant#198</a></summary>
 
 ```
 Use the start-dev skill. active/remove_r6_sweep_pins_after_release.md
