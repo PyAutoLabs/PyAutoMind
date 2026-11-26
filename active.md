@@ -119,12 +119,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/716
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/717
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/717
 - prompt: active/adapt_mesh_weighting_library_default.md
 - worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-library
 - repos:
   - PyAutoArray: feature/adapt-mesh-weighting-library
 - note: phase 1 of 3 (PyAutoArray HilbertSNR + soft S/N transform); phase 2 PyAutoGalaxy (claimed by likelihood-lifecycle-r6d-prerelease-fixes at filing), phase 3 workspaces default to HilbertSNR; Hilbert and AdaptSplit keep BC
+- next: human /prm on PyAutoArray#717; phase 2 PyAutoGalaxy and phase 3 workspaces filed as their own prompts
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement
