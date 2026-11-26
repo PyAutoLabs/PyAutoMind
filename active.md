@@ -51,16 +51,6 @@
 - question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
 - next: #368 claim cleared 2026-11-24 (PyAutoHeart#369 merged; record complete/2026/11/heart-health-rerun-stale-push.md) — resumable.
 
-## multi_dataset_jax_likelihood_delaunay_wrong_likelihood
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
-- issued: 2026-11-24
-- session: shift worker 2026-11-24-am (01a20c95-1f26-72d0-8529-1a903019348a)
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
-- prompt: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
-- tier: judge — supervised, human /prm
-- next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
-
 ## parked-hold-grace
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
 - issued: 2026-11-24
@@ -131,7 +121,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/133
 - issued: 2026-11-26
 - session: shift worker 2026-11-26-pm (d3322c16-c97e-4195-8166-6d268d4f1fe5)
-- status: library-dev
+- status: pr-open
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/134
 - worktree: ~/Code/PyAutoLabs-wt/installation-docs-arcticpy-recipe
 - prompt: active/installation_docs_arcticpy_recipe.md
 - tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
@@ -153,7 +144,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/700
 - issued: 2026-11-26
 - session: shift worker 2026-11-26-pm (710c1a77-37b6-43ed-84bc-85b4a82c3438)
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/701
 - worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-mask-dtype
 - repos:
   - autolens_workspace: feature/cosmos-web-ring-mask-dtype

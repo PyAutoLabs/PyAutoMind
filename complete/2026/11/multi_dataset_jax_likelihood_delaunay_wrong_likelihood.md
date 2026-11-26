@@ -1,3 +1,11 @@
+- summary: retired, not fixed — the human answered Q29 "retire" (2026-11-26). The September −72070 vs 1995 mismatch never reproduced: the script passed on workspace main 48f40953 (shift 2026-11-24-am) and again on be51efb with PyAutoArray 86623611 / PyAutoGalaxy 68dc088c / PyAutoLens 903c0814 (ACTUAL 2013.50609816 == DESIRED 2013.5060801 at rtol 1e-4, JIT round-trip PASS). The cause of the historical negative value stays unknown; the original g/r inputs and stack were not available.
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371 (closed not planned; verdict https://github.com/PyAutoLabs/autolens_workspace_test/issues/371#issuecomment-7202721864)
+- findings: d215674 raised DESIRED by 18.42068074 for the two intrinsic-regularized mappers (explains 1995 → 2013.5). Heart recorded the script as skipped on 2026-09-23 after an earlier 1805 s JAX hang, so no run ever recorded the numerical failure.
+- PRs: none (no code change)
+- shift: 2026-11-26-pm (resumed from 2026-11-24-am park)
+
+## Original prompt
+
 # multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood on main (−72070 vs 1995)
 
 Type: bug
