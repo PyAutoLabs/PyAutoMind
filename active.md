@@ -107,26 +107,17 @@
 - repos:
   - PyAutoFit: feature/grid-search-cores-auto
 
-## installation_docs_arcticpy_recipe
-- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/133
-- issued: 2026-11-26
-- session: shift worker 2026-11-26-pm (d3322c16-c97e-4195-8166-6d268d4f1fe5)
-- status: pr-open
-- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/134
-- worktree: ~/Code/PyAutoLabs-wt/installation-docs-arcticpy-recipe
-- prompt: active/installation_docs_arcticpy_recipe.md
-- tier: glance — effective level: supervised; merge mode: auto-merge on green if the Witness passes after a merge slot
-- repos:
-  - PyAutoCTI: feature/installation-docs-arcticpy-recipe
-
 ## convolver_blurring_image_warning
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/719
 - issued: 2026-11-26
 - session: shift worker 2026-11-26-pm (13f69e98-e9f4-48ff-8459-52f29d0f9cd8)
-- status: library-dev
+- status: pr-open
 - worktree: ~/Code/PyAutoLabs-wt/convolver-blurring-image-warning
 - prompt: active/convolver_blurring_image_warning.md
 - tier: supervised — auto-merge on green if the Witness passes after a merge slot (decision-taken → human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/720
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/720
+- next: /prm PyAutoArray#720 (decision-taken: library fix instead of the prompt's workspace bug prompt); follow-up draft/bug/autolens/deflections_simulator_no_psf_padding.md
 - repos:
   - PyAutoArray: feature/convolver-blurring-image-warning
 
