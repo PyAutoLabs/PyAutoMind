@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2432 records across 11 buckets.
+2433 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -333,6 +333,7 @@ markers; everything below GENERATED is rebuilt.
 - [model-bullet-parameter-count-drift](2026/11/model-bullet-parameter-count-drift.md)
 - [model-identifier-0d-array](2026/11/model-identifier-0d-array.md)
 - [model-pytree-fixed-attributes](2026/11/model-pytree-fixed-attributes.md)
+- [multi_dataset_jax_likelihood_delaunay_wrong_likelihood](2026/11/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md) — retired, not fixed — the human answered Q29 "retire" (2026-11-26). The September −72070 vs 1995 mismatch never…
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
 - [nautilus-30d-diagnostics](2026/11/nautilus-30d-diagnostics.md) — Full-30D Nautilus plotting cost attribution and evidence-discrepancy investigation merged unchanged during the…
