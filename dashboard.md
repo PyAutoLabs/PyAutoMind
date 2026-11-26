@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 297 |
+| [Backlog](#backlog) | 296 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -57,7 +57,7 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -131,14 +131,6 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…</a> — autolens_workspace · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
 
 ```
@@ -151,6 +143,14 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 ```
 
 </details>
@@ -1435,6 +1435,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
+<details><summary>📋 <a href="active/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/693">issue #693</a> — issued 2026-11-26 — workspace-dev — ⏸ waiting on PyAutoArray's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
+
+```
+Use the start-dev skill. active/adapt_mesh_weighting_workspace_default.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/574">issue #574</a> — issued 2026-11-04 — human-ops (pilot run; no worktree — briefs land in PyAutoMind/batches/ by the human)</summary>
 
 ```
@@ -1614,7 +1622,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 239 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
+Lanes: any 238 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1665,7 +1673,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1679,14 +1687,6 @@ Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…</a> — autolens_workspace · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 ```
 
 </details>
@@ -3180,7 +3180,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-26 | filed | <a href="draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md">Pooled Emcee and Zeus return wrong likelihoods, and Emcee leaves its…</a> |
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
-| 2026-11-26 | filed | <a href="draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the…</a> |
+| 2026-11-26 | issued | <a href="active/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the…</a> |
 | 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: `'Model'…</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
@@ -3273,7 +3273,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-122 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+121 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3289,7 +3289,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md`
 - `draft/feature/autolens_profiling/gradient_cost_hazard_on_ral_cpu_value.md`
-- `draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 - `draft/feature/autolens_workspace/remove_r6_sweep_pins_after_release.md`
@@ -3318,7 +3317,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- _… and 82 more_
+- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
+- _… and 81 more_
 
 </details>
 
@@ -3397,6 +3397,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoArray#717](https://github.com/PyAutoLabs/PyAutoArray/pull/717) — `complete/2026/11/adapt-mesh-weighting-library.md`
 - [PyAutoArray#718](https://github.com/PyAutoLabs/PyAutoArray/pull/718) — `complete/2026/11/hilbert-image-mesh-frame-independent.md`
 - [PyAutoArray#715](https://github.com/PyAutoLabs/PyAutoArray/pull/715) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
+- ⏸ waiting: [Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…](active/adapt_mesh_weighting_workspace_default.md)
 
 **PyAutoFit**
 
@@ -3408,12 +3409,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoGalaxy#763](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763) — `complete/2026/11/adapt-mesh-weighting-galaxy.md`
 - [PyAutoGalaxy#760](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 - [PyAutoGalaxy#761](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
+- ⏸ waiting: [Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…](active/adapt_mesh_weighting_workspace_default.md)
 
 **PyAutoLens**
 
 - [PyAutoLens#897](https://github.com/PyAutoLabs/PyAutoLens/pull/897) — `complete/2026/11/adapt-mesh-weighting-galaxy.md`
 - [PyAutoLens#894](https://github.com/PyAutoLabs/PyAutoLens/pull/894) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 - [PyAutoLens#896](https://github.com/PyAutoLabs/PyAutoLens/pull/896) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
+- ⏸ waiting: [Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…](active/adapt_mesh_weighting_workspace_default.md)
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
