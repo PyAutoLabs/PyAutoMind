@@ -1,3 +1,14 @@
+Three PyAutoLens tests (`test__perfect_fit__chi_squared_0` in imaging and interferometer, `test__fit_figure_of_merit__mge_mass_model`) wrote FITS datasets into an unignored `test_autolens/{imaging,interferometer}/data_temp/simulate_and_fit/` and cleaned it only on a passing run. They now write to pytest's `tmp_path`, so no test writes into the source tree. Same fix as PyAutoArray#494. `.gitignore` unchanged.
+
+- Library: https://github.com/PyAutoLabs/PyAutoLens/pull/900 (MERGED 2026-11-26, bae1101)
+- Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/899 (closed)
+- Shift: 2026-11-26-pm; tier glance; merged by the independent close-out session (Opus 5.5) after it ran the witness on head 4077da6.
+- Changes: `test_autolens/imaging/test_simulate_and_fit_imaging.py`, `test_autolens/interferometer/test_simulate_and_fit_interferometer.py`; test-only, assertions unchanged.
+- Witness held (tmp_path branch): both files 15 passed twice with `git status --porcelain` empty after each; a deliberately failed copy (1 failed) left a clean tree and no `data_temp/`. `git check-ignore` still reports the old path not ignored, but nothing writes there.
+- No pending-release: test-only change.
+
+## Original prompt
+
 # PyAutoLens test `data_temp/` write paths are not gitignored
 
 Type: maintenance

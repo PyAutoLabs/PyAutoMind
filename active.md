@@ -105,18 +105,6 @@
 - repos:
   - PyAutoFit: feature/grid-search-cores-auto
 
-## data-temp-write-paths
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/899
-- issued: 2026-11-26
-- session: shift worker 2026-11-26-pm (8a116519-17eb-417f-8489-1a07e073b5c5)
-- status: pr-open
-- worktree: ~/Code/PyAutoLabs-wt/data-temp-write-paths
-- repos:
-  - PyAutoLens: feature/data-temp-write-paths
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/900
-- prompt: active/data_temp_write_paths_not_ignored.md
-- tier: safe — merge mode: auto-merge on green if the Witness passes after a merge slot
-
 ## installation_docs_arcticpy_recipe
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/133
 - issued: 2026-11-26
