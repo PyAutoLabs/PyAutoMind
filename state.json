@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 13 in flight",
-  "updated": "2026-11-25T21:54:57Z",
+  "updated": "2026-11-26T09:34:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -45,6 +45,12 @@
     },
     {
       "severity": "yellow",
+      "text": "Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026 \u2014 library-shipped, awaiting-merge (judge: human /prm; merge Array \u2192 Fit \u2192 Galaxy \u2192 Lens \u2192 autolens_workspace_test#373; then\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/715",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_r6_default_auto_setup.md"
+    },
+    {
+      "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
@@ -54,6 +60,54 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#715 \u2014 Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/715",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "waiting on PyAutoArray's release: Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/issues/759",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_r6_default_auto_setup.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1800 \u2014 Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1800",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "waiting on PyAutoFit's release: Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/issues/759",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_r6_default_auto_setup.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#760 \u2014 Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "waiting on PyAutoGalaxy's release: Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/issues/759",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_r6_default_auto_setup.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#894 \u2014 Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/894",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "waiting on PyAutoLens's release: Likelihood lifecycle R6: flip the default to `setup=\"auto\"`, then sweep `use_jax=` out\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/issues/759",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_r6_default_auto_setup.md"
     },
     {
       "severity": "info",
@@ -72,60 +126,6 @@
       "text": "pick: Hilbert image mesh: make it depend only on the mask, not\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/hilbert_image_mesh_frame_independent.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Physical model check when speeding up smoke tests",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
-      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: A compound-prior model reloaded from model.json has a different prior order\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md",
-      "prompt": "Use the start-dev skill. draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
-      "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
-      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
-      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: CTI upkeep parity \u2014 bring PyAutoCTI and its satellites to the same\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md"
     }
   ]
 }
