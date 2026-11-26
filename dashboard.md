@@ -48,7 +48,7 @@ _(no open questions)_
 
 **Shift** (2026-11-26-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 1 running, 10 finished, 1 refusal reasons · tokens 1907307 of 5000000 (close-outs 309103; cache-read 49906514) · review-at 2026-11-26T21:45Z (as of 2026-11-26T20:49:58Z) · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609#issuecomment-7202427627)
+Live: LIVE · 11 finished, 1 refusal reasons · tokens 2025671 of 5000000 (close-outs 309103; cache-read 53432565) · review-at 2026-11-26T21:45Z (as of 2026-11-26T20:56:12Z) · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609#issuecomment-7202427627)
 
 _(nothing to review yet)_
 
@@ -1472,7 +1472,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over PriorFactors</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1807">issue #1807</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over PriorFactors</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1807">issue #1807</a> — issued 2026-11-26 — library-pr — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1808">PyAutoFit#1808</a></summary>
 
 ```
 Use the start-dev skill. active/regression_test_nautilus_as_the_ep_default.md
