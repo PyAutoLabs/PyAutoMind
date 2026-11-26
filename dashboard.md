@@ -1432,7 +1432,7 @@ Use the start-dev skill. active/cosmos_web_ring_mask_dtype.md
 
 </details>
 
-<details><summary>📋 <a href="active/grid_search_number_of_cores_auto_hangs.md">GridSearch hangs with number_of_cores="auto"</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1805">issue #1805</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/grid_search_number_of_cores_auto_hangs.md">GridSearch hangs with number_of_cores="auto"</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1805">issue #1805</a> — issued 2026-11-26 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1806">PyAutoFit#1806</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/grid_search_number_of_cores_auto_hangs.md
@@ -3348,6 +3348,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1806](https://github.com/PyAutoLabs/PyAutoFit/pull/1806) — `active/grid_search_number_of_cores_auto_hangs.md`
 - [PyAutoFit#1800](https://github.com/PyAutoLabs/PyAutoFit/pull/1800) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 - [PyAutoFit#1801](https://github.com/PyAutoLabs/PyAutoFit/pull/1801) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 
