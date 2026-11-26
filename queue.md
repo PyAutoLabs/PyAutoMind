@@ -116,6 +116,14 @@ phase is `local-dev` by construction.
 - kind: prompt
 - ref: draft/feature/autolens/cluster_usability.md
 
+## 9. Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay
+- kind: prompt
+- ref: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+
+## 10. Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…
+- kind: prompt
+- ref: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
