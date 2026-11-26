@@ -43,16 +43,6 @@
 - next: Resolve PyAutoGalaxy FITS round-trip scope and coordinate the reader with the aggregator-reload task before claiming worktrees.
 - tier: judge — supervised, human /prm
 
-## smoke_cache_stats_warnings_nameerror
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
-- session: shift worker 2026-11-26-pm (claude:9e8338a5)
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/smoke_cache_stats_warnings_nameerror
-- repos:
-  - PyAutoHeart: feature/smoke_cache_stats_warnings_nameerror
-- prompt: active/smoke_cache_stats_warnings_nameerror.md
-- previous-session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7) — parked Q31, answered "resume after 369 merges"
-
 ## parked-hold-grace
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
 - issued: 2026-11-24
@@ -132,3 +122,15 @@
   - autolens_workspace: feature/cosmos-web-ring-mask-dtype
 - prompt: active/cosmos_web_ring_mask_dtype.md
 - tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
+
+## smoke_cache_stats_warnings_nameerror
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
+- session: shift worker 2026-11-26-pm (claude:9e8338a5)
+- status: pr-open
+- worktree: /home/jammy/Code/PyAutoLabs-wt/smoke_cache_stats_warnings_nameerror
+- repos:
+  - PyAutoHeart: feature/smoke_cache_stats_warnings_nameerror
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/377
+- prompt: active/smoke_cache_stats_warnings_nameerror.md
+- previous-session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7) — parked Q31, answered "resume after 369 merges"
+- next: human /prm (Consequence: judge; review CLEAN, witness red-on-main/green-on-branch)
