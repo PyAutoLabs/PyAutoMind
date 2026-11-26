@@ -1458,7 +1458,7 @@ Use the start-dev skill. active/adapt_mesh_weighting_galaxy_adapt_images.md
 
 </details>
 
-<details><summary>📋 <a href="active/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap)</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/372">issue #372</a> — issued 2026-11-26 — library-merged, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/373">PyAutoHeart#373</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/132">PyAutoCTI#132</a></summary>
+<details><summary>📋 <a href="active/arcticpy_27_git_source_stopgap.md">Heart: install arcticpy 2.7 from GitHub until it reaches PyPI (stopgap)</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/372">issue #372</a> — issued 2026-11-26 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/373">PyAutoHeart#373</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/132">PyAutoCTI#132</a>, <a href="https://github.com/PyAutoLabs/autocti_workspace_test/pull/28">autocti_workspace_test#28</a></summary>
 
 ```
 Use the start-dev skill. active/arcticpy_27_git_source_stopgap.md
