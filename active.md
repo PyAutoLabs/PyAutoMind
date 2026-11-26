@@ -85,6 +85,18 @@
 - next: phases 1-2 merged 2026-11-26 (records complete/2026/11/adapt-mesh-weighting-library.md, adapt-mesh-weighting-galaxy.md); phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 - tier: judge — merge mode: human /prm
 
+## slam_source_parametric_model_has_no_centre
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/695
+- issued: 2026-11-26
+- session: claude-desktop 2026-11-26 (Opus 5.5), ~/Science session
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/sensitivity-slam-source-parametric
+- repos:
+  - autolens_workspace: feature/sensitivity-slam-source-parametric
+- prompt: active/slam_source_parametric_model_has_no_centre.md
+- tier: judge — merge mode: human /prm
+- heart-override: organism RED at start-dev door; human authorized development 2026-11-26 (recorded on issue 695)
+
 ## adapt-mesh-weighting-workspaces
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/693
 - issued: 2026-11-26
