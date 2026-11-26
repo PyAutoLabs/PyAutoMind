@@ -101,6 +101,7 @@
   - HowToGalaxy: feature/adapt-mesh-weighting-workspaces
   - autolens_workspace_test: feature/adapt-mesh-weighting-workspaces
   - autogalaxy_workspace_test: feature/adapt-mesh-weighting-workspaces
+  - autolens_workspace: feature/adapt-mesh-weighting-workspaces
 - release-gate: PyAutoArray
 - release-gate: PyAutoGalaxy
 - release-gate: PyAutoLens
