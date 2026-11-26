@@ -10,10 +10,10 @@
 |-------|------:|
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
-| [Epics](#epics) | 24 |
+| [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 287 |
+| [Backlog](#backlog) | 292 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1260,6 +1260,72 @@ Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_m
 </details>
 
 <details>
+<summary><b>Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay</b> — 3 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay</b> — ledger: <code>draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md</code> — SLICED 2026-11-26 by <code>batch slice</code> into 3 children…</summary>
+
+```
+Continue the 'Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay' epic. Its canonical state lives in draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phases in order: 1 Offline rectangular mesh coverage (PyAutoArray) → 2 Rectangular fit arms, prepared not submitted (autolens_workspace) → 3 Rectangular vs Delaunay comparison table (autolens_workspace)
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s1_offline_rectangular_mesh_coverage.md">Offline rectangular mesh coverage</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s1_offline_rectangular_mesh_coverage.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s2_rectangular_fit_arms_prepared_not.md">Rectangular fit arms, prepared not submitted</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s2_rectangular_fit_arms_prepared_not.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s3_rectangular_vs_delaunay_comparison_table.md">Rectangular vs Delaunay comparison table</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s3_rectangular_vs_delaunay_comparison_table.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…</b> — 2 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…</b> — ledger: <code>draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md</code> — SLICED 2026-11-26 by <code>batch slice</code> into 2 children…</summary>
+
+```
+Continue the 'Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…' epic. Its canonical state lives in draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phases in order: 1 Candidate interferometer S/N adapt images, offline (PyAutoGalaxy) → 2 Interferometer fit arms, prepared not submitted (autolens_workspace)
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s1_candidate_interferometer_s_n_adapt.md">Candidate interferometer S/N adapt images, offline</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s1_candidate_interferometer_s_n_adapt.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s2_interferometer_fit_arms_prepared_not.md">Interferometer fit arms, prepared not submitted</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s2_interferometer_fit_arms_prepared_not.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>certified-positive-solver</b> — 2 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md"><code>jax.jit(jax.vmap(fn))</code> at B=50 returns wrong HST-scale inversion log likelihoods on an A100</a> — autoarray · medium · supervised · high</summary>
@@ -1513,7 +1579,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 232 · ral 27 · wsl-data 15 · local-dev 10 · gpu 1
+Lanes: any 232 · ral 27 · wsl-data 20 · local-dev 10 · gpu 1
 
 <a id="human-review"></a>
 <details>

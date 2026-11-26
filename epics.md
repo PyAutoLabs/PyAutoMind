@@ -134,3 +134,15 @@ epic, never picked standalone.
 - ledger: draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md
 - status: SLICED 2026-11-25 by `batch slice` into 4 children (draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s1_building_blocks.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_physical_units_profiles.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s4_workspace_example.md); the parent is unchanged and stays the ledger
 - notes: phases in order: 1 Building blocks (PyAutoGalaxy) → 2 The mass-sheet frame (PyAutoGalaxy, PyAutoLens) → 3 Physical-units profiles (PyAutoGalaxy) → 4 Workspace example (autolens_workspace)
+
+## adaptive-rectangular-meshes-repeat-the-adapt-ima
+- title: Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay
+- ledger: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+- status: SLICED 2026-11-26 by `batch slice` into 3 children (draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s1_offline_rectangular_mesh_coverage.md, draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s2_rectangular_fit_arms_prepared_not.md, draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s3_rectangular_vs_delaunay_comparison_table.md); the parent is unchanged and stays the ledger
+- notes: phases in order: 1 Offline rectangular mesh coverage (PyAutoArray) → 2 Rectangular fit arms, prepared not submitted (autolens_workspace) → 3 Rectangular vs Delaunay comparison table (autolens_workspace)
+
+## interferometer-adapt-image-get-the-imaging-mesh
+- title: Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…
+- ledger: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+- status: SLICED 2026-11-26 by `batch slice` into 2 children (draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s1_candidate_interferometer_s_n_adapt.md, draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s2_interferometer_fit_arms_prepared_not.md); the parent is unchanged and stays the ledger
+- notes: phases in order: 1 Candidate interferometer S/N adapt images, offline (PyAutoGalaxy) → 2 Interferometer fit arms, prepared not submitted (autolens_workspace)
