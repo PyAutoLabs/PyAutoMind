@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 15 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 287 |
+| [Backlog](#backlog) | 288 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -160,7 +160,7 @@ Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_m
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 70
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 71
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1627,7 +1627,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 223 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
+Lanes: any 224 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2027,7 +2027,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 44</summary>
+<summary><b>bug</b> — 45</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2065,6 +2065,14 @@ Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/array_in_collection_dropped_on_model_json_reload.md">An af.Array inside a Collection is dropped when the model is reloaded…</a> — autofit · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/array_in_collection_dropped_on_model_json_reload.md
 ```
 
 </details>
