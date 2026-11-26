@@ -1,3 +1,24 @@
+## likelihood-lifecycle-r6b-use-jax-sweep
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/691
+- completed: 2026-11-26
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/692
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/140
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/285
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/109
+- epic: likelihood-lifecycle (R6 phase B)
+
+`use_jax=True` swept out of analysis constructors so workspace examples pick up `setup="auto"`; merged before the release by human ruling (on 2026.11.25.1 the default is `use_jax=True`, so behaviour is unchanged until the R6 release).
+
+- Removed: autolens_workspace 131, HowToLens 3, autogalaxy_workspace 40, HowToGalaxy 16 (AST helpers in Science/scratch/likelihood_lifecycle_r6bc_2026-11-26/). Kept: `use_jax=` on FactorGraphModel, PositionsLH, apply_sparse_operator, PointSolver, simulators, operators, AnalysisEllipse, and every `use_jax=False`.
+- Pins added until PyAutoLens#895: mixed-type factor graphs (imaging + interferometer, imaging + point, autogalaxy pixelization multi-dataset) keep `use_jax=True`; weak scripts pin `use_jax=False` (PyAutoLens#614).
+- autolens_workspace_test / autogalaxy_workspace_test: no change — every analysis `use_jax=True` there is a deliberate JAX-path test.
+- Prose worded true on both releases; notebooks regenerated for changed scripts only; `markdown/` pages wait for the next render.
+- Smoke against library main: autolens 45/45, howtolens 41/41, autogalaxy 14/14 + 2/2 notebooks, HowToGalaxy run_smoke 30/30, autolens_test 40/40.
+
+Follow-up: once PyAutoLens#895 releases, the factor-graph and weak pins can be removed (a later docs pass).
+
+## Original prompt
+
 # Likelihood lifecycle R6 phase B: sweep `use_jax=` out of the workspaces
 
 Type: feature

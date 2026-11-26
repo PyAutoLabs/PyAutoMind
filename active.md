@@ -134,27 +134,6 @@
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
 
-## likelihood-lifecycle-r6b-use-jax-sweep
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/691
-- issued: 2026-11-26
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: workspace-shipped, awaiting-merge (judge: human /prm; library decisions on weak #614 and mixed factor graphs pending before the release)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/692
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/140
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/285
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/109
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-r6b-use-jax-sweep
-- repos:
-  - autolens_workspace: feature/likelihood-lifecycle-r6b-use-jax-sweep
-  - autogalaxy_workspace: feature/likelihood-lifecycle-r6b-use-jax-sweep
-  - HowToLens: feature/likelihood-lifecycle-r6b-use-jax-sweep
-  - HowToGalaxy: feature/likelihood-lifecycle-r6b-use-jax-sweep
-- prompt: active/likelihood_lifecycle_r6b_workspace_use_jax_sweep.md
-- epic: likelihood-lifecycle (R6 phase B; merges before the release by human ruling 2026-11-26)
-- tier: judge — merge mode: human /prm
-- coordination: autolens_workspace also claimed by cluster-family-fit-figures (#687: scripts/cluster/plot.py + generated indexes) and sensitivity_slam_source_pixelized_mappervalued (subhalo/sensitivity/slam_source_pixelized.py); both files excluded; human-approved overlap 2026-11-26
-- note: autolens_workspace_test and autogalaxy_workspace_test need no change (every analysis use_jax=True there is a deliberate JAX-path test)
-
 ## likelihood-lifecycle-r6d-prerelease-fixes
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/895
 - issued: 2026-11-26
