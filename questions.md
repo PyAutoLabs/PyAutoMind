@@ -26,16 +26,6 @@ the ruling on the prompt.
 
 ## Open
 
-### Q16. cti_upkeep_epic — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker woul…
-- task: draft/maintenance/autocti/cti_upkeep_epic.md
-- kind: ruling
-- gate: human-required
-- ask: `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship.
-- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
-- shift: 2026-11-19-pm2
-- asked: 2026-11-19T21:49Z
-- worker: readiness pass
-
 ### Q21. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campai…
 - task: draft/feature/euclid/dr1_campaign_sed_status_root.md
 - kind: ruling
@@ -381,6 +371,18 @@ the ruling on the prompt.
 - worker: readiness pass
 - answered: 2026-11-26T18:03Z by Jammy2211 (chat)
 - answer: (a) make it ready: slice or size it so a shift can start it.
+
+### Q16. cti_upkeep_epic — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker woul…
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: human-required
+- ask: `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship.
+- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+- answered: 2026-11-26T18:06Z by Jammy2211 (chat)
+- answer: (a) lower it to supervised.
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
