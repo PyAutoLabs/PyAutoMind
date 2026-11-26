@@ -1,3 +1,10 @@
+## adapt-image-is-the-s-n-map
+- completed: 2026-11-26
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/697
+- retired as covered: library docstrings shipped in PyAutoGalaxy#644 (2026-10-02); the API-honesty assessment was answered by the S/N-map API of PyAutoGalaxy#763 (`galaxy_snr_maps_from`, `soft_snr_maps_from`, `AdaptImages.from_result`); the remaining workspace prose (`slam_start_here.py`; the multi_galaxy adaptive and subhalo pixelized cells were already fixed) shipped in autolens_workspace#697 (record complete/2026/11/adapt-mesh-weighting-workspaces.md).
+
+## Original prompt
+
 # Adapt image is the S/N map: fix the prose and assess…
 
 Type: docs

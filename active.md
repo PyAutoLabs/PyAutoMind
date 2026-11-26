@@ -82,36 +82,7 @@
 - status: research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)
 - prompt: active/make_the_source_adapt_image_hilbert_image.md
 - note: research, no claim/worktree. Library phase (PyAutoArray, PyAutoGalaxy), workspace phase (autolens_workspace) and docs are filed as their own prompts after the human judges the fits; suggested branch feature/adapt-mesh-weighting. Human added 5 COWLS M25 lenses (F150W, F277W) on 2026-11-25.
-- next: phases 1-2 merged 2026-11-26 (records complete/2026/11/adapt-mesh-weighting-library.md, adapt-mesh-weighting-galaxy.md); phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
-- tier: judge — merge mode: human /prm
-
-## adapt-mesh-weighting-workspaces
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/693
-- issued: 2026-11-26
-- session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
-- status: workspace-shipped, awaiting-release (all phase 3 PRs open, release-gated)
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/141
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/110
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/374
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/142
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/697
-- prompt: active/adapt_mesh_weighting_workspace_default.md
-- worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-workspaces
-- repos:
-  - HowToLens: feature/adapt-mesh-weighting-workspaces
-  - HowToGalaxy: feature/adapt-mesh-weighting-workspaces
-  - autolens_workspace_test: feature/adapt-mesh-weighting-workspaces
-  - autogalaxy_workspace_test: feature/adapt-mesh-weighting-workspaces
-  - autolens_workspace: feature/adapt-mesh-weighting-workspaces
-- release-gate: PyAutoArray
-- release-gate: PyAutoGalaxy
-- release-gate: PyAutoLens
-- heart-red-override:
-  - authorized: live human, 2026-11-26, this session — "Override for phase 3" (autolens_workspace#693)
-  - not exercised: the scoped dev gate was GREEN at every PR-open (3a repos; autolens_workspace)
-  - record: https://github.com/PyAutoLabs/autolens_workspace/issues/693
-- note: phase 3a now (HowTo tutorials, _test pinned HilbertSNR scripts); 3b autolens_workspace after sensitivity_slam_source_pixelized_mappervalued (#685) releases its claim
-- next: all five PRs merge only after a release carries PyAutoArray#717/#718, PyAutoGalaxy#763, PyAutoLens#897 (human /prm); then the science project's slam.py unified arm moves to the library calls. Rectangular-mesh scripts (31) deliberately unchanged: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+- next: phases 1-3 shipped and released 2026-11-26 (records complete/2026/11/adapt-mesh-weighting-library.md, -galaxy.md, -workspaces.md; libraries 2026.11.26.1). Open follow-ups: draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md (re-scope), rectangular meshes (draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md), interferometer (draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md); human to judge whether this research task can close
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement

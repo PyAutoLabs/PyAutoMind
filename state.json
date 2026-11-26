@@ -3,13 +3,13 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
-  "updated": "2026-11-26T17:34:40Z",
+  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
+  "updated": "2026-11-26T17:57:01Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "red",
-      "text": "2 prompt(s) need lifecycle reconciliation",
+      "text": "1 prompt(s) need lifecycle reconciliation",
       "url": null,
       "prompt": "Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:\n\n1. `git fetch origin && git status`. If behind `origin/main`, `git pull --ff-only`\n   before touching anything.\n2. `python3 scripts/lifecycle.py check`, `orphans`, and `index --check`. Fix\n   whatever drift they report.\n3. Reconcile finished work \u2014 this is the part nothing automates. For every prompt\n   under `draft/` and `active/`, decide whether it is already done: a `Status:`\n   header saying shipped/superseded/absorbed, a merged PR named in its body, or a\n   record in `complete/` whose scope already covers it (check `complete/index.md`\n   and grep the dated buckets). Treat a same-subject record as evidence, not\n   proof \u2014 read both and confirm the scope really matches before retiring a\n   prompt.\n4. For each one that IS done, write its record and retire the prompt:\n   `python3 scripts/lifecycle.py record <slug> --date <YYYY-MM-DD> --from-file\n   <body> --apply`, where <body> ends with `## Original prompt` followed by the\n   prompt's full text. Then `git rm` the prompt file and repoint every\n   cross-reference to it (grep the slug across `draft/`, `active/`, `epics.md`\n   and the registry files).\n5. Regenerate the page: `pyauto-brain intake --apply dashboard`. Never hand-edit\n   `dashboard.md` or `dashboard.html` \u2014 they are generated.\n6. Commit and push to `main`, so `dashboard_refresh.yml` agrees with the tree.\n\nReport what you retired, what you deliberately left in the backlog and why, and\nanything you could not verify."
     },
@@ -75,12 +75,6 @@
     },
     {
       "severity": "yellow",
-      "text": "waiting on PyAutoArray's release: Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft\u2026",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/693",
-      "prompt": "Use the start-dev skill. active/adapt_mesh_weighting_workspace_default.md"
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1800 \u2014 likelihood-lifecycle-r6-default-auto",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1800",
       "prompt": null
@@ -111,12 +105,6 @@
     },
     {
       "severity": "yellow",
-      "text": "waiting on PyAutoGalaxy's release: Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft\u2026",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/693",
-      "prompt": "Use the start-dev skill. active/adapt_mesh_weighting_workspace_default.md"
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#897 \u2014 adapt-mesh-weighting-galaxy",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/897",
       "prompt": null
@@ -126,6 +114,18 @@
       "text": "pending release: PyAutoLens PyAutoLens#894 \u2014 likelihood-lifecycle-r6-default-auto",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/894",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#896 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/896",
+      "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }

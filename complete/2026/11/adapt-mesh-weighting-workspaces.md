@@ -1,3 +1,19 @@
+## adapt-mesh-weighting-workspaces
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/693
+- completed: 2026-11-26
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/141
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/110
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/374
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/142
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/697
+- heart-red-override: authorized by the live human 2026-11-26 ("Override for phase 3") but not exercised: the scoped dev gate was GREEN at every PR-open; merged on the human's /prm after the release.
+- release: libraries 2026.11.26.1 released on the human's "Release it" (rehearsal PyAutoHands run 45850381798, integrate PyAutoHeart run 45853677796: 825 passed / 0 failed; fresh Workspace Smoke 45860505979 green; readiness GREEN 100; release.yml run 45865395828 published all six). Its wiki_currency_check job failed on a stale assistant search-roster / API baseline (autofit gained SMC etc.); not a release defect.
+- what shipped: HowToLens tutorial 6 / HowToGalaxy tutorial 4 teach HilbertSNR (tutorial 6's modelling chain uses AdaptImages.from_result); new pinned imaging/jax_likelihood/hilbert_snr.py in both _test workspaces (NumPy, vmap, jit); autolens_workspace's 4 Delaunay/Hilbert scripts (imaging/features/pixelization/delaunay.py, group/slam.py and its no_lens_light / linear_light_profiles variants) use HilbertSNR + AdaptImages.from_result, no S/N cap; slam_start_here.py says the adapt image is the source S/N map.
+- scope finding: only 4 autolens_workspace scripts used Delaunay + Hilbert; the ~31 rectangular-mesh SLaM scripts keep the S/N 3 cap (draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md). Interferometer scripts out of scope.
+- follow-up: the science project's new `hilbertsnr` arm (Science/development/adapt_snr_cap) can run on RAL once the shared install has 2026.11.26.1 (human's OK); re-pin the assistant wiki-currency search roster / API baseline.
+
+## Original prompt
+
 # Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft AdaptSplit image
 
 Type: feature
