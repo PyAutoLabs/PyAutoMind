@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 15 |
+| [In flight](#in-flight) | 16 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -42,10 +42,11 @@ _LIVE · 0 in progress_
 9. [Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay](draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md)
 10. [Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…](draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md)
 
-**Questions** (2 open, 0 deferred, 7 rulings — [`questions.md`](questions.md))
+**Questions** (3 open, 0 deferred, 7 rulings — [`questions.md`](questions.md))
 
 - Q39 — Group LOS halos: autolens_workspace is held by #701 (dataset FITS only, disjoint files). Wait for it to merge, or override the claim now? (https://github.com/PyAutoLabs/autolens_workspace/issues/703, today)
 - Q40 — Group subhalo sensitivity: autolens_workspace is held by #701, and under smoke the Witness evidence map is all zeros. Wait or override, and accept an S/N-map Witness? (https://github.com/PyAutoLabs/autolens_workspace/issues/702, today)
+- Q41 — see the question on the issue (https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931, today)
 - Q32 — `cluster_usability` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, today)
 - Q33 — `cluster_usability` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, today)
 - Q34 — `cluster_usability` has no valid Lane:, so every unattended pick fails closed. (ruling no-lane, today)
@@ -56,7 +57,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-26-pm2 — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 1 running, 5 finished · tokens 826050 of 3000000 (cache-read 24723345; 1 session(s) unmeasured) · review-at 2026-11-26T22:00Z (as of 2026-11-26T21:45:07Z) · [shift issue #610](https://github.com/PyAutoLabs/PyAutoMind/issues/610#issuecomment-7203720372)
+Live: LIVE · 6 finished · tokens 935250 of 3000000 (cache-read 27393999) · review-at 2026-11-26T22:00Z (as of 2026-11-26T21:49:16Z) · [shift issue #610](https://github.com/PyAutoLabs/PyAutoMind/issues/610#issuecomment-7203720372)
 
 _(nothing to review yet)_
 
@@ -160,7 +161,7 @@ Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_m
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 71
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 70
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1536,6 +1537,14 @@ Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility
 
 </details>
 
+<details><summary>📋 <a href="active/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch length</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1811">issue #1811</a> — issued 2026-11-26 — awaiting-input</summary>
+
+```
+Use the start-dev skill. active/vmap_jit_recompiles_per_nautilus_batch_length.md
+```
+
+</details>
+
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -1627,7 +1636,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 224 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
+Lanes: any 223 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2027,7 +2036,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 45</summary>
+<summary><b>bug</b> — 44</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2185,14 +2194,6 @@ Use the start-dev skill. draft/bug/autoarray/non_uniform_over_sample_jax_compile
 
 ```
 Use the start-dev skill. draft/bug/autofit/model_identifier_ignores_jax_array_and_numpy_scalar_values.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch length</a> — autofit · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md
 ```
 
 </details>
@@ -3150,6 +3151,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-26 | issued | <a href="active/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-11-26 | issued | <a href="active/cosmos_web_ring_mask_dtype.md">cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of…</a> |
 | 2026-11-26 | issued | <a href="active/group_subhalo_sensitivity.md">The imaging <code>features/advanced/subhalo/sensitivity</code> example needs…</a> |
 | 2026-11-26 | issued | <a href="active/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and…</a> |
@@ -3159,12 +3161,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autoarray/eager_lax_control_flow_recompiles_per_visualization_call.md">Eager lax control flow recompiles on every fit_for_visualization call</a> |
 | 2026-11-26 | issued | <a href="active/convolver_blurring_image_warning.md">Convolver "No blurring_image provided" warning in canonical workspace…</a> |
-| 2026-11-26 | issued | <a href="active/a_compound_prior_model_reloaded_from_model.md">A compound-prior model reloaded from model.json has a different prior…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-26 | issued | <a href="active/a_compound_prior_model_reloaded_from_model.md">A compound-prior model reloaded from model.json has a different prior…</a> |
 | 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
@@ -3174,12 +3176,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
-| 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
@@ -3189,12 +3191,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-11 | issued | <a href="active/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
-| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
@@ -3204,12 +3206,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
@@ -3219,7 +3221,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
-| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 
 </details>
 
@@ -3295,7 +3296,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-48 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+47 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3322,7 +3323,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md — unknown theme keyword(s): samples, factor-graph`
-- `draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md — unknown theme keyword(s): jax, nautilus`
 - `draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md — unknown theme keyword(s): sparse-operator, aggregator`
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — unknown theme keyword(s): caustics, lens-calc`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
