@@ -148,3 +148,21 @@
 - prompt: active/a_compound_prior_model_reloaded_from_model.md
 - repos:
   - PyAutoFit: feature/a-compound-prior-model-reloaded-from-model
+
+## group-los-halos
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/703
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm2 (1f616415-9676-4136-a025-6e1195558fab)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/autolens_workspace/issues/703#issuecomment-7203799575
+- prompt: active/group_los_halos.md
+- note: no repo claim, branch or worktree yet. autolens_workspace is held by cosmos-web-ring-mask-dtype (PR #701, dataset FITS only, disjoint files). Imaging half already done (02f19489). Plan in the issue body; LOS halo must sit in `galaxies` (analysis drops other collections).
+- next: human answers on #703, then branch feature/group-los-halos and build the plan in the issue body
+- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
+## jit_cache_not_hit_modeling_visualization
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/375
+- session: shift worker 2026-11-26-pm2 (f2260bde-3b41-455c-bff0-04b02e1681ac)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jit-cache-modeling-visualization
+- repos:
+  - autolens_workspace_test: feature/jit-cache-modeling-visualization

@@ -96,6 +96,26 @@ the ruling on the prompt.
 - asked: 2026-11-26T20:56Z
 - worker: readiness pass
 
+### Q39. group_los_halos — Group LOS halos: autolens_workspace is held by #701 (dataset FITS onl…
+- task: active/group_los_halos.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/703
+- kind: question
+- ask: Group LOS halos: autolens_workspace is held by #701 (dataset FITS only, disjoint files). Wait for it to merge, or override the claim now?
+- options: (a) Wait for #701 to merge, then build the plan in #703 as written · (b) Override the claim now (files disjoint) and build the plan · (c) Re-scope or retire the prompt (imaging half already done)
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:31Z
+- worker: 1f616415
+
+### Q40. group_subhalo_sensitivity — Group subhalo sensitivity: autolens_workspace is held by #701, and un…
+- task: active/group_subhalo_sensitivity.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/702
+- kind: question
+- ask: Group subhalo sensitivity: autolens_workspace is held by #701, and under smoke the Witness evidence map is all zeros. Wait or override, and accept an S/N-map Witness?
+- options: (a) Wait for #701; accept the injected-signal S/N map (with vs without companions) as Witness · (b) Override the claim now; accept the S/N-map Witness · (c) Wait for #701; keep the evidence Witness, run with ENV: real_search · (d) Retire or re-scope the prompt (imaging half already done)
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:31Z
+- worker: 0f971892
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
