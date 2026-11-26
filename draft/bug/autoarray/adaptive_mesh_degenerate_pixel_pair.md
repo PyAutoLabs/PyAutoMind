@@ -9,7 +9,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: medium
-Status: formalised
+Status: needs re-scope (2026-11-26 research: most spikes are isolated central pixels, not pairs)
 Consequence: glance
 Witness: A unit test on a synthetic delta-spike weight map asserts no two `source_plane_mesh_grid` points lie closer than 5% of the local mesh spacing, and re-fitting `Tile102008532RA0683486015030DECNEG0642073552911` `initial_lens_model/vis_pix` no longer has a mesh pair under 5% of local spacing nor a reconstructed pixel above 10x the reconstruction's 99th percentile — or, if the decision is that adapt-image saturation must be clipped, the PR records the nearest-neighbour distribution across the dr1_sep1 tiles and the clipping is documented where the adapt image is built.
 Review-minutes: 3
@@ -74,3 +74,32 @@ not this bug (crowded points stay locally spaced in the source plane); a per-pix
 `HilbertSNR` (8 points per image pixel removes it on all 20 datasets) is in PyAutoArray#718
 (`max_per_pixel=8`, default on). This prompt stays open: next is research (reproduce on the
 Euclid tile; check the unified fits for reconstruction spikes) before a source-plane fix is planned.
+
+## 2026-11-26: research on 230 fits — most spikes are not pairs
+
+The saved `image/source_plane_reconstruction_0.csv` (source-plane mesh y, x, reconstruction, noise)
+of every pixelized fit in `Science/development/adapt_snr_cap` (`source_pix[2]`, `light[1]`,
+`mass_total[1]`; arms `cap3`, `uncapped`, `peak_share_unified`; A100 and CPU; 230 fits):
+
+- Source-plane pairs closer than 5% of the local spacing (median of the 6 nearest): median 2-4 per
+  fit in every arm.
+- Spikes as this prompt defines them (largest |reconstruction| > 10x the 99th percentile): 24 of 230
+  fits — `uncapped` 17/84, `cap3` 6/97, `peak_share_unified` (the new `HilbertSNR` default) 1/49.
+- In only **2** of the 24 is a spike pixel part of a close pair (COSJ095950+022057_F150W cap3,
+  COSJ100012+022015_F277W uncapped: pair pixel 11-14x p99).
+- The other 22: an **isolated single pixel at the source centre** (1-12% of the source radius from
+  the flux-weighted centre), in the **densest part of the mesh** (cell size 2-30% of the median),
+  with neighbours at 0-20% of its value, almost all in `mass_total[1]`; per-pixel S/N
+  (reconstruction / noise map) 2.5-26. The largest, 179x p99, is the unified arm on
+  COSJ100012+022015_F277W `mass_total[1]`, with no close pair at all.
+
+So the dominant failure is a very small, weakly constrained source pixel at the core absorbing
+flux, not a near-duplicate pair. Not yet checked: the Euclid tile in "Finding" (its fit is on RAL /
+the old science clone, not on the laptop) — whether its 0.001" pair is a true pair or this pattern.
+
+Suggested re-scope before any code: (1) reproduce the Euclid tile on RAL; (2) for the central-spike
+pattern, test whether it is regularization (AdaptSplit's inner coefficient letting the smallest
+cells float), the mesh density at the core, or the `mass_total[1]` mass model, e.g. by refitting one
+spiky `mass_total[1]` max-likelihood model with the mesh coarsened at the core or a regularization
+floor; (3) only then decide a fix. The pair fix (merging/nudging near-duplicates, JAX fixed shapes)
+addresses 2 of 24 here.
