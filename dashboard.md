@@ -1350,7 +1350,7 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/ledger_merge_dispatch_dashboard_refresh.md">Cortex ledger auto-merge leaves main red after a project birth — ledger_merge.yml…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/103">issue #103</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/ledger_merge_dispatch_dashboard_refresh.md">Cortex ledger auto-merge leaves main red after a project birth — ledger_merge.yml…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/103">issue #103</a> — issued 2026-11-26 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/104">PyAutoCortex#104</a></summary>
 
 ```
 Use the start-dev skill. active/ledger_merge_dispatch_dashboard_refresh.md
