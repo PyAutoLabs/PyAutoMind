@@ -1435,7 +1435,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/693">issue #693</a> — issued 2026-11-26 — workspace-dev — ⏸ waiting on PyAutoArray's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
+<details><summary>📋 <a href="active/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the soft…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/693">issue #693</a> — issued 2026-11-26 — workspace-dev (3a PRs open, release-gated; 3b autolens_workspace pending its claim) — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/141">HowToLens#141</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/110">HowToGalaxy#110</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/374">autolens_workspace_test#374</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/142">autogalaxy_workspace_test#142</a> — ⏸ waiting on PyAutoArray's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/adapt_mesh_weighting_workspace_default.md
