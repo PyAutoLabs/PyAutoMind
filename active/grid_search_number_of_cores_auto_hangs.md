@@ -7,7 +7,8 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: low
-Status: draft
+Status: active
+Issued: 2026-11-26
 Consequence: judge
 Epic: likelihood-lifecycle
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md

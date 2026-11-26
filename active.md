@@ -103,3 +103,14 @@
 - prompt: active/intake_apply_crashes_on_memory_citations_when.md
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
+
+## grid-search-cores-auto
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1805
+- issued: 2026-11-26
+- status: library-dev
+- tier: supervised
+- epic: likelihood-lifecycle
+- prompt: active/grid_search_number_of_cores_auto_hangs.md
+- worktree: ~/Code/PyAutoLabs-wt/grid-search-cores-auto
+- repos:
+  - PyAutoFit: feature/grid-search-cores-auto
