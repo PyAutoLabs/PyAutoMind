@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2414 records across 11 buckets.
+2416 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -427,6 +427,8 @@ markers; everything below GENERATED is rebuilt.
 - [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
 - [slam-simultaneous-subhalo-grid-search](2026/11/slam-simultaneous-subhalo-grid-search.md)
 - [smoke-install-tfp-comment-sweep](2026/11/smoke-install-tfp-comment-sweep.md) — - Comment-only sweep after PyAutoArray#694 (record complete/2026/11/matern-vendor-bessel-kve.md): replaced the…
+- [smoke-sha-gate-date-drift](2026/11/smoke-sha-gate-date-drift.md)
+- [smoke-sha-gate-tests-clock-time-bomb](2026/11/smoke-sha-gate-tests-clock-time-bomb.md)
 - [stale-auto-simulated-cluster-dataset](2026/11/stale-auto-simulated-cluster-dataset.md)
 - [stale-enable-pytrees-register-model-advice-in](2026/11/stale-enable-pytrees-register-model-advice-in.md)
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)

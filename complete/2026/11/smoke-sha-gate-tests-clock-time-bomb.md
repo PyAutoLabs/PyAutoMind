@@ -1,3 +1,8 @@
+## Outcome
+Retired by /prm close-out of smoke-sha-gate-date-drift: same bug, filed in parallel by another session on 2026-11-26. PyAutoLabs/PyAutoHeart#375 (merged a8ac38b) makes the two `main()` tests use a full-sweep time one day before the real clock — the second option this prompt offered. Witness met: Heart Tests green on main at a8ac38b (run 45815158876). Record: complete/2026/11/smoke-sha-gate-date-drift.md.
+
+## Original prompt
+
 # Heart Tests red since 2026-11-25: smoke_sha_gate main() tests read the real clock
 
 Type: bug

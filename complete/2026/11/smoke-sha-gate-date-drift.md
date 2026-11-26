@@ -1,3 +1,13 @@
+## Outcome
+Heart Tests on main failed from 2026-11-26 because two `smoke_sha_gate` `main()` tests used a fixed previous full-sweep time (2026-11-18) while `main()` reads the real clock; past 7 days the gate (correctly) forced a sweep. The tests now use a full-sweep time one day before the real clock (`_recent_full_sweep_ts()` in `tests/test_smoke_sha_gate.py`). Test-only; the gate and `FULL_SWEEP_MAX_AGE_DAYS` are unchanged.
+
+- PR: PyAutoLabs/PyAutoHeart#375 (merged a8ac38b, 2026-11-26), issue PyAutoHeart#374.
+- Evidence: full Heart suite 1523 passed / 0 failed; sha-gate tests pass under +30 and +365-day shifted clocks (control: main's version fails the same 2 under +30).
+- Shipped under AUTONOMY.md "Corrective-PR exception for Heart RED" for reason "PyAutoHeart: Heart Tests failure on main" (authorization: PyAutoHeart#374 comment 7191236646).
+- Unblocks PyAutoLabs/PyAutoHeart#373 (arcticpy-27-git-source).
+
+## Original prompt
+
 # Heart: smoke_sha_gate main() tests fail as the real clock passes their fixed dates
 
 Type: bug
