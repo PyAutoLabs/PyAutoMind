@@ -40,13 +40,9 @@ _LIVE · 0 in progress_
 7. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
 8. [Cluster usability — from the first plot to a paper-scale fit](draft/feature/autolens/cluster_usability.md)
 
-**Questions** (3 open, 0 deferred, 2 rulings — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
 
-- Q29 — Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction? (https://github.com/PyAutoLabs/autolens_workspace_test/issues/371, 2 days)
-- Q30 — All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population? (https://github.com/PyAutoLabs/PyAutoLens/issues/871, 2 days)
-- Q31 — see the question on the issue (https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143, 2 days)
-- Q23 — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, 3 days)
-- Q24 — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, 3 days)
+_(no open questions)_
 
 **Shift** (2026-11-23-am — 0 in progress · 0 awaiting review)
 
