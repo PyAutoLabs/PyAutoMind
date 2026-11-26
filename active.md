@@ -189,7 +189,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/374
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/375
 - worktree: /home/jammy/Code/PyAutoLabs-wt/smoke-sha-gate-date-drift
 - repos:
   - PyAutoHeart: feature/smoke-sha-gate-date-drift
