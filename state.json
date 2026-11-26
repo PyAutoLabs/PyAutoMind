@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-26T14:19:03Z",
+  "updated": "2026-11-26T14:29:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -27,12 +27,6 @@
     },
     {
       "severity": "red",
-      "text": "`subhalo/sensitivity/slam_source_pixelized.py` fails on main: `al.MapperValued` no longer exists \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/685",
-      "prompt": "Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md"
-    },
-    {
-      "severity": "red",
       "text": "Smoke cache-stats step fails with NameError: warnings \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoHeart/issues/365",
       "prompt": "Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md"
@@ -42,6 +36,12 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`subhalo/sensitivity/slam_source_pixelized.py` fails on main: `al.MapperValued` no longer exists \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/685",
+      "prompt": "Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md"
     },
     {
       "severity": "yellow",
