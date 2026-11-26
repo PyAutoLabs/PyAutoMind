@@ -87,24 +87,6 @@
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm
 
-## cluster-family-fit-figures
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/883
-- issued: 2026-11-24
-- session: Codex desktop
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/884
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/890
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/891
-- release-gate: PyAutoLens
-- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/20
-- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/22
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/38
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/687
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/family-plot-api
-- repos:
-  - PyAutoLens: feature/family-plot-api
-  - autolens_workspace: feature/family-plot-api
-
 ## adapt-mesh-weighting
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/714
 - issued: 2026-11-25

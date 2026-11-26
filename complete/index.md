@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2419 records across 11 buckets.
+2420 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -158,6 +158,7 @@ markers; everything below GENERATED is rebuilt.
 - [ci-verdict](2026/11/ci-verdict.md)
 - [close-out-guard](2026/11/close-out-guard.md)
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [cluster-family-fit-figures](2026/11/cluster-family-fit-figures.md)
 - [cluster-regime-narrative](2026/11/cluster-regime-narrative.md)
 - [cockpit-footer-broca](2026/11/cockpit-footer-broca.md)
 - [codex-orchestrator](2026/11/codex-orchestrator.md)
