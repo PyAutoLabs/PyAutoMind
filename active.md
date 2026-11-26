@@ -114,6 +114,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/grid-search-cores-auto
 - repos:
   - PyAutoFit: feature/grid-search-cores-auto
+
 ## data-temp-write-paths
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/899
 - issued: 2026-11-26
@@ -137,18 +138,6 @@
 - repos:
   - PyAutoCTI: feature/installation-docs-arcticpy-recipe
 
-## skip_fit_output_no_longer_gates_save_results_docs_drift
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/143
-- issued: 2026-11-26
-- session: shift worker 2026-11-26-pm (ed17e1af-d8bf-4471-b4de-72b0509cbb64)
-- status: workspace-dev
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/144
-- worktree: ~/Code/PyAutoLabs-wt/skip_fit_output_no_longer_gates_save_results_docs_drift
-- prompt: active/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-- tier: glance — safe; auto-merge on green if the Witness passes after a merge slot
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/skip-fit-output-save-results-docs
-
 ## convolver_blurring_image_warning
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/719
 - issued: 2026-11-26
@@ -159,3 +148,14 @@
 - tier: supervised — auto-merge on green if the Witness passes after a merge slot (decision-taken → human /prm)
 - repos:
   - PyAutoArray: feature/convolver-blurring-image-warning
+
+## cosmos-web-ring-mask-dtype
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/700
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm (710c1a77-37b6-43ed-84bc-85b4a82c3438)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-mask-dtype
+- repos:
+  - autolens_workspace: feature/cosmos-web-ring-mask-dtype
+- prompt: active/cosmos_web_ring_mask_dtype.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot

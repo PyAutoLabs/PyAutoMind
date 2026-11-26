@@ -1,3 +1,8 @@
+## Outcome
+Retired by the human (Q30, 2026-11-26: "retire", https://github.com/PyAutoLabs/PyAutoLens/issues/871#issuecomment-7127151259) as a duplicate of complete/2026/11/substructure-padded-slot-grad.md. That task's fixes, PyAutoGalaxy#738 (grad-safe `vmapped_deflections_from` for masked slots, plus the `cNFWSph` gradient) and PyAutoLens#872 (benign padding in `galaxies_to_halo_arrays`), merged 2026-11-20 and cover all three items in the Ask. Shift 2026-11-24-am rechecked on fresh main (Galaxy 1ba51f32, Lens dbc63e65). Padded scan populations of NFWTruncatedSph, cNFWSph, KaplinghatCoredNFWSph and YangSIDMSph all gave finite real-halo gradients, exactly zero masked-slot gradients and a max grid difference ≤3.67e-15 against unpadded tracing, so the bug does not reproduce. Shift 2026-11-26-pm premise check: ok on Galaxy 68dc088c / Lens 903c0814 (symbols present; #871 closed). No code change and no PR. Issue https://github.com/PyAutoLabs/PyAutoLens/issues/871 (closed).
+
+## Original prompt
+
 # substructure_util zero-padded halo slots make jax.grad NaN for every halo
 
 Type: bug
