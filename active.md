@@ -33,19 +33,6 @@
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
 
-## sensitivity_slam_source_pixelized_mappervalued
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
-- issued: 2026-11-23
-- session: claude-desktop 2026-11-26 (Opus 5.5), resumed from shift worker 2026-11-23-am3 (codex:b1a928033a0d472f97e99ca81604b708)
-- status: awaiting-merge
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/694
-- next: human /prm on autolens_workspace#694 (scope beyond plan: adapt_images wiring fix); merge releases the autolens_workspace claim
-- worktree: /home/jammy/Code/PyAutoLabs-wt/sensitivity-slam-source-pixelized
-- repos:
-  - autolens_workspace: feature/sensitivity-slam-source-pixelized
-- prompt: active/sensitivity_slam_source_pixelized_mappervalued.md
-- tier: glance
-
 ## sparse_terms_nufft_origin_and_mask_compatibility
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
 - issued: 2026-11-23

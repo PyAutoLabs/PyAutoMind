@@ -622,7 +622,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 70 (stage 1: 70, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 73; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 70 (stage 1: 70, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 74; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -810,6 +810,7 @@ week, never a hand-picked one.
 | 2026-11-24 | colab-links-pinned-to-blob-main-in (PyAutoLens#879 / PyAutoGalaxy#751, PyAutoLens#880, HowToGalaxy#108, HowToLens#138) | glance | 124 tagged targets verified, bumper 124/124, URL sweep 12 clean, targeted smoke PASS, independent Opus CLEAN, Heart YELLOW acknowledged | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211, 4/5 PRs) |  |
 | 2026-11-24 | xla-census-anchors-convolver (autolens_profiling#534) | glance | tests ci-verdict GREEN @a775544a (1 success: lint; mergeable clean) + scripts/misc/*/test 1907 passed 6 skipped local and CI / witness PASS: lint green, test_census_anchors_verify_against_the_installed_pyautoarray passes in CI / review in-session: line-range constants and comments only, ranges checked with ast, public-names CLEAN, no decision-taken / heart green (autolens_profiling gate-deferred, PR checks decide) | merged-unchanged | 1 | in-turn-autonomous (mergedBy Jammy2211) |  |
 | 2026-11-24 | stale-auto-simulated-cluster-dataset (autolens_profiling#532) | glance | regression and real stale/fresh witness passed, both cluster import smokes passed, independent Opus CLEAN, scoped Heart GREEN | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
+| 2026-11-26 | sensitivity_slam_source_pixelized_mappervalued (autolens_workspace#694) | glance | tests ci-verdict GREEN @0b96becb (8 success, mergeable clean) / smoke targeted: none selected (no_run.yaml) / witness PASS: clean-checkout smoke-profile run exit 0, 0 masked FitExceptions / review CLEAN, public-names n/a (workspace) / heart dev-ship GREEN (scoped autolens_workspace) / adversary: independent Opus sub-agent CLEAN | merged-unchanged | 2 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

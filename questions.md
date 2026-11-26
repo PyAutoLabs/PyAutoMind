@@ -342,7 +342,7 @@ the ruling on the prompt.
 - answer-comment: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7107940971
 
 ### Q27. sensitivity_slam_source_pixelized_mappervalued — Which subhalo should the pixelized sensitivity example inject and fit?
-- task: active/sensitivity_slam_source_pixelized_mappervalued.md
+- task: complete/2026/11/sensitivity-slam-source-pixelized-mappervalued.md
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
 - kind: question
 - ask: Which subhalo should the pixelized sensitivity example inject and fit?

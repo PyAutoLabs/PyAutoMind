@@ -1,3 +1,16 @@
+Shipped autolens_workspace#694 (merged 2026-11-26, ba0c6709), closing autolens_workspace#685.
+
+`scripts/imaging/features/advanced/subhalo/sensitivity/slam_source_pixelized.py`:
+- `al.MapperValued` (removed upstream) replaced by `scipy.interpolate.griddata` of the mapper reconstruction onto a ±2" `Grid2D.uniform`, wrapped in `Array2D.no_mask`. Points outside the source-plane mesh are zero-filled, matching the source-science example. Human decision (2026-11-26) over the retired nearest-vertex behaviour; documented in a script comment.
+- Subhalo `NFWMCRLudlowSph` parameterised by `mass_at_200`: fixed 1e9 MSun injection, `LogUniformPrior(1e6, 1e12)` in the perturb fit (human answer Q27, 2026-11-23, following sensitivity/start_here.py).
+- `BaseFit`/`PerturbFit` pass `adapt_images=` to `AnalysisImaging`; the old `analysis._adapt_images` assignment was dead, so 8/8 sensitivity fits raised on a None adapt image, masked by TEST MODE 2 as a sentinel likelihood (script still exited 0). Scope added beyond the plan, so merge was human-commanded.
+
+Evidence: witness on a clean detached checkout under profile_smoke defaults: exit 0, 13 searches, 0 masked FitExceptions. Targeted smoke selected nothing (sensitivity folder is in no_run.yaml). Independent Opus adversary review CLEAN (control with the adapt fix reverted: 8/8 masked failures). Scoped Heart dev-ship GREEN. PR CI 8/8 green.
+
+Follow-ups not done here (to be filed): slam_source_parametric.py reads `bulge.centre` on an MGE Basis source (lines 379, 469) and has the same `log10m_vir` and `_adapt_images` defects; start_here.py has the dead `_adapt_images` assignment and a stale "1e6 MSun and 1e13 MSun" docstring. The adapt-image construction block was left untouched for adapt-mesh-weighting phase 3.
+
+## Original prompt
+
 # `subhalo/sensitivity/slam_source_pixelized.py` fails on main: `al.MapperValued` no longer exists
 
 Type: bug

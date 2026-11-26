@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-26T14:29:42Z",
+  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
+  "updated": "2026-11-26T14:39:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,12 +36,6 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`subhalo/sensitivity/slam_source_pixelized.py` fails on main: `al.MapperValued` no longer exists \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/685",
-      "prompt": "Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#897 \u2014 adapt-mesh-weighting-galaxy",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/897",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#894 \u2014 likelihood-lifecycle-r6-default-auto",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/894",
       "prompt": null
     }
   ]
