@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-26T14:02:49Z",
+  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
+  "updated": "2026-11-26T14:12:16Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -45,12 +45,6 @@
     },
     {
       "severity": "yellow",
-      "text": "Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input\u2026 \u2014 library-shipped, workspace-pending",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/718",
-      "prompt": "Use the start-dev skill. active/adapt_mesh_weighting_galaxy_adapt_images.md"
-    },
-    {
-      "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
@@ -63,7 +57,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#718 \u2014 Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input\u2026",
+      "text": "pending release: PyAutoArray PyAutoArray#718 \u2014 adapt-mesh-weighting-galaxy",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/718",
       "prompt": null
     },
@@ -71,6 +65,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#717 \u2014 adapt-mesh-weighting-library",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/717",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#718 \u2014 hilbert-image-mesh-frame-independent",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/718",
       "prompt": null
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#763 \u2014 Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input\u2026",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#763 \u2014 adapt-mesh-weighting-galaxy",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763",
       "prompt": null
     },
@@ -111,7 +111,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#897 \u2014 Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input\u2026",
+      "text": "pending release: PyAutoLens PyAutoLens#897 \u2014 adapt-mesh-weighting-galaxy",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/897",
       "prompt": null
     },

@@ -94,32 +94,7 @@
 - status: research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)
 - prompt: active/make_the_source_adapt_image_hilbert_image.md
 - note: research, no claim/worktree. Library phase (PyAutoArray, PyAutoGalaxy), workspace phase (autolens_workspace) and docs are filed as their own prompts after the human judges the fits; suggested branch feature/adapt-mesh-weighting. Human added 5 COWLS M25 lenses (F150W, F277W) on 2026-11-25.
-- next: gate 2 passed 2026-11-26; library phase 1 shipped (PyAutoArray#717, record complete/2026/11/adapt-mesh-weighting-library.md); phase 2 draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md, phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
-- tier: judge — merge mode: human /prm
-
-## adapt-mesh-weighting-galaxy
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
-- issued: 2026-11-26
-- session: claude-code desktop (WSL), ~/Science session (Opus 5.5), session ID unavailable
-- status: library-shipped, workspace-pending
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/718
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/897
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/718
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/897
-- prompt: active/adapt_mesh_weighting_galaxy_adapt_images.md
-- worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-galaxy
-- repos:
-  - PyAutoGalaxy: feature/adapt-mesh-weighting-galaxy
-  - PyAutoArray: feature/adapt-mesh-weighting-galaxy
-  - PyAutoLens: feature/adapt-mesh-weighting-galaxy
-- heart-red-override:
-  - authorized: live human, 2026-11-26, this session — "Override, proceed" (phase 2, PyAutoGalaxy#762)
-  - not exercised: the scoped dev gate (--repos PyAutoArray,PyAutoGalaxy) was GREEN at PR-open; global Heart RED (PyAutoFit CI failure, release validation FAILED stage integrate) shown in the PR bodies
-  - record: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
-- note: phase 2 of 3; API settled with the human 2026-11-26 (galaxy_snr_maps_from, soft_snr_maps_from, AdaptImages.from_result, short galaxy keys; HilbertSNR(background=, peak=, edge_pixels=), image_mesh.soft_snr_map_from) so PyAutoArray joins this task; the `al.` export shipped here after all (PyAutoLens#897; PyAutoLens freed 2026-11-26)
-- next: human /prm on PyAutoArray#718, then PyAutoGalaxy#763 (rerun its CI first: it ran against #718's older head), then PyAutoLens#897 (#718 also fixes draft/bug/autoarray/hilbert_image_mesh_frame_independent.md and adds the HilbertSNR 8-point cap — retire that prompt at close-out); then phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
+- next: phases 1-2 merged 2026-11-26 (records complete/2026/11/adapt-mesh-weighting-library.md, adapt-mesh-weighting-galaxy.md); phase 3 draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement

@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 298 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -57,7 +57,7 @@ _(nothing to review yet)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -71,14 +71,6 @@ Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_
 
 ```
 Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md
 ```
 
 </details>
@@ -151,6 +143,14 @@ Use the start-dev skill. draft/feature/autolens_workspace/adapt_mesh_weighting_w
 
 ```
 Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 ```
 
 </details>
@@ -1435,14 +1435,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762">issue #762</a> — issued 2026-11-26 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/718">PyAutoArray#718</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763">PyAutoGalaxy#763</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/897">PyAutoLens#897</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
-
-```
-Use the start-dev skill. active/adapt_mesh_weighting_galaxy_adapt_images.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/574">issue #574</a> — issued 2026-11-04 — human-ops (pilot run; no worktree — briefs land in PyAutoMind/batches/ by the human)</summary>
 
 ```
@@ -1622,7 +1614,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 240 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
+Lanes: any 239 · ral 32 · local-dev 13 · wsl-data 10 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1998,15 +1990,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 48</summary>
-
-<details><summary>📋 <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/hilbert_image_mesh_frame_independent.md
-```
-
-</details>
+<summary><b>bug</b> — 47</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -3197,34 +3181,32 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
 | 2026-11-26 | filed | <a href="draft/feature/autolens_workspace/adapt_mesh_weighting_workspace_default.md">Adapt mesh weighting phase 3: every workspace uses HilbertSNR and the…</a> |
-| 2026-11-26 | issued | <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> |
 | 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens_workspace/slam_source_parametric_model_has_no_centre.md"><code>subhalo/sensitivity/slam_source_parametric.py</code> fails: `'Model'…</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_ring_latent_placement.md">Does CPU placement of posterior derived quantities shorten a GPU…</a> |
+| 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-24 | issued | <a href="active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-11-24 | issued | <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> |
 | 2026-11-23 | issued | <a href="active/sensitivity_slam_source_pixelized_mappervalued.md"><code>subhalo/sensitivity/slam_source_pixelized.py</code> fails on main…</a> |
 | 2026-11-23 | issued | <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
-| 2026-11-17 | filed | <a href="draft/bug/autoarray/hilbert_image_mesh_frame_independent.md">Hilbert image mesh: make it depend only on the mask, not…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
+| 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
+| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
-| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
@@ -3233,13 +3215,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
+| 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
+| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
-| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
@@ -3248,13 +3230,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
+| 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
+| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
@@ -3263,6 +3245,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
+| 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
+| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 
 </details>
 
@@ -3289,7 +3273,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-123 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+122 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3331,10 +3315,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/pyautoscientist/scientist_collaborator_validation.md`
 - `draft/feature/pyautoscientist/scientist_optional_organ_activation.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
-- `draft/bug/autoarray/hilbert_image_mesh_frame_independent.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
-- _… and 83 more_
+- `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
+- _… and 82 more_
 
 </details>
 
@@ -3409,8 +3393,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
-- [PyAutoArray#718](https://github.com/PyAutoLabs/PyAutoArray/pull/718) — `active/adapt_mesh_weighting_galaxy_adapt_images.md`
+- [PyAutoArray#718](https://github.com/PyAutoLabs/PyAutoArray/pull/718) — `complete/2026/11/adapt-mesh-weighting-galaxy.md`
 - [PyAutoArray#717](https://github.com/PyAutoLabs/PyAutoArray/pull/717) — `complete/2026/11/adapt-mesh-weighting-library.md`
+- [PyAutoArray#718](https://github.com/PyAutoLabs/PyAutoArray/pull/718) — `complete/2026/11/hilbert-image-mesh-frame-independent.md`
 - [PyAutoArray#715](https://github.com/PyAutoLabs/PyAutoArray/pull/715) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 
 **PyAutoFit**
@@ -3420,13 +3405,13 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#763](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763) — `active/adapt_mesh_weighting_galaxy_adapt_images.md`
+- [PyAutoGalaxy#763](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763) — `complete/2026/11/adapt-mesh-weighting-galaxy.md`
 - [PyAutoGalaxy#760](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 - [PyAutoGalaxy#761](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 
 **PyAutoLens**
 
-- [PyAutoLens#897](https://github.com/PyAutoLabs/PyAutoLens/pull/897) — `active/adapt_mesh_weighting_galaxy_adapt_images.md`
+- [PyAutoLens#897](https://github.com/PyAutoLabs/PyAutoLens/pull/897) — `complete/2026/11/adapt-mesh-weighting-galaxy.md`
 - [PyAutoLens#894](https://github.com/PyAutoLabs/PyAutoLens/pull/894) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 - [PyAutoLens#896](https://github.com/PyAutoLabs/PyAutoLens/pull/896) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2422 records across 11 buckets.
+2424 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/11
 
+- [adapt-mesh-weighting-galaxy](2026/11/adapt-mesh-weighting-galaxy.md)
 - [adapt-mesh-weighting-library](2026/11/adapt-mesh-weighting-library.md)
 - [agent-help-text-rot](2026/11/agent-help-text-rot.md)
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
@@ -239,6 +240,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-green-lane](2026/11/heart-green-lane.md)
 - [heart-health-rerun-stale-push](2026/11/heart-health-rerun-stale-push.md)
 - [help-docstrings-history](2026/11/help-docstrings-history.md)
+- [hilbert-image-mesh-frame-independent](2026/11/hilbert-image-mesh-frame-independent.md)
 - [homepage-flow-polish](2026/11/homepage-flow-polish.md)
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)

@@ -1,3 +1,12 @@
+## hilbert-image-mesh-frame-independent
+- completed: 2026-11-26
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/718
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/718
+- fixed by PyAutoArray#718 (task adapt-mesh-weighting-galaxy, record complete/2026/11/adapt-mesh-weighting-galaxy.md), merged on the human's /prm. `image_and_grid_from(..., frame_independent=True)` interpolates bilinearly on the image's own grid (`map_coordinates`, shape / pixel scales / origin): same mesh in any frame to 1e-9, non-square frames work, exact on a linear image. Measured before on main: padding a frame by 10-20 px moved HilbertSNR points up to 6-9 px; non-square raised ValueError.
+- human's choice (2026-11-26): on by default for `HilbertSNR`, opt-in for `Hilbert` (`frame_independent=False` default), so no pinned value moved and no workspace_test re-pin was needed. The -532 -> -2235 likelihood question in this prompt therefore does not arise for `Hilbert` defaults; `HilbertSNR` scripts are pinned fresh in phase 3.
+
+## Original prompt
+
 # Hilbert image mesh: make it depend only on the mask, not the image frame
 
 Type: bug

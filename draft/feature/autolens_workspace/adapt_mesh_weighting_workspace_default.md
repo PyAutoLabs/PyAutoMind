@@ -19,7 +19,7 @@ Phase 3 of making the adapt-mesh-weighting result the default everywhere (human,
 "make this the default everywhere (but keep BC via `Hilbert` ..., ensure `AdaptSplit` retains BC
 too), so all workspaces use the new one and a user doesnt need to supply weight_power=3.5 and
 weight_floor=0.01 the default always gives this great adaption"). Needs phase 1
-(PyAutoArray#717) and phase 2 (`draft/feature/autogalaxy/adapt_mesh_weighting_galaxy_adapt_images.md`)
+(PyAutoArray#717) and phase 2 (`complete/2026/11/adapt-mesh-weighting-galaxy.md`: PyAutoArray#718, PyAutoGalaxy#763, PyAutoLens#897, all merged)
 merged.
 
 ## What to do
