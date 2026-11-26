@@ -124,12 +124,13 @@
 - worktree: ~/Code/PyAutoLabs-wt/adapt-mesh-weighting-galaxy
 - repos:
   - PyAutoGalaxy: feature/adapt-mesh-weighting-galaxy
+  - PyAutoArray: feature/adapt-mesh-weighting-galaxy
 - heart-red-override:
   - authorized: live human, 2026-11-26, this session — "Override, proceed" (phase 2 of adapt-mesh-weighting, PyAutoGalaxy#762)
   - red-reason: "Heart: RED — Release RED; monitoring RED · 14/100 · 132 unresolved" (PyAutoFit CI failure, release validation FAILED stage integrate, workspace validation NOT ready; full list on the issue; unrelated)
   - gates: pending (filled at PR-open)
   - record: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762
-- note: phase 2 of 3; the `al.` export (PyAutoLens __init__) moved to phase 3 because PyAutoLens is claimed by cluster-family-fit-figures
+- note: phase 2 of 3; API settled with the human 2026-11-26 (galaxy_snr_maps_from, soft_snr_maps_from, AdaptImages.from_result, short galaxy keys; HilbertSNR(background=, peak=, edge_pixels=), image_mesh.soft_snr_map_from) so PyAutoArray joins this task; the `al.` export (PyAutoLens __init__) moved to phase 3 because PyAutoLens is claimed by cluster-family-fit-figures
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement
