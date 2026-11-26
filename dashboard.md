@@ -38,6 +38,7 @@ _LIVE · 0 in progress_
 5. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 6. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 7. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
+8. [Cluster usability — from the first plot to a paper-scale fit](draft/feature/autolens/cluster_usability.md)
 
 **Questions** (3 open, 0 deferred, 2 rulings — [`questions.md`](questions.md))
 
