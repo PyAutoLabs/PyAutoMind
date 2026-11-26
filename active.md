@@ -160,11 +160,12 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1802
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs health session (Opus 5.5)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/emcee-zeus-default-one-core
 - repos:
   - PyAutoFit: feature/emcee-zeus-default-one-core
 - prompt: active/emcee_zeus_default_one_core.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1803
 - tier: judge — merge mode: human /prm
 - corrective-red:
   - authorized: live human, 2026-11-26, this session: asked "Authorize both corrective PRs for the two quoted RED reasons?" and answered "Authorize both"
@@ -175,11 +176,12 @@
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/140
 - issued: 2026-11-26
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs health session (Opus 5.5)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/sparse-routing-assertions-r6
 - repos:
   - autogalaxy_workspace_test: feature/sparse-routing-assertions-r6
 - prompt: active/sparse_operator_routing_assertions_after_r6.md
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/141
 - tier: judge — merge mode: human /prm
 - corrective-red:
   - authorized: live human, 2026-11-26, this session: asked "Authorize both corrective PRs for the two quoted RED reasons?" and answered "Authorize both"
