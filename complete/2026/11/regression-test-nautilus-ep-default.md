@@ -1,3 +1,15 @@
+Merged PyAutoFit#1808 (human /prm, 2026-11-26), from shift 2026-11-26-pm.
+
+Adds a regression test for Nautilus as the EP `default_optimiser` over PriorFactors.
+
+Decision taken (flagged, accepted at /prm): the test asserts that the `AnalysisFactor` step raised no exception (`flag is not StatusFlag.EXCEPTION`), not `success=True`. With the test-mode budget, its tiny sample sometimes projects to an invalid message. This held in about 50 runs.
+
+Witness: 2 passed, 10 of 10 green. Control: an unguarded read raises AttributeError on PriorFactor only. CI GREEN (3 success, 1 non-test skip).
+
+Follow-up, not filed: Nautilus refuses models with fewer than 2 parameters, so every one-parameter `PriorFactor` step fails with `ValueError("Cannot run Nautilus with less than 2 parameters.")`. EP records the failure, skips it and flags those factors STALE, so Nautilus as the EP default never updates them.
+
+## Original prompt
+
 # Regression test: Nautilus as the EP `default_optimiser` over PriorFactors
 
 Type: test

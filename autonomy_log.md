@@ -631,7 +631,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 70 (stage 1: 70, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 76; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 70 (stage 1: 70, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 77; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -822,6 +822,7 @@ week, never a hand-picked one.
 | 2026-11-26 | sensitivity_slam_source_pixelized_mappervalued (autolens_workspace#694) | glance | tests ci-verdict GREEN @0b96becb (8 success, mergeable clean) / smoke targeted: none selected (no_run.yaml) / witness PASS: clean-checkout smoke-profile run exit 0, 0 masked FitExceptions / review CLEAN, public-names n/a (workspace) / heart dev-ship GREEN (scoped autolens_workspace) / adversary: independent Opus sub-agent CLEAN | merged-unchanged | 2 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 | 2026-11-26 | cortex-ledger-merge-refresh (PyAutoCortex#104) | glance | tests:pass/smoke:n-a/review:none/heart:green/witness:pending | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
 | 2026-11-26 | remove-r6-sweep-pins (PyAutoGalaxy#765 / autolens_workspace#699 / autogalaxy_workspace#286 / HowToLens#142 / autolens_assistant#198) | glance | tests ci-verdict GREEN on all 5 (autolens_assistant after provenance re-stamp) / smoke targeted PASS (a2744, imaging_and_point_source; autogalaxy none selected) + all edited scripts in test mode / review not run / heart dev-ship GREEN (scoped autolens_workspace,autogalaxy_workspace) / witness test_autogalaxy 1692 passed | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
+| 2026-11-26 | regression-test-nautilus-ep-default (PyAutoFit#1808) | glance | witness 2 passed (10/10; control AttributeError on PriorFactor only)/tests graphical+nest 235 passed, 2 pre-existing xdist races/smoke import check PASS/review independent CLEAN/heart GREEN | merged-unchanged | 1 | human-/prm (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

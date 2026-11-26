@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2436 records across 11 buckets.
+2437 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -400,6 +400,7 @@ markers; everything below GENERATED is rebuilt.
 - [redshift-angles-guide](2026/11/redshift-angles-guide.md)
 - [reduce-session-token-load](2026/11/reduce-session-token-load.md) — PR is the tracking surface
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
+- [regression-test-nautilus-ep-default](2026/11/regression-test-nautilus-ep-default.md)
 - [release-rehearsed-shas](2026/11/release-rehearsed-shas.md)
 - [remove-r6-sweep-pins](2026/11/remove-r6-sweep-pins.md)
 - [repos-sync-optin-block](2026/11/repos-sync-optin-block.md) — shipped in PyAutoMind#539 (commit dc471e1d6), narrowed scope: option (a) of the 2026-11-05 re-size, chosen by …
