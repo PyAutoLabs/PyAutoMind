@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 292 |
+| [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -755,7 +755,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — ledger: <code>draft/feature/autolens/cluster_usability.md</code> — Simple and Pandora figures live on PyAutoEyes. Nine MACS J0416 figures approved by the author and in review for publication.</summary>
 
@@ -769,6 +769,14 @@ Continue the 'Cluster usability — three datasets for visualization, profiling,
 
 ```
 Use the start-dev skill. draft/feature/autolens/cluster_usability.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/cluster_usability_p4a_slow_path_timings.md">Time the cluster tutorial and simulator stage by stage, and name…</a> — autolens · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/cluster_usability_p4a_slow_path_timings.md
 ```
 
 </details>
@@ -1579,7 +1587,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 232 · ral 27 · wsl-data 20 · local-dev 10 · gpu 1
+Lanes: any 232 · ral 27 · wsl-data 20 · local-dev 11 · gpu 1
 
 <a id="human-review"></a>
 <details>
