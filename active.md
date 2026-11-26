@@ -138,14 +138,26 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/759
 - issued: 2026-11-25
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: library-dev
+- status: library-shipped, awaiting-merge (judge: human /prm; merge Array → Fit → Galaxy → Lens → autolens_workspace_test#373; then release; phase B workspace use_jax sweep after that release)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/715
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1800
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/894
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/373
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/715
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1800
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/894
+- release-gate: PyAutoArray, PyAutoFit, PyAutoGalaxy, PyAutoLens
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-r6-default-auto
 - repos:
   - PyAutoArray: feature/likelihood-lifecycle-r6-default-auto
   - PyAutoFit: feature/likelihood-lifecycle-r6-default-auto
   - PyAutoGalaxy: feature/likelihood-lifecycle-r6-default-auto
   - PyAutoLens: feature/likelihood-lifecycle-r6-default-auto
+  - autolens_workspace_test: feature/likelihood-lifecycle-r6-default-auto
 - prompt: active/likelihood_lifecycle_r6_default_auto_setup.md
 - epic: likelihood-lifecycle (R6 phase A library; release before phase B workspace sweep merges)
 - tier: judge — merge mode: human /prm
 - note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap 2026-11-25
+- rulings 2026-11-26: GridSearch keeps number_of_cores=1 (auto hung the suite; bug draft filed); smoke fix ships as autolens_workspace_test#373; numba multi-mapper data_vector fix ships inside PyAutoArray#715
