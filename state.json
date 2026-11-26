@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
-  "updated": "2026-11-26T18:29:18Z",
+  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
+  "updated": "2026-11-26T18:41:00Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,12 +36,6 @@
       "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
       "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Remove the temporary R6 sweep pins (mixed factor graphs, weak) after\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765",
-      "prompt": "Use the start-dev skill. active/remove_r6_sweep_pins_after_release.md"
     },
     {
       "severity": "yellow",
@@ -107,6 +101,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#761 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#765 \u2014 remove-r6-sweep-pins",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765",
       "prompt": null
     },
     {
