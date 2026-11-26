@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 290 |
+| [Backlog](#backlog) | 291 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -152,7 +152,7 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 74
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1488,7 +1488,7 @@ Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/707">issue #707</a> — issued 2026-11-23 — library-dev</summary>
+<details><summary>📋 <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/707">issue #707</a> — issued 2026-11-23 — library-pr — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/721">PyAutoArray#721</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/766">PyAutoGalaxy#766</a></summary>
 
 ```
 Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md
@@ -1587,7 +1587,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 226 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
+Lanes: any 227 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2003,7 +2003,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 44</summary>
+<summary><b>bug</b> — 45</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2257,6 +2257,14 @@ Use the start-dev skill. draft/bug/priors/14_replace_transform_stack_with_biject
 
 ```
 Use the start-dev skill. draft/bug/priors/z_features.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/nufft_non_square_pixel_scales.md">TransformerNUFFT ignores non-square pixel_scales (uses pixel_scales[0] for both axes)</a> — autoarray · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/nufft_non_square_pixel_scales.md
 ```
 
 </details>
