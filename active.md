@@ -143,9 +143,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1809
 - issued: 2026-11-26
 - session: shift worker 2026-11-26-pm2 (fc7a6684-3089-4049-93a5-98256bb23677)
-- status: library-dev
+- status: shipping
 - worktree: ~/Code/PyAutoLabs-wt/a-compound-prior-model-reloaded-from-model
 - prompt: active/a_compound_prior_model_reloaded_from_model.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1810
 - repos:
   - PyAutoFit: feature/a-compound-prior-model-reloaded-from-model
 
