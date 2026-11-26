@@ -31,19 +31,19 @@ _LIVE · 0 in progress_
 
 **Queue** ([`queue.md`](queue.md)) — read-only; change it in a `/queue` chat
 
-1. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
-2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
-3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
-4. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
-5. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
+1. [autofit.campaign: per-stage status_root](draft/feature/autofit/campaign_per_stage_status_root.md)
+2. [autofit.campaign: zip_complete success check accepts a glob pattern](draft/feature/autofit/campaign_zip_complete_pattern.md)
+3. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
+4. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
+5. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
+6. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
+7. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
 
-**Questions** (3 open, 0 deferred, 4 rulings — [`questions.md`](questions.md))
+**Questions** (3 open, 0 deferred, 2 rulings — [`questions.md`](questions.md))
 
 - Q29 — Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction? (https://github.com/PyAutoLabs/autolens_workspace_test/issues/371, 2 days)
 - Q30 — All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population? (https://github.com/PyAutoLabs/PyAutoLens/issues/871, 2 days)
 - Q31 — see the question on the issue (https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143, 2 days)
-- Q21 — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by). (ruling blocked-by, 6 days)
-- Q22 — `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit first) (its Blocked-by). (ruling blocked-by, 6 days)
 - Q23 — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, 3 days)
 - Q24 — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it. (ruling claimed, 3 days)
 
