@@ -1,4 +1,4 @@
-# Deep research: Can we speed up Delaunay in PyAutoArray?
+# Deep research: Can we speed up Delaunay in PyAutoArray? — RETIRED 2026-11-26
 
 Type: research
 Target: PyAutoArray
