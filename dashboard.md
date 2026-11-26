@@ -1424,7 +1424,7 @@ Use the start-dev skill. active/convolver_blurring_image_warning.md
 
 </details>
 
-<details><summary>📋 <a href="active/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/899">issue #899</a> — issued 2026-11-26 — library-dev</summary>
+<details><summary>📋 <a href="active/data_temp_write_paths_not_ignored.md">PyAutoLens test <code>data_temp/</code> write paths are not gitignored</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/899">issue #899</a> — issued 2026-11-26 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/900">PyAutoLens#900</a></summary>
 
 ```
 Use the start-dev skill. active/data_temp_write_paths_not_ignored.md
@@ -1504,7 +1504,7 @@ Use the start-dev skill. active/shift_closes_early_with_held_tasks_unstarted.md
 
 </details>
 
-<details><summary>📋 <a href="active/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of <code>save_results</code>…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/143">issue #143</a> — issued 2026-11-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of <code>save_results</code>…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/143">issue #143</a> — issued 2026-11-26 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/144">euclid_strong_lens_modeling_pipeline#144</a></summary>
 
 ```
 Use the start-dev skill. active/skip_fit_output_no_longer_gates_save_results_docs_drift.md
