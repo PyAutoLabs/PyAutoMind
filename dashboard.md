@@ -1496,7 +1496,7 @@ Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/707">issue #707</a> — issued 2026-11-23 — awaiting-input</summary>
+<details><summary>📋 <a href="active/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/707">issue #707</a> — issued 2026-11-23 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md
