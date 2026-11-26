@@ -115,3 +115,14 @@
 - repos:
   - autolens_workspace: feature/remove-r6-sweep-pins
   - autogalaxy_workspace: feature/remove-r6-sweep-pins
+
+## cortex-ledger-merge-refresh
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/103
+- issued: 2026-11-26
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- tier: human-required — merge mode: auto-merge on green if the Witness passes
+- prompt: active/ledger_merge_dispatch_dashboard_refresh.md
+- worktree: ~/Code/PyAutoLabs-wt/cortex-ledger-merge-refresh
+- repos:
+  - PyAutoCortex: feature/cortex-ledger-merge-refresh

@@ -10,7 +10,7 @@ Themes:
 Difficulty: easy
 Autonomy: safe-capped
 Priority: high
-Status: draft
+Status: active
 Consequence: glance
 Witness: After a `claude/birth-*` ledger branch auto-merges via `ledger_merge.yml`, `dashboard_refresh.yml` runs on main without a human dispatch, heals `dashboard.md`/`dashboard.html`/`state.json`, and the Cortex Check on the resulting main tip is green — shown by the run links of one real or test birth after the change.
 Review-minutes: 2
@@ -18,6 +18,8 @@ Unattended: ready
 Lane: any
 Filed: 2026-11-26
 Updated: 2026-11-26
+Issued: 2026-11-26
+Issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/103
 
 ## Request (verbatim)
 
