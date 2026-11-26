@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 12 in flight",
-  "updated": "2026-11-26T20:37:46Z",
+  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
+  "updated": "2026-11-26T20:46:11Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,12 +24,6 @@
       "text": "cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's\u2026 \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/pull/701",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_mask_dtype.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "GridSearch hangs with number_of_cores=\"auto\" \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1806",
-      "prompt": "Use the start-dev skill. active/grid_search_number_of_cores_auto_hangs.md"
     },
     {
       "severity": "yellow",
@@ -75,7 +69,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1806 \u2014 GridSearch hangs with number_of_cores=\"auto\"",
+      "text": "pending release: PyAutoFit PyAutoFit#1806 \u2014 grid-search-cores-auto",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1806",
       "prompt": null
     },
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#894 \u2014 likelihood-lifecycle-r6-default-auto",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/894",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#896 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/896",
       "prompt": null
     }
   ]

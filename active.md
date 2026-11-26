@@ -89,19 +89,6 @@
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
 
-## grid-search-cores-auto
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1805
-- issued: 2026-11-26
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1806
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1806
-- tier: supervised
-- epic: likelihood-lifecycle
-- prompt: active/grid_search_number_of_cores_auto_hangs.md
-- worktree: ~/Code/PyAutoLabs-wt/grid-search-cores-auto
-- repos:
-  - PyAutoFit: feature/grid-search-cores-auto
-
 ## convolver_blurring_image_warning
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/719
 - issued: 2026-11-26
