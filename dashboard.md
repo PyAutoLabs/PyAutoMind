@@ -48,7 +48,7 @@ _(no open questions)_
 
 **Shift** (2026-11-26-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 2 running, 7 finished, 1 refusal reasons · tokens 1314816 of 5000000 (close-outs 261345; cache-read 28578256) · review-at 2026-11-26T21:45Z (as of 2026-11-26T20:30:15Z) · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609#issuecomment-7202427627)
+Live: LIVE · 1 running, 9 finished, 1 refusal reasons · tokens 1533441 of 5000000 (close-outs 309103; cache-read 36272827; 1 session(s) unmeasured) · review-at 2026-11-26T21:45Z (as of 2026-11-26T20:35:25Z) · [shift issue #609](https://github.com/PyAutoLabs/PyAutoMind/issues/609#issuecomment-7202427627)
 
 _(nothing to review yet)_
 
@@ -1488,7 +1488,7 @@ Use the start-dev skill. active/shift_closes_early_with_held_tasks_unstarted.md
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/365">issue #365</a> — issued 2026-11-11 — library-dev</summary>
+<details><summary>📋 <a href="active/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/365">issue #365</a> — issued 2026-11-11 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/377">PyAutoHeart#377</a></summary>
 
 ```
 Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md
