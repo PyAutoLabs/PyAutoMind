@@ -3,7 +3,6 @@
 Type: feature
 Target: autolens_workspace
 Repos:
-- PyAutoLens
 - autolens_workspace
 - HowToLens
 - HowToGalaxy
@@ -25,9 +24,11 @@ merged.
 
 ## What to do
 
-- PyAutoLens: export `galaxy_name_soft_image_dict_from` in `autolens/__init__.py` next to
-  `galaxy_name_image_dict_via_result_from` (moved here from phase 2, PyAutoGalaxy#762, because
-  PyAutoLens was claimed); library first.
+- (The `al.` exports shipped in phase 2 after all: PyAutoLens#897.) Scripts use the phase 2 API:
+  `al.image_mesh.HilbertSNR(pixels=..., edge_pixels=30)`, `al.AdaptImages.from_result(result=...,
+  image_mesh={"source": image_mesh})`, `al.mesh.Delaunay(pixels=image_mesh.pixels,
+  zeroed_pixels=image_mesh.edge_pixels)`; `al.galaxy_snr_maps_from` where the raw S/N map is needed
+  (e.g. the over-sampling threshold in `group/slam.py`).
 
 - Every script that builds a Hilbert image mesh switches from
   `image_mesh.Hilbert(pixels=..., weight_power=3.5, weight_floor=0.01)` to
