@@ -1435,7 +1435,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762">issue #762</a> — issued 2026-11-26 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/718">PyAutoArray#718</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763">PyAutoGalaxy#763</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/adapt_mesh_weighting_galaxy_adapt_images.md">Adapt mesh weighting phase 2: one call for the HilbertSNR mesh input…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/762">issue #762</a> — issued 2026-11-26 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/718">PyAutoArray#718</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763">PyAutoGalaxy#763</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/897">PyAutoLens#897</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/adapt_mesh_weighting_galaxy_adapt_images.md
@@ -3426,6 +3426,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#897](https://github.com/PyAutoLabs/PyAutoLens/pull/897) — `active/adapt_mesh_weighting_galaxy_adapt_images.md`
 - [PyAutoLens#894](https://github.com/PyAutoLabs/PyAutoLens/pull/894) — `complete/2026/11/likelihood-lifecycle-r6-default-auto.md`
 - [PyAutoLens#896](https://github.com/PyAutoLabs/PyAutoLens/pull/896) — `complete/2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md`
 
