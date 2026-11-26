@@ -39,6 +39,8 @@ _LIVE · 0 in progress_
 6. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
 7. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
 8. [Cluster usability — from the first plot to a paper-scale fit](draft/feature/autolens/cluster_usability.md)
+9. [Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay](draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md)
+10. [Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…](draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md)
 
 **Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
 
