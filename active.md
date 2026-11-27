@@ -98,7 +98,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/727
 - issued: 2026-11-27
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/730
 - worktree: /home/jammy/Code/PyAutoLabs-wt/heart-report-only-red-no-ack
 - repos:
   - PyAutoBrain: feature/heart-report-only-red-no-ack
@@ -106,7 +107,7 @@
 - coordination: human-approved 2026-11-27 — PyAutoBrain shared with cockpit-same-chat-late-window (#728); built back to back, disjoint files (this: AUTONOMY.md, _brief.py, watcher Heart read, batch skill Heart text).
 - epic: autonomous-orchestrators (M3.6h)
 - tier: judge — merge mode: human /prm
-- next: built (8b0ae4b). Review FINDINGS: 1 major (an old or unreadable Heart read launches without an ack) and 6 minor. Waiting on a human ruling: mechanise the ack refusal at --check, and extend R1 to YELLOW. Then fix and re-review.
+- next: human /prm PyAutoBrain#730 (judge). Human rulings 2026-11-27 (a) mechanised ack incl. old/unreadable reads, (b) R1 on YELLOW, (c) touched set = named tasks + plan. Independent Opus review: 4 rounds, final minors fixed (6ae0900); suite 2604. Merges cleanly with #729.
 
 ## cockpit-same-chat-late-window
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/728
