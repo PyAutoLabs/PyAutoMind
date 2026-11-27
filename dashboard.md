@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 293 |
+| [Backlog](#backlog) | 294 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -57,7 +57,7 @@ _(last shift 2026-11-26-pm2 — closed, nothing to review · [shift issue #610](
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 16
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -95,6 +95,14 @@ Use the start-dev skill. draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stal
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/add_a_combined_profile_effective_einstein_radius.md">Add a combined-profile "effective Einstein radius" defined by the mean-convergence criterion…</a> — autogalaxy · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/add_a_combined_profile_effective_einstein_radius.md
 ```
 
 </details>
@@ -147,15 +155,7 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md">Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)</a> — autogalaxy · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 69
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 70
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1614,7 +1614,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 225 · ral 27 · wsl-data 20 · local-dev 18 · gpu 1
+Lanes: any 226 · ral 27 · wsl-data 20 · local-dev 18 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1665,7 +1665,15 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 43</summary>
+<summary><b>feature</b> — 44</summary>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/add_a_combined_profile_effective_einstein_radius.md">Add a combined-profile "effective Einstein radius" defined by the mean-convergence criterion…</a> — autogalaxy · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/add_a_combined_profile_effective_einstein_radius.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
