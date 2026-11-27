@@ -21,3 +21,10 @@ Source: SIG-3 from the ecosystem review, **re-checked 2026-11-12 and holds** (du
 Change: an append-only hygiene ledger in Brain (one line per day: date, sha, each hygiene row's count), written by `brain_board.yml` (needs `contents: write` and a ledger-only commit step, or the Pulse/Heart pattern of a published sidecar if a commit is unwelcome — decide and say why); `_board.py` fills `history` from it and the board renders a sparkline per hygiene row.
 
 <!-- filed 2026-11-12 by the programme lead session (split from PyAutoHeart#338) -->
+
+## Phase 14 slice 14.0 (added 2026-11-27)
+
+This draft is slice 14.0 of `draft/feature/pyautobrain/maintenance_orchestrator.md`, buildable before the M3 gate (human decision 1). It also needs:
+
+- **Per-finding keys** in the ledger (`<mode>:<repo>:<file>:<reference>`, without the line number), so 14.5 can dedupe.
+- **The scan-root fix:** on 2026-11-27 the cloud board reported 55 broken refs in 2 of 5 repos, while a laptop `hygiene refs --json` reported 0 in 0 of 8. Find why the roots differ, and make both scan the same set.

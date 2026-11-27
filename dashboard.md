@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 294 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -965,7 +965,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 30 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 36 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1011,6 +1011,54 @@ Use the start-dev skill. draft/maintenance/pyautobrain/shift_worker_cost_tests_s
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/maintenance_orchestrator.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/maintenance_p14_1_finding_adapters.md">Phase 14.1 Maintenance finding adapters with stable keys</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/maintenance_p14_1_finding_adapters.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/maintenance_p14_2_prompt_writer.md">Phase 14.2 Maintenance prompt writer: findings become sized prompts with no human…</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/maintenance_p14_2_prompt_writer.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/maintenance_p14_3_maintenance_brief.md">Phase 14.3 Maintenance brief: a shift whose tasks are generated…</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/maintenance_p14_3_maintenance_brief.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/maintenance_p14_4_board_delta_digest.md">Phase 14.4 Board-delta digest for maintenance shifts</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/maintenance_p14_4_board_delta_digest.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/maintenance_p14_5_hygiene_and_ci_timing_sources.md">Phase 14.5 Maintenance sources: hygiene findings and slowed CI timings</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/maintenance_p14_5_hygiene_and_ci_timing_sources.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautobrain/phase_7a_invariance_and_parity_gates_plan.md">Phase 7a plan: golden-number invariance and numpy/JAX/numba parity gates (planning only)</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautobrain/phase_7a_invariance_and_parity_gates_plan.md
 ```
 
 </details>
@@ -1582,7 +1630,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 224 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
+Lanes: any 225 · ral 27 · wsl-data 20 · local-dev 19 · gpu 1
 
 <a id="human-review"></a>
 <details>
