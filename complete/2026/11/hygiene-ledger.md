@@ -1,3 +1,34 @@
+Merged PyAutoBrain#736 (human /prm, 2026-11-27). Phase 14.0 of the maintenance orchestrator (SIG-3).
+
+**Hygiene ledger** (`board/_hygiene_ledger.py`)
+- Append-only JSONL, one line per UTC day.
+- Each line holds per-mode counts, `status`, `not_scanned`, `absent_repos`, `unkeyed` and `evidence`.
+- Per-finding keys have no line numbers: `refs:<repo>:<file>:<ref>`; `docstrings`/`escapes` at file level; `optdeps:<ws>:<script>:<dep>`; `extras:::<dep>`.
+- A same-day merge never lets an incomplete mode replace complete keys.
+- The board fills `history` (30 days) and draws a sparkline per row.
+
+**How it is written: a Pages sidecar.** Workflow permissions are unchanged; a commit would need an App token under the M2.2 ruleset.
+- The fetch bypasses the cache and fails closed.
+- A 404 is accepted only on a true first publish, or with `--reset`.
+- A corrupt body, or a ledger shorter than the live board's history, fails.
+- `--apply` requires the ledger and its fetch marker, and never publishes fewer days than were fetched (exit 5).
+
+**Scan-root fix.** The cloud reported 55–58 dead refs and the laptop 0. Now:
+- the scan set comes from the body map (`workspace` + `howto`);
+- every other declared repo is cloned reference-only (blob:none, no checkout) and indexed with `git ls-tree -r HEAD`;
+- an absent repo makes refs `partial`.
+
+Simulated cloud and laptop: refs 0 dead, 283 skipped.
+
+Full suite 2733 passed. Independent Opus review, 3 rounds: two had majors (ledger durability, absent-clone completeness), the last was CLEAN. Heart dev-ship GREEN.
+
+**Open follow-ups:**
+- The witness (non-empty history over two days) needs two daily Brain Board runs after merge.
+- Two declared repos are private, so their cloud clones fail; refs would stay `partial` if they're ever referenced.
+- The laptop/cloud `tokens` row difference (the workspace-root AGENTS.md) remains.
+
+## Original prompt
+
 # Brain board: keep a hygiene ledger and show its trend
 
 Type: feature

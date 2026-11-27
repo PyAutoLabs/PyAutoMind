@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2450 records across 11 buckets.
+2451 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -268,6 +268,7 @@ markers; everything below GENERATED is rebuilt.
 - [hpc-sync-zip-count-set-e](2026/11/hpc-sync-zip-count-set-e.md)
 - [hpc-tmpdir-slurm-default](2026/11/hpc-tmpdir-slurm-default.md)
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
+- [hygiene-ledger](2026/11/hygiene-ledger.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
 - [insight-lint-point-source-family](2026/11/insight-lint-point-source-family.md)
 - [installation-docs-polish](2026/11/installation-docs-polish.md)

@@ -85,7 +85,7 @@ The plan, with survey data, is in `Science/scratch/phase14_maintenance_plan_2026
 
 | slice | prompt |
 |---|---|
-| 14.0 | `draft/feature/pyautobrain/brain_board_hygiene_ledger.md` (+ per-finding keys, scan-root fix) |
+| 14.0 | **merged 2026-11-27** (PyAutoBrain#736; record `complete/2026/11/hygiene-ledger.md`) |
 | 14.1 | **merged 2026-11-27** (PyAutoBrain#732; record `complete/2026/11/maintenance-finding-adapters.md`) |
 | 14.2 | **merged 2026-11-27** (PyAutoBrain#734; record `complete/2026/11/maintenance-prompt-writer.md`) |
 | 14.3 | `draft/feature/pyautobrain/maintenance_p14_3_maintenance_brief.md` |
