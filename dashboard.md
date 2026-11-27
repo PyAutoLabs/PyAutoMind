@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 0 |
+| [Autopilot](#autopilot) | 11 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 9 |
@@ -23,7 +23,7 @@
 
 ## Autopilot
 
-_SHADOW · 0 in progress_
+_11 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -43,19 +43,21 @@ _SHADOW · 0 in progress_
 10. [Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay](draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md)
 11. [Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…](draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md)
 
-**Questions** (0 open, 0 deferred, 5 rulings — [`questions.md`](questions.md))
+**Questions** (0 open, 0 deferred, 9 rulings — [`questions.md`](questions.md))
 
 - Q32 — `cluster_usability` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 - Q33 — `cluster_usability` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, 1 day)
 - Q34 — `cluster_usability` has no valid Lane:, so every unattended pick fails closed. (ruling no-lane, 1 day)
 - Q36 — `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 - Q38 — `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
+- Q42 — `blas_thread_oversubscription_multiprocess_searches` cannot start: repo PyAutoFit is claimed by `vmap-jit-recompiles-per-nautilus-batch-length` in active.md with no coordination line naming it. (ruling claimed, today)
+- Q43 — `blas_thread_oversubscription_multiprocess_searches` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, today)
+- Q44 — `blas_thread_oversubscription_multiprocess_searches` is Autonomy: human-required, so a shift worker would park at ship. (ruling human-required, today)
+- Q45 — `blas_thread_oversubscription_multiprocess_searches` has no valid Lane:, so every unattended pick fails closed. (ruling no-lane, today)
 
-**Shift** (2026-11-27-pm — 0 in progress · 0 awaiting review)
+**Shift**
 
-Live: SHADOW · nothing started · tokens 0 of 5000000 · review-at 2026-11-27T23:48Z (as of 2026-11-27T22:34:13Z)
-
-_(nothing to review yet)_
+_(last shift 2026-11-27-pm — closed, nothing to review)_
 
 ## Start here
 
