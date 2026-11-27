@@ -1475,7 +1475,7 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/maintenance_p14_1_finding_adapters.md">Phase 14.1 Maintenance finding adapters with stable keys</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/731">issue #731</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/maintenance_p14_1_finding_adapters.md">Phase 14.1 Maintenance finding adapters with stable keys</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/731">issue #731</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/732">PyAutoBrain#732</a></summary>
 
 ```
 Use the start-dev skill. active/maintenance_p14_1_finding_adapters.md
