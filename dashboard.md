@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 11 |
+| [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 9 |
@@ -23,7 +23,7 @@
 
 ## Autopilot
 
-_11 queued · 0 questions_
+_SHADOW · 0 in progress_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -51,9 +51,11 @@ _11 queued · 0 questions_
 - Q36 — `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 - Q38 — `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: needs-slicing, so no shift starts it. (ruling unattended, 1 day)
 
-**Shift**
+**Shift** (2026-11-27-pm — 0 in progress · 0 awaiting review)
 
-_(last shift 2026-11-27-pm — closed, nothing to review)_
+Live: SHADOW · nothing started · tokens 0 of 5000000 · review-at 2026-11-27T23:48Z (as of 2026-11-27T22:34:13Z)
+
+_(nothing to review yet)_
 
 ## Start here
 
