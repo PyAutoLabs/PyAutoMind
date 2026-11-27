@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2444 records across 11 buckets.
+2445 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -430,6 +430,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-end-cloud-sweep](2026/11/shift-end-cloud-sweep.md)
 - [shift-launch-preflight](2026/11/shift-launch-preflight.md)
 - [shift-ledger-edit-op](2026/11/shift-ledger-edit-op.md)
+- [shift-ledger-env-settings](2026/11/shift-ledger-env-settings.md)
 - [shift-library-slot-frees-after-merge](2026/11/shift-library-slot-frees-after-merge.md)
 - [shift-merges-in-order](2026/11/shift-merges-in-order.md)
 - [shift-named-tasks-and-planner-skips](2026/11/shift-named-tasks-and-planner-skips.md)

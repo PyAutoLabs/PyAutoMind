@@ -1,3 +1,17 @@
+Merged PyAutoBrain#725 (human /prm, 2026-11-27).
+
+Shift worker, update and close-out sessions now get their shift variables through `claude --settings '{"env":{…}}'`. Those variables are the worker flag, ledger dir, this shift's brief, the Mind-commit hooks lock (appended after the caller's `GIT_CONFIG_*`) and the kick file. A guard refuses a ledger dir whose slot differs from `PYAUTO_SHIFT_BRIEF`'s slot. It lives in `_mind_writer.shift_ledger_dir` for the Python readers and in `_worktree_release_queued` in shell, which fails closed.
+
+Root cause, proven live 2026-11-27: `claude --bg` runs sessions on daemon "spare" processes that keep the daemon-starter's env. A probe launched with `PYAUTO_PROBE=two` on a claimed spare printed `one`, but did receive a `--settings` env value.
+
+Witness PASS on the branch: a claimed spare with a stale process env plus the branch's `settings_args()` printed the new shift's ledger, brief, `WORKER=1` and hooks path. The control without `--settings` printed the stale values. Full suite 2560 passed. Independent Opus review returned FINDINGS (minor): 4 fixed, 1 kept as intended. Heart dev-ship GREEN. CI was RED once, on the tenant firewall (a test URL named the instance); fixed in aa31774.
+
+Also done: removed the stale `PYAUTO_SHIFT_BRIEF=…/2026-11-16-pm.md` override from `~/.config/pyauto/orchestrator.env` (human-approved). The "stranded" 2026-11-26-pm ledger op had been skipped and logged by the sweep, so nothing needed replaying.
+
+Not fixed (CLI behaviour): a human `claude --bg` on a daemon that a worker started can still inherit worker variables.
+
+## Original prompt
+
 # Shift workers inherit the previous shift's ledger and brief environment
 
 Type: bug
