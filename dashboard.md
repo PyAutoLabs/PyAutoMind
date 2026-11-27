@@ -11,7 +11,7 @@
 | [Autopilot](#autopilot) | 11 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 10 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 293 |
 | [Recent](#recent) | 50 |
@@ -1463,14 +1463,6 @@ Use the start-dev skill. active/group_subhalo_sensitivity.md
 
 ```
 Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/maintenance_p14_2_prompt_writer.md">Phase 14.2 Maintenance prompt writer: findings become sized prompts with no human…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/733">issue #733</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/734">PyAutoBrain#734</a></summary>
-
-```
-Use the start-dev skill. active/maintenance_p14_2_prompt_writer.md
 ```
 
 </details>
@@ -3145,7 +3137,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-27 | issued | <a href="active/maintenance_p14_2_prompt_writer.md">Phase 14.2 Maintenance prompt writer: findings become sized prompts…</a> |
 | 2026-11-27 | filed | <a href="draft/bug/autofit/nautilus_refuses_one_parameter_prior_factors_in_ep.md">Nautilus refuses one-parameter PriorFactors, so EP never updates them</a> |
 | 2026-11-26 | issued | <a href="active/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-11-26 | issued | <a href="active/group_subhalo_sensitivity.md">The imaging <code>features/advanced/subhalo/sensitivity</code> example needs…</a> |
@@ -3155,12 +3146,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autoarray/eager_lax_control_flow_recompiles_per_visualization_call.md">Eager lax control flow recompiles on every fit_for_visualization call</a> |
+| 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_ring_latent_placement.md">Does CPU placement of posterior derived quantities shorten a GPU…</a> |
@@ -3170,12 +3161,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
+| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
@@ -3185,12 +3176,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
+| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
@@ -3200,12 +3191,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
+| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
@@ -3215,6 +3206,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
+| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 
 </details>
 
