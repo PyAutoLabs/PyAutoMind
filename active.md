@@ -98,7 +98,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/737
 - issued: 2026-11-27
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/738
 - worktree: /home/jammy/Code/PyAutoLabs-wt/maintenance-brief
 - repos:
   - PyAutoBrain: feature/maintenance-brief
@@ -106,3 +107,4 @@
 - epic: autonomous-orchestrators (Phase 14.3). The code and the shadow run come before the M3 gate; the live run waits for PyAutoBrain#574 (human decision 1, 2026-11-27).
 - heart: STALE at the door (feed 6.9 h old), not RED; continued per start_dev.
 - tier: judge — merge mode: human /prm
+- next: human /prm PyAutoBrain#738 (judge). 3 review rounds, the last CLEAN; suite 2769; offline replay witness named 5 generated tasks. Then: a shadow maintenance shift on origin, only with the human's go-ahead (the issue's witness); the live run waits for #574.
