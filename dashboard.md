@@ -8,12 +8,12 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 10 |
+| [Autopilot](#autopilot) | 11 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 289 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Autopilot
 
-_10 queued · 0 questions_
+_11 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -31,16 +31,17 @@ _10 queued · 0 questions_
 
 **Queue** ([`queue.md`](queue.md)) — read-only; change it in a `/queue` chat
 
-1. [autofit.campaign: per-stage status_root](draft/feature/autofit/campaign_per_stage_status_root.md)
-2. [autofit.campaign: zip_complete success check accepts a glob pattern](draft/feature/autofit/campaign_zip_complete_pattern.md)
-3. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
-4. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
-5. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
-6. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
-7. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
-8. [Cluster usability — from the first plot to a paper-scale fit](draft/feature/autolens/cluster_usability.md)
-9. [Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay](draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md)
-10. [Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…](draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md)
+1. [Guard setup="auto" / number_of_cores="auto" against BLAS/OpenMP thread oversubscription](draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md)
+2. [autofit.campaign: per-stage status_root](draft/feature/autofit/campaign_per_stage_status_root.md)
+3. [autofit.campaign: zip_complete success check accepts a glob pattern](draft/feature/autofit/campaign_zip_complete_pattern.md)
+4. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
+5. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
+6. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
+7. [CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries](draft/maintenance/autocti/cti_upkeep_epic.md)
+8. [Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)](draft/docs/workspaces/assistants_regime_extension.md)
+9. [Cluster usability — from the first plot to a paper-scale fit](draft/feature/autolens/cluster_usability.md)
+10. [Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay](draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md)
+11. [Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…](draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md)
 
 **Questions** (0 open, 0 deferred, 5 rulings — [`questions.md`](questions.md))
 
@@ -1589,7 +1590,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 224 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
+Lanes: any 225 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1989,7 +1990,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 45</summary>
+<summary><b>bug</b> — 46</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -2323,6 +2324,14 @@ Use the start-dev skill. draft/bug/autogalaxy/gnfw_mge_potential_gradient_drifts
 
 ```
 Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md">Guard setup="auto" / number_of_cores="auto" against BLAS/OpenMP thread oversubscription</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
 ```
 
 </details>
@@ -3195,11 +3204,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+6 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
+- `draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md`
@@ -3208,7 +3218,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-119 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+120 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3253,7 +3263,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 79 more_
+- _… and 80 more_
 
 </details>
 
