@@ -1,3 +1,17 @@
+Merged PyAutoBrain#726 and PyAutoMind#611 (human /prm, 2026-11-27).
+
+A parked task holds its library's start for 15 minutes (`PARK_HOLD_GRACE`), not the rest of the shift. This is ruling (d) as amended 2026-11-24. Inside the grace, held tasks count as startable, so the shift doesn't close early. After it:
+- **Outcome park:** the library is released.
+- **Lease park (blocked session):** stopped through the shared `/kill` stop path (`_stop_session`); the library is released once the reap sees the session end (human ruling 2026-11-27: "Stop, then release").
+- **Failing closed:** a failed stop keeps the hold and raises `park-stop-failed`. A stopped session still alive after `PARK_STOP_END_S` (600 s) raises `park-stop-overdue`; the library stays held and the waiting task counts as final.
+- **Answered parks:** an answered park waiting to restart keeps its library. The planner, claim gate and spawn loop share one hold wording, and the digest lists park holds on their own line.
+
+Witness: 18 tests in `tests/test_parked_hold_grace.py`, all red on origin/main. They include a replay of the real 2026-11-24-am counters: the park is at 08:32:52Z, the tasks are held until 08:48Z and not ready to close early, and both held tasks start at +15 min instead of the 08:34Z early close. Full suite 2578 passed. Independent Opus review, three rounds: two majors fixed, round 3 CLEAN. Heart dev-ship GREEN.
+
+Follow-up filed: `draft/bug/pyautobrain/second_park_of_same_task_files_no_new_question.md`.
+
+## Original prompt
+
 # A park on a question releases its library's start after 15 minutes (amend ruling (d))
 
 Type: bug

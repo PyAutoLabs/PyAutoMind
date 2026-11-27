@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2445 records across 11 buckets.
+2446 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -382,6 +382,7 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [one-repos-yaml-reader](2026/11/one-repos-yaml-reader.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
+- [parked-hold-grace](2026/11/parked-hold-grace.md)
 - [plot-grid-small-datasets-indexes](2026/11/plot-grid-small-datasets-indexes.md)
 - [plot-rst-missing-exports](2026/11/plot-rst-missing-exports.md)
 - [plot-utils-critical-curves-docstrings](2026/11/plot-utils-critical-curves-docstrings.md)
