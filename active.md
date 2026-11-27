@@ -93,3 +93,15 @@
 - prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
 - repos:
   - PyAutoFit: (no branch; parked before implementation — stated bug did not reproduce)
+
+## maintenance-hygiene-timing-sources
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/739
+- issued: 2026-11-27
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/maintenance-hygiene-timing-sources
+- repos:
+  - PyAutoBrain: feature/maintenance-hygiene-timing-sources
+- prompt: active/maintenance_p14_5_hygiene_and_ci_timing_sources.md
+- epic: autonomous-orchestrators (Phase 14.5; built before the M3 gate per human decision 1, 2026-11-27)
+- tier: judge — merge mode: human /prm
