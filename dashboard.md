@@ -1451,7 +1451,7 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/maintenance_p14_3_maintenance_brief.md">Phase 14.3 Maintenance brief: a shift whose tasks are generated…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/737">issue #737</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/maintenance_p14_3_maintenance_brief.md">Phase 14.3 Maintenance brief: a shift whose tasks are generated…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/737">issue #737</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/738">PyAutoBrain#738</a></summary>
 
 ```
 Use the start-dev skill. active/maintenance_p14_3_maintenance_brief.md
