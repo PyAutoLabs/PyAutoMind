@@ -76,6 +76,46 @@ the ruling on the prompt.
 - asked: 2026-11-26T20:56Z
 - worker: readiness pass
 
+### Q42. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` cannot start: re…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
+- kind: ruling
+- gate: claimed
+- ask: `blas_thread_oversubscription_multiprocess_searches` cannot start: repo PyAutoFit is claimed by `vmap-jit-recompiles-per-nautilus-batch-length` in active.md with no coordination line naming it.
+- options: (a) wait for vmap-jit-recompiles-per-nautilus-batch-length to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
+- worker: readiness pass
+
+### Q43. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` is Unattended: n…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
+- kind: ruling
+- gate: unattended
+- ask: `blas_thread_oversubscription_multiprocess_searches` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
+- worker: readiness pass
+
+### Q44. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` is Autonomy: hum…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
+- kind: ruling
+- gate: human-required
+- ask: `blas_thread_oversubscription_multiprocess_searches` is Autonomy: human-required, so a shift worker would park at ship.
+- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
+- worker: readiness pass
+
+### Q45. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` has no valid Lan…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
+- kind: ruling
+- gate: no-lane
+- ask: `blas_thread_oversubscription_multiprocess_searches` has no valid Lane:, so every unattended pick fails closed.
+- options: (a) declare Lane: any · (b) declare a laptop lane · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
+- worker: readiness pass
+
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
