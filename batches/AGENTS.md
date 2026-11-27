@@ -299,7 +299,11 @@ whose worker ended with an open question, keeps its library for 15 minutes from
 the park. Until then the next task on that library waits and the shift stays
 open. After that the next task starts, and an answer that comes later restarts
 the parked task only once its library is free (PyAutoBrain#720, ruling (d) as
-amended 2026-11-24). `bypassPermissions` is
+amended 2026-11-24). A parked worker's session is still running, so at the end
+of the 15 minutes the watcher stops it first and only then frees the library;
+the question stays in your inbox, and answering it restarts the task (ruling
+(d) as amended 2026-11-27). If the stop fails, the library stays held.
+`bypassPermissions` is
 refused. `sandbox: yes` marks a test shift. (Until phase 3c it was the only
 brief a real worker could run under; the one-Mind-writer path lifted that — the
 workers' Mind changes now reach `main` only through the orchestrator.)
