@@ -1,3 +1,26 @@
+Merged PyAutoBrain#732 (human /prm, 2026-11-27). Phase 14.1 of the maintenance orchestrator.
+
+`pyauto-brain batch maintain --dry-run [--sources census,monitoring,release] [--json]` (`agents/conductors/batch/_maintain.py`). It is read-only and never called from the tick. Its findings have stable keys, a witness and a tier floor.
+
+**Sources:**
+- **No-run census:** one whole source, whichever is fresher; never merged.
+- **Heart monitoring inventory:** keys without `run_id`. Excludes worktree_drift, repo_state, open_prs and release rows. Timing families are deferred to 14.5.
+- **`_green.classify`:** the release adapter, plus organ CI-red lines.
+
+**One key per defect.** A repo-level `ci:` key gives way to workflow-level keys.
+
+**Tier floors** (judge when unsure):
+- **Census:** glance only from structured passed/seconds/cap. NEEDS_FIX and kill or timeout wording force judge.
+- **Organ CI red:** glance only on the head commit, outside release workflows, and for an organ that ships no package and is neither the Brain nor the Heart oracle. Those exclusions are derived from the body map and the policy; if they can't be read, nothing is glance.
+
+**Reads report ok, stale and partial.** An unread source exits 3. Slice 14.2 must never file from, or clear keys for, an unread, stale or partial read.
+
+Live: 23 findings with stable keys (20 census judge; monitoring 2 glance organ dashboard reds and 1 judge release workflow; release stale). Tests: 36, each round red on the previous head. Full suite 2641 passed. Independent Opus review: 4 rounds, the last CLEAN after a fail-safe minor fixed in 5319f6d. Heart dev-ship GREEN.
+
+Follow-up, not filed: before any census row can be glance, Heart's census must publish structured passed/seconds/cap_s fields.
+
+## Original prompt
+
 # Phase 14.1 Maintenance finding adapters with stable keys
 
 Type: feature

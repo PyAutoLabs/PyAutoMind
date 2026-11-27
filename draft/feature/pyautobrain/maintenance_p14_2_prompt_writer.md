@@ -29,3 +29,9 @@ Generalise `_green.py`'s filing into the one maintenance writer (human decision 
 - **Header:** a `Source-key:` header and a body with the finding's evidence and its re-check-first step.
 - **Dedupe:** by key mark, the state file and `queue.md`, carried over from `_green`. There is a per-brief cap.
 - **Lifecycle:** a fixed finding clears its key, as `_green` does today.
+
+## From 14.1 (merged 2026-11-27, PyAutoBrain#732)
+
+- **Read flags:** honour every read's `ok`/`stale`/`partial`. Never file from, or clear keys for, an unread, stale or partial read.
+- **Tier:** raise the tier above the finding's floor when the fix's diff touches anything beyond the finding's own surface (for a census row, anything other than `no_run.yaml`).
+- **Keys:** use `Finding.key` as the `Source-key:` header.
