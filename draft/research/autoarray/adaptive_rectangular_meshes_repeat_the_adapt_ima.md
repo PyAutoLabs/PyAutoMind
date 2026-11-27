@@ -71,3 +71,6 @@ science project `~/Science/Science/development/adapt_snr_cap`), filed at the hum
 - Show the evidence; the human judges.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-25 from file:/tmp/claude-1000/-home-jammy-Science/8bf66d7b-2128-41e7-86f0-68d09386bd8e/scratchpad/followup_rectangular.md -->
+
+## Answers from the human
+- Q35 (2026-11-27, ruling claimed, shift 2026-11-26-pm): (a) gate cleared: sparse_terms_nufft_origin_and_mask_compatibility shipped 2026-11-27 (PyAutoArray#721), so its PyAutoArray claim is released. Recorded at /prm; the needs-slicing ruling Q36 stays open.

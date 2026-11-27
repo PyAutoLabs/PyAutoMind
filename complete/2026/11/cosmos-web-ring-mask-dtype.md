@@ -1,3 +1,11 @@
+Merged autolens_workspace#701 (human /prm, 2026-11-27), from shift 2026-11-26-pm.
+
+The cosmos_web_ring `mask_extra_galaxies.fits` files (5) are now stored as uint8 (7.93 MiB). They load identically through `Mask2D.from_fits` with invert False and True.
+
+The PR went to a human only because its CI smoke leg was skipped. The worker's targeted smoke (a modeling.py import check, and both start_here scripts at rc=0) passed. Review CLEAN after one text fix. Heart GREEN.
+
+## Original prompt
+
 # cosmos_web_ring stores boolean masks as float64, wasting ~3.4 MB of the repo's largest dataset
 
 Type: maintenance

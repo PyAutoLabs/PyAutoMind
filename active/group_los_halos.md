@@ -26,3 +26,6 @@ deflections via multi-plane lensing. The distinction between "extra galaxies at 
 (which are already modeled) and "LOS halos at other redshifts" must be clearly explained.
 
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
+
+## Answers from the human
+- Q39 (2026-11-27, shift 2026-11-26-pm2 question on autolens_workspace#703): (a) wait for #701, then build the plan in #703 as written. #701 merged 2026-11-27T10:57Z; claim released. https://github.com/PyAutoLabs/autolens_workspace/issues/703#issuecomment-7216556772

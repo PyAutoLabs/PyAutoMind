@@ -1,3 +1,15 @@
+Merged PyAutoArray#720 (human /prm, 2026-11-27), from shift 2026-11-26-pm.
+
+The spurious "No blurring_image" Convolver warning is fixed in the library simulator.
+
+Decision taken (accepted at /prm): the prompt asked for a workspace bug prompt, but the cause was in the library, so it was fixed there. Witness: the full-resolution autolens imaging/simulator.py warnings went from 2 to 0. Tests: simulator+operators 154 and imaging 50 passed; the control fails 2/2 with the fix reverted. Targeted smoke 18/18. Review FINDINGS (3 low), fixed, then CLEAN. Heart GREEN.
+
+Follow-up filed: draft/bug/autolens/deflections_simulator_no_psf_padding.md.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/720
+
+## Original prompt
+
 # Convolver "No blurring_image provided" warning in canonical workspace scripts
 
 Type: bug

@@ -1,3 +1,11 @@
+Merged autolens_workspace_test#376 (human /prm, 2026-11-27), from shift 2026-11-26-pm2.
+
+The JIT cache was always hit. The probe timed an already-warm call, so the draft's hypothesis was refuted. The probe now times a cold analysis: rectangular 11.73s→0.64s (18.2x) and delaunay 21.20s→0.91s (23.3x). Both scripts exit 0 end to end, and the 2 no_run scripts are un-parked.
+
+Decision taken (accepted at /prm): a workspace-only fix, and the zero_contour perf guard is now a cold/warm ratio, not a fixed 100 ms (the #148 pattern). Two independent Opus reviews were CLEAN. Heart GREEN. The PyAutoArray eager recompiles are filed as a draft.
+
+## Original prompt
+
 # JIT cache not hit in modeling_visualization delaunay/rectangular scripts
 
 Type: bug

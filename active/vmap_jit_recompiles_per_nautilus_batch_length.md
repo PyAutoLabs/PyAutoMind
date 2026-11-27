@@ -40,3 +40,6 @@ a compile-count probe (jax's compilation cache hooks, or a counter on the
 wrapped function) and assert it in a test on a synthetic search that feeds
 varying batch lengths; report the before/after count and the wall-clock delta
 on the 5-factor JAX witness from #1631.
+
+## Answers from the human
+- Q41 (2026-11-27, shift 2026-11-26-pm2 question on PyAutoFit#1811): Option 1: pad in call_wrap so every batch compiles at one shape. https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7216451269

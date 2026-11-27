@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2437 records across 11 buckets.
+2444 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/11
 
+- [a-compound-prior-model-reloaded-from-model](2026/11/a-compound-prior-model-reloaded-from-model.md)
 - [adapt-image-is-the-s-n-map](2026/11/adapt-image-is-the-s-n-map.md)
 - [adapt-mesh-weighting-galaxy](2026/11/adapt-mesh-weighting-galaxy.md)
 - [adapt-mesh-weighting-library](2026/11/adapt-mesh-weighting-library.md)
@@ -175,6 +176,7 @@ markers; everything below GENERATED is rebuilt.
 - [compound-prior-model-json](2026/11/compound-prior-model-json.md)
 - [config-yaml-parse-cache](2026/11/config-yaml-parse-cache.md)
 - [convert-latent-prefix-naming](2026/11/convert-latent-prefix-naming.md)
+- [convolver-blurring-image-warning](2026/11/convolver-blurring-image-warning.md)
 - [convolver-fft-frame-from-mask](2026/11/convolver-fft-frame-from-mask.md) — - `ConvolverState` sizes its FFT frame from the mask instead of the native array: `fft_shape = next_fast_len(m…
 - [corner-anesthetic-speed](2026/11/corner-anesthetic-speed.md)
 - [cortex-agents-slim](2026/11/cortex-agents-slim.md) — PR is the tracking surface
@@ -184,6 +186,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-ledger-merge-refresh](2026/11/cortex-ledger-merge-refresh.md)
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
 - [cortex-state-md-tables](2026/11/cortex-state-md-tables.md)
+- [cosmos-web-ring-mask-dtype](2026/11/cosmos-web-ring-mask-dtype.md)
 - [critical-curves-jax-viz-feasibility](2026/11/critical-curves-jax-viz-feasibility.md)
 - [cti-api-rst-rewrite](2026/11/cti-api-rst-rewrite.md)
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
@@ -221,6 +224,7 @@ markers; everything below GENERATED is rebuilt.
 - [emcee-zeus-default-one-core](2026/11/emcee-zeus-default-one-core.md)
 - [ep-projected-model-shared-prior](2026/11/ep-projected-model-shared-prior.md)
 - [euclid-nautilus-batch](2026/11/euclid-nautilus-batch.md)
+- [example-analysis-should-reduce-with-xp-sum](2026/11/example-analysis-should-reduce-with-xp-sum.md) — superseded — PyAutoFit#1775 ("refactor: example Analysis reduces chi-squared with xp.sum", merged 2026-11-15) …
 - [example-analysis-xp-sum](2026/11/example-analysis-xp-sum.md)
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
@@ -274,6 +278,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)
 - [jax_grad_of_sersic_stellar_mass_deflections](2026/11/jax_grad_of_sersic_stellar_mass_deflections.md)
+- [jit-cache-not-hit-modeling-visualization](2026/11/jit-cache-not-hit-modeling-visualization.md)
 - [knn-partial-point-block](2026/11/knn-partial-point-block.md) — - `get_interpolation_weights` sliced each point block with `lax.dynamic_slice`, which clamps the last partial …
 - [lane-fail-closed](2026/11/lane-fail-closed.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
@@ -445,10 +450,12 @@ markers; everything below GENERATED is rebuilt.
 - [skip_fit_output_no_longer_gates_save_results_docs_drift](2026/11/skip_fit_output_no_longer_gates_save_results_docs_drift.md)
 - [slam-simultaneous-subhalo-grid-search](2026/11/slam-simultaneous-subhalo-grid-search.md)
 - [slam-source-parametric-model-has-no-centre](2026/11/slam-source-parametric-model-has-no-centre.md)
+- [smoke-cache-stats-warnings-nameerror](2026/11/smoke-cache-stats-warnings-nameerror.md)
 - [smoke-install-tfp-comment-sweep](2026/11/smoke-install-tfp-comment-sweep.md) — - Comment-only sweep after PyAutoArray#694 (record complete/2026/11/matern-vendor-bessel-kve.md): replaced the…
 - [smoke-sha-gate-date-drift](2026/11/smoke-sha-gate-date-drift.md)
 - [smoke-sha-gate-tests-clock-time-bomb](2026/11/smoke-sha-gate-tests-clock-time-bomb.md)
 - [sparse-routing-assertions-r6](2026/11/sparse-routing-assertions-r6.md)
+- [sparse-terms-nufft-origin-and-mask-compatibility](2026/11/sparse-terms-nufft-origin-and-mask-compatibility.md)
 - [stale-auto-simulated-cluster-dataset](2026/11/stale-auto-simulated-cluster-dataset.md)
 - [stale-enable-pytrees-register-model-advice-in](2026/11/stale-enable-pytrees-register-model-advice-in.md)
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)

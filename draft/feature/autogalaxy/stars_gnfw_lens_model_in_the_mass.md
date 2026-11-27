@@ -154,7 +154,7 @@ prototype: `eps`, `f_dm`, `inner_slope`.
   (`NFWSph` 3e-16, `mp.Sersic` in M/L 4e-14), so scaling the summed field differs at that
   level from building the halo with `kappa_s / λ₀`.
 - **Compound priors.** The prior-order defect on reload
-  (`draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md`) applies to this
+  (`complete/2026/11/a-compound-prior-model-reloaded-from-model.md` (merged PyAutoFit#1810 on 2026-11-27, awaiting release)) applies to this
   model, as to any model with a prior replaced after construction. The prototype escaped
   it by having no shared priors. Slice 4 should not ship a workaround: queue that bug
   ahead of slice 4.
@@ -273,7 +273,7 @@ physical stellar mass, or mass-to-light ratio, for the stars.
    frame around the aperture-normalised Sérsic and gNFW, `f_dm` shared by compound priors,
    the frame-unit shear and source priors), convert the result back to physical units
    (M*, M200). *Repos:* autolens_workspace
-   *Witness:* the example runs in smoke and recovers the input dark-matter fraction inside its 95% interval. *Depends:* 2, and the fix of `draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md`
+   *Witness:* the example runs in smoke and recovers the input dark-matter fraction inside its 95% interval. *Depends:* 2, and the fix of `complete/2026/11/a-compound-prior-model-reloaded-from-model.md` (merged PyAutoFit#1810 on 2026-11-27, awaiting release)
 
 ## Design questions for the plan
 
@@ -292,7 +292,7 @@ physical stellar mass, or mass-to-light ratio, for the stars.
 ## Already known and related
 
 - Reloading a model with compound or replaced priors reorders them
-  (`draft/bug/autofit/a_compound_prior_model_reloaded_from_model.md`). The prototype works
+  (`complete/2026/11/a-compound-prior-model-reloaded-from-model.md` (merged PyAutoFit#1810 on 2026-11-27, awaiting release)). The prototype works
   around it with `with_stable_prior_order`; the library version should not need to. The
   general frame shares `f_dm` by compound priors, so slice 4 waits for that fix.
 - `jax.scipy.special.hyp2f1` itself stays wrong for z < −1; never call it directly.

@@ -1,3 +1,9 @@
+Merged PyAutoHeart#377 (human /prm, 2026-11-27), from shift 2026-11-26-pm (resumed after Q31, "resume after 369 merges").
+
+Fixes `NameError: warnings` in the smoke workflow's cache-state step, so the cache-save steps run again. A new test compiles every workflow heredoc. It is red on main's smoke-tests.yml and green on the branch. tests/test_workflow_wiring.py 44 passed. Independent review CLEAN. Tier judge.
+
+## Original prompt
+
 # Smoke cache-stats step fails with NameError: warnings
 
 Type: bug

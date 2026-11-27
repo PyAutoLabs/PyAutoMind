@@ -1,3 +1,13 @@
+Merged PyAutoFit#1810 (human /prm, 2026-11-27), from shift 2026-11-26-pm2.
+
+A compound prior model reloaded from model.json now keeps its prior order. Paths, identifier and `instance_from_vector` equal the original model's; on main the paths and instances differ.
+
+Decision taken (accepted at /prm): it ships the order fix alone, because the identifier change the prompt described did not reproduce. Tests: test_prior_order 8 passed (5 fail with the fix reverted). The covering modules passed, 1380 tests with -n4. Targeted smoke import check PASS. Independent Opus review CLEAN. Heart GREEN.
+
+Revert: `git -C PyAutoFit revert -m 1 bc3f0fad3d` (the fix commit is c0f11cab4). The array reload bug it found is filed as a draft.
+
+## Original prompt
+
 # A compound-prior model reloaded from model.json has a different prior order…
 
 Type: bug

@@ -1,3 +1,11 @@
+Merged PyAutoArray#721 then PyAutoGalaxy#766 (human /prm, 2026-11-27), from shift 2026-11-26-pm.
+
+The NUFFT now honours the mask origin, and SparseTerms carry a mask fingerprint (`mask_fingerprint_from`, a new public name), which is saved to dataset.fits and checked on load. This is the human's Q26 choice.
+
+Decision taken (accepted at /prm): the public name `mask_fingerprint_from` was added. Tier judge. Tests: 2639 Array and 1694 Galaxy passed. Smoke 17/17. Independent review CLEAN. Heart GREEN. CI GREEN at merge.
+
+## Original prompt
+
 # Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see mask-shape-compatible but pixel-incompatible masks
 
 Type: bug

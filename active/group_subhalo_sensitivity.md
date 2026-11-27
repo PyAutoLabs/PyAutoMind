@@ -26,3 +26,6 @@ group-scale data and measuring detectability across the field. The more complex 
 multiple group galaxies affects where subhalos are detectable and at what mass threshold.
 
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
+
+## Answers from the human
+- Q40 (2026-11-27, shift 2026-11-26-pm2 question on autolens_workspace#702): (a) wait for #701 (merged 2026-11-27T10:57Z, claim released); accept the injected-signal S/N map (with vs without companions) as the Witness. https://github.com/PyAutoLabs/autolens_workspace/issues/702#issuecomment-7216557095

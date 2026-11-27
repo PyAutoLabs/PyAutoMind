@@ -56,32 +56,12 @@ the ruling on the prompt.
 - asked: 2026-11-26T20:56Z
 - worker: readiness pass
 
-### Q35. adaptive_rectangular_meshes_repeat_the_adapt_ima — `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo…
-- task: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
-- kind: ruling
-- gate: claimed
-- ask: `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
-- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-26-pm
-- asked: 2026-11-26T20:56Z
-- worker: readiness pass
-
 ### Q36. adaptive_rectangular_meshes_repeat_the_adapt_ima — `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: nee…
 - task: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
 - kind: ruling
 - gate: unattended
 - ask: `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: needs-slicing, so no shift starts it.
 - options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
-- shift: 2026-11-26-pm
-- asked: 2026-11-26T20:56Z
-- worker: readiness pass
-
-### Q37. interferometer_adapt_image_get_the_imaging_mesh — `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo…
-- task: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
-- kind: ruling
-- gate: claimed
-- ask: `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
-- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
 - shift: 2026-11-26-pm
 - asked: 2026-11-26T20:56Z
 - worker: readiness pass
@@ -95,35 +75,6 @@ the ruling on the prompt.
 - shift: 2026-11-26-pm
 - asked: 2026-11-26T20:56Z
 - worker: readiness pass
-
-### Q39. group_los_halos — Group LOS halos: autolens_workspace is held by #701 (dataset FITS onl…
-- task: active/group_los_halos.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/703
-- kind: question
-- ask: Group LOS halos: autolens_workspace is held by #701 (dataset FITS only, disjoint files). Wait for it to merge, or override the claim now?
-- options: (a) Wait for #701 to merge, then build the plan in #703 as written · (b) Override the claim now (files disjoint) and build the plan · (c) Re-scope or retire the prompt (imaging half already done)
-- shift: 2026-11-26-pm2
-- asked: 2026-11-26T21:31Z
-- worker: 1f616415
-
-### Q40. group_subhalo_sensitivity — Group subhalo sensitivity: autolens_workspace is held by #701, and un…
-- task: active/group_subhalo_sensitivity.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/702
-- kind: question
-- ask: Group subhalo sensitivity: autolens_workspace is held by #701, and under smoke the Witness evidence map is all zeros. Wait or override, and accept an S/N-map Witness?
-- options: (a) Wait for #701; accept the injected-signal S/N map (with vs without companions) as Witness · (b) Override the claim now; accept the S/N-map Witness · (c) Wait for #701; keep the evidence Witness, run with ENV: real_search · (d) Retire or re-scope the prompt (imaging half already done)
-- shift: 2026-11-26-pm2
-- asked: 2026-11-26T21:31Z
-- worker: 0f971892
-
-### Q41. vmap_jit_recompiles_per_nautilus_batch_length — see the question on the issue
-- task: active/vmap_jit_recompiles_per_nautilus_batch_length.md
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
-- kind: question
-- ask: see the question on the issue
-- shift: 2026-11-26-pm2
-- asked: 2026-11-26T21:49Z
-- worker: 04ca20f9
 
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
@@ -499,6 +450,68 @@ the ruling on the prompt.
 - answered: 2026-11-26T18:08Z by Jammy2211 (issue)
 - answer: resume after 369 merges (Heart#369 merged 2026-11-24T09:21Z)
 - answer-comment: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7127183290
+
+### Q39. group_los_halos — Group LOS halos: autolens_workspace is held by #701 (dataset FITS onl…
+- task: active/group_los_halos.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/703
+- kind: question
+- ask: Group LOS halos: autolens_workspace is held by #701 (dataset FITS only, disjoint files). Wait for it to merge, or override the claim now?
+- options: (a) Wait for #701 to merge, then build the plan in #703 as written · (b) Override the claim now (files disjoint) and build the plan · (c) Re-scope or retire the prompt (imaging half already done)
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:31Z
+- worker: 1f616415
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) wait for #701, then build the plan in #703 as written. #701 merged 2026-11-27T10:57Z; claim released.
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/703#issuecomment-7216556772
+
+### Q40. group_subhalo_sensitivity — Group subhalo sensitivity: autolens_workspace is held by #701, and un…
+- task: active/group_subhalo_sensitivity.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/702
+- kind: question
+- ask: Group subhalo sensitivity: autolens_workspace is held by #701, and under smoke the Witness evidence map is all zeros. Wait or override, and accept an S/N-map Witness?
+- options: (a) Wait for #701; accept the injected-signal S/N map (with vs without companions) as Witness · (b) Override the claim now; accept the S/N-map Witness · (c) Wait for #701; keep the evidence Witness, run with ENV: real_search · (d) Retire or re-scope the prompt (imaging half already done)
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:31Z
+- worker: 0f971892
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) wait for #701 (merged 2026-11-27T10:57Z, claim released); accept the injected-signal S/N map (with vs without companions) as the Witness.
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/702#issuecomment-7216557095
+
+### Q41. vmap_jit_recompiles_per_nautilus_batch_length — see the question on the issue
+- task: active/vmap_jit_recompiles_per_nautilus_batch_length.md
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
+- kind: question
+- ask: see the question on the issue
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:49Z
+- worker: 04ca20f9
+- answered: 2026-11-27T11:00Z by Jammy2211 (issue)
+- answer: Option 1: pad in call_wrap so every batch compiles at one shape.
+- answer-comment: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7216451269
+
+### Q35. adaptive_rectangular_meshes_repeat_the_adapt_ima — `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo…
+- task: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+- kind: ruling
+- gate: claimed
+- ask: `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
+- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) gate cleared: sparse_terms_nufft_origin_and_mask_compatibility shipped 2026-11-27 (PyAutoArray#721), so its PyAutoArray claim is released. Recorded at /prm; the needs-slicing ruling Q36 stays open.
+
+### Q37. interferometer_adapt_image_get_the_imaging_mesh — `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo…
+- task: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+- kind: ruling
+- gate: claimed
+- ask: `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
+- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) gate cleared: sparse_terms_nufft_origin_and_mask_compatibility shipped 2026-11-27 (PyAutoArray#721), so its PyAutoArray claim is released. Recorded at /prm; the needs-slicing ruling Q38 stays open.
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

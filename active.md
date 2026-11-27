@@ -33,21 +33,6 @@
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
 
-## sparse_terms_nufft_origin_and_mask_compatibility
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
-- issued: 2026-11-23
-- session: shift worker 2026-11-26-pm (claude-job-1492608b)
-- status: library-pr
-- prompt: active/sparse_terms_nufft_origin_and_mask_compatibility.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/721
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/766
-- worktree: /home/jammy/Code/PyAutoLabs-wt/sparse-terms-nufft-origin
-- repos:
-  - PyAutoArray: feature/sparse-terms-nufft-origin
-  - PyAutoGalaxy: feature/sparse-terms-nufft-origin
-- next: human /prm — merge PyAutoArray#721 first, then PyAutoGalaxy#766 (both labelled decision-taken; public name mask_fingerprint_from added).
-- tier: judge — supervised, human /prm
-
 ## parked-hold-grace
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
 - issued: 2026-11-24
@@ -91,44 +76,6 @@
 - summary: |
     Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
 
-## convolver_blurring_image_warning
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/719
-- issued: 2026-11-26
-- session: shift worker 2026-11-26-pm (13f69e98-e9f4-48ff-8459-52f29d0f9cd8)
-- status: pr-open
-- worktree: ~/Code/PyAutoLabs-wt/convolver-blurring-image-warning
-- prompt: active/convolver_blurring_image_warning.md
-- tier: supervised — auto-merge on green if the Witness passes after a merge slot (decision-taken → human /prm)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/720
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/720
-- next: /prm PyAutoArray#720 (decision-taken: library fix instead of the prompt's workspace bug prompt); follow-up draft/bug/autolens/deflections_simulator_no_psf_padding.md
-- repos:
-  - PyAutoArray: feature/convolver-blurring-image-warning
-
-## cosmos-web-ring-mask-dtype
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/700
-- issued: 2026-11-26
-- session: shift worker 2026-11-26-pm (710c1a77-37b6-43ed-84bc-85b4a82c3438)
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/701
-- worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-mask-dtype
-- repos:
-  - autolens_workspace: feature/cosmos-web-ring-mask-dtype
-- prompt: active/cosmos_web_ring_mask_dtype.md
-- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
-
-## smoke_cache_stats_warnings_nameerror
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
-- session: shift worker 2026-11-26-pm (claude:9e8338a5)
-- status: pr-open
-- worktree: /home/jammy/Code/PyAutoLabs-wt/smoke_cache_stats_warnings_nameerror
-- repos:
-  - PyAutoHeart: feature/smoke_cache_stats_warnings_nameerror
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/377
-- prompt: active/smoke_cache_stats_warnings_nameerror.md
-- previous-session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7) — parked Q31, answered "resume after 369 merges"
-- next: human /prm (Consequence: judge; review CLEAN, witness red-on-main/green-on-branch)
-
 ## group-subhalo-sensitivity
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/702
 - issued: 2026-11-26
@@ -136,19 +83,9 @@
 - status: awaiting-input
 - question: https://github.com/PyAutoLabs/autolens_workspace/issues/702#issuecomment-7203769475
 - prompt: active/group_subhalo_sensitivity.md
-- note: no repo claim, branch or worktree yet. autolens_workspace is held by cosmos-web-ring-mask-dtype (PR #701), and under smoke the Witness evidence map is all zeros. Imaging half already done; its no_run.yaml entry is stale (runs in 18s under smoke).
-- next: human answers both questions on #702, then branch feature/group-subhalo-sensitivity from the plan in the issue body
+- note: no repo claim, branch or worktree yet. #701 merged 2026-11-27, so autolens_workspace is free. Q40 answered: Witness = deterministic injected-signal S/N map with vs without companions. Imaging half already done; its no_run.yaml entry is stale (runs in 18s under smoke).
+- next: next shift resumes — branch feature/group-subhalo-sensitivity from the plan in the issue body, with the S/N-map Witness
 - tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
-## a-compound-prior-model-reloaded-from-model
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1809
-- issued: 2026-11-26
-- session: shift worker 2026-11-26-pm2 (fc7a6684-3089-4049-93a5-98256bb23677)
-- status: shipping
-- worktree: ~/Code/PyAutoLabs-wt/a-compound-prior-model-reloaded-from-model
-- prompt: active/a_compound_prior_model_reloaded_from_model.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1810
-- repos:
-  - PyAutoFit: feature/a-compound-prior-model-reloaded-from-model
 
 ## group-los-halos
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/703
@@ -157,17 +94,9 @@
 - status: awaiting-input
 - question: https://github.com/PyAutoLabs/autolens_workspace/issues/703#issuecomment-7203799575
 - prompt: active/group_los_halos.md
-- note: no repo claim, branch or worktree yet. autolens_workspace is held by cosmos-web-ring-mask-dtype (PR #701, dataset FITS only, disjoint files). Imaging half already done (02f19489). Plan in the issue body; LOS halo must sit in `galaxies` (analysis drops other collections).
-- next: human answers on #703, then branch feature/group-los-halos and build the plan in the issue body
+- note: no repo claim, branch or worktree yet. #701 merged 2026-11-27, so autolens_workspace is free; Q39 answered: build the plan in the issue body. Imaging half already done (02f19489). LOS halo must sit in `galaxies` (analysis drops other collections).
+- next: next shift resumes — branch feature/group-los-halos and build the plan in the issue body
 - tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
-## jit_cache_not_hit_modeling_visualization
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/375
-- session: shift worker 2026-11-26-pm2 (f2260bde-3b41-455c-bff0-04b02e1681ac)
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/376
-- worktree: ~/Code/PyAutoLabs-wt/jit-cache-modeling-visualization
-- repos:
-  - autolens_workspace_test: feature/jit-cache-modeling-visualization
 
 ## vmap-jit-recompiles-per-nautilus-batch-length
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1811
