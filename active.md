@@ -98,7 +98,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/731
 - issued: 2026-11-27
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/732
 - worktree: /home/jammy/Code/PyAutoLabs-wt/maintenance-finding-adapters
 - repos:
   - PyAutoBrain: feature/maintenance-finding-adapters
@@ -106,3 +107,4 @@
 - epic: autonomous-orchestrators (Phase 14.1; built before the M3 gate per human decision 1, 2026-11-27)
 - heart: RED at the door was local-checkout only (library checkouts behind). It was cleared by fast-forwarding 5 clean library checkouts (human-approved 2026-11-27); the re-read was STALE, because GitHub was unreachable.
 - tier: judge — merge mode: human /prm
+- next: human /prm PyAutoBrain#732 (judge). Live dry run gives 23 findings with stable keys; 4 review rounds, the last CLEAN after a fail-safe minor fixed in 5319f6d; suite 2641. Follow-up (not filed): Heart census rows need structured passed/seconds/cap_s before any census glance.
