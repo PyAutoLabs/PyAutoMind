@@ -1467,7 +1467,7 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/maintenance_p14_2_prompt_writer.md">Phase 14.2 Maintenance prompt writer: findings become sized prompts with no human…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/733">issue #733</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/maintenance_p14_2_prompt_writer.md">Phase 14.2 Maintenance prompt writer: findings become sized prompts with no human…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/733">issue #733</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/734">PyAutoBrain#734</a></summary>
 
 ```
 Use the start-dev skill. active/maintenance_p14_2_prompt_writer.md
