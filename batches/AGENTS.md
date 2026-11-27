@@ -294,7 +294,17 @@ is not a whole number refuses the brief.
 `worker-mode:` is the permission mode real workers run in (phase 3b). `auto` is
 the default the human chose on 2026-11-03: a worker that still needs a person
 shows `blocked` in `claude agents --json`, and after 15 minutes the watcher
-parks it for the digest instead of leaving it waiting. `bypassPermissions` is
+parks it for the digest instead of leaving it waiting. A parked task, or one
+whose worker ended with an open question, keeps its library for 15 minutes from
+the park. Until then the next task on that library waits and the shift stays
+open. After that the next task starts, and an answer that comes later restarts
+the parked task only once its library is free (PyAutoBrain#720, ruling (d) as
+amended 2026-11-24). A parked worker's session is still running, so at the end
+of the 15 minutes the watcher stops it, and frees the library only once that
+session has ended; the question stays in your inbox, and answering it restarts
+the task (ruling (d) as amended 2026-11-27). If the stop fails, or the session
+has not ended 10 minutes later, the library stays held and you are told.
+`bypassPermissions` is
 refused. `sandbox: yes` marks a test shift. (Until phase 3c it was the only
 brief a real worker could run under; the one-Mind-writer path lifted that — the
 workers' Mind changes now reach `main` only through the orchestrator.)
