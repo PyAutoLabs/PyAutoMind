@@ -94,21 +94,6 @@
 - repos:
   - PyAutoFit: (no branch; parked before implementation — stated bug did not reproduce)
 
-## heart-report-only-red-no-ack
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/727
-- issued: 2026-11-27
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/730
-- worktree: /home/jammy/Code/PyAutoLabs-wt/heart-report-only-red-no-ack
-- repos:
-  - PyAutoBrain: feature/heart-report-only-red-no-ack
-- prompt: active/heart_report_only_red_needs_no_shift_ack.md
-- coordination: human-approved 2026-11-27 — PyAutoBrain shared with cockpit-same-chat-late-window (#728); built back to back, disjoint files (this: AUTONOMY.md, _brief.py, watcher Heart read, batch skill Heart text).
-- epic: autonomous-orchestrators (M3.6h)
-- tier: judge — merge mode: human /prm
-- next: human /prm PyAutoBrain#730 (judge). Human rulings 2026-11-27 (a) mechanised ack incl. old/unreadable reads, (b) R1 on YELLOW, (c) touched set = named tasks + plan. Independent Opus review: 4 rounds, final minors fixed (6ae0900); suite 2604. Merges cleanly with #729.
-
 ## cockpit-same-chat-late-window
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/728
 - issued: 2026-11-27
@@ -119,7 +104,7 @@
 - repos:
   - PyAutoBrain: feature/cockpit-same-chat-late-window
 - prompt: active/shift_cockpit_same_chat_and_late_window.md
-- coordination: human-approved 2026-11-27 — PyAutoBrain shared with heart-report-only-red-no-ack (#727); built back to back, disjoint files (this: batch.md step 5, cockpit.md, batch collect).
+- coordination: heart-report-only-red-no-ack merged 2026-11-27 (PyAutoBrain#730); test-merged clean with this branch.
 - epic: autonomous-orchestrators (M3.6g)
 - tier: glance — merge mode: human /prm (built outside a shift)
-- next: human /prm PyAutoBrain#729. Independent Opus review CLEAN (nits noted in the PR); suite 2579; merges cleanly with #727's branch.
+- next: human /prm PyAutoBrain#729 in progress. The first CI run was RED on the skill line budget (cockpit at 205 of 200 lines); fixed in bb0daa8, CI re-running.

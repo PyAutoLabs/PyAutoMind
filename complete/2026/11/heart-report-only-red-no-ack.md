@@ -1,3 +1,18 @@
+Merged PyAutoBrain#730 (human /prm, 2026-11-27). M3.6h.
+
+`batch brief --check` now gates a shift launch on Heart:
+
+- **R1 (human, 2026-11-17).** A RED made only of report-only reasons (Heart class `local-checkout` and a "report only" action), none naming a touched repo, needs no `heart-ack:`. The reason set is written under `## Heart`, with stale reasons marked "not judged".
+- **Human rulings, 2026-11-27, recorded in AUTONOMY.md:**
+  - **(a)** An unacknowledged RED or YELLOW is refused mechanically. So is a grey, unreadable, missing or over-6 h read, unless there is a `heart-ack:`.
+  - **(b)** R1 also covers a report-only YELLOW.
+  - **(c)** The touched set is the named tasks plus the plan's members. A topic `Target:` is ignored. A prompt with no known repo fails closed. Later picks keep the scoped dev-ship gate.
+- **Write safety:** no writes into a main git checkout; a record already on origin/main gets a note. The tests-only probe switch works only under pytest.
+
+35 brief tests, 21 of them new. Each round's new tests fail on the previous head. Full suite 2604 passed. Independent Opus review over 4 rounds: two majors became rulings (a) and (c), and the last minors were fixed. Heart dev-ship GREEN.
+
+## Original prompt
+
 # M3.6h A Heart RED made only of report-only reasons needs no shift acknowledgement
 
 Type: feature
