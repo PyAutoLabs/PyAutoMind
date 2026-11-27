@@ -44,6 +44,7 @@
   - PyAutoMind: feature/parked-hold-grace
 - prompt: active/shift_closes_early_with_held_tasks_unstarted.md
 - coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py; merged 2026-11-25); PyAutoMind shared too (batches/AGENTS.md, a different section from #606)
+- coordination: human-approved 2026-11-27 — PyAutoBrain also shared with shift-ledger-env-settings (PyAutoBrain#724): it edits the launch code in _orchestrator.py (worker_env, session_command, close-out/update argv) and the ledger readers; this task the early-close/hold logic. Whichever merges second rebases.
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm
 
@@ -107,3 +108,16 @@
 - prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
 - repos:
   - PyAutoFit: (no branch; parked before implementation — stated bug did not reproduce)
+
+## shift-ledger-env-settings
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/724
+- issued: 2026-11-27
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/shift-ledger-env-settings
+- repos:
+  - PyAutoBrain: feature/shift-ledger-env-settings
+- prompt: active/shift_workers_inherit_previous_shift_ledger_env.md
+- coordination: human-approved 2026-11-27 — PyAutoBrain shared with parked-hold-grace (PyAutoBrain#720); both touch agents/conductors/batch/_orchestrator.py, this task the launch code and ledger readers only. Whichever merges second rebases.
+- epic: autonomous-orchestrators (fix before the next big shift; found in shift 2026-11-26-pm2)
+- tier: judge — merge mode: human /prm

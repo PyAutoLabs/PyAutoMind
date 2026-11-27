@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Filed: 2026-11-27
+Issued: 2026-11-27
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: two shifts dispatched back to back from one watcher: every worker and close-out of the second shift sees `PYAUTO_SHIFT_LEDGER_DIR` and `PYAUTO_SHIFT_BRIEF` naming the second shift (checked from inside the spawned session, not only in `worker_env()`); a test fails on the base commit.
