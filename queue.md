@@ -82,45 +82,50 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 1. autofit.campaign: per-stage status_root
+## 1. Guard setup="auto" / number_of_cores="auto" against BLAS/OpenMP thread oversubscription
+- kind: prompt
+- ref: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
+- note: Library first (PyAutoFit + Nerves marker), then workspace guide + HPC templates. Plan drafted 2026-11-27; PyAutoFit claim by parked #1811 (no branch).
+
+## 2. autofit.campaign: per-stage status_root
 - kind: prompt
 - ref: draft/feature/autofit/campaign_per_stage_status_root.md
 - note: blocker of dr1_campaign_sed_status_root (Q21)
 
-## 2. autofit.campaign: zip_complete success check accepts a glob pattern
+## 3. autofit.campaign: zip_complete success check accepts a glob pattern
 - kind: prompt
 - ref: draft/feature/autofit/campaign_zip_complete_pattern.md
 - note: blocker of dr1_campaign_zip_success_checks (Q22)
 
-## 3. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
+## 4. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
 - kind: prompt
 - ref: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 
-## 4. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
+## 5. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
 - kind: prompt
 - ref: draft/research/autofit/hpc_campaign_epic.md
 
-## 5. Results library — index, complete, export and ship thousands of PyAutoFit results
+## 6. Results library — index, complete, export and ship thousands of PyAutoFit results
 - kind: prompt
 - ref: draft/feature/autofit/results_library_epic.md
 
-## 6. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
+## 7. CTI upkeep parity — bring PyAutoCTI and its satellites to the same level of upkeep as the other libraries
 - kind: prompt
 - ref: draft/maintenance/autocti/cti_upkeep_epic.md
 
-## 7. Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)
+## 8. Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)
 - kind: prompt
 - ref: draft/docs/workspaces/assistants_regime_extension.md
 
-## 8. Cluster usability — from the first plot to a paper-scale fit
+## 9. Cluster usability — from the first plot to a paper-scale fit
 - kind: prompt
 - ref: draft/feature/autolens/cluster_usability.md
 
-## 9. Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay
+## 10. Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay
 - kind: prompt
 - ref: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
 
-## 10. Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…
+## 11. Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…
 - kind: prompt
 - ref: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
 
