@@ -93,3 +93,29 @@
 - prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
 - repos:
   - PyAutoFit: (no branch; parked before implementation — stated bug did not reproduce)
+
+## heart-report-only-red-no-ack
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/727
+- issued: 2026-11-27
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/heart-report-only-red-no-ack
+- repos:
+  - PyAutoBrain: feature/heart-report-only-red-no-ack
+- prompt: active/heart_report_only_red_needs_no_shift_ack.md
+- coordination: human-approved 2026-11-27 — PyAutoBrain shared with cockpit-same-chat-late-window (#728); built back to back, disjoint files (this: AUTONOMY.md, _brief.py, watcher Heart read, batch skill Heart text).
+- epic: autonomous-orchestrators (M3.6h)
+- tier: judge — merge mode: human /prm
+
+## cockpit-same-chat-late-window
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/728
+- issued: 2026-11-27
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-same-chat-late-window
+- repos:
+  - PyAutoBrain: feature/cockpit-same-chat-late-window
+- prompt: active/shift_cockpit_same_chat_and_late_window.md
+- coordination: human-approved 2026-11-27 — PyAutoBrain shared with heart-report-only-red-no-ack (#727); built back to back, disjoint files (this: batch.md step 5, cockpit.md, batch collect).
+- epic: autonomous-orchestrators (M3.6g)
+- tier: glance — merge mode: human /prm (built outside a shift)
