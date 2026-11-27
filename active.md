@@ -105,3 +105,4 @@
 - prompt: active/maintenance_p14_2_prompt_writer.md
 - epic: autonomous-orchestrators (Phase 14.2; built before the M3 gate per human decision 1, 2026-11-27)
 - tier: judge — merge mode: human /prm
+- next: mid-build when the session ended (2026-11-27 eve, low battery): uncommitted work in the worktree, nothing pushed. Resume: inspect the worktree diff and the progress notes, finish and test, run an independent review, open the PR, then human /prm.
