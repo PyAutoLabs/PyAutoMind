@@ -1445,7 +1445,7 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/maintenance_p14_5_hygiene_and_ci_timing_sources.md">Phase 14.5 Maintenance sources: hygiene findings and slowed CI timings</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/739">issue #739</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/maintenance_p14_5_hygiene_and_ci_timing_sources.md">Phase 14.5 Maintenance sources: hygiene findings and slowed CI timings</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/739">issue #739</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/740">PyAutoBrain#740</a></summary>
 
 ```
 Use the start-dev skill. active/maintenance_p14_5_hygiene_and_ci_timing_sources.md
