@@ -1435,7 +1435,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/brain_board_hygiene_ledger.md">Brain board: keep a hygiene ledger and show its trend</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/735">issue #735</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/brain_board_hygiene_ledger.md">Brain board: keep a hygiene ledger and show its trend</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/735">issue #735</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/736">PyAutoBrain#736</a></summary>
 
 ```
 Use the start-dev skill. active/brain_board_hygiene_ledger.md
