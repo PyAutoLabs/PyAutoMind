@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2447 records across 11 buckets.
+2448 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -165,6 +165,7 @@ markers; everything below GENERATED is rebuilt.
 - [cluster-family-fit-figures](2026/11/cluster-family-fit-figures.md)
 - [cluster-regime-narrative](2026/11/cluster-regime-narrative.md)
 - [cockpit-footer-broca](2026/11/cockpit-footer-broca.md)
+- [cockpit-same-chat-late-window](2026/11/cockpit-same-chat-late-window.md)
 - [codex-orchestrator](2026/11/codex-orchestrator.md)
 - [codex-shift-launch-parity](2026/11/codex-shift-launch-parity.md)
 - [colab-gate-colossus-rationale-is-stale-once](2026/11/colab-gate-colossus-rationale-is-stale-once.md)
