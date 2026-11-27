@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 290 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -965,7 +965,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 31 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 32 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1043,6 +1043,14 @@ Use the start-dev skill. draft/research/pyautobrain/experiment_capability_speedu
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/closeout_cleanup_followups.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/second_park_of_same_task_files_no_new_question.md">A second park of the same task files no new question</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/second_park_of_same_task_files_no_new_question.md
 ```
 
 </details>
@@ -1475,7 +1483,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/720">issue #720</a> — issued 2026-11-24 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_closes_early_with_held_tasks_unstarted.md">A park on a question releases its library's start after 15 minutes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/720">issue #720</a> — issued 2026-11-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/726">PyAutoBrain#726</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/611">PyAutoMind#611</a></summary>
 
 ```
 Use the start-dev skill. active/shift_closes_early_with_held_tasks_unstarted.md
@@ -1582,7 +1590,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 225 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
+Lanes: any 226 · ral 27 · wsl-data 20 · local-dev 14 · gpu 1
 
 <a id="human-review"></a>
 <details>
