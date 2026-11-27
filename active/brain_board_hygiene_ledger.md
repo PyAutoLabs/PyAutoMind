@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: medium
 Status: draft
 Filed: 2026-11-12
+Issued: 2026-11-27
 Epic: autonomous-orchestrators
 Consequence: glance
 Witness: after two board runs on different days the published `board.json` carries a non-empty `history` with one point per day per hygiene row; each hygiene row on the Brain board shows a sparkline; a test shows a run appends exactly one ledger line per day (idempotent on re-run)
