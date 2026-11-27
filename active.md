@@ -113,7 +113,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/724
 - issued: 2026-11-27
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/725
 - worktree: /home/jammy/Code/PyAutoLabs-wt/shift-ledger-env-settings
 - repos:
   - PyAutoBrain: feature/shift-ledger-env-settings
@@ -121,3 +122,4 @@
 - coordination: human-approved 2026-11-27 — PyAutoBrain shared with parked-hold-grace (PyAutoBrain#720); both touch agents/conductors/batch/_orchestrator.py, this task the launch code and ledger readers only. Whichever merges second rebases.
 - epic: autonomous-orchestrators (fix before the next big shift; found in shift 2026-11-26-pm2)
 - tier: judge — merge mode: human /prm
+- next: human /prm PyAutoBrain#725 (judge). Witness PASS live on a claimed spare; suite 2560 passed; independent Opus review FINDINGS (minor) fixed in 5bef04a; Heart dev-ship GREEN. No workspace impact (organ).
