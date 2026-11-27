@@ -1482,7 +1482,7 @@ Use the start-dev skill. active/shift_closes_early_with_held_tasks_unstarted.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_workers_inherit_previous_shift_ledger_env.md">Shift workers inherit the previous shift's ledger and brief environment</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/724">issue #724</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_workers_inherit_previous_shift_ledger_env.md">Shift workers inherit the previous shift's ledger and brief environment</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/724">issue #724</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/725">PyAutoBrain#725</a></summary>
 
 ```
 Use the start-dev skill. active/shift_workers_inherit_previous_shift_ledger_env.md
