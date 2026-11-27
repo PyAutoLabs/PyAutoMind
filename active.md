@@ -106,12 +106,14 @@
 - coordination: human-approved 2026-11-27 — PyAutoBrain shared with cockpit-same-chat-late-window (#728); built back to back, disjoint files (this: AUTONOMY.md, _brief.py, watcher Heart read, batch skill Heart text).
 - epic: autonomous-orchestrators (M3.6h)
 - tier: judge — merge mode: human /prm
+- next: built (8b0ae4b). Review FINDINGS: 1 major (an old or unreadable Heart read launches without an ack) and 6 minor. Waiting on a human ruling: mechanise the ack refusal at --check, and extend R1 to YELLOW. Then fix and re-review.
 
 ## cockpit-same-chat-late-window
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/728
 - issued: 2026-11-27
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/729
 - worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-same-chat-late-window
 - repos:
   - PyAutoBrain: feature/cockpit-same-chat-late-window
@@ -119,3 +121,4 @@
 - coordination: human-approved 2026-11-27 — PyAutoBrain shared with heart-report-only-red-no-ack (#727); built back to back, disjoint files (this: batch.md step 5, cockpit.md, batch collect).
 - epic: autonomous-orchestrators (M3.6g)
 - tier: glance — merge mode: human /prm (built outside a shift)
+- next: human /prm PyAutoBrain#729. Independent Opus review CLEAN (nits noted in the PR); suite 2579; merges cleanly with #727's branch.
