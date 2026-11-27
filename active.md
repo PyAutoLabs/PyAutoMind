@@ -37,16 +37,19 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
 - issued: 2026-11-24
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/726
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/611
 - worktree: /home/jammy/Code/PyAutoLabs-wt/parked-hold-grace
 - repos:
   - PyAutoBrain: feature/parked-hold-grace
   - PyAutoMind: feature/parked-hold-grace
 - prompt: active/shift_closes_early_with_held_tasks_unstarted.md
 - coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py; merged 2026-11-25); PyAutoMind shared too (batches/AGENTS.md, a different section from #606)
-- coordination: shift-ledger-env-settings merged 2026-11-27 (PyAutoBrain#725; touched worker_env, session_command, close-out/update argv in _orchestrator.py, plus the ledger readers) — rebase this branch on main before shipping.
+- coordination: rebased on shift-ledger-env-settings (PyAutoBrain#725, merged 2026-11-27) with no conflicts.
 - epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
 - tier: judge — merge mode: human /prm
+- next: human /prm PyAutoBrain#726 then PyAutoMind#611 (judge). Ruling 2026-11-27: lease park is stopped at grace end, library released once the session is seen to end. Independent Opus review CLEAN at round 3; suite 2578. Deploy (ff the watcher's Brain checkout) only when no shift is live. Follow-up: draft/bug/pyautobrain/second_park_of_same_task_files_no_new_question.md
 
 ## adapt-mesh-weighting
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/714
