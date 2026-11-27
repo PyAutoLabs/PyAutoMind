@@ -1523,7 +1523,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_cockpit_same_chat_and_late_window.md">M3.6g Cockpit: hand over in the kick-off chat, watch to the end…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/728">issue #728</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_cockpit_same_chat_and_late_window.md">M3.6g Cockpit: hand over in the kick-off chat, watch to the end…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/728">issue #728</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/729">PyAutoBrain#729</a></summary>
 
 ```
 Use the start-dev skill. active/shift_cockpit_same_chat_and_late_window.md
