@@ -13,7 +13,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 291 |
+| [Backlog](#backlog) | 296 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -53,11 +53,11 @@ _11 queued · 0 questions_
 
 **Shift**
 
-_(last shift 2026-11-26-pm2 — closed, nothing to review · [shift issue #610](https://github.com/PyAutoLabs/PyAutoMind/issues/610))_
+_(last shift 2026-11-27-pm — closed, nothing to review)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 17
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -107,6 +107,38 @@ Use the start-dev skill. draft/feature/autogalaxy/add_a_combined_profile_effecti
 
 </details>
 
+<details><summary>📋 <a href="draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md">Maintenance: [red] ci_status: PyAutoNerves/workflows/Nerves Board — failure</a> — autonerves · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautohands/maint_ci_pyautohands_dashboard.md">Maintenance: [red] ci_status: PyAutoHands/workflows/Dashboard — failure</a> — pyautohands · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautohands/maint_ci_pyautohands_dashboard.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautoinsight/maint_ci_pyautoinsight_pages_dashboard.md">Maintenance: [red] ci_status: PyAutoInsight/workflows/Pages Dashboard — failure</a> — pyautoinsight · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautoinsight/maint_ci_pyautoinsight_pages_dashboard.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md">Maintenance: [red] ci_status: PyAutoMemory/workflows/Dashboard — failure</a> — pyautomemory · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
 ```
@@ -123,39 +155,7 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md">Investigate Euclid Einstein-radius latent uncertainty collapse</a> — autofit · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 70
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 72
 
 <details><summary>📋 <a href="draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md">session_hook_propagate.yml bot-pushes the end-at-deliverable AGENTS.md block</a> — pyautomind · medium · supervised · high</summary>
 
@@ -1582,7 +1582,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 225 · ral 27 · wsl-data 20 · local-dev 16 · gpu 1
+Lanes: any 229 · ral 27 · wsl-data 20 · local-dev 17 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -2592,12 +2592,44 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>maintenance</b> — 19</summary>
+<summary><b>maintenance</b> — 24</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> — workspaces · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md">Maintenance: [red] ci_status: PyAutoNerves/workflows/Nerves Board — failure</a> — autonerves · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautohands/maint_ci_pyautohands_dashboard.md">Maintenance: [red] ci_status: PyAutoHands/workflows/Dashboard — failure</a> — pyautohands · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautohands/maint_ci_pyautohands_dashboard.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautoinsight/maint_ci_pyautoinsight_pages_dashboard.md">Maintenance: [red] ci_status: PyAutoInsight/workflows/Pages Dashboard — failure</a> — pyautoinsight · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautoinsight/maint_ci_pyautoinsight_pages_dashboard.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md">Maintenance: [red] ci_status: PyAutoMemory/workflows/Dashboard — failure</a> — pyautomemory · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md
 ```
 
 </details>
@@ -2614,6 +2646,14 @@ Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 
 ```
 Use the start-dev skill. draft/maintenance/workspaces/issue_templates_route_bugs_to_hub.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace_test/maint_no_run_autolens_workspace_test_imaging_visualization_modelin.md">Maintenance: SLOW since 2026-07-30: re-measured: times out at the 300s cap; JIT…</a> — autolens_workspace_test · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autolens_workspace_test/maint_no_run_autolens_workspace_test_imaging_visualization_modelin.md
 ```
 
 </details>
@@ -3122,75 +3162,75 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-27 | filed | <a href="draft/bug/autofit/nautilus_refuses_one_parameter_prior_factors_in_ep.md">Nautilus refuses one-parameter PriorFactors, so EP never updates them</a> |
+| 2026-11-27 | filed | <a href="draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md">Maintenance: [red] ci_status: PyAutoNerves/workflows/Nerves Board…</a> |
+| 2026-11-27 | filed | <a href="draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md">Maintenance: [red] ci_status: PyAutoMemory/workflows/Dashboard…</a> |
+| 2026-11-27 | filed | <a href="draft/maintenance/pyautoinsight/maint_ci_pyautoinsight_pages_dashboard.md">Maintenance: [red] ci_status: PyAutoInsight/workflows/Pages Dashboard…</a> |
+| 2026-11-27 | filed | <a href="draft/maintenance/pyautohands/maint_ci_pyautohands_dashboard.md">Maintenance: [red] ci_status: PyAutoHands/workflows/Dashboard…</a> |
+| 2026-11-27 | filed | <a href="draft/maintenance/autolens_workspace_test/maint_no_run_autolens_workspace_test_imaging_visualization_modelin.md">Maintenance: SLOW since 2026-07-30: re-measured: times out at the…</a> |
 | 2026-11-26 | issued | <a href="active/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-11-26 | issued | <a href="active/group_subhalo_sensitivity.md">The imaging <code>features/advanced/subhalo/sensitivity</code> example needs…</a> |
 | 2026-11-26 | issued | <a href="active/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autolens/deflections_simulator_no_psf_padding.md">PyAutoLens <code>via_deflections_galaxies_from</code> simulates without PSF…</a> |
-| 2026-11-26 | filed | <a href="draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md">Pooled Emcee and Zeus return wrong likelihoods, and Emcee leaves its…</a> |
-| 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
-| 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
-| 2026-11-26 | filed | <a href="draft/bug/autoarray/eager_lax_control_flow_recompiles_per_visualization_call.md">Eager lax control flow recompiles on every fit_for_visualization call</a> |
-| 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-26 | filed | <a href="draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md">Pooled Emcee and Zeus return wrong likelihoods, and Emcee leaves its…</a> |
+| 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
+| 2026-11-26 | filed | <a href="draft/bug/autofit/nautilus_cpu_pool_serial_sampler_stall.md">Nautilus on the CPU pool: sampler work runs serially in the parent…</a> |
+| 2026-11-26 | filed | <a href="draft/bug/autoarray/eager_lax_control_flow_recompiles_per_visualization_call.md">Eager lax control flow recompiles on every fit_for_visualization call</a> |
+| 2026-11-25 | issued | <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> |
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_ring_latent_placement.md">Does CPU placement of posterior derived quantities shorten a GPU…</a> |
 | 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
-| 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
-| 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
-| 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
-| 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
-| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
+| 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
+| 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
+| 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
+| 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
-| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
-| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
-| 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
-| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
-| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
+| 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
+| 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
+| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
+| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
-| 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
-| 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
-| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
+| 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
+| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
+| 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
+| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
-| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
-| 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
-| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
-| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
-| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 
 </details>
 
