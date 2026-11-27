@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: draft
 Filed: 2026-11-27
+Issued: 2026-11-27
 Epic: autonomous-orchestrators
 Phase: 14
 Consequence: judge
