@@ -1475,7 +1475,7 @@ Use the start-dev skill. active/group_subhalo_sensitivity.md
 
 </details>
 
-<details><summary>📋 <a href="active/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/727">issue #727</a> — issued 2026-11-27 — library-dev</summary>
+<details><summary>📋 <a href="active/heart_report_only_red_needs_no_shift_ack.md">M3.6h A Heart RED made only of report-only reasons needs no shift…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/727">issue #727</a> — issued 2026-11-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/730">PyAutoBrain#730</a></summary>
 
 ```
 Use the start-dev skill. active/heart_report_only_red_needs_no_shift_ack.md
