@@ -1423,7 +1423,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/fixed_light_dense_system_goes_sparse_under_r6_auto.md">Fixed-light harness: the "dense" S3 system builds a sparse numba inversion since…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/538">issue #538</a> — issued 2026-11-28 — workspace-dev</summary>
+<details><summary>📋 <a href="active/fixed_light_dense_system_goes_sparse_under_r6_auto.md">Fixed-light harness: the "dense" S3 system builds a sparse numba inversion since…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/538">issue #538</a> — issued 2026-11-28 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/539">autolens_profiling#539</a></summary>
 
 ```
 Use the start-dev skill. active/fixed_light_dense_system_goes_sparse_under_r6_auto.md

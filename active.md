@@ -3,7 +3,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/538
 - issued: 2026-11-28
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/539
 - worktree: /home/jammy/Code/PyAutoLabs-wt/fixed-light-dense-r6
 - repos:
   - autolens_profiling: feature/fixed-light-dense-r6
