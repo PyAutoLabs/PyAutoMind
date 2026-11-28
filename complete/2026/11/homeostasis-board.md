@@ -1,3 +1,31 @@
+Merged PyAutoBrain#748 (human /prm, 2026-11-28).
+
+Human direction 2026-11-28: tasks spread over boards by type, each paired with its orchestrator (Physiology). Mind keeps the human's intent, the record, and work promoted to it. This is the first step: the **Homeostasis (maintenance orchestrator)** board, hosted on the Brain board (not on Heart, which is the readiness verdict).
+
+**The board section** (`board/_homeostasis.py`, plus a `homeostasis.json` sidecar):
+- Findings come from the `batch maintain` sources, each with key, source, tier, repo, witness and status.
+- Status is read from Mind by the writer's marks: in progress, promoted, open, done, and a separate cleared list taken only from fresh, complete reads.
+- The headline says "not all-clear" for any unread, stale or partial source.
+- It fails soft: collection catches errors and SystemExit and has a 180 s bound. In the board job it reads the published Heart feed only.
+
+**The Mind dashboard:**
+- Generated glance prompts (a `Source-key:` header plus the writer's mark) leave Start here and the pick lists; one Homeostasis line replaces them.
+- Generated judge prompts sit in a "Promoted from Homeostasis" group.
+- `state.json` carries a yellow summary item.
+- The writer caps `Priority:` at normal.
+
+**Validation:**
+- A local render matched `batch maintain` exactly (41 findings: 26 judge, 15 glance). Statuses were open 39, promoted 2, cleared 1 (`ci:PyAutoHands:Dashboard`, whose draft can be closed).
+- Full suite 2844 passed.
+- Independent Opus review over 3 rounds: minor findings only, the last CLEAN.
+- Heart dev-ship GREEN.
+
+**Follow-ups:**
+- "done" needs Mind's close-out to carry the `Source-key:` (`draft/feature/pyautomind/close_out_carries_source_key_into_record.md`).
+- Just-in-time filing comes later.
+
+## Original prompt
+
 # Homeostasis board on the Brain board; generated glance work leaves the Mind dashboard
 
 Type: feature

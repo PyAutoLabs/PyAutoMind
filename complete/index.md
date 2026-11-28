@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2458 records across 11 buckets.
+2459 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -253,6 +253,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-report-only-red-no-ack](2026/11/heart-report-only-red-no-ack.md)
 - [help-docstrings-history](2026/11/help-docstrings-history.md)
 - [hilbert-image-mesh-frame-independent](2026/11/hilbert-image-mesh-frame-independent.md)
+- [homeostasis-board](2026/11/homeostasis-board.md)
 - [homepage-flow-polish](2026/11/homepage-flow-polish.md)
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)
