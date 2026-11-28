@@ -33,6 +33,19 @@
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
 
+## simple-cluster-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/536
+- issued: 2026-11-25
+- session: Codex desktop
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/537
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/simple-cluster-profiling
+- repos:
+  - autolens_profiling: feature/simple-cluster-profiling
+- prompt: active/simple_cluster_profiling.md
+- epic: cluster-usability
+- tier: judge
+
 ## adapt-mesh-weighting
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/714
 - issued: 2026-11-25

@@ -109,8 +109,8 @@ epic, never picked standalone.
 ## cluster-usability
 - title: Cluster usability — three datasets for visualization, profiling, inference and teaching
 - ledger: draft/feature/autolens/cluster_usability.md
-- status: Simple and Pandora figures live on PyAutoEyes. Nine MACS J0416 figures approved by the author and in review for publication.
-- notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532; validation of a present but malformed member CSV remains.
+- status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Seven-image Simple CPU profiling is in review. The standard 1″ image-plane grid recovers six of seven images. A 0.25″ grid recovers all seven at 4.34× the per-evaluation cost (51.1 vs 11.8 ms). Phase 3.2 sets the default grid; phase 3.5 profiles Pandora after #537 merges.
+- notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532. The Simple cache validation and CPU benchmark results are tracked in autolens_profiling#536.
 
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
