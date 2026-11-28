@@ -96,7 +96,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/741
 - issued: 2026-11-28
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/743
 - worktree: /home/jammy/Code/PyAutoLabs-wt/maintenance-brief-excludes-restarts
 - repos:
   - PyAutoBrain: feature/maintenance-brief-excludes-restarts
@@ -105,6 +106,7 @@
 - coordination: another chat may take parked_before_first_edit_holds_repo_claim (also PyAutoBrain claim code); whichever merges second rebases.
 - heart: STALE at the door (feed 11.8 h old), not RED.
 - tier: judge — merge mode: human /prm
+- next: human /prm PyAutoBrain#743 (judge). Independent review CLEAN; also fixes shadow proposals using up an answer's release (Q39–41 would otherwise never resume).
 
 ## parked-claim-not-a-claim
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/742
