@@ -1,3 +1,26 @@
+Merged PyAutoBrain#743 (human /prm, 2026-11-28).
+
+Human ruling 2026-11-28, from the review of shadow maintenance shift 2026-11-27-pm: **answered-question restarts stay out of maintenance shifts.** They restart in the next ordinary shift.
+
+Every resume path is gated for a brief with a `maintenance:` block, shadow or live:
+- `_brief.scope()` rejects resume records unless the brief names the task (an `/add` counts as named). Those tasks are listed under `backlog_gates.answered_deferred`, and the digest shows "Answered, left for the next ordinary shift".
+- The watcher's in-shift restart (`released_here`) restarts only named tasks or the shift's own picks.
+- `_batch.plan` is covered by `scope()`. Carry-over is unaffected.
+
+A deferred task's answer is never used up.
+
+**Also fixed:** a shadow shift's proposed picks were using up an answer's release (`parked_elsewhere`/`picked_in`), which would have stopped Q39–41 from ever resuming. Proposals are now skipped; live accounting is unchanged.
+
+**"NOT RECORDED":** it was a misleading fallback label, not a gap. A resumed pick now names the answer's release.
+
+**Checks:**
+- 9 new tests; 8 fail on main.
+- Full suite 2810 passed. Two local `test_prompt_budget` cases fail because of an old Node on the laptop; CI passes them.
+- Independent Opus review CLEAN.
+- Heart dev-ship GREEN.
+
+## Original prompt
+
 # A maintenance brief must not resume answered-question tasks
 
 Type: bug
