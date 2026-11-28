@@ -93,3 +93,17 @@
 - prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
 - repos:
   - PyAutoFit: (no branch; parked before implementation — stated bug did not reproduce)
+
+## maintenance-brief-excludes-restarts
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/741
+- issued: 2026-11-28
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/maintenance-brief-excludes-restarts
+- repos:
+  - PyAutoBrain: feature/maintenance-brief-excludes-restarts
+- prompt: active/maintenance_brief_excludes_answered_restarts.md
+- epic: autonomous-orchestrators (Phase 14 follow-up; human ruling 2026-11-28)
+- coordination: another chat may take parked_before_first_edit_holds_repo_claim (also PyAutoBrain claim code); whichever merges second rebases.
+- heart: STALE at the door (feed 11.8 h old), not RED.
+- tier: judge — merge mode: human /prm
