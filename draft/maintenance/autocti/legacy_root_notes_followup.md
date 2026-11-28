@@ -24,7 +24,7 @@ instruction to implement every item.
 
 - `draft/maintenance/autocti/cti_upkeep_epic.md` and its companion report:
   broader workspace, visualization and arcticpy upkeep.
-- `draft/docs/autocti/installation_docs_arcticpy_recipe.md`: installation guidance.
+- `complete/2026/11/installation_docs_arcticpy_recipe.md`: installation guidance (merged 2026-11-26).
 - `complete/2026/11/cti-database-reruns.md`:
   database and temporal rerun fixes (merged 2026-11-22).
 - Existing `scripts/dataset_1d/advanced/temporal/` examples already address part

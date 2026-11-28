@@ -294,7 +294,17 @@ is not a whole number refuses the brief.
 `worker-mode:` is the permission mode real workers run in (phase 3b). `auto` is
 the default the human chose on 2026-11-03: a worker that still needs a person
 shows `blocked` in `claude agents --json`, and after 15 minutes the watcher
-parks it for the digest instead of leaving it waiting. `bypassPermissions` is
+parks it for the digest instead of leaving it waiting. A parked task, or one
+whose worker ended with an open question, keeps its library for 15 minutes from
+the park. Until then the next task on that library waits and the shift stays
+open. After that the next task starts, and an answer that comes later restarts
+the parked task only once its library is free (PyAutoBrain#720, ruling (d) as
+amended 2026-11-24). A parked worker's session is still running, so at the end
+of the 15 minutes the watcher stops it, and frees the library only once that
+session has ended; the question stays in your inbox, and answering it restarts
+the task (ruling (d) as amended 2026-11-27). If the stop fails, or the session
+has not ended 10 minutes later, the library stays held and you are told.
+`bypassPermissions` is
 refused. `sandbox: yes` marks a test shift. (Until phase 3c it was the only
 brief a real worker could run under; the one-Mind-writer path lifted that — the
 workers' Mind changes now reach `main` only through the orchestrator.)
@@ -336,6 +346,19 @@ the review surface; the HTML packet is written only when `packet: yes`.
 ```markdown
 ## Digest
 
+### Review table
+2 to /prm (3 PRs) · 1 to answer · 1 blocked or not started
+
+| # | Task | Tier | Work | Note |
+|---|---|---|---|---|
+| | **Merge: your /prm** | | | |
+| 1 | [<prompt title>](<Mind prompt>) | judge | [PyAutoGalaxy#<n>](<url>) | tier judge |
+| 2 | [<prompt title>](<Mind prompt>) | glance | [PyAutoGalaxy#<m>](<url>) after PyAutoGalaxy#<n><br>[PyAutoLens#<k>](<url>) | merge-cap 0 reached this shift |
+| | **Answer: question on the issue** | | | |
+| 3 | [<prompt title>](<Mind prompt>) | judge | [PyAutoLens#<i>](<url>) | question on PyAutoLens#<i> |
+| | **Blocked or not started** | | | |
+| 4 | <slug> | — | — | autogalaxy held by <task> |
+
 ### Brief work
 - [<prompt title>](<link to the prompt>) (`<slug>`; small · PyAutoLens) — PyAutoLens#<n> — HEALTHY — glance
 - [<prompt title>](<link>) (`<slug>`; medium · PyAutoArray) — parked: awaiting-input (blocked on a person)
@@ -365,6 +388,30 @@ the review surface; the HTML packet is written only when `packet: yes`.
 ### Refusals
 - <task> — token-budget 100: 55 committed + 60 reserved per worker — 2× from <at>
 ```
+
+**The review table comes first** (PyAutoBrain#718): every named task and
+backlog pick in one table, numbered straight through so a reply can say "prm
+1–4, 6", under a count line. Each task sits in exactly one group, its most
+urgent, in this order; an empty group is left out:
+
+1. **Merge: your /prm** — awaiting /prm, CI green, running, unknown or absent,
+   a branch updated from main with CI not red, waits behind another PR, held on
+   an unknown workspace sweep, or merged in-turn with no merge slot. The late
+   sweep closes nothing out, so a PR still in CI at review time is yours.
+2. **Answer: question on the issue** — parked on an issue, or blocked on a person.
+3. **Fix: CI failed or crashed** — CI failed (also after a branch update),
+   crashed, abandoned, killed.
+4. **Blocked or not started** — not started (with the skip reason), dropped
+   (unless a PR of it still needs merging or fixing), obsolete, finished with
+   no PR or issue named.
+5. **Still running** — a worker still out at review time, or a close-out
+   checking or updating a PR.
+6. **Done** — merged, already merged, verdict posted.
+7. **Proposed (shadow)** — a shadow shift's proposals.
+
+`Work` lists each PR or issue as `repo#n` in merge order, with "after repo#m"
+where it waits. A carried-over task whose PRs you already merged is left out of
+the table, as it is of the entries below. The entries below are unchanged.
 
 Brief work and backlog picks stay separate, and **every backlog pick carries a
 one-line reason**: the brief's rule it was picked under, then the planner's

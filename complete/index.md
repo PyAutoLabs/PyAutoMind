@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2390 records across 11 buckets.
+2453 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,9 +121,15 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/11
 
+- [a-compound-prior-model-reloaded-from-model](2026/11/a-compound-prior-model-reloaded-from-model.md)
+- [adapt-image-is-the-s-n-map](2026/11/adapt-image-is-the-s-n-map.md)
+- [adapt-mesh-weighting-galaxy](2026/11/adapt-mesh-weighting-galaxy.md)
+- [adapt-mesh-weighting-library](2026/11/adapt-mesh-weighting-library.md)
+- [adapt-mesh-weighting-workspaces](2026/11/adapt-mesh-weighting-workspaces.md)
 - [agent-help-text-rot](2026/11/agent-help-text-rot.md)
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
 - [api-reference-polish](2026/11/api-reference-polish.md)
+- [arcticpy-27-git-source](2026/11/arcticpy-27-git-source.md)
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
 - [arcticpy-wheel-cache-libgsl](2026/11/arcticpy-wheel-cache-libgsl.md)
 - [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
@@ -156,8 +162,10 @@ markers; everything below GENERATED is rebuilt.
 - [ci-verdict](2026/11/ci-verdict.md)
 - [close-out-guard](2026/11/close-out-guard.md)
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [cluster-family-fit-figures](2026/11/cluster-family-fit-figures.md)
 - [cluster-regime-narrative](2026/11/cluster-regime-narrative.md)
 - [cockpit-footer-broca](2026/11/cockpit-footer-broca.md)
+- [cockpit-same-chat-late-window](2026/11/cockpit-same-chat-late-window.md)
 - [codex-orchestrator](2026/11/codex-orchestrator.md)
 - [codex-shift-launch-parity](2026/11/codex-shift-launch-parity.md)
 - [colab-gate-colossus-rationale-is-stale-once](2026/11/colab-gate-colossus-rationale-is-stale-once.md)
@@ -169,14 +177,17 @@ markers; everything below GENERATED is rebuilt.
 - [compound-prior-model-json](2026/11/compound-prior-model-json.md)
 - [config-yaml-parse-cache](2026/11/config-yaml-parse-cache.md)
 - [convert-latent-prefix-naming](2026/11/convert-latent-prefix-naming.md)
+- [convolver-blurring-image-warning](2026/11/convolver-blurring-image-warning.md)
 - [convolver-fft-frame-from-mask](2026/11/convolver-fft-frame-from-mask.md) — - `ConvolverState` sizes its FFT frame from the mask instead of the native array: `fft_shape = next_fast_len(m…
 - [corner-anesthetic-speed](2026/11/corner-anesthetic-speed.md)
 - [cortex-agents-slim](2026/11/cortex-agents-slim.md) — PR is the tracking surface
 - [cortex-dashboard-status-split](2026/11/cortex-dashboard-status-split.md)
 - [cortex-development-split](2026/11/cortex-development-split.md)
 - [cortex-ledger-merge-pages](2026/11/cortex-ledger-merge-pages.md)
+- [cortex-ledger-merge-refresh](2026/11/cortex-ledger-merge-refresh.md)
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
 - [cortex-state-md-tables](2026/11/cortex-state-md-tables.md)
+- [cosmos-web-ring-mask-dtype](2026/11/cosmos-web-ring-mask-dtype.md)
 - [critical-curves-jax-viz-feasibility](2026/11/critical-curves-jax-viz-feasibility.md)
 - [cti-api-rst-rewrite](2026/11/cti-api-rst-rewrite.md)
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
@@ -194,12 +205,14 @@ markers; everything below GENERATED is rebuilt.
 - [dashboard-recent-lists-planned-tasks-twice](2026/11/dashboard-recent-lists-planned-tasks-twice.md) — shipped
 - [dashboard-titles-filed-line](2026/11/dashboard-titles-filed-line.md) — shipped by shift worker 2026-11-16-pm as Mind ledger ops (no repo PR), tracked on PyAutoMind#579. Moved `Filed…
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
+- [data_temp_write_paths_not_ignored](2026/11/data_temp_write_paths_not_ignored.md)
 - [database-dataset-fits](2026/11/database-dataset-fits.md)
 - [dataset-model-free-grid-offset-pytree-roundtrip](2026/11/dataset-model-free-grid-offset-pytree-roundtrip.md)
 - [delaunay-interpolated-plot](2026/11/delaunay-interpolated-plot.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
 - [deliverable-block-wave-575](2026/11/deliverable-block-wave-575.md)
 - [dev-metrics-boards](2026/11/dev-metrics-boards.md)
+- [digest-review-table](2026/11/digest-review-table.md) — PyAutoBrain#719. The shift digest opens with a numbered `### Review table` (after the closed-early line and in…
 - [dna-policies-section](2026/11/dna-policies-section.md)
 - [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
@@ -209,8 +222,10 @@ markers; everything below GENERATED is rebuilt.
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
 - [ellipse-fit-filenames](2026/11/ellipse-fit-filenames.md)
 - [ellipse-multipole-latent-missing-m](2026/11/ellipse-multipole-latent-missing-m.md) — `af.Model(ag.EllipseMultipole)` / `af.Model(ag.EllipseMultipoleScaled)` built without an explicit `m` made `la…
+- [emcee-zeus-default-one-core](2026/11/emcee-zeus-default-one-core.md)
 - [ep-projected-model-shared-prior](2026/11/ep-projected-model-shared-prior.md)
 - [euclid-nautilus-batch](2026/11/euclid-nautilus-batch.md)
+- [example-analysis-should-reduce-with-xp-sum](2026/11/example-analysis-should-reduce-with-xp-sum.md) — superseded — PyAutoFit#1775 ("refactor: example Analysis reduces chi-squared with xp.sum", merged 2026-11-15) …
 - [example-analysis-xp-sum](2026/11/example-analysis-xp-sum.md)
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
@@ -228,12 +243,15 @@ markers; everything below GENERATED is rebuilt.
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [gradient-json-point-label](2026/11/gradient-json-point-label.md) — already shipped — autolens_profiling#518 (9d2ee2d3d, merged 2026-11-02 22:38, filed 16:18 the same day) record…
 - [grid-factor-results](2026/11/grid-factor-results.md)
+- [grid-search-cores-auto](2026/11/grid-search-cores-auto.md)
 - [group-slam-sigma-bound-guard](2026/11/group-slam-sigma-bound-guard.md)
 - [health-review-cloud-observation](2026/11/health-review-cloud-observation.md) — - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every clo…
 - [heart-dev-scope](2026/11/heart-dev-scope.md)
 - [heart-green-lane](2026/11/heart-green-lane.md)
 - [heart-health-rerun-stale-push](2026/11/heart-health-rerun-stale-push.md)
+- [heart-report-only-red-no-ack](2026/11/heart-report-only-red-no-ack.md)
 - [help-docstrings-history](2026/11/help-docstrings-history.md)
+- [hilbert-image-mesh-frame-independent](2026/11/hilbert-image-mesh-frame-independent.md)
 - [homepage-flow-polish](2026/11/homepage-flow-polish.md)
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)
@@ -250,9 +268,11 @@ markers; everything below GENERATED is rebuilt.
 - [hpc-sync-zip-count-set-e](2026/11/hpc-sync-zip-count-set-e.md)
 - [hpc-tmpdir-slurm-default](2026/11/hpc-tmpdir-slurm-default.md)
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
+- [hygiene-ledger](2026/11/hygiene-ledger.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
 - [insight-lint-point-source-family](2026/11/insight-lint-point-source-family.md)
 - [installation-docs-polish](2026/11/installation-docs-polish.md)
+- [installation_docs_arcticpy_recipe](2026/11/installation_docs_arcticpy_recipe.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
 - [interferometer-fit-png-show-zoomed-no-zoom](2026/11/interferometer-fit-png-show-zoomed-no-zoom.md)
@@ -261,6 +281,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)
 - [jax_grad_of_sersic_stellar_mass_deflections](2026/11/jax_grad_of_sersic_stellar_mass_deflections.md)
+- [jit-cache-not-hit-modeling-visualization](2026/11/jit-cache-not-hit-modeling-visualization.md)
 - [knn-partial-point-block](2026/11/knn-partial-point-block.md) — - `get_interpolation_weights` sliced each point block with `lax.dynamic_slice`, which clamps the last partial …
 - [lane-fail-closed](2026/11/lane-fail-closed.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
@@ -278,6 +299,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p4c-runners](2026/11/likelihood-lifecycle-p4c-runners.md)
 - [likelihood-lifecycle-p4e-ingest](2026/11/likelihood-lifecycle-p4e-ingest.md)
 - [likelihood-lifecycle-p4e-rerun-ingest](2026/11/likelihood-lifecycle-p4e-rerun-ingest.md)
+- [likelihood-lifecycle-p5-setup-fixes](2026/11/likelihood-lifecycle-p5-setup-fixes.md)
 - [likelihood-lifecycle-p5a-nerves](2026/11/likelihood-lifecycle-p5a-nerves.md)
 - [likelihood-lifecycle-p5b-array](2026/11/likelihood-lifecycle-p5b-array.md)
 - [likelihood-lifecycle-p5b3-array](2026/11/likelihood-lifecycle-p5b3-array.md)
@@ -285,11 +307,18 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p5c3](2026/11/likelihood-lifecycle-p5c3.md)
 - [likelihood-lifecycle-p5d-fit](2026/11/likelihood-lifecycle-p5d-fit.md)
 - [likelihood-lifecycle-p5e](2026/11/likelihood-lifecycle-p5e.md)
+- [likelihood-lifecycle-p5f](2026/11/likelihood-lifecycle-p5f.md)
+- [likelihood-lifecycle-p5g](2026/11/likelihood-lifecycle-p5g.md)
+- [likelihood-lifecycle-p5h](2026/11/likelihood-lifecycle-p5h.md)
 - [likelihood-lifecycle-p6-delaunay-hilbert-roughness](2026/11/likelihood-lifecycle-p6-delaunay-hilbert-roughness.md)
 - [likelihood-lifecycle-p6a-gradient-harness](2026/11/likelihood-lifecycle-p6a-gradient-harness.md)
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
 - [likelihood-lifecycle-p6c-gradient-walls](2026/11/likelihood-lifecycle-p6c-gradient-walls.md)
 - [likelihood-lifecycle-p6d-gradient-ingest](2026/11/likelihood-lifecycle-p6d-gradient-ingest.md)
+- [likelihood-lifecycle-r6-default-auto](2026/11/likelihood-lifecycle-r6-default-auto.md)
+- [likelihood-lifecycle-r6b-use-jax-sweep](2026/11/likelihood-lifecycle-r6b-use-jax-sweep.md)
+- [likelihood-lifecycle-r6c-assistant-hpc](2026/11/likelihood-lifecycle-r6c-assistant-hpc.md)
+- [likelihood-lifecycle-r6d-prerelease-fixes](2026/11/likelihood-lifecycle-r6d-prerelease-fixes.md)
 - [live-shift-view](2026/11/live-shift-view.md)
 - [live-shift-worker-gaps](2026/11/live-shift-worker-gaps.md) — pilot 4c follow-up; issue PyAutoBrain#594
 - [looks-shipped-guard-false-positives](2026/11/looks-shipped-guard-false-positives.md) — 33 → 1
@@ -306,6 +335,10 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-maps-image-plane](2026/11/magnification-maps-image-plane.md)
 - [magnification-maps-source-plane](2026/11/magnification-maps-source-plane.md)
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
+- [maintenance-brief](2026/11/maintenance-brief.md)
+- [maintenance-finding-adapters](2026/11/maintenance-finding-adapters.md)
+- [maintenance-hygiene-timing-sources](2026/11/maintenance-hygiene-timing-sources.md)
+- [maintenance-prompt-writer](2026/11/maintenance-prompt-writer.md)
 - [matern-vendor-bessel-kve](2026/11/matern-vendor-bessel-kve.md) — - Vendored tfp's `bessel_kve` K-branch (Temme series z<=2, Steed continued fraction z>2, forward recurrence, O…
 - [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
 - [merge-actor-audit](2026/11/merge-actor-audit.md)
@@ -315,14 +348,29 @@ markers; everything below GENERATED is rebuilt.
 - [model-bullet-parameter-count-drift](2026/11/model-bullet-parameter-count-drift.md)
 - [model-identifier-0d-array](2026/11/model-identifier-0d-array.md)
 - [model-pytree-fixed-attributes](2026/11/model-pytree-fixed-attributes.md)
+- [multi_dataset_jax_likelihood_delaunay_wrong_likelihood](2026/11/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md) — retired, not fixed — the human answered Q29 "retire" (2026-11-26). The September −72070 vs 1995 mismatch never…
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
 - [nautilus-30d-diagnostics](2026/11/nautilus-30d-diagnostics.md) — Full-30D Nautilus plotting cost attribution and evidence-discrepancy investigation merged unchanged during the…
+- [nautilus-30d-evidence-check](2026/11/nautilus-30d-evidence-check.md)
+- [nautilus-30d-independent](2026/11/nautilus-30d-independent.md)
+- [nautilus-30d-matched-ess](2026/11/nautilus-30d-matched-ess.md)
+- [nautilus-bound-cadence](2026/11/nautilus-bound-cadence.md)
+- [nautilus-bound-core-scaling](2026/11/nautilus-bound-core-scaling.md)
+- [nautilus-bound-geometry](2026/11/nautilus-bound-geometry.md)
 - [nautilus-compact-plot-adapter](2026/11/nautilus-compact-plot-adapter.md) — - Validation: full suite 4298 passes / 2 skips / 1 expected failure at e57611dc6; exact-head Python 3.12/3.13/…
 - [nautilus-cpu-campaign-setup](2026/11/nautilus-cpu-campaign-setup.md) — Experimental phase 0b.1 implementation and bounded local pilot merged unchanged. Full phase 0b remains incompl…
 - [nautilus-cpu-profiling-baseline](2026/11/nautilus-cpu-profiling-baseline.md) — Phase 0a controlled CPU harness and exploratory local pilot merged unchanged. Phase 0b canonical representativ…
+- [nautilus-ellipsoid-weight-update](2026/11/nautilus-ellipsoid-weight-update.md)
 - [nautilus-ep-use-jax-guard](2026/11/nautilus-ep-use-jax-guard.md) — superseded — PyAutoFit 196abf39a (2026-10-08) "Analysis.is_jax as the single JAX probe": Nautilus reads `analy…
+- [nautilus-gpu-feed](2026/11/nautilus-gpu-feed.md)
 - [nautilus-pin-tracks-autofit](2026/11/nautilus-pin-tracks-autofit.md) — already shipped — PyAutoNerves#169 (merge 8eca4b3, 2026-09-15), record `complete/2026/09/colab-bootstrap-lazy-…
+- [nautilus-ring-gpu-feed](2026/11/nautilus-ring-gpu-feed.md)
+- [nautilus-shell-efficiency](2026/11/nautilus-shell-efficiency.md)
+- [nautilus-shell-geometry-signal](2026/11/nautilus-shell-geometry-signal.md)
+- [nautilus-weight-whole-fit](2026/11/nautilus-weight-whole-fit.md)
+- [nautilus-whole-fit-geometry](2026/11/nautilus-whole-fit-geometry.md)
+- [nautilus-worker-headroom](2026/11/nautilus-worker-headroom.md)
 - [nautilus_workload_transfer](2026/11/nautilus_workload_transfer.md)
 - [nerves-false-workspace-stale](2026/11/nerves-false-workspace-stale.md) — already shipped — PyAutoNerves#203 (issue #202, merged 2026-10-17), record `complete/2026/10/workspace-freshne…
 - [new-user-guide-visuals](2026/11/new-user-guide-visuals.md)
@@ -331,6 +379,7 @@ markers; everything below GENERATED is rebuilt.
 - [nfwtruncatedsph-convergence-loses-precision-near-scale-radius](2026/11/nfwtruncatedsph-convergence-loses-precision-near-scale-radius.md)
 - [nfwtruncatedsph-small-radius-deflection](2026/11/nfwtruncatedsph-small-radius-deflection.md)
 - [nfwtruncatedsph-total-mass](2026/11/nfwtruncatedsph-total-mass.md)
+- [nightly-rehearsal-ancestry](2026/11/nightly-rehearsal-ancestry.md)
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
 - [no-untimed-network-downloads-check](2026/11/no-untimed-network-downloads-check.md)
 - [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)
@@ -340,6 +389,7 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [one-repos-yaml-reader](2026/11/one-repos-yaml-reader.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
+- [parked-hold-grace](2026/11/parked-hold-grace.md)
 - [plot-grid-small-datasets-indexes](2026/11/plot-grid-small-datasets-indexes.md)
 - [plot-rst-missing-exports](2026/11/plot-rst-missing-exports.md)
 - [plot-utils-critical-curves-docstrings](2026/11/plot-utils-critical-curves-docstrings.md)
@@ -363,7 +413,9 @@ markers; everything below GENERATED is rebuilt.
 - [redshift-angles-guide](2026/11/redshift-angles-guide.md)
 - [reduce-session-token-load](2026/11/reduce-session-token-load.md) — PR is the tracking surface
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
+- [regression-test-nautilus-ep-default](2026/11/regression-test-nautilus-ep-default.md)
 - [release-rehearsed-shas](2026/11/release-rehearsed-shas.md)
+- [remove-r6-sweep-pins](2026/11/remove-r6-sweep-pins.md)
 - [repos-sync-optin-block](2026/11/repos-sync-optin-block.md) — shipped in PyAutoMind#539 (commit dc471e1d6), narrowed scope: option (a) of the 2026-11-05 re-size, chosen by …
 - [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already shipped — closed as stale draft. Commit 679b1319f (2026-10-16, "test: Mind suite green on main — shado…
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
@@ -378,6 +430,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-seed-reproducibility](2026/11/search-seed-reproducibility.md) — already shipped — PyAutoFit#1686 (5bf057f2, 2026-10-14; search-ext A4b), record `complete/2026/10/search-ext-a…
 - [sed-waveband-search-cap](2026/11/sed-waveband-search-cap.md)
 - [seed-samplers-byte-stable](2026/11/seed-samplers-byte-stable.md) — Seeded every search in the autofit_visualization gallery producers (seed=1 on DynestyStatic, Emcee, Zeus, LBFG…
+- [sensitivity-slam-source-pixelized-mappervalued](2026/11/sensitivity-slam-source-pixelized-mappervalued.md)
 - [sersic-products-read-sed-output-dir](2026/11/sersic-products-read-sed-output-dir.md) — already shipped — euclid_strong_lens_modeling_pipeline 126167b00 (2026-10-05) "catalogue: read Sersic fits fro…
 - [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…
 - [shift-defaults-4-workers-5m](2026/11/shift-defaults-4-workers-5m.md)
@@ -385,6 +438,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-end-cloud-sweep](2026/11/shift-end-cloud-sweep.md)
 - [shift-launch-preflight](2026/11/shift-launch-preflight.md)
 - [shift-ledger-edit-op](2026/11/shift-ledger-edit-op.md)
+- [shift-ledger-env-settings](2026/11/shift-ledger-env-settings.md)
 - [shift-library-slot-frees-after-merge](2026/11/shift-library-slot-frees-after-merge.md)
 - [shift-merges-in-order](2026/11/shift-merges-in-order.md)
 - [shift-named-tasks-and-planner-skips](2026/11/shift-named-tasks-and-planner-skips.md)
@@ -402,8 +456,15 @@ markers; everything below GENERATED is rebuilt.
 - [simulator-poisson-flag-guard](2026/11/simulator-poisson-flag-guard.md) — - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_pois…
 - [simulator-roundoff-control](2026/11/simulator-roundoff-control.md)
 - [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
+- [skip_fit_output_no_longer_gates_save_results_docs_drift](2026/11/skip_fit_output_no_longer_gates_save_results_docs_drift.md)
 - [slam-simultaneous-subhalo-grid-search](2026/11/slam-simultaneous-subhalo-grid-search.md)
+- [slam-source-parametric-model-has-no-centre](2026/11/slam-source-parametric-model-has-no-centre.md)
+- [smoke-cache-stats-warnings-nameerror](2026/11/smoke-cache-stats-warnings-nameerror.md)
 - [smoke-install-tfp-comment-sweep](2026/11/smoke-install-tfp-comment-sweep.md) — - Comment-only sweep after PyAutoArray#694 (record complete/2026/11/matern-vendor-bessel-kve.md): replaced the…
+- [smoke-sha-gate-date-drift](2026/11/smoke-sha-gate-date-drift.md)
+- [smoke-sha-gate-tests-clock-time-bomb](2026/11/smoke-sha-gate-tests-clock-time-bomb.md)
+- [sparse-routing-assertions-r6](2026/11/sparse-routing-assertions-r6.md)
+- [sparse-terms-nufft-origin-and-mask-compatibility](2026/11/sparse-terms-nufft-origin-and-mask-compatibility.md)
 - [stale-auto-simulated-cluster-dataset](2026/11/stale-auto-simulated-cluster-dataset.md)
 - [stale-enable-pytrees-register-model-advice-in](2026/11/stale-enable-pytrees-register-model-advice-in.md)
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)
@@ -411,6 +472,7 @@ markers; everything below GENERATED is rebuilt.
 - [stellar-m-l-gradient-profiles-sersicgradient-piv](2026/11/stellar-m-l-gradient-profiles-sersicgradient-piv.md)
 - [substructure-halo-arrays-overflow](2026/11/substructure-halo-arrays-overflow.md)
 - [substructure-padded-slot-grad](2026/11/substructure-padded-slot-grad.md)
+- [substructure-util-zero-padded-halo-slots-make](2026/11/substructure-util-zero-padded-halo-slots-make.md)
 - [sweep-followups](2026/11/sweep-followups.md)
 - [three-autos-public-framing](2026/11/three-autos-public-framing.md)
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
@@ -424,6 +486,7 @@ markers; everything below GENERATED is rebuilt.
 - [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
 - [website-lensing-intro](2026/11/website-lensing-intro.md) — - Added the approved three-sentence strong-lensing introduction with the autolens_assistant 2D schematic befor…
+- [wiki-currency-install-retry](2026/11/wiki-currency-install-retry.md)
 - [worker-model-effort](2026/11/worker-model-effort.md)
 - [workspace-dataset-gallery](2026/11/workspace-dataset-gallery.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)

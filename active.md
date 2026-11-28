@@ -33,76 +33,6 @@
 - note: research, no claim/worktree. Rectangular SMA: zero source after source_pix[1] makes mass_total[1] flat on BOTH routes (A100 + numba seed 0 "converged" rows invalid). Datacube: ~50% not-PD evaluations, in-run values don't reproduce serially (+106 nat outlier). Remedy pick parked
 - tier: supervised — merge mode: human /prm
 
-## sensitivity_slam_source_pixelized_mappervalued
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
-- issued: 2026-11-23
-- session: shift worker 2026-11-23-am3 (codex:b1a928033a0d472f97e99ca81604b708)
-- status: awaiting-input
-- next: choose Ludlow NFW or generalized NFW on issue 685 and resume local adec6521
-- worktree: /home/jammy/Code/PyAutoLabs-wt/sensitivity-slam-source-pixelized
-- repos:
-  - autolens_workspace: feature/sensitivity-slam-source-pixelized
-- prompt: active/sensitivity_slam_source_pixelized_mappervalued.md
-- tier: glance
-
-## sparse_terms_nufft_origin_and_mask_compatibility
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/707
-- issued: 2026-11-23
-- session: shift worker 2026-11-23-am3 (codex:1b72ba278ac443b1bf858031a61c1c9a)
-- status: awaiting-input
-- prompt: active/sparse_terms_nufft_origin_and_mask_compatibility.md
-- question: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7099834237
-- next: Resolve PyAutoGalaxy FITS round-trip scope and coordinate the reader with the aggregator-reload task before claiming worktrees.
-- tier: judge — supervised, human /prm
-
-## smoke_cache_stats_warnings_nameerror
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365
-- session: shift worker 2026-11-24-am (codex:64472140ca8443f8a5e1ce9c73f90fc7)
-- status: awaiting-input
-- prompt: active/smoke_cache_stats_warnings_nameerror.md
-- question: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
-- next: #368 claim cleared 2026-11-24 (PyAutoHeart#369 merged; record complete/2026/11/heart-health-rerun-stale-push.md) — resumable.
-
-## multi_dataset_jax_likelihood_delaunay_wrong_likelihood
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
-- issued: 2026-11-24
-- session: shift worker 2026-11-24-am (01a20c95-1f26-72d0-8529-1a903019348a)
-- status: awaiting-input
-- question: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
-- prompt: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
-- tier: judge — supervised, human /prm
-- next: Retire the historical report or supply the September FITS files and exact stack/config. Both numerical assertions passed on workspace main 48f40953.
-
-## digest-review-table
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/718
-- issued: 2026-11-24
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/719
-- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/606
-- worktree: /home/jammy/Code/PyAutoLabs-wt/digest-review-table
-- repos:
-  - PyAutoBrain: feature/digest-review-table
-  - PyAutoMind: feature/digest-review-table
-- prompt: active/digest_review_action_table.md
-- coordination: human-approved 2026-11-24 ("Release after 15 min", "fix it first" before the gate shift) — PyAutoBrain shared with parked-hold-grace (PyAutoBrain#720; _orchestrator.py, AUTONOMY.md) while #719 (_digest.py) awaits /prm
-- epic: autonomous-orchestrators (M3; before the M3 gate shift; folds M3.3 slice 2 item 1)
-- tier: judge — merge mode: human /prm
-
-## parked-hold-grace
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/720
-- issued: 2026-11-24
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/parked-hold-grace
-- repos:
-  - PyAutoBrain: feature/parked-hold-grace
-  - PyAutoMind: feature/parked-hold-grace
-- prompt: active/shift_closes_early_with_held_tasks_unstarted.md
-- coordination: human-approved 2026-11-24 — PyAutoBrain shared with digest-review-table (PyAutoBrain#719, _digest.py); PyAutoMind shared too (batches/AGENTS.md, a different section from #606)
-- epic: autonomous-orchestrators (M3; before the M3 gate shift; amends ruling (d))
-- tier: judge — merge mode: human /prm
-
 ## simple-cluster-profiling
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/536
 - issued: 2026-11-25
@@ -116,177 +46,6 @@
 - epic: cluster-usability
 - tier: judge
 
-## cluster-family-fit-figures
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/883
-- issued: 2026-11-24
-- session: Codex desktop
-- status: awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/884
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/890
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/891
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/884
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/890
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/891
-- release-gate: PyAutoLens
-- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/20
-- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/22
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/38
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/687
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/family-plot-api
-- repos:
-  - PyAutoLens: feature/family-plot-api
-  - autolens_workspace: feature/family-plot-api
-
-## nautilus-bound-geometry
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/18
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/19
-- prompt: active/nautilus_bound_geometry_attribution.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-geometry
-- retained-repos: autofit_profiling (feature/nautilus-bound-geometry); PR #19 remains in review. Coding claim transferred to nautilus-whole-fit-geometry.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-whole-fit-geometry
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/20
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/21
-- prompt: active/nautilus_whole_fit_geometry.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-whole-fit-geometry
-- retained-repos: autofit_profiling (feature/nautilus-whole-fit-geometry); PR #21 awaits human review. Coding claim transferred to nautilus-ellipsoid-weight-update.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-ellipsoid-weight-update
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/22
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/23
-- prompt: active/nautilus_ellipsoid_weight_update.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ellipsoid-weight-update
-- retained-repos: autofit_profiling (feature/nautilus-ellipsoid-weight-update); PR #23 awaits human review. Coding claim transferred to nautilus-weight-whole-fit.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-weight-whole-fit
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/24
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/25
-- prompt: active/nautilus_weight_whole_fit.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-weight-whole-fit
-- retained-repos: autofit_profiling (feature/nautilus-weight-whole-fit); PR #25 awaits human review. Coding claim transferred to nautilus-bound-cadence.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-bound-cadence
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/26
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/27
-- prompt: active/nautilus_bound_cadence.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-cadence
-- retained-repos: autofit_profiling (feature/nautilus-bound-cadence); PR #27 awaits human review. Coding claim transferred to nautilus-worker-headroom.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-worker-headroom
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/28
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/29
-- prompt: active/nautilus_worker_headroom.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-worker-headroom
-- retained-repos: autofit_profiling (feature/nautilus-worker-headroom); PR #29 awaits review. Coding claim transferred to nautilus-30d-evidence-check.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-30d-evidence-check
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/30
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/31
-- prompt: active/nautilus_30d_evidence_check.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-evidence-check
-- retained-repos: autofit_profiling (feature/nautilus-30d-evidence-check); PR #31 awaits review. Coding claim transferred to nautilus-30d-independent.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-30d-independent
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/32
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/33
-- prompt: active/nautilus_30d_independent.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-independent
-- retained-repos: autofit_profiling (feature/nautilus-30d-independent); PR #33 awaits review. Coding claim transferred to nautilus-30d-matched-ess.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-30d-matched-ess
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/34
-- issued: 2026-11-24
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/35
-- prompt: active/nautilus_30d_matched_ess.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-30d-matched-ess
-- retained-repos: autofit_profiling (feature/nautilus-30d-matched-ess); PR #35 awaits review. Coding claim transferred to nautilus-shell-efficiency.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-shell-efficiency
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/36
-- issued: 2026-11-25
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/37
-- prompt: active/nautilus_shell_efficiency.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-efficiency
-- retained-repos: autofit_profiling (feature/nautilus-shell-efficiency); PR #37 awaits review. Coding claim transferred to nautilus-shell-geometry-signal.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-shell-geometry-signal
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/38
-- issued: 2026-11-25
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/39
-- prompt: active/nautilus_shell_geometry_signal.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-shell-geometry-signal
-- retained-repos: autofit_profiling (feature/nautilus-shell-geometry-signal); PR #39 awaits review. Coding claim transferred to nautilus-bound-core-scaling.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-bound-core-scaling
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/40
-- issued: 2026-11-25
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/41
-- prompt: active/nautilus_bound_core_scaling.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-bound-core-scaling
-- retained-repos: autofit_profiling (feature/nautilus-bound-core-scaling); PR #41 awaits review. Coding claim transferred to nautilus-gpu-feed.
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## likelihood-lifecycle-p5f
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/688
-- issued: 2026-11-25
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-shipped, awaiting-merge (all 3 PRs OPEN: PR1 autolens_workspace#689, PR2 autolens_workspace#690 (merge after #689), PR3 HowToLens#139; merge with/after the library release carrying 5A–5E + banner)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/689
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/139
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/690
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5f
-- repos:
-  - autolens_workspace: feature/likelihood-lifecycle-p5f1-workspace
-  - autolens_workspace: feature/likelihood-lifecycle-p5f2-slam
-  - HowToLens: feature/likelihood-lifecycle-p5f3-howtolens
-- prompt: active/likelihood_lifecycle_p5f_workspace_setup.md
-- coordination: human-approved claim override 2026-11-25 for autolens_workspace (held by `cluster-family-fit-figures` PR #687: scripts/cluster/plot.py + generated indexes; and `sensitivity_slam_source_pixelized_mappervalued`: subhalo/sensitivity/slam_source_pixelized.py, which 5F leaves untouched). Whichever merges second regenerates llms-full.txt / workspace_index.json.
-- epic: likelihood-lifecycle (phase 5F; three PRs; merge with/after the release carrying 5A–5E + banner)
-- tier: judge — merge mode: human /prm
-
 ## adapt-mesh-weighting
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/714
 - issued: 2026-11-25
@@ -294,56 +53,7 @@
 - status: research (phases 1-2 run in the science project Science/development/adapt_snr_cap; no claim/worktree until gate 2)
 - prompt: active/make_the_source_adapt_image_hilbert_image.md
 - note: research, no claim/worktree. Library phase (PyAutoArray, PyAutoGalaxy), workspace phase (autolens_workspace) and docs are filed as their own prompts after the human judges the fits; suggested branch feature/adapt-mesh-weighting. Human added 5 COWLS M25 lenses (F150W, F277W) on 2026-11-25.
-- next: gate 1, the human picks 1-2 candidate weightings from Science/development/adapt_snr_cap/results/weighting/index.html
-- tier: judge — merge mode: human /prm
-
-## nautilus-gpu-feed
-- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/42
-- issued: 2026-11-25
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/43
-- prompt: active/nautilus_gpu_feed.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-gpu-feed
-- repos:
-  - autofit_profiling: feature/nautilus-gpu-feed
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## nautilus-ring-gpu-feed
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/74
-- issued: 2026-11-25
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/75
-- prompt: active/nautilus_ring_gpu_feed.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dev/nautilus-ring-gpu-feed
-- retained-repos: autolens_inference (feature/nautilus-ring-gpu-feed), awaiting review
-- epic: nautilus-fast-likelihoods
-- tier: judge — merge mode: human /prm
-
-## likelihood-lifecycle-p5g
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/191
-- issued: 2026-11-25
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release — wiki-currency checks released autolens)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/192
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5g
-- repos:
-  - autolens_assistant: feature/likelihood-lifecycle-p5g-assistant
-- prompt: active/likelihood_lifecycle_p5g_assistant_setup.md
-- epic: likelihood-lifecycle (phase 5G; merge with/after the library release)
-- tier: judge — merge mode: human /prm
-
-## likelihood-lifecycle-p5h
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/141
-- issued: 2026-11-25
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5 orchestrator)
-- status: workspace-shipped, awaiting-merge (euclid_strong_lens_modeling_pipeline#142 OPEN f80ccef; merge with/after the library release; HPCPullPyAuto before RAL use; at close-out, retire draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md as superseded)
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5h
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/likelihood-lifecycle-p5h-setup
-- prompt: active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md
-- epic: likelihood-lifecycle (phase 5H; merge with/after the library release; HPCPullPyAuto before RAL use)
+- next: phases 1-3 shipped and released 2026-11-26 (records complete/2026/11/adapt-mesh-weighting-library.md, -galaxy.md, -workspaces.md; libraries 2026.11.26.1). Open follow-ups: draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md (re-scope), rectangular meshes (draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md), interferometer (draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md); human to judge whether this research task can close
 - tier: judge — merge mode: human /prm
 
 ## nautilus-ring-latent-placement
@@ -357,24 +67,68 @@
 - epic: nautilus-fast-likelihoods
 - tier: judge — merge mode: human /prm
 
-## likelihood-lifecycle-p5-setup-fixes
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/756
+## intake-memory-workspace-root
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/723
 - issued: 2026-11-25
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: library-shipped, awaiting-merge (judge tier: human /prm; merge Fit → Galaxy → Lens; no workspace impact)
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1798
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/892
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1798
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/757
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/892
-- release-gate: PyAutoFit, PyAutoGalaxy, PyAutoLens
-- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p5-setup-fixes
+- status: issued
+- prompt: active/intake_apply_crashes_on_memory_citations_when.md
+- summary: |
+    Filed 2026-11-25 from a Science session; the filing session skipped create_issue step 4, so this row was backfilled during the repo cleanup. Not started: no worktree or branch yet.
+
+## group-subhalo-sensitivity
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/702
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm2 (0f971892-bf2d-4ebe-8fb3-1d104ea7a79c)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/autolens_workspace/issues/702#issuecomment-7203769475
+- prompt: active/group_subhalo_sensitivity.md
+- note: no repo claim, branch or worktree yet. #701 merged 2026-11-27, so autolens_workspace is free. Q40 answered: Witness = deterministic injected-signal S/N map with vs without companions. Imaging half already done; its no_run.yaml entry is stale (runs in 18s under smoke).
+- next: next shift resumes — branch feature/group-subhalo-sensitivity from the plan in the issue body, with the S/N-map Witness
+- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
+
+## group-los-halos
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/703
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm2 (1f616415-9676-4136-a025-6e1195558fab)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/autolens_workspace/issues/703#issuecomment-7203799575
+- prompt: active/group_los_halos.md
+- note: no repo claim, branch or worktree yet. #701 merged 2026-11-27, so autolens_workspace is free; Q39 answered: build the plan in the issue body. Imaging half already done (02f19489). LOS halo must sit in `galaxies` (analysis drops other collections).
+- next: next shift resumes — branch feature/group-los-halos and build the plan in the issue body
+- tier: glance — merge mode: auto-merge on green if the Witness passes after a merge slot
+
+## vmap-jit-recompiles-per-nautilus-batch-length
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1811
+- issued: 2026-11-26
+- session: shift worker 2026-11-26-pm2 (04ca20f9-79a0-4372-9b9b-1a21cf73502d)
+- status: awaiting-input
+- question: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
+- prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
+
+## maintenance-brief-excludes-restarts
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/741
+- issued: 2026-11-28
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/maintenance-brief-excludes-restarts
 - repos:
-  - PyAutoFit: feature/likelihood-lifecycle-p5-setup-fixes
-  - PyAutoGalaxy: feature/likelihood-lifecycle-p5-setup-fixes
-  - PyAutoLens: feature/likelihood-lifecycle-p5-setup-fixes
-- prompt: active/likelihood_lifecycle_pre_release_setup_fixes.md
-- epic: likelihood-lifecycle (phase 5 pre-release fixes; merge Fit → Galaxy → Lens, pending-release; must land before the release carrying 5A–5E + banner)
-- note: PyAutoLens also claimed by cluster-family-fit-figures (awaiting-merge, feature/family-plot-api); different branch/files, human-approved overlap 2026-11-25
-- close-out: retire superseded drafts draft/bug/autogalaxy/setup_auto_unresolved_before_fit_print_vram_use.md, draft/feature/autolens/estimate_runtime_accept_auto.md, draft/bug/autogalaxy/setup_banner_shows_jax_under_disable_jax.md (one record)
+  - PyAutoBrain: feature/maintenance-brief-excludes-restarts
+- prompt: active/maintenance_brief_excludes_answered_restarts.md
+- epic: autonomous-orchestrators (Phase 14 follow-up; human ruling 2026-11-28)
+- coordination: another chat may take parked_before_first_edit_holds_repo_claim (also PyAutoBrain claim code); whichever merges second rebases.
+- heart: STALE at the door (feed 11.8 h old), not RED.
+- tier: judge — merge mode: human /prm
+
+## parked-claim-not-a-claim
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/742
+- issued: 2026-11-28
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/parked-claim-not-a-claim
+- repos:
+  - PyAutoBrain: feature/parked-claim-not-a-claim
+- prompt: active/parked_before_first_edit_holds_repo_claim.md
+- epic: autonomous-orchestrators (human ruling 2026-11-28: "fix the PyAutoFit claim")
+- coordination: maintenance-brief-excludes-restarts (PyAutoBrain#741) also edits PyAutoBrain claim code; whichever merges second rebases.
+- heart: STALE at the door (feed 11.8 h old), not RED.
+- tier: supervised — merge mode: human /prm

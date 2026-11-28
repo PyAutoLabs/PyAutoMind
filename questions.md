@@ -26,94 +26,95 @@ the ruling on the prompt.
 
 ## Open
 
-### Q15. cti_upkeep_epic — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
-- task: draft/maintenance/autocti/cti_upkeep_epic.md
+### Q32. cluster_usability — `cluster_usability` is Unattended: needs-slicing, so no shift starts…
+- task: draft/feature/autolens/cluster_usability.md
 - kind: ruling
 - gate: unattended
-- ask: `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
+- ask: `cluster_usability` is Unattended: needs-slicing, so no shift starts it.
 - options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
-- shift: 2026-11-19-pm2
-- asked: 2026-11-19T21:49Z
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
 - worker: readiness pass
 
-### Q16. cti_upkeep_epic — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker woul…
-- task: draft/maintenance/autocti/cti_upkeep_epic.md
+### Q33. cluster_usability — `cluster_usability` is Autonomy: human-required, so a shift worker wo…
+- task: draft/feature/autolens/cluster_usability.md
 - kind: ruling
 - gate: human-required
-- ask: `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship.
+- ask: `cluster_usability` is Autonomy: human-required, so a shift worker would park at ship.
 - options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
-- shift: 2026-11-19-pm2
-- asked: 2026-11-19T21:49Z
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
 - worker: readiness pass
 
-### Q21. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campai…
-- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
+### Q34. cluster_usability — `cluster_usability` has no valid Lane:, so every unattended pick fail…
+- task: draft/feature/autolens/cluster_usability.md
 - kind: ruling
-- gate: blocked-by
-- ask: `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by).
-- options: (a) wait for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFi… · (b) remove the Blocked-by · (c) drop it from the queue
-- shift: 2026-11-20-am
-- asked: 2026-11-20T09:30Z
+- gate: no-lane
+- ask: `cluster_usability` has no valid Lane:, so every unattended pick fails closed.
+- options: (a) declare Lane: any · (b) declare a laptop lane · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
 - worker: readiness pass
 
-### Q22. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/cam…
-- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
+### Q36. adaptive_rectangular_meshes_repeat_the_adapt_ima — `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: nee…
+- task: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
 - kind: ruling
-- gate: blocked-by
-- ask: `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit first) (its Blocked-by).
-- options: (a) wait for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit firs… · (b) remove the Blocked-by · (c) drop it from the queue
-- shift: 2026-11-20-am
-- asked: 2026-11-20T09:30Z
+- gate: unattended
+- ask: `adaptive_rectangular_meshes_repeat_the_adapt_ima` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
 - worker: readiness pass
 
-### Q23. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_…
-- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
+### Q38. interferometer_adapt_image_get_the_imaging_mesh — `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: need…
+- task: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+- kind: ruling
+- gate: unattended
+- ask: `interferometer_adapt_image_get_the_imaging_mesh` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+
+### Q42. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` cannot start: re…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
 - kind: ruling
 - gate: claimed
-- ask: `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
-- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-23-am2
-- asked: 2026-11-23T09:59Z
+- ask: `blas_thread_oversubscription_multiprocess_searches` cannot start: repo PyAutoFit is claimed by `vmap-jit-recompiles-per-nautilus-batch-length` in active.md with no coordination line naming it.
+- options: (a) wait for vmap-jit-recompiles-per-nautilus-batch-length to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
 - worker: readiness pass
 
-### Q24. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_le…
-- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
+### Q43. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` is Unattended: n…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
 - kind: ruling
-- gate: claimed
-- ask: `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
-- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
-- shift: 2026-11-23-am2
-- asked: 2026-11-23T09:59Z
+- gate: unattended
+- ask: `blas_thread_oversubscription_multiprocess_searches` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
 - worker: readiness pass
 
-### Q29. multi_dataset_jax_likelihood_delaunay_wrong_likelihood — Retire the September likelihood report now that fresh main passes, or…
-- task: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
-- kind: question
-- ask: Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction?
-- options: (a) Retire the report · (b) Supply September g/r FITS files, stack revisions and configuration
-- shift: 2026-11-24-am
-- asked: 2026-11-24T08:07Z
-- worker: codex:996ec11541bd477796142ec5b768b320
+### Q44. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` is Autonomy: hum…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
+- kind: ruling
+- gate: human-required
+- ask: `blas_thread_oversubscription_multiprocess_searches` is Autonomy: human-required, so a shift worker would park at ship.
+- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
+- worker: readiness pass
 
-### Q30. substructure_util_zero_padded_halo_slots_make — All four profile families pass the padded scan witness on main. Retir…
-- task: draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/871
-- kind: question
-- ask: All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population?
-- options: (a) Retire the duplicate draft · (b) Supply a different failing population
-- shift: 2026-11-24-am
-- asked: 2026-11-24T08:32Z
-- worker: codex:33cff8e853b042bc81657d044e7b878b
-
-### Q31. smoke_cache_stats_warnings_nameerror — see the question on the issue
-- task: active/smoke_cache_stats_warnings_nameerror.md
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
-- kind: question
-- ask: see the question on the issue
-- shift: 2026-11-24-am
-- asked: 2026-11-24T08:34Z
-- worker: codex:64472140ca8443f8a5e1ce9c73f90fc7
+### Q45. blas_thread_oversubscription_multiprocess_searches — `blas_thread_oversubscription_multiprocess_searches` has no valid Lan…
+- task: draft/bug/autofit/blas_thread_oversubscription_multiprocess_searches.md
+- kind: ruling
+- gate: no-lane
+- ask: `blas_thread_oversubscription_multiprocess_searches` has no valid Lane:, so every unattended pick fails closed.
+- options: (a) declare Lane: any · (b) declare a laptop lane · (c) drop it from the queue
+- shift: 2026-11-27-pm
+- asked: 2026-11-27T23:49Z
+- worker: readiness pass
 
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
@@ -342,7 +343,7 @@ the ruling on the prompt.
 - answer-comment: https://github.com/PyAutoLabs/PyAutoArray/issues/707#issuecomment-7107940971
 
 ### Q27. sensitivity_slam_source_pixelized_mappervalued — Which subhalo should the pixelized sensitivity example inject and fit?
-- task: active/sensitivity_slam_source_pixelized_mappervalued.md
+- task: complete/2026/11/sensitivity-slam-source-pixelized-mappervalued.md
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/685
 - kind: question
 - ask: Which subhalo should the pixelized sensitivity example inject and fit?
@@ -379,6 +380,178 @@ the ruling on the prompt.
 - answered: 2026-11-23T17:03Z by Jammy2211 (chat)
 - answer: Resume the cache-statistics repair once the existing PyAutoHeart #364 claim clears through the approved PR merge.
 - answer-comment: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7108095009
+
+### Q15. cti_upkeep_epic — `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: unattended
+- ask: `cti_upkeep_epic` is Unattended: needs-slicing, so no shift starts it.
+- options: (a) make it ready (slice or size it) · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+- answered: 2026-11-26T18:03Z by Jammy2211 (chat)
+- answer: (a) make it ready: slice or size it so a shift can start it.
+
+### Q16. cti_upkeep_epic — `cti_upkeep_epic` is Autonomy: human-required, so a shift worker woul…
+- task: draft/maintenance/autocti/cti_upkeep_epic.md
+- kind: ruling
+- gate: human-required
+- ask: `cti_upkeep_epic` is Autonomy: human-required, so a shift worker would park at ship.
+- options: (a) lower it to supervised · (b) keep it for an attended session · (c) drop it from the queue
+- shift: 2026-11-19-pm2
+- asked: 2026-11-19T21:49Z
+- worker: readiness pass
+- answered: 2026-11-26T18:06Z by Jammy2211 (chat)
+- answer: (a) lower it to supervised.
+
+### Q21. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campai…
+- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
+- kind: ruling
+- gate: blocked-by
+- ask: `dr1_campaign_sed_status_root` waits for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFit first) (its Blocked-by).
+- options: (a) wait for draft/feature/autofit/campaign_per_stage_status_root.md (per-stage `status_root:` must be merged into PyAutoFi… · (b) remove the Blocked-by · (c) drop it from the queue
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:30Z
+- worker: readiness pass
+- answered: 2026-11-26T18:07Z by Jammy2211 (chat)
+- answer: (a) wait for campaign_per_stage_status_root; blocker promoted to #1 of the autopilot queue.
+
+### Q22. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/cam…
+- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
+- kind: ruling
+- gate: blocked-by
+- ask: `dr1_campaign_zip_success_checks` waits for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit first) (its Blocked-by).
+- options: (a) wait for draft/feature/autofit/campaign_zip_complete_pattern.md (`zip_complete` must accept a pattern in PyAutoFit firs… · (b) remove the Blocked-by · (c) drop it from the queue
+- shift: 2026-11-20-am
+- asked: 2026-11-20T09:30Z
+- worker: readiness pass
+- answered: 2026-11-26T18:07Z by Jammy2211 (chat)
+- answer: (a) wait for campaign_zip_complete_pattern; blocker promoted to the top of the autopilot queue.
+
+### Q23. dr1_campaign_sed_status_root — `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_…
+- task: draft/feature/euclid/dr1_campaign_sed_status_root.md
+- kind: ruling
+- gate: claimed
+- ask: `dr1_campaign_sed_status_root` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
+- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-23-am2
+- asked: 2026-11-23T09:59Z
+- worker: readiness pass
+- answered: 2026-11-26T18:08Z by Jammy2211 (chat)
+- answer: (a) resolved: sed-waveband-search-cap shipped 2026-11-24 and its euclid pipeline claim cleared.
+
+### Q24. dr1_campaign_zip_success_checks — `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_le…
+- task: draft/feature/euclid/dr1_campaign_zip_success_checks.md
+- kind: ruling
+- gate: claimed
+- ask: `dr1_campaign_zip_success_checks` cannot start: repo euclid_strong_lens_modeling_pipeline is claimed by `sed-waveband-search-cap` in active.md with no coordination line naming it.
+- options: (a) wait for sed-waveband-search-cap to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-23-am2
+- asked: 2026-11-23T09:59Z
+- worker: readiness pass
+- answered: 2026-11-26T18:08Z by Jammy2211 (chat)
+- answer: (a) resolved: sed-waveband-search-cap shipped 2026-11-24 and its euclid pipeline claim cleared.
+
+### Q29. multi_dataset_jax_likelihood_delaunay_wrong_likelihood — Retire the September likelihood report now that fresh main passes, or…
+- task: active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371
+- kind: question
+- ask: Retire the September likelihood report now that fresh main passes, or provide the original inputs for a historical reproduction?
+- options: (a) Retire the report · (b) Supply September g/r FITS files, stack revisions and configuration
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:07Z
+- worker: codex:996ec11541bd477796142ec5b768b320
+- answered: 2026-11-26T18:08Z by Jammy2211 (issue)
+- answer: retire
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace_test/issues/371#issuecomment-7127116263
+
+### Q30. substructure_util_zero_padded_halo_slots_make — All four profile families pass the padded scan witness on main. Retir…
+- task: draft/bug/autogalaxy/substructure_util_zero_padded_halo_slots_make.md
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/871
+- kind: question
+- ask: All four profile families pass the padded scan witness on main. Retire the duplicate draft or supply another failing population?
+- options: (a) Retire the duplicate draft · (b) Supply a different failing population
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:32Z
+- worker: codex:33cff8e853b042bc81657d044e7b878b
+- answered: 2026-11-26T18:08Z by Jammy2211 (issue)
+- answer: retire
+- answer-comment: https://github.com/PyAutoLabs/PyAutoLens/issues/871#issuecomment-7127151259
+
+### Q31. smoke_cache_stats_warnings_nameerror — see the question on the issue
+- task: active/smoke_cache_stats_warnings_nameerror.md
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7126294143
+- kind: question
+- ask: see the question on the issue
+- shift: 2026-11-24-am
+- asked: 2026-11-24T08:34Z
+- worker: codex:64472140ca8443f8a5e1ce9c73f90fc7
+- answered: 2026-11-26T18:08Z by Jammy2211 (issue)
+- answer: resume after 369 merges (Heart#369 merged 2026-11-24T09:21Z)
+- answer-comment: https://github.com/PyAutoLabs/PyAutoHeart/issues/365#issuecomment-7127183290
+
+### Q39. group_los_halos — Group LOS halos: autolens_workspace is held by #701 (dataset FITS onl…
+- task: active/group_los_halos.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/703
+- kind: question
+- ask: Group LOS halos: autolens_workspace is held by #701 (dataset FITS only, disjoint files). Wait for it to merge, or override the claim now?
+- options: (a) Wait for #701 to merge, then build the plan in #703 as written · (b) Override the claim now (files disjoint) and build the plan · (c) Re-scope or retire the prompt (imaging half already done)
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:31Z
+- worker: 1f616415
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) wait for #701, then build the plan in #703 as written. #701 merged 2026-11-27T10:57Z; claim released.
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/703#issuecomment-7216556772
+
+### Q40. group_subhalo_sensitivity — Group subhalo sensitivity: autolens_workspace is held by #701, and un…
+- task: active/group_subhalo_sensitivity.md
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/702
+- kind: question
+- ask: Group subhalo sensitivity: autolens_workspace is held by #701, and under smoke the Witness evidence map is all zeros. Wait or override, and accept an S/N-map Witness?
+- options: (a) Wait for #701; accept the injected-signal S/N map (with vs without companions) as Witness · (b) Override the claim now; accept the S/N-map Witness · (c) Wait for #701; keep the evidence Witness, run with ENV: real_search · (d) Retire or re-scope the prompt (imaging half already done)
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:31Z
+- worker: 0f971892
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) wait for #701 (merged 2026-11-27T10:57Z, claim released); accept the injected-signal S/N map (with vs without companions) as the Witness.
+- answer-comment: https://github.com/PyAutoLabs/autolens_workspace/issues/702#issuecomment-7216557095
+
+### Q41. vmap_jit_recompiles_per_nautilus_batch_length — see the question on the issue
+- task: active/vmap_jit_recompiles_per_nautilus_batch_length.md
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
+- kind: question
+- ask: see the question on the issue
+- shift: 2026-11-26-pm2
+- asked: 2026-11-26T21:49Z
+- worker: 04ca20f9
+- answered: 2026-11-27T11:00Z by Jammy2211 (issue)
+- answer: Option 1: pad in call_wrap so every batch compiles at one shape.
+- answer-comment: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7216451269
+
+### Q35. adaptive_rectangular_meshes_repeat_the_adapt_ima — `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo…
+- task: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+- kind: ruling
+- gate: claimed
+- ask: `adaptive_rectangular_meshes_repeat_the_adapt_ima` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
+- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) gate cleared: sparse_terms_nufft_origin_and_mask_compatibility shipped 2026-11-27 (PyAutoArray#721), so its PyAutoArray claim is released. Recorded at /prm; the needs-slicing ruling Q36 stays open.
+
+### Q37. interferometer_adapt_image_get_the_imaging_mesh — `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo…
+- task: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+- kind: ruling
+- gate: claimed
+- ask: `interferometer_adapt_image_get_the_imaging_mesh` cannot start: repo PyAutoArray is claimed by `sparse_terms_nufft_origin_and_mask_compatibility` in active.md with no coordination line naming it.
+- options: (a) wait for sparse_terms_nufft_origin_and_mask_compatibility to ship · (b) record a coordination line · (c) drop it from the queue
+- shift: 2026-11-26-pm
+- asked: 2026-11-26T20:56Z
+- worker: readiness pass
+- answered: 2026-11-27T11:00Z by Jammy2211 (chat)
+- answer: (a) gate cleared: sparse_terms_nufft_origin_and_mask_compatibility shipped 2026-11-27 (PyAutoArray#721), so its PyAutoArray claim is released. Recorded at /prm; the needs-slicing ruling Q38 stays open.
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 

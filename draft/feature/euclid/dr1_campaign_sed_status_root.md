@@ -28,3 +28,7 @@ The DR1 campaign's `sed` stage writes into `output_sed/` (`PYAUTO_OUTPUT_DIR`), 
 1. In `hpc/campaign/dr1.yaml`, set `status_root: output_sed` on the `sed` stage and delete the "Known gap" comment under the campaign-wide `status_root:`.
 2. In `hpc/README.md` step 7, drop the paragraph saying `status` does not scan `output_sed/`.
 3. No RAL submit. Running against the shared RAL install needs PyAutoFit main there, and pulling mains into `/mnt/ral/jnightin/PyAuto` during a campaign is the human's call (Mind `policy/hpc_ral.md`).
+
+## Answers from the human
+- Q21 (2026-11-26, ruling blocked-by, shift 2026-11-20-am): (a) wait for campaign_per_stage_status_root; blocker promoted to #1 of the autopilot queue.
+- Q23 (2026-11-26, ruling claimed, shift 2026-11-23-am2): (a) resolved: sed-waveband-search-cap shipped 2026-11-24 and its euclid pipeline claim cleared.

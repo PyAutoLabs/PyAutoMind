@@ -55,6 +55,7 @@ categories:
 unmapped_checkouts:
   - .github              # PyAutoLabs/.github — the org profile repo, not an organism repo
   - lens/COWLS_COSMOS_Web_Lens_Survey  # Jammy2211/COWLS_COSMOS_Web_Lens_Survey — a personal data-release checkout, not an organism repo
+  - tmp/pyautofit-budget-cleanup  # local scratch clone of a PyAutoFit task worktree (Nautilus wall-clock budget edits), not an organism repo
 
 # Bootstrap-only rollout coordinated with active consumer tasks on 2026-09-18.
 # Their runner bodies and task branches remain untouched by propagation.

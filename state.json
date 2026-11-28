@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 31 in flight",
-  "updated": "2026-11-25T16:23:57Z",
+  "headline": "RED \u2014 23 picks \u00b7 11 in flight",
+  "updated": "2026-11-28T10:24:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -15,9 +15,15 @@
     },
     {
       "severity": "red",
-      "text": "multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood on main (\u221272070 vs 1995) \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/issues/371",
-      "prompt": "Use the start-dev skill. active/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md"
+      "text": "The imaging `features/advanced/los_halos` example needs improving and padding out before \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/703",
+      "prompt": "Use the start-dev skill. active/group_los_halos.md"
+    },
+    {
+      "severity": "red",
+      "text": "The imaging `features/advanced/subhalo/sensitivity` example needs improving and padding out before \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/702",
+      "prompt": "Use the start-dev skill. active/group_subhalo_sensitivity.md"
     },
     {
       "severity": "red",
@@ -27,105 +33,99 @@
     },
     {
       "severity": "red",
-      "text": "`subhalo/sensitivity/slam_source_pixelized.py` fails on main: `al.MapperValued` no longer exists \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/685",
-      "prompt": "Use the start-dev skill. active/sensitivity_slam_source_pixelized_mappervalued.md"
-    },
-    {
-      "severity": "red",
-      "text": "Smoke cache-stats step fails with NameError: warnings \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoHeart/issues/365",
-      "prompt": "Use the start-dev skill. active/smoke_cache_stats_warnings_nameerror.md"
-    },
-    {
-      "severity": "red",
-      "text": "Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/707",
-      "prompt": "Use the start-dev skill. active/sparse_terms_nufft_origin_and_mask_compatibility.md"
+      "text": "vmap(jit) likelihood recompiles once per distinct Nautilus batch length \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1811",
+      "prompt": "Use the start-dev skill. active/vmap_jit_recompiles_per_nautilus_batch_length.md"
     },
     {
       "severity": "yellow",
-      "text": "Shift digest: open with one review table grouped by what the human\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/719",
-      "prompt": "Use the start-dev skill. active/digest_review_action_table.md"
+      "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
+      "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
     },
     {
       "severity": "yellow",
-      "text": "Likelihood lifecycle phase 5F: autolens_workspace + HowToLens: a `guides/advanced` auto-setup guide, retired\u2026 \u2014 workspace-shipped, awaiting-merge (all 3 PRs OPEN: PR1 autolens_workspace#689, PR2 autolens_workspace#690 (merge after #689), PR3\u2026",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/pull/689",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5f_workspace_setup.md"
+      "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
+      "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
     },
     {
       "severity": "yellow",
-      "text": "Likelihood lifecycle phase 5G: autolens_assistant: an `al_explain_setup` skill and an \"auto unless\u2026\"\u2026 \u2014 workspace-shipped, awaiting-merge (autolens_assistant#192 OPEN 24bcb36; merge with/after the library release \u2014 wiki-currency\u2026",
-      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/192",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5g_assistant_setup.md"
+      "text": "pending release: PyAutoArray PyAutoArray#718 \u2014 adapt-mesh-weighting-galaxy",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/718",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Likelihood lifecycle phase 5H: euclid_strong_lens_modeling_pipeline: `--setup` replaces `--use_cpu`, `--number_of_cores auto`\u2026 \u2014 workspace-shipped, awaiting-merge (euclid_strong_lens_modeling_pipeline#142 OPEN f80ccef; merge with/after the library release\u2026",
-      "url": "https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/142",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p5h_euclid_pipeline_setup.md"
+      "text": "pending release: PyAutoArray PyAutoArray#717 \u2014 adapt-mesh-weighting-library",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/717",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Likelihood lifecycle pre-release fixes: four rough edges in the automatic compute setup\u2026 \u2014 library-shipped, awaiting-merge (judge tier: human /prm; merge Fit \u2192 Galaxy \u2192 Lens; no workspace impact)",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1798",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_pre_release_setup_fixes.md"
+      "text": "pending release: PyAutoArray PyAutoArray#720 \u2014 convolver-blurring-image-warning",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/720",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Complete the conditional 30D Nautilus evidence check \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/31",
-      "prompt": "Use the start-dev skill. active/nautilus_30d_evidence_check.md"
+      "text": "pending release: PyAutoArray PyAutoArray#718 \u2014 hilbert-image-mesh-frame-independent",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/718",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Test 30D evidence across independently learned Nautilus bounds \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/33",
-      "prompt": "Use the start-dev skill. active/nautilus_30d_independent.md"
+      "text": "pending release: PyAutoArray PyAutoArray#715 \u2014 likelihood-lifecycle-r6-default-auto",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/715",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Resume three independently explored 30D checkpoints to matched ESS \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/35",
-      "prompt": "Use the start-dev skill. active/nautilus_30d_matched_ess.md"
+      "text": "pending release: PyAutoFit PyAutoFit#1806 \u2014 grid-search-cores-auto",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1806",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Compare Nautilus bound-update intervals on complete PyAutoFit fits \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/27",
-      "prompt": "Use the start-dev skill. active/nautilus_bound_cadence.md"
+      "text": "pending release: PyAutoFit PyAutoFit#1800 \u2014 likelihood-lifecycle-r6-default-auto",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1800",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Does parallel native ensemble training shorten complete Nautilus fits? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/41",
-      "prompt": "Use the start-dev skill. active/nautilus_bound_core_scaling.md"
+      "text": "pending release: PyAutoFit PyAutoFit#1801 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1801",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Attribute CPU time inside Nautilus bound construction \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/19",
-      "prompt": "Use the start-dev skill. active/nautilus_bound_geometry_attribution.md"
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#763 \u2014 adapt-mesh-weighting-galaxy",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/763",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Test the scalar weight update on retained Nautilus ellipsoid inputs \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/23",
-      "prompt": "Use the start-dev skill. active/nautilus_ellipsoid_weight_update.md"
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#760 \u2014 likelihood-lifecycle-r6-default-auto",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/760",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Can CPU sampler workers feed GPU likelihood batches faster? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/43",
-      "prompt": "Use the start-dev skill. active/nautilus_gpu_feed.md"
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#761 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761",
+      "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "Do CPU feeders shorten a complete Nautilus fit on JWST ring imaging? \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/75",
-      "prompt": "Use the start-dev skill. active/nautilus_ring_gpu_feed.md"
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#765 \u2014 remove-r6-sweep-pins",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#897 \u2014 adapt-mesh-weighting-galaxy",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/897",
+      "prompt": null
     }
   ]
 }

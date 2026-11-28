@@ -2,9 +2,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/743
 - completed: 2026-11-22
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/746
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/877
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/877
 
 Imaging and interferometer per-galaxy images now add ordinary and reconstructed light. Saved images and adaptive images receive the sum. Obsolete mixed-light caches refresh. Dense, array-free and imaging witnesses passed in both libraries.
 

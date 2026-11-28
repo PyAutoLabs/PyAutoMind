@@ -1,0 +1,31 @@
+# The imaging `features/advanced/subhalo/sensitivity` example needs improving and padding out before
+
+Type: feature
+Target: workspaces
+Themes:
+- cluster
+- notebooks
+Difficulty: medium
+Autonomy: safe
+Priority: normal
+Status: formalised
+Consequence: glance
+Witness: `scripts/group/features/advanced/subhalo/sensitivity/` runs to completion under the smoke profile and produces a sensitivity map whose detectability threshold varies across the group field rather than being spatially constant, i.e. the multi-deflector field measurably changes where subhalos are detectable.
+Review-minutes: 3
+Unattended: ready
+Lane: any
+Filed: 2026-04-27 (backfilled from git)
+
+The imaging `features/advanced/subhalo/sensitivity` example needs improving and padding out before adapting to group.
+
+Once the imaging version is more complete, adapt it to the group context in
+`scripts/group/features/advanced/subhalo/sensitivity/`.
+
+Sensitivity mapping for subhalo detection in group lenses requires injecting mock subhalos into the
+group-scale data and measuring detectability across the field. The more complex deflection field from
+multiple group galaxies affects where subhalos are detectable and at what mass threshold.
+
+<!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
+
+## Answers from the human
+- Q40 (2026-11-27, shift 2026-11-26-pm2 question on autolens_workspace#702): (a) wait for #701 (merged 2026-11-27T10:57Z, claim released); accept the injected-signal S/N map (with vs without companions) as the Witness. https://github.com/PyAutoLabs/autolens_workspace/issues/702#issuecomment-7216557095

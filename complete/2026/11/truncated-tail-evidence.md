@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1790
 - completed: 2026-11-22
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1792
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1792
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/120
 
 Stable tail log probabilities keep seed 25 finite on all 45 updates. The posterior rows matched main byte for byte in the workspace control. The external project archive was unavailable. PyAutoFit passed 4,318 tests and the workspace passed 15 smoke scripts.

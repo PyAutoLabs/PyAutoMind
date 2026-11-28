@@ -89,41 +89,6 @@ epic, never picked standalone.
 - ledger: https://github.com/PyAutoLabs/PyAutoInsight/blob/main/tasks/ep_campaign.md
 - notes: campaign intent and scoping now live in PyAutoInsight `campaigns.yaml` and `tasks/{ep_campaign,ep_scoping,graphical_scoping}.md` (destination PR #2 merged 2026-10-04). The campaign map is never issued; Mind retains only bounded implementation phases and claims linked to Insight. Scientific runs, observations and human conclusions remain authoritative in PyAutoCortex `projects/{analytic_gaussian,ep_toy_gaussian,slope_hierarchy_scale,ic50_workspace}.md`. No independent Mind campaign schedule remains.
 
-## euclid-dr1-prep
-- title: Euclid DR1 preparation — 15k-lens modelling prep
-- ledger: draft/feature/euclid/euclid_dr1_prep_epic.md
-- status: science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex
-  `phases/euclid/` 4, 5, 6, 7); the Mind keeps the software phases, renumbered 3a→3, 3b→4,
-  6c→8, 7→9 — the renumbering table is in the ledger
-- notes: 7 Mind phases (0, 1, 2, 3, 4, 8, 9) — issue ONE at a time as predecessors near
-  shipping, no bulk issue queues. The four science phases moved to PyAutoCortex on
-  2026-09-01 as `phases/euclid/` 4, 5, 6, 7 (were Mind 4, 5, 6a, 6b): RAL runs, human-driven
-  and supervised, whose deliverable is a result and a written verdict, not a merged PR;
-  never route them to an autonomous ship gate. Mind phase 8 (was 6c) is a PyAutoArray source
-  audit that may spawn a separate bug prompt and can run alongside Cortex phase 7. Mind
-  phase 9's (was 7) retroactive-update leg is explicitly allowed to conclude "no elegant
-  solution — don't build it". The full renumbering table is in the ledger. Source of truth for
-  all drift is /mnt/c/Users/Jammy/Science/euclid. Science half: PyAutoCortex
-  `projects/euclid_dr1_prelim.md` (the former Cortex phases 4-7).
-  Phase 0 shipped 2026-08-28; phase 1 shipped 2026-08-29 (euclid#43 closed, PR #44
-  merged); phase 2 shipped 2026-08-29 (euclid#45 closed, PR #46 merged) — which also
-  satisfies phase 4's "2 strongly preferred" gate. Phase 3a was INSERTED 2026-08-31
-  (docs: restore the in-script narrative prose lost at 355b309; start_here.py back to a
-  full end-to-end guide) and the old phase 3 renumbered to 3b; on 2026-09-01 the letters
-  died in the Cortex split and 3a/3b became plain 3/4. Phase 3 shipped 2026-09-01
-  (euclid#47 closed, PR #48 merged; record
-  complete/2026/09/restore-pipeline-narrative-prose.md). Phase 4 shipped 2026-09-03
-  (euclid#49 closed, PR #50 merged; record complete/2026/09/euclid-cpu-two-stage-route.md) —
-  all Mind software phases 0-4 are now shipped, and both gates of the Cortex 10-lens science
-  run (euclid#48, euclid#49) are closed. Phase 8 (Delaunay area audit) shipped 2026-09-04
-  (PyAutoArray#522 closed, PR #523 merged, audit on the issue; record
-  complete/2026/09/delaunay-area-magnification-audit.md): two defects proven and filed as follow-up
-  bug prompts (autoarray Voronoi-vs-dual-area denominator; autolens magnification latent 0/0
-  for pixelized sources — which also taints the vis_pix catalogue column Cortex phase 4
-  witnesses). The autoarray fix shipped 2026-09-05 (PyAutoArray#524 closed, PR #525 merged,
-  pending-release; record complete/2026/09/delaunay-dual-area-magnification.md); the autolens
-  fix is next. Mind phase 9 remains, gated on Cortex phase 4.
-
 ## model-figures
 - title: PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)
 - ledger: draft/feature/autofit/model_figures_epic.md
@@ -144,7 +109,7 @@ epic, never picked standalone.
 ## cluster-usability
 - title: Cluster usability — three datasets for visualization, profiling, inference and teaching
 - ledger: draft/feature/autolens/cluster_usability.md
-- status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Seven-image Simple CPU profiling is in review. The standard image-plane grid recovers six predictions.
+- status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Seven-image Simple CPU profiling is in review. The standard 1″ image-plane grid recovers six of seven images. A 0.25″ grid recovers all seven at 4.34× the per-evaluation cost (51.1 vs 11.8 ms). The grid decision and the move to Pandora await the author.
 - notes: Prioritised ahead of cluster-strong-lensing. Simple → Pandora → MACS J0416 approved. autolens_profiling#445 closed via #532. The Simple cache validation and CPU benchmark results are tracked in autolens_profiling#536.
 
 ## cluster-strong-lensing
@@ -163,3 +128,21 @@ epic, never picked standalone.
 - title: Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended `glance` merges under guards; drafts-only goal decomposition
 - ledger: draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - status: IN PROGRESS; design-reviewed 2026-11-03 (7 phases, `Needs:` folded into `Lane:` values, witnesses per phase, 6 decisions ruled by the human 2026-11-03). Phase 1 COMPLETE 2026-11-03 (PyAutoMind#522 + PyAutoBrain#552); phase 2 COMPLETE 2026-11-03 (PyAutoMind#523 + PyAutoBrain#554, glance auto-merge; records complete/2026/11/autonomous-orchestrators-p1.md, -p2.md) — next: phase 3 (watcher + dispatch safety + digest) sliced 3a–3d (human 2026-11-03); 3a COMPLETE (PyAutoMind#524 + PyAutoBrain#556); 3b COMPLETE 2026-11-03 (PyAutoMind#525 + PyAutoBrain#558; worker mode auto; real dispatch sandbox-only until 3c); 3c COMPLETE 2026-11-04 (PyAutoMind#526 + PyAutoBrain#560; one Mind writer, sandbox fence lifted; record complete/2026/11/autonomous-orchestrators-p3c.md); 3d COMPLETE 2026-11-04 (PyAutoMind#531 + PyAutoBrain#569; shift digest, posted once; record complete/2026/11/autonomous-orchestrators-p3d.md) — PHASE 3 COMPLETE; glance ruling recorded 2026-11-04 (complete/2026/11/glance-tier-ruling.md); phase 4 SLICED 4a–4c 2026-11-04; 4a COMPLETE 2026-11-04 (PyAutoMind#532 + PyAutoBrain#571; record complete/2026/11/autonomous-orchestrators-p4a.md); 4b COMPLETE 2026-11-04 (PyAutoMind#533 + PyAutoBrain#573; unattended glance close-out, stage-2 adversary amendment; record complete/2026/11/autonomous-orchestrators-p4b.md); 4c IN PROGRESS (PyAutoBrain#574; pilot run, human-ops)
+
+## stars-gnfw-lens-model-in-the-mass
+- title: Stars + gNFW lens model in the mass-sheet-normalised frame (from stars_dm_slope)
+- ledger: draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass.md
+- status: SLICED 2026-11-25 by `batch slice` into 4 children (draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s1_building_blocks.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s2_the_mass_sheet_frame.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s3_physical_units_profiles.md, draft/feature/autogalaxy/stars_gnfw_lens_model_in_the_mass_s4_workspace_example.md); the parent is unchanged and stays the ledger
+- notes: phases in order: 1 Building blocks (PyAutoGalaxy) → 2 The mass-sheet frame (PyAutoGalaxy, PyAutoLens) → 3 Physical-units profiles (PyAutoGalaxy) → 4 Workspace example (autolens_workspace)
+
+## adaptive-rectangular-meshes-repeat-the-adapt-ima
+- title: Adaptive rectangular meshes: repeat the adapt-image experiment and compare with Delaunay
+- ledger: draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima.md
+- status: SLICED 2026-11-26 by `batch slice` into 3 children (draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s1_offline_rectangular_mesh_coverage.md, draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s2_rectangular_fit_arms_prepared_not.md, draft/research/autoarray/adaptive_rectangular_meshes_repeat_the_adapt_ima_s3_rectangular_vs_delaunay_comparison_table.md); the parent is unchanged and stays the ledger
+- notes: phases in order: 1 Offline rectangular mesh coverage (PyAutoArray) → 2 Rectangular fit arms, prepared not submitted (autolens_workspace) → 3 Rectangular vs Delaunay comparison table (autolens_workspace)
+
+## interferometer-adapt-image-get-the-imaging-mesh
+- title: Interferometer adapt image: get the imaging mesh / AdaptSplit adaptation on visibility…
+- ledger: draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh.md
+- status: SLICED 2026-11-26 by `batch slice` into 2 children (draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s1_candidate_interferometer_s_n_adapt.md, draft/research/autoarray/interferometer_adapt_image_get_the_imaging_mesh_s2_interferometer_fit_arms_prepared_not.md); the parent is unchanged and stays the ledger
+- notes: phases in order: 1 Candidate interferometer S/N adapt images, offline (PyAutoGalaxy) → 2 Interferometer fit arms, prepared not submitted (autolens_workspace)

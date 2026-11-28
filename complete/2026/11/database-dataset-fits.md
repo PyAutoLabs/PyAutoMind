@@ -2,9 +2,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/744
 - completed: 2026-11-22
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/745
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/878
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/878
 
 Dataset FITS products now round-trip through SQLite and directory-backed imaging and interferometer searches. Repeated saves keep one registration. Tests covered imaging plus in-memory and array-free interferometry in both libraries.
 

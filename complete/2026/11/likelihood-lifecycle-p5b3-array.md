@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/711
 - completed: 2026-11-24
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/712
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/712
 - epic: likelihood-lifecycle (phase 5B-3; next 5C-3 Galaxy/Lens call sites + aggregator reapply + shared helper, then 5D)
 
 Phase 5B-3 shipped as PyAutoArray#712 (merged 2026-11-24 as faa80349): a lazy, size-gated sparse operator on the real dataset, so calculations outside modeling can get the optimal operator once 5C-3 adds the call sites.

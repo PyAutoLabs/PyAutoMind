@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1794
 - completed: 2026-11-24
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1795
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1795
 - epic: likelihood-lifecycle (phase 5D; next 5E runtime estimator)
 
 Phase 5D shipped as PyAutoFit#1795 (merged 2026-11-24 as 23b7dfea).

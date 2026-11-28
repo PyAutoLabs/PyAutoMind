@@ -43,3 +43,6 @@ The target metric is verified merges (plus accepted drafts and packets) per
 | 2026-11-23-am2 | live | 5 | ? | 0 | 0 | 0 | ? | 0 | 0 | 166804 | 0 |
 | 2026-11-23-am3 | live | 55 | ? | 0 | 0 | 0 | ? | 0 | 0 | 1027420 | 0 |
 | 2026-11-24-am | live | 100 | ? | 1 | 0 | 0 | ? | 0 | 0 | unmeasured | 0 |
+| 2026-11-26-pm | live | 45 | ? | 6 | 3 | 0 | ? | 0 | 0 | 2025671 | 0 |
+| 2026-11-26-pm2 | live | 30 | ? | 0 | 0 | 0 | ? | 0 | 0 | 935250 | 0 |
+| 2026-11-27-pm | shadow | 45 | ? | ? | 0 | 0 | ? | 0 | 0 | 0 | 0 |

@@ -4,7 +4,7 @@ Type: feature
 Target: PyAutoLens
 Epic: cluster-usability
 Priority: high
-Status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Simple CPU profiling measured both likelihoods and is in review.
+Status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Simple CPU profiling measured both likelihoods and a paired starting-grid comparison, and is in review. The production grid decision and the move to Pandora await the author.
 Consequence: judge
 
 Prioritise this work ahead of the [cluster strong-lensing science epic](source_cluster_arc.md). The goal is to make today's cluster modelling usable at three scales. A reader should be able to see the constraints, identify which multiple-image family fits poorly, and follow that family into a diagnostic figure. The same examples should tell developers how runtime and inference behave as the science case gets harder. New lensing methods belong in the science epic.
@@ -86,3 +86,12 @@ The overview uses source redshift for colour. The published image-plane offsets 
 Times are per likelihood evaluation over both families on the local i9-10885H CPU using JAX FP64. Both source centres are solved analytically. The warm median uses five warm-ups and 200 synchronized calls. The earlier three-plus-three `b0` measurements use a different catalogue and parameter vector and are archived separately.
 
 The standard image-plane solver starts at 1″ per pixel on a 100 × 100 grid. It returns four predictions for the five `point_0` observations and two for `point_1`. The second `point_0` observation at (y, x) = (10.362″, 8.143″) lies 2.764″ from its nearest prediction. At the same solved source centre, field size and 0.001″ refinement precision, 0.5″ also misses it. Both 0.25″ and 0.2″ starting grids recover it, at separations of 0.00745″ and 0.00672″ respectively. The standard-grid image-plane time is diagnostic because it measures an incomplete solve.
+
+A paired run then timed the full solved image-plane likelihood at both starting grids. Both runs used the same fitted prior-median mass model, solved source centres, 100″ field width and 0.001″ refinement precision.
+
+| Starting grid | `point_0` matched | `point_1` matched | Warm median (ms) | Warm p10–p90 (ms) | Absolute JAX–NumPy log L difference |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1.0″ · 100 × 100 | 4/5 | 2/2 | 11.778 | 8.840–17.609 | 1.75e-10 |
+| 0.25″ · 400 × 400 | 5/5 | 2/2 | 51.101 | 43.292–80.163 | 2.13e-13 |
+
+The 0.25″ grid took 4.34× as long per evaluation as the 1″ control measured alongside it. The 8.918 ms figure above came from a separate run. Each matched image has a distinct prediction within 0.01″, twice the catalogue positional uncertainty. For the second `point_0` observation the nearest prediction moved from 2.764″ to 0.00745″. The comparison covers one fitted mass model and two solved source centres. The results and driver are in [the starting-grid experiment](https://github.com/PyAutoLabs/autolens_profiling/tree/feature/simple-cluster-profiling/results/cluster/image_plane/simple/jax_cpu_na_fp64/local_laptop/experiments/starting_grid_spacing). The production solver settings are unchanged. Whether to adopt a finer grid, and when to move on to Pandora, are for the author to decide.

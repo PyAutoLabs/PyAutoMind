@@ -1,6 +1,5 @@
 # Correct the critical-curve default in plotting helpers
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/748
 
 PyAutoGalaxy #748 corrected the default and documented the optional zero-contour limitations in both plotting helper docstrings. Executable AST unchanged. The human approved the result in two minutes. Merged at 1ba51f32.
 
