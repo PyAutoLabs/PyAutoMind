@@ -1,4 +1,17 @@
 
+## cluster-solver-grid-default
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/704
+- issued: 2026-11-28
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cluster-solver-grid-default
+- repos:
+  - autolens_workspace: feature/cluster-solver-grid-default
+- prompt: active/cluster_usability_p3_2_solver_grid_default.md
+- epic: cluster-usability
+- note: human chose 2026-11-28 a quick Pandora source-plane fit as its reference model
+- tier: judge — merge mode: human /prm
+
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04

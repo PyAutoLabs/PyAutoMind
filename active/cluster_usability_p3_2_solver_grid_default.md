@@ -19,6 +19,8 @@ Lane: local-dev
 Epic: cluster-usability
 Phase: 3.2
 Filed: 2026-11-26
+Issued: 2026-11-28
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/704
 
 ## Why
 

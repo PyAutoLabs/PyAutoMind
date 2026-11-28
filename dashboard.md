@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 11 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 10 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 296 |
+| [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -746,7 +746,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — 4 queued prompt(s), in order</summary>
+<summary><b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster usability — three datasets for visualization, profiling, inference and teaching</b> — ledger: <code>draft/feature/autolens/cluster_usability.md</code> — Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Seven-image Simple CPU profiling merged 2026-11-28…</summary>
 
@@ -760,14 +760,6 @@ Continue the 'Cluster usability — three datasets for visualization, profiling,
 
 ```
 Use the start-dev skill. draft/feature/autolens/cluster_usability.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/cluster_usability_p3_2_solver_grid_default.md">Cluster point solver: adopt a default starting grid fine enough to find…</a> — autolens · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/cluster_usability_p3_2_solver_grid_default.md
 ```
 
 </details>
@@ -1431,6 +1423,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/cluster_usability_p3_2_solver_grid_default.md">Cluster point solver: adopt a default starting grid fine enough to find…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/704">issue #704</a> — issued 2026-11-28 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/cluster_usability_p3_2_solver_grid_default.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and padding out before</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/703">issue #703</a> — issued 2026-11-26 — awaiting-input</summary>
 
 ```
@@ -1594,7 +1594,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 230 · ral 27 · wsl-data 20 · local-dev 16 · gpu 1
+Lanes: any 230 · ral 27 · wsl-data 20 · local-dev 15 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -3174,6 +3174,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-28 | issued | <a href="active/homeostasis_board_and_mind_split.md">Homeostasis board on the Brain board; generated glance work leaves…</a> |
+| 2026-11-28 | issued | <a href="active/cluster_usability_p3_2_solver_grid_default.md">Cluster point solver: adopt a default starting grid fine enough to…</a> |
 | 2026-11-27 | filed | <a href="draft/bug/autofit/nautilus_refuses_one_parameter_prior_factors_in_ep.md">Nautilus refuses one-parameter PriorFactors, so EP never updates them</a> |
 | 2026-11-27 | filed | <a href="draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md">Maintenance: [red] ci_status: PyAutoNerves/workflows/Nerves Board…</a> |
 | 2026-11-27 | filed | <a href="draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md">Maintenance: [red] ci_status: PyAutoMemory/workflows/Dashboard…</a> |
@@ -3182,12 +3183,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-27 | filed | <a href="draft/maintenance/autolens_workspace_test/maint_no_run_autolens_workspace_test_imaging_visualization_modelin.md">Maintenance: SLOW since 2026-07-30: re-measured: times out at the…</a> |
 | 2026-11-26 | issued | <a href="active/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-11-26 | issued | <a href="active/group_subhalo_sensitivity.md">The imaging <code>features/advanced/subhalo/sensitivity</code> example needs…</a> |
-| 2026-11-26 | issued | <a href="active/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-26 | issued | <a href="active/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autolens/deflections_simulator_no_psf_padding.md">PyAutoLens <code>via_deflections_galaxies_from</code> simulates without PSF…</a> |
 | 2026-11-26 | filed | <a href="draft/bug/autofit/pooled_emcee_zeus_wrong_likelihoods.md">Pooled Emcee and Zeus return wrong likelihoods, and Emcee leaves its…</a> |
 | 2026-11-26 | filed | <a href="draft/maintenance/autolens_inference/place_pre_migration_leftover_runs.md">Place or retire the autolens_inference runs left behind by the…</a> |
@@ -3197,12 +3198,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-25 | issued | <a href="active/make_the_source_adapt_image_hilbert_image.md">Make the source adapt image / Hilbert image mesh adapt well…</a> |
 | 2026-11-25 | filed | <a href="draft/bug/autolens/dspl_slam_visualize_positions_inhomogeneous_shape.md">Double-source-plane SLaM fails in <code>visualize_before_fit</code>…</a> |
 | 2026-11-25 | issued | <a href="active/nautilus_ring_latent_placement.md">Does CPU placement of posterior derived quantities shorten a GPU…</a> |
-| 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-20 | issued | <a href="active/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both…</a> |
 | 2026-11-18 | filed | <a href="draft/research/autoarray/primary_beam_matern_coefficient_check.md">Primary beam: does the preferred Matérn coefficient shift when the…</a> |
 | 2026-11-17 | filed | <a href="planned.md#issue-templates-route-bugs-to-hub">issue-templates-route-bugs-to-hub</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
@@ -3212,12 +3213,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
-| 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
@@ -3227,12 +3228,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
-| 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
@@ -3242,7 +3243,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
-| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 
 </details>
 
