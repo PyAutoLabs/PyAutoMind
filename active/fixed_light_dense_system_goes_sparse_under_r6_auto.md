@@ -8,6 +8,8 @@ Difficulty: small
 Autonomy: supervised
 Priority: high
 Filed: 2026-11-28
+Issued: 2026-11-28
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/538
 Status: formalised
 Consequence: judge
 Lane: local-dev

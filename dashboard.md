@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 11 |
 | [Start here](#start-here) | 23 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 10 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 296 |
+| [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -61,20 +61,12 @@ _(last shift 2026-11-27-pm — closed, nothing to review)_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 22
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/fixed_light_dense_system_goes_sparse_under_r6_auto.md">Fixed-light harness: the "dense" S3 system builds a sparse numba inversion since…</a> — autolens_profiling · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/fixed_light_dense_system_goes_sparse_under_r6_auto.md
 ```
 
 </details>
@@ -155,6 +147,14 @@ Use the start-dev skill. draft/maintenance/pyautomemory/maint_ci_pyautomemory_da
 
 ```
 Use the start-dev skill. draft/feature/pyautomind/session_hook_propagate_yml_bot_pushes_the.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
 ```
 
 </details>
@@ -1423,6 +1423,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/fixed_light_dense_system_goes_sparse_under_r6_auto.md">Fixed-light harness: the "dense" S3 system builds a sparse numba inversion since…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/538">issue #538</a> — issued 2026-11-28 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/fixed_light_dense_system_goes_sparse_under_r6_auto.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and padding out before</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/703">issue #703</a> — issued 2026-11-26 — awaiting-input</summary>
 
 ```
@@ -1586,7 +1594,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 229 · ral 27 · wsl-data 20 · local-dev 17 · gpu 1
+Lanes: any 229 · ral 27 · wsl-data 20 · local-dev 16 · gpu 1
 
 <a id="human-review"></a>
 <details>
@@ -1994,15 +2002,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 47</summary>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/fixed_light_dense_system_goes_sparse_under_r6_auto.md">Fixed-light harness: the "dense" S3 system builds a sparse numba inversion since…</a> — autolens_profiling · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/fixed_light_dense_system_goes_sparse_under_r6_auto.md
-```
-
-</details>
+<summary><b>bug</b> — 46</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
@@ -3174,7 +3174,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-28 | issued | <a href="active/mind_writer_refuses_no_branch_repos_entry.md">The Mind writer refuses a <code>(no branch …)</code> repos entry…</a> |
-| 2026-11-28 | filed | <a href="draft/bug/autolens_profiling/fixed_light_dense_system_goes_sparse_under_r6_auto.md">Fixed-light harness: the "dense" S3 system builds a sparse numba…</a> |
+| 2026-11-28 | issued | <a href="active/fixed_light_dense_system_goes_sparse_under_r6_auto.md">Fixed-light harness: the "dense" S3 system builds a sparse numba…</a> |
 | 2026-11-27 | filed | <a href="draft/bug/autofit/nautilus_refuses_one_parameter_prior_factors_in_ep.md">Nautilus refuses one-parameter PriorFactors, so EP never updates them</a> |
 | 2026-11-27 | filed | <a href="draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md">Maintenance: [red] ci_status: PyAutoNerves/workflows/Nerves Board…</a> |
 | 2026-11-27 | filed | <a href="draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md">Maintenance: [red] ci_status: PyAutoMemory/workflows/Dashboard…</a> |
@@ -3270,7 +3270,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-121 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+120 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3315,7 +3315,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 81 more_
+- _… and 80 more_
 
 </details>
 
