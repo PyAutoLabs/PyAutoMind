@@ -1447,7 +1447,7 @@ Use the start-dev skill. active/group_subhalo_sensitivity.md
 
 </details>
 
-<details><summary>📋 <a href="active/homeostasis_board_and_mind_split.md">Homeostasis board on the Brain board; generated glance work leaves the Mind…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/747">issue #747</a> — issued 2026-11-28 — library-dev</summary>
+<details><summary>📋 <a href="active/homeostasis_board_and_mind_split.md">Homeostasis board on the Brain board; generated glance work leaves the Mind…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/747">issue #747</a> — issued 2026-11-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/748">PyAutoBrain#748</a></summary>
 
 ```
 Use the start-dev skill. active/homeostasis_board_and_mind_split.md
