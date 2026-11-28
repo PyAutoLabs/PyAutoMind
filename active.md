@@ -91,3 +91,15 @@
 - status: awaiting-input
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
 - prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
+
+## homeostasis-board
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/747
+- issued: 2026-11-28
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/homeostasis-board
+- repos:
+  - PyAutoBrain: feature/homeostasis-board
+- prompt: active/homeostasis_board_and_mind_split.md
+- epic: autonomous-orchestrators (Phase 14; human direction 2026-11-28: tasks spread over boards by type, Mind keeps intent and promoted work)
+- tier: judge — merge mode: human /prm
