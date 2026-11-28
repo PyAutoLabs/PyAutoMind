@@ -1479,7 +1479,7 @@ Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md
 
 </details>
 
-<details><summary>📋 <a href="active/parked_before_first_edit_holds_repo_claim.md">A task parked before its first edit still claims its repo…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/742">issue #742</a> — issued 2026-11-28 — library-dev</summary>
+<details><summary>📋 <a href="active/parked_before_first_edit_holds_repo_claim.md">A task parked before its first edit still claims its repo…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/742">issue #742</a> — issued 2026-11-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/744">PyAutoBrain#744</a></summary>
 
 ```
 Use the start-dev skill. active/parked_before_first_edit_holds_repo_claim.md

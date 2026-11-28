@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 11 in flight",
-  "updated": "2026-11-28T10:33:57Z",
+  "updated": "2026-11-28T10:36:08Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -42,6 +42,12 @@
       "text": "A maintenance brief must not resume answered-question tasks \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/743",
       "prompt": "Use the start-dev skill. active/maintenance_brief_excludes_answered_restarts.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "A task parked before its first edit still claims its repo\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/744",
+      "prompt": "Use the start-dev skill. active/parked_before_first_edit_holds_repo_claim.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#761 \u2014 likelihood-lifecycle-r6d-prerelease-fixes",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/761",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#765 \u2014 remove-r6-sweep-pins",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765",
       "prompt": null
     }
   ]
