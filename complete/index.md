@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2454 records across 11 buckets.
+2457 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -230,6 +230,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
 - [eyes-survey-next-action-stale](2026/11/eyes-survey-next-action-stale.md) — RETIRED as stale, no change made. The prompt's premise was false: only the `autolens_workspace_test/gallery/` …
+- [fixed-light-dense-r6](2026/11/fixed-light-dense-r6.md) — PyAutoArray aa2ce278 made `lazy_sparse_operator` default to `auto` (R6). Under it, `fixed_light_system_from(..…
 - [galaxy-duplicate-pytree-registration](2026/11/galaxy-duplicate-pytree-registration.md)
 - [gallery-runner-missing-tiers](2026/11/gallery-runner-missing-tiers.md) — RETIRED as obsolete, no change made. The gallery runner it targeted (`gallery/gallery_run.sh`, `gallery_build.…
 - [general-docs-refresh](2026/11/general-docs-refresh.md)
@@ -344,6 +345,7 @@ markers; everything below GENERATED is rebuilt.
 - [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
 - [merge-actor-audit](2026/11/merge-actor-audit.md)
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
+- [mind-writer-no-branch-repos](2026/11/mind-writer-no-branch-repos.md)
 - [mind-writer-own-claim-update](2026/11/mind-writer-own-claim-update.md)
 - [mixed-galaxy-light](2026/11/mixed-galaxy-light.md)
 - [model-bullet-parameter-count-drift](2026/11/model-bullet-parameter-count-drift.md)
@@ -390,6 +392,7 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [one-repos-yaml-reader](2026/11/one-repos-yaml-reader.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
+- [parked-claim-not-a-claim](2026/11/parked-claim-not-a-claim.md)
 - [parked-hold-grace](2026/11/parked-hold-grace.md)
 - [plot-grid-small-datasets-indexes](2026/11/plot-grid-small-datasets-indexes.md)
 - [plot-rst-missing-exports](2026/11/plot-rst-missing-exports.md)

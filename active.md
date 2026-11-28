@@ -105,17 +105,14 @@
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
 - prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
 
-## parked-claim-not-a-claim
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/742
+## homeostasis-board
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/747
 - issued: 2026-11-28
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
-- status: library-shipped, awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs-wt/parked-claim-not-a-claim
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/homeostasis-board
 - repos:
-  - PyAutoBrain: feature/parked-claim-not-a-claim
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/744
-- prompt: active/parked_before_first_edit_holds_repo_claim.md
-- epic: autonomous-orchestrators (human ruling 2026-11-28: "fix the PyAutoFit claim")
-- coordination: maintenance-brief-excludes-restarts (PyAutoBrain#741) also edits PyAutoBrain claim code; whichever merges second rebases.
-- heart: STALE at the door (feed 11.8 h old), not RED.
-- tier: supervised — merge mode: human /prm
+  - PyAutoBrain: feature/homeostasis-board
+- prompt: active/homeostasis_board_and_mind_split.md
+- epic: autonomous-orchestrators (Phase 14; human direction 2026-11-28: tasks spread over boards by type, Mind keeps intent and promoted work)
+- tier: judge — merge mode: human /prm

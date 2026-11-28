@@ -1439,6 +1439,14 @@ Use the start-dev skill. active/group_subhalo_sensitivity.md
 
 </details>
 
+<details><summary>📋 <a href="active/homeostasis_board_and_mind_split.md">Homeostasis board on the Brain board; generated glance work leaves the Mind…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/747">issue #747</a> — issued 2026-11-28 — library-dev</summary>
+
+```
+Use the start-dev skill. active/homeostasis_board_and_mind_split.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/intake_apply_crashes_on_memory_citations_when.md">intake --apply crashes on memory citations when the Mind is a worktree</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/723">issue #723</a> — issued 2026-11-25 — issued</summary>
 
 ```
@@ -1467,14 +1475,6 @@ Use the start-dev skill. active/nautilus_ring_latent_placement.md
 
 ```
 Use the start-dev skill. active/numba_wtilde_validation_legs_stall_nautilus.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/parked_before_first_edit_holds_repo_claim.md">A task parked before its first edit still claims its repo…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/742">issue #742</a> — issued 2026-11-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/744">PyAutoBrain#744</a></summary>
-
-```
-Use the start-dev skill. active/parked_before_first_edit_holds_repo_claim.md
 ```
 
 </details>
@@ -3173,7 +3173,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-28 | issued | <a href="active/parked_before_first_edit_holds_repo_claim.md">A task parked before its first edit still claims its repo…</a> |
+| 2026-11-28 | issued | <a href="active/homeostasis_board_and_mind_split.md">Homeostasis board on the Brain board; generated glance work leaves…</a> |
 | 2026-11-27 | filed | <a href="draft/bug/autofit/nautilus_refuses_one_parameter_prior_factors_in_ep.md">Nautilus refuses one-parameter PriorFactors, so EP never updates them</a> |
 | 2026-11-27 | filed | <a href="draft/maintenance/autonerves/maint_ci_pyautonerves_nerves_board.md">Maintenance: [red] ci_status: PyAutoNerves/workflows/Nerves Board…</a> |
 | 2026-11-27 | filed | <a href="draft/maintenance/pyautomemory/maint_ci_pyautomemory_dashboard.md">Maintenance: [red] ci_status: PyAutoMemory/workflows/Dashboard…</a> |
