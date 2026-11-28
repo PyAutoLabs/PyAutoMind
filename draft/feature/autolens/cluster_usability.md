@@ -4,7 +4,7 @@ Type: feature
 Target: PyAutoLens
 Epic: cluster-usability
 Priority: high
-Status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Simple CPU profiling measured both likelihoods and a paired starting-grid comparison, and is in review. Phase 3.2 (solver grid default) and phase 3.5 (Pandora profiling, after #537 merges) are filed.
+Status: Simple, Pandora and MACS J0416 figures live on PyAutoEyes. Simple CPU profiling (both likelihoods and a paired starting-grid comparison) merged 2026-11-28 in autolens_profiling#537. Phase 3.2 (solver grid default) and phase 3.5 (Pandora profiling, now unblocked) are filed.
 Consequence: judge
 
 Prioritise this work ahead of the [cluster strong-lensing science epic](source_cluster_arc.md). The goal is to make today's cluster modelling usable at three scales. A reader should be able to see the constraints, identify which multiple-image family fits poorly, and follow that family into a diagnostic figure. The same examples should tell developers how runtime and inference behave as the science case gets harder. New lensing methods belong in the science epic.

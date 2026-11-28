@@ -52,6 +52,6 @@ silently drops an image is wrong, not merely slow.
 
 - Plan-first; workspace scripts only. A library default in @PyAutoLens is out of scope here;
   if the evidence says the library should own it, file that as a separate draft.
-- Do not touch autolens_profiling or the `feature/simple-cluster-profiling` branch (PR #537);
-  phase 3.5 re-times Simple on the adopted grid after #537 merges.
+- Do not touch autolens_profiling: phase 3.5 re-times Simple on the adopted grid. (PR #537,
+  Simple profiling, merged 2026-11-28; record complete/2026/11/simple-cluster-profiling.md.)
 - No multi-hour runs on the laptop; no RAL submission. Merge and issue close stay human.

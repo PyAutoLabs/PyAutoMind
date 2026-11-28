@@ -53,5 +53,5 @@ files must include that step.
 
 - Plan-first; no edits to autolens_workspace scripts or any library in this phase (measurement only). The optimisation waits for 4b and human approval.
 - No multi-hour runs on the laptop; no RAL submission.
-- Do not touch autolens_profiling or the `feature/simple-cluster-profiling` branch (PR #537 is the human's to merge).
+- Do not touch autolens_profiling in this phase (Simple profiling, PR #537, merged 2026-11-28).
 - Merge and issue close stay human.

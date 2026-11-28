@@ -16,7 +16,6 @@ Witness: an autolens_profiling PR adds Pandora (Abell 2744) source-plane and ima
 Review-minutes: 20
 Unattended: ready
 Lane: local-dev
-Blocked-by: autolens_profiling#537
 Epic: cluster-usability
 Phase: 3.5
 Filed: 2026-11-26
@@ -30,8 +29,8 @@ and Insight"), for the second tier. Simple's CPU profiling is in autolens_profil
 
 ## What to do
 
-1. Plan first (start_dev): post the plan on the issue before any edit. Starts only after PR #537
-   has merged; build on its layout, cache guard and pinned-fixture checks rather than copying.
+1. Plan first (start_dev): post the plan on the issue before any edit. PR #537 merged on
+   2026-11-28; build on its layout, cache guard and pinned-fixture checks rather than copying.
 2. Pin the Pandora (Abell 2744) inputs from autolens_visualization's reviewed gallery model, as
    #537 pinned Simple's, and validate the scaling catalogue with the consuming reader.
 3. Profile both likelihoods on the local CPU (JAX FP64): first call after compile, warm median of
