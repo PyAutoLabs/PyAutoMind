@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2455 records across 11 buckets.
+2456 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -344,6 +344,7 @@ markers; everything below GENERATED is rebuilt.
 - [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
 - [merge-actor-audit](2026/11/merge-actor-audit.md)
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
+- [mind-writer-no-branch-repos](2026/11/mind-writer-no-branch-repos.md)
 - [mind-writer-own-claim-update](2026/11/mind-writer-own-claim-update.md)
 - [mixed-galaxy-light](2026/11/mixed-galaxy-light.md)
 - [model-bullet-parameter-count-drift](2026/11/model-bullet-parameter-count-drift.md)

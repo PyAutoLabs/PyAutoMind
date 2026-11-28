@@ -1,3 +1,13 @@
+## mind-writer-no-branch-repos
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/745
+- completed: 2026-11-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/746
+- `_mind_writer.validate_op` refuses an `active.md` append, or the lines an `active.md` edit adds, carrying a `(no branch …)` repos bullet (`no_branch_repo_errors`, beside `pr_key_errors`). Bare `  - Repo` and unchanged legacy lines are still accepted.
+- Writer side of `complete/2026/11/parked-claim-not-a-claim.md` (PyAutoBrain#742, PR #744).
+- Trap: `test_questions_inbox.py::test_the_question_add_op_lands_through_minds_own_add_text` asserts no `sys.path` entry contains "mind-writer-", so it fails in any local worktree whose folder name contains that string; pick task names without it.
+
+## Original prompt
+
 # The Mind writer refuses a `(no branch …)` repos entry in an active.md row
 
 Type: bug
