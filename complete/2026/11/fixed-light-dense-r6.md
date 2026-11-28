@@ -1,3 +1,11 @@
+## fixed-light-dense-r6
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/538
+- completed: 2026-11-28
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/539
+- summary: PyAutoArray aa2ce278 made `lazy_sparse_operator` default to `auto` (R6). Under it, `fixed_light_system_from(..., sparse_operator="drop")` built a sparse numba inversion, and `test_the_factory_dispatches_a_different_class_per_formalism` turned autolens_profiling lint red on every PR. "drop" now fits with a copy of the settings whose lazy policy is "off" (it sets the private `_lazy_sparse_operator`, because Settings has no public copy-with). "carry", "rebake_cpu" and the library default are unchanged, and so is the test. The same PR repointed three wiki/campaigns links from the deleted autolens_inference branch `feature/point-source-search-nautilus-leaf` to `main`; lychee had reported them as 404. Lint is green (pytest 1915 passed, lychee OK), merged as cc422a28e. No results reached main after 2026-11-26, so no recorded measurement used the sparse path. Follow-ups: a public Settings copy-with helper in PyAutoArray; other harness fits that rely on the default may also go sparse. Unblocks autolens_profiling#537.
+
+## Original prompt
+
 # Fixed-light harness: the "dense" S3 system builds a sparse numba inversion since lazy_sparse_operator defaults to auto
 
 Type: bug

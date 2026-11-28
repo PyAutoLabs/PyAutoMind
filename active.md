@@ -1,17 +1,4 @@
 
-## fixed-light-dense-r6
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/538
-- issued: 2026-11-28
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5)
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/539
-- worktree: /home/jammy/Code/PyAutoLabs-wt/fixed-light-dense-r6
-- repos:
-  - autolens_profiling: feature/fixed-light-dense-r6
-- prompt: active/fixed_light_dense_system_goes_sparse_under_r6_auto.md
-- coordination: autolens_profiling also has feature/simple-cluster-profiling (#537, awaiting this fix to go green); separate branch, no file overlap
-- tier: judge — merge mode: human /prm
-
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04

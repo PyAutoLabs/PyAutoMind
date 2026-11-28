@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 23 picks \u00b7 10 in flight",
-  "updated": "2026-11-28T11:07:48Z",
+  "headline": "RED \u2014 23 picks \u00b7 9 in flight",
+  "updated": "2026-11-28T11:25:02Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,12 +36,6 @@
       "text": "vmap(jit) likelihood recompiles once per distinct Nautilus batch length \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1811",
       "prompt": "Use the start-dev skill. active/vmap_jit_recompiles_per_nautilus_batch_length.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Fixed-light harness: the \"dense\" S3 system builds a sparse numba inversion since\u2026 \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/539",
-      "prompt": "Use the start-dev skill. active/fixed_light_dense_system_goes_sparse_under_r6_auto.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#765 \u2014 remove-r6-sweep-pins",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#897 \u2014 adapt-mesh-weighting-galaxy",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/897",
       "prompt": null
     }
   ]
