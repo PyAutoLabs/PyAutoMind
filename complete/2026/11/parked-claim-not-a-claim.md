@@ -1,3 +1,15 @@
+## parked-claim-not-a-claim
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/742
+- completed: 2026-11-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/744
+- Both claim readers (`worktree_list_claimed` in `bin/worktree.sh`, `claim_sections` in the batch planner) skip a `repos:` entry whose branch says `(no branch …)` and a branchless entry in an `awaiting-input` row with no worktree; real-branch and bare-with-worktree entries still claim.
+- `worker_template.md`: a park before the first edit writes no `repos:` block. The observed row was free text in a shift worker's ledger append (Mind 7004216cd), committed through `_mind_writer`.
+- The parked vmap-jit row's PyAutoFit claim was dropped on Mind main (1b99a15ec).
+- Trap: the first CI run failed the tenant firewall (real repo names in new test fixtures in `test_batch_declared_repos.py`); the full local pytest suite does not run that check. Run `repos_sync.py --check --only "tenant firewall (organ code)"` before pushing Brain tests.
+- Follow-up idea (not filed): refuse a `(no branch` repos bullet in `_mind_writer.validate_op` beside `pr_key_errors`.
+
+## Original prompt
+
 # A task parked before its first edit still claims its repo and starves the backlog
 
 Type: bug
