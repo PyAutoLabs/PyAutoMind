@@ -1455,7 +1455,7 @@ Use the start-dev skill. active/make_the_source_adapt_image_hilbert_image.md
 
 </details>
 
-<details><summary>📋 <a href="active/mind_writer_refuses_no_branch_repos_entry.md">The Mind writer refuses a <code>(no branch …)</code> repos entry…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/745">issue #745</a> — issued 2026-11-28 — library-dev</summary>
+<details><summary>📋 <a href="active/mind_writer_refuses_no_branch_repos_entry.md">The Mind writer refuses a <code>(no branch …)</code> repos entry…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/745">issue #745</a> — issued 2026-11-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/746">PyAutoBrain#746</a></summary>
 
 ```
 Use the start-dev skill. active/mind_writer_refuses_no_branch_repos_entry.md
