@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 23 picks \u00b7 11 in flight",
-  "updated": "2026-11-28T10:24:54Z",
+  "updated": "2026-11-28T10:33:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,6 +36,12 @@
       "text": "vmap(jit) likelihood recompiles once per distinct Nautilus batch length \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1811",
       "prompt": "Use the start-dev skill. active/vmap_jit_recompiles_per_nautilus_batch_length.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "A maintenance brief must not resume answered-question tasks \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/743",
+      "prompt": "Use the start-dev skill. active/maintenance_brief_excludes_answered_restarts.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#765 \u2014 remove-r6-sweep-pins",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/765",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#897 \u2014 adapt-mesh-weighting-galaxy",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/897",
       "prompt": null
     }
   ]

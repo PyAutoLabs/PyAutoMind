@@ -1447,7 +1447,7 @@ Use the start-dev skill. active/intake_apply_crashes_on_memory_citations_when.md
 
 </details>
 
-<details><summary>📋 <a href="active/maintenance_brief_excludes_answered_restarts.md">A maintenance brief must not resume answered-question tasks</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/741">issue #741</a> — issued 2026-11-28 — library-dev</summary>
+<details><summary>📋 <a href="active/maintenance_brief_excludes_answered_restarts.md">A maintenance brief must not resume answered-question tasks</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/741">issue #741</a> — issued 2026-11-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/743">PyAutoBrain#743</a></summary>
 
 ```
 Use the start-dev skill. active/maintenance_brief_excludes_answered_restarts.md
