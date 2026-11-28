@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: medium
 Status: draft
 Filed: 2026-11-28
+Issued: 2026-11-28
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: a test that fails on the base commit: `validate_op` refuses an `active.md` append (and an `active.md` edit whose new text adds one) carrying a `  - <Repo>: (no branch …)` or `  - <Repo> (no branch …)` bullet, with a message telling the worker a park before the first edit writes no `- repos:` block; a row with a real branch is still accepted

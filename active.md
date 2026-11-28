@@ -91,3 +91,16 @@
 - status: awaiting-input
 - question: https://github.com/PyAutoLabs/PyAutoFit/issues/1811#issuecomment-7204076931
 - prompt: active/vmap_jit_recompiles_per_nautilus_batch_length.md
+
+## mind-writer-no-branch-repos
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/745
+- issued: 2026-11-28
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (Opus 5.5; Opus 5.5 worker at medium effort)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/mind-writer-no-branch-repos
+- repos:
+  - PyAutoBrain: feature/mind-writer-no-branch-repos
+- prompt: active/mind_writer_refuses_no_branch_repos_entry.md
+- epic: autonomous-orchestrators (follow-up to parked-claim-not-a-claim, PyAutoBrain#742)
+- heart: GREEN at the door.
+- tier: supervised — merge mode: human /prm
