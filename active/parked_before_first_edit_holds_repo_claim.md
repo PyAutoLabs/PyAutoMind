@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Filed: 2026-11-28
+Issued: 2026-11-28
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: (1) on Mind main, `active.md`'s `vmap-jit-recompiles-per-nautilus-batch-length` row no longer claims PyAutoFit, and a planner dry run (`pyauto-brain batch plan` or a shadow brief check) no longer skips PyAutoFit drafts as "repo PyAutoFit claimed by vmap-jit-recompiles-per-nautilus-batch-length"; (2) a test that fails on the base commit: an `active.md` row whose `repos:` entry has no branch (a task parked before implementation) is not returned by the claim readers (`worktree_list_claimed` in `bin/worktree.sh` and the batch planner's claim check), while a row with a real branch still is
